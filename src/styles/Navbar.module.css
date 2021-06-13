@@ -1,0 +1,6 @@
+.base {
+  position: sticky;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(34, 32, 61);
+}

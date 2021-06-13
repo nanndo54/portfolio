@@ -1,0 +1,6 @@
+.base {
+  position: relative;
+  height: 50px;
+  width: 80vw;
+  background: rgb(70, 80, 80);
+}
