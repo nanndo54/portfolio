@@ -1,0 +1,12 @@
+.base {
+  flex-shrink: 0;
+
+  background-color: blueviolet;
+  border-radius: 90%;
+  margin: 0 30px;
+}
+
+.pic {
+  width: 100%;
+  border-radius: inherit;
+}

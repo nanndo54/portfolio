@@ -1,0 +1,20 @@
+.base {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  border-radius: 100%;
+  background-color: aqua;
+
+  width: 60px;
+  height: 60px;
+
+  color: black;
+  font-size: x-large;
+  font-weight: 500;
+  text-align: center;
+}
+
+.base:hover {
+  cursor: pointer;
+}

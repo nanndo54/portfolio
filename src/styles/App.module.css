@@ -1,9 +1,7 @@
 .base {
-  position: absolute;
-  top: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  width: 100%;
-
   background-color: rgb(19, 20, 29);
 }
 
