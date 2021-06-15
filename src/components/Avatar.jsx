@@ -5,8 +5,8 @@ function Avatar() {
   //const [avatarSize, setAvatarSize] = useState(60)
 
   return (
-    <div className={styles.base} style={{ width: 100, height: 100 }}>
-      <img className={styles.pic} src='../../profile-lg.jpg' />
+    <div className={styles.base} style={{ width: 200, height: 200 }}>
+      <img src='../../my-photo-384.jpg' />
     </div>
   )
 }

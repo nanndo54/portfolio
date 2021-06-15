@@ -1,6 +1,31 @@
 .base {
+  display: flex;
   position: sticky;
-  height: 40px;
+  z-index: 5;
+
+  top: 0;
+  height: 55px;
   width: 100%;
-  background-color: rgb(34, 32, 61);
+  background-color: rgb(47, 56, 138);
+  font-size: x-large;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: xx-large;
+  color: antiquewhite;
+
+  margin-left: 20px;
+}
+
+.language {
+  margin-right: 20px;
+}
+
+.logo:hover,
+.language:hover {
+  cursor: pointer;
 }

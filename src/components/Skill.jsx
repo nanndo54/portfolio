@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from '../styles/Skill.module.css'
-import P from './P'
 import Title from './Title'
 
-function Skill({ name }) {
+function Skill({ name = 'NoName', color = '#666666', image = '../../default-technology-icon.png' }) {
   return (
-    <div className={styles.base}>
-      {/*<Logo name='name' />*/}
-      <Title level={4}>{name}</Title>
+    <div className={styles.base} style={{ backgroundColor: color }}>
+      <div className={styles.icon} style={{ backgroundImage: `url("${image}")` }} />
+      <div className={styles.title}>
+        <Title level={4}>{name}</Title>
+      </div>
     </div>
   )
 }

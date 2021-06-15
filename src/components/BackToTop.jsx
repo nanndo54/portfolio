@@ -21,8 +21,10 @@ function BackToTop() {
   window.addEventListener('scroll', handleVisible)
 
   return (
-    <div className={styles.base} onClick={goToTop} style={{ display: visible ? 'inline' : 'none' }}>
-      <FaArrowCircleUp />
+    <div className={styles.base} onClick={goToTop} style={{ display: visible ? 'flex' : 'none' }}>
+      <div>
+        <FaArrowCircleUp />
+      </div>
     </div>
   )
 }

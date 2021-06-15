@@ -3,9 +3,9 @@ My personal portfolio
 
 ## Technologies
 - Vite
-- NextJS with Typescript
-- StyledComponents
-- TDD
+- ReactJS with CSS Modules
 
 ## License
 MIT License
+
+***Deployed under: WIP***

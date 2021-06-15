@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '../styles/Section.module.css'
 
-function Section({ children, type = 'default', wrap = false }) {
+function Section({ children, type = 'default' }) {
   const style = {
     default: {},
-    header: { alignItems: 'center' },
-    skills: { alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' }
+    header: { alignItems: 'center', heigth: 300 },
+    skills: { alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' },
+    projects: { alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' }
   }[type]
 
   return (
