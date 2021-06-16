@@ -1,8 +1,0 @@
-.base {
-  display: flex;
-  flex-direction: column;
-
-  background-color: rgb(19, 20, 29);
-  padding-top: 20px;
-  min-height: 100vh;
-}

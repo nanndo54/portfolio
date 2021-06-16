@@ -1,9 +1,5 @@
 # Portfolio
-My personal portfolio
-
-## Technologies
-- Vite
-- ReactJS with CSS Modules
+Deployment under github pages.
 
 ## License
 MIT License
