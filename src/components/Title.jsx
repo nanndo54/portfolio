@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from '../styles/Title.module.css'
 
-function Title({ level = 1, children }) {
+function Title({ level = 2, center = false, children }) {
   return (
-    <div className={styles.base}>
+    <div className={styles.base} style={{ textAlign: center ? 'center' : 'unset' }}>
       {
         {
           1: <h1>{children}</h1>,

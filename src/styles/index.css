@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: whitesmoke;
@@ -23,6 +23,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Titillium Web', sans-serif;
-  color: beige;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(147, 146, 202);
+}
+
+a {
+  text-decoration: unset;
 }

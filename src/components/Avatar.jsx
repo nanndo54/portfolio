@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import styles from '../styles/Avatar.module.css'
 
 function Avatar() {
-  //const [avatarSize, setAvatarSize] = useState(60)
+  const [size, setSize] = useState(window.innerWidth < 500 ? 200 : 400)
+
+  const handleSize = () => setSize(window.innerWidth < 500 ? 200 : 400)
+  window.addEventListener('resize', handleSize)
 
   return (
-    <div className={styles.base} style={{ width: 200, height: 200 }}>
-      <img src='../../my-photo-384.jpg' />
+    <div className={styles.base} style={{ width: size, height: size }}>
+      <img src={`../../my-photo-${size === 200 ? '256' : '384'}.jpg`} />
     </div>
   )
 }

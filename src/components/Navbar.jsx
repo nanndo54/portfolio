@@ -3,7 +3,7 @@ import LanguageContext from '../context/LanguageContext'
 import styles from '../styles/Navbar.module.css'
 
 function Navbar({}) {
-  const { language, setLanguage } = useContext(LanguageContext)
+  const { language, changeLanguage } = useContext(LanguageContext)
 
   const goToTop = () => {
     window.scrollTo({
@@ -12,16 +12,12 @@ function Navbar({}) {
     })
   }
 
-  const handleLanguage = () => {
-    setLanguage(language === 'es' ? 'en' : 'es')
-  }
-
   return (
     <div className={styles.base}>
       <div className={styles.logo} onClick={goToTop}>
         portfolio
       </div>
-      <div className={styles.language} onClick={handleLanguage}>
+      <div className={styles.language} onClick={changeLanguage}>
         {language}
       </div>
     </div>

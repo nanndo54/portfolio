@@ -5,9 +5,14 @@
 
   background-color: #252525;
   height: 250px;
-  width: 480px;
+  width: 620px;
   margin: 15px 25px;
   border-radius: 30px;
+}
+
+.base:hover {
+  cursor: pointer;
+  background-color: #353535;
 }
 
 .icon {

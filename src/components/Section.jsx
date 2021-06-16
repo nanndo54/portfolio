@@ -1,10 +1,9 @@
 import React from 'react'
 import styles from '../styles/Section.module.css'
 
-function Section({ children, type = 'default' }) {
+function Section({ children, type }) {
   const style = {
-    default: {},
-    header: { alignItems: 'center', heigth: 300 },
+    header: { alignItems: 'center', flexDirection: 'column' },
     skills: { alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' },
     projects: { alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' }
   }[type]

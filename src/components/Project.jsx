@@ -1,29 +1,29 @@
 import React from 'react'
 import styles from '../styles/Project.module.css'
-import P from './P'
+import Paragraph from './Paragraph'
 import Title from './Title'
 
-function Project({ name = 'NoName', description = 'NoDescription', url = '', technologies = [], deployed = false }) {
+function Project({ name, description, url, technologies = [], deployed = false }) {
+  const handleURL = () => (window.location.href = url)
+
   return (
-    <div className={styles.base}>
+    <div className={styles.base} onClick={handleURL}>
       <div className={styles.icon} style={{ backgroundImage: `url("../../github-icon.png")` }} />
       <div className={styles.body}>
         <div className={styles.title}>
-          <a href={url}>
-            <Title level={3}>{name}</Title>
-          </a>
+          <Title level={3}>{name}</Title>
         </div>
         <div className={styles.description}>
-          <P>{description}</P>
+          <Paragraph>{description}</Paragraph>
         </div>
         <div className={styles.technologies}>
-          <P>{technologies.join(', ')}</P>
+          <Paragraph highlight>{technologies.join(', ')}</Paragraph>
         </div>
-        {deployed && (
+        {/*{deployed && (
           <div className={styles.deployed}>
-            <P>{'Disponible en: ' + deployed}</P>
+            <Paragraph>{'Disponible en: ' + deployed}</Paragraph>
           </div>
-        )}
+        )}*/}
       </div>
     </div>
   )

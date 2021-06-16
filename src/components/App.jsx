@@ -1,46 +1,40 @@
 import React, { useContext } from 'react'
-import styles from '../styles/App.module.css'
+import Navbar from './Navbar'
+import Section from './Section'
+import Title from './Title'
+import Paragraph from './Paragraph'
 import Avatar from './Avatar'
 import Skills from './Skills'
 import Projects from './Projects'
-import Navbar from './Navbar'
-import Section from './Section'
-import BackToTop from './BackToTop'
-import P from './P'
-import Title from './Title'
+
+import styles from '../styles/App.module.css'
 
 import LanguageContext from '../context/LanguageContext'
 
-const body = {
-  intro: {
-    es: `Este es un texto de prueba Este es un texto de prueba Este es un texto de prueba Este es un texto de prueba Este es un
-texto de prueba Este es un texto de prueba Este es un texto de prueba Este es un texto de prueba Este es un texto de
-prueba Este es un texto de prueba Este es un texto de prueba Este es un texto de prueba`,
-    en: `This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text This is a test text `
-  }
-}
-
 function App() {
-  const { language } = useContext(LanguageContext)
+  const { appTexts } = useContext(LanguageContext)
+  const { introduction, skillsTitle, projectsTitle, contactTitle } = appTexts
 
   return (
     <>
       <Navbar />
       <div className={styles.base}>
         <Section type='header'>
+          <Title level={1} center>
+            Pablo Fernando Cabrera Pineda
+          </Title>
           <Avatar />
-          <P>{body.intro[language]}</P>
+          <Paragraph center>{introduction}</Paragraph>
         </Section>
         <Section type='skills'>
-          <Title>Habilidades</Title>
+          <Title>{skillsTitle}</Title>
           <Skills />
         </Section>
         <Section type='projects'>
-          <Title>Proyectos</Title>
+          <Title>{projectsTitle}</Title>
           <Projects />
         </Section>
-        <Title level={3}>Contact (WIP)</Title>
-        <BackToTop />
+        <Title level={3}>{contactTitle} (WIP)</Title>
       </div>
     </>
   )
