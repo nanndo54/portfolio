@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import LanguageContext from '../context/LanguageContext'
-import styles from '../styles/Navbar.module.css'
+import LanguageContext from '@/context/LanguageContext'
+import styles from '@/styles/Navbar.module.css'
 
 function Navbar({}) {
   const { language, changeLanguage } = useContext(LanguageContext)

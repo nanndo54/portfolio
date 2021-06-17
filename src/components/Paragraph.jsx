@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Paragraph.module.css'
+import styles from '@/styles/Paragraph.module.css'
 
 function Paragraph({ center = false, highlight = false, children }) {
   const style = {

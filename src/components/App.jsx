@@ -7,9 +7,9 @@ import Avatar from './Avatar'
 import Skills from './Skills'
 import Projects from './Projects'
 
-import styles from '../styles/App.module.css'
+import styles from '@/styles/App.module.css'
 
-import LanguageContext from '../context/LanguageContext'
+import LanguageContext from '@/context/LanguageContext'
 
 function App() {
   const { appTexts } = useContext(LanguageContext)
