@@ -1,11 +1,5 @@
 # Portfolio
-My personal portfolio
-
-## Technologies
-- Vite
-- ReactJS with CSS Modules
+Deployment via github pages on https://pabloc54.github.io/portfolio/
 
 ## License
 MIT License
-
-***Deployed under: WIP***

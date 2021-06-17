@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Project from './Project'
-import LanguageContext from '../context/LanguageContext'
+import LanguageContext from '@/context/LanguageContext'
 
 const projects = [
   {

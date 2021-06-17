@@ -1,8 +1,10 @@
 import React from 'react'
-import styles from '../styles/Skill.module.css'
+import styles from '@/styles/Skill.module.css'
 import Title from './Title'
 
-function Skill({ name = 'NoName', color = '#666666', image = '../../default-technology-icon.png' }) {
+import default_image from '@img/default-technology-icon.png'
+
+function Skill({ name = 'NoName', color = '#666666', image = default_image }) {
   return (
     <div className={styles.base} style={{ backgroundColor: color }}>
       <div className={styles.icon} style={{ backgroundImage: `url("${image}")` }} />

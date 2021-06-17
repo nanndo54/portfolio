@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Title.module.css'
+import styles from '@/styles/Title.module.css'
 
 function Title({ level = 2, center = false, children }) {
   return (
