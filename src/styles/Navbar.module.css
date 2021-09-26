@@ -1,31 +1,44 @@
 .base {
-  display: flex;
-  position: sticky;
+  background-color: var(--navbar-background-color);
+  position: fixed;
+  top: 0;
   z-index: 5;
 
-  top: 0;
-  height: 60px;
   width: 100%;
-  background-color: rgb(47, 56, 138);
-  font-size: x-large;
+  height: 60px;
+  font-size: 1.4em;
 
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 170px 1fr 170px;
   align-items: center;
-  justify-content: space-between;
+
+  transition: background-color 0.5s ease-out;
+}
+
+.logo,
+.button {
+  text-align: center;
 }
 
 .logo {
   font-family: 'Oleo Script Swash Caps', cursive;
-  font-size: xx-large;
-  color: antiquewhite;
-
-  margin-left: 20px;
+  font-size: 1.4em;
+  border-right: 2px solid var(--navbar-decoration-color);
 }
 
-.language {
-  margin-right: 20px;
+.items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items > span {
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover,
-.language:hover {
+.items > span:hover {
   cursor: pointer;
 }

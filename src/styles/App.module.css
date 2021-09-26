@@ -1,8 +1,12 @@
 .base {
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease-out;
+}
+
+.sections {
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
-
-  background-color: rgb(19, 20, 29);
-  padding-top: 20px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 25px;
 }

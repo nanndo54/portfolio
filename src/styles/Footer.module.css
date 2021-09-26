@@ -1,0 +1,15 @@
+.base {
+  background: var(--footer-background-color);
+  color: var(--footer-font-color);
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 50px;
+}
+
+.base > div {
+  width: 80%;
+}

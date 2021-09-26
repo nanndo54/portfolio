@@ -1,0 +1,48 @@
+.base {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--modal-outside);
+
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: scroll;
+
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.base.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.base > div {
+  transform: translateY(-80px);
+  transition: all 0.5s cubic-bezier(0.5, -0.5, 0, 2);
+}
+
+.base.show > div {
+  transform: translateY(0);
+}
+
+.close {
+  padding: 2px;
+  font-size: 1.3rem;
+
+  align-self: flex-end;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+
+.close:hover {
+  cursor: pointer;
+}

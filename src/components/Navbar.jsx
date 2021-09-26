@@ -1,9 +1,13 @@
-import React, { useContext } from 'react'
-import LanguageContext from '@/context/LanguageContext'
+import React from 'react'
 import styles from '@/styles/Navbar.module.css'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { toggleTheme } from '@/actions/appActions'
+import DarkModeSwitch from './DarkModeSwitch'
 
 function Navbar({}) {
-  const { language, changeLanguage } = useContext(LanguageContext)
+  const { theme } = useSelector(({ app }) => app)
+  const dispatch = useDispatch()
 
   const goToTop = () => {
     window.scrollTo({
@@ -12,13 +16,25 @@ function Navbar({}) {
     })
   }
 
+  const changeTheme = () => {
+    dispatch(toggleTheme())
+  }
+
   return (
     <div className={styles.base}>
       <div className={styles.logo} onClick={goToTop}>
-        portfolio
+        pabloC54
       </div>
-      <div className={styles.language} onClick={changeLanguage}>
-        {language}
+      <div className={styles.items}>
+        <span>
+          <DarkModeSwitch checked={theme === 'dark'} onChange={changeTheme} />
+        </span>
+        {/* <span className={styles.language}>es</span> */}
+      </div>
+      <div className={styles.button}>
+        <a className='button' href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>
+          ¡Contáctame!
+        </a>
       </div>
     </div>
   )

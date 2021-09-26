@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+import styles from '@/styles/Projects.module.css'
+
 import Project from './Project'
 import LanguageContext from '@/context/LanguageContext'
 
@@ -25,14 +27,13 @@ const projects = [
 
 function Projects() {
   const { projectsDescription } = useContext(LanguageContext)
-  projects.forEach((project) => (project.description = projectsDescription[project.name]))
 
   return (
-    <>
-      {projects.map(({ name, description, url, technologies, deployed }) => (
-        <Project key={name} name={name} description={description} url={url} technologies={technologies} deployed={deployed} />
+    <div className={styles.base}>
+      {projects.map((project, i) => (
+        <Project key={i} {...project} description={projectsDescription[project.name]} />
       ))}
-    </>
+    </div>
   )
 }
 

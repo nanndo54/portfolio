@@ -5,11 +5,12 @@ const LanguageContext = React.createContext('es')
 const allTexts = {
   es: {
     appTexts: {
-      introduction:
-        'descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion ',
-      skillsTitle: 'Habilidades',
-      projectsTitle: 'Proyectos',
-      contactTitle: 'Contacto'
+      introduction: '',
+      welcome: '',
+      aboutMeTitle: '',
+      skillsTitle: '',
+      projectsTitle: '',
+      contactMe: ''
     },
     projectsDescription: {
       Typesty: `Interfaz web creada con ReactJS que permite la edición y manipulación de archivos para un lenguaje de programación ficticio llamado 'typesty', muy parecido a C++.`,
@@ -21,11 +22,12 @@ const allTexts = {
   },
   en: {
     appTexts: {
-      introduction:
-        'description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description ',
+      introduction: 'description',
+      welcome: 'description',
+      aboutMeTitle: 'About me',
       skillsTitle: 'Skills',
       projectsTitle: 'Projects',
-      contactTitle: 'Contact'
+      contactMe: 'Contact me!'
     },
     projectsDescription: {
       Typesty: `Web app made in ReactJS which allows file handling and editing for a fictional programming language named 'typesty', a C-like language.`,
@@ -48,7 +50,11 @@ export function LanguageContextProvider({ children }) {
     localStorage.setItem('language', newLanguage)
   }
 
-  return <LanguageContext.Provider value={{ language, changeLanguage, ...texts }}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={{ language, changeLanguage, ...texts }}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export default LanguageContext

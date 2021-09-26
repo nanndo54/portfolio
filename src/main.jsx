@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import App from './components/App'
-import { LanguageContextProvider } from './context/LanguageContext'
 import './styles/index.css'
+
+import store from './store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <LanguageContextProvider>
+    <Provider store={store}>
       <App />
-    </LanguageContextProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
