@@ -1,6 +1,5 @@
 .base {
   font-size: 0.9rem;
-  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -28,7 +27,7 @@
 
 .base .icon img {
   opacity: 90%;
-  position: absolute;
+  position: relative;
   width: 40px;
 
   filter: var(--icon-filter);

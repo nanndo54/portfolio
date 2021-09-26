@@ -5,16 +5,17 @@ import { useSelector } from 'react-redux'
 import { toggleTheme } from '@/actions/appActions'
 import DarkModeSwitch from './DarkModeSwitch'
 
+const goToTop = () => {
+  const base = document.getElementById('base')
+  base?.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
 function Navbar({}) {
   const { theme } = useSelector(({ app }) => app)
   const dispatch = useDispatch()
-
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
 
   const changeTheme = () => {
     dispatch(toggleTheme())

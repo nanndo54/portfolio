@@ -107,7 +107,7 @@ function Skills() {
           <Skill key={i} {...skill} />
         ))}
       </div>
-      <h3>Otros</h3>
+      <h3>Otras</h3>
       <div className={styles.skills}>
         {otherSkills.map((skill, i) => (
           <Skill key={i} {...skill} />

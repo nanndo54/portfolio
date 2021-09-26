@@ -1,30 +1,33 @@
 .base {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 4fr;
+  background-color: var(--font-color);
+  color: var(--background-color);
 
-  background-color: #252525;
-  min-height: 250px;
-  width: 600px;
-  border-radius: 40px;
+  padding: 15px 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+
+  transition: background-color 0.5s linear;
+  transition: color 0.5s linear;
 }
 
-.base:hover {
+.down {
+  z-index: 5;
+  align-self: flex-end;
+
+  padding: 2px;
+  margin-bottom: -45px;
+  font-size: 2rem;
+
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.down:hover {
   cursor: pointer;
-  background-color: #353535;
 }
 
-.icon {
-  border: 2px solid black;
-  border-radius: 40%;
-
-  margin: auto;
-
-  width: 50px;
-  height: 50px;
-}
-
-.icon img {
-  width: 100%;
-  border-radius: inherit;
+.down.expanded {
+  transform: rotate(180deg);
 }

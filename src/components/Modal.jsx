@@ -30,12 +30,12 @@ function Modal({}) {
 
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
-      <Section shadow onClick={(e) => e.stopPropagation()}>
+      <Section last shadow onClick={(e) => e.stopPropagation()}>
         <div className={`${styles.close} unselectable`} onClick={handleClose}>
           ✕
         </div>
         <Skill name={name} color={color} image={image} big />
-        <p>{description}</p>
+        <p className='center'>{description}</p>
       </Section>
     </div>
   )

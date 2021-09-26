@@ -27,12 +27,16 @@ const projects = [
 
 function Projects() {
   const { projectsDescription } = useContext(LanguageContext)
+  const description = 'este es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicadoeste es un proyecto complicado'
 
   return (
     <div className={styles.base}>
-      {projects.map((project, i) => (
+      {/* {projects.map((project, i) => (
         <Project key={i} {...project} description={projectsDescription[project.name]} />
-      ))}
+      ))} */}
+
+
+      <Project name='Testing avanzado' url='#' description={description} />
     </div>
   )
 }
