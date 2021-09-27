@@ -10,7 +10,7 @@ function AboutMeSection() {
     <Section>
       <h2>Acerca de mí</h2>
       <div className={styles.inline}>
-        <img src={guatemalaImage} alt='Guatemala photo' />
+        <img src={guatemalaImage} alt='Guatemala' />
         <p>
           Resido en la capital de Guatemala, lugar de volcanes, de gran clima y gente
           alegre 🕺. Por supuesto, estoy abierto a trabajar con equipos de otros países
@@ -23,7 +23,7 @@ function AboutMeSection() {
           desarrollado una gran habilidad en el desarrollo de software, y gran pasión en
           todo lo relacionado con la tecnología 💻.
         </p>
-        <img src={facultyImage} alt='my faculty photo' />
+        <img src={facultyImage} alt='my faculty' />
       </div>
       <p>
         Me aficionan los deportes, los videojuegos de muchos generos y disfruto de

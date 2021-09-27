@@ -6,9 +6,10 @@ const appReducer = (state = initialModal, action) => {
       const newState = { show: true, ...action.payload }
       return newState
     }
-    case '@modal/hide':
+    case '@modal/hide': {
       const newState = { ...state, show: false }
       return newState
+    }
     default:
       return state
   }

@@ -45,7 +45,6 @@ let REACT_TOGGLE_DARK_MODE_GLOBAL_ID = 0
 
 const DarkModeSwitch = ({
   onChange,
-  children,
   checked = false,
   size = 24,
   animationProperties = defaultProperties,
@@ -110,7 +109,8 @@ const DarkModeSwitch = ({
         ...svgContainerProps,
         ...style
       }}
-      {...rest}>
+      {...rest}
+    >
       <mask id={uniqueMaskId}>
         <rect x='0' y='0' width='100%' height='100%' fill='white' />
         <animated.circle style={maskedCircleProps} r='9' fill='black' />

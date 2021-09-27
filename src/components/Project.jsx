@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '@/styles/Project.module.css'
 // import githubIcon from '@img/github-icon.png'
 
-function Project({ name, description, url, technologies = [], deployed = false }) {
+function Project({ name, description, technologies = [] }) {
   const [expanded, setExpanded] = useState(false)
 
   const toggleExpand = () => {
