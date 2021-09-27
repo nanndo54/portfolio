@@ -1,6 +1,5 @@
 # Portfolio
-
-Deployment via github pages on https://pabloc54.github.io/portfolio/
+Deployed on [github pages](https://pabloc54.github.io/portfolio/)!
 
 ## License
 
