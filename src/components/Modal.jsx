@@ -1,12 +1,12 @@
 import styles from '@/styles/Modal.module.css'
 import React, { useEffect } from 'react'
-import Skill from './Skill'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { hideModal } from '@/actions/modalActions'
+
+import Skill from './Skill'
 import Section from './Section'
 
-function Modal({}) {
+function Modal() {
   const { show, name, color, image, description } = useSelector(({ modal }) => modal)
   const dispatch = useDispatch()
 

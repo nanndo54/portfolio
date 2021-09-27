@@ -1,6 +1,6 @@
 .base {
-  width: 550px;
-  padding: 30px 50px;
+  width: 590px;
+  padding: 30px 30px;
 
   display: flex;
   flex-direction: column;
@@ -8,7 +8,9 @@
 }
 
 .base.animated {
-  animation: appear-section 0.6s ease;
+  color: transparent;
+
+  animation: appear-section 0.5s ease 0.6s;
   animation-fill-mode: forwards;
 }
 
@@ -20,19 +22,23 @@
   transition: background-color 0.5s ease-out;
 }
 
-.next {
+.next img {
+  opacity: 0;
   filter: var(--icon-filter);
+
+  animation: appear-img 0.5s ease 0.6s;
+  animation-fill-mode: forwards;
+
   transition: filter 0.5s ease-out;
-  animation: appear-img 0.6s ease;
 }
 
-.next:hover {
+.next img:hover {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .base {
-    width: calc(90% - 100px);
+    width: calc(90% - 60px);
   }
 }
 

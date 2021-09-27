@@ -1,6 +1,6 @@
 .base {
   height: 100%;
-  width: 100%;
+  width: calc(100% - 8px);
 
   display: flex;
   justify-content: center;
@@ -9,8 +9,8 @@
 }
 
 .base .loader {
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
 
   position: absolute;
   top: 90px;
@@ -19,7 +19,7 @@
   border: 10px solid rgba(45, 45, 60, 0.1);
   border-right: 10px solid rgb(35, 35, 45);
 
-  animation: spin 3s ease-in-out infinite;
+  animation: spin-loader 3s ease-in-out infinite;
 }
 
 .base.dark {
@@ -31,7 +31,7 @@
   border-right: 10px solid rgb(210, 210, 220);
 }
 
-@keyframes spin {
+@keyframes spin-loader {
   0% {
     transform: rotate(0);
   }

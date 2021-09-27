@@ -9,7 +9,7 @@ import dotsImage from '@img/dots.png'
 const scrollNext = (ev) => {
   const base = document.getElementById('base')
   const coords = ev.target.getBoundingClientRect()
-  const top = base.scrollTop + coords.y
+  const top = base.scrollTop + coords.y + 30
 
   base.scrollTo({
     top,
@@ -48,7 +48,8 @@ function Section({
             speed={2}
             viewBox='0 0 600 350'
             backgroundColor='var(--shadow-color)'
-            foregroundColor='var(--section-background-color)'>
+            foregroundColor='var(--section-background-color)'
+          >
             <rect x='200' y='25' rx='3' ry='3' width='200' height='20' />
             <rect x='0' y='90' rx='3' ry='3' width='600' height='6' />
             <rect x='0' y='115' rx='3' ry='3' width='580' height='6' />
@@ -64,12 +65,9 @@ function Section({
         )}
       </section>
       {!last && (
-        <img
-          className={styles.next}
-          src={dotsImage}
-          onClick={scrollNext}
-          alt='go to next section'
-        />
+        <div className={styles.next} onClick={scrollNext}>
+          <img src={dotsImage} alt='go to next section' />
+        </div>
       )}
     </>
   )

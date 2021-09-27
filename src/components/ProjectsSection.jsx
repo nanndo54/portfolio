@@ -1,11 +1,12 @@
 import styles from '@/styles/ProjectsSection.module.css'
 import React from 'react'
+
 import Section from './Section'
 import Project from './Project'
 
 // import projects from '@/constants/projects'
 
-function ProjectsSection({}) {
+function ProjectsSection() {
   const description =
     'este es un proyecto complicado este es un proyecto complicado este es un proyecto  sdksjdksjdto complicadoeste es un proyecto complicado'
 

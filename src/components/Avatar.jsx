@@ -4,7 +4,11 @@ import styles from '@/styles/Avatar.module.css'
 import photo from '@img/profile-photo.jpg'
 
 function Avatar() {
-  return <img className={styles.base} src={photo} alt='my photo' />
+  return (
+    <div className={styles.base}>
+      <img src={photo} alt='me' loading='eager' />
+    </div>
+  )
 }
 
 export default Avatar

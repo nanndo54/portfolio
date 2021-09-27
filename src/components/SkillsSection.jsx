@@ -1,15 +1,16 @@
 import styles from '@/styles/SkillsSection.module.css'
 import React from 'react'
+
 import Section from './Section'
 import Skill from './Skill'
 
 import skills from '@/constants/skills'
 
-function SkillsSection({}) {
+function SkillsSection() {
   return (
     <Section>
       <h2>Habilidades</h2>
-      <small>(Haz click para más detalles)</small>
+      <p className='small'>(Haz click para más detalles)</p>
       <div className={styles.base}>
         {Object.entries(skills).map(([title, specificSkills]) => (
           <div key={title}>

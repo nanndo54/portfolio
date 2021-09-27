@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@/styles/Footer.module.css'
 
-function Footer({}) {
+function Footer() {
   return (
     <footer className={styles.base}>
       <div>

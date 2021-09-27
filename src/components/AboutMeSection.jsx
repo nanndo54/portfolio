@@ -5,7 +5,7 @@ import Section from './Section'
 import guatemalaImage from '@img/guatemala.jpg'
 import facultyImage from '@img/ingenieria.jpg'
 
-function AboutMeSection({}) {
+function AboutMeSection() {
   return (
     <Section>
       <h2>Acerca de mí</h2>

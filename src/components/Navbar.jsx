@@ -1,9 +1,11 @@
-import React from 'react'
 import styles from '@/styles/Navbar.module.css'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { toggleTheme } from '@/actions/appActions'
+
 import DarkModeSwitch from './DarkModeSwitch'
+
+import { toggleTheme } from '@/actions/appActions'
 
 const goToTop = () => {
   const base = document.getElementById('base')
@@ -13,7 +15,7 @@ const goToTop = () => {
   })
 }
 
-function Navbar({}) {
+function Navbar() {
   const { theme } = useSelector(({ app }) => app)
   const dispatch = useDispatch()
 
@@ -24,7 +26,7 @@ function Navbar({}) {
   return (
     <nav className={styles.base}>
       <div className={styles.logo} onClick={goToTop}>
-        pabloC54
+        PC54
       </div>
       <div className={styles.items}>
         <DarkModeSwitch
