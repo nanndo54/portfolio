@@ -10,10 +10,8 @@ function Project({ name, description, url, technologies = [], deployed = false }
   }
 
   return (
-    <div className={styles.base}>
-      <div
-        className={`${styles.down} ${expanded ? styles.expanded : ''} unselectable`}
-        onClick={toggleExpand}>
+    <div className={`${styles.base} ${expanded ? styles.expanded : ''}`}>
+      <div className={`${styles.down} unselectable`} onClick={toggleExpand}>
         ↴
       </div>
       <h3>{name}</h3>

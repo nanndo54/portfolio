@@ -3,12 +3,12 @@ import { useLayoutEffect } from 'react'
 const themes = {
   ligth: {
     'background-color': 'rgb(230, 230, 240)',
-    'font-color': 'rgb(35, 35, 45)',
+    'font-color': 'rgb(30, 30, 40)',
     'navbar-background-color': 'rgb(215, 215, 240)',
     'navbar-decoration-color': 'rgb(55, 55, 75)',
     'section-background-color': 'rgb(225, 225, 235)',
     'small-font-color': 'rgb(75, 75, 85)',
-    'link-font-color': 'rgb(70, 90, 190)',
+    'link-font-color': 'rgb(100, 125, 255)',
     'link-decoration-color': 'rgb(60, 70, 180)',
     'icon-filter': 'none',
     'modal-outside': 'rgba(35, 35, 45, 0.5)',

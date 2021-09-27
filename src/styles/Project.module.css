@@ -2,24 +2,45 @@
   background-color: var(--font-color);
   color: var(--background-color);
 
-  padding: 15px 30px 25px;
+  width: calc(100% - 50px);
+  padding: 20px 25px 10px;
+  height: max-content;
 
   display: flex;
   flex-direction: column;
 
   border-radius: 20px;
 
+  transition: height 1s linear;
   transition: background-color 0.5s linear;
   transition: color 0.5s linear;
+}
+
+.base h3 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.base p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.base.expanded p {
+  -webkit-line-clamp: initial;
 }
 
 .down {
   z-index: 5;
   align-self: flex-end;
+  font-size: 1.5rem;
 
   padding: 2px;
-  margin-bottom: -45px;
-  font-size: 2rem;
+  margin-top: -5px;
+  margin-bottom: -57px;
+  margin-right: -5px;
 
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -28,6 +49,6 @@
   cursor: pointer;
 }
 
-.down.expanded {
+.base.expanded .down {
   transform: rotate(180deg);
 }

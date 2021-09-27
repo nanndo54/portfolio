@@ -1,17 +1,8 @@
 .base {
-  height: 230px;
-  width: 230px;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+
   border-radius: 90%;
-  background: var(--avatar-background);
-  box-shadow: var(--shadow-color) 0px 2px 4px 0px inset;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.base img {
-  height: 85%;
-  width: 85%;
-  border-radius: inherit;
+  border: 10px solid var(--shadow-color);
 }

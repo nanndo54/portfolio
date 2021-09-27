@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
 import styles from '@/styles/Modal.module.css'
-import Section from './Section'
+import React, { useEffect } from 'react'
 import Skill from './Skill'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { hideModal } from '@/actions/modalActions'
+import Section from './Section'
 
 function Modal({}) {
   const { show, name, color, image, description } = useSelector(({ modal }) => modal)
@@ -30,7 +30,7 @@ function Modal({}) {
 
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
-      <Section last shadow onClick={(e) => e.stopPropagation()}>
+      <Section last>
         <div className={`${styles.close} unselectable`} onClick={handleClose}>
           ✕
         </div>

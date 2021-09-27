@@ -22,22 +22,25 @@ function Navbar({}) {
   }
 
   return (
-    <div className={styles.base}>
+    <nav className={styles.base}>
       <div className={styles.logo} onClick={goToTop}>
         pabloC54
       </div>
       <div className={styles.items}>
-        <span>
-          <DarkModeSwitch checked={theme === 'dark'} onChange={changeTheme} />
-        </span>
-        {/* <span className={styles.language}>es</span> */}
+        <DarkModeSwitch
+          checked={theme === 'ligth'}
+          onChange={changeTheme}
+          moonColor='var(--font-color)'
+          sunColor='var(--font-color)'
+        />
+        <span className={styles.language}>es</span>
       </div>
       <div className={styles.button}>
         <a className='button' href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>
           ¡Contáctame!
         </a>
       </div>
-    </div>
+    </nav>
   )
 }
 

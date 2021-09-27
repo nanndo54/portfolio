@@ -1,0 +1,41 @@
+.base {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(230, 230, 240);
+}
+
+.base .loader {
+  height: 200px;
+  width: 200px;
+
+  position: absolute;
+  top: 90px;
+
+  border-radius: 90%;
+  border: 10px solid rgba(45, 45, 60, 0.1);
+  border-right: 10px solid rgb(35, 35, 45);
+
+  animation: spin 3s ease-in-out infinite;
+}
+
+.base.dark {
+  background-color: rgb(30, 30, 35);
+}
+
+.base.dark .loader {
+  border: 10px solid rgba(110, 110, 120, 0.2);
+  border-right: 10px solid rgb(210, 210, 220);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(4turn);
+  }
+}

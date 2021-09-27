@@ -2,7 +2,7 @@ body {
   margin: 0;
   height: 100vh;
 
-  color: var(--font-color);
+  background-color: var(--background-color);
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
 
@@ -11,16 +11,23 @@ body {
 
   overflow-y: hidden;
   scroll-behavior: smooth;
-  transition: color 0.5s linear;
 }
 
 #root {
   height: 100%;
+
+  color: var(--font-color);
+  background-color: var(--background-color);
+
+  transition: color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 small {
   color: var(--small-font-color);
   margin: 5px 0 10px;
+
+  transition: color 0.5s ease-out;
 }
 
 p {
@@ -39,7 +46,7 @@ h1 {
 
 h2 {
   font-size: 2em;
-  margin: 10px 0 20px;
+  margin: 10px 0;
 }
 
 h3 {
@@ -64,21 +71,7 @@ a:visited {
   text-decoration: 2.5px underline var(--link-decoration-color);
 }
 
-button {
-  background-color: var(--button-color);
-  color: var(--button-font-color);
-
-  font-size: 16px;
-  padding: 8px 15px;
-
-  border-radius: 15px;
-  border: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
+button,
 a.button {
   background-color: var(--button-color);
   color: var(--button-font-color);
@@ -93,6 +86,10 @@ a.button {
 
   transition: color 0.5s linear;
   transition: background-color 0.5s linear;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .center {

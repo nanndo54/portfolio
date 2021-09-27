@@ -12,8 +12,6 @@
   flex-direction: column;
   align-items: center;
 
-  overflow-y: scroll;
-
   opacity: 0;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
@@ -24,14 +22,14 @@
   pointer-events: visible;
 }
 
-.base > div {
-  margin: 80px 0;
+.base > section {
+  margin: 100px 0;
 
   transform: translateY(-80px);
-  transition: all 0.5s cubic-bezier(0.5, -0.5, 0, 2);
+  transition: all 0.5s ease;
 }
 
-.base.show > div {
+.base.show > section {
   transform: translateY(0);
 }
 

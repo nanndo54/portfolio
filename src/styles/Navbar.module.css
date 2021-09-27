@@ -1,7 +1,7 @@
 .base {
   background-color: var(--navbar-background-color);
   position: fixed;
-  top: 0;
+  top: -60px;
   z-index: 5;
 
   width: 100%;
@@ -13,7 +13,19 @@
   grid-template-columns: 170px 1fr 170px;
   align-items: center;
 
+  animation: appear 0.6s ease;
+  animation-fill-mode: forwards;
+
   transition: background-color 0.5s ease-out;
+}
+
+@keyframes appear {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 0;
+  }
 }
 
 .logo,
@@ -31,11 +43,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.items > span {
-  display: flex;
-  align-items: center;
 }
 
 .logo:hover,

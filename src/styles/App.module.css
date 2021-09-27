@@ -2,11 +2,7 @@
   margin-top: 60px;
   height: calc(100% - 60px);
 
-  background-color: var(--background-color);
-  transition: background-color 0.5s ease-out;
-
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
 }
 
 .sections {
