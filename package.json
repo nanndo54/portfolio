@@ -7,8 +7,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "yarn lint:format && yarn lint:fix ",
-    "lint:fix": "eslint ./src --ext .jsx,.js --quiet --fix --ignore-path ./.gitignore",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" "
+    "lint:fix": "eslint ./src --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
     "react": "17.0.0",
