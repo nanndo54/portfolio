@@ -24,14 +24,14 @@ function App() {
       <Navbar />
       <div className={styles.sections}>
         <WelcomeSection />
-        <GoToButton direction='down' />
+        <GoToButton direction='down' label='acerca de mí' />
         <AboutMeSection />
-        <GoToButton direction='down' />
+        <GoToButton direction='down' label='habilidades' />
         <SkillsSection />
-        <GoToButton direction='down' />
+        <GoToButton direction='down' label='proyectos' />
         <ProjectsSection />
         <ContactSection />
-        <GoToButton direction='up' />
+        <GoToButton direction='up' label='inicio' />
       </div>
       <Footer />
     </div>

@@ -13,7 +13,11 @@
   align-items: center;
 
   opacity: 0;
+
+  transition: opacity 0.5s ease !important;
   pointer-events: none;
+
+  overflow-y: scroll;
 }
 
 .base.show {
@@ -23,19 +27,20 @@
 
 .base > section {
   position: relative;
+  margin: 50px 0;
   transition: margin 0.5s ease !important;
 }
 
 .base.show > section {
-  margin: 120px 0;
+  margin: 100px 0;
 }
 
 .close {
   padding: 2px;
   font-size: 1.3em;
   align-self: flex-end;
-  margin-top: -20px;
-  margin-right: -20px;
+  margin-top: -15px;
+  margin-right: -15px;
 }
 
 .close:hover {

@@ -30,6 +30,6 @@
 
 @keyframes appear-section {
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }

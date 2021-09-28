@@ -1,5 +1,36 @@
 .base {
-  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.base:hover {
+  cursor: pointer;
+}
+
+.base p {
+  font-size: 0.9em;
+  margin: 0;
+  opacity: 0;
+
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.base.up p {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.base:hover p {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.base.up:hover p {
+  transform: translateY(7px);
+}
+
+.icon {
+  height: 45px;
   width: 50px;
   padding-bottom: 20px;
 
@@ -10,42 +41,12 @@
   animation-fill-mode: forwards;
 }
 
-.base:hover {
-  cursor: pointer;
-}
-
-.base p {
-  text-align: center;
-  font-size: 0.9em;
-  margin: 0;
-
-  opacity: 0;
-  transform: translateY(22px);
-
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.base.up p {
-  transform: translateY(-10px);
-
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.base:hover p {
-  opacity: 100%;
-  transform: translateY(12px);
-}
-
-.base.up:hover p {
-  transform: translateY(0);
-}
-
-.base > div {
+.icon > div {
   position: relative;
   background-color: var(--font-color);
 
   border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease;
 }
 
 .dot1 {
@@ -72,39 +73,39 @@
   left: 23px;
 }
 
-.base:hover > .dot1 {
+.base:hover .dot1 {
   transform: scale(50%, 220%) translateY(7px);
   border-radius: 10%;
 }
 
-.base:hover > .dot2 {
+.base:hover .dot2 {
   transform: translate(4px, 8px) rotate(140deg) scale(50%, 150%);
   border-radius: 30%;
 }
 
-.base:hover > .dot3 {
+.base:hover .dot3 {
   transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
   border-radius: 30%;
 }
 
-.base.up:hover > .dot1 {
-  transform: scale(50%, 220%) translateY(7px);
+.base.up:hover .dot1 {
+  transform: scale(50%, 220%) translateY(8px);
   border-radius: 10%;
 }
 
-.base.up:hover > .dot2 {
-  transform: translate(4px, -19px) rotate(40deg) scale(50%, 150%);
+.base.up:hover .dot2 {
+  transform: translate(4px, -17px) rotate(40deg) scale(50%, 150%);
   border-radius: 30%;
 }
 
-.base.up:hover > .dot3 {
-  transform: translate(1px, -32px) rotate(-40deg) scale(70%, 210%);
+.base.up:hover .dot3 {
+  transform: translate(2px, -30px) rotate(-40deg) scale(70%, 210%);
   border-radius: 30%;
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
   .base p {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(12px);
   }
 
@@ -112,32 +113,32 @@
     transform: translateY(0);
   }
 
-  .base > .dot1 {
+  .icon .dot1 {
     transform: scale(50%, 220%) translateY(7px);
     border-radius: 10%;
   }
 
-  .base > .dot2 {
+  .icon .dot2 {
     transform: translate(4px, 8px) rotate(140deg) scale(50%, 150%);
     border-radius: 30%;
   }
 
-  .base > .dot3 {
+  .icon .dot3 {
     transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
     border-radius: 30%;
   }
 
-  .base.up > .dot1 {
+  .icon.up .dot1 {
     transform: scale(50%, 220%) translateY(7px);
     border-radius: 10%;
   }
 
-  .base.up > .dot2 {
+  .icon.up .dot2 {
     transform: translate(4px, -19px) rotate(40deg) scale(50%, 150%);
     border-radius: 30%;
   }
 
-  .base.up > .dot3 {
+  .icon.up .dot3 {
     transform: translate(1px, -32px) rotate(-40deg) scale(70%, 210%);
     border-radius: 30%;
   }
@@ -145,7 +146,7 @@
 
 @keyframes appear-button {
   to {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(0);
   }
 }

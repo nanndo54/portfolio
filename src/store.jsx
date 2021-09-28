@@ -4,17 +4,15 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import appReducer from '@/reducers/appReducer'
 import modalReducer from '@/reducers/modalReducer'
 
-import defaultImage from '@img/default-technology-icon.png'
-
 const initialApp = {
-  theme: localStorage.getItem('theme') || 'ligth'
+  theme: localStorage.getItem('theme') || 'light'
 }
 
 const initialModal = {
   show: false,
   name: 'NoName',
   color: '#FFF',
-  image: defaultImage,
+  image: '',
   descriptiion: 'NoDescription'
 }
 

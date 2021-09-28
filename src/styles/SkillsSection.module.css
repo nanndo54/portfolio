@@ -1,3 +1,7 @@
+.subsection {
+  margin: 10px 0 15px;
+}
+
 .skills {
   display: flex;
   align-items: center;

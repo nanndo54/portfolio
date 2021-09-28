@@ -11,7 +11,7 @@ function Project({ name, description, technologies = [] }) {
   return (
     <div className={`${styles.base} ${expanded ? styles.expanded : ''}`}>
       <div className={`${styles.down} unselectable`} onClick={toggleExpand}>
-        ↴
+        {'❯'}
       </div>
       <h3>{name}</h3>
       <p>{description}</p>

@@ -19,7 +19,7 @@ function Navbar() {
     <nav className={styles.base}>
       <div className={styles.items}>
         <DarkModeSwitch
-          checked={theme === 'ligth'}
+          checked={theme === 'light'}
           onChange={changeTheme}
           moonColor='var(--font-color)'
           sunColor='var(--font-color)'

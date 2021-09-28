@@ -4,19 +4,25 @@
 
   width: calc(100% - 50px);
   padding: 20px 25px 10px;
-  height: max-content;
+  /* height: max-content; */
 
   display: flex;
   flex-direction: column;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
-  transition: height 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.base.expanded {
+  /* height: 150%; */
 }
 
 .base h3 {
-  margin-right: 20px;
-  margin-bottom: 10px;
+  text-align: left;
+  margin: 45px 20px 10px 0;
+  /* margin-right: 20px; */
+  /* margin-bottom: 10px; */
 }
 
 .base p {
@@ -27,19 +33,20 @@
 }
 
 .base.expanded p {
-  -webkit-line-clamp: initial;
+  display: initial;
+  /* -webkit-line-clamp: initial; */
 }
 
-.down {
+.base .down {
   z-index: 5;
   align-self: flex-end;
-  font-size: 1.5em;
+  font-size: 1.1em;
   padding: 2px;
-  margin-top: -5px;
-  margin-bottom: -57px;
-  margin-right: -5px;
+  margin: -5px 0 -55px;
 
-  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: rotate(90deg);
+
+  transition: transform 0.5s ease;
 }
 
 .down:hover {
@@ -47,5 +54,5 @@
 }
 
 .base.expanded .down {
-  transform: rotate(180deg);
+  transform: rotate(90deg) rotateY(180deg);
 }

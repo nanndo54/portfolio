@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react'
 
 const themes = {
-  ligth: {
+  light: {
     'background-color': 'rgb(230, 230, 240)',
     'font-color': 'rgb(30, 30, 40)',
     'navbar-background-color': 'rgb(215, 215, 240)',
@@ -46,6 +46,7 @@ const themes = {
 function useTheme(mode) {
   useLayoutEffect(() => {
     const theme = themes[mode]
+    console.log(mode, theme)
     for (const key in theme) {
       document.documentElement.style.setProperty(`--${key}`, theme[key])
     }
