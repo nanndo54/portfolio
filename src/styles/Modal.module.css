@@ -24,7 +24,7 @@
 
 .base > section {
   position: relative;
-  transition: all 0.5s ease !important;
+  transition: margin 0.5s ease !important;
 }
 
 .base.show > section {

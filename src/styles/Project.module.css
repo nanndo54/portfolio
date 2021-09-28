@@ -11,9 +11,9 @@
 
   border-radius: 20px;
 
-  transition: height 1s linear;
-  transition: background-color 0.5s linear;
-  transition: color 0.5s linear;
+  transition: height 0.5s ease;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .base h3 {
