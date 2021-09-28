@@ -1,4 +1,3 @@
-import styles from '@/styles/WelcomeSection.module.css'
 import React from 'react'
 
 import Avatar from './Avatar'
@@ -6,7 +5,7 @@ import Section from './Section'
 
 function WelcomeSection() {
   return (
-    <Section className={styles.base} shadow={false} fallback={false}>
+    <Section shadow={false} fallback={false}>
       <Avatar />
       <h1>Pablo Cabrera (pabloc54)</h1>
       <p className='small'>(En busca de trabajo)</p>

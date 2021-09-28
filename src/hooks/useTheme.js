@@ -8,7 +8,7 @@ const themes = {
     'navbar-decoration-color': 'rgb(55, 55, 75)',
     'section-background-color': 'rgb(225, 225, 235)',
     'small-font-color': 'rgb(75, 75, 85)',
-    'link-font-color': 'rgb(100, 125, 255)',
+    'link-font-color': 'rgb(90, 90, 230)',
     'link-decoration-color': 'rgb(60, 70, 180)',
     'icon-filter': 'none',
     'modal-outside': 'rgba(35, 35, 45, 0.5)',
