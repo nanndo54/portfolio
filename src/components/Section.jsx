@@ -14,7 +14,7 @@ function Section({
 }) {
   const ref = useRef(null)
   const intersected = useIntersectionObserver(ref, {
-    threshold: 1,
+    threshold: 0.4,
     fallback
   })
 
