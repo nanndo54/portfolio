@@ -7,14 +7,6 @@ import DarkModeSwitch from './DarkModeSwitch'
 
 import { toggleTheme } from '@/actions/appActions'
 
-const goToTop = () => {
-  const base = document.getElementById('base')
-  base?.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-}
-
 function Navbar() {
   const { theme } = useSelector(({ app }) => app)
   const dispatch = useDispatch()
@@ -25,9 +17,6 @@ function Navbar() {
 
   return (
     <nav className={styles.base}>
-      <div className={styles.logo} onClick={goToTop}>
-        PC54
-      </div>
       <div className={styles.items}>
         <DarkModeSwitch
           checked={theme === 'ligth'}
@@ -37,11 +26,9 @@ function Navbar() {
         />
         <span className={styles.language}>es</span>
       </div>
-      <div className={styles.button}>
-        <a className='button' href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>
-          ¡Contáctame!
-        </a>
-      </div>
+      <a className='button' href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>
+        ¡Contáctame!
+      </a>
     </nav>
   )
 }

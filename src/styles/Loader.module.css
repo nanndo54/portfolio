@@ -1,6 +1,7 @@
 .base {
   height: 100%;
   width: calc(100% - 8px);
+  padding-right: 8px;
 
   display: flex;
   justify-content: center;
@@ -13,13 +14,13 @@
   width: 220px;
 
   position: absolute;
-  top: 90px;
+  top: 80px;
 
   border-radius: 90%;
   border: 10px solid rgba(45, 45, 60, 0.1);
   border-right: 10px solid rgb(35, 35, 45);
 
-  animation: spin-loader 3s ease-in-out infinite;
+  animation: spin-loader 3s ease infinite;
 }
 
 .base.dark {

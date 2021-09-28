@@ -1,5 +1,5 @@
-import React from 'react'
 import styles from '@/styles/Skill.module.css'
+import React from 'react'
 
 import defaultImage from '@img/default-technology-icon.png'
 import { useDispatch } from 'react-redux'

@@ -1,33 +1,21 @@
 .base {
   background-color: var(--navbar-background-color);
   position: fixed;
-  top: -60px;
-  z-index: 5;
+  top: -50px;
 
-  width: 100%;
-  height: 60px;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+  height: 50px;
   font-size: 1.4em;
 
-  display: grid;
-  gap: 15px;
-  grid-template-columns: 110px 1fr 170px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 
   animation: appear-navbar 0.5s ease 0.6s;
   animation-fill-mode: forwards;
 
-  transition: background-color 0.5s ease-out;
-}
-
-.logo,
-.button {
-  text-align: center;
-}
-
-.logo {
-  font-family: 'Oleo Script Swash Caps', cursive;
-  font-size: 1.4em;
-  border-right: 2px solid var(--navbar-decoration-color);
+  transition: background-color 0.5s ease;
 }
 
 .items {
@@ -36,15 +24,11 @@
   gap: 10px;
 }
 
-.logo:hover,
-.items > span:hover {
+.items > *:hover {
   cursor: pointer;
 }
 
 @keyframes appear-navbar {
-  from {
-    top: -60px;
-  }
   to {
     top: 0;
   }

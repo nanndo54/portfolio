@@ -14,6 +14,10 @@ function Modal() {
     dispatch(hideModal())
   }
 
+  const handleStopPropagation = (ev) => {
+    ev.stopPropagation()
+  }
+
   const closeOnEscape = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       handleClose()
@@ -27,10 +31,9 @@ function Modal() {
       document.body.removeEventListener('keydown', closeOnEscape)
     }
   }, [show])
-
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
-      <Section last>
+      <Section last onClick={handleStopPropagation}>
         <div className={`${styles.close} unselectable`} onClick={handleClose}>
           ✕
         </div>

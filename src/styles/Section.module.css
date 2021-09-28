@@ -7,8 +7,8 @@
   align-items: center;
 }
 
-.base.animated {
-  color: transparent;
+.base.animated *:not(header) {
+  opacity: 0;
 
   animation: appear-section 0.5s ease 0.6s;
   animation-fill-mode: forwards;
@@ -19,21 +19,7 @@
   box-shadow: var(--shadow-color) 0px 2px 4px 0px inset;
   border-radius: 15px;
 
-  transition: background-color 0.5s ease-out;
-}
-
-.next img {
-  opacity: 0;
-  filter: var(--icon-filter);
-
-  animation: appear-img 0.5s ease 0.6s;
-  animation-fill-mode: forwards;
-
-  transition: filter 0.5s ease-out;
-}
-
-.next img:hover {
-  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 @media (max-width: 700px) {
@@ -43,18 +29,6 @@
 }
 
 @keyframes appear-section {
-  from {
-    color: transparent;
-  }
-  to {
-    color: inherit;
-  }
-}
-
-@keyframes appear-img {
-  from {
-    opacity: 0;
-  }
   to {
     opacity: 100%;
   }

@@ -130,7 +130,7 @@ button:hover {
   border-radius: 90%;
   border: 10px solid rgba(45, 45, 60, 0.1);
   border-right: 10px solid #23232d;
-  animation: Loader_spin-loader_1 3s ease-in-out infinite;
+  animation: Loader_spin-loader_1 3s ease infinite;
 }
 .Loader_base_1.Loader_dark_25 {
   background-color: #1e1e23;

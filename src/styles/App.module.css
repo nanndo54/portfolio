@@ -1,6 +1,6 @@
 .base {
-  margin-top: 60px;
-  height: calc(100% - 60px);
+  margin-top: 50px;
+  height: calc(100% - 50px);
 
   overflow-y: scroll;
 }

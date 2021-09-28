@@ -5,9 +5,9 @@ import Section from './Section'
 
 function WelcomeSection() {
   return (
-    <Section shadow={false} fallback={false}>
+    <Section shadow={false} fallback={false} buttonDirection='down'>
       <Avatar />
-      <h1>Pablo Cabrera</h1>
+      <h1>Pablo Cabrera (pabloc54)</h1>
       <p className='small'>(En busca de trabajo)</p>
       <p className='center'>
         ¡Hola! Soy un Desarrollador Fullstack de Guatemala 🇬🇹 de seniority Junior, con

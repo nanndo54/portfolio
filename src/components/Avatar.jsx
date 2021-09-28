@@ -1,13 +1,13 @@
-import React from 'react'
 import styles from '@/styles/Avatar.module.css'
+import React from 'react'
 
 import photo from '@img/profile-photo.jpg'
 
 function Avatar() {
   return (
-    <div className={styles.base}>
+    <header id='profile' className={styles.base}>
       <img src={photo} alt='me' loading='eager' />
-    </div>
+    </header>
   )
 }
 

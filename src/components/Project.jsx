@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
 import styles from '@/styles/Project.module.css'
-// import githubIcon from '@img/github-icon.png'
+import React, { useState } from 'react'
 
 function Project({ name, description, technologies = [] }) {
   const [expanded, setExpanded] = useState(false)

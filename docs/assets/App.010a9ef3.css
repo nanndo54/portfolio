@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   pointer-events: none;
 }
 .Modal_base_1.Modal_show_20 {
@@ -62,7 +62,7 @@
   width: 55px;
   margin-bottom: 5px;
   border-radius: 90%;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease;
 }
 .Skill_base_1 .Skill_icon_9:hover {
   cursor: pointer;
@@ -72,7 +72,7 @@
   position: relative;
   width: 40px;
   filter: var(--icon-filter);
-  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease;
 }
 .Skill_big_36 {
   font-size: 1.2em;
@@ -106,14 +106,14 @@
   background-color: var(--section-background-color);
   box-shadow: var(--shadow-color) 0 2px 4px 0 inset;
   border-radius: 15px;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease;
 }
 .Section_next_25 img {
   opacity: 0;
   filter: var(--icon-filter);
   animation: Section_appear-img_1 0.5s ease 0.6s;
   animation-fill-mode: forwards;
-  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease;
 }
 .Section_next_25 img:hover {
   cursor: pointer;
@@ -153,7 +153,7 @@
   align-items: center;
   animation: Navbar_appear-navbar_1 0.5s ease 0.6s;
   animation-fill-mode: forwards;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease;
 }
 .Navbar_button_23,
 .Navbar_logo_22 {

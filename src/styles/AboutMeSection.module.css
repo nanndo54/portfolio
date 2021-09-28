@@ -2,13 +2,24 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px 0;
+  margin: 20px 0;
 }
 
 .inline img {
-  max-width: 45%;
+  max-width: calc(45% - 26px);
 
   padding: 8px;
   border-radius: 20px;
   border: 5px solid var(--shadow-color);
+}
+
+@media (max-width: 700px) {
+  .inline {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .inline img {
+    max-width: calc(100% - 26px);
+  }
 }
