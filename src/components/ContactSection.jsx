@@ -3,7 +3,7 @@ import Section from './Section'
 
 function ContactSection() {
   return (
-    <Section shadow={false} last fallback={false}>
+    <Section shadow={false} fallback={false}>
       <h2>¿Te gusta lo que ves?</h2>
       <p className='center'>
         ¡Te invito a mandarme un mensaje por{' '}

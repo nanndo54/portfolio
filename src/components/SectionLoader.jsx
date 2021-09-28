@@ -5,20 +5,20 @@ function SectionLoader() {
   return (
     <ContentLoader
       speed={2}
-      width={590}
+      width='100%'
       height={350}
       backgroundColor='var(--shadow-color)'
       foregroundColor='var(--section-background-color)'
     >
-      <rect x='200' y='25' rx='3' ry='3' width='200' height='20' />
-      <rect x='0' y='90' rx='3' ry='3' width='590' height='6' />
-      <rect x='0' y='115' rx='3' ry='3' width='580' height='6' />
-      <rect x='0' y='140' rx='3' ry='3' width='580' height='6' />
-      <rect x='0' y='165' rx='3' ry='3' width='290' height='6' />
-      <rect x='0' y='220' rx='3' ry='3' width='590' height='6' />
-      <rect x='0' y='245' rx='3' ry='3' width='590' height='6' />
-      <rect x='0' y='270' rx='3' ry='3' width='570' height='6' />
-      <rect x='0' y='295' rx='3' ry='3' width='210' height='6' />
+      <rect x='calc(50% - 100px)' y='35' rx='3' ry='3' width='200' height='25' />
+      <rect x='0' y='100' rx='3' ry='3' width='100%' height='7' />
+      <rect x='0' y='125' rx='3' ry='3' width='95%' height='7' />
+      <rect x='0' y='150' rx='3' ry='3' width='95%' height='7' />
+      <rect x='0' y='175' rx='3' ry='3' width='70%' height='7' />
+      <rect x='0' y='225' rx='3' ry='3' width='100%' height='7' />
+      <rect x='0' y='250' rx='3' ry='3' width='100%' height='7' />
+      <rect x='0' y='275' rx='3' ry='3' width='95%' height='7' />
+      <rect x='0' y='300' rx='3' ry='3' width='50%' height='7' />
     </ContentLoader>
   )
 }

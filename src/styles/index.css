@@ -13,17 +13,27 @@ body {
   scroll-behavior: smooth;
 }
 
+#root,
+nav,
+section,
+a,
+::after {
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+}
+
 #root {
   height: 100%;
 }
 
 p {
-  margin: 5px;
+  margin: 10px 0;
+  line-height: 1.5em;
 }
 
 .small {
   font-size: 0.85rem;
-  /* color: var(--small-font-color); */
+  color: var(--small-font-color);
 
   margin: 5px 0 10px;
 }
@@ -33,7 +43,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  text-align: center;
+  line-height: 1em;
+  margin: 10px 0 15px;
+}
+
 .center {
   text-align: center;
 }
@@ -48,21 +63,19 @@ h6,
 }
 
 h1 {
-  margin: 10px 0 15px;
-
   font-family: 'Oleo Script Swash Caps';
-  font-size: 3em;
-  line-height: 1em;
+  font-size: 2.9em;
+  margin-bottom: 20px;
 }
 
-h1:after {
+h1::after {
   content: '';
   display: block;
-  width: 105%;
+  width: 110%;
   height: 8px;
 
   position: relative;
-  left: -15px;
+  left: -3%;
   top: 5px;
 
   border-radius: 5px;
@@ -70,13 +83,11 @@ h1:after {
   border-bottom-left-radius: 15px;
   background-color: var(--font-color);
 
-  transform: rotate(0.5);
-  transition: background-color 0.5s ease;
+  transform: rotate(0.5deg);
 }
 
 h2 {
   font-size: 2em;
-  margin: 10px 0;
 }
 
 h3 {
@@ -97,6 +108,7 @@ h6 {
 
 a:link,
 a:visited {
+  background-color: transparent;
   color: var(--link-font-color);
   text-decoration: 2.5px underline var(--link-decoration-color);
 }
@@ -106,16 +118,13 @@ a.button {
   background-color: var(--button-color);
   color: var(--button-font-color);
 
-  font-size: 16px;
+  font-size: 0.7em;
   display: inline-block;
   padding: 5px 15px;
 
   border-radius: 17px;
   border: none;
   text-decoration: none;
-
-  transition: color 0.5s ease;
-  transition: background-color 0.5s ease;
 }
 
 button:hover {
@@ -129,10 +138,16 @@ button:hover {
 
 ::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track-color);
-  transition: background-color 0.5s ease;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
-  transition: background-color 0.5s ease;
+}
+
+@media (max-width: 600px) {
+  h1::after {
+    width: 85%;
+    left: 7.5%;
+    top: 10px;
+  }
 }

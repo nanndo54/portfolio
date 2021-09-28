@@ -13,7 +13,6 @@ import ProjectsSection from './ProjectsSection'
 import ContactSection from './ContactSection'
 
 import useTheme from '@/hooks/useTheme'
-import SectionLoader from './SectionLoader'
 
 function App() {
   const { theme } = useSelector(({ app }) => app)
@@ -26,7 +25,6 @@ function App() {
       <div className={styles.sections}>
         <WelcomeSection />
         <GoToButton direction='down' />
-        <SectionLoader />
         <AboutMeSection />
         <GoToButton direction='down' />
         <SkillsSection />
