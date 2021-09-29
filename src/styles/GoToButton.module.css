@@ -106,40 +106,40 @@
 @media only screen and (hover: none) and (pointer: coarse) {
   .base p {
     opacity: 1;
-    transform: translateY(12px);
+    transform: translateY(-10px);
   }
 
   .base.up p {
-    transform: translateY(0);
+    transform: translateY(7px);
   }
 
-  .icon .dot1 {
+  .base .dot1 {
     transform: scale(50%, 220%) translateY(7px);
     border-radius: 10%;
   }
 
-  .icon .dot2 {
+  .base .dot2 {
     transform: translate(4px, 8px) rotate(140deg) scale(50%, 150%);
     border-radius: 30%;
   }
 
-  .icon .dot3 {
+  .base .dot3 {
     transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
     border-radius: 30%;
   }
 
-  .icon.up .dot1 {
-    transform: scale(50%, 220%) translateY(7px);
+  .base.up .dot1 {
+    transform: scale(50%, 220%) translateY(8px);
     border-radius: 10%;
   }
 
-  .icon.up .dot2 {
-    transform: translate(4px, -19px) rotate(40deg) scale(50%, 150%);
+  .base.up .dot2 {
+    transform: translate(4px, -17px) rotate(40deg) scale(50%, 150%);
     border-radius: 30%;
   }
 
-  .icon.up .dot3 {
-    transform: translate(1px, -32px) rotate(-40deg) scale(70%, 210%);
+  .base.up .dot3 {
+    transform: translate(2px, -30px) rotate(-40deg) scale(70%, 210%);
     border-radius: 30%;
   }
 }

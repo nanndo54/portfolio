@@ -1,4 +1,8 @@
 .base {
+  --background-color: rgb(230, 230, 240);
+  --loader-color: rgb(30, 30, 40);
+  --loader-background-color: rgba(45, 45, 60, 0.1);
+
   height: 100%;
   width: calc(100% - 8px);
   padding-right: 8px;
@@ -6,37 +10,69 @@
   display: flex;
   justify-content: center;
 
-  background-color: rgb(230, 230, 240);
-}
-
-.base .loader {
-  height: 220px;
-  width: 220px;
-
-  position: absolute;
-  top: 80px;
-
-  border-radius: 90%;
-  border: 10px solid rgba(45, 45, 60, 0.1);
-  border-right: 10px solid rgb(35, 35, 45);
-
-  animation: spin-loader 3s ease infinite;
+  background-color: var(--background-color);
 }
 
 .base.dark {
-  background-color: rgb(30, 30, 35);
+  --background-color: rgb(30, 30, 40);
+  --loader-color: rgb(210, 210, 220);
+  --loader-background-color: rgba(110, 110, 120, 0.2);
 }
 
-.base.dark .loader {
-  border: 10px solid rgba(110, 110, 120, 0.2);
-  border-right: 10px solid rgb(210, 210, 220);
+.base .loader {
+  --r1: 154%;
+  --r2: 68.5%;
+
+  position: relative;
+  top: 80px;
+
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+
+  border: 10px solid var(--loader-background-color);
+  border-radius: 50%;
+
+  background: radial-gradient(
+        var(--r1) var(--r2) at top,
+        #0000 79.5%,
+        var(--loader-color) 80%
+      )
+      center left,
+    radial-gradient(var(--r1) var(--r2) at bottom, var(--loader-color) 79.5%, #0000 80%)
+      center center,
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, var(--loader-color) 80%)
+      center right,
+    var(--loader-background-color);
+  background-size: 50.2% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  animation: loader-animation 1s infinite cubic-bezier(0.33, 0.17, 0.71, 0.85);
 }
 
-@keyframes spin-loader {
-  0% {
-    transform: rotate(0);
+/* .base .loader::after {
+  content: '';
+  display: block;
+
+  margin: 10px;
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+
+  border-radius: inherit;
+
+  border: 10px solid var(--background-color);
+  background: transparent;
+} */
+
+@keyframes loader-animation {
+  33.3% {
+    background-position: -50% 33.3%, 50% 33.3%, 150% 33.3%;
+  }
+  66.6% {
+    background-position: -75% 66.6%, 25% 66.6%, 125% 66.6%;
   }
   100% {
-    transform: rotate(4turn);
+    background-position: -50% 100%, 50% 100%, 150% 100%;
   }
 }

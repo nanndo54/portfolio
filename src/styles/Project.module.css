@@ -4,7 +4,7 @@
 
   width: calc(100% - 50px);
   padding: 20px 25px 10px;
-  /* height: max-content; */
+  height: max-content;
 
   display: flex;
   flex-direction: column;
@@ -15,14 +15,12 @@
 }
 
 .base.expanded {
-  /* height: 150%; */
+  /* height: max-content; */
 }
 
 .base h3 {
   text-align: left;
-  margin: 45px 20px 10px 0;
-  /* margin-right: 20px; */
-  /* margin-bottom: 10px; */
+  margin: 45px 25px 10px 0;
 }
 
 .base p {
@@ -33,20 +31,16 @@
 }
 
 .base.expanded p {
-  display: initial;
-  /* -webkit-line-clamp: initial; */
+  -webkit-line-clamp: initial;
 }
 
 .base .down {
   z-index: 5;
   align-self: flex-end;
-  font-size: 1.1em;
   padding: 2px;
   margin: -5px 0 -55px;
 
   transform: rotate(90deg);
-
-  transition: transform 0.5s ease;
 }
 
 .down:hover {

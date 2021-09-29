@@ -10,7 +10,7 @@
 .base.animated *:not(header) {
   opacity: 0;
 
-  animation: appear-section 0.5s ease 0.5s;
+  animation: appear-section 0.5s ease 0.3s;
   animation-fill-mode: forwards;
 }
 
