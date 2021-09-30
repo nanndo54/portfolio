@@ -8,7 +8,7 @@ import store from './store'
 const App = lazy(() =>
   Promise.all([
     import('@/components/App'),
-    new Promise((resolve) => setTimeout(resolve, 1000))
+    new Promise((resolve) => setTimeout(resolve, 800))
   ]).then(([moduleExports]) => moduleExports)
 )
 ReactDOM.render(
@@ -19,5 +19,5 @@ ReactDOM.render(
       </Suspense>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.querySelector('main')
 )
