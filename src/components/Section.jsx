@@ -4,7 +4,14 @@ import React, { useRef } from 'react'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import SectionLoader from './SectionLoader'
 
-function Section({ shadow = true, animated = true, fallback = true, children, onClick }) {
+function Section({
+  shadow = true,
+  animated = true,
+  fallback = true,
+  children,
+  onClick,
+  Tag = 'section'
+}) {
   const ref = useRef(null)
   const intersected = useIntersectionObserver(ref, {
     threshold: 0.4,
@@ -22,11 +29,9 @@ function Section({ shadow = true, animated = true, fallback = true, children, on
   }`
 
   return (
-    <>
-      <section className={className} ref={ref} onClick={onClick}>
-        {fallback && !intersected ? <SectionLoader /> : children}
-      </section>
-    </>
+    <Tag className={className} ref={ref} onClick={onClick}>
+      {fallback && !intersected ? <SectionLoader /> : children}
+    </Tag>
   )
 }
 

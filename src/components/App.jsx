@@ -32,6 +32,10 @@ function App() {
         <ProjectsSection />
         <ContactSection />
         <GoToButton direction='up' label='inicio' />
+        <blockquote>
+          “Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos” —
+          <i>Carl Sagan</i>
+        </blockquote>
       </div>
       <Footer />
     </div>

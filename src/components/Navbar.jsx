@@ -21,8 +21,8 @@ function Navbar() {
         <DarkModeSwitch
           checked={theme === 'light'}
           onChange={changeTheme}
-          moonColor='var(--font-color)'
-          sunColor='var(--font-color)'
+          moonColor='var(--content-color)'
+          sunColor='var(--content-color)'
         />
         <span className={styles.language}>es</span>
       </div>

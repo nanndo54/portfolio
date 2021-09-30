@@ -1,6 +1,5 @@
 .base {
-  background-color: var(--font-color);
-  color: var(--background-color);
+  border: 5px solid var(--tertiary-color);
 
   width: calc(100% - 50px);
   padding: 20px 25px 10px;

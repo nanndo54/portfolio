@@ -1,22 +1,22 @@
 .base {
-  --background-color: rgb(230, 230, 240);
+  --background-color: rgb(240, 240, 250);
   --loader-color: rgb(30, 30, 40);
-  --loader-background-color: rgba(45, 45, 60, 0.1);
+  --loader-background-color: rgb(225, 225, 235);
 
-  height: 100%;
-  width: calc(100% - 8px);
-  padding-right: 8px;
+  background-color: var(--background-color);
 
   display: flex;
   justify-content: center;
 
-  background-color: var(--background-color);
+  height: 100%;
+  width: calc(100% - 8px);
+  padding-right: 8px;
 }
 
 .base.dark {
-  --background-color: rgb(30, 30, 40);
-  --loader-color: rgb(210, 210, 220);
-  --loader-background-color: rgba(110, 110, 120, 0.2);
+  --background-color: rgb(35, 35, 45);
+  --loader-color: rgb(220, 220, 230);
+  --loader-background-color: rgb(45, 45, 55);
 }
 
 .base .loader {
@@ -48,7 +48,7 @@
   background-position: -100% 0%, 0% 0%, 100% 0%;
   background-repeat: no-repeat;
   background-clip: content-box;
-  animation: loader-animation 1s cubic-bezier(0.33, 0.17, 0.71, 0.85);
+  animation: loader-animation 0.8s cubic-bezier(0.33, 0.17, 0.71, 0.85) forwards;
 }
 
 @keyframes loader-animation {

@@ -37,15 +37,14 @@
   opacity: 0;
   transform: translateY(60px);
 
-  animation: appear-button 0.5s ease 0.5s;
-  animation-fill-mode: forwards;
+  animation: appear-button 0.5s ease 0.3s forwards;
 }
 
 .icon > div {
   position: relative;
-  background-color: var(--font-color);
+  background-color: var(--content-color);
 
-  border-radius: 10px;
+  border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease;
 }
 
@@ -73,34 +72,32 @@
   left: 23px;
 }
 
+.base:hover .icon > div {
+  border-radius: 25%;
+}
+
 .base:hover .dot1 {
-  transform: scale(50%, 220%) translateY(7px);
-  border-radius: 10%;
+  transform: scale(50%, 180%) translateY(9px);
 }
 
 .base:hover .dot2 {
-  transform: translate(4px, 8px) rotate(140deg) scale(50%, 150%);
-  border-radius: 30%;
+  transform: translate(5px, 8px) rotate(140deg) scale(50%, 150%);
 }
 
 .base:hover .dot3 {
   transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
-  border-radius: 30%;
 }
 
 .base.up:hover .dot1 {
-  transform: scale(50%, 220%) translateY(8px);
-  border-radius: 10%;
+  transform: scale(50%, 180%) translateY(10px);
 }
 
 .base.up:hover .dot2 {
-  transform: translate(4px, -17px) rotate(40deg) scale(50%, 150%);
-  border-radius: 30%;
+  transform: translate(5px, -16px) rotate(40deg) scale(50%, 150%);
 }
 
 .base.up:hover .dot3 {
-  transform: translate(2px, -30px) rotate(-40deg) scale(70%, 210%);
-  border-radius: 30%;
+  transform: translate(1px, -29px) rotate(-40deg) scale(70%, 210%);
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
@@ -113,34 +110,32 @@
     transform: translateY(7px);
   }
 
+  .base .icon > div {
+    border-radius: 25%;
+  }
+
   .base .dot1 {
-    transform: scale(50%, 220%) translateY(7px);
-    border-radius: 10%;
+    transform: scale(50%, 180%) translateY(9px);
   }
 
   .base .dot2 {
-    transform: translate(4px, 8px) rotate(140deg) scale(50%, 150%);
-    border-radius: 30%;
+    transform: translate(5px, 8px) rotate(140deg) scale(50%, 150%);
   }
 
   .base .dot3 {
     transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
-    border-radius: 30%;
   }
 
   .base.up .dot1 {
-    transform: scale(50%, 220%) translateY(8px);
-    border-radius: 10%;
+    transform: scale(50%, 180%) translateY(10px);
   }
 
   .base.up .dot2 {
-    transform: translate(4px, -17px) rotate(40deg) scale(50%, 150%);
-    border-radius: 30%;
+    transform: translate(5px, -16px) rotate(40deg) scale(50%, 150%);
   }
 
   .base.up .dot3 {
-    transform: translate(2px, -30px) rotate(-40deg) scale(70%, 210%);
-    border-radius: 30%;
+    transform: translate(1px, -29px) rotate(-40deg) scale(70%, 210%);
   }
 }
 

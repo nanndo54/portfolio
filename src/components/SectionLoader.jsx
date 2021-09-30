@@ -7,7 +7,7 @@ function SectionLoader() {
       speed={2}
       width='100%'
       height={350}
-      backgroundColor='var(--shadow-color)'
+      backgroundColor='var(--tertiary-color)'
       foregroundColor='var(--section-background-color)'
     >
       <rect x='calc(50% - 100px)' y='35' rx='3' ry='3' width='200' height='25' />

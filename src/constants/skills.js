@@ -24,7 +24,7 @@ const skills = {
     },
     {
       name: 'CSS',
-      description: 'desc',
+      description: 'desc ',
       color: '#3399ff',
       image: cssIcon
     },

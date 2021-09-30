@@ -33,7 +33,7 @@ function Modal() {
   }, [show])
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
-      <Section onClick={handleStopPropagation}>
+      <Section onClick={handleStopPropagation} Tag='aside'>
         <div className={`${styles.close} unselectable`} onClick={handleClose}>
           ✕
         </div>

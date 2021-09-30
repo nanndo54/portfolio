@@ -25,6 +25,6 @@ const reducer = combineReducers({
 
 const store = createStore(reducer, initialState, composeWithDevTools())
 
-export { initialApp, initialModal }
-
 export default store
+
+export { initialApp, initialModal }

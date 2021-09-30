@@ -1,0 +1,16 @@
+.avatar {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+
+  border-radius: 50%;
+  border: 10px solid var(--tertiary-color);
+
+  background-color: var(--content-color);
+  background-clip: content-box;
+}
+
+.avatar img {
+  width: 100.5%;
+  border-radius: inherit;
+}

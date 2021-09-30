@@ -7,19 +7,17 @@
   align-items: center;
 }
 
-.base.animated *:not(header) {
+.base.animated *:not(header div) {
   opacity: 0;
-
-  animation: appear-section 0.5s ease 0.3s;
-  animation-fill-mode: forwards;
+  animation: appear-section 0.5s ease 0.3s forwards;
 }
 
 .base.shadow {
-  background-color: var(--section-background-color);
-  box-shadow: var(--shadow-color) 0px 2px 4px 0px inset;
+  background-color: var(--secondary-color);
+  box-shadow: var(--quaternary-color) 2px 1px 10px 0px inset;
 
   padding-bottom: 30px;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 @media (max-width: 700px) {
