@@ -16,7 +16,7 @@ function GoToButton({ direction = 'down', label }) {
   label = <p>{label}</p>
 
   return (
-    <div
+    <button
       className={`${styles.base} ${direction === 'down' ? styles.down : styles.up}`}
       onClick={(ev) => handleScroll(ev, direction)}
     >
@@ -27,7 +27,7 @@ function GoToButton({ direction = 'down', label }) {
         <div className={styles.dot3} />
       </div>
       {direction === 'down' && label}
-    </div>
+    </button>
   )
 }
 

@@ -16,3 +16,12 @@
   align-items: center;
   gap: 25px;
 }
+
+.base::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.base::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+}

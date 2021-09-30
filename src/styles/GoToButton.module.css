@@ -20,12 +20,14 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.base:hover p {
+.base:hover p,
+.base:focus p {
   opacity: 1;
   transform: translateY(-10px);
 }
 
-.base.up:hover p {
+.base.up:hover p,
+.base.up:focus p {
   transform: translateY(7px);
 }
 
@@ -72,31 +74,38 @@
   left: 23px;
 }
 
-.base:hover .icon > div {
+.base:hover .icon > div,
+.base:focus .icon > div {
   border-radius: 25%;
 }
 
-.base:hover .dot1 {
+.base:hover .dot1,
+.base:focus .dot1 {
   transform: scale(50%, 180%) translateY(9px);
 }
 
-.base:hover .dot2 {
+.base:hover .dot2,
+.base:focus .dot2 {
   transform: translate(5px, 8px) rotate(140deg) scale(50%, 150%);
 }
 
-.base:hover .dot3 {
+.base:hover .dot3,
+.base:focus .dot3 {
   transform: translate(2px, -5px) rotate(40deg) scale(70%, 210%);
 }
 
-.base.up:hover .dot1 {
+.base.up:hover .dot1,
+.base.up:focus .dot1 {
   transform: scale(50%, 180%) translateY(10px);
 }
 
-.base.up:hover .dot2 {
+.base.up:hover .dot2,
+.base.up:focus .dot2 {
   transform: translate(5px, -16px) rotate(40deg) scale(50%, 150%);
 }
 
-.base.up:hover .dot3 {
+.base.up:hover .dot3,
+.base.up:focus .dot3 {
   transform: translate(1px, -29px) rotate(-40deg) scale(70%, 210%);
 }
 

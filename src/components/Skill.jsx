@@ -4,19 +4,20 @@ import { useDispatch } from 'react-redux'
 
 import { showModal } from '@/actions/modalActions'
 
-function Skill({ name, description, color, image, big = false }) {
+function Skill({ big = false, ...skill }) {
+  const { name, image } = skill
   const dispatch = useDispatch()
 
   const handleClick = () => {
-    const skill = { name, color, image, description }
+    if (big) return
     dispatch(showModal(skill))
   }
 
   return (
     <div className={`${styles.base} ${big ? styles.big : ''}`} onClick={handleClick}>
-      <div className={styles.icon}>
+      <button className={styles.icon}>
         <img src={image} alt={`${name} icon`} />
-      </div>
+      </button>
       <span>{name}</span>
     </div>
   )

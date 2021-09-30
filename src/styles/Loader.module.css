@@ -1,7 +1,7 @@
 .base {
   --background-color: rgb(240, 240, 250);
   --loader-color: rgb(30, 30, 40);
-  --loader-background-color: rgb(225, 225, 235);
+  --loader-background-color: rgb(220, 220, 230);
 
   background-color: var(--background-color);
 
@@ -16,7 +16,7 @@
 .base.dark {
   --background-color: rgb(35, 35, 45);
   --loader-color: rgb(220, 220, 230);
-  --loader-background-color: rgb(45, 45, 55);
+  --loader-background-color: rgb(50, 50, 60);
 }
 
 .base .loader {
@@ -48,6 +48,7 @@
   background-position: -100% 0%, 0% 0%, 100% 0%;
   background-repeat: no-repeat;
   background-clip: content-box;
+  -webkit-background-clip: content-box;
   animation: loader-animation 0.8s cubic-bezier(0.33, 0.17, 0.71, 0.85) forwards;
 }
 
