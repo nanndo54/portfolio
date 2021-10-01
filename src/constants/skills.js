@@ -83,7 +83,7 @@ const skills = {
       image: mysqlIcon
     },
     {
-      name: 'Oracle PL/SQL',
+      name: 'PL/SQL',
       description: 'desc',
       image: oraclesqlIcon
     }

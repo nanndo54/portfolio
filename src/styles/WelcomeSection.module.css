@@ -13,4 +13,5 @@
 .avatar img {
   width: 100.5%;
   border-radius: inherit;
+  filter: grayscale(25%) contrast(125%);
 }
