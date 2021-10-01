@@ -13,10 +13,13 @@ function Section({
   Tag = 'section'
 }) {
   const ref = useRef(null)
-  const intersected = useIntersectionObserver(ref, {
-    threshold: 0.3,
+  const intersected = useIntersectionObserver(
+    ref,
+    {
+      threshold: 0.3
+    },
     fallback
-  })
+  )
 
   const className = `${styles.base} ${shadow ? styles.shadow : ''} ${
     fallback

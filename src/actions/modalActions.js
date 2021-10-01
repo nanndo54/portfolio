@@ -1,6 +1,6 @@
-const showModal = (payload) => ({
+const showModal = (name) => ({
   type: '@modal/show',
-  payload
+  payload: name
 })
 
 const hideModal = () => ({

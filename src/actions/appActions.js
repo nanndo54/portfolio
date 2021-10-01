@@ -2,4 +2,9 @@ const toggleTheme = () => ({
   type: '@app/toggleTheme'
 })
 
-export { toggleTheme }
+const expandProject = (name) => ({
+  type: '@app/expandProject',
+  payload: name
+})
+
+export { toggleTheme, expandProject }

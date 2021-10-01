@@ -3,7 +3,7 @@ import { initialModal } from '@/store'
 const appReducer = (state = initialModal, action) => {
   switch (action.type) {
     case '@modal/show': {
-      const newState = { show: true, ...action.payload }
+      const newState = { show: true, name: action.payload }
       return newState
     }
     case '@modal/hide': {

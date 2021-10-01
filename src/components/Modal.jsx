@@ -6,9 +6,14 @@ import { hideModal } from '@/actions/modalActions'
 import Skill from './Skill'
 import Section from './Section'
 
+import { getSkill } from '@/constants/skills'
+
 function Modal() {
-  const { show, name, color, image, description } = useSelector(({ modal }) => modal)
+  const { show, name } = useSelector(({ modal }) => modal)
   const dispatch = useDispatch()
+
+  const skill = getSkill(name)
+  const { image, description } = skill
 
   const handleClose = () => {
     dispatch(hideModal())
@@ -34,10 +39,10 @@ function Modal() {
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
       <Section onClick={handleStopPropagation} Tag='aside'>
-        <div className={`${styles.close} unselectable`} onClick={handleClose}>
+        <button className={styles.close} onClick={handleClose}>
           ✕
-        </div>
-        <Skill name={name} color={color} image={image} big />
+        </button>
+        <Skill name={name} image={image} size='big' />
         <p className='center'>{description}</p>
       </Section>
     </div>

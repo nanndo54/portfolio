@@ -1,10 +1,11 @@
 import styles from '@/styles/GoToButton.module.css'
-import React from 'react'
+import React, { useRef } from 'react'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
 const handleScroll = (ev, direction) => {
   const base = document.getElementById('base')
   const coords = ev.currentTarget.getBoundingClientRect()
-  const top = direction === 'down' ? base.scrollTop + coords.y + 40 : 0
+  const top = direction === 'down' ? base.scrollTop + coords.y + 50 : 0
 
   base.scrollTo({
     top,
@@ -12,12 +13,28 @@ const handleScroll = (ev, direction) => {
   })
 }
 
+const fallback = true
+const once = false
+
 function GoToButton({ direction = 'down', label }) {
   label = <p>{label}</p>
 
+  const ref = useRef(null)
+  const intersected = useIntersectionObserver(
+    ref,
+    {
+      threshold: 0.75
+    },
+    fallback,
+    once
+  )
+
   return (
     <button
-      className={`${styles.base} ${direction === 'down' ? styles.down : styles.up}`}
+      className={`${styles.base} ${direction === 'up' ? styles.up : ''} ${
+        intersected ? styles.arrow : ''
+      }`}
+      ref={ref}
       onClick={(ev) => handleScroll(ev, direction)}
     >
       {direction === 'up' && label}

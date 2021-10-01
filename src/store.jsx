@@ -5,15 +5,13 @@ import appReducer from '@/reducers/appReducer'
 import modalReducer from '@/reducers/modalReducer'
 
 const initialApp = {
-  theme: localStorage.getItem('theme') || 'light'
+  theme: localStorage.getItem('theme') || 'light',
+  activeProject: ''
 }
 
 const initialModal = {
   show: false,
-  name: 'NoName',
-  color: '#FFF',
-  image: '',
-  descriptiion: 'NoDescription'
+  name: 'HTML'
 }
 
 const initialState = { app: initialApp, modal: initialModal }

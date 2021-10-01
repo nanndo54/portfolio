@@ -12,7 +12,7 @@
 }
 
 .base * {
-  transition: border 0.5s ease;
+  transition: border 0.5s ease, opacity 0.5s ease;
 }
 
 .base.animated :not(header div) {
