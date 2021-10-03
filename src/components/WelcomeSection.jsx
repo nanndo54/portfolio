@@ -1,7 +1,7 @@
 import styles from '@/styles/WelcomeSection.module.css'
 import React from 'react'
 
-import Section from './Section'
+import Section from '@/components/Section'
 
 import photo from '@img/profile-photo.jpg'
 

@@ -17,7 +17,6 @@ function useTheme() {
   }
 
   useLayoutEffect(() => {
-    console.log('cambio')
     verifyTheme(theme)
   }, [theme])
 
