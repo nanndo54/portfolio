@@ -30,7 +30,7 @@
 
 @media (max-width: 700px) {
   .base {
-    width: calc(90% - 60px);
+    width: calc(95% - 60px);
   }
 }
 

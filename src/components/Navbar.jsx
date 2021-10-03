@@ -1,25 +1,18 @@
 import styles from '@/styles/Navbar.module.css'
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
 
 import DarkModeSwitch from './DarkModeSwitch'
 
-import { toggleTheme } from '@/actions/appActions'
+import useTheme from '@/hooks/useTheme'
 
 function Navbar() {
-  const { theme } = useSelector(({ app }) => app)
-  const dispatch = useDispatch()
-
-  const changeTheme = () => {
-    dispatch(toggleTheme())
-  }
+  const { isDarkTheme, changeTheme } = useTheme()
 
   return (
     <nav className={styles.base}>
       <div className={styles.items}>
         <DarkModeSwitch
-          checked={theme === 'light'}
+          checked={!isDarkTheme}
           onChange={changeTheme}
           moonColor='var(--content-color)'
           sunColor='var(--content-color)'

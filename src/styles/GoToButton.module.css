@@ -43,7 +43,7 @@
   background-color: var(--content-color);
 
   border-radius: 50%;
-  transition: background-color 0.3s ease 0.8s, transform 0.3s ease 0.8s,
+  transition: background-color 0.3s ease, transform 0.3s ease 0.8s,
     border-radius 0.3s ease 0.8s;
 }
 

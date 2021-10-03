@@ -8,14 +8,16 @@ import jolcImg2 from '@img/jolc-img2.jpg'
 const projects = [
   {
     name: 'Typesty',
-    description: 'Interfaz web para ejecución de un lenguaje parecido a JavaScript',
+    description:
+      'Interfaz web para ejecución de un lenguaje parecido a JavaScript. Facilita el manejo de varios archivos y el debug del lenguaje.',
     url: 'https://pabloc54.github.io/typesty/',
     technologies: ['ReactJS'],
     images: [typestyImg1, typestyImg2]
   },
   {
     name: 'Regexive',
-    description: 'Interfaz de escritorio para el testing de expresiones regulares',
+    description:
+      'Interfaz de escritorio para el testing de expresiones regulares. Facilita el manejo de varios archivos y el debug de expresiones regulares.',
     url: 'https://pabloc54.github.io/regexive/',
     technologies: ['Java'],
     images: [regexiveImg1, regexiveImg2]
@@ -29,7 +31,8 @@ const projects = [
   },
   {
     name: 'JOLC',
-    description: 'Intérprete de Julia ejecutable en la web',
+    description:
+      'Intérprete de un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.',
     url: 'https://jolc2.herokuapp.com/',
     technologies: ['ReactJS', 'Python'],
     images: [jolcImg1, jolcImg2]

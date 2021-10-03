@@ -1,21 +1,13 @@
 import styles from '@/styles/Project.module.css'
-import { expandProject } from '@/actions/appActions'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 
-import { getSkill } from '@/constants/skills'
 import Skill from './Skill'
 
+import useProject from '@/hooks/useProject'
+
 function Project({ name, description, url = '', technologies = [], images = [] }) {
-  const { activeProject } = useSelector(({ app }) => app)
-  const dispatch = useDispatch()
-
-  const expanded = name === activeProject
-
-  const toggleExpand = () => {
-    const projectName = !expanded ? name : ''
-    dispatch(expandProject(projectName))
-  }
+  const { expanded, toggleExpand, skills } = useProject(name, technologies)
+  const [preview1, preview2] = images
 
   return (
     <article className={`${styles.base} ${expanded ? styles.expanded : ''}`}>
@@ -31,18 +23,14 @@ function Project({ name, description, url = '', technologies = [], images = [] }
       </div>
       <div className={styles.content}>
         <p>{description}</p>
-        <div className={styles.images}>
-          {images
-            .slice(0)
-            .reverse()
-            .map((image, i) => (
-              <img key={i} src={image} alt={`${name} preview no.${i}`} />
-            ))}
+        <div className={styles.images} title='vista previa'>
+          <img src={preview1} alt={`${name} preview 1`} />
+          <img src={preview2} alt={`${name} preview 2`} />
         </div>
       </div>
       <div className={styles.tags}>
-        {technologies.map((name) => (
-          <Skill {...getSkill(name)} size='small' key={name} />
+        {skills.map((skill, i) => (
+          <Skill key={i} {...skill} size='small' />
         ))}
       </div>
     </article>

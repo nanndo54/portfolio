@@ -4,8 +4,7 @@ import { useDispatch } from 'react-redux'
 
 import { showModal } from '@/actions/modalActions'
 
-function Skill({ size = 'medium', ...skill }) {
-  const { name, image } = skill
+function Skill({ size = 'medium', name, image }) {
   const dispatch = useDispatch()
 
   const handleClick = () => {
@@ -18,8 +17,12 @@ function Skill({ size = 'medium', ...skill }) {
   }`
 
   return (
-    <div className={className} onClick={handleClick}>
-      <button className={styles.icon} title={size === 'small' ? name : ''}>
+    <div className={className}>
+      <button
+        className={styles.icon}
+        onClick={handleClick}
+        title={size === 'small' ? name : ''}
+      >
         <img src={image} alt={`${name} logo`} />
       </button>
       {size !== 'small' && <span>{name}</span>}

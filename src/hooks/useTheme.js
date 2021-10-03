@@ -1,16 +1,27 @@
 import { useLayoutEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-const verifyTheme = (mode) => {
-  if (mode === 'dark') document.querySelector('body').classList.add('dark')
+import { toggleTheme } from '@/actions/appActions'
+
+const verifyTheme = (theme) => {
+  if (theme === 'dark') document.querySelector('body').classList.add('dark')
   else document.querySelector('body').classList.remove('dark')
 }
 
-function useTheme(mode) {
+function useTheme() {
+  const { theme } = useSelector(({ app }) => app)
+  const dispatch = useDispatch()
+
+  const changeTheme = () => {
+    dispatch(toggleTheme())
+  }
+
   useLayoutEffect(() => {
-    verifyTheme(mode)
-  }, [mode])
+    console.log('cambio')
+    verifyTheme(theme)
+  }, [theme])
+
+  return { isDarkTheme: theme === 'dark', changeTheme }
 }
 
 export default useTheme
-
-export { verifyTheme }

@@ -1,8 +1,9 @@
 import styles from '@/styles/Section.module.css'
 import React, { useRef } from 'react'
 
-import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import SectionLoader from './SectionLoader'
+
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
 function Section({
   shadow = true,
