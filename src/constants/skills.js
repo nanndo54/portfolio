@@ -38,13 +38,14 @@ const skills = {
     },
     {
       name: 'TypeScript',
-      description: 'Lenguaje de programación supraconjunto de JavaScript',
+      description:
+        'Lenguaje de programación supraconjunto de JavaScript. Poseo conocimiento del tipado inherente de TypeScript y el tipado de terceros.',
       image: typescriptIcon
     },
     {
       name: 'ReactJS',
       description:
-        'Librería de JavaScript para la construcción de interfaces de usuario. Tengo un gran entendimiento del uso de los mecanismos de ReactJS, así como el uso de hooks, creación de custom hooks, etc.',
+        'Librería de JavaScript para la construcción de interfaces de usuario. Tengo un vasto conocimiento de los mecanismos de ReactJS, la componetización de interfaces de usuario, así como el uso de hooks, creación de custom hooks, optimización de proyectos, etc.',
       image: reactIcon
     },
     {
@@ -58,50 +59,57 @@ const skills = {
     {
       name: 'ExpressJS',
       description:
-        'Framework de JavaSript para la construcción de servidores HTTP. Poseo experiencia en la creación de APIs y REST APIs, uso de middlewares y análisis programático de datos.',
+        'Framework de JavaSript para la construcción de servidores HTTP. Poseo experiencia en la creación de APIs y REST APIs, creación y uso de middlewares, y análisis estadístico de datos.',
       image: expressIcon
     },
     {
       name: 'Go',
-      description: 'Lenguaje de programación de Google.',
+      description:
+        'Lenguaje de programación simple y eficiente. Tengo conocimiento de creación de aplicaciones de línea de comando y creación de APIs con buenas prácticas.',
       image: goIcon
     },
     {
       name: 'Python',
-      description: 'Lenguaje de programación multipropósito.',
+      description:
+        'Lenguaje de programación interpretado y multipropósito. Poseo una gran experiencia en la creación de todo tipo de aplicaciones con Python, desde simples scripts de automatización, hasta APIs de cualquier índole.',
       image: pythonIcon
     },
     {
       name: 'MongoDB',
       description:
-        'Base de datos. Poseo experiencia en el uso eficiente de colecciones, y el uso de bases de datos en la nube.',
+        'Base de datos NO-SQL. Poseo experiencia en el uso eficiente de colecciones, y el despliegue y uso de bases de datos en la nube.',
       image: mongodbIcon
     },
     {
       name: 'MySQL',
-      description: 'desc',
+      description:
+        'Base de datos SQL de Oracle. Poseo una gran experiencia en el modelado normalizado de bases de datos para las necesidades de cualquier negocio.',
       image: mysqlIcon
     },
     {
       name: 'PL/SQL',
-      description: 'desc',
+      description:
+        'Lenguaje de programación de Oracle. Tengo gran experiencia en el modelado normalizado de bases de datos, creación y testing de procedimientos, funciones, triggers y schedules.',
       image: oraclesqlIcon
     }
   ],
   Otras: [
     {
       name: 'Java',
-      description: 'lenguaje de programación',
+      description:
+        'Lenguaje de programación multiplataforma de Oracle. Tengo una vasta experiencia en la creación de interfaces de usuario para cualquier necesidad y aplicaciones de línea de comando.',
       image: javaIcon
     },
     {
       name: 'AWS',
-      description: 'AWS',
+      description:
+        'Colección de servicios en la nube de Amazon. Poseo conocimiento de Amazon S3, Amazon EC2, Amazon RDS y Amazon VPC.',
       image: awsIcon
     },
     {
       name: 'Oracle Cloud',
-      description: 'Uso de la nube avanzado',
+      description:
+        'Servicios en la nube de Oracle. Poseo conocimiento en la creación y uso de Compute Instances, Autonomous Data Warehouse, Autonomous JSON Database y Buckets.',
       image: oraclecloudIcon
     }
   ]

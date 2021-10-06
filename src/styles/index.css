@@ -45,6 +45,7 @@ main {
 
 nav,
 a,
+blockquote,
 ::after {
   transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
 }

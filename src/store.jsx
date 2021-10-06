@@ -21,7 +21,11 @@ const reducer = combineReducers({
   modal: modalReducer
 })
 
-const store = createStore(reducer, initialState, composeWithDevTools())
+const store = createStore(
+  reducer,
+  initialState,
+  import.meta.env.MODE === 'development' ? composeWithDevTools() : undefined
+)
 
 export default store
 
