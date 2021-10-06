@@ -33,6 +33,11 @@
     "source-map": "0.7.3",
     "vite": "2.3.7"
   },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 version",
+    "not dead"
+  ],
   "pre-commit": "lint",
   "license": "MIT"
 }

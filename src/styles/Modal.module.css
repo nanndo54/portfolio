@@ -29,7 +29,7 @@
   margin: 50px 0 100px;
 
   position: relative;
-  top: 30px;
+  top: 20px;
   left: -8px;
 
   transition: top 0.5s ease;
@@ -49,4 +49,10 @@
 
 .close:hover {
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .base > aside {
+    width: calc(95% - 76px);
+  }
 }

@@ -115,6 +115,7 @@
 
   .base .content .images img {
     height: auto;
-    width: calc(100% - 26px);
+    width: calc(60% - 26px);
+    place-self: center;
   }
 }
