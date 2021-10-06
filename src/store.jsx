@@ -4,14 +4,28 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import appReducer from '@/reducers/appReducer'
 import modalReducer from '@/reducers/modalReducer'
 
+import { languageCodes } from '@/constants/languages'
+
+const initialLocale =
+  (languageCodes.includes(localStorage.getItem('locale')) &&
+    localStorage.getItem('locale')) ||
+  languageCodes.find((code) => navigator.language.startsWith(code)) ||
+  'en'
+
+const initialTheme =
+  (['light', 'dark'].includes(localStorage.getItem('theme')) &&
+    localStorage.getItem('theme')) ||
+  'light'
+
 const initialApp = {
-  theme: localStorage.getItem('theme') || 'light',
-  activeProject: ''
+  activeProject: '',
+  locale: initialLocale,
+  theme: initialTheme
 }
 
 const initialModal = {
-  show: false,
-  name: 'HTML'
+  name: 'HTML',
+  show: false
 }
 
 const initialState = { app: initialApp, modal: initialModal }

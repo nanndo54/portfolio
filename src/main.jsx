@@ -1,14 +1,17 @@
+/* eslint-disable no-undef */
 import '@/styles/index.css'
 import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import store from './store'
 
 import Loader from '@/components/Loader'
+
+import store from '@/store'
+
 const App = lazy(() =>
   Promise.all([
     import('@/components/App'),
-    new Promise((resolve) => setTimeout(resolve, 1000))
+    new Promise((resolve) => setTimeout(resolve, 900))
   ]).then(([moduleExports]) => moduleExports)
 )
 

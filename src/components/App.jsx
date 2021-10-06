@@ -1,38 +1,25 @@
 import styles from '@/styles/App.module.css'
 import React from 'react'
+import { IntlProvider } from 'react-intl'
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Modal from '@/components/Modal'
-import GoToButton from '@/components/GoToButton'
-import WelcomeSection from '@/components/WelcomeSection'
-import AboutMeSection from '@/components/AboutMeSection'
-import SkillsSection from '@/components/SkillsSection'
-import ProjectsSection from '@/components/ProjectsSection'
-import ContactSection from '@/components/ContactSection'
+import AllSections from '@/components/AllSections'
+import useLanguage from '@/hooks/useLanguage'
 
 function App() {
+  const { locale, language } = useLanguage()
+
   return (
-    <div className={styles.base} id='base'>
-      <Modal />
-      <Navbar />
-      <div className={styles.sections}>
-        <WelcomeSection />
-        <GoToButton direction='down' label='acerca de mí' />
-        <AboutMeSection />
-        <GoToButton direction='down' label='habilidades' />
-        <SkillsSection />
-        <GoToButton direction='down' label='proyectos' />
-        <ProjectsSection />
-        <ContactSection />
-        <GoToButton direction='up' label='inicio' />
-        <blockquote>
-          “Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos” —
-          <i>Carl Sagan</i>
-        </blockquote>
+    <IntlProvider locale={locale} messages={language}>
+      <div className={styles.base} id='base'>
+        <Modal />
+        <Navbar />
+        <AllSections />
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </IntlProvider>
   )
 }
 

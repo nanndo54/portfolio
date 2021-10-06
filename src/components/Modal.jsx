@@ -1,14 +1,15 @@
 import styles from '@/styles/Modal.module.css'
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import Skill from './Skill'
-import Section from './Section'
+import Skill from '@/components/Skill'
+import Section from '@/components/Section'
 
 import useModal from '@/hooks/useModal'
 
 function Modal() {
   const { show, handleClose, handleStopPropagation, skill } = useModal()
-  const { name, image, description } = skill
+  const { name, image } = skill
 
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
@@ -17,7 +18,9 @@ function Modal() {
           ✕
         </button>
         <Skill name={name} image={image} size='big' />
-        <p className='center'>{description}</p>
+        <p className='center'>
+          <FormattedMessage id={`skill.${name.toLowerCase()}`} />
+        </p>
       </Section>
     </div>
   )

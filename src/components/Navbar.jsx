@@ -1,12 +1,15 @@
 import styles from '@/styles/Navbar.module.css'
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import DarkModeSwitch from './DarkModeSwitch'
+import DarkModeSwitch from '@/components/DarkModeSwitch'
 
 import useTheme from '@/hooks/useTheme'
+import useLanguage from '@/hooks/useLanguage'
 
 function Navbar() {
   const { isDarkTheme, changeTheme } = useTheme()
+  const { locale, changeLanguage } = useLanguage()
 
   return (
     <nav className={styles.base}>
@@ -17,10 +20,12 @@ function Navbar() {
           moonColor='var(--content-color)'
           sunColor='var(--content-color)'
         />
-        <span className={styles.language}>es</span>
+        <button className={styles.language} onClick={changeLanguage}>
+          {locale}
+        </button>
       </div>
-      <a className='button' href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>
-        ¡Contáctame!
+      <a className='button' href='https://www.linkedin.com/in/pabloc54/'>
+        <FormattedMessage id='navbar.contactMe' />
       </a>
     </nav>
   )

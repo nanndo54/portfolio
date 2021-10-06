@@ -1,5 +1,7 @@
 import styles from '@/styles/GoToButton.module.css'
 import React, { useRef } from 'react'
+import { FormattedMessage } from 'react-intl'
+
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
 const handleScroll = (ev, direction) => {
@@ -17,7 +19,11 @@ const fallback = true
 const once = false
 
 function GoToButton({ direction = 'down', label }) {
-  label = <p>{label}</p>
+  label = (
+    <p>
+      <FormattedMessage id={label} />
+    </p>
+  )
 
   const ref = useRef(null)
   const intersected = useIntersectionObserver(

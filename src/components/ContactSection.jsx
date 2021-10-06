@@ -1,17 +1,21 @@
 import React from 'react'
-import Section from './Section'
+import { FormattedMessage } from 'react-intl'
+
+import Section from '@/components/Section'
 
 function ContactSection() {
   return (
     <Section shadow={false} fallback={false}>
-      <h2>¿Te gusta lo que ves?</h2>
+      <h2>
+        <FormattedMessage id='contact.title' />
+      </h2>
       <p className='center'>
-        ¡Te invito a mandarme un mensaje por{' '}
-        <a href='https://www.linkedin.com/in/pablo-cabrera-2a567b209/'>LinkedIn</a>! 📨
+        <FormattedMessage id='contact.invitation' />
+        <a href='https://www.linkedin.com/in/pabloc54/'>LinkedIn</a>! 📨
       </p>
       <p className='center small'>
-        ... o <a href='mailto:pablofernando54@outlook.com'>mandame un email</a> a
-        pablofernando54@outlook.com.
+        <FormattedMessage id='contact.alternative' />
+        <a href='mailto:pablofernando54@outlook.com'>pablofernando54@outlook.com</a>.
       </p>
     </Section>
   )

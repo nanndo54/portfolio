@@ -1,11 +1,12 @@
 import styles from '@/styles/Project.module.css'
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import Skill from './Skill'
+import Skill from '@/components/Skill'
 
 import useProject from '@/hooks/useProject'
 
-function Project({ name, description, url = '', technologies = [], images = [] }) {
+function Project({ name, url = '', technologies = [], images = [] }) {
   const { expanded, toggleExpand, skills } = useProject(name, technologies)
   const [preview1, preview2] = images
 
@@ -22,8 +23,10 @@ function Project({ name, description, url = '', technologies = [], images = [] }
         </button>
       </div>
       <div className={styles.content}>
-        <p>{description}</p>
-        <div className={styles.images} title='vista previa'>
+        <p>
+          <FormattedMessage id={`project.${name.toLowerCase()}`} />{' '}
+        </p>
+        <div className={styles.images}>
           <img src={preview1} alt={`${name} preview 1`} />
           <img src={preview2} alt={`${name} preview 2`} />
         </div>
