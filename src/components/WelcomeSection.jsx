@@ -10,7 +10,7 @@ function WelcomeSection() {
   return (
     <Section shadow={false} fallback={false} Tag='header'>
       <div className={styles.avatar}>
-        <img src={photo} alt='me' />
+        <img src={photo} alt='Yo' />
       </div>
       <h1>Pablo Cabrera (pabloc54)</h1>
       <p className='small'>
