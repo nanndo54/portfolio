@@ -24,7 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
-  scroll-behavior: smooth;
 }
 
 body.dark {

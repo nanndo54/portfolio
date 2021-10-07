@@ -92,7 +92,7 @@ const DarkModeSwitch = ({
   const uniqueMaskId = `circle-mask-${id}`
 
   return (
-    <button onClick={toggle}>
+    <button onClick={toggle} aria-label='cambiar tema'>
       <animated.svg
         xmlns='http://www.w3.org/2000/svg'
         width={size}

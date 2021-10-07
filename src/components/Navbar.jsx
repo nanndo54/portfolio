@@ -20,7 +20,11 @@ function Navbar() {
           moonColor='var(--content-color)'
           sunColor='var(--content-color)'
         />
-        <button className={styles.language} onClick={changeLanguage}>
+        <button
+          className={styles.language}
+          onClick={changeLanguage}
+          aria-label='cambiar lenguaje'
+        >
           {locale}
         </button>
       </div>

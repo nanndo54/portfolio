@@ -18,7 +18,7 @@ function Project({ name, url = '', technologies = [], images = [] }) {
             {name}
           </a>
         </h3>
-        <button className={styles.down} onClick={toggleExpand}>
+        <button className={styles.down} onClick={toggleExpand} aria-label='expandir'>
           ❯
         </button>
       </div>
