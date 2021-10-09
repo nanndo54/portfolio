@@ -3,7 +3,7 @@
   height: calc(100% - 50px);
   overflow-y: scroll;
   background-color: var(--primary-color);
-  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s, color 0.5s, opacity 0.5s;
 }
 
 .base::-webkit-scrollbar {

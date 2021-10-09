@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
 
-  animation: appear-navbar 0.5s ease forwards;
+  animation: appear-navbar 0.5s forwards;
 }
 
 .items {
@@ -20,16 +20,11 @@
 
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
 }
 
 .items button:first-child {
   margin-top: 7px;
-  /* padding: 0; */
-}
-
-.items > *:hover {
-  cursor: pointer;
 }
 
 @keyframes appear-navbar {

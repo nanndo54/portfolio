@@ -6,8 +6,9 @@ const languages = {
   en: english
 }
 
-const languageCodes = Object.keys(languages)
+const languageIsSupported = (languageCode) =>
+  languageCode && Object.keys(languages).find((code) => languageCode.startsWith(code))
 
 export default languages
 
-export { languageCodes }
+export { languageIsSupported }

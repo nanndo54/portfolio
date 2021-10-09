@@ -14,7 +14,7 @@
 
   opacity: 0;
 
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s;
   pointer-events: none;
 
   overflow-y: scroll;
@@ -25,26 +25,26 @@
   pointer-events: visible;
 }
 
-.base > aside {
+.base .modal {
+  padding: 30px 50px 45px;
   margin: 50px 0 100px;
 
   position: relative;
-  top: 20px;
+  top: 10px;
   left: -8px;
 
-  transition: top 0.5s ease;
+  transition: top 0.5s;
 }
 
-.base.show > aside {
+.base.show .modal {
   top: 60px;
 }
 
 .close {
-  padding: 2px;
-  font-size: 1.3em;
+  padding: 3px;
+  font-size: 1.5em;
   align-self: flex-end;
-  margin-top: -15px;
-  margin-right: -15px;
+  margin-bottom: -50px;
 }
 
 .close:hover {
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: 700px) {
-  .base > aside {
-    width: calc(95% - 76px);
+  .base .modal {
+    width: calc(100% - 100px);
   }
 }

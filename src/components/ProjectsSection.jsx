@@ -13,6 +13,10 @@ function ProjectsSection() {
       <h2>
         <FormattedMessage id='projects.title' />
       </h2>
+      <p>
+        <FormattedMessage id='projects.text1' />
+        <a href='https://github.com/pabloc54'>GitHub</a>.
+      </p>
       <div className={styles.projects}>
         {projects.map((project, i) => (
           <Project key={i} {...project} />

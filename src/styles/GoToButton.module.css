@@ -13,7 +13,7 @@
   margin: 0;
   opacity: 0;
 
-  transition: opacity 0.5s ease 0.8s, transform 0.5s ease 0.8s;
+  transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
 }
 
 .base:hover p,
@@ -35,7 +35,7 @@
   opacity: 0;
   transform: translateY(60px);
 
-  animation: appear-button 0.5s ease forwards;
+  animation: appear-button 0.5s forwards;
 }
 
 .icon > div {
@@ -43,8 +43,7 @@
   background-color: var(--content-color);
 
   border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease 0.8s,
-    border-radius 0.3s ease 0.8s;
+  transition: background-color 0.3s, transform 0.3s 0.8s, border-radius 0.3s 0.8s;
 }
 
 .dot1 {
@@ -71,7 +70,8 @@
   left: 23px;
 }
 
-.base.arrow .icon > div {
+.base.arrow .icon > div,
+.base:hover .icon > div {
   border-radius: 20%;
 }
 

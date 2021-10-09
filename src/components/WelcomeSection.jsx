@@ -8,7 +8,7 @@ import photo from '@img/profile-photo.jpg'
 
 function WelcomeSection() {
   return (
-    <Section shadow={false} fallback={false} Tag='header'>
+    <Section Tag='header' className={styles.base} shadow={false} fallback={false}>
       <div className={styles.avatar}>
         <img src={photo} alt='Yo' />
       </div>
@@ -18,9 +18,6 @@ function WelcomeSection() {
       </p>
       <p className='center'>
         <FormattedMessage id='welcome.presentation' />
-      </p>
-      <p className='center'>
-        <FormattedMessage id='welcome.invitation' />
       </p>
     </Section>
   )

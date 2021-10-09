@@ -9,6 +9,7 @@ function Section({
   shadow = true,
   animated = true,
   fallback = true,
+  className,
   children,
   onClick,
   Tag = 'section'
@@ -22,7 +23,7 @@ function Section({
     fallback
   )
 
-  const className = `${styles.base} ${shadow ? styles.shadow : ''} ${
+  const baseClassName = `${styles.base} ${className} ${shadow ? styles.shadow : ''} ${
     fallback
       ? animated && intersected
         ? styles.animated
@@ -33,7 +34,7 @@ function Section({
   }`
 
   return (
-    <Tag className={className} ref={ref} onClick={onClick}>
+    <Tag className={baseClassName} ref={ref} onClick={onClick}>
       {fallback && !intersected ? <SectionLoader /> : children}
     </Tag>
   )

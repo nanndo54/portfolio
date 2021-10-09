@@ -14,7 +14,7 @@ function SkillsSection() {
         <FormattedMessage id='skills.title' />
       </h2>
       <p>
-        <FormattedMessage id='skills.message' />
+        <FormattedMessage id='skills.text1' />
       </p>
       {Object.entries(skills).map(([title, specificSkills]) => (
         <div className={styles.subsection} key={title}>

@@ -32,7 +32,7 @@ body.dark {
   --secondary-color: rgb(40, 40, 50);
   --tertiary-color: rgb(45, 45, 55);
   --quaternary-color: rgb(50, 50, 60);
-  --accent-color: rgb(80, 112, 219);
+  --accent-color: rgb(90, 100, 230);
   --dim-color: rgb(115, 115, 125);
 
   --modal-outside-color: rgba(35, 35, 45, 0.7);
@@ -46,14 +46,12 @@ nav,
 a,
 blockquote,
 ::after {
-  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s, color 0.5s, opacity 0.5s;
 }
 
 .small {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--dim-color);
-
-  margin: 4px 0;
 }
 
 .center {
@@ -70,8 +68,8 @@ blockquote,
 }
 
 p {
-  margin: 10px 0;
   line-height: 1.5em;
+  margin: 0;
 }
 
 h1,
@@ -82,12 +80,12 @@ h5,
 h6 {
   text-align: center;
   line-height: 1em;
-  margin: 10px 0 20px;
+  margin: 0;
 }
 
 h1 {
   font-family: 'Oleo Script Swash Caps';
-  font-size: 3em;
+  font-size: 2.8em;
 }
 
 h1::after {
@@ -170,9 +168,8 @@ blockquote {
   font-size: 1.1em;
   word-spacing: 2.5px;
 
-  width: 590px;
-  padding: 20px 30px;
-  margin: 50px 0;
+  width: 550px;
+  padding: 20px 50px;
   border-radius: 25px;
 }
 
@@ -189,6 +186,7 @@ blockquote {
   }
 
   blockquote {
-    width: calc(90% - 60px);
+    border-radius: 0;
+    width: calc(100% - 100px);
   }
 }

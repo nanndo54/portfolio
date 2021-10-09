@@ -2,6 +2,8 @@
   background: var(--footer-background-color);
   color: var(--footer-font-color);
 
+  padding: 10px 0;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;

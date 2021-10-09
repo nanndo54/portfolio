@@ -1,11 +1,13 @@
 .subsection {
-  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .skills {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px 40px;
+  gap: 30px 50px;
 }

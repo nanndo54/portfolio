@@ -4,9 +4,6 @@ import typestyImg2 from '@img/typesty-img2.jpg'
 import translatorImg1 from '@img/translator-img1.jpg'
 import translatorImg2 from '@img/translator-img2.jpg'
 
-import regexiveImg1 from '@img/regexive-img1.jpg'
-import regexiveImg2 from '@img/regexive-img2.jpg'
-
 import jolcImg1 from '@img/jolc-img1.jpg'
 import jolcImg2 from '@img/jolc-img2.jpg'
 
@@ -22,12 +19,6 @@ const projects = [
     url: 'https://pabloc54.github.io/translator/',
     technologies: ['JavaScript'],
     images: [translatorImg1, translatorImg2]
-  },
-  {
-    name: 'Regexive',
-    url: 'https://pabloc54.github.io/regexive/',
-    technologies: ['Java'],
-    images: [regexiveImg1, regexiveImg2]
   },
   // {
   //   name: 'Quiniela APP',

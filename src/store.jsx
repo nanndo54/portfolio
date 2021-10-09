@@ -4,12 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import appReducer from '@/reducers/appReducer'
 import modalReducer from '@/reducers/modalReducer'
 
-import { languageCodes } from '@/constants/languages'
+import { languageIsSupported } from '@/constants/languages'
 
 const initialLocale =
-  (languageCodes.includes(localStorage.getItem('locale')) &&
-    localStorage.getItem('locale')) ||
-  languageCodes.find((code) => navigator.language.startsWith(code)) ||
+  languageIsSupported(localStorage.getItem('locale')) ||
+  languageIsSupported(navigator.language) ||
   'en'
 
 const initialTheme =
