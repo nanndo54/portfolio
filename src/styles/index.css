@@ -1,6 +1,4 @@
 body {
-  --red: red;
-
   --content-color: rgb(30, 30, 40);
   --primary-color: rgb(240, 240, 250);
   --secondary-color: rgb(235, 235, 245);
@@ -14,7 +12,6 @@ body {
   --modal-outside-color: rgba(35, 35, 45, 0.5);
 
   color: var(--content-color);
-  background-color: var(--primary-color);
 
   margin: 0;
   height: 100vh;
@@ -44,9 +41,12 @@ main {
 
 nav,
 a,
-blockquote,
-::after {
-  transition: background-color 0.5s, color 0.5s, opacity 0.5s;
+blockquote {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+img {
+  transition: border 0.5s;
 }
 
 .small {
@@ -68,7 +68,7 @@ blockquote,
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.6em;
   margin: 0;
 }
 
@@ -104,6 +104,8 @@ h1::after {
   background-color: var(--content-color);
 
   transform: rotate(0.5deg);
+
+  transition: background-color 0.5s;
 }
 
 h2 {
@@ -168,8 +170,10 @@ blockquote {
   font-size: 1.1em;
   word-spacing: 2.5px;
 
-  width: 550px;
+  margin: 0;
   padding: 20px 50px;
+
+  width: 550px;
   border-radius: 25px;
 }
 

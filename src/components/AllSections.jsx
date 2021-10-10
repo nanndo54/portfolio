@@ -8,10 +8,11 @@ import AboutMeSection from '@/components/AboutMeSection'
 import SkillsSection from '@/components/SkillsSection'
 import ProjectsSection from '@/components/ProjectsSection'
 import ContactSection from '@/components/ContactSection'
+import Footer from '@/components/Footer'
 
 function AllSections() {
   return (
-    <div className={styles.base}>
+    <div className={styles.base} id='base'>
       <WelcomeSection />
       <GoToButton direction='down' label='goto.aboutme' />
       <AboutMeSection />
@@ -24,6 +25,7 @@ function AllSections() {
       <blockquote>
         <FormattedMessage id='quote' /> — <i>Carl Sagan</i>
       </blockquote>
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,7 @@
 .base {
+  z-index: 10;
   background-color: var(--tertiary-color);
+
   position: fixed;
   top: -50px;
 

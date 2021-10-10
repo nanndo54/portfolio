@@ -1,16 +1,6 @@
 .base {
-  margin-top: 50px;
+  padding-top: 50px;
   height: calc(100% - 50px);
-  overflow-y: scroll;
   background-color: var(--primary-color);
-  transition: background-color 0.5s, color 0.5s, opacity 0.5s;
-}
-
-.base::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.base::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
+  transition: background-color 0.5s;
 }

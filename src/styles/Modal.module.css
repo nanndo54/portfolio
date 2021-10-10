@@ -3,8 +3,8 @@
   top: 0;
   z-index: 10;
 
-  height: 100vh;
-  width: calc(100vw + 8px);
+  height: 100%;
+  width: calc(100% + 8px);
 
   background-color: var(--modal-outside-color);
 
@@ -26,14 +26,13 @@
 }
 
 .base .modal {
-  padding: 30px 50px 45px;
   margin: 50px 0 100px;
 
   position: relative;
   top: 10px;
   left: -8px;
 
-  transition: top 0.5s;
+  transition: top 0.5s ease;
 }
 
 .base.show .modal {
@@ -44,15 +43,9 @@
   padding: 3px;
   font-size: 1.5em;
   align-self: flex-end;
-  margin-bottom: -50px;
+  margin: -20px -20px -40px 0;
 }
 
 .close:hover {
   cursor: pointer;
-}
-
-@media (max-width: 700px) {
-  .base .modal {
-    width: calc(100% - 100px);
-  }
 }

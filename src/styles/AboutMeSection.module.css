@@ -5,7 +5,7 @@
 }
 
 .inline img {
-  max-width: calc(40% - 26px);
+  max-width: calc(40% - 28px);
 
   padding: 10px;
   border-radius: 20px;
@@ -15,10 +15,18 @@
 @media (max-width: 700px) {
   .inline {
     flex-direction: column;
+    gap: 35px;
   }
 
   .inline img {
     border-radius: 25px;
     max-width: calc(60% - 28px);
+  }
+}
+
+@media (max-width: 400px) {
+  .inline img {
+    border-radius: 25px;
+    max-width: calc(100% - 28px);
   }
 }

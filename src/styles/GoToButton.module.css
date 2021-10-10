@@ -13,18 +13,7 @@
   margin: 0;
   opacity: 0;
 
-  transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
-}
-
-.base:hover p,
-.base.arrow p {
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
-.base.up:hover p,
-.base.up.arrow p {
-  transform: translateY(7px);
+  transition: color 0.5s, opacity 0.5s 0.8s, transform 0.5s 0.8s;
 }
 
 .icon {
@@ -70,6 +59,17 @@
   left: 23px;
 }
 
+.base:hover p,
+.base.arrow p {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.base.up:hover p,
+.base.up.arrow p {
+  transform: translateY(7px);
+}
+
 .base.arrow .icon > div,
 .base:hover .icon > div {
   border-radius: 20%;
@@ -109,5 +109,44 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  .base p {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  .base.up p {
+    transform: translateY(7px);
+  }
+
+  .icon > div {
+    border-radius: 20%;
+  }
+
+  .base .dot1 {
+    transform: scale(50%, 180%) translateY(9px);
+  }
+
+  .base .dot2 {
+    transform: translate(5px, 8px) rotate(140deg) scale(50%, 150%);
+  }
+
+  .base .dot3 {
+    transform: translate(1px, -5px) rotate(40deg) scale(70%, 210%);
+  }
+
+  .base.up .dot1 {
+    transform: scale(50%, 180%) translateY(10px);
+  }
+
+  .base.up .dot2 {
+    transform: translate(5px, -16px) rotate(40deg) scale(50%, 150%);
+  }
+
+  .base.up .dot3 {
+    transform: translate(1px, -29px) rotate(-40deg) scale(70%, 210%);
   }
 }

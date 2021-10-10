@@ -1,7 +1,8 @@
 .base {
-  padding: 30px 50px 0;
+  padding-top: 30px;
+  padding-bottom: 0;
   gap: 25px;
-  margin-bottom: -25px;
+  margin-bottom: -30px;
 }
 
 .avatar {
@@ -15,6 +16,8 @@
   background-color: var(--content-color);
   -webkit-background-clip: content-box;
   background-clip: content-box;
+
+  transition: border 0.5s;
 }
 
 .avatar img {

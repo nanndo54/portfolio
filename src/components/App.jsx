@@ -13,11 +13,10 @@ function App() {
 
   return (
     <IntlProvider locale={locale} messages={language}>
-      <div className={styles.base} id='base'>
+      <div className={styles.base}>
         <Modal />
         <Navbar />
         <AllSections />
-        <Footer />
       </div>
     </IntlProvider>
   )
