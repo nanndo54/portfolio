@@ -3,7 +3,6 @@ import React from 'react'
 import { IntlProvider } from 'react-intl'
 
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import Modal from '@/components/Modal'
 import AllSections from '@/components/AllSections'
 import useLanguage from '@/hooks/useLanguage'
