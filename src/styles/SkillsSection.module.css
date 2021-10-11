@@ -1,13 +1,16 @@
 .subsection {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
   gap: 30px;
+  grid-gap: 30px;
 }
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
+
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
+
   gap: 30px 50px;
 }

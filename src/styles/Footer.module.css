@@ -2,6 +2,6 @@
   background: var(--footer-background-color);
   color: var(--footer-font-color);
 
-  padding: 10px;
-  width: calc(100% - 20px);
+  padding: 10px 25px;
+  width: calc(100% - 50px);
 }

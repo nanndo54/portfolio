@@ -27,13 +27,13 @@
 }
 
 .big {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .big .icon {
-  height: 90px;
-  width: 90px;
-  padding: 7.5px;
+  height: 100px;
+  width: 100px;
+  padding: 8px;
   margin-bottom: 20px;
 }
 

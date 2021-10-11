@@ -2,9 +2,11 @@
   width: calc(100% - 70px);
   padding: 25px 35px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr max-content 1fr;
+
   gap: 30px;
+  grid-gap: 30px;
 
   border: 5px solid var(--quaternary-color);
   border-radius: 15px;
@@ -13,14 +15,13 @@
 }
 
 .base .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 32px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header h3 {
   text-align: left;
-  margin: 0;
 }
 
 .header .down {
@@ -29,10 +30,12 @@
 }
 
 .base .content {
-  height: 7.5em;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  justify-items: center;
+
   gap: 25px;
+  grid-gap: 25px;
 }
 
 .content p {
@@ -43,14 +46,13 @@
 }
 
 .content .images {
-  height: 100%;
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
 .images img {
-  height: calc(100% - 28px);
+  width: calc(100% - 28px);
 
   padding: 10px;
   border-radius: 15px;
@@ -72,8 +74,10 @@
 
 .base .tags {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+
+  gap: 20px;
 }
 
 .base.expanded .down {
@@ -81,43 +85,23 @@
 }
 
 .base.expanded .content {
-  height: auto;
-  flex-direction: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
 }
 
 .base.expanded .content p {
   -webkit-line-clamp: initial;
-  height: auto;
-}
-
-.base.expanded .content .images {
-  height: auto;
-  width: 100%;
-}
-
-.base.expanded .content .images img {
-  height: auto;
-  width: calc(100% - 26px);
-}
-
-.down:hover {
-  cursor: pointer;
+  /* height: max-content; */
 }
 
 @media (max-width: 700px) {
   .base .content {
     height: auto;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
   }
 
-  .base .content .images {
-    height: auto;
-    width: 100%;
-  }
-
-  .base .content .images img {
-    height: auto;
-    width: calc(60% - 26px);
-    place-self: center;
+  .content .images img {
+    width: calc(60% - 28px);
   }
 }

@@ -1,11 +1,14 @@
 .base {
   height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  display: grid;
+  justify-items: center;
+
+  gap: 70px;
+  grid-gap: 70px;
+
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .base::-webkit-scrollbar {

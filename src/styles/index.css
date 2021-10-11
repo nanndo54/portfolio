@@ -46,7 +46,7 @@ blockquote {
 }
 
 img {
-  transition: border 0.5s;
+  transition: border 0.5s, opacity 0.5s;
 }
 
 .small {
@@ -170,7 +170,7 @@ blockquote {
   font-size: 1.1em;
   word-spacing: 2.5px;
 
-  margin: 0;
+  margin: 100px 0 30px;
   padding: 20px 50px;
 
   width: 550px;

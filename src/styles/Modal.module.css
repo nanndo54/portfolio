@@ -1,22 +1,19 @@
 .base {
+  z-index: 10;
+  background-color: var(--modal-outside-color);
+  opacity: 0;
+
   position: fixed;
   top: 0;
-  z-index: 10;
 
   height: 100%;
   width: calc(100% + 8px);
 
-  background-color: var(--modal-outside-color);
-
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  opacity: 0;
+  justify-content: center;
 
   transition: opacity 0.5s;
   pointer-events: none;
-
   overflow-y: scroll;
 }
 
@@ -26,26 +23,24 @@
 }
 
 .base .modal {
+  align-self: center;
   margin: 50px 0 100px;
 
   position: relative;
-  top: 10px;
+  top: -15px;
   left: -8px;
 
   transition: top 0.5s ease;
 }
 
 .base.show .modal {
-  top: 60px;
+  top: 25px;
 }
 
 .close {
-  padding: 3px;
-  font-size: 1.5em;
-  align-self: flex-end;
-  margin: -20px -20px -40px 0;
-}
+  padding: 4px;
 
-.close:hover {
-  cursor: pointer;
+  font-size: 1.5em;
+  justify-self: end;
+  margin: -20px;
 }
