@@ -103,7 +103,15 @@
     grid-template-rows: max-content 1fr;
   }
 
-  .content .images img {
+  .content p {
+    -webkit-line-clamp: 2;
+  }
+
+  .base .content .images img {
     width: calc(60% - 28px);
+  }
+
+  .base.expanded .content .images img {
+    width: calc(100% - 28px);
   }
 }
