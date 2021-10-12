@@ -7,7 +7,7 @@ import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 const handleScroll = (ev, direction) => {
   const base = document.getElementById('base')
   const coords = ev.currentTarget.getBoundingClientRect()
-  const top = direction === 'down' ? base.scrollTop + coords.y + 80 : 0
+  const top = direction === 'down' ? base.scrollTop + coords.y + 120 : 0
 
   base.scrollTo({
     top,

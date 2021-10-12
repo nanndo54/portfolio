@@ -5,8 +5,8 @@
   display: grid;
   grid-template-rows: 1fr max-content 1fr;
 
-  gap: 30px;
-  grid-gap: 30px;
+  gap: 20px;
+  grid-gap: 20px;
 
   border: 5px solid var(--quaternary-color);
   border-radius: 15px;
@@ -39,6 +39,8 @@
 }
 
 .content p {
+  height: max-content;
+
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
