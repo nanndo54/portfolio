@@ -4,6 +4,9 @@ import typestyImg2 from '@img/typesty-img2.jpg'
 import translatorImg1 from '@img/translator-img1.jpg'
 import translatorImg2 from '@img/translator-img2.jpg'
 
+import quizImg1 from '@img/quiz-img1.jpg'
+import quizImg2 from '@img/quiz-img2.jpg'
+
 import jolcImg1 from '@img/jolc-img1.jpg'
 import jolcImg2 from '@img/jolc-img2.jpg'
 
@@ -19,6 +22,12 @@ const projects = [
     url: 'https://pabloc54.github.io/translator/',
     technologies: ['JavaScript'],
     images: [translatorImg1, translatorImg2]
+  },
+  {
+    name: 'Quiz Game',
+    url: 'https://pabloc54.github.io/quiz/',
+    technologies: ['ReactJS', 'Redux'],
+    images: [quizImg1, quizImg2]
   },
   // {
   //   name: 'Quiniela APP',
