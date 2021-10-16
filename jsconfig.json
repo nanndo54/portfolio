@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@img/*": ["img/*"]
+      "@assets/*": ["assets/*"]
     }
   },
   "exclude": ["node_modules"]

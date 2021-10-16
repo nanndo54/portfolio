@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import Section from '@/components/Section'
 
-import photo from '@img/profile-photo.jpg'
+import photo from '@assets/img/profile-photo.jpg'
 
 function WelcomeSection() {
   return (

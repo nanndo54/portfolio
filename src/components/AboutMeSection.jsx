@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl'
 
 import Section from '@/components/Section'
 
-import guatemalaImage from '@img/guatemala.jpg'
-import facultyImage from '@img/facultad.jpg'
+import guatemalaImage from '@assets/img/guatemala.jpg'
+import facultyImage from '@assets/img/facultad.jpg'
 
 function AboutMeSection() {
   return (

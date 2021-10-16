@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@img': path.resolve(__dirname, './img')
+      '@assets': path.resolve(__dirname, './assets')
     }
   },
   css: {
