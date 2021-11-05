@@ -28,7 +28,12 @@ function Navbar() {
           {locale}
         </button>
       </div>
-      <a className='button' href='https://www.linkedin.com/in/pabloc54/'>
+      <a
+        className='button'
+        href='https://www.linkedin.com/in/pabloc54/'
+        target='_blank'
+        rel='noreferrer'
+      >
         <FormattedMessage id='navbar.contactMe' />
       </a>
     </nav>
