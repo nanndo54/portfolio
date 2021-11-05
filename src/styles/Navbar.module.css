@@ -1,5 +1,5 @@
 .base {
-  z-index: 10;
+  z-index: 2;
   background-color: var(--tertiary-color);
 
   position: fixed;
@@ -30,6 +30,10 @@
 
 .items button:first-child {
   margin-top: 7px;
+}
+
+.base a {
+  min-width: 111px;
 }
 
 @keyframes appear-navbar {

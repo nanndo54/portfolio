@@ -1,5 +1,5 @@
 .base {
-  z-index: 10;
+  z-index: 3;
   background-color: var(--modal-outside-color);
   opacity: 0;
 
@@ -26,15 +26,13 @@
   align-self: center;
   margin: 50px 0 100px;
 
-  position: relative;
-  top: -15px;
-  left: -8px;
+  transform: translate(-8px, -15px);
 
-  transition: top 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .base.show .modal {
-  top: 25px;
+  transform: translate(-8px, 25px);
 }
 
 .close {
