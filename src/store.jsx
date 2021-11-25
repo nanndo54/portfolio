@@ -11,10 +11,15 @@ const initialLocale =
   languageIsSupported(navigator.language) ||
   'en'
 
+const theme =
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
+
 const initialTheme =
   (['light', 'dark'].includes(localStorage.getItem('theme')) &&
     localStorage.getItem('theme')) ||
-  'light'
+  theme
 
 const initialApp = {
   activeProject: '',
