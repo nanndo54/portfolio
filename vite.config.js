@@ -4,10 +4,6 @@ import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 export default defineConfig(({ mode }) => ({
-  base: '/portfolio/',
-  build: {
-    outDir: 'docs'
-  },
   plugins: [react()],
   resolve: {
     alias: {
