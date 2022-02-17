@@ -12,16 +12,16 @@
 
 .base p {
   font-size: 1rem;
-  margin: 0;
   opacity: 0;
+
+  transform: translateY(15px);
 
   transition: color 0.5s, opacity 0.5s 0.8s, transform 0.5s 0.8s;
 }
 
 .icon {
-  height: 45px;
+  height: 50px;
   width: 50px;
-  padding-bottom: 20px;
 
   opacity: 0;
   transform: translateY(60px);
@@ -30,9 +30,8 @@
 }
 
 .icon > div {
-  display: block;
-  position: relative;
   background-color: var(--content-color);
+  position: absolute;
 
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s 0.8s, border-radius 0.3s 0.8s;
@@ -41,36 +40,27 @@
 .dot1 {
   height: 18px;
   width: 18px;
-
-  top: 5px;
-  left: 15px;
+  transform: translateX(15px);
 }
 
 .dot2 {
   height: 14px;
   width: 14px;
-
-  top: 10px;
-  left: 7px;
+  transform: translate(7px, 20px);
 }
 
 .dot3 {
   height: 10px;
   width: 10px;
-
-  top: 11px;
-  left: 23px;
+  transform: translate(23px, 36px);
 }
 
 .base:hover p,
-.base.arrow p {
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
+.base.arrow p,
 .base.up:hover p,
 .base.up.arrow p {
-  transform: translateY(7px);
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .base.arrow .icon > div,
@@ -79,33 +69,30 @@
 }
 
 .base:hover .dot1,
-.base.arrow .dot1 {
-  transform: scale(50%, 180%) translateY(9px);
+.base.arrow .dot1,
+.base.up:hover .dot1,
+.base.up.arrow .dot1 {
+  transform: scale(50%, 200%) translate(28px, 8px);
 }
 
 .base:hover .dot2,
 .base.arrow .dot2 {
-  transform: translate(5px, 8px) rotate(140deg) scale(50%, 150%);
+  transform: translate(11px, 30px) rotate(140deg) scale(50%, 150%);
 }
 
 .base:hover .dot3,
 .base.arrow .dot3 {
-  transform: translate(1px, -5px) rotate(40deg) scale(70%, 210%);
-}
-
-.base.up:hover .dot1,
-.base.up.arrow .dot1 {
-  transform: scale(50%, 180%) translateY(10px);
+  transform: translate(23px, 32px) rotate(40deg) scale(70%, 210%);
 }
 
 .base.up:hover .dot2,
 .base.up.arrow .dot2 {
-  transform: translate(5px, -16px) rotate(40deg) scale(50%, 150%);
+  transform: translate(11px, 7px) rotate(40deg) scale(50%, 150%);
 }
 
 .base.up:hover .dot3,
 .base.up.arrow .dot3 {
-  transform: translate(1px, -29px) rotate(-40deg) scale(70%, 210%);
+  transform: translate(23px, 9px) rotate(-40deg) scale(70%, 210%);
 }
 
 @keyframes appear-button {

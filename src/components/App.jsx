@@ -10,13 +10,13 @@ function App() {
   const { locale, language } = useLanguage()
 
   return (
-    <IntlProvider locale={locale} messages={language}>
-      <div className={styles.base}>
+    <div className={styles.base}>
+      <IntlProvider locale={locale} messages={language}>
         <Modal />
         <Navbar />
         <AllSections />
-      </div>
-    </IntlProvider>
+      </IntlProvider>
+    </div>
   )
 }
 

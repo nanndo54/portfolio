@@ -22,9 +22,14 @@ html {
   font-size: 16px;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   --content-color: rgb(30, 30, 40);
-  --primary-color: rgb(240, 240, 250);
+  --primary-color: rgb(240, 240, 255);
   --secondary-color: rgb(235, 235, 245);
   --tertiary-color: rgb(225, 225, 235);
   --quaternary-color: rgb(220, 220, 230);
@@ -37,7 +42,6 @@ body {
 
   color: var(--content-color);
 
-  margin: 0;
   height: 100vh;
   font-family: 'Nunito', sans-serif;
 
@@ -92,7 +96,6 @@ img {
 
 p {
   line-height: 1.6rem;
-  margin: 0;
 }
 
 h1,
@@ -102,31 +105,26 @@ h4,
 h5,
 h6 {
   text-align: center;
-  line-height: 1rem;
-  margin: 0;
+  line-height: 1;
 }
 
 h1 {
   font-family: 'Oleo Script Swash Caps';
-  font-size: 2.8rem;
+  font-size: 3.5rem;
 }
 
 h1::after {
   content: '';
   display: block;
-  width: 110%;
-  height: 8px;
+  width: 115%;
+  height: 0.6rem;
 
-  position: relative;
-  left: -3%;
-  top: 5px;
-
-  border-radius: 5px;
+  border-radius: 0.5rem;
   border-bottom-right-radius: 200%;
-  border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 1rem;
   background-color: var(--content-color);
 
-  transform: rotate(0.5deg);
+  transform: translate(-0.75rem, 1.2rem) rotate(-0.5deg);
 
   transition: background-color 0.5s;
 }
@@ -151,11 +149,33 @@ h6 {
   font-size: 0.6rem;
 }
 
+a[target='_blank'] {
+  position: relative;
+  padding-right: 1em;
+}
+
+a[target='_blank']::before {
+  content: '';
+  display: inline-block;
+  height: 0.4em;
+  width: 0.4em;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-0.2em, -0.3em);
+
+  border: 0.1em solid var(--accent-color);
+}
+
 a[target='_blank']::after {
   content: '➔';
   display: inline-block;
-  font-size: 0.8rem;
-  transform: translateY(-5px) rotate(-45deg);
+  font-size: 0.9em;
+
+  position: absolute;
+  right: 0;
+  transform: translate(0.1em, -0.15em) rotate(-45deg);
 }
 
 a:link,
@@ -197,7 +217,7 @@ blockquote {
   margin: 30px 0;
   padding: 20px 50px;
 
-  width: 550px;
+  width: 650px;
   border-radius: 25px;
 }
 
@@ -207,14 +227,20 @@ blockquote {
 }
 
 @media (max-width: 700px) {
-  h1::after {
-    width: 85%;
-    left: 7.5%;
-    top: 10px;
+  h1 {
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 3rem;
   }
 
   blockquote {
     border-radius: 0;
-    width: calc(100% - 100px);
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  h1::after {
+    width: 85%;
+    transform: translate(2rem, 0.8rem) rotate(-0.5deg);
   }
 }

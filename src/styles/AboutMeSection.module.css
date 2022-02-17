@@ -8,7 +8,7 @@
 }
 
 .inline img {
-  width: calc(100% - 28px);
+  width: 100%;
 
   padding: 10px;
   border-radius: 25px;
@@ -22,12 +22,12 @@
   }
 
   .inline img {
-    width: calc(70% - 28px);
+    width: 70%;
   }
 }
 
 @media (max-width: 400px) {
   .inline img {
-    width: calc(100% - 28px);
+    width: 100%;
   }
 }

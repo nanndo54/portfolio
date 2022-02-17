@@ -11,11 +11,17 @@ function ContactSection() {
       </h2>
       <p className='center'>
         <FormattedMessage id='contact.text1' />
-        <a href='https://www.linkedin.com/in/pabloc54/'>LinkedIn</a>! 📨
+        <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pabloc54/'>
+          LinkedIn
+        </a>
+        ! 📨
       </p>
       <p className='center small'>
         <FormattedMessage id='contact.text2' />
-        <a href='mailto:pablofernando54@outlook.com'>pablofernando54@outlook.com</a>.
+        <a target='_blank' rel='noreferrer' href='mailto:pablofernando54@outlook.com'>
+          pablofernando54@outlook.com
+        </a>{' '}
+        .
       </p>
     </Section>
   )

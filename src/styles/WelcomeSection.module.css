@@ -1,29 +1,41 @@
 .base {
-  padding-top: 30px;
-  padding-bottom: 0;
-  margin-bottom: -30px;
+  height: 90vh;
+  align-content: center;
+  margin-bottom: -80px;
 
-  gap: 25px;
-  grid-gap: 25px;
+  gap: 35px;
+  grid-gap: 35px;
 }
 
 .avatar {
-  height: 200px;
-  width: 200px;
-  padding: 10px;
+  height: 15rem;
+  width: 15rem;
+  padding: 0.6rem;
 
   border-radius: 50%;
-  border: 10px solid var(--quaternary-color);
+  border: 0.6rem solid var(--quaternary-color);
 
-  background-color: var(--content-color);
   -webkit-background-clip: content-box;
   background-clip: content-box;
 
   transition: border 0.5s;
+  z-index: 0;
 }
 
 .avatar img {
-  width: 100.5%;
+  width: 100%;
+  padding: 0;
   border-radius: inherit;
   filter: grayscale(25%) contrast(125%);
+}
+
+@media (max-height: 750px) {
+  .base {
+    height: initial;
+    padding-top: 80px;
+    margin-bottom: 15px;
+
+    gap: 25px;
+    grid-gap: 25px;
+  }
 }
