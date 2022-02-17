@@ -1,6 +1,5 @@
 .base {
-  padding-top: 50px;
-  height: calc(100% - 50px);
+  height: 100%;
   background-color: var(--primary-color);
   transition: background-color 0.5s;
 }

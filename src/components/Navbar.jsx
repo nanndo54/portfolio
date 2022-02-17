@@ -1,5 +1,4 @@
 import styles from '@/styles/Navbar.module.css'
-import { FormattedMessage } from 'react-intl'
 
 import DarkModeSwitch from '@/components/DarkModeSwitch'
 
@@ -27,14 +26,6 @@ function Navbar() {
           {locale}
         </button>
       </div>
-      <a
-        className='button'
-        href='https://www.linkedin.com/in/pabloc54/'
-        target='_blank'
-        rel='noreferrer'
-      >
-        <FormattedMessage id='navbar.contactMe' />
-      </a>
     </nav>
   )
 }

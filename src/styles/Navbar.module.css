@@ -1,6 +1,7 @@
 .base {
   z-index: 2;
-  background-color: var(--tertiary-color);
+  /* background-color: var(--tertiary-color); */
+  background-color: transparent;
 
   position: fixed;
   top: -50px;
