@@ -10,8 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -28,7 +27,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source-directory: 'docs'
+        source-directory: 'dist'
         destination-github-username: 'pabloc54'
         destination-repository-name: 'pabloc54.github.io'
         user-email: 3091865790609@ingenieria.usac.edu.gt
