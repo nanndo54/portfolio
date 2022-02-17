@@ -1,5 +1,4 @@
 import styles from '@/styles/Project.module.css'
-import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Skill from '@/components/Skill'

@@ -1,5 +1,4 @@
 import styles from '@/styles/SkillsSection.module.css'
-import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Section from '@/components/Section'
@@ -13,9 +12,6 @@ function SkillsSection() {
       <h2>
         <FormattedMessage id='skills.title' />
       </h2>
-      <p>
-        <FormattedMessage id='skills.text1' />
-      </p>
       {Object.entries(skills).map(([title, specificSkills]) => (
         <div className={styles.subsection} key={title}>
           <h3>{title}</h3>

@@ -1,5 +1,4 @@
 import styles from '@/styles/ProjectsSection.module.css'
-import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Section from '@/components/Section'

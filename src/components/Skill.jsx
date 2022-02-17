@@ -1,5 +1,4 @@
 import styles from '@/styles/Skill.module.css'
-import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import { showModal } from '@/actions/modalActions'

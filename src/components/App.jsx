@@ -1,5 +1,4 @@
 import styles from '@/styles/App.module.css'
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 
 import Navbar from '@/components/Navbar'

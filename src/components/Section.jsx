@@ -1,5 +1,5 @@
 import styles from '@/styles/Section.module.css'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 
 import SectionLoader from './SectionLoader'
 

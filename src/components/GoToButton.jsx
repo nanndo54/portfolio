@@ -1,10 +1,10 @@
 import styles from '@/styles/GoToButton.module.css'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
-const handleScroll = (ev, direction) => {
+const handleScroll = (ev, direction = 'down') => {
   const base = document.getElementById('base')
   const coords = ev.currentTarget.getBoundingClientRect()
   const top = direction === 'down' ? base.scrollTop + coords.y + 120 : 0

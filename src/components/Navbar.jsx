@@ -1,5 +1,4 @@
 import styles from '@/styles/Navbar.module.css'
-import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import DarkModeSwitch from '@/components/DarkModeSwitch'

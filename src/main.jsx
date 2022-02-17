@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import '@/styles/index.css'
-import React, { lazy, Suspense } from 'react'
+import { lazy, StrictMode, Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
@@ -16,12 +16,12 @@ const App = lazy(() =>
 )
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={store}>
       <Suspense fallback={<Loader />}>
         <App />
       </Suspense>
     </Provider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.querySelector('main')
 )

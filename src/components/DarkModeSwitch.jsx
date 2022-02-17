@@ -4,7 +4,7 @@
   All credis to him
 */
 
-import React, { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 const defaultProperties = {

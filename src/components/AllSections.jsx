@@ -1,5 +1,4 @@
 import styles from '@/styles/AllSections.module.css'
-import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import GoToButton from '@/components/GoToButton'
@@ -14,12 +13,12 @@ function AllSections() {
   return (
     <div className={styles.base} id='base'>
       <WelcomeSection />
-      <GoToButton direction='down' label='goto.aboutme' />
-      <AboutMeSection />
-      <GoToButton direction='down' label='goto.skills' />
-      <SkillsSection />
-      <GoToButton direction='down' label='goto.projects' />
+      <GoToButton label='goto.projects' />
       <ProjectsSection />
+      <GoToButton label='goto.aboutme' />
+      <AboutMeSection />
+      <GoToButton label='goto.skills' />
+      <SkillsSection />
       <ContactSection />
       <GoToButton direction='up' label='goto.start' />
       <blockquote>

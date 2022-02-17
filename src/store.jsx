@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { composeWithDevTools } from '@redux-devtools/extension'
 
 import appReducer from '@/reducers/appReducer'
 import modalReducer from '@/reducers/modalReducer'
