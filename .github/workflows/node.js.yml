@@ -1,0 +1,36 @@
+name: GitHub pages auto publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: npm install
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm run build
+    - name: Pushing to pabloc54.github.io
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: 'docs'
+        destination-github-username: 'pabloc54'
+        destination-repository-name: 'pabloc54.github.io'
+        user-email: 3091865790609@ingenieria.usac.edu.gt
+        target-branch: main
+        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
