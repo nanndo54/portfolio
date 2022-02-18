@@ -1,0 +1,35 @@
+.base {
+  background-color: var(--tertiary-color);
+  font-size: 1.1rem;
+  line-height: 0.8;
+  word-spacing: 2.5px;
+
+  margin: 30px 0;
+  padding: 20px 50px;
+
+  width: 650px;
+  border-radius: 25px;
+}
+
+.base .quote {
+  font-size: 3rem;
+  color: var(--dim-color);
+
+  padding: 0 0.3rem;
+  position: relative;
+  top: 1rem;
+}
+
+.base .author {
+  color: var(--dim-color);
+
+  text-align: end;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .base {
+    border-radius: 0;
+    width: 100%;
+  }
+}

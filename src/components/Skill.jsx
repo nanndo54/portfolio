@@ -22,7 +22,7 @@ function Skill({ size = 'medium', name, image }) {
         onClick={handleClick}
         title={size === 'small' ? name : ''}
       >
-        <img src={image} alt={`${name} logo`} />
+        <img src={image} alt={name} />
       </button>
       {size !== 'small' && <span>{name}</span>}
     </div>

@@ -1,13 +1,13 @@
 {
   "navbar.contactMe": "Contact me!",
-  "goto.projects": "Learn more about my projects!",
+  "goto.projects": "See my works!",
   "goto.aboutme": "Learn more about me!",
   "goto.skills": "Learn more about my skills!",
   "goto.start": "Go to top",
   "welcome.status": "(Looking for a job)",
   "welcome.presentation": "Hi! I'm a FullStack Web Developer with extensive knowledge in web technologies and design.",
   "projects.title": "My Works",
-  "projects.text1": "The source code of all of this projects is available on my ",
+  "projects.text1": "The source code of all this works is available on my ",
   "project.typesty": "Web graphic user interface for interpreting a derived language of JavaScript named Typesty. Makes it easy to handle multiple files and debugging the language.",
   "project.mini translator": "Real-time translation online. Mini Translator eases the translation between 100+ languages, as well as text spelling, everything from a minimalistic and intuitive GUI.",
   "project.quiz game": "Quiz game online. The game allows picking a variety of categories and amount of questions. The GUI aims to be comfortable and simple, to make easy and intuitive the answering of questions.",
@@ -37,5 +37,5 @@
   "contact.title": "Like what you see?",
   "contact.text1": "I invite you to message me via ",
   "contact.text2": "... or send me an email to ",
-  "quote": "“What makes us great is the fact of being able to see how small we are”"
+  "quote.carl-sagan1": "What makes us great is the fact of being able to see how small we are"
 }

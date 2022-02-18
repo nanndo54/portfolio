@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className={styles.base}>
       Source:{' '}
-      <a target='_blank' rel='noreferrer' href='https://github.com/pabloc54/portfolio'>
+      <a target='_blank' rel='noreferrer' href='https://github.com/pabloc54'>
         GitHub
       </a>
     </footer>

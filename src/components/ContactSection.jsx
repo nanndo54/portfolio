@@ -18,9 +18,9 @@ function ContactSection() {
       </p>
       <p className='center small'>
         <FormattedMessage id='contact.text2' />
-        <a target='_blank' rel='noreferrer' href='mailto:pablofernando54@outlook.com'>
-          pablofernando54@outlook.com
-        </a>{' '}
+        <a target='_blank' rel='noreferrer' href='mailto:pablofernando50259107@gmail.com'>
+          pablofernando50259107@gmail.com
+        </a>
         .
       </p>
     </Section>

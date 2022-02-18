@@ -1,8 +1,8 @@
 import styles from '@/styles/App.module.css'
 import { IntlProvider } from 'react-intl'
 
-import Navbar from '@/components/Navbar'
 import Modal from '@/components/Modal'
+import Navbar from '@/components/Navbar'
 import AllSections from '@/components/AllSections'
 import useLanguage from '@/hooks/useLanguage'
 

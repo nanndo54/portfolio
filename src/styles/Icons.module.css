@@ -1,0 +1,63 @@
+.base {
+  height: 100%;
+  width: 3rem;
+
+  position: fixed;
+  left: calc(60vw + 270px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  opacity: 0;
+  transform: translateX(100%);
+
+  animation: appear 0.5s forwards;
+  transition: border 0.5s, transform 0.5s;
+}
+
+.base a {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+
+  border-radius: 50%;
+  border: 0.4rem solid var(--quaternary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.base a::before,
+.base a::after {
+  display: none;
+}
+
+.base img {
+  width: 65%;
+}
+
+@media (max-width: 900px) {
+  .base {
+    height: 3rem;
+    width: 100%;
+    margin-bottom: -20px;
+
+    position: static;
+
+    flex-direction: row;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

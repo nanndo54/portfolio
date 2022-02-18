@@ -16,7 +16,7 @@
   "project.notes": "wip",
   "aboutme.title": "Acerca De Mí",
   "aboutme.text1": "Disfruto mucho desarrollando software, amo las buenas prácticas y el clean code 📖. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
-  "aboutme.text2": "Resido en la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
+  "aboutme.text2": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
   "aboutme.text3": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
   "skills.title": "Habilidades",
   "skill.html": "Lenguaje de marcado de la web. Poseo alto conocimiento de HTML5 y buenas prácticas en el maquetado de páginas web.",
@@ -37,5 +37,5 @@
   "contact.title": "¿Te gusta lo que ves?",
   "contact.text1": "¡Te invito a mandarme un mensaje por ",
   "contact.text2": "... o mándame un email a ",
-  "quote": "“Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos”"
+  "quote.carl-sagan1": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos"
 }

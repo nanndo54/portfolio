@@ -15,13 +15,12 @@ export default defineConfig(({ mode }) => ({
     modules:
       mode === 'development'
         ? {
-            generateScopedName: (name, filename, css) => {
-              const index = css.indexOf(`.${name}`)
-              const line = css.substr(0, index).split(/[\r\n]/).length
-              const file = path.basename(filename).split('.')[0]
-
-              return `${file}_${name}_${line}`
-            }
+            // generateScopedName: (name, filename, css) => {
+            //   const index = css.indexOf(`.${name}`)
+            //   const line = css.substr(0, index).split(/[\r\n]/).length
+            //   const file = path.basename(filename).split('.')[0]
+            //   return `${file}_${name}_${line}`
+            // }
           }
         : {},
     postcss: {
