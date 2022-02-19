@@ -2,7 +2,7 @@ import styles from '@/styles/AllSections.module.css'
 
 import GoToButton from '@/components/GoToButton'
 import WelcomeSection from '@/components/WelcomeSection'
-import Icons from '@/components/Icons'
+import ContactIcons from '@/components/ContactIcons'
 import ProjectsSection from '@/components/ProjectsSection'
 import AboutMeSection from '@/components/AboutMeSection'
 import SkillsSection from '@/components/SkillsSection'
@@ -14,7 +14,7 @@ function AllSections() {
   return (
     <div className={styles.base} id='base'>
       <WelcomeSection />
-      <Icons />
+      <ContactIcons />
       <GoToButton label='goto.projects' />
       <ProjectsSection />
       <GoToButton label='goto.aboutme' />

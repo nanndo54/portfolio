@@ -124,7 +124,7 @@ h1::after {
   border-bottom-left-radius: 1rem;
   background-color: var(--content-color);
 
-  transform: translate(-0.75rem, 0.2rem) rotate(-0.5deg);
+  transform: translateX(-0.75rem) rotate(-0.5deg);
 
   transition: background-color 0.5s;
 }
@@ -223,6 +223,6 @@ button:hover {
 @media (max-width: 360px) {
   h1::after {
     width: 85%;
-    transform: translate(2rem, 0.2rem) rotate(-0.5deg);
+    transform: translateX(2rem) rotate(-0.5deg);
   }
 }

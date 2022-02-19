@@ -1,11 +1,13 @@
 .base {
   background-color: var(--tertiary-color);
-  font-size: 1.1rem;
-  line-height: 0.8;
-  word-spacing: 2.5px;
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  line-height: 2;
+  text-indent: 1rem;
+  letter-spacing: 0.08rem;
 
   margin: 30px 0;
-  padding: 20px 50px;
+  padding: 30px 50px;
 
   width: 650px;
   border-radius: 25px;
@@ -13,6 +15,7 @@
 
 .base .quote {
   font-size: 3rem;
+  line-height: 0;
   color: var(--dim-color);
 
   padding: 0 0.3rem;
@@ -24,7 +27,8 @@
   color: var(--dim-color);
 
   text-align: end;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
 }
 
 @media (max-width: 700px) {

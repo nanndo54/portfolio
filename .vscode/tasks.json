@@ -9,7 +9,8 @@
     {
       "label": "yarn: dev",
       "type": "shell",
-      "command": "yarn dev"
+      "command": "yarn dev",
+      "problemMatcher": ["$eslint-compact"]
     },
     {
       "label": "yarn: start",
