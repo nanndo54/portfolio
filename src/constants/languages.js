@@ -1,4 +1,4 @@
-import spanish from '@/lang/es.json'
+import spanish from '@assets/lang/es.json'
 import english from '@/lang/en.json'
 
 const languages = {
