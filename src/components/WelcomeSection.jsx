@@ -12,9 +12,6 @@ function WelcomeSection() {
         <img src={photo} alt='Yo' />
       </div>
       <h1>Pablo Cabrera</h1>
-      <p className='small'>
-        <FormattedMessage id='welcome.status' />
-      </p>
       <p className='center'>
         <FormattedMessage id='welcome.presentation' />
       </p>

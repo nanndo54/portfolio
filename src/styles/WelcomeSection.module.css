@@ -1,15 +1,15 @@
 .base {
   height: 90vh;
   align-content: center;
-  margin-bottom: -100px;
+  margin-bottom: -90px;
 
   gap: 35px;
   grid-gap: 35px;
 }
 
 .avatar {
-  height: 15rem;
-  width: 15rem;
+  height: 19rem;
+  width: 19rem;
   padding: 0.6rem;
 
   border-radius: 50%;
@@ -35,17 +35,17 @@
     padding-top: 80px;
     margin-bottom: -70px;
 
-    gap: 25px;
-    grid-gap: 25px;
+    gap: 30px;
+    grid-gap: 30px;
   }
 }
 
 @media (max-width: 900px) {
   .base {
-    margin-bottom: -150px;
+    margin-bottom: calc(20px - 20vh);
 
-    gap: 20px;
-    grid-gap: 20px;
+    gap: 30px;
+    grid-gap: 30px;
   }
 }
 
@@ -54,7 +54,7 @@
     height: initial;
     margin-bottom: -80px;
 
-    gap: 25px;
-    grid-gap: 25px;
+    gap: 30px;
+    grid-gap: 30px;
   }
 }
