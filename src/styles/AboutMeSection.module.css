@@ -1,6 +1,6 @@
 .inline {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 5fr 6fr;
   justify-items: center;
 
   gap: 40px;
