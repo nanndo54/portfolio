@@ -1,5 +1,3 @@
 .base {
   height: 100%;
-  background-color: var(--primary-color);
-  transition: background-color 0.5s;
 }

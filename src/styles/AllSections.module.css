@@ -11,6 +11,17 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 900px) {
+  nav.icons {
+    margin-bottom: 100px;
+  }
+
+  nav.icons a {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
 .base::-webkit-scrollbar {
   width: 8px;
   height: 8px;

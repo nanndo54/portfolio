@@ -46,7 +46,8 @@ const skills = {
   BackEnd: [
     {
       name: 'ExpressJS',
-      image: expressIcon
+      image: expressIcon,
+      invert: true
     },
     {
       name: 'Go',
@@ -79,7 +80,7 @@ const skills = {
       image: awsIcon
     },
     {
-      name: 'Oracle Cloud',
+      name: 'OCI',
       image: oraclecloudIcon
     }
   ]

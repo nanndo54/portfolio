@@ -22,6 +22,7 @@ function AllSections() {
       <GoToButton label='goto.skills' />
       <SkillsSection />
       <ContactSection />
+      <ContactIcons disableFloat className={styles.icons} />
       <GoToButton direction='up' label='goto.start' />
       <BlockQuote author='Carl Sagan' quote='quote.carl-sagan1' />
       <Footer />

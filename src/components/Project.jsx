@@ -2,8 +2,9 @@ import styles from '@/styles/Project.module.css'
 import { FormattedMessage } from 'react-intl'
 
 import Skill from '@/components/Skill'
-
 import useProject from '@/hooks/useProject'
+
+import downArrow from '@assets/svg/down.svg'
 
 function Project({ name, url = '', technologies = [], images = [] }) {
   const { expanded, toggleExpand, skills } = useProject(name, technologies)
@@ -18,7 +19,7 @@ function Project({ name, url = '', technologies = [], images = [] }) {
           </a>
         </h3>
         <button className={styles.down} onClick={toggleExpand} aria-label='expandir'>
-          ❯
+          <img src={downArrow} alt='expand' />
         </button>
       </div>
       <div className={styles.content}>

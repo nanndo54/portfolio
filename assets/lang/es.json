@@ -17,7 +17,8 @@
   "aboutme.title": "Acerca De Mí",
   "aboutme.text1": "Disfruto mucho desarrollando software, amo las buenas prácticas y el clean code 📖. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
   "aboutme.text2": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
-  "aboutme.text3": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
+  "aboutme.text3": "Entre mis intereses ",
+  "aboutme.text4": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
   "skills.title": "Habilidades",
   "skill.html": "Lenguaje de marcado de la web. Poseo alto conocimiento de HTML5 y buenas prácticas en el maquetado de páginas web.",
   "skill.css": "Lenguaje de diseño de la web. Poseo un gran conocimiento de styling de páginas web, así como animaciones y buenas prácticas.",
@@ -33,9 +34,8 @@
   "skill.pl/sql": "Lenguaje de programación SQL de Oracle. Tengo gran experiencia en el modelado normalizado de bases de datos, creación y testing de procedimientos, funciones, triggers y schedules.",
   "skill.java": "Lenguaje de programación multiplataforma de Oracle. Tengo una vasta experiencia en la creación de interfaces de usuario para cualquier necesidad y aplicaciones de línea de comando.",
   "skill.aws": "Colección de servicios en la nube de Amazon. Poseo conocimiento de Amazon S3, Amazon EC2, Amazon RDS y Amazon VPC.",
-  "skill.oracle cloud": "Servicios en la nube de Oracle. Poseo conocimiento en la creación y uso de Compute Instances, Autonomous Data Warehouse, Autonomous JSON Database y Buckets.",
+  "skill.oci": "Servicios en la nube de Oracle. Poseo conocimiento en la creación y uso de Compute Instances, Autonomous Data Warehouse, Autonomous JSON Database y Buckets.",
   "contact.title": "¿Te gusta lo que ves?",
-  "contact.text1": "¡Te invito a mandarme un mensaje por ",
-  "contact.text2": "... o mándame un email a ",
+  "contact.text1": "¡Pongámonos en contacto!",
   "quote.carl-sagan1": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos"
 }

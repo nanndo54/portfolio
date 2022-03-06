@@ -10,7 +10,7 @@
 .avatar {
   height: 19rem;
   width: 19rem;
-  padding: 0.6rem;
+  padding: 0.8rem;
 
   border-radius: 50%;
   border: 0.6rem solid var(--quaternary-color);

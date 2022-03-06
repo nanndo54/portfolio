@@ -19,6 +19,7 @@
 .base.shadow {
   background-color: var(--secondary-color);
   box-shadow: var(--quaternary-color) 2px 1px 10px 0px inset;
+  backdrop-filter: blur(4px);
 
   border-radius: 25px;
 }

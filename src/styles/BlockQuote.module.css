@@ -1,30 +1,31 @@
 .base {
-  background-color: var(--tertiary-color);
-  font-size: 1.3rem;
+  background-color: var(--secondary-color);
+  font-size: 1.5rem;
   font-family: serif;
-  line-height: 2;
+  line-height: 1.75;
   text-indent: 0.8rem;
-  letter-spacing: 0.07rem;
+  letter-spacing: 0.05rem;
 
-  margin: 30px 0;
-  padding: 30px 50px;
+  margin: 50px 0;
+  padding: 20px 50px;
 
-  width: 650px;
+  width: 700px;
   border-radius: 25px;
 }
 
 .base .quote {
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 0;
   color: var(--dim-color);
 
-  padding: 0 0.2rem;
+  padding: 0 0.5rem;
   position: relative;
-  top: 1rem;
+  top: 1.5rem;
 }
 
 .base .author {
   color: var(--dim-color);
+  font-size: 1.6rem;
 
   letter-spacing: 0.11rem;
   text-align: end;
@@ -36,5 +37,11 @@
   .base {
     border-radius: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .base {
+    padding: 50px 30px;
   }
 }

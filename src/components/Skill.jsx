@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import { showModal } from '@/actions/modalActions'
 
-function Skill({ size = 'medium', name, image }) {
+function Skill({ size = 'medium', name, image, invert = false }) {
   const dispatch = useDispatch()
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ function Skill({ size = 'medium', name, image }) {
 
   const className = `${styles.base} ${
     size === 'big' ? styles.big : size === 'small' ? styles.small : ''
-  }`
+  } ${invert ? styles.invert : ''}`
 
   return (
     <div className={className}>

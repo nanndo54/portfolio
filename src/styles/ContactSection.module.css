@@ -1,4 +1,11 @@
 .base {
-  gap: 25px;
-  grid-gap: 25px;
+  gap: 60px;
+  grid-gap: 60px;
+  margin: 110px 0 20px;
+}
+
+@media (max-width: 900px) {
+  .base {
+    margin: 110px 0 -50px;
+  }
 }

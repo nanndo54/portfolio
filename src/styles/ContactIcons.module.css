@@ -18,13 +18,17 @@
   animation: appear-x 0.5s forwards;
 }
 
+.base.nofloat {
+  display: none;
+}
+
 .base a {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   padding: 0;
 
   border-radius: 50%;
-  border: 0.3rem solid var(--quaternary-color);
+  border: 0.35rem solid var(--tertiary-color);
 
   display: flex;
   justify-content: center;
@@ -47,7 +51,7 @@
   .base {
     height: 3rem;
     width: 100%;
-    margin-bottom: calc(10vh - 120px);
+    margin-bottom: calc(10vh - 100px);
 
     position: static;
 
@@ -55,6 +59,15 @@
 
     transform: translateY(100%);
     animation: appear-y 0.5s forwards;
+  }
+
+  .base.nofloat {
+    display: flex;
+  }
+
+  .base.nofloat a {
+    width: 4rem;
+    height: 4rem;
   }
 }
 

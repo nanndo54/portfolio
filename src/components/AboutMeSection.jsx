@@ -4,7 +4,8 @@ import { FormattedMessage } from 'react-intl'
 import Section from '@/components/Section'
 
 import guatemalaImage from '@assets/img/guatemala.jpg'
-import facultyImage from '@assets/img/facultad.jpg'
+import campusImage from '@assets/img/campus.jpg'
+// import landscapeImage from '@assets/img/landscape.jpg'
 
 function AboutMeSection() {
   return (
@@ -21,10 +22,16 @@ function AboutMeSection() {
           <FormattedMessage id='aboutme.text2' />
         </p>
       </div>
-      <div className={styles.inline}>
-        <img src={facultyImage} alt='Facultad de Ingenieria, USAC' />
+      {/* <div className={`${styles.inline} ${styles.reversed}`}>
         <p>
           <FormattedMessage id='aboutme.text3' />
+        </p>
+        <img src={landscapeImage} alt='pending' />
+      </div> */}
+      <div className={styles.inline}>
+        <img src={campusImage} alt='USAC' />
+        <p>
+          <FormattedMessage id='aboutme.text4' />
         </p>
       </div>
     </Section>

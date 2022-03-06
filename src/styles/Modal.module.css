@@ -22,23 +22,30 @@
   pointer-events: visible;
 }
 
-.base .modal {
+.base aside.modal {
   align-self: center;
+
+  padding: 80px 50px;
   margin: 50px 0 100px;
 
   transform: translate(-8px, -15px);
+  background-color: var(--primary-color);
 
   transition: transform 0.5s ease;
 }
 
-.base.show .modal {
+.base.show aside.modal {
   transform: translate(-8px, 25px);
 }
 
 .close {
-  padding: 4px;
+  width: 3rem;
+  aspect-ratio: 1;
 
-  font-size: 1.5rem;
-  justify-self: end;
-  margin: -20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  position: absolute;
+  top: 40px;
+  right: 50px;
 }

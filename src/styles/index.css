@@ -30,13 +30,14 @@ html {
 body {
   --content-color: rgb(30, 30, 40);
   --primary-color: rgb(245, 245, 255);
-  --secondary-color: rgb(235, 235, 245);
-  --tertiary-color: rgb(225, 225, 235);
+  --secondary-color: rgba(235, 235, 245, 0.6);
+  --tertiary-color: rgba(225, 225, 235, 0.8);
   --quaternary-color: rgb(220, 220, 230);
   --accent-color: rgb(70, 70, 200);
   --dim-color: rgb(75, 75, 85);
+  --invert-color: 0.1;
 
-  --footer-background-color: rgb(30, 30, 40);
+  --footer-background-color: rgb(20, 20, 35);
   --footer-font-color: rgb(230, 230, 240);
   --modal-outside-color: rgba(35, 35, 45, 0.5);
 
@@ -53,17 +54,26 @@ body {
 body.dark {
   --content-color: rgb(220, 220, 230);
   --primary-color: rgb(35, 35, 45);
-  --secondary-color: rgb(40, 40, 50);
-  --tertiary-color: rgb(45, 45, 55);
+  --secondary-color: rgba(40, 40, 50, 0.8);
+  --tertiary-color: rgba(45, 45, 55, 0.8);
   --quaternary-color: rgb(50, 50, 60);
   --accent-color: rgb(90, 100, 230);
   --dim-color: rgb(170, 170, 180);
+  --invert-color: 0.9;
 
   --modal-outside-color: rgba(35, 35, 45, 0.7);
 }
 
 main {
   height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-color 0.5s;
+
+  background-color: var(--primary-color);
+  background-image: url('@assets/svg/background.svg');
 }
 
 nav,
@@ -124,7 +134,7 @@ h1::after {
   border-bottom-left-radius: 1rem;
   background-color: var(--content-color);
 
-  transform: translateX(-0.75rem) rotate(-0.5deg);
+  transform: translateX(-5%) rotate(-0.5deg);
 
   transition: background-color 0.5s;
 }
@@ -147,6 +157,11 @@ h5 {
 
 h6 {
   font-size: 0.6rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
 }
 
 a[target='_blank'] {
@@ -175,7 +190,7 @@ a[target='_blank']::after {
 
   position: absolute;
   right: 0;
-  transform: translate(0.1em, -0.15em) rotate(-45deg);
+  transform: translate(0.25em, -0.15em) rotate(-45deg);
 }
 
 a:link,

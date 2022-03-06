@@ -8,7 +8,9 @@
 }
 
 .inline img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 
   padding: 10px;
   border-radius: 25px;
@@ -23,6 +25,10 @@
 
   .inline img {
     width: 70%;
+  }
+
+  .inline.reversed :first-child {
+    order: 1;
   }
 }
 

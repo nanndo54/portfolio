@@ -6,23 +6,12 @@ import Section from '@/components/Section'
 function ContactSection() {
   return (
     <Section className={styles.base} shadow={false} fallback={false}>
-      <h2>
+      <h1 className={styles.title}>
         <FormattedMessage id='contact.title' />
-      </h2>
-      <p className='center'>
+      </h1>
+      <h3 className='center'>
         <FormattedMessage id='contact.text1' />
-        <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/pabloc54/'>
-          LinkedIn
-        </a>
-        ! 📨
-      </p>
-      <p className='center small'>
-        <FormattedMessage id='contact.text2' />
-        <a target='_blank' rel='noreferrer' href='mailto:pablofernando50259107@gmail.com'>
-          pablofernando50259107@gmail.com
-        </a>
-        .
-      </p>
+      </h3>
     </Section>
   )
 }
