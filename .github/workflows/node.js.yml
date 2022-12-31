@@ -20,9 +20,11 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build --if-present
-
-      - name: Deploy to GH Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          path: "dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+      - run: echo ${{ steps.deployment.outputs.page_url }}
