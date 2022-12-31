@@ -1,6 +1,6 @@
 # Portfolio
 
-Deployed on [github pages](https://pabloc54.github.io/)!
+Deployed on [https://pabloc54.dev](https://pabloc54.dev)!
 
 ## License
 

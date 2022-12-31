@@ -23,6 +23,8 @@
 }
 
 .base a {
+  position: relative;
+
   width: 4rem;
   height: 4rem;
   padding: 0;
@@ -38,9 +40,22 @@
   text-decoration: none;
 }
 
-.base a::before,
 .base a::after {
   display: none;
+}
+
+.base a::before {
+  width: calc(100% + 0.7rem);
+  height: calc(100% + 0.7rem);
+  transform: none;
+
+  top: -0.35rem;
+  left: -0.35rem;
+
+  border: 0.35rem solid red;
+  border-radius: 50%;
+
+  box-sizing: border-box;
 }
 
 .base img {

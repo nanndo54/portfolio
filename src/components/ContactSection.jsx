@@ -5,7 +5,13 @@ import Section from '@/components/Section'
 
 function ContactSection() {
   return (
-    <Section className={styles.base} shadow={false} fallback={false}>
+    <Section
+      className={styles.base}
+      shadow={false}
+      fallback={false}
+      once={false}
+      onIntersected={(int) => console.log(int)}
+    >
       <h1 className={styles.title}>
         <FormattedMessage id='contact.title' />
       </h1>

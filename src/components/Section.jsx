@@ -1,5 +1,5 @@
 import styles from '@/styles/Section.module.css'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 import SectionLoader from './SectionLoader'
 
@@ -9,19 +9,27 @@ function Section({
   shadow = true,
   animated = true,
   fallback = true,
-  className,
-  children,
-  onClick,
-  Tag = 'section'
+  Tag = 'section',
+  className = '',
+  onIntersected = () => {},
+  onClick = () => {},
+  threshold = 0.3,
+  once = true,
+  children
 }) {
   const ref = useRef(null)
   const intersected = useIntersectionObserver(
     ref,
     {
-      threshold: 0.3
+      threshold
     },
-    fallback
+    fallback,
+    once
   )
+
+  useEffect(() => {
+    onIntersected(intersected)
+  }, [intersected])
 
   const baseClassName = `${styles.base} ${className} ${shadow ? styles.shadow : ''} ${
     fallback
