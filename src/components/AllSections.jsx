@@ -14,12 +14,12 @@ function AllSections() {
   return (
     <div className={styles.base} id='base'>
       <WelcomeSection />
-      <ContactIcons />
-      <GoToButton label='goto.projects' />
+      {/* <ContactIcons /> */}
+      {/* <GoToButton label='goto.projects' /> */}
       <ProjectsSection />
-      <GoToButton label='goto.aboutme' />
+      {/* <GoToButton label='goto.aboutme' /> */}
       <AboutMeSection />
-      <GoToButton label='goto.skills' />
+      {/* <GoToButton label='goto.skills' /> */}
       <SkillsSection />
       <ContactSection />
       <ContactIcons disableFloat className={styles.icons} />

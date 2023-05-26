@@ -126,9 +126,10 @@ h1 {
 h1::after {
   content: '';
   display: block;
-  width: 115%;
+  width: 112%;
   height: 0.6rem;
 
+  margin: auto;
   border-radius: 0.5rem;
   border-bottom-right-radius: 200%;
   border-bottom-left-radius: 1rem;
