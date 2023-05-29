@@ -16,7 +16,7 @@
 
   margin-bottom: 0.8rem;
 
-  border: 4px solid var(--quaternary-color);
+  border: 0.27rem solid var(--dim-secondary-accent-color);
   border-radius: 50%;
 
   transition: border 0.5s;

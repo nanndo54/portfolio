@@ -1,20 +1,18 @@
 .base {
-  height: 38rem;
+  height: 20rem;
+  margin-bottom: 15rem;
   align-content: center;
 
-  gap: 35px;
-  grid-gap: 35px;
-
-  transition: height 0.3s;
+  transition: margin-bottom 0.3s;
 }
 
 .container {
   position: absolute;
-  top: 7.5rem;
+  top: 4rem;
 
-  height: 30rem;
+  height: 100rem;
 
-  transition: transform 0.3s, width 0.5s, height 0.5s;
+  transition: transform 0.3s, width 0.5s, height 0.5s, top 0.5s, right 0.5s;
   pointer-events: none;
   z-index: 2;
 }
@@ -22,6 +20,7 @@
 .avatar {
   position: relative;
   top: 0;
+  right: 0;
 
   height: 19rem;
   width: 19rem;
@@ -29,21 +28,36 @@
   margin: auto;
 
   border-radius: 50%;
-  border: 0.6rem solid var(--quaternary-color);
+  border: 0.6rem solid var(--dim-secondary-accent-color);
 
   -webkit-background-clip: content-box;
   background-clip: content-box;
 
-  cursor: pointer;
   transition: transform 0.3s, border 0.5s;
-  pointer-events: initial;
+}
+
+.avatar button {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: none;
 }
 
 .avatar img {
   width: 100%;
   padding: 0;
   border-radius: inherit;
-  filter: grayscale(25%) contrast(125%);
+  filter: grayscale(15%);
+}
+.avatar > * {
+  cursor: pointer;
+}
+
+.base.top .avatar > * {
+  pointer-events: initial;
 }
 
 .name {
@@ -64,41 +78,106 @@
 }
 
 .base.top {
-  height: 15rem;
+  height: 20rem;
+  margin-bottom: -10rem;
 }
 
 .base.top .container {
-  width: 100%;
-  height: 32%;
+  top: 7.5rem;
+  width: 80rem;
 
-  transform: translateX(39.5vw) translateY(-15.5rem) scale(0.2);
+  transform: translateX(calc(50vw - 10.5rem)) translateY(-44.5rem) scale(0.25);
 }
 
 .base.top .avatar {
-  transform: translateX(37rem);
+  transform: translateX(29rem) translateY(1rem);
 }
 
 .base.top .name {
-  transform: translateX(-2rem) translateY(-13.5rem) scale(2.3);
+  transform: translateX(-11rem) translateY(-12rem) scale(2.3);
 }
 
 .base.top .presentation {
   opacity: 0 !important;
 }
 
-@media (max-width: 900px) {
-  .base.top .container {
-    width: 280%;
-    height: 32%;
+.base .contact {
+  position: absolute;
+  top: 0;
 
-    transform: translateX(30vw) translateY(-14.5rem) scale(0.14);
+  height: 200%;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  grid-gap: 0.8rem;
+
+  transform: translateY(46rem) translateX(6rem) scale(3.5);
+
+  transition: transform 0.25s;
+}
+
+.base .contact a {
+  border: 0.18rem solid var(--dim-secondary-accent-color);
+}
+
+.contact a + a {
+  margin-top: -120%;
+
+  transition: border 0.5s, margin-top 0.25s;
+}
+
+.contact.open {
+  transform: translateY(65rem) translateX(6rem) scale(3.5);
+}
+
+.contact.open a + a {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    transform: scale(0.85) translateY(-5rem);
+  }
+
+  .base.top .container {
+    width: 80rem;
+    height: 22rem;
+
+    transform: translateX(calc(50vw - 6.5rem)) translateY(-16.8rem) scale(0.15);
   }
 
   .base.top .avatar {
-    transform: translateX(26rem);
+    transform: translateX(29rem) translateY(1rem);
   }
 
   .base.top .name {
-    transform: translateX(-8rem) translateY(-13.5rem) scale(2.3);
+    transform: translateX(-11rem) translateY(-12rem) scale(2.5);
+  }
+
+  .contact {
+    transform: translateY(0rem) translateX(6rem) scale(4.4);
+  }
+
+  .contact.open {
+    transform: translateY(82rem) translateX(6rem) scale(4.4);
+  }
+}
+
+@media (max-height: 550px) {
+  .base .container {
+    transform: scale(0.7) translateY(-22rem);
+  }
+}
+
+@media (max-height: 400px) {
+  .base .container {
+    transform: scale(0.6) translateY(-34rem);
+  }
+}
+
+@media (max-width: 300px) {
+  .base.top .container {
+    display: none;
   }
 }

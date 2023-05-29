@@ -27,19 +27,19 @@
   overflow: hidden;
 }
 .base.shadow:hover::after {
-  opacity: 0.06;
+  opacity: 0.07;
 }
 
 .base.shadow::after {
   content: '';
-  background: radial-gradient(var(--accent-color), #3984ff00 70%);
+  background: radial-gradient(var(--secondary-accent-color), #3984ff00 70%);
 
   position: absolute;
-  top: calc(var(--y, 0) * 1px - 25rem);
-  left: calc(var(--x, 0) * 1px - 25rem);
+  top: calc(var(--y, 0) * 1px - 20rem);
+  left: calc(var(--x, 0) * 1px - 20rem);
 
-  width: 50rem;
-  height: 50rem;
+  width: 40rem;
+  height: 40rem;
 
   opacity: 0;
   transition: opacity 0.2s;

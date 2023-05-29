@@ -8,7 +8,7 @@ import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 function Section({
   shadow = true,
   animated = true,
-  fallback = true,
+  fallback = false,
   Tag = 'section',
   className = '',
   onIntersected = () => {},
@@ -27,6 +27,19 @@ function Section({
     once
   )
 
+  const mouseEvent = (e) => {
+    ref.current.classList.add(styles.shadow)
+    const { x, y } = ref.current.getBoundingClientRect()
+    ref.current.style.setProperty('--x', e.clientX - x)
+    ref.current.style.setProperty('--y', e.clientY - y)
+  }
+
+  const delayedMouseEvent = (e) => {
+    setTimeout(() => {
+      mouseEvent(e)
+    }, 100)
+  }
+
   useEffect(() => {
     onIntersected(intersected)
   }, [intersected])
@@ -35,16 +48,13 @@ function Section({
     if (!shadow || !ref?.current) return
 
     ref.current.addEventListener('mousemove', mouseEvent)
+    ref.current.addEventListener('wheel', delayedMouseEvent)
 
-    return () => ref.current.removeEventListener('mousemove', mouseEvent)
+    return () => {
+      ref.current.removeEventListener('mousemove', mouseEvent)
+      ref.current.removeEventListener('wheel', delayedMouseEvent)
+    }
   }, [ref])
-
-  const mouseEvent = (e) => {
-    ref.current.classList.add(styles.shadow)
-    const { x, y } = ref.current.getBoundingClientRect()
-    ref.current.style.setProperty('--x', e.clientX - x)
-    ref.current.style.setProperty('--y', e.clientY - y)
-  }
 
   const baseClassName = `${styles.base} ${className} ${shadow ? styles.shadow : ''} ${
     fallback

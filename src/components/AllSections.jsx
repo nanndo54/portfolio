@@ -2,7 +2,6 @@ import styles from '@/styles/AllSections.module.css'
 
 import GoToButton from '@/components/GoToButton'
 import WelcomeSection from '@/components/WelcomeSection'
-import ContactIcons from '@/components/ContactIcons'
 import ProjectsSection from '@/components/ProjectsSection'
 import AboutMeSection from '@/components/AboutMeSection'
 import SkillsSection from '@/components/SkillsSection'
@@ -22,7 +21,6 @@ function AllSections() {
       {/* <GoToButton label='goto.skills' /> */}
       <SkillsSection />
       <ContactSection />
-      <ContactIcons disableFloat className={styles.icons} />
       <GoToButton direction='up' label='goto.start' />
       <BlockQuote author='Carl Sagan' quote='quote.carl-sagan1' />
       <Footer />

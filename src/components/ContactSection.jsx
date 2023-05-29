@@ -2,6 +2,7 @@ import styles from '@/styles/ContactSection.module.css'
 import { FormattedMessage } from 'react-intl'
 
 import Section from '@/components/Section'
+import ContactIcons from '@/components/ContactIcons'
 
 function ContactSection() {
   return (
@@ -12,6 +13,7 @@ function ContactSection() {
       <h3 className='center'>
         <FormattedMessage id='contact.text1' />
       </h3>
+      <ContactIcons />
     </Section>
   )
 }
