@@ -12,7 +12,7 @@ function Modal() {
 
   return (
     <div className={`${styles.base} ${show ? styles.show : ''}`} onClick={handleClose}>
-      <Section Tag='aside' className={styles.modal} onClick={handleStopPropagation}>
+      <Section tag='aside' className={styles.modal} onClick={handleStopPropagation}>
         <button className={styles.close} onClick={handleClose}>
           ✕
         </button>

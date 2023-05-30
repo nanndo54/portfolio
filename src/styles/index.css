@@ -33,13 +33,14 @@ body {
   --secondary-color: rgba(235, 235, 245, 0.6);
   --tertiary-color: rgba(225, 225, 235, 0.8);
   --quaternary-color: rgb(220, 220, 230);
-  --accent-color: rgb(70, 70, 200);
-  --secondary-accent-color: rgb(107, 89, 182);
+  --dim-color: rgb(75, 75, 85);
+
+  --accent-color: rgb(109, 70, 200);
+  --secondary-accent-color: rgb(73, 131, 196);
   --dim-accent-color: rgba(70, 70, 200, 0.2);
   --dim-secondary-accent-color: rgb(107, 89, 182, 0.2);
-  --dim-color: rgb(75, 75, 85);
-  --invert-color: 0.1;
 
+  --invert-color: 0.1;
   --footer-background-color: rgb(20, 20, 35);
   --footer-font-color: rgb(230, 230, 240);
   --modal-outside-color: rgba(35, 35, 45, 0.5);
@@ -60,10 +61,14 @@ body.dark {
   --secondary-color: rgba(40, 40, 50, 0.8);
   --tertiary-color: rgba(45, 45, 55, 0.8);
   --quaternary-color: rgb(50, 50, 60);
-  --accent-color: rgb(90, 100, 230);
   --dim-color: rgb(170, 170, 180);
-  --invert-color: 0.9;
 
+  --accent-color: rgb(90, 100, 230);
+  --secondary-accent-color: rgb(132, 90, 230);
+  --accent-color: rgba(90, 100, 230, 0.2);
+  --secondary-accent-color: rgba(132, 90, 230, 0.2);
+
+  --invert-color: 0.9;
   --modal-outside-color: rgba(35, 35, 45, 0.7);
 }
 
@@ -169,35 +174,6 @@ p {
   line-height: 1.8rem;
 }
 
-a[target='_blank'] {
-  position: relative;
-  padding-right: 1em;
-}
-
-a[target='_blank']::before {
-  content: '';
-  display: inline-block;
-  height: 0.4em;
-  width: 0.4em;
-
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(-0.2em, -0.3em);
-
-  border: 0.1em solid var(--accent-color);
-}
-
-a[target='_blank']::after {
-  content: '➔';
-  display: inline-block;
-  font-size: 0.9em;
-
-  position: absolute;
-  right: 0;
-  transform: translate(0.25em, -0.15em) rotate(-45deg);
-}
-
 a:link,
 a:visited {
   background-color: transparent;
@@ -238,4 +214,18 @@ button:hover {
   h1 {
     font-size: 3rem;
   }
+}
+
+.reset,
+.reset::before,
+.reset::after {
+  content: '';
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: none;
+  transform: none;
 }

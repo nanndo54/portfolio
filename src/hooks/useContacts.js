@@ -2,17 +2,11 @@ import linkedInIcon from '@assets/svg/linkedin-icon.svg'
 import githubIcon from '@assets/svg/github-icon.svg'
 import emailIcon from '@assets/svg/email-icon.svg'
 import cvIcon from '@assets/svg/cv-icon.svg'
-import cvEs from '@assets/pdf/Resume-es.pdf'
-import cvEn from '@assets/pdf/Resume-en.pdf'
 import { useSelector } from 'react-redux'
+import cvs from '@/constants/cvs'
 
 function useContacts() {
   const { locale } = useSelector(({ app }) => app)
-
-  const cvs = {
-    es: cvEs,
-    en: cvEn
-  }
 
   const contacts = [
     {
@@ -31,7 +25,7 @@ function useContacts() {
       url: 'mailto:pablofernando50259107@gmail.com'
     },
     {
-      name: 'Curriculum Vitae',
+      name: 'CV',
       icon: cvIcon,
       url: cvs[locale],
       download: true

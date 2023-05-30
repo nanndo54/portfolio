@@ -7,9 +7,9 @@ import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
 function Section({
   shadow = true,
-  animated = true,
+  animated = false,
   fallback = false,
-  Tag = 'section',
+  tag: Tag = 'section',
   className = '',
   onIntersected = () => {},
   onClick = () => {},

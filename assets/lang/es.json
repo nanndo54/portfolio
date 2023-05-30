@@ -1,4 +1,5 @@
 {
+  "link.cv": "https://www.canva.com/design/DAFj9q7sRsY/0quYZ2po8bMoKWqdZ_nyKg/view?utm_content=DAFj9q7sRsY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
   "navbar.contactMe": "¡Contáctame!",
   "goto.projects": "¡Conoce más de mis proyectos!",
   "goto.aboutme": "¡Conoce más de mí!",
@@ -6,6 +7,7 @@
   "goto.start": "Ir hacia arriba",
   "welcome.status": "(En busca de trabajo)",
   "welcome.presentation": "¡Hola! Soy Desarrollador Web Fullstack con amplios conocimientos en tecnologías web y diseño.",
+  "welcome.cv": "¡Descarga mi CV!",
   "projects.title": "Mis Proyectos",
   "projects.text1": "El código fuente de todos los proyectos está disponible en mi ",
   "project.typesty": "Interfaz web para ejecutar un lenguaje derivado de JavaScript, llamado Typesty. Facilita el manejo de varios archivos y el debug del lenguaje.",
