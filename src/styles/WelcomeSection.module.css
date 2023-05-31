@@ -149,6 +149,7 @@ header.base {
   opacity: 0;
 
   transition: transform 0.3s, opacity 0.25s;
+  cursor: initial;
 }
 
 .base .contact a {

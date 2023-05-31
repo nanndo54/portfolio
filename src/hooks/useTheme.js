@@ -17,6 +17,12 @@ function useTheme() {
   }
 
   useLayoutEffect(() => {
+    setTimeout(() => {
+      document.querySelector('body').classList.remove('no-animations')
+    }, 300)
+  }, [])
+
+  useLayoutEffect(() => {
     verifyTheme(theme)
   }, [theme])
 

@@ -27,6 +27,11 @@ html {
   box-sizing: border-box;
 }
 
+/* body.no-animations, */
+body.no-animations * {
+  transition: unset !important;
+}
+
 body {
   --content-color: rgb(52, 52, 52);
   --primary-color: rgb(245, 245, 255);
