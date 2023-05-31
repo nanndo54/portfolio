@@ -1,76 +1,58 @@
 import styles from '@/styles/Section.module.css'
-import { useEffect, useRef } from 'react'
+import { forwardRef, useEffect, useRef } from 'react'
 
-import SectionLoader from './SectionLoader'
-
-import useIntersectionObserver from '@/hooks/useIntersectionObserver'
-
-function Section({
-  shadow = true,
-  animated = false,
-  fallback = false,
-  tag: Tag = 'section',
-  className = '',
-  onIntersected = () => {},
-  onClick = () => {},
-  threshold = 0.3,
-  once = true,
-  children
-}) {
-  const ref = useRef(null)
-  const intersected = useIntersectionObserver(
-    ref,
+const Section = forwardRef(
+  (
     {
-      threshold
+      background = true,
+      animated = false,
+      as: Tag = 'section',
+      className = '',
+      onClick = () => {},
+      children
     },
-    fallback,
-    once
-  )
+    ref
+  ) => {
+    const sectionRef = ref || useRef(null)
 
-  const mouseEvent = (e) => {
-    ref.current.classList.add(styles.shadow)
-    const { x, y } = ref.current.getBoundingClientRect()
-    ref.current.style.setProperty('--x', e.clientX - x)
-    ref.current.style.setProperty('--y', e.clientY - y)
-  }
+    const mouseEvent = (e) => {
+      if (!sectionRef?.current) return
 
-  const delayedMouseEvent = (e) => {
-    setTimeout(() => {
-      mouseEvent(e)
-    }, 100)
-  }
-
-  useEffect(() => {
-    onIntersected(intersected)
-  }, [intersected])
-
-  useEffect(() => {
-    if (!shadow || !ref?.current) return
-
-    ref.current.addEventListener('mousemove', mouseEvent)
-    ref.current.addEventListener('wheel', delayedMouseEvent)
-
-    return () => {
-      ref.current.removeEventListener('mousemove', mouseEvent)
-      ref.current.removeEventListener('wheel', delayedMouseEvent)
+      const { x, y } = sectionRef.current.getBoundingClientRect()
+      sectionRef.current.style.setProperty('--x', e.clientX - x)
+      sectionRef.current.style.setProperty('--y', e.clientY - y)
     }
-  }, [ref])
 
-  const baseClassName = `${styles.base} ${className} ${shadow ? styles.shadow : ''} ${
-    fallback
-      ? animated && intersected
-        ? styles.animated
-        : ''
-      : animated
-      ? styles.animated
-      : ''
-  }`
+    const delayedMouseEvent = (e) => {
+      setTimeout(() => {
+        mouseEvent(e)
+      }, 100)
+    }
 
-  return (
-    <Tag className={baseClassName} ref={ref} onClick={onClick}>
-      {fallback && !intersected ? <SectionLoader /> : children}
-    </Tag>
-  )
-}
+    useEffect(() => {
+      if (!background || !sectionRef?.current) return
+
+      sectionRef.current.addEventListener('mousemove', mouseEvent)
+      sectionRef.current.addEventListener('wheel', delayedMouseEvent, { passive: true })
+
+      return () => {
+        sectionRef.current.removeEventListener('mousemove', mouseEvent)
+        sectionRef.current.removeEventListener('wheel', delayedMouseEvent, {
+          passive: true
+        })
+      }
+    }, [sectionRef])
+
+    const baseClassName = `${styles.base} ${className} ${
+      background ? styles.background : ''
+    } ${animated ? styles.animated : ''}`
+
+    return (
+      <Tag className={baseClassName} ref={sectionRef} onClick={onClick}>
+        {children}
+      </Tag>
+    )
+  }
+)
 
 export default Section

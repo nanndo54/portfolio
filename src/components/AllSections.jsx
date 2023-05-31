@@ -13,12 +13,8 @@ function AllSections() {
   return (
     <div className={styles.base} id='base'>
       <WelcomeSection />
-      {/* <ContactIcons /> */}
-      {/* <GoToButton label='goto.projects' /> */}
       <ProjectsSection />
-      {/* <GoToButton label='goto.aboutme' /> */}
       <AboutMeSection />
-      {/* <GoToButton label='goto.skills' /> */}
       <SkillsSection />
       <ContactSection />
       <GoToButton direction='up' label='goto.start' />

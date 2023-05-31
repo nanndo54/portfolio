@@ -1,3 +1,6 @@
+.base {
+}
+
 .button {
   width: max-content;
   display: flex;
@@ -22,7 +25,7 @@
   background-position: right;
 
   pointer-events: all;
-  transition: background-position 0.8s;
+  transition: background-position 0.5s, color 0.5s;
 }
 
 .button > * {

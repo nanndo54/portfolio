@@ -35,10 +35,10 @@ body {
   --quaternary-color: rgb(220, 220, 230);
   --dim-color: rgb(75, 75, 85);
 
-  --accent-color: rgb(109, 70, 200);
-  --secondary-accent-color: rgb(73, 131, 196);
-  --dim-accent-color: rgba(70, 70, 200, 0.2);
-  --dim-secondary-accent-color: rgb(107, 89, 182, 0.2);
+  --accent-color: rgb(109, 90, 156);
+  --secondary-accent-color: rgb(66, 95, 193);
+  --dim-accent-color: rgb(109, 90, 156, 0.3);
+  --dim-secondary-accent-color: rgb(66, 95, 193, 0.3);
 
   --invert-color: 0.1;
   --footer-background-color: rgb(20, 20, 35);
@@ -63,10 +63,10 @@ body.dark {
   --quaternary-color: rgb(50, 50, 60);
   --dim-color: rgb(170, 170, 180);
 
-  --accent-color: rgb(90, 100, 230);
-  --secondary-accent-color: rgb(132, 90, 230);
-  --accent-color: rgba(90, 100, 230, 0.2);
-  --secondary-accent-color: rgba(132, 90, 230, 0.2);
+  --accent-color: rgb(118, 85, 202);
+  --secondary-accent-color: rgb(93, 126, 211);
+  --dim-accent-color: rgb(109, 90, 156, 0.3);
+  --dim-secondary-accent-color: rgb(66, 95, 193, 0.3);
 
   --invert-color: 0.9;
   --modal-outside-color: rgba(35, 35, 45, 0.7);
@@ -92,6 +92,10 @@ blockquote {
 
 img {
   transition: border 0.5s, opacity 0.5s;
+}
+
+svg {
+  transition: border 0.5s, opacity 0.5s, fill 0.5s;
 }
 
 .small {
@@ -130,6 +134,8 @@ h1 {
   font-family: 'Oleo Script Swash Caps';
   font-size: 3.5rem;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--quaternary-color);
+
+  transition: text-shadow 0.5s;
 }
 
 h1::after {
@@ -214,18 +220,4 @@ button:hover {
   h1 {
     font-size: 3rem;
   }
-}
-
-.reset,
-.reset::before,
-.reset::after {
-  content: '';
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  background: none;
-  transform: none;
 }

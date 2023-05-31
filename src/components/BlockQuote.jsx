@@ -1,14 +1,17 @@
 import { FormattedMessage } from 'react-intl'
 import styles from '@/styles/BlockQuote.module.css'
+import Section from '@/components/Section'
 
-function BlockQuote({ quote, author = 'Anonymous' }) {
+function BlockQuote({ quote, author }) {
   return (
-    <blockquote className={styles.base}>
-      <span className={styles.quote}>“</span>
-      <FormattedMessage id={quote} />
-      <span className={styles.quote}>”</span>
+    <Section as='blockquote' className={styles.base}>
+      <span>
+        <span className={styles.quote}>“</span>
+        <FormattedMessage id={quote} />
+        <span className={styles.quote}>”</span>
+      </span>
       <div className={styles.author}>— {author}</div>
-    </blockquote>
+    </Section>
   )
 }
 

@@ -1,5 +1,5 @@
 .base {
-  width: 700px;
+  width: 900px;
   height: max-content;
   padding: 45px;
 
@@ -17,7 +17,7 @@
   animation: appear-section 0.5s 0.3s forwards;
 }
 
-.base.shadow {
+.base.background {
   background-color: var(--secondary-color);
   box-shadow: var(--quaternary-color) 2px 1px 10px 0px inset;
   backdrop-filter: blur(4px);
@@ -26,11 +26,11 @@
 
   overflow: hidden;
 }
-.base.shadow:hover::after {
+.base.background:hover::after {
   opacity: 0.07;
 }
 
-.base.shadow::after {
+.base.background::after {
   content: '';
   background: radial-gradient(var(--secondary-accent-color), #3984ff00 70%);
 
@@ -46,20 +46,20 @@
   z-index: -1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .base {
-    padding: 50px;
+    /* padding: 50px; */
     width: 100%;
   }
 
-  .base.shadow {
+  .base.background {
     border-radius: 0;
   }
 }
 
 @media (max-width: 400px) {
   .base {
-    padding: 50px 30px;
+    /* padding: 50px 30px; */
     width: 100%;
   }
 }

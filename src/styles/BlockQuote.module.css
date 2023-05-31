@@ -1,47 +1,44 @@
 .base {
-  background-color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: serif;
   line-height: 1.75;
-  text-indent: 0.8rem;
+  text-indent: 1rem;
   letter-spacing: 0.05rem;
 
   margin: 50px 0;
-  padding: 20px 50px;
+  padding: 30px 105px;
 
-  width: 700px;
   border-radius: 25px;
 }
 
 .base .quote {
-  font-size: 4rem;
+  font-size: 4.2rem;
   line-height: 0;
-  color: var(--dim-color);
 
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
   position: relative;
   top: 1.5rem;
 }
 
 .base .author {
   color: var(--dim-color);
-  font-size: 1.6rem;
+  font-size: 2rem;
 
   letter-spacing: 0.11rem;
-  text-align: end;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 @media (max-width: 700px) {
   .base {
-    border-radius: 0;
-    width: 100%;
+    font-size: 1.5rem;
+    padding: 30px 40px;
   }
 }
 
 @media (max-width: 400px) {
   .base {
-    padding: 50px 30px;
+    font-size: 1.4rem;
+    padding: 30px 30px;
   }
 }

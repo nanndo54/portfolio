@@ -79,7 +79,6 @@
 .images img {
   width: 100%;
 
-  padding: 10px;
   border-radius: 15px;
   border: 4px solid var(--quaternary-color);
 

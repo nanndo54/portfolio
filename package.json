@@ -11,25 +11,25 @@
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
-    "@redux-devtools/extension": "3.2.3",
+    "@redux-devtools/extension": "3.2.5",
     "react": "18.2.0",
-    "react-content-loader": "6.2.0",
+    "react-content-loader": "6.2.1",
     "react-dom": "18.2.0",
-    "react-intl": "6.2.5",
-    "react-redux": "8.0.5",
-    "react-spring": "9.6.1"
+    "react-intl": "6.4.2",
+    "react-redux": "8.0.7",
+    "react-spring": "9.7.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "3.0.0",
-    "autoprefixer": "10.4.13",
-    "eslint": "8.30.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-jsx-a11y": "6.6.1",
+    "@vitejs/plugin-react": "4.0.0",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-react": "7.32.2",
     "pre-commit": "1.2.2",
-    "prettier": "2.8.1",
-    "vite": "4.0.3"
+    "prettier": "2.8.8",
+    "vite": "4.3.9"
   },
   "browserslist": [
     "> 0.2%",

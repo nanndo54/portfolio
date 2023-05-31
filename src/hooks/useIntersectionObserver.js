@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-function useIntersectionObserver(ref, options, fallback, once = true) {
-  const [intersected, setIntersected] = useState(!fallback)
+function useIntersectionObserver(ref, { once = true, ...options }) {
+  const [intersected, setIntersected] = useState(true)
 
   const updateEntry = ([entry]) => {
     setIntersected(entry?.isIntersecting)

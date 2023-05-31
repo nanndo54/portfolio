@@ -16,7 +16,7 @@
   padding: 0;
 
   border-radius: 50%;
-  border: 0.27rem solid var(--quaternary-color);
+  border: 0.27rem solid var(--dim-secondary-accent-color);
 
   display: flex;
   justify-content: center;
@@ -32,5 +32,6 @@
 }
 
 .base img {
-  width: 55%;
+  width: 60%;
+  border-radius: 0%;
 }

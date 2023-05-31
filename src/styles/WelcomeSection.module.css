@@ -1,9 +1,7 @@
-.base {
-  height: 20rem;
-  margin-bottom: 15rem;
-  align-content: center;
+header.base {
+  height: 40rem;
 
-  transition: margin-bottom 0.3s;
+  transition: height 0.3s;
 }
 
 .container {
@@ -50,14 +48,19 @@
 }
 
 .cvButton {
-  position: absolute;
+  position: relative;
   top: 0;
-  right: 0;
+
+  width: fit-content;
 
   opacity: 1;
-  transform: translateX(-30.2rem) translateY(14rem) scale(1.2);
+  transform: translateX(-7.2rem) translateY(-10.5rem) scale(1.15);
 
-  transition: opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.cvButton a {
+  text-decoration: none;
 }
 
 .cvIcon {
@@ -75,7 +78,7 @@
   cursor: pointer;
 }
 
-.base.top .avatar > * {
+.base.overlay .avatar > * {
   pointer-events: initial;
 }
 
@@ -101,33 +104,34 @@
   text-align: center;
 }
 
-.base.top {
+.base.overlay {
   height: 20rem;
-  margin-bottom: -10rem;
 }
 
-.base.top .container {
+.base.overlay .container {
   top: 7.5rem;
-  width: 80rem;
 
-  opacity: 1 !important;
   transform: translateX(calc(50vw - 11rem)) translateY(-44.5rem) scale(0.25);
 }
 
-.base.top .avatar {
+.base.overlay .avatar {
   transform: translateX(29rem) translateY(1rem);
 }
 
-.base.top .cvButton {
+.base.overlay .cvButton {
   opacity: 0;
 }
 
-.base.top .name {
+.base.overlay .cvButton * {
+  pointer-events: none;
+}
+
+.base.overlay .name {
   transform: translateX(-11rem) translateY(-12rem) scale(2.3);
 }
 
-.base.top .presentation {
-  opacity: 0 !important;
+.base.overlay .presentation {
+  opacity: 0;
 }
 
 .base .contact {
@@ -142,8 +146,9 @@
   grid-gap: 0.8rem;
 
   transform: translateY(49rem) translateX(7rem) scale(3.5);
+  opacity: 0;
 
-  transition: transform 0.25s;
+  transition: transform 0.3s, opacity 0.25s;
 }
 
 .base .contact a {
@@ -153,11 +158,12 @@
 .contact a + a {
   margin-top: -120%;
 
-  transition: border 0.5s, margin-top 0.25s;
+  transition: border 0.5s, margin-top 0.3s;
 }
 
 .contact.open {
-  transform: translateY(68rem) translateX(7rem) scale(3.5);
+  transform: translateY(70rem) translateX(7rem) scale(3.5);
+  opacity: 1;
 }
 
 .contact.open a + a {
@@ -169,18 +175,18 @@
     transform: scale(0.8) translateY(-8rem);
   }
 
-  .base.top .container {
+  .base.overlay .container {
     width: 80rem;
     height: 22rem;
 
     transform: translateX(calc(50vw - 6.5rem)) translateY(-16.8rem) scale(0.15);
   }
 
-  .base.top .avatar {
+  .base.overlay .avatar {
     transform: translateX(29rem) translateY(1rem) scale(0.9);
   }
 
-  .base.top .name {
+  .base.overlay .name {
     transform: translateX(-11rem) translateY(-12rem) scale(2.5);
   }
 
@@ -212,7 +218,7 @@
   }
 
   .cvButton {
-    transform: translateX(-25.2rem) translateY(14.5rem) scale(1.1);
+    transform: translateX(-7.2rem) translateY(-10.5rem) scale(1.15);
   }
 }
 
@@ -235,7 +241,7 @@
   }
 
   .cvButton {
-    transform: translateX(-1.2rem) translateY(37rem) scale(1.1);
+    transform: translateX(2.8rem) translateY(4.5rem) scale(1.15);
   }
 }
 
@@ -252,7 +258,7 @@
 }
 
 @media (max-width: 300px) {
-  .base.top .container {
+  .base.overlay {
     display: none;
   }
 }

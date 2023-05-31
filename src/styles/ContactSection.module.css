@@ -1,11 +1,11 @@
 .base {
   gap: 60px;
   grid-gap: 60px;
-  margin: 110px 0 20px;
+  margin: 40px 0 20px;
 }
 
 @media (max-width: 900px) {
   .base {
-    margin: 110px 0 -50px;
+    margin: 40px 0 -50px;
   }
 }

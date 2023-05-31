@@ -4,22 +4,11 @@
   display: grid;
   justify-items: center;
 
-  gap: 70px;
-  grid-gap: 70px;
+  gap: 60px;
+  grid-gap: 60px;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-}
-
-@media (max-width: 900px) {
-  nav.icons {
-    margin-bottom: 100px;
-  }
-
-  nav.icons a {
-    height: 4.5rem;
-    width: 4.5rem;
-  }
 }
 
 .base::-webkit-scrollbar {

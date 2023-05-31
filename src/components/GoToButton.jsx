@@ -15,9 +15,6 @@ const handleScroll = (ev, direction = 'down') => {
   })
 }
 
-const fallback = true
-const once = false
-
 function GoToButton({ direction = 'down', label }) {
   label = (
     <p>
@@ -26,19 +23,15 @@ function GoToButton({ direction = 'down', label }) {
   )
 
   const ref = useRef(null)
-  const intersected = useIntersectionObserver(
-    ref,
-    {
-      threshold: 0.75
-    },
-    fallback,
-    once
-  )
+  const isIntersected = useIntersectionObserver(ref, {
+    once: false,
+    threshold: 0.75
+  })
 
   return (
     <button
       className={`${styles.base} ${direction === 'up' ? styles.up : ''} ${
-        intersected ? styles.arrow : ''
+        isIntersected ? styles.arrow : ''
       }`}
       ref={ref}
       onClick={(ev) => handleScroll(ev, direction)}
