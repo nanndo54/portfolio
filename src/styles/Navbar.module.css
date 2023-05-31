@@ -18,24 +18,23 @@
 }
 
 .items {
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  grid-gap: 1rem;
+
   pointer-events: all;
-
-  height: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-
-  gap: 15px;
-  grid-gap: 15px;
-}
-
-.items button:first-child {
-  margin-top: 7px;
 }
 
 .base a {
   min-width: 115px;
+}
+
+.language {
+  font-family: 'Oleo Script Swash Caps';
+  font-size: 26px;
 }
 
 @media (max-width: 700px) {

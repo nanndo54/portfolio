@@ -1,4 +1,4 @@
-import styles from '@/styles/Section.module.css'
+import styles from '#styles/Section.module.css'
 import { forwardRef, useEffect, useRef } from 'react'
 
 const Section = forwardRef(

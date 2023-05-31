@@ -1,12 +1,12 @@
-import linkedInIcon from '@assets/svg/linkedin-icon.svg'
-import githubIcon from '@assets/svg/github-icon.svg'
-import emailIcon from '@assets/svg/email-icon.svg'
-import cvIcon from '@assets/svg/cv-icon.svg'
-import { useSelector } from 'react-redux'
-import cvs from '@/constants/cvs'
+import linkedInIcon from '#assets/svg/linkedin-icon.svg'
+import githubIcon from '#assets/svg/github-icon.svg'
+import emailIcon from '#assets/svg/email-icon.svg'
+import cvIcon from '#assets/svg/cv-icon.svg'
+import cvs from '#constants/cvs'
+import useAppStore from '#/store'
 
 function useContacts() {
-  const { locale } = useSelector(({ app }) => app)
+  const { locale } = useAppStore()
 
   const contacts = [
     {

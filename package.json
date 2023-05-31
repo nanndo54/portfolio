@@ -3,24 +3,31 @@
   "version": "2.0.0",
   "private": "true",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run server",
+    "prod": "npm run lint && npm run build && npm run server:prod",
     "build": "vite build",
-    "serve": "vite preview",
+    "server": "node ./server",
+    "server:prod": "cross-env NODE_ENV=production node ./server",
     "lint": "npm run lint:format && npm run lint:fix ",
     "lint:fix": "eslint ./src --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
-    "@redux-devtools/extension": "3.2.5",
+    "@vitejs/plugin-react": "^3.0.0",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
     "react": "18.2.0",
     "react-content-loader": "6.2.1",
     "react-dom": "18.2.0",
     "react-intl": "6.4.2",
-    "react-redux": "8.0.7",
-    "react-spring": "9.7.1"
+    "react-toggle-dark-mode": "^1.1.1",
+    "sirv": "^2.0.2",
+    "vite": "^4.0.3",
+    "vite-plugin-ssr": "^0.4.131",
+    "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "4.0.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-prettier": "8.8.0",
@@ -28,8 +35,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.32.2",
     "pre-commit": "1.2.2",
-    "prettier": "2.8.8",
-    "vite": "4.3.9"
+    "prettier": "2.8.8"
   },
   "browserslist": [
     "> 0.2%",

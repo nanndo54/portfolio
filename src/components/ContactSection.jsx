@@ -1,8 +1,8 @@
-import styles from '@/styles/ContactSection.module.css'
+import styles from '#styles/ContactSection.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '@/components/Section'
-// import ContactIcons from '@/components/ContactIcons'
+import Section from '#components/Section'
+// import ContactIcons from '#components/ContactIcons'
 
 function ContactSection() {
   return (

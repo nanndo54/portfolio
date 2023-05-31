@@ -1,8 +1,8 @@
-import styles from '@/styles/GoToButton.module.css'
+import styles from '#styles/GoToButton.module.css'
 import { useRef } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+import useIntersectionObserver from '#hooks/useIntersectionObserver'
 
 const handleScroll = (ev, direction = 'down') => {
   const base = document.getElementById('base')

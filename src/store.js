@@ -1,50 +1,37 @@
-import { createStore, combineReducers } from 'redux'
-import { composeWithDevTools } from '@redux-devtools/extension'
+import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
 
-import appReducer from '@/reducers/appReducer'
-import modalReducer from '@/reducers/modalReducer'
+import { useEffect, useState } from 'react'
 
-import { languageIsSupported } from '@/constants/languages'
-
-const initialLocale =
-  languageIsSupported(localStorage.getItem('locale')) ||
-  languageIsSupported(navigator.language) ||
-  'en'
-
-const theme =
-  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light'
-
-const initialTheme =
-  (['light', 'dark'].includes(localStorage.getItem('theme')) &&
-    localStorage.getItem('theme')) ||
-  theme
-
-const initialApp = {
-  activeProject: '',
-  locale: initialLocale,
-  theme: initialTheme
+const initialState = {
+  locale: 'en',
+  theme: 'light'
 }
 
-const initialModal = {
-  name: 'HTML',
-  show: false
-}
-
-const initialState = { app: initialApp, modal: initialModal }
-
-const reducer = combineReducers({
-  app: appReducer,
-  modal: modalReducer
-})
-
-const store = createStore(
-  reducer,
-  initialState,
-  import.meta.env.MODE === 'development' ? composeWithDevTools() : undefined
+const useStore = create(
+  persist(
+    (set) => ({
+      ...initialState,
+      toggleTheme: () =>
+        set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
+      toggleLocale: () =>
+        set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' }))
+    }),
+    {
+      name: 'app-storage'
+    }
+  )
 )
 
-export default store
+const useAppStore = (callback = (state) => state) => {
+  const result = useStore(callback)
+  const [data, setData] = useState(initialState)
 
-export { initialApp, initialModal }
+  useEffect(() => {
+    setData(result)
+  }, [result])
+
+  return data
+}
+
+export default useAppStore

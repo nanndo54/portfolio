@@ -3,12 +3,16 @@
 
   display: grid;
   justify-items: center;
-
   gap: 60px;
   grid-gap: 60px;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  opacity: 0;
+  transform: translateY(2rem);
+
+  transition: opacity 0.25s, transform 0.25s ease-out;
 }
 
 .base::-webkit-scrollbar {
@@ -19,4 +23,9 @@
 
 .base::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
+}
+
+.loaded {
+  opacity: 1;
+  transform: none;
 }

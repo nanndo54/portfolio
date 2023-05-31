@@ -1,26 +1,26 @@
-import styles from '@/styles/Navbar.module.css'
+import styles from '#styles/Navbar.module.css'
 
-import DarkModeSwitch from '@/components/DarkModeSwitch'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
-import useTheme from '@/hooks/useTheme'
-import useLanguage from '@/hooks/useLanguage'
+import useTheme from '#hooks/useTheme'
+import useAppStore from '#/store'
 
 function Navbar() {
   const { isDarkTheme, changeTheme } = useTheme()
-  const { locale, changeLanguage } = useLanguage()
+  const { locale, toggleLocale } = useAppStore()
 
   return (
     <nav className={styles.base}>
       <div className={styles.items}>
         <DarkModeSwitch
-          checked={!isDarkTheme}
+          checked={isDarkTheme}
           onChange={changeTheme}
           moonColor='var(--content-color)'
           sunColor='var(--content-color)'
         />
         <button
           className={styles.language}
-          onClick={changeLanguage}
+          onClick={toggleLocale}
           aria-label='cambiar lenguaje'
         >
           {locale}

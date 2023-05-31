@@ -1,6 +1,6 @@
 import { FormattedMessage } from 'react-intl'
-import styles from '@/styles/BlockQuote.module.css'
-import Section from '@/components/Section'
+import styles from '#styles/BlockQuote.module.css'
+import Section from '#components/Section'
 
 function BlockQuote({ quote, author }) {
   return (

@@ -1,10 +1,10 @@
-import styles from '@/styles/SkillsSection.module.css'
+import styles from '#styles/SkillsSection.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '@/components/Section'
-import Skill from '@/components/Skill'
+import Section from '#components/Section'
+import Skill from '#components/Skill'
 
-import skills from '@/constants/skills'
+import skills from '#constants/skills'
 
 function SkillsSection() {
   return (

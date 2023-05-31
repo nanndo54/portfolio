@@ -1,7 +1,6 @@
 import { useLayoutEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 
-import { toggleTheme } from '@/actions/appActions'
+import useAppStore from '#/store'
 
 const verifyTheme = (theme) => {
   if (theme === 'dark') document.querySelector('body').classList.add('dark')
@@ -9,18 +8,11 @@ const verifyTheme = (theme) => {
 }
 
 function useTheme() {
-  const { theme } = useSelector(({ app }) => app)
-  const dispatch = useDispatch()
+  const { theme, toggleTheme } = useAppStore()
 
   const changeTheme = () => {
-    dispatch(toggleTheme())
+    toggleTheme()
   }
-
-  useLayoutEffect(() => {
-    setTimeout(() => {
-      document.querySelector('body').classList.remove('no-animations')
-    }, 300)
-  }, [])
 
   useLayoutEffect(() => {
     verifyTheme(theme)

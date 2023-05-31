@@ -1,18 +1,16 @@
-import styles from '@/styles/WelcomeSection.module.css'
+import styles from '#styles/WelcomeSection.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '@/components/Section'
+import Section from '#components/Section'
 
-import photo from '@assets/img/profile-photo.jpg'
-import squeak from '@assets/sounds/squeak.mp3'
-import ContactIcons from '@/components/ContactIcons'
-import Button from '@/components/Button'
-import useContacts from '@/hooks/useContacts'
-import CvIcon from '@/svg/CvIcon'
-import useIntersectionObserver from '@/hooks/useIntersectionObserver'
-
-const squeakAudio = new Audio(squeak)
+import photo from '#assets/img/profile-photo.jpg'
+import squeak from '#assets/sounds/squeak.mp3'
+import ContactIcons from '#components/ContactIcons'
+import Button from '#components/Button'
+import useContacts from '#hooks/useContacts'
+import CvIcon from '#svg/CvIcon'
+import useIntersectionObserver from '#hooks/useIntersectionObserver'
 
 function WelcomeSection() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -36,7 +34,11 @@ function WelcomeSection() {
   }
 
   const handleMenuButton = () => {
-    squeakAudio.play()
+    if (Audio) {
+      const squeakAudio = new Audio(squeak)
+      squeakAudio.play()
+    }
+
     setMenuOpen(!menuOpen)
   }
 

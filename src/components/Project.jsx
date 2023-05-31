@@ -1,10 +1,10 @@
-import styles from '@/styles/Project.module.css'
+import styles from '#styles/Project.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Skill from '@/components/Skill'
-import useProject from '@/hooks/useProject'
+import Skill from '#components/Skill'
+import useProject from '#hooks/useProject'
 
-import downArrow from '@assets/svg/down.svg'
+import downArrow from '#assets/svg/down.svg'
 
 function Project({ name, url = '', technologies = [], images = [] }) {
   const { expanded, toggleExpand, skills } = useProject(name, technologies)
