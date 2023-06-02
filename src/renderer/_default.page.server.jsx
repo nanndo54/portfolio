@@ -4,7 +4,7 @@ import ReactDOMServer from 'react-dom/server'
 import { PageShell } from './PageShell'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
 
-import logo from '#assets/svg/favicon.svg'
+import logo from '#/assets/svg/logo.svg'
 
 async function render(pageContext) {
   const { Page, pageProps } = pageContext

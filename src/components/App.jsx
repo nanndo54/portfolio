@@ -1,8 +1,8 @@
-import styles from '#styles/App.module.css'
+import styles from '#/styles/App.module.css'
 import { IntlProvider } from 'react-intl'
 
-import Navbar from '#components/Navbar'
-import AllSections from '#components/AllSections'
+import Navbar from '#/components/Navbar'
+import AllSections from '#/components/AllSections'
 import useAppStore from '#/store'
 import languages from '#/constants/languages'
 

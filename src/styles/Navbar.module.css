@@ -3,11 +3,11 @@
   pointer-events: none;
 
   position: fixed;
-  transform: translateY(-50px);
+  transform: translateY(-3.5rem);
 
   padding: 0 25px;
   width: 100%;
-  height: 50px;
+  height: 4rem;
   font-size: 1.4rem;
 
   display: flex;
@@ -17,9 +17,14 @@
   animation: appear-navbar 0.5s forwards;
 }
 
-.items {
-  line-height: 26px;
+.logo {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  margin: 0 0.6rem;
+}
 
+.items {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -44,6 +49,12 @@
     padding: 0 10px;
     background-color: var(--tertiary-color);
     backdrop-filter: blur(4px);
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
   }
 
   .items {

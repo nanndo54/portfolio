@@ -1,4 +1,4 @@
-import '#assets/css/index.css'
+import '#/styles/index.css'
 
 import { hydrateRoot } from 'react-dom/client'
 import { PageShell } from './PageShell'

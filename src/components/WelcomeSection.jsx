@@ -1,16 +1,16 @@
-import styles from '#styles/WelcomeSection.module.css'
+import styles from '#/styles/WelcomeSection.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '#components/Section'
+import Section from '#/components/Section'
 
-import photo from '#assets/img/profile-photo.jpg'
-import squeak from '#assets/sounds/squeak.mp3'
-import ContactIcons from '#components/ContactIcons'
-import Button from '#components/Button'
-import useContacts from '#hooks/useContacts'
-import CvIcon from '#svg/CvIcon'
-import useIntersectionObserver from '#hooks/useIntersectionObserver'
+import photo from '#/assets/img/profile-photo.jpg'
+import squeak from '#/assets/sounds/squeak.mp3'
+import ContactIcons from '#/components/ContactIcons'
+import Button from '#/components/Button'
+import useContacts from '#/hooks/useContacts'
+import CvIcon from '#/svg/CvIcon'
+import useIntersectionObserver from '#/hooks/useIntersectionObserver'
 
 function WelcomeSection() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,12 +26,8 @@ function WelcomeSection() {
   const CV = contacts.find((contact) => contact.name === 'CV')
 
   useEffect(() => {
-    handleSectionIntersected(isIntersected)
+    setMenuOpen(!isIntersected)
   }, [isIntersected])
-
-  const handleSectionIntersected = (isIntersected) => {
-    setTimeout(() => setMenuOpen(!isIntersected), isIntersected ? 0 : 0)
-  }
 
   const handleMenuButton = () => {
     if (Audio) {
@@ -63,7 +59,7 @@ function WelcomeSection() {
         <p className={styles.presentation}>
           <FormattedMessage id='welcome.presentation' />
         </p>
-        <div className={styles.cvButton}>
+        <div className={styles.cv}>
           <a target='_blank' rel='noreferrer' href={CV?.url}>
             <Button>
               <FormattedMessage id='welcome.cv' />

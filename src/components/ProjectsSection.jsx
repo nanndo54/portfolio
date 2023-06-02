@@ -1,10 +1,10 @@
-import styles from '#styles/ProjectsSection.module.css'
+import styles from '#/styles/ProjectsSection.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '#components/Section'
-import Project from '#components/Project'
+import Section from '#/components/Section'
+import Project from '#/components/Project'
 
-import projects from '#constants/projects'
+import projects from '#/constants/projects'
 
 function ProjectsSection() {
   return (

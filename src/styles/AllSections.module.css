@@ -9,10 +9,10 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
 
-  opacity: 0;
-  transform: translateY(2rem);
+  opacity: 0.5;
+  transform: translateY(1.5rem);
 
-  transition: opacity 0.25s, transform 0.25s ease-out;
+  transition: opacity 0.1s, transform 0.2s ease-out;
 }
 
 .base::-webkit-scrollbar {

@@ -1,30 +1,26 @@
-import styles from '#styles/Project.module.css'
+import styles from '#/styles/Project.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Skill from '#components/Skill'
-import useProject from '#hooks/useProject'
-
-import downArrow from '#assets/svg/down.svg'
+import Skill from '#/components/Skill'
+import { getSkill } from '#/constants/skills'
 
 function Project({ name, url = '', technologies = [], images = [] }) {
-  const { expanded, toggleExpand, skills } = useProject(name, technologies)
   const [preview1, preview2] = images
 
+  const skills = technologies.map((name) => getSkill(name))
+
   return (
-    <article className={`${styles.base} ${expanded ? styles.expanded : ''}`}>
+    <article className={styles.base}>
       <div className={styles.header}>
         <h3>
           <a target='_blank' rel='noreferrer' href={url}>
             {name}
           </a>
         </h3>
-        <button className={styles.down} onClick={toggleExpand} aria-label='expandir'>
-          <img src={downArrow} alt='expand' />
-        </button>
       </div>
       <div className={styles.content}>
         <p>
-          <FormattedMessage id={`project.${name.toLowerCase()}`} />{' '}
+          <FormattedMessage id={`project.${name.toLowerCase()}`} />
         </p>
         <div className={styles.images}>
           <img src={preview1} alt={`${name} preview 1`} />

@@ -1,5 +1,5 @@
 header.base {
-  height: 40rem;
+  height: 30rem;
 
   transition: height 0.3s;
 }
@@ -14,7 +14,7 @@ header.base {
   pointer-events: none;
   z-index: 2;
 
-  transform: translateY(2rem);
+  transform: translateY(0rem);
 }
 
 .avatar {
@@ -47,7 +47,7 @@ header.base {
   background: none;
 }
 
-.cvButton {
+.cv {
   position: relative;
   top: 0;
 
@@ -59,8 +59,8 @@ header.base {
   transition: transform 0.3s, opacity 0.2s;
 }
 
-.cvButton a {
-  text-decoration: none;
+.cv a {
+  text-decoration: none !important;
 }
 
 .cvIcon {
@@ -105,29 +105,29 @@ header.base {
 }
 
 .base.overlay {
-  height: 20rem;
+  height: 10rem;
 }
 
 .base.overlay .container {
   top: 7.5rem;
 
-  transform: translateX(calc(50vw - 11rem)) translateY(-44.5rem) scale(0.25);
+  transform: translateX(calc(50vw - 9.5rem)) translateY(-46.75rem) scale(0.21);
 }
 
 .base.overlay .avatar {
   transform: translateX(29rem) translateY(1rem);
 }
 
-.base.overlay .cvButton {
+.base.overlay .cv {
   opacity: 0;
 }
 
-.base.overlay .cvButton * {
+.base.overlay .cv * {
   pointer-events: none;
 }
 
 .base.overlay .name {
-  transform: translateX(-11rem) translateY(-12rem) scale(2.3);
+  transform: translateX(-11rem) translateY(-13.5rem) scale(2.3);
 }
 
 .base.overlay .presentation {
@@ -163,7 +163,7 @@ header.base {
 }
 
 .contact.open {
-  transform: translateY(70rem) translateX(7rem) scale(3.5);
+  transform: translateY(80rem) translateX(7rem) scale(4);
   opacity: 1;
 }
 
@@ -173,14 +173,11 @@ header.base {
 
 @media (max-width: 900px) {
   .container {
-    transform: scale(0.8) translateY(-8rem);
+    transform: scale(0.8) translateY(-10rem);
   }
 
   .base.overlay .container {
-    width: 80rem;
-    height: 22rem;
-
-    transform: translateX(calc(50vw - 6.5rem)) translateY(-16.8rem) scale(0.15);
+    transform: translateX(calc(50vw - 8.5rem)) translateY(-47.5rem) scale(0.2);
   }
 
   .base.overlay .avatar {
@@ -192,17 +189,17 @@ header.base {
   }
 
   .contact {
-    transform: translateY(0rem) translateX(6rem) scale(5);
+    transform: translateY(0rem) translateX(6rem) scale(4.5);
   }
 
   .contact.open {
-    transform: translateY(98rem) translateX(6.5rem) scale(4.8);
+    transform: translateY(91rem) translateX(6.5rem) scale(4.5);
   }
 }
 
 @media (max-width: 800px) {
   .container {
-    transform: scale(0.75) translateY(-9rem);
+    transform: scale(0.75) translateY(-12rem);
   }
 
   .avatar {
@@ -218,14 +215,22 @@ header.base {
     width: 25rem;
   }
 
-  .cvButton {
+  .cv {
     transform: translateX(-7.2rem) translateY(-10.5rem) scale(1.15);
   }
 }
 
 @media (max-width: 600px) {
+  header.base {
+    height: 40rem;
+  }
+
+  header.base.overlay {
+    height: 30rem;
+  }
+
   .container {
-    transform: scale(0.9) translateY(-7rem);
+    transform: scale(0.9) translateY(-5rem);
   }
 
   .avatar {
@@ -241,7 +246,7 @@ header.base {
     width: 21.5rem;
   }
 
-  .cvButton {
+  .cv {
     transform: translateX(2.8rem) translateY(4.5rem) scale(1.15);
   }
 }
@@ -258,8 +263,8 @@ header.base {
   }
 }
 
-@media (max-width: 300px) {
-  .base.overlay {
+@media (max-width: 450px) {
+  .base.overlay .name {
     display: none;
   }
 }

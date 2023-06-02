@@ -6,16 +6,8 @@
   width: 100%;
 }
 
-.base a[target='_blank']::before {
-  border-color: var(--secondary-accent-color);
-}
-
-.base a[target='_blank']::after {
-  color: var(--secondary-accent-color);
-}
-
 .base a:link,
 .base a:visited {
-  color: var(--secondary-accent-color);
-  text-decoration: 0.15rem underline var(--secondary-accent-color);
+  color: rgb(128 157 255);
+  text-decoration: 0.15rem underline rgb(128 157 255);
 }

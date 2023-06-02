@@ -1,5 +1,5 @@
-import spanish from '#assets/lang/es.json'
-import english from '#assets/lang/en.json'
+import spanish from '#/assets/lang/es.json'
+import english from '#/assets/lang/en.json'
 
 const languages = {
   es: spanish,

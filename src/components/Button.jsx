@@ -1,4 +1,4 @@
-import styles from '#styles/Button.module.css'
+import styles from '#/styles/Button.module.css'
 
 function Button({ className = '', children, ...props }) {
   return (

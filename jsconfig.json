@@ -2,13 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#assets/*": ["assets/*"],
-      "#/*": ["src/*"],
-      "#components/*": ["src/components/*"],
-      "#constants/*": ["src/constants/*"],
-      "#hooks/*": ["src/hooks/*"],
-      "#styles/*": ["src/styles/*"],
-      "#svg/*": ["src/svg/*"]
+      "#/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"]

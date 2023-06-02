@@ -1,14 +1,11 @@
-import translatorImg1 from '#assets/img/translator-img1.jpg'
-import translatorImg2 from '#assets/img/translator-img2.jpg'
+import translatorImg1 from '#/assets/img/translator-img1.jpg'
+import translatorImg2 from '#/assets/img/translator-img2.jpg'
 
-import quizImg1 from '#assets/img/quiz-img1.jpg'
-import quizImg2 from '#assets/img/quiz-img2.jpg'
+import quizImg1 from '#/assets/img/quiz-img1.jpg'
+import quizImg2 from '#/assets/img/quiz-img2.jpg'
 
-import jolcImg1 from '#assets/img/jolc-img1.jpg'
-import jolcImg2 from '#assets/img/jolc-img2.jpg'
-
-// import typestyImg1 from '#assets/img/typesty-img1.jpg'
-// import typestyImg2 from '#assets/img/typesty-img2.jpg'
+import jolcImg1 from '#/assets/img/jolc-img1.jpg'
+import jolcImg2 from '#/assets/img/jolc-img2.jpg'
 
 const projects = [
   {

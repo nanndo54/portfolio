@@ -1,10 +1,10 @@
-import styles from '#styles/AboutMeSection.module.css'
+import styles from '#/styles/AboutMeSection.module.css'
 import { FormattedMessage } from 'react-intl'
 
-import Section from '#components/Section'
+import Section from '#/components/Section'
 
-import guatemalaImage from '#assets/img/guatemala.jpg'
-import campusImage from '#assets/img/campus.jpg'
+import guatemalaImage from '#/assets/img/guatemala.jpg'
+import campusImage from '#/assets/img/campus.jpg'
 
 function AboutMeSection() {
   return (

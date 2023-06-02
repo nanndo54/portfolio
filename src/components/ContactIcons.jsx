@@ -1,5 +1,5 @@
-import useContacts from '#hooks/useContacts'
-import styles from '#styles/ContactIcons.module.css'
+import useContacts from '#/hooks/useContacts'
+import styles from '#/styles/ContactIcons.module.css'
 
 function ContactIcons({ className = '' }) {
   const contacts = useContacts()

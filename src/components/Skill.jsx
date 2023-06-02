@@ -1,4 +1,4 @@
-import styles from '#styles/Skill.module.css'
+import styles from '#/styles/Skill.module.css'
 
 function Skill({ size = 'medium', name, image, invert = false }) {
   const className = `${styles.base} ${
