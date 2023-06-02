@@ -8,8 +8,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), ssr({ prerender: true })],
   resolve: {
     alias: {
-      '#': path.resolve(__dirname, './src'),
-      '#/svg': path.resolve(__dirname, './src/svg')
+      '#': '/src'
     }
   },
   css: {

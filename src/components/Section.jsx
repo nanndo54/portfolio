@@ -2,17 +2,7 @@ import styles from '#/styles/Section.module.css'
 import { forwardRef, useEffect, useRef } from 'react'
 
 const Section = forwardRef(
-  (
-    {
-      background = true,
-      animated = false,
-      as: Tag = 'section',
-      className = '',
-      onClick = () => {},
-      children
-    },
-    ref
-  ) => {
+  ({ background = true, as: Tag = 'section', className = '', children }, ref) => {
     const sectionRef = ref || useRef(null)
 
     const mouseEvent = (e) => {
@@ -43,12 +33,11 @@ const Section = forwardRef(
       }
     }, [sectionRef])
 
-    const baseClassName = `${styles.base} ${className} ${
-      background ? styles.background : ''
-    } ${animated ? styles.animated : ''}`
-
     return (
-      <Tag className={baseClassName} ref={sectionRef} onClick={onClick}>
+      <Tag
+        className={`${className} ${styles.base} ${background ? styles.background : ''}`}
+        ref={sectionRef}
+      >
         {children}
       </Tag>
     )

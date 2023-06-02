@@ -35,10 +35,10 @@ body {
   --quaternary-color: rgb(220, 220, 230);
   --dim-color: rgb(75, 75, 85);
 
-  --accent-color: rgb(109, 90, 156);
-  --secondary-accent-color: rgb(66, 95, 193);
-  --dim-accent-color: rgb(109, 90, 156, 0.3);
-  --dim-secondary-accent-color: rgb(66, 95, 193, 0.3);
+  --accent-color: rgb(98, 178, 203);
+  --secondary-accent-color: rgb(109, 86, 202);
+  --dim-accent-color: rgba(98, 178, 203, 0.3);
+  --dim-secondary-accent-color: rgba(109, 86, 202, 0.3);
 
   --invert-color: 0.1;
   --footer-background-color: rgb(20, 20, 35);
@@ -67,6 +67,11 @@ body.dark {
   --secondary-accent-color: rgb(93, 126, 211);
   --dim-accent-color: rgb(109, 90, 156, 0.3);
   --dim-secondary-accent-color: rgb(66, 95, 193, 0.3);
+
+  --accent-color: rgb(123, 181, 199);
+  --secondary-accent-color: rgb(158, 146, 206);
+  --dim-accent-color: rgba(98, 178, 203, 0.3);
+  --dim-secondary-accent-color: rgba(109, 86, 202, 0.3);
 
   --invert-color: 0.9;
   --modal-outside-color: rgba(35, 35, 45, 0.7);
@@ -156,19 +161,20 @@ h1::after {
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: 'Oleo Script Swash Caps';
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 h6 {

@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-  grid-gap: 1.2rem;
 
   padding: 0.5rem 1.8rem;
   border-radius: 1rem;
@@ -21,7 +20,7 @@
     var(--accent-color) 0%,
     var(--secondary-accent-color) 100%
   );
-  background-size: 150% 100%;
+  background-size: 140% 100%;
   background-position: right;
 
   pointer-events: all;

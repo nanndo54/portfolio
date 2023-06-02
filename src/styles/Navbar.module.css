@@ -28,7 +28,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  grid-gap: 1rem;
 
   pointer-events: all;
 }
@@ -59,7 +58,6 @@
 
   .items {
     gap: 10px;
-    grid-gap: 10px;
   }
 }
 

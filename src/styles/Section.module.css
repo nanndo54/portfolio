@@ -2,19 +2,16 @@
   width: 900px;
   height: max-content;
   padding: 45px;
+  align-items: center;
 
-  display: grid;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   justify-items: center;
 
   gap: 40px;
-  grid-gap: 40px;
 
   transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
-}
-
-.base.animated * {
-  opacity: 0;
-  animation: appear-section 0.5s 0.3s forwards;
 }
 
 .base.background {
@@ -26,8 +23,9 @@
 
   overflow: hidden;
 }
+
 .base.background:hover::after {
-  opacity: 0.07;
+  opacity: 0.08;
 }
 
 .base.background::after {
@@ -49,9 +47,6 @@
 @media (max-width: 900px) {
   .base {
     width: 100%;
-  }
-
-  .base.background {
     border-radius: 0;
   }
 }

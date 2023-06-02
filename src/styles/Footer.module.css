@@ -2,8 +2,9 @@
   background: var(--footer-background-color);
   color: var(--footer-font-color);
 
-  padding: 10px 25px;
   width: 100%;
+  padding: 10px 25px;
+  margin: 10rem auto 0;
 }
 
 .base a:link,

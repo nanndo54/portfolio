@@ -1,5 +1,6 @@
 header.base {
   height: 30rem;
+  margin: auto;
 
   transition: height 0.3s;
 }
@@ -140,15 +141,15 @@ header.base {
 
   height: 200%;
 
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.8rem;
-  grid-gap: 0.8rem;
 
   transform: translateY(49rem) translateX(7rem) scale(3.5);
   opacity: 0;
 
-  transition: transform 0.3s, opacity 0.25s;
+  transition: transform 0.3s 0.3s, opacity 0.05s;
   cursor: initial;
 }
 
@@ -159,7 +160,7 @@ header.base {
 .contact a + a {
   margin-top: -120%;
 
-  transition: border 0.5s, margin-top 0.3s;
+  transition: border 0.5s, margin-top 0.3s 0.3s;
 }
 
 .contact.open {

@@ -1,8 +1,7 @@
 .subsection {
-  display: grid;
-
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  grid-gap: 30px;
 }
 
 .skills {
