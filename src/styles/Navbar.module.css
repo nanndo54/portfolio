@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: space-between;
 
+  transition: background-color 0.5s;
   animation: appear-navbar 0.5s forwards;
 }
 
@@ -46,7 +47,8 @@
     pointer-events: all;
 
     padding: 0 10px;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    box-shadow: var(--secondary-content-color) 0px 0px 8px 0px inset;
     backdrop-filter: blur(4px);
   }
 

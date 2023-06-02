@@ -16,7 +16,7 @@
 
   margin-bottom: 0.8rem;
 
-  border: 0.27rem solid var(--dim-secondary-accent-color);
+  border: 0.27rem solid var(--dim-accent-color);
   border-radius: 50%;
 
   transition: border 0.5s;
@@ -24,11 +24,6 @@
 
 .base img {
   width: 75%;
-}
-
-.base.invert img {
-  filter: invert(var(--invert-color));
-  transition: filter 0.5s;
 }
 
 .big {

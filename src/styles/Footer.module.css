@@ -9,6 +9,6 @@
 
 .base a:link,
 .base a:visited {
-  color: rgb(128 157 255);
-  text-decoration: 0.15rem underline rgb(128 157 255);
+  /* color: ; */
+  /* text-decoration: 0.15rem underline ; */
 }

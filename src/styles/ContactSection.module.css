@@ -1,2 +1,9 @@
 .base {
 }
+
+.title {
+}
+
+.subtitle {
+  font-family: inherit;
+}

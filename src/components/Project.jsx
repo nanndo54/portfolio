@@ -27,7 +27,7 @@ function Project({ name, url = '', technologies = [], images = [] }) {
           <img src={preview2} alt={`${name} preview 2`} />
         </div>
       </div>
-      <div className={styles.tags}>
+      <div className={styles.skills}>
         {skills.map((skill, i) => (
           <Skill key={i} {...skill} size='small' />
         ))}

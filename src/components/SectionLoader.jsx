@@ -6,7 +6,7 @@ function SectionLoader() {
       speed={2}
       width='100%'
       height={350}
-      backgroundColor='var(--quaternary-color)'
+      backgroundColor='var(--secondary-color)'
       foregroundColor='var(--primary-color)'
     >
       <rect x='50%' y='35' rx='3' ry='3' width='200' height='25' />

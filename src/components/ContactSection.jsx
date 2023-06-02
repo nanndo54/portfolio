@@ -10,9 +10,9 @@ function ContactSection() {
       <h1 className={styles.title}>
         <FormattedMessage id='contact.title' />
       </h1>
-      <h3 className='center'>
+      <h2 className={styles.subtitle}>
         <FormattedMessage id='contact.text1' />
-      </h3>
+      </h2>
       {/* <ContactIcons /> */}
     </Section>
   )

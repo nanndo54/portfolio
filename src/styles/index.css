@@ -28,22 +28,20 @@ html {
 }
 
 body {
-  --content-color: rgb(52, 52, 52);
+  --content-color: rgb(50, 50, 50);
+  --secondary-content-color: rgba(50, 50, 50, 0.2);
+
   --primary-color: rgb(245, 245, 255);
-  --secondary-color: rgba(235, 235, 245, 0.6);
-  --tertiary-color: rgba(225, 225, 235, 0.8);
-  --quaternary-color: rgb(220, 220, 230);
-  --dim-color: rgb(75, 75, 85);
+  --secondary-color: rgba(230, 230, 240, 0.4);
 
-  --accent-color: rgb(98, 178, 203);
+  --accent-color: rgb(99, 176, 199);
   --secondary-accent-color: rgb(109, 86, 202);
-  --dim-accent-color: rgba(98, 178, 203, 0.3);
-  --dim-secondary-accent-color: rgba(109, 86, 202, 0.3);
 
-  --invert-color: 0.1;
-  --footer-background-color: rgb(20, 20, 35);
+  --dim-accent-color: rgba(60, 132, 154, 0.3);
+  --dim-secondary-accent-color: rgba(120, 99, 203, 0.3);
+
+  --footer-background-color: rgb(15, 15, 25);
   --footer-font-color: rgb(230, 230, 240);
-  --modal-outside-color: rgba(35, 35, 45, 0.5);
 
   color: var(--content-color);
 
@@ -56,25 +54,20 @@ body {
 }
 
 body.dark {
-  --content-color: rgb(220, 220, 230);
-  --primary-color: rgb(35, 35, 45);
-  --secondary-color: rgba(40, 40, 50, 0.8);
-  --tertiary-color: rgba(45, 45, 55, 0.8);
-  --quaternary-color: rgb(50, 50, 60);
-  --dim-color: rgb(170, 170, 180);
+  --content-color: rgb(225, 225, 235);
+  --secondary-content-color: rgb(220, 220, 230, 0.2);
 
-  --accent-color: rgb(118, 85, 202);
-  --secondary-accent-color: rgb(93, 126, 211);
-  --dim-accent-color: rgb(109, 90, 156, 0.3);
-  --dim-secondary-accent-color: rgb(66, 95, 193, 0.3);
+  --primary-color: rgb(40, 40, 55);
+  --secondary-color: rgba(35, 35, 45, 0.4);
 
-  --accent-color: rgb(123, 181, 199);
-  --secondary-accent-color: rgb(158, 146, 206);
-  --dim-accent-color: rgba(98, 178, 203, 0.3);
-  --dim-secondary-accent-color: rgba(109, 86, 202, 0.3);
+  --accent-color: rgb(103, 196, 225);
+  --secondary-accent-color: rgb(138, 116, 223);
 
-  --invert-color: 0.9;
-  --modal-outside-color: rgba(35, 35, 45, 0.7);
+  --dim-accent-color: rgba(90, 187, 235, 0.3);
+  --dim-secondary-accent-color: rgba(154, 131, 248, 0.3);
+
+  --footer-background-color: rgb(15, 15, 25);
+  --footer-font-color: rgb(230, 230, 240);
 }
 
 main {
@@ -89,12 +82,6 @@ main {
   background-image: url('/src/assets/svg/background.svg');
 }
 
-nav,
-a,
-blockquote {
-  transition: background-color 0.5s, color 0.5s;
-}
-
 img {
   transition: border 0.5s, opacity 0.5s;
 }
@@ -103,16 +90,7 @@ svg {
   transition: border 0.5s, opacity 0.5s, fill 0.5s;
 }
 
-.small {
-  font-size: 0.9rem;
-  color: var(--dim-color);
-}
-
-.center {
-  text-align: center;
-}
-
-.unselectable {
+.no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -138,9 +116,9 @@ h6 {
 h1 {
   font-family: 'Oleo Script Swash Caps';
   font-size: 3.5rem;
-  text-shadow: 0.15rem 0.15rem 0.1rem var(--quaternary-color);
+  text-shadow: 0.15rem 0.15rem 0.1rem var(--secondary-color);
 
-  transition: text-shadow 0.5s;
+  transition: color 0.5s, text-shadow 0.5s;
 }
 
 h1::after {
@@ -153,7 +131,7 @@ h1::after {
   border-radius: 0.5rem;
   border-bottom-right-radius: 200%;
   border-bottom-left-radius: 1rem;
-  background-color: var(--dim-secondary-accent-color);
+  background-color: var(--dim-accent-color);
 
   transform: translateX(-5%) rotate(-0.5deg);
 
@@ -193,19 +171,6 @@ a:visited {
   text-decoration: 0.15rem underline var(--accent-color);
 }
 
-a.button {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  text-align: center;
-  text-decoration: none;
-
-  font-size: 0.75rem;
-  display: inline-block;
-  padding: 5px 15px;
-
-  border-radius: 20px;
-}
-
 button {
   background-color: transparent;
   color: inherit;
@@ -226,4 +191,14 @@ button:hover {
   h1 {
     font-size: 3rem;
   }
+}
+
+.no-select,
+.no-select * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
