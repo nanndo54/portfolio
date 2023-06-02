@@ -29,15 +29,15 @@ html {
 
 body {
   --content-color: rgb(50, 50, 50);
-  --secondary-content-color: rgba(50, 50, 50, 0.2);
+  --dim-content-color: rgba(50, 50, 50, 0.2);
 
   --primary-color: rgb(245, 245, 255);
-  --secondary-color: rgba(230, 230, 240, 0.4);
+  --dim-primary-color: rgba(230, 230, 240, 0.4);
 
   --accent-color: rgb(99, 176, 199);
-  --secondary-accent-color: rgb(109, 86, 202);
-
   --dim-accent-color: rgba(60, 132, 154, 0.3);
+
+  --secondary-accent-color: rgb(109, 86, 202);
   --dim-secondary-accent-color: rgba(120, 99, 203, 0.3);
 
   --footer-background-color: rgb(15, 15, 25);
@@ -55,15 +55,15 @@ body {
 
 body.dark {
   --content-color: rgb(225, 225, 235);
-  --secondary-content-color: rgb(220, 220, 230, 0.2);
+  --dim-content-color: rgb(220, 220, 230, 0.2);
 
   --primary-color: rgb(40, 40, 55);
-  --secondary-color: rgba(35, 35, 45, 0.4);
+  --dim-primary-color: rgba(35, 35, 45, 0.4);
 
   --accent-color: rgb(103, 196, 225);
-  --secondary-accent-color: rgb(138, 116, 223);
-
   --dim-accent-color: rgba(90, 187, 235, 0.3);
+
+  --secondary-accent-color: rgb(138, 116, 223);
   --dim-secondary-accent-color: rgba(154, 131, 248, 0.3);
 
   --footer-background-color: rgb(15, 15, 25);
@@ -116,7 +116,7 @@ h6 {
 h1 {
   font-family: 'Oleo Script Swash Caps';
   font-size: 3.5rem;
-  text-shadow: 0.15rem 0.15rem 0.1rem var(--secondary-color);
+  text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
 
   transition: color 0.5s, text-shadow 0.5s;
 }

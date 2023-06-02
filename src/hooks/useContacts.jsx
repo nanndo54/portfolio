@@ -1,9 +1,9 @@
-import linkedInIcon from '#/assets/svg/linkedin-icon.svg'
-import githubIcon from '#/assets/svg/github-icon.svg'
-import emailIcon from '#/assets/svg/email-icon.svg'
-import cvIcon from '#/assets/svg/cv-icon.svg'
 import cvs from '#/constants/cvs'
 import useAppStore from '#/store'
+import CvIcon from '#/svg/CvIcon'
+import LinkedInIcon from '#/svg/LinkedInIcon'
+import EmailIcon from '#/svg/EmailIcon'
+import GitHubIcon from '#/svg/GitHubIcon'
 
 function useContacts() {
   const { locale } = useAppStore()
@@ -11,22 +11,22 @@ function useContacts() {
   const contacts = [
     {
       name: 'LinkedIn',
-      icon: linkedInIcon,
+      icon: <LinkedInIcon width={32} height={32} fill='#0b66c3' />,
       url: 'https://www.linkedin.com/in/pabloc54'
     },
     {
       name: 'GitHub',
-      icon: githubIcon,
+      icon: <GitHubIcon width={42} height={42} fill='var(--content-color)' />,
       url: 'https://github.com/pabloc54'
     },
     {
       name: 'Email',
-      icon: emailIcon,
+      icon: <EmailIcon width={40} height={40} fill='#0c86dd' />,
       url: 'mailto:pablofernando50259107@gmail.com'
     },
     {
       name: 'CV',
-      icon: cvIcon,
+      icon: <CvIcon width={40} height={40} fill='#5955dd' />,
       url: cvs[locale],
       download: true
     }

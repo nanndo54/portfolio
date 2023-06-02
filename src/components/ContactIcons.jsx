@@ -6,9 +6,9 @@ function ContactIcons({ className = '' }) {
 
   return (
     <nav className={`${styles.base} ${className}`}>
-      {contacts.map(({ name, icon, url, download = false }) => (
-        <a key={name} target='_blank' rel='noreferrer' href={url} download={download}>
-          <img src={icon} alt={name} />
+      {contacts.map(({ name, icon, url }) => (
+        <a key={name} title={name} target='_blank' rel='noreferrer' href={url}>
+          {icon}
         </a>
       ))}
     </nav>

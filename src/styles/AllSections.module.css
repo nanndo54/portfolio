@@ -6,6 +6,7 @@
 
   overflow-y: scroll;
   scroll-behavior: smooth;
+  overscroll-behavior: contain;
 
   opacity: 0.5;
   transform: translateY(1.5rem);
@@ -20,7 +21,7 @@
 .base::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: var(--secondary-color);
+  background-color: var(--dim-primary-color);
 }
 
 .base::-webkit-scrollbar-thumb {

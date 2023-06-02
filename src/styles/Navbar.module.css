@@ -47,8 +47,8 @@
     pointer-events: all;
 
     padding: 0 10px;
-    background-color: var(--secondary-color);
-    box-shadow: var(--secondary-content-color) 0px 0px 8px 0px inset;
+    background-color: var(--dim-primary-color);
+    box-shadow: var(--dim-content-color) 0px 0px 8px 0px inset;
     backdrop-filter: blur(4px);
   }
 

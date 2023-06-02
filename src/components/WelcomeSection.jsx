@@ -20,7 +20,7 @@ function WelcomeSection() {
 
   const isIntersected = useIntersectionObserver(ref, {
     once: false,
-    threshold: 0.9
+    threshold: 0.75
   })
 
   const CV = contacts.find((contact) => contact.name === 'CV')
