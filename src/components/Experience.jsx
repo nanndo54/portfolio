@@ -1,7 +1,7 @@
 import styles from '#/styles/Experience.module.css'
 // import { FormattedMessage } from 'react-intl'
 
-function Experience ({ company, position, logo, from, to, url }) {
+function Experience({ company, position, logo, from, to, url }) {
   return (
     <article className={styles.base}>
       <div className={styles.header}>
