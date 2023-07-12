@@ -24,7 +24,6 @@
   background-position: right;
   box-shadow: var(--dim-content-color) 0 0 4px 0px inset;
 
-  pointer-events: all;
   transition: background-position 0.5s, color 0.5s;
 }
 

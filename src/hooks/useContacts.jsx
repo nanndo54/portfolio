@@ -1,12 +1,11 @@
-import cvs from '#/constants/cvs'
-import useAppStore from '#/store'
 import CvIcon from '#/svg/CvIcon'
 import LinkedInIcon from '#/svg/LinkedInIcon'
 import EmailIcon from '#/svg/EmailIcon'
 import GitHubIcon from '#/svg/GitHubIcon'
+import useLocaleText from '#/hooks/useLocaleText'
 
 function useContacts() {
-  const { locale } = useAppStore()
+  const getLocaleText = useLocaleText()
 
   const contacts = [
     {
@@ -27,7 +26,7 @@ function useContacts() {
     {
       name: 'CV',
       icon: <CvIcon width={40} height={40} fill='#5955dd' />,
-      url: cvs[locale],
+      url: getLocaleText('link.cv'),
       download: true
     }
   ]

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 import GoToButton from '#/components/GoToButton'
 import WelcomeSection from '#/components/WelcomeSection'
+// import ExperiencesSection from '#/components/ExperiencesSection'
 import ProjectsSection from '#/components/ProjectsSection'
 import AboutMeSection from '#/components/AboutMeSection'
 import SkillsSection from '#/components/SkillsSection'
@@ -20,6 +21,7 @@ function AllSections() {
   return (
     <div className={`${styles.base} ${loaded ? styles.loaded : ''}`} id='base'>
       <WelcomeSection />
+      {/* <ExperiencesSection /> */}
       <ProjectsSection />
       <AboutMeSection />
       <SkillsSection />

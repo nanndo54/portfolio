@@ -14,10 +14,6 @@ function ProjectsSection() {
       </h2>
       <p>
         <FormattedMessage id='projects.text1' />
-        <a target='_blank' rel='noreferrer' href='https://github.com/pabloc54'>
-          GitHub
-        </a>
-        .
       </p>
       <div className={styles.projects}>
         {projects.map((project, i) => (

@@ -28,8 +28,8 @@ function Project({ name, url = '', technologies = [], images = [] }) {
         </div>
       </div>
       <div className={styles.skills}>
-        {skills.map((skill, i) => (
-          <Skill key={i} {...skill} size='small' />
+        {skills.map((skill) => (
+          <Skill key={skill.name} {...skill} size='small' />
         ))}
       </div>
     </article>

@@ -101,6 +101,7 @@ svg {
 
 p {
   line-height: 1.6rem;
+  width: 100%;
 }
 
 h1,
@@ -109,11 +110,13 @@ h3,
 h4,
 h5,
 h6 {
+  width: 100%;
   text-align: center;
   line-height: 1;
 }
 
 h1 {
+  width: initial;
   font-family: 'Oleo Script Swash Caps';
   font-size: 3.5rem;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
@@ -139,7 +142,6 @@ h1::after {
 }
 
 h2 {
-  font-family: 'Oleo Script Swash Caps';
   font-size: 2.5rem;
 }
 

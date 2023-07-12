@@ -16,8 +16,8 @@ function SkillsSection() {
         <div className={styles.subsection} key={title}>
           <h3>{title}</h3>
           <div className={styles.skills}>
-            {specificSkills.map((skill, i) => (
-              <Skill key={i} {...skill} />
+            {specificSkills.map((skill) => (
+              <Skill key={skill.name} {...skill} />
             ))}
           </div>
         </div>

@@ -32,6 +32,7 @@ function WelcomeSection() {
   const handleMenuButton = () => {
     if (Audio) {
       const squeakAudio = new Audio(squeak)
+      squeakAudio.volume = 0.5
       squeakAudio.play()
     }
 

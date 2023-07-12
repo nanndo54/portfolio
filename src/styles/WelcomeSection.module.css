@@ -18,6 +18,10 @@ header.base {
   transform: translateY(0rem);
 }
 
+.container * {
+  pointer-events: none;
+}
+
 .avatar {
   position: relative;
   top: 0;
@@ -39,13 +43,27 @@ header.base {
   transition: transform 0.3s, border 0.5s;
 }
 
-.avatarButton {
+.base .avatarButton {
   height: 100%;
   width: 100%;
   padding: 0;
 
   border-radius: 50%;
   background: none;
+}
+
+.base.overlay .avatarButton {
+  pointer-events: initial;
+}
+
+.base .cv,
+.base .cv * {
+  pointer-events: initial;
+}
+
+.base.overlay .cv,
+.base.overlay .cv * {
+  pointer-events: none;
 }
 
 .cv {
@@ -80,10 +98,6 @@ header.base {
   cursor: pointer;
 }
 
-.base.overlay .avatar > * {
-  pointer-events: initial;
-}
-
 .name {
   position: relative;
   top: 1.5rem;
@@ -94,18 +108,15 @@ header.base {
   transform: translateX(-13rem) translateY(-17rem);
 
   transition: transform 0.3s;
-  pointer-events: initial;
 }
 
 .presentation {
+  text-align: center;
   position: relative;
   top: 3.5rem;
 
   transform: translateX(-13rem) translateY(-17rem);
   width: 28rem;
-
-  pointer-events: initial;
-  text-align: center;
 }
 
 .base.overlay {
@@ -124,10 +135,6 @@ header.base {
 
 .base.overlay .cv {
   opacity: 0;
-}
-
-.base.overlay .cv * {
-  pointer-events: none;
 }
 
 .base.overlay .name {
@@ -152,7 +159,7 @@ header.base {
   transform: translateY(49rem) translateX(7rem) scale(3.5);
   opacity: 0;
 
-  transition: transform 0.3s 0.3s, opacity 0.05s;
+  transition: transform 0.3s, opacity 0.5s 0s;
   cursor: initial;
 }
 
@@ -163,15 +170,21 @@ header.base {
 .contact a + a {
   margin-top: -120%;
 
-  transition: border 0.5s, margin-top 0.3s 0.3s;
+  transition: border 0.5s, margin-top 0.3s 0.1s;
 }
 
-.contact.open {
+.base .contact.open {
   transform: translateY(80rem) translateX(7rem) scale(4);
   opacity: 1;
+
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.contact.open a + a {
+.base .contact.open a {
+  pointer-events: initial;
+}
+
+.base .contact.open a + a {
   margin-top: 0;
 }
 
