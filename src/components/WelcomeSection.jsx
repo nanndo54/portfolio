@@ -20,7 +20,7 @@ function WelcomeSection() {
 
   const isIntersected = useIntersectionObserver(ref, {
     once: false,
-    threshold: 0.75
+    threshold: 0.8
   })
 
   const CV = contacts.find((contact) => contact.name === 'CV')
@@ -32,7 +32,7 @@ function WelcomeSection() {
   const handleMenuButton = () => {
     if (Audio) {
       const squeakAudio = new Audio(squeak)
-      squeakAudio.volume = 0.5
+      squeakAudio.volume = 0.3
       squeakAudio.play()
     }
 

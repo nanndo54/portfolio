@@ -1,5 +1,6 @@
 .base {
   width: 900px;
+  height: fit-content;
   padding: 45px;
   align-items: center;
 

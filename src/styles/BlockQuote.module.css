@@ -6,7 +6,7 @@
   letter-spacing: 0.05rem;
 
   margin: 50px auto;
-  padding: 30px 105px;
+  padding: 2rem 5rem;
 
   border-radius: 25px;
 }
@@ -21,9 +21,9 @@
 }
 
 .base .author {
-  font-size: 2rem;
+  font-size: 1.8rem;
 
-  letter-spacing: 0.11rem;
+  letter-spacing: 0.15rem;
   align-self: flex-end;
   justify-self: flex-end;
 }

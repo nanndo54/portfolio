@@ -119,8 +119,8 @@ header.base {
   width: 28rem;
 }
 
-.base.overlay {
-  height: 10rem;
+header.base.overlay {
+  height: 15rem;
 }
 
 .base.overlay .container {
@@ -243,7 +243,7 @@ header.base {
   }
 
   header.base.overlay {
-    height: 30rem;
+    height: 15rem;
   }
 
   .container {
@@ -288,7 +288,7 @@ header.base {
 
 @media (max-height: 361px) {
   header.base {
-    height: 10rem;
+    height: 15rem;
     margin-bottom: 8rem;
   }
 }
