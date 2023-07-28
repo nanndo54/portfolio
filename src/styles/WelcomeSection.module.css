@@ -35,7 +35,7 @@ header.base {
   transform: translateX(16rem) translateY(2.5rem);
 
   border-radius: 50%;
-  border: 0.6rem solid var(--dim-secondary-accent-color);
+  border: 0.6rem solid var(--dim-accent-color);
 
   -webkit-background-clip: content-box;
   background-clip: content-box;
@@ -83,7 +83,7 @@ header.base {
 }
 
 .cvIcon {
-  fill: var(--primary-color);
+  fill: var(--alternate-font-color);
   width: 30px;
   height: 40px;
 }

@@ -30,6 +30,8 @@ function WelcomeSection() {
   }, [isIntersected])
 
   const handleMenuButton = () => {
+    if (isIntersected) return
+
     if (Audio) {
       const squeakAudio = new Audio(squeak)
       squeakAudio.volume = 0.3
@@ -48,10 +50,14 @@ function WelcomeSection() {
     >
       <div className={styles.container}>
         <div className={styles.avatar}>
-          <ContactIcons className={`${styles.contact} ${menuOpen ? styles.open : ''}`} />
+          <ContactIcons
+            className={`${styles.contact} ${menuOpen ? styles.open : ''}`}
+            tabIndex={menuOpen ? 0 : -1}
+          />
           <button
             className={styles.avatarButton}
             onClick={(ev) => handleMenuButton(ev.target.value)}
+            tabIndex={isIntersected ? -1 : 0}
           >
             <img src={photo} alt='Mi fotografía' />
           </button>
@@ -61,8 +67,13 @@ function WelcomeSection() {
           <FormattedMessage id='welcome.presentation' />
         </p>
         <div className={styles.cv}>
-          <a target='_blank' rel='noreferrer' href={CV?.url}>
-            <Button>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href={CV?.url}
+            tabIndex={isIntersected ? 0 : -1}
+          >
+            <Button tabIndex={-1}>
               <FormattedMessage id='welcome.cv' />
               <CvIcon className={styles.cvIcon} />
             </Button>

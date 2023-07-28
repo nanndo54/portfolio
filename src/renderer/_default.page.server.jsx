@@ -22,7 +22,7 @@ async function render(pageContext) {
     "My personal portfolio. Hi! I'm Pablo Cabrera (pabloc54), FullStack Web Developer at your dispose"
 
   const documentHtml = escapeInject`<!DOCTYPE html>
-  <html lang="en">
+  <html lang="en" translate="no">
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />

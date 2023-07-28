@@ -28,24 +28,27 @@ html {
 }
 
 body {
+  --font-color: rgb(30, 30, 30);
+  --alternate-font-color: rgb(235, 235, 255);
+
   --content-color: rgb(50, 50, 50);
   --dim-content-color: rgba(50, 50, 50, 0.2);
 
-  --primary-color: rgb(245, 245, 255);
-  --dim-primary-color: rgba(230, 230, 240, 0.4);
+  --primary-color: rgb(190, 190, 250);
+  --dim-primary-color: rgba(210, 210, 250, 0.4);
 
   --accent-color: rgb(99, 176, 199);
-  --dim-accent-color: rgba(60, 132, 154, 0.3);
+  --dim-accent-color: rgba(29, 146, 182, 0.349);
 
   --secondary-accent-color: rgb(109, 86, 202);
-  --dim-secondary-accent-color: rgba(120, 99, 203, 0.3);
+  --dim-secondary-accent-color: rgba(104, 74, 222, 0.3);
 
   --footer-background-color: rgb(15, 15, 25);
   --footer-font-color: rgb(230, 230, 240);
 
-  color: var(--content-color);
+  color: var(--font-color);
 
-  height: 100vh;
+  height: 100dvh;
   font-family: 'Nunito', sans-serif;
 
   -webkit-font-smoothing: antialiased;
@@ -54,10 +57,13 @@ body {
 }
 
 body.dark {
+  --font-color: rgb(220, 220, 250);
+  --alternate-font-color: rgb(30, 30, 30);
+
   --content-color: rgb(225, 225, 235);
   --dim-content-color: rgb(220, 220, 230, 0.2);
 
-  --primary-color: rgb(40, 40, 55);
+  --primary-color: rgb(32, 38, 55);
   --dim-primary-color: rgba(35, 35, 45, 0.4);
 
   --accent-color: rgb(103, 196, 225);

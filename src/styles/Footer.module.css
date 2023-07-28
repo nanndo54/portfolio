@@ -9,6 +9,5 @@
 
 .base a:link,
 .base a:visited {
-  /* color: ; */
-  /* text-decoration: 0.15rem underline ; */
+  color: var(--accent-color);
 }

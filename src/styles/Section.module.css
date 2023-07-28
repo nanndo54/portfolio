@@ -1,6 +1,8 @@
 .base {
   width: 900px;
   height: fit-content;
+  min-height: min-content;
+  min-height: -moz-min-content;
   padding: 45px;
   align-items: center;
 
