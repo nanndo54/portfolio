@@ -1,31 +1,23 @@
 import styles from '#/styles/AboutMeSection.module.css'
-import { FormattedMessage } from 'react-intl'
 
 import Section from '#/components/Section'
 
 import guatemalaImage from '#/assets/img/guatemala.jpg'
 import campusImage from '#/assets/img/campus.jpg'
+import Text from '#/components/Text'
 
 function AboutMeSection() {
   return (
     <Section>
-      <h2>
-        <FormattedMessage id='aboutme.title' />
-      </h2>
-      <p>
-        <FormattedMessage id='aboutme.text1' />
-      </p>
+      <Text as={'h2'} id='aboutme.title' />
+      <Text as={'p'} id='aboutme.text1' />
       <div className={styles.inline}>
         <img src={guatemalaImage} alt='Guatemala, Lago de Atitlán' />
-        <p>
-          <FormattedMessage id='aboutme.text2' />
-        </p>
+        <Text as={'p'} id='aboutme.text2' />
       </div>
       <div className={styles.inline}>
         <img src={campusImage} alt='USAC' />
-        <p>
-          <FormattedMessage id='aboutme.text3' />
-        </p>
+        <Text as={'p'} id='aboutme.text3' />
       </div>
     </Section>
   )

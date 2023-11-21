@@ -1,16 +1,12 @@
 import styles from '#/styles/GoToButton.module.css'
 import { useRef } from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import useIntersectionObserver from '#/hooks/useIntersectionObserver'
 import { handleScrollToTop } from '#/utilities/scroll'
+import Text from '#/components/Text'
 
 function GoToButton({ direction = 'down', label }) {
-  label = (
-    <p>
-      <FormattedMessage id={label} />
-    </p>
-  )
+  label = <Text as={'p'} id={label} />
 
   const ref = useRef(null)
   const isIntersected = useIntersectionObserver(ref, {
@@ -20,6 +16,7 @@ function GoToButton({ direction = 'down', label }) {
 
   return (
     <button
+      type='button'
       className={`${styles.base} ${direction === 'up' ? styles.up : ''} ${
         isIntersected ? styles.arrow : ''
       }`}

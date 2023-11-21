@@ -10,19 +10,22 @@ import jolcImg2 from '#/assets/img/jolc-img2.jpg'
 const projects = [
   {
     name: 'Mini Translator',
-    url: 'https://pabloc54.github.io/translator/',
+    web: 'https://pabloc54.github.io/translator/',
+    code: 'https://github.com/pabloc54/translator',
     technologies: ['JavaScript'],
     images: [translatorImg1, translatorImg2]
   },
   {
     name: 'Quiz Game',
-    url: 'https://pabloc54.github.io/quiz/',
+    web: 'https://pabloc54.github.io/quiz/',
+    code: 'https://github.com/pabloc54/quiz',
     technologies: ['ReactJS', 'Redux'],
     images: [quizImg1, quizImg2]
   },
   {
     name: 'JOLC',
-    url: 'https://jolc2.herokuapp.com/',
+    web: 'https://jolc2.herokuapp.com/',
+    code: 'https://github.com/pabloc54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python'],
     images: [jolcImg1, jolcImg2]
   }

@@ -8,7 +8,7 @@ const initialState = {
   theme: 'light'
 }
 
-const useStore = create(
+const store = create(
   persist(
     (set) => ({
       ...initialState,
@@ -24,14 +24,18 @@ const useStore = create(
 )
 
 const useAppStore = (callback = (state) => state) => {
-  const result = useStore(callback)
-  const [data, setData] = useState(initialState)
+  const newState = store(callback)
+  const [state, setState] = useState(initialState)
 
   useEffect(() => {
-    setData(result)
-  }, [result])
+    setState(newState)
+  }, [newState])
 
-  return data
+  return state
 }
+
+const { getState } = store
+
+export { getState }
 
 export default useAppStore

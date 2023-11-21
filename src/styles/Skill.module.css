@@ -12,18 +12,23 @@
 
   height: 4.2rem;
   width: 4.2rem;
-  padding: 0.4rem;
+  padding: 0.35rem;
 
   margin-bottom: 0.8rem;
 
   border: 0.27rem solid var(--dim-accent-color);
   border-radius: 50%;
 
+  background-color: var(--dim-content-color);
+  /* box-shadow: var(--dim-content-color) 0 0 0.2rem 0.15rem inset; */
+
   transition: border 0.5s;
 }
 
-.base img {
-  width: 75%;
+.base svg,
+.base svg * {
+  height: 75% !important;
+  width: 75% !important;
 }
 
 .big {
@@ -43,7 +48,16 @@
 }
 
 .small .icon {
-  height: 3rem;
-  width: 3rem;
-  padding: 0.3rem;
+  height: 3.1rem;
+  width: 3.1rem;
+  padding: 0.26rem;
+}
+
+@media (max-width: 700px) {
+  .small .icon {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.15rem;
+    border-width: 0.15rem;
+  }
 }

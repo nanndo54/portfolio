@@ -8,11 +8,11 @@ import languages from '#/constants/languages'
 
 function App() {
   const { locale } = useAppStore()
-  const language = languages[locale]
+  const messages = languages[locale]
 
   return (
     <div className={styles.base}>
-      <IntlProvider locale={locale} messages={language}>
+      <IntlProvider locale={locale} messages={messages}>
         <Navbar />
         <AllSections />
       </IntlProvider>

@@ -11,7 +11,12 @@ header.base {
 
   height: 100rem;
 
-  transition: transform 0.3s, width 0.5s, height 0.5s, top 0.5s, right 0.5s;
+  transition:
+    transform 0.3s,
+    width 0.5s,
+    height 0.5s,
+    top 0.5s,
+    right 0.5s;
   pointer-events: none;
   z-index: 2;
 
@@ -40,7 +45,9 @@ header.base {
   -webkit-background-clip: content-box;
   background-clip: content-box;
 
-  transition: transform 0.3s, border 0.5s;
+  transition:
+    transform 0.3s,
+    border 0.5s;
 }
 
 .base .avatarButton {
@@ -56,36 +63,32 @@ header.base {
   pointer-events: initial;
 }
 
-.base .cv,
-.base .cv * {
+.base .buttons,
+.base .buttons * {
   pointer-events: initial;
 }
 
-.base.overlay .cv,
-.base.overlay .cv * {
+.base.overlay .buttons,
+.base.overlay .buttons * {
   pointer-events: none;
 }
 
-.cv {
+.buttons {
   position: relative;
   top: 0;
 
   width: fit-content;
 
   opacity: 1;
-  transform: translateX(-7.3rem) translateY(-10.5rem) scale(1.3);
+  transform: translateX(-7.3rem) translateY(-10.5rem) scale(1.32);
 
-  transition: transform 0.3s, opacity 0.2s;
+  transition:
+    transform 0.3s,
+    opacity 0.2s;
 }
 
-.cv a {
+.buttons a {
   text-decoration: none !important;
-}
-
-.cvIcon {
-  fill: var(--alternate-font-color);
-  width: 30px;
-  height: 40px;
 }
 
 .avatar img {
@@ -133,7 +136,7 @@ header.base.overlay {
   transform: translateX(29rem) translateY(1rem);
 }
 
-.base.overlay .cv {
+.base.overlay .buttons {
   opacity: 0;
 }
 
@@ -159,7 +162,9 @@ header.base.overlay {
   transform: translateY(49rem) translateX(7rem) scale(3.5);
   opacity: 0;
 
-  transition: transform 0.3s, opacity 0.5s 0s;
+  transition:
+    transform 0.3s,
+    opacity 0.5s 0s;
   cursor: initial;
 }
 
@@ -170,14 +175,18 @@ header.base.overlay {
 .contact a + a {
   margin-top: -120%;
 
-  transition: border 0.5s, margin-top 0.3s 0.1s;
+  transition:
+    border 0.5s,
+    margin-top 0.3s 0.1s;
 }
 
 .base .contact.open {
   transform: translateY(80rem) translateX(7rem) scale(4);
   opacity: 1;
 
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
 
 .base .contact.open a {
@@ -232,7 +241,7 @@ header.base.overlay {
     width: 25rem;
   }
 
-  .cv {
+  .buttons {
     transform: translateX(-6.8rem) translateY(-10rem) scale(1.3);
   }
 }
@@ -263,7 +272,7 @@ header.base.overlay {
     width: 21.5rem;
   }
 
-  .cv {
+  .buttons {
     transform: translateX(2.9rem) translateY(4.8rem) scale(1.3);
   }
 }

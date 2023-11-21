@@ -32,16 +32,16 @@ body {
   --alternate-font-color: rgb(235, 235, 255);
 
   --content-color: rgb(50, 50, 50);
-  --dim-content-color: rgba(50, 50, 50, 0.2);
+  --dim-content-color: rgba(100, 100, 100, 0.05);
 
-  --primary-color: rgb(190, 190, 250);
+  --primary-color: rgb(209, 209, 252);
   --dim-primary-color: rgba(210, 210, 250, 0.4);
 
-  --accent-color: rgb(99, 176, 199);
+  --accent-color: rgb(67, 142, 202);
   --dim-accent-color: rgba(29, 146, 182, 0.349);
 
-  --secondary-accent-color: rgb(109, 86, 202);
-  --dim-secondary-accent-color: rgba(104, 74, 222, 0.3);
+  --secondary-accent-color: rgb(112, 79, 243);
+  --dim-secondary-accent-color: rgba(102, 69, 236, 0.45);
 
   --footer-background-color: rgb(15, 15, 25);
   --footer-font-color: rgb(230, 230, 240);
@@ -61,16 +61,16 @@ body.dark {
   --alternate-font-color: rgb(30, 30, 30);
 
   --content-color: rgb(225, 225, 235);
-  --dim-content-color: rgb(220, 220, 230, 0.2);
+  --dim-content-color: rgb(220, 220, 230, 0.1);
 
   --primary-color: rgb(32, 38, 55);
   --dim-primary-color: rgba(35, 35, 45, 0.4);
 
-  --accent-color: rgb(103, 196, 225);
-  --dim-accent-color: rgba(90, 187, 235, 0.3);
+  --accent-color: rgb(98, 185, 211);
+  --dim-accent-color: rgba(90, 187, 235, 0.4);
 
   --secondary-accent-color: rgb(138, 116, 223);
-  --dim-secondary-accent-color: rgba(154, 131, 248, 0.3);
+  --dim-secondary-accent-color: rgba(154, 131, 248, 0.4);
 
   --footer-background-color: rgb(15, 15, 25);
   --footer-font-color: rgb(230, 230, 240);
@@ -89,11 +89,16 @@ main {
 }
 
 img {
-  transition: border 0.5s, opacity 0.5s;
+  transition:
+    border 0.5s,
+    opacity 0.5s;
 }
 
 svg {
-  transition: border 0.5s, opacity 0.5s, fill 0.5s;
+  transition:
+    border 0.5s,
+    opacity 0.5s,
+    fill 0.5s;
 }
 
 .no-select {
@@ -127,7 +132,9 @@ h1 {
   font-size: 3.5rem;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
 
-  transition: color 0.5s, text-shadow 0.5s;
+  transition:
+    color 0.5s,
+    text-shadow 0.5s;
 }
 
 h1::after {
@@ -152,15 +159,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1.9rem;
+  font-size: 2.15rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 h6 {
@@ -172,8 +179,7 @@ p {
   line-height: 1.8rem;
 }
 
-a:link,
-a:visited {
+a {
   background-color: transparent;
   color: var(--secondary-accent-color);
   text-decoration: 0.15rem underline var(--accent-color);
@@ -190,6 +196,10 @@ button:hover {
   cursor: pointer;
 }
 
+svg.content-color {
+  fill: var(--content-color);
+}
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -198,6 +208,14 @@ button:hover {
 @media (max-width: 700px) {
   h1 {
     font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
   }
 }
 

@@ -1,9 +1,9 @@
 .base {
   width: 900px;
   height: fit-content;
-  min-height: min-content;
   min-height: -moz-min-content;
-  padding: 45px;
+  min-height: min-content;
+  padding: 3rem;
   align-items: center;
 
   display: flex;
@@ -13,12 +13,15 @@
 
   gap: 40px;
 
-  transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+  transition:
+    background-color 0.5s,
+    box-shadow 0.5s,
+    color 0.5s;
 }
 
 .base.background {
   background-color: var(--dim-primary-color);
-  box-shadow: var(--dim-content-color) 0 0 10px 0px inset;
+  box-shadow: var(--dim-accent-color) 0 0 6px 1px inset;
   backdrop-filter: blur(4px);
 
   border-radius: 25px;
@@ -27,19 +30,24 @@
 }
 
 .base.background:hover::after {
-  opacity: 0.08;
+  opacity: 0.15;
 }
 
 .base.background::after {
   content: '';
-  background: radial-gradient(var(--secondary-accent-color), #3984ff00 70%);
+  background: radial-gradient(
+    var(--accent-color),
+    var(--dim-accent-color) 40%,
+    #ffffff00 60%
+  );
+  border-radius: 50%;
 
   position: absolute;
-  top: calc(var(--y, 0) * 1px - 20rem);
-  left: calc(var(--x, 0) * 1px - 20rem);
+  top: calc(var(--y, 0) * 1px - 35rem);
+  left: calc(var(--x, 0) * 1px - 35rem);
 
-  width: 40rem;
-  height: 40rem;
+  width: 70rem;
+  height: 70rem;
 
   opacity: 0;
   transition: opacity 0.2s;
@@ -50,12 +58,13 @@
   .base {
     width: 100%;
     border-radius: 0;
+    padding: 2.5rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .base {
-    width: 100%;
+    padding: 2rem 1.5rem;
   }
 }
 

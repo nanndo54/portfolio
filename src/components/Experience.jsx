@@ -1,5 +1,4 @@
 import styles from '#/styles/Experience.module.css'
-// import { FormattedMessage } from 'react-intl'
 
 function Experience({ company, position, logo, from, to, url }) {
   return (
@@ -17,7 +16,7 @@ function Experience({ company, position, logo, from, to, url }) {
         </h4>
       </div>
       <div className={styles.content}>
-        <p>{/* <FormattedMessage id={`project.${position}`} /> */}</p>
+        {/* <Text as={'p'} id={`project.${position}`} /> */}
         <div className={styles.images}>
           <img src={logo} alt={`${company} logo`} />
         </div>

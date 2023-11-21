@@ -1,22 +1,20 @@
 import styles from '#/styles/WelcomeSection.module.css'
 import { useEffect, useRef, useState } from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import Section from '#/components/Section'
+import Text from '#/components/Text'
+import ContactIcons from '#/components/ContactIcons'
+import LinkButton from '#/components/LinkButton'
+import useIntersectionObserver from '#/hooks/useIntersectionObserver'
+import contacts from '#/constants/contacts'
 
 import photo from '#/assets/img/profile-photo.jpg'
 import squeak from '#/assets/sounds/squeak.mp3'
-import ContactIcons from '#/components/ContactIcons'
-import Button from '#/components/Button'
-import useContacts from '#/hooks/useContacts'
-import CvIcon from '#/svg/CvIcon'
-import useIntersectionObserver from '#/hooks/useIntersectionObserver'
+import CvIcon from '#/assets/svg/cv-icon.svg?react'
 
 function WelcomeSection() {
   const [menuOpen, setMenuOpen] = useState(false)
   const ref = useRef(null)
-
-  const contacts = useContacts()
 
   const isIntersected = useIntersectionObserver(ref, {
     once: false,
@@ -55,6 +53,7 @@ function WelcomeSection() {
             tabIndex={menuOpen ? 0 : -1}
           />
           <button
+            type='button'
             className={styles.avatarButton}
             onClick={(ev) => handleMenuButton(ev.target.value)}
             tabIndex={isIntersected ? -1 : 0}
@@ -63,21 +62,17 @@ function WelcomeSection() {
           </button>
         </div>
         <h1 className={styles.name}>Pablo Cabrera</h1>
-        <p className={styles.presentation}>
-          <FormattedMessage id='welcome.presentation' />
-        </p>
-        <div className={styles.cv}>
-          <a
+        <Text as={'p'} id='welcome.presentation' className={styles.presentation} />
+        <div className={styles.buttons}>
+          <LinkButton
             target='_blank'
             rel='noreferrer'
             href={CV?.url}
+            icon={CvIcon}
             tabIndex={isIntersected ? 0 : -1}
           >
-            <Button tabIndex={-1}>
-              <FormattedMessage id='welcome.cv' />
-              <CvIcon className={styles.cvIcon} />
-            </Button>
-          </a>
+            <Text id='welcome.cv' />
+          </LinkButton>
         </div>
       </div>
     </Section>

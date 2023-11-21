@@ -1,20 +1,16 @@
 import styles from '#/styles/ExperiencesSection.module.css'
-import { FormattedMessage } from 'react-intl'
 
 import Section from '#/components/Section'
 import Experience from '#/components/Experience'
 
 import experiences from '#/constants/experiences'
+import Text from '#/components/Text'
 
 function ExperienceSection() {
   return (
     <Section>
-      <h2>
-        <FormattedMessage id='experiences.title' />
-      </h2>
-      <p>
-        <FormattedMessage id='experiences.text1' />
-      </p>
+      <Text as={'h2'} id='experiences.title' />
+      <Text as={'p'} id='experiences.text1' />
       <div className={styles.experiences}>
         {experiences.map((experience) => (
           <Experience key={experience.name} {...experience} />

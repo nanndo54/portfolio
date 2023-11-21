@@ -1,12 +1,13 @@
 import styles from '#/styles/Button.module.css'
 
-function Button({ className = '', children, tabIndex, ...props }) {
+import Icon from '#/components/Icon'
+
+function Button({ className = '', icon, children, ...props }) {
   return (
-    <div className={`${className} ${styles.base}`} {...props}>
-      <button className={styles.button} tabIndex={tabIndex}>
-        {children}
-      </button>
-    </div>
+    <button type='button' className={`${className} ${styles.base}`} {...props}>
+      {children}
+      <Icon icon={icon} className={styles.icon} />
+    </button>
   )
 }
 

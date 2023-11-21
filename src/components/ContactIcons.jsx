@@ -1,12 +1,11 @@
-import useContacts from '#/hooks/useContacts'
 import styles from '#/styles/ContactIcons.module.css'
+import Icon from '#/components/Icon'
+import contacts from '#/constants/contacts'
 
 function ContactIcons({ className = '', tabIndex }) {
-  const contacts = useContacts()
-
   return (
     <nav className={`${styles.base} ${className}`}>
-      {contacts.map(({ name, icon, url }) => (
+      {contacts.map(({ name, icon, url, props }) => (
         <a
           key={name}
           title={name}
@@ -15,7 +14,7 @@ function ContactIcons({ className = '', tabIndex }) {
           href={url}
           tabIndex={tabIndex}
         >
-          {icon}
+          <Icon icon={icon} {...props} />
         </a>
       ))}
     </nav>

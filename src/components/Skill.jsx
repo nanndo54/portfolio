@@ -1,14 +1,15 @@
+import Icon from '#/components/Icon'
 import styles from '#/styles/Skill.module.css'
 
-function Skill({ size = 'medium', name, image, invert = false }) {
+function Skill({ size = 'medium', name, icon, props }) {
   const className = `${styles.base} ${
     size === 'big' ? styles.big : size === 'small' ? styles.small : ''
-  } ${invert ? styles.invert : ''}`
+  }`
 
   return (
     <div className={className}>
       <div className={styles.icon} title={size === 'small' ? name : ''}>
-        <img src={image} alt={name} />
+        <Icon icon={icon} alt={name} {...props} />
       </div>
       {size !== 'small' && <span>{name}</span>}
     </div>

@@ -1,8 +1,8 @@
 .base {
-}
-
-.button {
   width: max-content;
+  min-height: 3.2rem;
+  box-sizing: border-box;
+
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -22,15 +22,47 @@
   );
   background-size: 150% 100%;
   background-position: right;
-  box-shadow: var(--dim-content-color) 0 0 4px 0px inset;
+  box-shadow: var(--dim-content-color) 0 0 5px 5px inset;
 
-  transition: background-position 0.5s, color 0.5s;
+  transition:
+    background-position 0.5s,
+    color 0.5s,
+    transform 0.25s;
+  text-decoration: none;
 }
 
-.button > * {
+.base:hover {
+  transform: scale(1.02);
+}
+.base:active {
+  transform: scale(0.98);
+}
+
+.base > * {
   flex: 1;
 }
 
-.button:hover {
+.base:hover {
   background-position: left;
+}
+
+.secondary {
+  background: none;
+  border: 0.23rem solid var(--secondary-accent-color);
+  color: var(--content-color);
+  transition:
+    border-color 0.5s,
+    color 0.5s,
+    transform 0.25s;
+  box-shadow: none;
+}
+
+.secondary:hover {
+  border-color: var(--accent-color);
+}
+
+.icon {
+  fill: var(--alternate-font-color);
+  width: 30px;
+  height: 40px;
 }

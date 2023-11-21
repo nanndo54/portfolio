@@ -1,87 +1,87 @@
-import htmlIcon from '#/assets/svg/html-icon.svg'
-import cssIcon from '#/assets/svg/css-icon.svg'
-import javascriptIcon from '#/assets/svg/javascript-icon.svg'
-import typescriptIcon from '#/assets/svg/typescript-icon.svg'
-import reactIcon from '#/assets/svg/reactjs-icon.svg'
-import reduxIcon from '#/assets/svg/redux-icon.svg'
+import HtmlIcon from '#/assets/svg/html-icon.svg?react'
+import CssIcon from '#/assets/svg/css-icon.svg?react'
+import JavaScriptIcon from '#/assets/svg/javascript-icon.svg?react'
+import TypeScriptIcon from '#/assets/svg/typescript-icon.svg?react'
+import ReactIcon from '#/assets/svg/reactjs-icon.svg?react'
+import ReduxIcon from '#/assets/svg/redux-icon.svg?react'
 
-import expressIcon from '#/assets/svg/express-icon.svg'
-import goIcon from '#/assets/svg/go-icon.svg'
-import pythonIcon from '#/assets/svg/python-icon.svg'
-import mongodbIcon from '#/assets/svg/mongodb-icon.svg'
-import mysqlIcon from '#/assets/svg/mysql-icon.svg'
-import oraclesqlIcon from '#/assets/svg/oraclesql-icon.svg'
+import ExpressIcon from '#/assets/svg/express-icon.svg?react'
+import GoIcon from '#/assets/svg/go-icon.svg?react'
+import PythonIcon from '#/assets/svg/python-icon.svg?react'
+import MongodbIcon from '#/assets/svg/mongodb-icon.svg?react'
+import MysqlIcon from '#/assets/svg/mysql-icon.svg?react'
+import OracleSqlIcon from '#/assets/svg/oraclesql-icon.svg?react'
 
-import javaIcon from '#/assets/svg/java-icon.svg'
-import awsIcon from '#/assets/svg/aws-icon.svg'
-import oraclecloudIcon from '#/assets/svg/oraclecloud-icon.svg'
+import JavaIcon from '#/assets/svg/java-icon.svg?react'
+import AwsIcon from '#/assets/svg/aws-icon.svg?react'
+import OracleCloudIcon from '#/assets/svg/oraclecloud-icon.svg?react'
 
 const skills = {
   FrontEnd: [
     {
       name: 'HTML',
-      image: htmlIcon
+      icon: HtmlIcon
     },
     {
       name: 'CSS',
-      image: cssIcon
+      icon: CssIcon
     },
     {
       name: 'JavaScript',
-      image: javascriptIcon
+      icon: JavaScriptIcon
     },
     {
       name: 'TypeScript',
-      image: typescriptIcon
+      icon: TypeScriptIcon
     },
     {
       name: 'ReactJS',
-      image: reactIcon
+      icon: ReactIcon
     },
     {
       name: 'Redux',
-      image: reduxIcon
+      icon: ReduxIcon
     }
   ],
   BackEnd: [
     {
       name: 'ExpressJS',
-      image: expressIcon,
-      invert: true
+      icon: ExpressIcon,
+      props: { contentColor: true }
     },
     {
       name: 'Go',
-      image: goIcon
+      icon: GoIcon
     },
     {
       name: 'Python',
-      image: pythonIcon
+      icon: PythonIcon
     },
     {
       name: 'MongoDB',
-      image: mongodbIcon
+      icon: MongodbIcon
     },
     {
       name: 'MySQL',
-      image: mysqlIcon
+      icon: MysqlIcon
     },
     {
       name: 'PL/SQL',
-      image: oraclesqlIcon
+      icon: OracleSqlIcon
     }
   ],
   Otras: [
     {
       name: 'Java',
-      image: javaIcon
+      icon: JavaIcon
     },
     {
       name: 'AWS',
-      image: awsIcon
+      icon: AwsIcon
     },
     {
       name: 'OCI',
-      image: oraclecloudIcon
+      icon: OracleCloudIcon
     }
   ]
 }

@@ -1,19 +1,13 @@
 import styles from '#/styles/ContactSection.module.css'
-import { FormattedMessage } from 'react-intl'
 
 import Section from '#/components/Section'
-// import ContactIcons from '#/components/ContactIcons'
+import Text from '#/components/Text'
 
 function ContactSection() {
   return (
     <Section className={styles.base} background={false}>
-      <h1 className={styles.title}>
-        <FormattedMessage id='contact.title' />
-      </h1>
-      <h2 className={styles.subtitle}>
-        <FormattedMessage id='contact.text1' />
-      </h2>
-      {/* <ContactIcons /> */}
+      <Text as={'h1'} id='contact.title' />
+      <Text as={'h2'} id='contact.text1' />
     </Section>
   )
 }
