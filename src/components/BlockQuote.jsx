@@ -7,7 +7,7 @@ function BlockQuote({ quote, author }) {
     <Section as='blockquote' className={styles.base}>
       <span>
         <span className={styles.quote}>“</span>
-        <Text id={quote} />
+        <Text localeId={quote} />
         <span className={styles.quote}>”</span>
       </span>
       <div className={styles.author}>— {author}</div>

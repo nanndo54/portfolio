@@ -20,7 +20,7 @@ async function startServer() {
   if (isProduction) {
     app.use(sirv(`${root}/dist/client`))
   } else {
-    const vite = require('vite')
+    const vite = await import('vite')
     const viteDevMiddleware = (
       await vite.createServer({
         root,

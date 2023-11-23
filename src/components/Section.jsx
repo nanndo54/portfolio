@@ -23,10 +23,12 @@ const Section = forwardRef(
       if (!background || !sectionRef?.current) return
 
       sectionRef.current.addEventListener('mousemove', mouseEvent)
+      sectionRef.current.addEventListener('pointermove', mouseEvent)
       sectionRef.current.addEventListener('wheel', delayedMouseEvent, { passive: true })
 
       return () => {
         sectionRef.current.removeEventListener('mousemove', mouseEvent)
+        sectionRef.current.removeEventListener('pointermove', mouseEvent)
         sectionRef.current.removeEventListener('wheel', delayedMouseEvent, {
           passive: true
         })

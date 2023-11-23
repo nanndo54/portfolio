@@ -10,7 +10,7 @@
     "server:prod": "cross-env NODE_ENV=production node ./server",
     "lint": "npm run lint:format && npm run lint:fix ",
     "lint:fix": "eslint ./src --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
+    "lint:format": "prettier  --log-level warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
     "@vitejs/plugin-react": "4.2.0",

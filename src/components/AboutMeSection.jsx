@@ -9,15 +9,15 @@ import Text from '#/components/Text'
 function AboutMeSection() {
   return (
     <Section>
-      <Text as={'h2'} id='aboutme.title' />
-      <Text as={'p'} id='aboutme.text1' />
+      <Text as={'h2'} localeId='aboutme.title' />
+      <Text as={'p'} localeId='aboutme.text1' />
       <div className={styles.inline}>
         <img src={guatemalaImage} alt='Guatemala, Lago de Atitlán' />
-        <Text as={'p'} id='aboutme.text2' />
+        <Text as={'p'} localeId='aboutme.text2' />
       </div>
       <div className={styles.inline}>
         <img src={campusImage} alt='USAC' />
-        <Text as={'p'} id='aboutme.text3' />
+        <Text as={'p'} localeId='aboutme.text3' />
       </div>
     </Section>
   )

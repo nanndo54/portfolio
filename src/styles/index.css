@@ -121,7 +121,7 @@ h3,
 h4,
 h5,
 h6 {
-  width: 100%;
+  width: fit-content;
   text-align: center;
   line-height: 1;
 }
@@ -216,6 +216,10 @@ svg.content-color {
 
   h3 {
     font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
   }
 }
 

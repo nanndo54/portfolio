@@ -1,25 +1,76 @@
 import styles from '#/styles/Experience.module.css'
+import { useState } from 'react'
 
-function Experience({ company, position, logo, from, to, url }) {
+import Skill from '#/components/Skill'
+import Text from '#/components/Text'
+import { getSkill } from '#/constants/skills'
+import ArrowIcon from '#/assets/svg/arrow.svg?react'
+import Icon from '#/components/Icon'
+import LinkButton from '#/components/LinkButton'
+
+function Experience({ company, web, technologies = [], icon, images = [] }) {
+  const [imageIndex, setImageIndex] = useState(0)
+
+  const handleImageChange = (index) => {
+    setImageIndex(index)
+  }
+
+  const skills = technologies.map((name) => getSkill(name))
+
   return (
     <article className={styles.base}>
       <div className={styles.header}>
-        <h3>
-          <a target='_blank' rel='noreferrer' href={url}>
-            {company} {from} {to}
-          </a>
-        </h3>
-        <h4>
-          <a target='_blank' rel='noreferrer' href={url}>
-            {position}
-          </a>
-        </h4>
+        <div className={styles.title}>
+          <img src={icon} alt={company} />
+          <h4>{company}</h4>
+        </div>
       </div>
       <div className={styles.content}>
-        {/* <Text as={'p'} id={`project.${position}`} /> */}
-        <div className={styles.images}>
-          <img src={logo} alt={`${company} logo`} />
+        <Text as={'p'} localeId={`company.${company.toLowerCase()}`} />
+        <div className={styles.skills}>
+          {skills.map((skill) => (
+            <Skill key={skill.name} {...skill} size='small' />
+          ))}
         </div>
+        <div className={styles.imageCarousel}>
+          <button
+            className={styles.previousImage}
+            onClick={() => {
+              handleImageChange((imageIndex - 1 + images.length) % images.length)
+            }}
+          >
+            <Icon icon={ArrowIcon} contentColor />
+          </button>
+          <div
+            className={styles.image}
+            style={{ backgroundImage: `url(${images[imageIndex]})` }}
+          />
+          <button
+            className={styles.nextImage}
+            onClick={() => {
+              handleImageChange((imageIndex + 1) % images.length)
+            }}
+          >
+            <Icon icon={ArrowIcon} contentColor />
+          </button>
+        </div>
+        <div className={styles.dots}>
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={imageIndex === index ? styles.selected : ''}
+              onClick={() => handleImageChange(index)}
+            />
+          ))}
+        </div>
+      </div>
+      <div className={styles.footer}>
+        {/* <LinkButton target='_blank' rel='noreferrer' href={code} type='secondary'>
+          <Text localeId='projects.button1' />
+        </LinkButton> */}
+        <LinkButton target='_blank' rel='noreferrer' href={web}>
+          <Text localeId='projects.button2' />
+        </LinkButton>
       </div>
     </article>
   )

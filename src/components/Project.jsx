@@ -8,27 +8,31 @@ import ArrowIcon from '#/assets/svg/arrow.svg?react'
 import Icon from '#/components/Icon'
 import LinkButton from '#/components/LinkButton'
 
-function Project({ name, web, code, technologies = [], images = [] }) {
+function Project({ name, web, code, technologies = [], icon, images = [] }) {
+  console.log('🚀 | name:', name)
   const [imageIndex, setImageIndex] = useState(0)
 
   const handleImageChange = (index) => {
     setImageIndex(index)
   }
 
-  const skills = technologies.map((name) => getSkill(name))
+  const skills = technologies.map(getSkill)
 
   return (
     <article className={styles.base}>
       <div className={styles.header}>
-        <h3>{name}</h3>
+        <div className={styles.title}>
+          <img src={icon} alt={name} />
+          <h4>{name}</h4>
+        </div>
+      </div>
+      <div className={styles.content}>
+        <Text as={'p'} localeId={`project.${name.toLowerCase()}`} />
         <div className={styles.skills}>
           {skills.map((skill) => (
             <Skill key={skill.name} {...skill} size='small' />
           ))}
         </div>
-      </div>
-      <div className={styles.content}>
-        <Text as={'p'} id={`project.${name.toLowerCase()}`} />
         <div className={styles.imageCarousel}>
           <button
             className={styles.previousImage}
@@ -63,10 +67,10 @@ function Project({ name, web, code, technologies = [], images = [] }) {
       </div>
       <div className={styles.footer}>
         <LinkButton target='_blank' rel='noreferrer' href={code} type='secondary'>
-          <Text id='projects.button1' />
+          <Text localeId='projects.button1' />
         </LinkButton>
         <LinkButton target='_blank' rel='noreferrer' href={web}>
-          <Text id='projects.button2' />
+          <Text localeId='projects.button2' />
         </LinkButton>
       </div>
     </article>

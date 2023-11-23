@@ -9,7 +9,7 @@ import Text from '#/components/Text'
 function SkillsSection() {
   return (
     <Section>
-      <Text as={'h2'} id='skills.title' />
+      <Text as={'h2'} localeId='skills.title' />
       {Object.entries(skills).map(([title, specificSkills]) => (
         <div className={styles.subsection} key={title}>
           <h3>{title}</h3>

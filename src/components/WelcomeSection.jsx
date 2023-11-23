@@ -62,7 +62,7 @@ function WelcomeSection() {
           </button>
         </div>
         <h1 className={styles.name}>Pablo Cabrera</h1>
-        <Text as={'p'} id='welcome.presentation' className={styles.presentation} />
+        <Text as={'p'} localeId='welcome.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
           <LinkButton
             target='_blank'
@@ -71,7 +71,7 @@ function WelcomeSection() {
             icon={CvIcon}
             tabIndex={isIntersected ? 0 : -1}
           >
-            <Text id='welcome.cv' />
+            <Text localeId='welcome.cv' />
           </LinkButton>
         </div>
       </div>

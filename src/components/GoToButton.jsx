@@ -6,7 +6,7 @@ import { handleScrollToTop } from '#/utilities/scroll'
 import Text from '#/components/Text'
 
 function GoToButton({ direction = 'down', label }) {
-  label = <Text as={'p'} id={label} />
+  label = <Text as={'p'} localeId={label} />
 
   const ref = useRef(null)
   const isIntersected = useIntersectionObserver(ref, {

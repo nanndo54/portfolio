@@ -1,13 +1,15 @@
-import koloImg from '#/assets/img/translator-img1.jpg'
+import koloImg from '#/assets/svg/logo.svg'
 
 const experiences = [
   {
     company: 'Kolo',
     position: 'Web Full Stack Developer',
-    logo: koloImg,
+    icon: koloImg,
+    images: [],
+    technologies: [],
     from: new Date('2022-02'),
-    to: null,
-    url: 'https//info.kolo-app.com'
+    to: new Date('2023-11'),
+    web: 'https//info.kolo-app.com'
   }
 ]
 
