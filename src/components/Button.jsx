@@ -2,11 +2,46 @@ import styles from '#/styles/Button.module.css'
 
 import Icon from '#/components/Icon'
 
-function Button({ className = '', icon, children, ...props }) {
-  return (
-    <button type='button' className={`${className} ${styles.base}`} {...props}>
+const classNameByType = {
+  primary: '',
+  secondary: styles.secondary,
+  tertiary: styles.tertiary
+}
+
+function Button({
+  className = '',
+  type = 'primary',
+  href,
+  onClick,
+  icon,
+  children,
+  ...props
+}) {
+  const childrenElement = (
+    <>
       {children}
-      <Icon icon={icon} className={styles.icon} />
+      {icon && <Icon src={icon} className={styles.icon} />}
+    </>
+  )
+
+  return href ? (
+    <a
+      className={`${className} ${classNameByType[type]} ${styles.base}`}
+      target='_blank'
+      rel='noreferrer'
+      href={href}
+      {...props}
+    >
+      {childrenElement}
+    </a>
+  ) : (
+    <button
+      className={`${className} ${classNameByType[type]} ${styles.base}`}
+      type='button'
+      onClick={onClick}
+      {...props}
+    >
+      {childrenElement}
     </button>
   )
 }

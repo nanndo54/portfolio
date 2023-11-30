@@ -1,0 +1,30 @@
+.base {
+  fill: var(--primary-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+
+  border: 0.15rem solid var(--primary-color);
+  border-radius: 0.9rem;
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.noBorder {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.base:hover {
+  transform: scale(1.03);
+}
+
+.base:active {
+  transform: scale(0.98);
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+}

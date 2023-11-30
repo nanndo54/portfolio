@@ -23,10 +23,6 @@ header.base {
   transform: translateY(0rem);
 }
 
-.container * {
-  pointer-events: none;
-}
-
 .avatar {
   position: relative;
   top: 0;
@@ -34,13 +30,9 @@ header.base {
 
   height: 20rem;
   width: 20rem;
-  padding: 0.8rem;
   margin: auto;
 
   transform: translateX(16rem) translateY(2.5rem);
-
-  border-radius: 50%;
-  border: 0.6rem solid var(--dim-accent-color);
 
   -webkit-background-clip: content-box;
   background-clip: content-box;
@@ -92,9 +84,9 @@ header.base {
 }
 
 .avatar img {
-  width: 100%;
-  padding: 0;
-  border-radius: inherit;
+  padding: 0.8rem;
+  border: 0.6rem solid var(--dim-accent-color);
+  border-radius: 50%;
   filter: grayscale(15%);
 }
 .avatar > * {
@@ -150,7 +142,7 @@ header.base.overlay {
 
 .base .contact {
   position: absolute;
-  top: 0;
+  top: 2.7rem;
 
   height: 200%;
 
@@ -168,10 +160,6 @@ header.base.overlay {
   cursor: initial;
 }
 
-.base .contact a {
-  border: 0.18rem solid var(--dim-secondary-accent-color);
-}
-
 .contact a + a {
   margin-top: -120%;
 
@@ -181,7 +169,7 @@ header.base.overlay {
 }
 
 .base .contact.open {
-  transform: translateY(80rem) translateX(7rem) scale(4);
+  transform: translateY(80rem) translateX(8rem) scale(4);
   opacity: 1;
 
   transition:

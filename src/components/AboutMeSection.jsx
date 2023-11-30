@@ -5,19 +5,20 @@ import Section from '#/components/Section'
 import guatemalaImage from '#/assets/img/guatemala.jpg'
 import campusImage from '#/assets/img/campus.jpg'
 import Text from '#/components/Text'
+import Image from '#/components/Image'
 
 function AboutMeSection() {
   return (
     <Section>
-      <Text as={'h2'} localeId='aboutme.title' />
-      <Text as={'p'} localeId='aboutme.text1' />
-      <div className={styles.inline}>
-        <img src={guatemalaImage} alt='Guatemala, Lago de Atitlán' />
-        <Text as={'p'} localeId='aboutme.text2' />
+      <Text as='h2' localeId='about-me.title' />
+      <Text as='p' localeId='about-me.text1' />
+      <div className={styles.subsection}>
+        <Image src={guatemalaImage} alt='Guatemala, Lago de Atitlán' />
+        <Text as='p' localeId='about-me.text2' />
       </div>
-      <div className={styles.inline}>
-        <img src={campusImage} alt='USAC' />
-        <Text as={'p'} localeId='aboutme.text3' />
+      <div className={styles.subsection}>
+        <Image src={campusImage} alt='USAC' />
+        <Text as='p' localeId='about-me.text3' />
       </div>
     </Section>
   )

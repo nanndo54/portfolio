@@ -19,11 +19,11 @@ function ProjectsSection() {
 
   return (
     <Section>
-      <Text as={'h2'} localeId='projects.title' />
-      <Text as={'p'} localeId='projects.text1' />
+      <Text as='h2' localeId='projects.title' />
+      <Text as='p' localeId='projects.text1' />
       <div className={styles.content}>
         <div className={styles.timeline}>
-          <Icon icon={ArrowIcon} />
+          <Icon src={ArrowIcon} />
         </div>
         <div className={styles.allProjects}>
           {Object.entries(years).map(([year, projects]) => (

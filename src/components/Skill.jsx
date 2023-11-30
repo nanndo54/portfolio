@@ -1,16 +1,25 @@
-import Icon from '#/components/Icon'
 import styles from '#/styles/Skill.module.css'
 
+import Icon from '#/components/Icon'
+import useAppStore from '#/store'
+
+const classNameBySize = {
+  small: styles.small
+}
+
 function Skill({ size = 'medium', name, icon, props }) {
-  const className = `${styles.base} ${
-    size === 'big' ? styles.big : size === 'small' ? styles.small : ''
-  }`
+  const className = `${styles.base} ${classNameBySize[size] || ''}`
+  const { openShowcase } = useAppStore()
 
   return (
     <div className={className}>
-      <div className={styles.icon} title={size === 'small' ? name : ''}>
-        <Icon icon={icon} alt={name} {...props} />
-      </div>
+      <button
+        className={styles.icon}
+        title={size === 'small' ? name : ''}
+        onClick={() => openShowcase({ component: icon, alt: name })}
+      >
+        <Icon src={icon} alt={name} {...props} />
+      </button>
       {size !== 'small' && <span>{name}</span>}
     </div>
   )

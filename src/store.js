@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react'
 
 const initialState = {
   locale: 'en',
-  theme: 'light'
+  theme: 'light',
+  showcase: {}
 }
 
 const store = create(
@@ -15,10 +16,17 @@ const store = create(
       toggleTheme: () =>
         set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       toggleLocale: () =>
-        set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' }))
+        set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' })),
+      openShowcase: ({ open = true, ...showcase }) =>
+        set(() => ({ showcase: { open, ...showcase } })),
+      closeShowcase: () => set(() => ({ showcase: { open: false } }))
     }),
     {
-      name: 'app-storage'
+      name: 'app-storage',
+      partialize: ({ locale, theme }) => ({
+        locale,
+        theme
+      })
     }
   )
 )

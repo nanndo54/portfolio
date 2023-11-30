@@ -1,15 +1,11 @@
 import styles from '#/styles/Icon.module.css'
 
-function Icon({ className = '', contentColor, icon, ...props }) {
-  const Icon = icon
-
+function Icon({ className = '', contentColor, src: IconComponent, ...props }) {
   return (
-    icon && (
-      <Icon
-        className={`${styles.base} ${contentColor ? 'content-color' : ''} ${className}`}
-        {...props}
-      />
-    )
+    <IconComponent
+      className={`${styles.base} ${contentColor ? 'content-color' : ''} ${className}`}
+      {...props}
+    />
   )
 }
 

@@ -1,0 +1,95 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.base.open {
+  opacity: 1;
+  background-color: #000000aa;
+
+  pointer-events: all;
+}
+
+.base .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid red;
+}
+
+.base img {
+  box-shadow: 0 0 5rem #00000088;
+  transition: width 0.2s;
+}
+
+.base img[src*='.png'],
+.base img[src*='.svg'] {
+  box-shadow: none;
+}
+
+.base .closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: var(--primary-color);
+}
+
+.zoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  gap: 0.7rem;
+
+  position: absolute;
+  bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.zoom > svg {
+  height: 2rem;
+  width: 2rem;
+
+  fill: var(--footer-font-color);
+}
+
+.zoom label {
+  font-size: 1.2rem;
+  color: var(--footer-font-color);
+  width: 3.5rem;
+}
+
+.zoomButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.zoomButtons button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-color: var(--footer-font-color);
+}
+
+.zoomButtons svg {
+  fill: var(--footer-font-color);
+}

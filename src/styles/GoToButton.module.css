@@ -23,8 +23,8 @@
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 3rem;
+  width: 3rem;
 
   opacity: 0;
   transform: translateY(60px);

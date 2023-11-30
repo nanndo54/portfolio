@@ -14,7 +14,7 @@ function ContactIcons({ className = '', tabIndex }) {
           href={url}
           tabIndex={tabIndex}
         >
-          <Icon icon={icon} {...props} />
+          <Icon src={icon} {...props} />
         </a>
       ))}
     </nav>

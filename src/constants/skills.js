@@ -1,30 +1,30 @@
-import HtmlIcon from '#/assets/svg/html-icon.svg?react'
-import CssIcon from '#/assets/svg/css-icon.svg?react'
+import HTMLIcon from '#/assets/svg/html-icon.svg?react'
+import CSSIcon from '#/assets/svg/css-icon.svg?react'
 import JavaScriptIcon from '#/assets/svg/javascript-icon.svg?react'
 import TypeScriptIcon from '#/assets/svg/typescript-icon.svg?react'
-import ReactIcon from '#/assets/svg/reactjs-icon.svg?react'
+import ReactJSIcon from '#/assets/svg/reactjs-icon.svg?react'
 import ReduxIcon from '#/assets/svg/redux-icon.svg?react'
 
 import ExpressIcon from '#/assets/svg/express-icon.svg?react'
 import GoIcon from '#/assets/svg/go-icon.svg?react'
 import PythonIcon from '#/assets/svg/python-icon.svg?react'
 import MongodbIcon from '#/assets/svg/mongodb-icon.svg?react'
-import MysqlIcon from '#/assets/svg/mysql-icon.svg?react'
-import OracleSqlIcon from '#/assets/svg/oraclesql-icon.svg?react'
+import MySQLIcon from '#/assets/svg/mysql-icon.svg?react'
+import OracleSQLIcon from '#/assets/svg/oraclesql-icon.svg?react'
 
 import JavaIcon from '#/assets/svg/java-icon.svg?react'
-import AwsIcon from '#/assets/svg/aws-icon.svg?react'
+import AWSIcon from '#/assets/svg/aws-icon.svg?react'
 import OracleCloudIcon from '#/assets/svg/oraclecloud-icon.svg?react'
 
 const skills = {
   FrontEnd: [
     {
       name: 'HTML',
-      icon: HtmlIcon
+      icon: HTMLIcon
     },
     {
       name: 'CSS',
-      icon: CssIcon
+      icon: CSSIcon
     },
     {
       name: 'JavaScript',
@@ -36,7 +36,7 @@ const skills = {
     },
     {
       name: 'ReactJS',
-      icon: ReactIcon
+      icon: ReactJSIcon
     },
     {
       name: 'Redux',
@@ -63,11 +63,11 @@ const skills = {
     },
     {
       name: 'MySQL',
-      icon: MysqlIcon
+      icon: MySQLIcon
     },
     {
       name: 'PL/SQL',
-      icon: OracleSqlIcon
+      icon: OracleSQLIcon
     }
   ],
   Otras: [
@@ -77,7 +77,7 @@ const skills = {
     },
     {
       name: 'AWS',
-      icon: AwsIcon
+      icon: AWSIcon
     },
     {
       name: 'OCI',

@@ -23,19 +23,25 @@ function Navbar() {
   return (
     <nav className={styles.base}>
       <div className={styles.items}>
-        <button type='button' className={styles.logo} onClick={handleScrollToTop}>
-          <Icon icon={LogoIcon} />
+        <button
+          type='button'
+          aria-label='Logo de la página'
+          className={styles.logo}
+          onClick={handleScrollToTop}
+        >
+          <Icon src={LogoIcon} />
         </button>
         <DarkModeSwitch
           checked={theme === 'dark'}
           onChange={toggleTheme}
           moonColor='var(--content-color)'
           sunColor='var(--content-color)'
+          aria-label='Cambiar tema'
         />
         <button
           className={styles.language}
           onClick={toggleLocale}
-          aria-label='cambiar lenguaje'
+          aria-label='Cambiar lenguaje'
         >
           {locale}
         </button>

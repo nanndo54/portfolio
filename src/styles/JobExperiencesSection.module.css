@@ -51,7 +51,7 @@
   transform: translate(-1.4rem, 1rem) scaleX(0.8) rotate(90deg);
 }
 
-.allProjects {
+.allExperiences {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -60,19 +60,19 @@
   padding: 1.2rem 0;
 }
 
-.projects {
+.experiences {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
 }
 
-.projects > h3 {
+.experiences > h3 {
   font-family: 'Oleo Script Swash Caps';
   margin-left: 1.5rem;
 }
 
-.projects > h3::before {
+.experiences > h3::before {
   content: '';
   display: block;
   width: 3.7rem;
@@ -96,11 +96,11 @@
     gap: 1.8rem;
   }
 
-  .projects {
+  .experiences {
     grid-template-columns: 1fr;
   }
 
-  .projects > h3::before {
+  .experiences > h3::before {
     width: 3rem;
 
     transform: translate(-4.5rem, -1.2rem);

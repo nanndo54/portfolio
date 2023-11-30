@@ -1,27 +1,28 @@
 import styles from '#/styles/WelcomeSection.module.css'
 import { useEffect, useRef, useState } from 'react'
+import { useIntl } from 'react-intl'
 
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 import ContactIcons from '#/components/ContactIcons'
-import LinkButton from '#/components/LinkButton'
+import Button from '#/components/Button'
+import Image from '#/components/Image'
 import useIntersectionObserver from '#/hooks/useIntersectionObserver'
-import contacts from '#/constants/contacts'
 
 import photo from '#/assets/img/profile-photo.jpg'
 import squeak from '#/assets/sounds/squeak.mp3'
 import CvIcon from '#/assets/svg/cv-icon.svg?react'
 
 function WelcomeSection() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const intl = useIntl()
   const ref = useRef(null)
+
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const isIntersected = useIntersectionObserver(ref, {
     once: false,
     threshold: 0.8
   })
-
-  const CV = contacts.find((contact) => contact.name === 'CV')
 
   useEffect(() => {
     setMenuOpen(!isIntersected)
@@ -58,21 +59,20 @@ function WelcomeSection() {
             onClick={(ev) => handleMenuButton(ev.target.value)}
             tabIndex={isIntersected ? -1 : 0}
           >
-            <img src={photo} alt='Mi fotografía' />
+            <Image src={photo} height='100%' width='100%' alt='Mi fotografía' noZoom />
           </button>
         </div>
         <h1 className={styles.name}>Pablo Cabrera</h1>
         <Text as={'p'} localeId='welcome.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
-          <LinkButton
-            target='_blank'
-            rel='noreferrer'
-            href={CV?.url}
+          <Button
+            href={intl.formatMessage({ id: 'link.cv' })}
+            download
             icon={CvIcon}
             tabIndex={isIntersected ? 0 : -1}
           >
             <Text localeId='welcome.cv' />
-          </LinkButton>
+          </Button>
         </div>
       </div>
     </Section>

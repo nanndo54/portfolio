@@ -6,10 +6,10 @@ import Text from '#/components/Text'
 import { getSkill } from '#/constants/skills'
 import ArrowIcon from '#/assets/svg/arrow.svg?react'
 import Icon from '#/components/Icon'
-import LinkButton from '#/components/LinkButton'
+import Button from '#/components/Button'
+import Image from '#/components/Image'
 
 function Project({ name, web, code, technologies = [], icon, images = [] }) {
-  console.log('🚀 | name:', name)
   const [imageIndex, setImageIndex] = useState(0)
 
   const handleImageChange = (index) => {
@@ -22,12 +22,12 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
     <article className={styles.base}>
       <div className={styles.header}>
         <div className={styles.title}>
-          <img src={icon} alt={name} />
+          <Image src={icon} height={40} width={40} alt={name} />
           <h4>{name}</h4>
         </div>
       </div>
       <div className={styles.content}>
-        <Text as={'p'} localeId={`project.${name.toLowerCase()}`} />
+        <Text as='p' localeId={`project.${name.toLowerCase()}`} />
         <div className={styles.skills}>
           {skills.map((skill) => (
             <Skill key={skill.name} {...skill} size='small' />
@@ -35,29 +35,32 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
         </div>
         <div className={styles.imageCarousel}>
           <button
+            aria-label='Ver imagen anterior'
             className={styles.previousImage}
             onClick={() => {
               handleImageChange((imageIndex - 1 + images.length) % images.length)
             }}
           >
-            <Icon icon={ArrowIcon} contentColor />
+            <Icon src={ArrowIcon} contentColor />
           </button>
           <div
             className={styles.image}
             style={{ backgroundImage: `url(${images[imageIndex]})` }}
           />
           <button
+            aria-label='Ver imagen siguiente'
             className={styles.nextImage}
             onClick={() => {
               handleImageChange((imageIndex + 1) % images.length)
             }}
           >
-            <Icon icon={ArrowIcon} contentColor />
+            <Icon src={ArrowIcon} contentColor />
           </button>
         </div>
         <div className={styles.dots}>
           {images.map((_, index) => (
             <button
+              aria-label={`Ver imagen ${index + 1}`}
               key={index}
               className={imageIndex === index ? styles.selected : ''}
               onClick={() => handleImageChange(index)}
@@ -66,12 +69,12 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
         </div>
       </div>
       <div className={styles.footer}>
-        <LinkButton target='_blank' rel='noreferrer' href={code} type='secondary'>
+        <Button href={code} type='secondary'>
           <Text localeId='projects.button1' />
-        </LinkButton>
-        <LinkButton target='_blank' rel='noreferrer' href={web}>
+        </Button>
+        <Button href={web}>
           <Text localeId='projects.button2' />
-        </LinkButton>
+        </Button>
       </div>
     </article>
   )
