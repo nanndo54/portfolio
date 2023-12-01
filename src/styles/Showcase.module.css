@@ -5,11 +5,11 @@
 
   width: 100%;
   height: 100%;
-
+  margin: 0;
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
+
   opacity: 0;
 
   pointer-events: none;
@@ -25,33 +25,62 @@
 }
 
 .base .content {
+  transition: width 0.2s;
+
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.content > * {
+  width: 100%;
+  height: 100%;
+}
+
+.content img {
+  box-shadow: 0 0 5rem #00000088;
+}
+
+.content svg {
+  filter: drop-shadow(0 2rem 2rem #00000088);
+}
+
+.base .overlay {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 1px solid red;
+  box-shadow:
+    inset 0 20rem 20rem -20rem #000000cc,
+    inset 0 -20rem 20rem -20rem #000000cc;
+  pointer-events: none;
 }
 
-.base img {
-  box-shadow: 0 0 5rem #00000088;
-  transition: width 0.2s;
+.base.open .overlay * {
+  pointer-events: all;
 }
 
-.base img[src*='.png'],
-.base img[src*='.svg'] {
+.content img[src*='.png'],
+.content img[src*='.svg'] {
   box-shadow: none;
 }
 
-.base .closeButton {
+.overlay .closeButton {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
   width: 2.2rem;
   height: 2.2rem;
-  fill: var(--primary-color);
+  fill: var(--footer-font-color);
 }
 
-.zoom {
+.overlay .zoom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +89,9 @@
 
   position: absolute;
   bottom: 2rem;
-  color: var(--primary-color);
+
+  font-size: 1.2rem;
+  color: var(--footer-font-color);
 }
 
 .zoom > svg {
@@ -68,12 +99,6 @@
   width: 2rem;
 
   fill: var(--footer-font-color);
-}
-
-.zoom label {
-  font-size: 1.2rem;
-  color: var(--footer-font-color);
-  width: 3.5rem;
 }
 
 .zoomButtons {

@@ -6,7 +6,7 @@ import Text from '#/components/Text'
 import Icon from '#/components/Icon'
 
 import projects from '#/constants/projects'
-import ArrowIcon from '#/assets/svg/arrow.svg?react'
+import { ArrowIcon } from '#/constants/icons'
 
 function ProjectsSection() {
   const years = projects.reduce((acc, project) => {
@@ -28,7 +28,7 @@ function ProjectsSection() {
         <div className={styles.allProjects}>
           {Object.entries(years).map(([year, projects]) => (
             <div key={year} className={styles.projects}>
-              <h3>{year}</h3>
+              <Text as='h3'>{year}</Text>
               {projects.map((project, i) => (
                 <Project key={i} {...project} />
               ))}

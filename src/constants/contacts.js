@@ -1,6 +1,4 @@
-import LinkedInIcon from '#/assets/svg/linkedin-icon.svg?react'
-import GitHubIcon from '#/assets/svg/github-icon.svg?react'
-import EmailIcon from '#/assets/svg/email-icon.svg?react'
+import { EmailIcon, GitHubIcon, LinkedInIcon } from '#/constants/icons'
 
 const contacts = [
   {

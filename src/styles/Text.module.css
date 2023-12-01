@@ -1,2 +1,77 @@
-.base {
+p.base {
+  font-size: 1.15rem;
+}
+
+.base:is(h1, h2, h3, h4, h5, h6) {
+  width: fit-content;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h1.base {
+  /* width: initial; */
+  font-family: 'Oleo Script Swash Caps';
+  font-size: 3.5rem;
+  text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
+
+  transition:
+    color 0.5s,
+    text-shadow 0.5s,
+    transform 0.3s;
+}
+
+h1.base::after {
+  content: '';
+  display: block;
+  width: calc(100% + 4rem);
+  height: 0.8rem;
+
+  margin: auto;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 200%;
+  border-bottom-left-radius: 1rem;
+  background-color: var(--dim-accent-color);
+
+  transform: translate(-2rem, 0.1rem);
+
+  transition: background-color 0.5s;
+}
+
+h2.base {
+  font-size: 2.5rem;
+}
+
+h3.base {
+  font-size: 2.15rem;
+}
+
+h4.base {
+  font-size: 1.95rem;
+}
+
+h5.base {
+  font-size: 1.5rem;
+}
+
+h6.base {
+  font-size: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  h1.base {
+    font-size: 3rem;
+  }
+
+  h2.base {
+    font-size: 2.2rem;
+  }
+
+  h3.base {
+    font-size: 2rem;
+  }
+
+  h4.base {
+    font-size: 1.7rem;
+  }
 }

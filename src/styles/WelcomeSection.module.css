@@ -101,8 +101,6 @@ header.base {
   margin: auto;
 
   transform: translateX(-13rem) translateY(-17rem);
-
-  transition: transform 0.3s;
 }
 
 .presentation {
@@ -133,7 +131,7 @@ header.base.overlay {
 }
 
 .base.overlay .name {
-  transform: translateX(-11rem) translateY(-13.5rem) scale(2.3);
+  transform: translateX(-12rem) translateY(-13.5rem) scale(2.3);
 }
 
 .base.overlay .presentation {

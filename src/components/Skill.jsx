@@ -11,14 +11,16 @@ function Skill({ size = 'medium', name, icon, props }) {
   const className = `${styles.base} ${classNameBySize[size] || ''}`
   const { openShowcase } = useAppStore()
 
+  const iconElement = <Icon src={icon} alt={name} {...props} />
+
   return (
     <div className={className}>
       <button
         className={styles.icon}
         title={size === 'small' ? name : ''}
-        onClick={() => openShowcase({ component: icon, alt: name })}
+        onClick={() => openShowcase({ element: iconElement })}
       >
-        <Icon src={icon} alt={name} {...props} />
+        {iconElement}
       </button>
       {size !== 'small' && <span>{name}</span>}
     </div>

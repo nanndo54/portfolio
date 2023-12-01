@@ -4,26 +4,23 @@ import { useState } from 'react'
 import useAppStore from '#/store'
 import Icon from '#/components/Icon'
 import IconButton from '#/components/IconButton'
-
-import zoomIcon from '#/assets/svg/zoom-icon.svg?react'
-import closeIcon from '#/assets/svg/close-icon.svg?react'
-import minusIcon from '#/assets/svg/minus-icon.svg?react'
-import plusIcon from '#/assets/svg/plus-icon.svg?react'
+import { CloseIcon, MinusIcon, PlusIcon, ZoomIcon } from '#/constants/icons'
+import Text from '#/components/Text'
 
 function Showcase() {
   const [zoom, setZoom] = useState(1)
-  const contentWidth = zoom * 800
+  const contentWidth = zoom * 700
 
   const { showcase, closeShowcase } = useAppStore()
-  const { open, src, component: Component, alt } = showcase
+  const { open, src, element, alt } = showcase
 
   const handleWheel = (ev) => {
     const isZoomIn = ev.deltaY < 0
-    handleChangeZoom(zoom + (isZoomIn ? 0.25 : -0.25))
+    handleChangeZoom(zoom + (isZoomIn ? 0.15 : -0.15))
   }
 
   const handleChangeZoom = (newZoom) => {
-    newZoom = newZoom > zoom ? Math.min(newZoom, 1.5) : Math.max(newZoom, 0.5)
+    newZoom = newZoom > zoom ? Math.min(newZoom, 1.3) : Math.max(newZoom, 0.7)
     setZoom(newZoom)
   }
 
@@ -33,39 +30,43 @@ function Showcase() {
       onClick={closeShowcase}
       onWheel={handleWheel}
     >
-      {src ? (
-        <img
-          width={contentWidth}
-          src={src}
-          alt={alt}
-          onClick={(ev) => ev.stopPropagation()}
+      <div
+        className={styles.content}
+        style={{ width: contentWidth }}
+        onClick={(ev) => ev.stopPropagation()}
+      >
+        {src ? <img src={src} alt={alt} /> : element}
+      </div>
+      <div className={styles.overlay}>
+        <IconButton
+          icon={CloseIcon}
+          className={styles.closeButton}
+          title='Cerrar'
+          noBorder
         />
-      ) : (
-        Component && <Component />
-      )}
-      <IconButton icon={closeIcon} className={styles.closeButton} noBorder />
-      <span className={styles.zoom}>
-        <Icon src={zoomIcon} />
-        <label>{zoom.toFixed(2) * 100}%</label>
-        <span className={styles.zoomButtons}>
-          <IconButton
-            icon={minusIcon}
-            onClick={(ev) => {
-              ev.stopPropagation()
-              handleChangeZoom(zoom - 0.25)
-            }}
-            alt='Reducir'
-          />
-          <IconButton
-            icon={plusIcon}
-            onClick={(ev) => {
-              ev.stopPropagation()
-              handleChangeZoom(zoom + 0.25)
-            }}
-            alt='Agrandar'
-          />
-        </span>
-      </span>
+        <div className={styles.zoom}>
+          <Icon src={ZoomIcon} />
+          <Text as='p'>{(zoom * 100).toFixed(0)}%</Text>
+          <span className={styles.zoomButtons}>
+            <IconButton
+              icon={MinusIcon}
+              onClick={(ev) => {
+                ev.stopPropagation()
+                handleChangeZoom(zoom - 0.15)
+              }}
+              title='Reducir'
+            />
+            <IconButton
+              icon={PlusIcon}
+              onClick={(ev) => {
+                ev.stopPropagation()
+                handleChangeZoom(zoom + 0.15)
+              }}
+              title='Agrandar'
+            />
+          </span>
+        </div>
+      </div>
     </div>
   )
 }

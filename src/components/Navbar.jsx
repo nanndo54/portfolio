@@ -2,11 +2,11 @@ import styles from '#/styles/Navbar.module.css'
 import { useEffect } from 'react'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
-import useAppStore from '#/store'
-
 import Icon from '#/components/Icon'
-import LogoIcon from '#/assets/svg/logo.svg?react'
+
+import useAppStore from '#/store'
 import { handleScrollToTop } from '#/utilities/scroll'
+import { LogoIcon } from '#/constants/icons'
 
 const verifyTheme = (theme) => {
   if (theme === 'dark') document.querySelector('body').classList.add('dark')

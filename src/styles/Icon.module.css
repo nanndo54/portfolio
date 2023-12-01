@@ -1,5 +1,9 @@
 .base {
-  /* fill: var(--alternate-font-color); */
-  /* width: 30px; */
-  /* height: 40px; */
+  transition:
+    border-color 0.5s,
+    fill 0.5s;
+}
+
+.contentColor {
+  fill: var(--content-color);
 }

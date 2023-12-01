@@ -12,7 +12,7 @@ function SkillsSection() {
       <Text as='h2' localeId='skills.title' />
       {Object.entries(skills).map(([title, specificSkills]) => (
         <div className={styles.subsection} key={title}>
-          <h3>{title}</h3>
+          <Text as='h3'>{title}</Text>
           <div className={styles.skills}>
             {specificSkills.map((skill) => (
               <Skill key={skill.name} {...skill} />

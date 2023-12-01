@@ -4,7 +4,7 @@
 
   padding: 0.8rem;
   border-radius: 1.5rem;
-  border: 0.25rem solid var(--dim-secondary-accent-color);
+  border: 0.25rem solid var(--dim-accent-color);
 
   transition:
     border 0.5s,

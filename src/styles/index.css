@@ -109,95 +109,6 @@ main {
   background-image: url('/src/assets/svg/background.svg');
 }
 
-svg {
-  transition:
-    border 0.5s,
-    opacity 0.5s,
-    fill 0.5s;
-}
-
-.no-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-p {
-  line-height: 1.6rem;
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  width: fit-content;
-  text-align: center;
-  vertical-align: bottom;
-  font-weight: 600;
-}
-
-h1 {
-  width: initial;
-  font-family: 'Oleo Script Swash Caps';
-  font-size: 3.5rem;
-  text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
-
-  transition:
-    color 0.5s,
-    text-shadow 0.5s;
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: calc(100% + 3rem);
-  height: 0.8rem;
-
-  margin: auto;
-  border-radius: 0.5rem;
-  border-bottom-right-radius: 200%;
-  border-bottom-left-radius: 1rem;
-  background-color: var(--dim-accent-color);
-
-  transform: translate(-1.5rem, -0.25rem);
-
-  transition: background-color 0.5s;
-}
-
-h2 {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-
-h3 {
-  font-size: 2.15rem;
-  /* line-height: 2.15rem; */
-}
-
-h4 {
-  font-size: 1.95rem;
-  /* line-height: 1.95rem; */
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 0.6rem;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-}
-
 a {
   background-color: transparent;
   color: var(--secondary-accent-color);
@@ -216,10 +127,6 @@ button:hover {
   cursor: pointer;
 }
 
-svg.content-color {
-  fill: var(--content-color);
-}
-
 strong {
   font-weight: 700;
   background: linear-gradient(
@@ -234,24 +141,6 @@ strong {
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
-}
-
-@media (max-width: 700px) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  h4 {
-    font-size: 1.7rem;
-  }
 }
 
 .no-select,

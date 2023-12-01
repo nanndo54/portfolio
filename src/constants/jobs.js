@@ -1,11 +1,11 @@
-import koloLogo from '#/assets/img/kolo-logo.png'
+import { KoloLogo } from '#/constants/icons'
 import koloImg from '#/assets/img/kolo-img.jpg'
 
 const jobs = [
   {
     company: 'Kolo',
     position: 'Full-Stack Web Developer',
-    logo: koloLogo,
+    logo: KoloLogo,
     image: koloImg,
     web: 'https://info.kolo-app.com',
     year: 2022,

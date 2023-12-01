@@ -4,10 +4,9 @@ import { useState } from 'react'
 import Skill from '#/components/Skill'
 import Text from '#/components/Text'
 import { getSkill } from '#/constants/skills'
-import ArrowIcon from '#/assets/svg/arrow.svg?react'
 import Icon from '#/components/Icon'
 import Button from '#/components/Button'
-import Image from '#/components/Image'
+import { ArrowIcon } from '#/constants/icons'
 
 function Project({ name, web, code, technologies = [], icon, images = [] }) {
   const [imageIndex, setImageIndex] = useState(0)
@@ -22,8 +21,8 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
     <article className={styles.base}>
       <div className={styles.header}>
         <div className={styles.title}>
-          <Image src={icon} height={40} width={40} alt={name} />
-          <h4>{name}</h4>
+          <Icon src={icon} height={34} alt={name} />
+          <Text as='h4'>{name}</Text>
         </div>
       </div>
       <div className={styles.content}>

@@ -25,13 +25,11 @@
 .header .title {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
 }
 
-.title img {
-  height: 2.7rem;
-  padding: 0.3rem;
-  border-width: 0.2rem;
+.title svg {
+  height: 2.2rem;
 }
 
 .base .content {
@@ -54,7 +52,7 @@
   flex: 0;
   text-wrap: nowrap;
 
-  color: var(--secondary-accent-color);
+  color: var(--accent-color);
   text-align: left;
 }
 
@@ -74,7 +72,7 @@
 
 .imageCarousel {
   width: 100%;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
 
   display: grid;
   align-items: center;

@@ -10,8 +10,7 @@ import Image from '#/components/Image'
 import useIntersectionObserver from '#/hooks/useIntersectionObserver'
 
 import photo from '#/assets/img/profile-photo.jpg'
-import squeak from '#/assets/sounds/squeak.mp3'
-import CvIcon from '#/assets/svg/cv-icon.svg?react'
+import { CvIcon } from '#/constants/icons'
 
 function WelcomeSection() {
   const intl = useIntl()
@@ -32,7 +31,7 @@ function WelcomeSection() {
     if (isIntersected) return
 
     if (Audio) {
-      const squeakAudio = new Audio(squeak)
+      const squeakAudio = new Audio('/src/assets/sounds/squeak.mp3')
       squeakAudio.volume = 0.3
       squeakAudio.play()
     }
@@ -62,12 +61,14 @@ function WelcomeSection() {
             <Image src={photo} height='100%' width='100%' alt='Mi fotografía' noZoom />
           </button>
         </div>
-        <h1 className={styles.name}>Pablo Cabrera</h1>
-        <Text as={'p'} localeId='welcome.presentation' className={styles.presentation} />
+        <Text as='h1' className={styles.name}>
+          Pablo Cabrera
+        </Text>
+        <Text as='p' localeId='welcome.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
           <Button
             href={intl.formatMessage({ id: 'link.cv' })}
-            download
+            download='Pablo Cabrera - CV.pdf'
             icon={CvIcon}
             tabIndex={isIntersected ? 0 : -1}
           >
