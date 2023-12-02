@@ -1,3 +1,15 @@
 .base {
   height: 100%;
+
+  opacity: 0.2;
+  transform: translateY(1rem);
+
+  transition:
+    opacity 0.08s,
+    transform 0.2s ease-out;
+}
+
+.loaded {
+  opacity: 1;
+  transform: none;
 }

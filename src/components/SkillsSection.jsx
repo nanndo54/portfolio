@@ -6,9 +6,9 @@ import Skill from '#/components/Skill'
 import skills from '#/constants/skills'
 import Text from '#/components/Text'
 
-function SkillsSection() {
+function SkillsSection({ id }) {
   return (
-    <Section>
+    <Section id={id}>
       <Text as='h2' localeId='skills.title' />
       {Object.entries(skills).map(([title, specificSkills]) => (
         <div className={styles.subsection} key={title}>

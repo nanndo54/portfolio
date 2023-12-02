@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem;
 }
 
 .icon {
@@ -13,8 +14,6 @@
   height: 4.2rem;
   width: 4.2rem;
   padding: 0.35rem;
-
-  margin-bottom: 0.8rem;
 
   border: 0.27rem solid var(--dim-accent-color);
   border-radius: 50%;
@@ -33,5 +32,4 @@
   width: 2.4rem;
   padding: 0.2rem;
   border-width: 0.15rem;
-  margin-bottom: 0;
 }

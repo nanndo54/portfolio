@@ -7,9 +7,9 @@ import campusImage from '#/assets/img/campus.jpg'
 import Text from '#/components/Text'
 import Image from '#/components/Image'
 
-function AboutMeSection() {
+function AboutMeSection({ id }) {
   return (
-    <Section>
+    <Section id={id}>
       <Text as='h2' localeId='about-me.title' />
       <Text as='p' localeId='about-me.text1' />
       <div className={styles.subsection}>

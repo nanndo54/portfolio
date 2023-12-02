@@ -1,5 +1,5 @@
 import styles from '#/styles/WelcomeSection.module.css'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
 import Section from '#/components/Section'
@@ -7,28 +7,23 @@ import Text from '#/components/Text'
 import ContactIcons from '#/components/ContactIcons'
 import Button from '#/components/Button'
 import Image from '#/components/Image'
-import useIntersectionObserver from '#/hooks/useIntersectionObserver'
 
 import photo from '#/assets/img/profile-photo.jpg'
 import { CvIcon } from '#/constants/icons'
+import useAppStore from '#/store'
 
-function WelcomeSection() {
+function WelcomeSection({ id }) {
+  const { isOnTop } = useAppStore()
   const intl = useIntl()
-  const ref = useRef(null)
 
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const isIntersected = useIntersectionObserver(ref, {
-    once: false,
-    threshold: 0.8
-  })
-
   useEffect(() => {
-    setMenuOpen(!isIntersected)
-  }, [isIntersected])
+    setMenuOpen(!isOnTop)
+  }, [isOnTop])
 
   const handleMenuButton = () => {
-    if (isIntersected) return
+    if (isOnTop) return
 
     if (Audio) {
       const squeakAudio = new Audio('/src/assets/sounds/squeak.mp3')
@@ -43,8 +38,8 @@ function WelcomeSection() {
     <Section
       as='header'
       background={false}
-      className={`${styles.base} ${isIntersected ? '' : styles.overlay}`}
-      ref={ref}
+      className={`${styles.base} ${isOnTop ? '' : styles.overlay}`}
+      id={id}
     >
       <div className={styles.container}>
         <div className={styles.avatar}>
@@ -56,7 +51,7 @@ function WelcomeSection() {
             type='button'
             className={styles.avatarButton}
             onClick={(ev) => handleMenuButton(ev.target.value)}
-            tabIndex={isIntersected ? -1 : 0}
+            tabIndex={isOnTop ? -1 : 0}
           >
             <Image src={photo} height='100%' width='100%' alt='Mi fotografía' noZoom />
           </button>
@@ -70,7 +65,7 @@ function WelcomeSection() {
             href={intl.formatMessage({ id: 'link.cv' })}
             download='Pablo Cabrera - CV.pdf'
             icon={CvIcon}
-            tabIndex={isIntersected ? 0 : -1}
+            tabIndex={isOnTop ? 0 : -1}
           >
             <Text localeId='welcome.cv' />
           </Button>

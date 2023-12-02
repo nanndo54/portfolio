@@ -8,7 +8,7 @@ import Icon from '#/components/Icon'
 import projects from '#/constants/projects'
 import { ArrowIcon } from '#/constants/icons'
 
-function ProjectsSection() {
+function ProjectsSection({ id }) {
   const years = projects.reduce((acc, project) => {
     const year = project.year
     if (!acc[year]) acc[year] = []
@@ -18,7 +18,7 @@ function ProjectsSection() {
   }, {})
 
   return (
-    <Section>
+    <Section id={id}>
       <Text as='h2' localeId='projects.title' />
       <Text as='p' localeId='projects.text1' />
       <div className={styles.content}>

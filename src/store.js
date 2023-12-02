@@ -4,6 +4,8 @@ import { persist } from 'zustand/middleware'
 import { useEffect, useState } from 'react'
 
 const initialState = {
+  isOnTop: true,
+  currentSection: 'welcome',
   locale: 'en',
   theme: 'light',
   showcase: {}
@@ -13,6 +15,8 @@ const store = create(
   persist(
     (set) => ({
       ...initialState,
+      setOnTop: (isOnTop) => set(() => ({ isOnTop })),
+      setCurrentSection: (currentSection) => set(() => ({ currentSection })),
       toggleTheme: () =>
         set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       toggleLocale: () =>
@@ -23,7 +27,8 @@ const store = create(
     }),
     {
       name: 'app-storage',
-      partialize: ({ locale, theme }) => ({
+      partialize: ({ currentSection, locale, theme }) => ({
+        currentSection,
         locale,
         theme
       })

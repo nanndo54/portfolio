@@ -7,24 +7,24 @@ p.base {
   text-align: center;
   font-weight: 600;
   line-height: 1;
+  font-family: var(--subtitle-font);
 }
 
 h1.base {
-  /* width: initial; */
-  font-family: 'Oleo Script Swash Caps';
-  font-size: 3.5rem;
+  font-family: var(--title-font);
+  font-size: 4rem;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
 
   transition:
     color 0.5s,
     text-shadow 0.5s,
-    transform 0.3s;
+    opacity 0.2s;
 }
 
 h1.base::after {
   content: '';
   display: block;
-  width: calc(100% + 4rem);
+  width: calc(100% + 2rem);
   height: 0.8rem;
 
   margin: auto;
@@ -33,7 +33,7 @@ h1.base::after {
   border-bottom-left-radius: 1rem;
   background-color: var(--dim-accent-color);
 
-  transform: translate(-2rem, 0.1rem);
+  transform: translate(-1rem, 0.3rem);
 
   transition: background-color 0.5s;
 }

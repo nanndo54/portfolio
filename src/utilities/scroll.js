@@ -8,11 +8,11 @@ const handleScroll = (coords, direction = 'down') => {
   })
 }
 
-const handleScrollToTop = () => {
+const handleScrollToTop = (top = 0) => {
   const base = document.getElementById('base')
 
   base.scrollTo({
-    top: 0,
+    top,
     behavior: 'smooth'
   })
 }

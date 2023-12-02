@@ -2,24 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  transform: translateY(-20px);
-}
-
-.base:hover {
-  cursor: pointer;
 }
 
 .base p {
   font-size: 1rem;
   opacity: 0;
 
-  transform: translateY(15px);
+  transform: translateY(1rem);
 
   transition:
     color 0.5s,
-    opacity 0.5s 0.8s,
-    transform 0.5s 0.8s;
+    opacity 0.5s 0.4s,
+    transform 0.5s 0.4s;
 }
 
 .icon {
@@ -27,7 +21,7 @@
   width: 3rem;
 
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(4rem);
 
   animation: appear-button 0.5s forwards;
 }
@@ -39,8 +33,8 @@
   border-radius: 50%;
   transition:
     background-color 0.3s,
-    transform 0.3s 0.8s,
-    border-radius 0.3s 0.8s;
+    transform 0.3s 0.4s,
+    border-radius 0.3s 0.4s;
 }
 
 .dot1 {
@@ -62,11 +56,9 @@
 }
 
 .base:hover p,
-.base.arrow p,
-.base.up:hover p,
-.base.up.arrow p {
+.base.arrow p {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 .base.arrow .icon > div,
@@ -75,29 +67,17 @@
 }
 
 .base:hover .dot1,
-.base.arrow .dot1,
-.base.up:hover .dot1,
-.base.up.arrow .dot1 {
+.base.arrow .dot1 {
   transform: scale(50%, 200%) translate(28px, 8px);
 }
 
 .base:hover .dot2,
 .base.arrow .dot2 {
-  transform: translate(11px, 30px) rotate(140deg) scale(50%, 150%);
+  transform: translate(11px, 7px) rotate(40deg) scale(50%, 150%);
 }
 
 .base:hover .dot3,
 .base.arrow .dot3 {
-  transform: translate(23px, 32px) rotate(40deg) scale(70%, 210%);
-}
-
-.base.up:hover .dot2,
-.base.up.arrow .dot2 {
-  transform: translate(11px, 7px) rotate(40deg) scale(50%, 150%);
-}
-
-.base.up:hover .dot3,
-.base.up.arrow .dot3 {
   transform: translate(23px, 9px) rotate(-40deg) scale(70%, 210%);
 }
 

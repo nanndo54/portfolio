@@ -8,7 +8,7 @@ import Icon from '#/components/Icon'
 import jobs from '#/constants/jobs'
 import { ArrowIcon } from '#/constants/icons'
 
-function JobExperiencesSection() {
+function JobExperiencesSection({ id }) {
   const years = jobs.reduce((acc, project) => {
     const year = project.year
     if (!acc[year]) acc[year] = []
@@ -18,9 +18,9 @@ function JobExperiencesSection() {
   }, {})
 
   return (
-    <Section>
-      <Text as='h2' localeId='job-experiences.title' />
-      <Text as='p' localeId='job-experiences.text1' />
+    <Section id={id}>
+      <Text as='h2' localeId='job-experience.title' />
+      <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>
         <div className={styles.timeline}>
           <Icon src={ArrowIcon} />

@@ -24,11 +24,13 @@ function Button({
     </>
   )
 
+  const isExternLink = href?.startsWith('http')
+
   return href ? (
     <a
       className={`${className} ${classNameByType[type]} ${styles.base}`}
-      target='_blank'
-      rel='noreferrer'
+      target={isExternLink ? '_blank' : undefined}
+      rel={isExternLink ? 'noreferrer' : undefined}
       href={href}
       {...props}
     >

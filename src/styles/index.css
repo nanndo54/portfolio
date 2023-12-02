@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Numans&family=Taviraj:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;600&display=swap');
+
 @font-face {
   font-family: 'Nunito';
   font-style: normal;
@@ -67,10 +71,14 @@ body {
   --footer-background-color: rgb(15, 15, 25);
   --footer-font-color: rgb(230, 230, 240);
 
+  --title-font: 'Maitree';
+  --subtitle-font: 'Taviraj';
+  --body-font: 'Hind Madurai';
+
   color: var(--font-color);
+  font-family: var(--body-font), sans-serif;
 
   height: 100dvh;
-  font-family: 'Nunito', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

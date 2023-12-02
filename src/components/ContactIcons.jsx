@@ -1,6 +1,7 @@
 import styles from '#/styles/ContactIcons.module.css'
 import Icon from '#/components/Icon'
 import contacts from '#/constants/contacts'
+import GoToTopButton from '#/components/GoToTopButton'
 
 function ContactIcons({ className = '', tabIndex }) {
   return (
@@ -17,6 +18,7 @@ function ContactIcons({ className = '', tabIndex }) {
           <Icon src={icon} {...props} />
         </a>
       ))}
+      <GoToTopButton />
     </nav>
   )
 }
