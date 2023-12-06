@@ -6,6 +6,7 @@ import IconButton from '#/components/IconButton'
 import { ArrowIcon } from '#/constants/icons'
 import Image from '#/components/Image'
 import useDebouncedCallback from '#/hooks/useDebouncedCallback'
+import Icon from '#/components/Icon'
 // import useDragScroll from '#/hooks/useDragScroll'
 
 function ImageCarrousel({ images, className = '', noBorder = false, noZoom = false }) {
@@ -47,11 +48,11 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
         onClick={() =>
           handleImageChange((imageIndex - 1 + images.length) % images.length)
         }
-        icon={ArrowIcon}
         noBorder
-        contentColor
         aria-hidden
-      />
+      >
+        <Icon src={ArrowIcon} contentColor />
+      </IconButton>
       {noZoom ? (
         <div
           className={`${className} ${styles.container} ${
@@ -78,11 +79,11 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
         onClick={() =>
           handleImageChange((imageIndex + 1 + images.length) % images.length)
         }
-        icon={ArrowIcon}
         noBorder
-        contentColor
         aria-hidden
-      />
+      >
+        <Icon src={ArrowIcon} contentColor />
+      </IconButton>
       <div className={styles.dots}>
         {images.map((_, index) => (
           <button
