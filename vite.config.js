@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 export default defineConfig(({ mode }) => ({
+  base: '/portfolio/',
   plugins: [react(), ssr({ prerender: true }), svgr()],
   resolve: {
     alias: {
