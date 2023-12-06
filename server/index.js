@@ -40,7 +40,7 @@ async function startServer() {
     app.use(viteDevMiddleware)
   }
 
-  app.get('/', async (req, res, next) => {
+  app.get('*', async (req, res, next) => {
     const pageContextInit = {
       urlOriginal: req.originalUrl
     }
