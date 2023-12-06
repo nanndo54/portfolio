@@ -14,8 +14,8 @@ const projects = [
   {
     name: 'Mini Translator',
     year: 2021,
-    web: 'https://pabloc54.dev/translator/',
-    code: 'https://github.com/nanndo54/translator',
+    web: 'https://pabloc54.dev/mini-translator/',
+    code: 'https://github.com/nanndo54/mini-translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],
     icon: MiniTranslatorIcon,
     images: [
@@ -26,8 +26,8 @@ const projects = [
   {
     name: 'Quiz Game',
     year: 2022,
-    web: 'https://pabloc54.dev/quiz/',
-    code: 'https://github.com/nanndo54/quiz',
+    web: 'https://pabloc54.dev/quiz-game/',
+    code: 'https://github.com/nanndo54/quiz-game',
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
     icon: QuizGameIcon,
     images: [
