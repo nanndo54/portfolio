@@ -1,4 +1,8 @@
 .base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   fill: var(--primary-color);
   width: 2.5rem;
   height: 2.5rem;

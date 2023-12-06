@@ -12,10 +12,20 @@ const root = `${__dirname}/..`
 
 startServer()
 
+function wwwRedirect(req, res, next) {
+  if (req.headers.host.slice(0, 4) === 'www.') {
+    const newHost = req.headers.host.slice(4)
+    return res.redirect(301, `${req.protocol}://${newHost}${req.originalUrl}`)
+  }
+  next()
+}
+
 async function startServer() {
   const app = express()
 
   app.use(compression())
+  app.set('trust proxy', true)
+  app.use(wwwRedirect)
 
   if (isProduction) {
     app.use(sirv(`${root}/dist/client`))
@@ -42,6 +52,7 @@ async function startServer() {
       res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) })
     res.status(statusCode)
     headers.forEach(([name, value]) => res.setHeader(name, value))
+
     res.send(body)
   })
 

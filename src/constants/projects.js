@@ -14,29 +14,40 @@ const projects = [
   {
     name: 'Mini Translator',
     year: 2020,
-    web: 'https://pabloc54.github.io/translator/',
-    code: 'https://github.com/pabloc54/translator',
+    web: 'https://nanndo54.github.io/translator/',
+    code: 'https://github.com/nanndo54/translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],
     icon: MiniTranslatorIcon,
-    images: [miniTranslatorImg1, miniTranslatorImg2]
+    images: [
+      { src: miniTranslatorImg1, alt: 'Mini Translator 1' },
+      { src: miniTranslatorImg2, alt: 'Mini Translator 2' }
+    ]
   },
   {
     name: 'Quiz Game',
     year: 2021,
-    web: 'https://pabloc54.github.io/quiz/',
-    code: 'https://github.com/pabloc54/quiz',
+    web: 'https://nanndo54.github.io/quiz/',
+    code: 'https://github.com/nanndo54/quiz',
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
     icon: QuizGameIcon,
-    images: [quizGameImg1, quizGameImg2, quizGameImg3, quizGameImg4]
+    images: [
+      { src: quizGameImg1, alt: 'Quiz Game 1' },
+      { src: quizGameImg2, alt: 'Quiz Game 2' },
+      { src: quizGameImg3, alt: 'Quiz Game 3' },
+      { src: quizGameImg4, alt: 'Quiz Game 4' }
+    ]
   },
   {
     name: 'JOLC',
     year: 2021,
     web: 'https://jolc2.herokuapp.com/',
-    code: 'https://github.com/pabloc54/jolc',
+    code: 'https://github.com/nanndo54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python', 'JavaScript', 'HTML', 'CSS'],
     icon: JOLCIcon,
-    images: [JOLCImg1, JOLCImg2]
+    images: [
+      { src: JOLCImg1, alt: 'JOLC 1' },
+      { src: JOLCImg2, alt: 'JOLC 2' }
+    ]
   }
 ]
 

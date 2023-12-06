@@ -1,6 +1,7 @@
 import styles from '#/styles/Button.module.css'
 
 import Icon from '#/components/Icon'
+import Link from '#/components/Link'
 
 const classNameByType = {
   primary: '',
@@ -24,22 +25,19 @@ function Button({
     </>
   )
 
-  const isExternLink = href?.startsWith('http')
-
   return href ? (
-    <a
+    <Link
       className={`${className} ${classNameByType[type]} ${styles.base}`}
-      target={isExternLink ? '_blank' : undefined}
-      rel={isExternLink ? 'noreferrer' : undefined}
       href={href}
+      noDecoration
       {...props}
     >
       {childrenElement}
-    </a>
+    </Link>
   ) : (
     <button
-      className={`${className} ${classNameByType[type]} ${styles.base}`}
       type='button'
+      className={`${className} ${classNameByType[type]} ${styles.base}`}
       onClick={onClick}
       {...props}
     >

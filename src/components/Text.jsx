@@ -1,6 +1,5 @@
 import styles from '#/styles/Text.module.css'
 
-import React from 'react'
 import { useIntl } from 'react-intl'
 import parse from 'html-react-parser'
 
@@ -16,7 +15,7 @@ function Text({ children, localeId = null, as: Component, className = '', ...pro
       {childrenElement}
     </Component>
   ) : (
-    <>{childrenElement}</>
+    childrenElement
   )
 }
 

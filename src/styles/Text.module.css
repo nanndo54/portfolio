@@ -1,18 +1,24 @@
 p.base {
   font-size: 1.15rem;
+  font-weight: 400;
 }
 
 .base:is(h1, h2, h3, h4, h5, h6) {
   width: fit-content;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   font-family: var(--subtitle-font);
+}
+
+.base:is(h4, h5, h6) {
+  font-weight: 400;
 }
 
 h1.base {
   font-family: var(--title-font);
   font-size: 4rem;
+  font-weight: 600;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--dim-primary-color);
 
   transition:
@@ -74,4 +80,15 @@ h6.base {
   h4.base {
     font-size: 1.7rem;
   }
+}
+
+strong {
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--secondary-accent-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

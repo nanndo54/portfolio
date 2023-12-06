@@ -1,5 +1,5 @@
 import styles from '#/styles/AllSections.module.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import Footer from '#/components/Footer'
 import BlockQuote from '#/components/BlockQuote'
@@ -10,18 +10,24 @@ import useAppStore from '#/store'
 function AllSections() {
   const { currentSection, isOnTop, setOnTop } = useAppStore()
 
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   useEffect(() => {
     history.replaceState(null, null, `#${currentSection}`)
   }, [currentSection])
 
   const handlePageScroll = (ev) => {
-    const newIsOnTop = ev.target.scrollTop === 0
-    if (newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
+    const newIsOnTop = ev.target.scrollTop < 50
+    if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
   }
 
   return (
     <div
-      className={`${styles.base} ${isOnTop ? '' : styles.show}`}
+      className={`${styles.base} ${loaded ? styles.loaded : ''}`}
       id='base'
       onScroll={handlePageScroll}
     >

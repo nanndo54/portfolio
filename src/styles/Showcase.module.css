@@ -13,8 +13,8 @@
   opacity: 0;
 
   pointer-events: none;
-  transition: opacity 0.2s;
-  z-index: 2;
+  transition: opacity 0.1s;
+  z-index: 3;
 }
 
 .base.open {
@@ -25,10 +25,7 @@
 }
 
 .base .content {
-  transition: width 0.2s;
-
-  min-width: 100px;
-  min-height: 100px;
+  transition: width 0.15s;
 }
 
 .content > * {
@@ -92,6 +89,10 @@
 
   font-size: 1.2rem;
   color: var(--footer-font-color);
+}
+
+.zoom > p {
+  width: 2.5rem;
 }
 
 .zoom > svg {

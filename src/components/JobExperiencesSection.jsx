@@ -7,8 +7,11 @@ import Icon from '#/components/Icon'
 
 import jobs from '#/constants/jobs'
 import { ArrowIcon } from '#/constants/icons'
+import useAppStore from '#/store'
 
 function JobExperiencesSection({ id }) {
+  const { isOnTop } = useAppStore()
+
   const years = jobs.reduce((acc, project) => {
     const year = project.year
     if (!acc[year]) acc[year] = []
@@ -18,7 +21,7 @@ function JobExperiencesSection({ id }) {
   }, {})
 
   return (
-    <Section id={id}>
+    <Section id={id} className={`${styles.base} ${isOnTop ? styles.magnetic : ''}`}>
       <Text as='h2' localeId='job-experience.title' />
       <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>

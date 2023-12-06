@@ -10,7 +10,7 @@ function GoToTopButton() {
   return (
     <button
       type='button'
-      className={`${styles.base} ${isOnTop ? '' : styles.arrow}`}
+      className={`${styles.base} ${isOnTop ? '' : styles.show}`}
       onClick={handleScrollToTop}
     >
       <div className={styles.icon}>

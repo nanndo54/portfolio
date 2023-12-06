@@ -20,7 +20,10 @@ function Image({
       ref={ref}
       src={src}
       alt={alt}
-      className={`${className} ${styles.base} ${noBorder ? styles.noBorder : ''}`}
+      className={`${className} ${styles.base} ${
+        noBorder ? styles.noBorder : ''
+      } no-select`}
+      draggable={false}
       height={height}
       width={width}
     />

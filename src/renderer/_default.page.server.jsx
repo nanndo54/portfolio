@@ -1,7 +1,6 @@
 export const passToClient = ['pageProps', 'urlPathname']
 
 import ReactDOMServer from 'react-dom/server'
-import { PageShell } from './PageShell'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 
 import logo from '#/assets/svg/logo.svg'
@@ -9,11 +8,7 @@ import logo from '#/assets/svg/logo.svg'
 async function render(pageContext) {
   const { Page, pageProps } = pageContext
 
-  const pageHtml = ReactDOMServer.renderToString(
-    <PageShell pageContext={pageContext}>
-      <Page {...pageProps} />
-    </PageShell>
-  )
+  const pageHtml = ReactDOMServer.renderToString(<Page {...pageProps} />)
 
   const { documentProps } = pageContext.exports
   const title = (documentProps && documentProps.title) || 'Pablo Cabrera | Portfolio'
@@ -40,6 +35,7 @@ async function render(pageContext) {
       />
       <meta property="og:url" content="https://pabloc54.dev" />
       <meta property="og:type" content="website" />
+      <meta name="color-scheme" content="dark light">
       <link rel="icon" type="image/svg+xml" href="${logo}" />
       <script>
         window.dataLayer = window.dataLayer || []

@@ -2,10 +2,10 @@ import styles from '#/styles/JobExperience.module.css'
 
 import Text from '#/components/Text'
 import Button from '#/components/Button'
-import Image from '#/components/Image'
 import Icon from '#/components/Icon'
+import ImageCarrousel from '#/components/ImageCarrousel'
 
-function JobExperience({ company, logo, image, web }) {
+function JobExperience({ company, logo, images, web }) {
   return (
     <article className={styles.base}>
       <div className={styles.header}>
@@ -16,11 +16,11 @@ function JobExperience({ company, logo, image, web }) {
         </div>
       </div>
       <div className={styles.content}>
-        <Text as='p' localeId={`job-experience.${company.toLowerCase()}`} />
-        <Image src={image} alt='company' className={styles.image} />
+        <Text localeId={`job-experience.${company.toLowerCase()}`} />
+        <ImageCarrousel images={images} />
       </div>
       <div className={styles.footer}>
-        <Button href={web} aria-label='test'>
+        <Button href={web}>
           <Text localeId='projects.button2' />
         </Button>
       </div>

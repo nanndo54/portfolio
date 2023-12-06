@@ -3,38 +3,22 @@
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-  overscroll-behavior: contain;
+  scroll-snap-type: y proximity;
+
+  transform: translateY(1rem);
+  opacity: 0.25;
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+}
+
+.base.loaded {
+  transform: none;
+  opacity: 1;
 }
 
 .base > * {
   margin: 4rem auto;
-}
-
-.base > *:not(:first-child) {
-  transform: translateY(calc(100vh - 42rem));
-  transition: transform 0.3s;
-}
-
-.base.show > *:not(:first-child) {
-  transform: none;
-}
-
-@media (max-height: 1000px) {
-  .base > *:not(:first-child) {
-    transform: translateY(calc(100vh - 30rem));
-  }
-}
-
-@media (max-height: 750px) {
-  .base > *:not(:first-child) {
-    transform: translateY(calc(100vh - 26rem));
-  }
-}
-
-@media (max-width: 600px) and (max-height: 900px) {
-  .base > *:not(:first-child) {
-    transform: translateY(calc(100vh - 10rem));
-  }
 }
 
 .base::-webkit-scrollbar {

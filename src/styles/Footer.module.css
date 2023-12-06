@@ -7,7 +7,6 @@
   margin: 10rem auto 0;
 }
 
-.base a:link,
-.base a:visited {
+.base a {
   color: var(--accent-color);
 }

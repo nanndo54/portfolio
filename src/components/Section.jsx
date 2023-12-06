@@ -16,7 +16,7 @@ const Section = ({
 
   const isIntersected = useIntersectionObserver(sectionRef, {
     once: false,
-    threshold: 0.2
+    threshold: 0.4
   })
 
   useEffect(() => {

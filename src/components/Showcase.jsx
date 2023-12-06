@@ -1,5 +1,5 @@
 import styles from '#/styles/Showcase.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import useAppStore from '#/store'
 import Icon from '#/components/Icon'
@@ -9,10 +9,15 @@ import Text from '#/components/Text'
 
 function Showcase() {
   const [zoom, setZoom] = useState(1)
-  const contentWidth = zoom * 700
-
   const { showcase, closeShowcase } = useAppStore()
   const { open, src, element, alt } = showcase
+
+  const contentWidth = (open ? zoom : 0.5) * (src ? 700 : 400)
+
+  useEffect(() => {
+    if (open) return
+    setZoom(1)
+  }, [open])
 
   const handleWheel = (ev) => {
     const isZoomIn = ev.deltaY < 0
@@ -41,7 +46,7 @@ function Showcase() {
         <IconButton
           icon={CloseIcon}
           className={styles.closeButton}
-          title='Cerrar'
+          aria-label='Cerrar'
           noBorder
         />
         <div className={styles.zoom}>
@@ -54,7 +59,7 @@ function Showcase() {
                 ev.stopPropagation()
                 handleChangeZoom(zoom - 0.15)
               }}
-              title='Reducir'
+              aria-label='Reducir'
             />
             <IconButton
               icon={PlusIcon}
@@ -62,7 +67,7 @@ function Showcase() {
                 ev.stopPropagation()
                 handleChangeZoom(zoom + 0.15)
               }}
-              title='Agrandar'
+              aria-label='Agrandar'
             />
           </span>
         </div>

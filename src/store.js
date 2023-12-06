@@ -23,7 +23,9 @@ const store = create(
         set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' })),
       openShowcase: ({ open = true, ...showcase }) =>
         set(() => ({ showcase: { open, ...showcase } })),
-      closeShowcase: () => set(() => ({ showcase: { open: false } }))
+      closeShowcase: () =>
+        set((state) => ({ showcase: { ...state.showcase, open: false } }))
+      // closeShowcase: () => set(() => ({ showcase: { open: false } }))
     }),
     {
       name: 'app-storage',

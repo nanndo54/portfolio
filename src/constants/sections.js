@@ -9,7 +9,8 @@ export default [
   {
     id: 'welcome',
     icon: 'home',
-    Component: WelcomeSection
+    Component: WelcomeSection,
+    hideInNavbar: true
   },
   {
     id: 'job-experience',

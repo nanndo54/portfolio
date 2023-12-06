@@ -6,7 +6,7 @@ const jobs = [
     company: 'Kolo',
     position: 'Full-Stack Web Developer',
     logo: KoloLogo,
-    image: koloImg,
+    images: [{ src: koloImg, alt: 'Kolo' }],
     web: 'https://info.kolo-app.com',
     year: 2022,
     from: new Date('2022-02'),

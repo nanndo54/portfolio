@@ -1,6 +1,6 @@
 .base {
   width: max-content;
-  min-height: 3.2rem;
+  height: 3.2rem;
   box-sizing: border-box;
 
   display: flex;
@@ -9,13 +9,13 @@
   justify-content: center;
   gap: 1.2rem;
 
-  padding: 0.4rem 1.8rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 1rem;
 
   color: var(--alternate-font-color);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.02rem;
 
   background-image: linear-gradient(
     90deg,
@@ -52,6 +52,7 @@
   background: none;
   border: 0.23rem solid var(--secondary-accent-color);
   color: var(--content-color);
+
   transition:
     border-color 0.5s,
     color 0.5s,
@@ -67,4 +68,11 @@
   fill: var(--alternate-font-color);
   width: 2rem;
   height: 2rem;
+}
+
+@media (max-width: 700px) {
+  .base {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
 }
