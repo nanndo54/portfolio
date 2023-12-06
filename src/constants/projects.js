@@ -13,8 +13,8 @@ import { JOLCIcon, MiniTranslatorIcon, QuizGameIcon } from '#/constants/icons'
 const projects = [
   {
     name: 'Mini Translator',
-    year: 2020,
-    web: 'https://nanndo54.github.io/translator/',
+    year: 2021,
+    web: 'https://pabloc54.dev/translator/',
     code: 'https://github.com/nanndo54/translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],
     icon: MiniTranslatorIcon,
@@ -25,8 +25,8 @@ const projects = [
   },
   {
     name: 'Quiz Game',
-    year: 2021,
-    web: 'https://nanndo54.github.io/quiz/',
+    year: 2022,
+    web: 'https://pabloc54.dev/quiz/',
     code: 'https://github.com/nanndo54/quiz',
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
     icon: QuizGameIcon,
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     name: 'JOLC',
-    year: 2021,
+    year: 2022,
     web: 'https://jolc2.herokuapp.com/',
     code: 'https://github.com/nanndo54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python', 'JavaScript', 'HTML', 'CSS'],

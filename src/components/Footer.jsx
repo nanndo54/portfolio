@@ -5,7 +5,7 @@ import Link from '#/components/Link'
 function Footer() {
   return (
     <footer className={styles.base}>
-      Source: <Link href='https://github.com/pabloc54'>GitHub</Link>
+      Source: <Link href='https://github.com/nanndo54'>GitHub</Link>
     </footer>
   )
 }

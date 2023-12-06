@@ -10,7 +10,7 @@ const contacts = [
     name: 'GitHub',
     icon: GitHubIcon,
     props: { contentColor: true },
-    url: 'https://github.com/pabloc54'
+    url: 'https://github.com/nanndo54'
   },
   {
     name: 'Email',
