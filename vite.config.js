@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
       '#': '/src'
     }
   },
+  publicDir: 'src/public',
   css: {
     modules:
       mode === 'development'
