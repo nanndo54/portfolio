@@ -3,21 +3,26 @@
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-
-  transform: translateY(1rem);
-  opacity: 0.25;
   transition:
     opacity 0.2s ease-out,
     transform 0.2s ease-out;
 }
 
-.base.loaded {
-  transform: none;
-  opacity: 1;
+.base.isLoading {
+  transform: translateY(1rem);
+  opacity: 0.25;
 }
 
-.base > * {
-  margin: 4rem auto;
+.base section {
+  transition:
+    background-color 0.5s,
+    box-shadow 0.5s,
+    color 0.5s,
+    transform 0.2s ease-out;
+}
+
+.base.isOnTop section {
+  transform: translateY(12rem);
 }
 
 .base::-webkit-scrollbar {

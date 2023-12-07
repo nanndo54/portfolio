@@ -27,7 +27,7 @@ function Button({
 
   return href ? (
     <Link
-      className={`${className} ${classNameByType[type]} ${styles.base}`}
+      className={`${styles.base} ${className} ${classNameByType[type]}`}
       href={href}
       noDecoration
       {...props}

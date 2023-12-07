@@ -4,7 +4,7 @@
   min-height: -moz-min-content;
   min-height: min-content;
   padding: 3rem;
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   align-items: center;
 
   display: flex;
@@ -13,11 +13,6 @@
   justify-items: center;
 
   gap: 2.5rem;
-
-  transition:
-    background-color 0.5s,
-    box-shadow 0.5s,
-    color 0.5s;
 }
 
 .base.background {

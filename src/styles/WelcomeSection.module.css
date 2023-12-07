@@ -1,6 +1,7 @@
 header.base {
   height: 22rem;
-  margin: 7rem auto 5rem;
+  margin: 6rem auto 0;
+  padding: 3rem 0;
 
   transition: height 0.3s;
 }
@@ -39,7 +40,7 @@ p.presentation {
   height: 20rem;
   width: 20rem;
 
-  transform: translate(calc(50vw + 6rem), 8rem);
+  transform: translate(calc(50vw + 7.5rem), 7.2rem);
   background-clip: content-box;
 
   transition:
@@ -130,7 +131,7 @@ p.presentation {
 
   transition:
     border 0.5s,
-    margin-left 0.3s ease-out;
+    margin-left 0.25s ease-out;
 }
 
 .base.overlay .contact {
@@ -183,7 +184,9 @@ p.presentation {
 }
 
 .base .link {
+  text-wrap: nowrap;
   transition: font-size 0.2s;
+  height: 13rem;
 }
 
 .base .link.current {
@@ -203,5 +206,9 @@ p.presentation {
 
   .info {
     align-self: center;
+  }
+
+  .base .links {
+    display: none;
   }
 }

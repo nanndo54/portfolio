@@ -1,10 +1,10 @@
-const handleScrollToTop = (top = 0) => {
+const scrollToTop = () => {
   const base = document.getElementById('base')
 
   base.scrollTo({
-    top,
+    top: 0,
     behavior: 'smooth'
   })
 }
 
-export { handleScrollToTop }
+export default scrollToTop

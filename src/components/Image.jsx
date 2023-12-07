@@ -1,7 +1,7 @@
 import styles from '#/styles/Image.module.css'
 import { useRef } from 'react'
 
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 
 function Image({
   src,

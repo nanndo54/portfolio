@@ -1,7 +1,7 @@
 import styles from '#/styles/Skill.module.css'
 
 import Icon from '#/components/Icon'
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 
 const classNameBySize = {
   small: styles.small

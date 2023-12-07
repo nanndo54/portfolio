@@ -2,7 +2,7 @@ import styles from '#/styles/Navbar.module.css'
 import { useEffect } from 'react'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 
 const verifyTheme = (theme) => {
   if (theme === 'dark') document.querySelector('body').classList.add('dark')

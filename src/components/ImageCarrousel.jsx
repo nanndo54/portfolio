@@ -1,7 +1,7 @@
 import styles from '#/styles/ImageCarrousel.module.css'
 import { useRef, useState } from 'react'
 
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 import IconButton from '#/components/IconButton'
 import { ArrowIcon } from '#/constants/icons'
 import Image from '#/components/Image'

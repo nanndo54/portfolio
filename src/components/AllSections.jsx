@@ -5,18 +5,17 @@ import Footer from '#/components/Footer'
 import BlockQuote from '#/components/BlockQuote'
 
 import sections from '#/constants/sections'
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
+import getCurrentSection from '#/state/getCurrentSection'
 
 function AllSections() {
-  const { sectionsIntersection, isOnTop, setOnTop } = useAppStore()
-  const [loaded, setLoaded] = useState(false)
+  const { isOnTop, setOnTop } = useAppStore()
+  const [isLoading, setLoading] = useState(true)
 
-  const currentSection = isOnTop
-    ? 'welcome'
-    : sectionsIntersection.find(({ intersected }) => intersected)?.id
+  const currentSection = getCurrentSection()
 
   useEffect(() => {
-    setLoaded(true)
+    setLoading(false)
   }, [])
 
   useEffect(() => {
@@ -30,7 +29,9 @@ function AllSections() {
 
   return (
     <div
-      className={`${styles.base} ${loaded ? styles.loaded : ''}`}
+      className={`${styles.base} ${isLoading ? styles.isLoading : ''} ${
+        isOnTop ? styles.isOnTop : ''
+      }`}
       id='base'
       onScroll={handlePageScroll}
     >

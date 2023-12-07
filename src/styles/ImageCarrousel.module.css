@@ -90,3 +90,16 @@
   border-color: transparent;
   background-color: var(--secondary-accent-color);
 }
+
+@media (max-width: 600px) {
+  .base {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'content';
+  }
+
+  .base .previousImage,
+  .base .nextImage,
+  .base .dots {
+    display: none;
+  }
+}

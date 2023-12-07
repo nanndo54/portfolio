@@ -7,7 +7,7 @@ import AllSections from '#/components/AllSections'
 import Showcase from '#/components/Showcase'
 import GoToTopButton from '#/components/GoToTopButton'
 
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 import languages from '#/constants/languages'
 
 function App() {

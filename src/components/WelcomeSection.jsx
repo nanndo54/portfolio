@@ -6,18 +6,20 @@ import Button from '#/components/Button'
 import ContactIcons from '#/components/ContactIcons'
 import Icon from '#/components/Icon'
 import Image from '#/components/Image'
-// import Link from '#/components/Link'
+import Link from '#/components/Link'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
 import photo from '#/assets/img/profile-photo.jpg'
 import { CvIcon, LogoIcon } from '#/constants/icons'
-import useAppStore from '#/store'
-// import sections from '#/constants/sections'
+import useAppStore from '#/state/store'
+import sections from '#/constants/sections'
+import getCurrentSection from '#/state/getCurrentSection'
 
 function WelcomeSection({ id }) {
   const { isOnTop } = useAppStore()
   const intl = useIntl()
+  const currentSection = getCurrentSection()
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -71,7 +73,7 @@ function WelcomeSection({ id }) {
           className={`${styles.contact} ${menuOpen ? styles.open : ''}`}
           tabIndex={menuOpen ? 0 : -1}
         />
-        {/* <div className={`${styles.links} ${isOnTop ? styles.show : styles.show}`}>
+        <div className={styles.links}>
           {sections
             .filter(({ hideInNavbar }) => !hideInNavbar)
             .map(({ id }) => (
@@ -82,12 +84,12 @@ function WelcomeSection({ id }) {
                   id === currentSection ? styles.current : ''
                 }`}
                 noDecoration
-                // tabIndex={isIntersected ? 0 : -1}
+                tabIndex={isOnTop ? -1 : 0}
               >
                 <Text localeId={`${id}.title`} />
               </Link>
             ))}
-        </div> */}
+        </div>
       </div>
     </Section>
   )

@@ -1,8 +1,8 @@
 import styles from '#/styles/GoToTopButton.module.css'
 
-import { handleScrollToTop } from '#/utilities/scroll'
+import scrollToTop from '#/utilities/scrollToTop'
 import Text from '#/components/Text'
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 
 function GoToTopButton() {
   const { isOnTop } = useAppStore()
@@ -11,7 +11,8 @@ function GoToTopButton() {
     <button
       type='button'
       className={`${styles.base} ${isOnTop ? '' : styles.show}`}
-      onClick={handleScrollToTop}
+      onClick={scrollToTop}
+      tabIndex={isOnTop ? -1 : 0}
     >
       <div className={styles.icon}>
         <div className={styles.dot1} />

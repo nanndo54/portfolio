@@ -1,7 +1,7 @@
 import styles from '#/styles/Showcase.module.css'
 import { useEffect, useState } from 'react'
 
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 import Icon from '#/components/Icon'
 import IconButton from '#/components/IconButton'
 import { CloseIcon, MinusIcon, PlusIcon, ZoomIcon } from '#/constants/icons'
@@ -11,8 +11,6 @@ function Showcase() {
   const [zoom, setZoom] = useState(1)
   const { showcase, closeShowcase } = useAppStore()
   const { open, src, element, alt } = showcase
-
-  const contentWidth = (open ? zoom : 0.5) * (src ? 700 : 400)
 
   useEffect(() => {
     if (open) return
@@ -25,7 +23,7 @@ function Showcase() {
   }
 
   const handleChangeZoom = (newZoom) => {
-    newZoom = newZoom > zoom ? Math.min(newZoom, 1.3) : Math.max(newZoom, 0.7)
+    newZoom = newZoom > zoom ? Math.min(newZoom, 1.45) : Math.max(newZoom, 0.55)
     setZoom(newZoom)
   }
 
@@ -37,7 +35,7 @@ function Showcase() {
     >
       <div
         className={styles.content}
-        style={{ width: contentWidth }}
+        style={{ transform: `scale(${open ? zoom : 0.5})` }}
         onClick={(ev) => ev.stopPropagation()}
       >
         {src ? <img src={src} alt={alt} /> : element}

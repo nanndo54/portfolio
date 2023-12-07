@@ -2,7 +2,7 @@ import styles from '#/styles/Section.module.css'
 import { useEffect, useRef } from 'react'
 
 import useIntersectionObserver from '#/hooks/useIntersectionObserver'
-import useAppStore from '#/store'
+import useAppStore from '#/state/store'
 
 const Section = ({
   background = true,
@@ -55,13 +55,14 @@ const Section = ({
   }, [sectionRef])
 
   return (
-    <Component
-      className={`${className} ${styles.base} ${background ? styles.background : ''}`}
-      id={id}
-      ref={sectionRef}
-    >
-      {children}
-    </Component>
+    <div className={styles.layout} id={id}>
+      <Component
+        ref={sectionRef}
+        className={`${className} ${styles.base} ${background ? styles.background : ''}`}
+      >
+        {children}
+      </Component>
+    </div>
   )
 }
 

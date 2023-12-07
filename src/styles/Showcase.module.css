@@ -25,7 +25,13 @@
 }
 
 .base .content {
-  transition: width 0.15s;
+  transition: transform 0.15s;
+  border: 1px solid red;
+  width: 45rem;
+}
+
+.base .content:has(svg) {
+  width: 25rem;
 }
 
 .content > * {

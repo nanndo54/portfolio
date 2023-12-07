@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
 
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 
 .base.show {
@@ -25,7 +25,7 @@
   transition:
     color 0.5s,
     opacity 0.5s 0.4s,
-    transform 0.5s 0.4s;
+    transform 0.5s 0.3s;
 }
 
 .icon {
@@ -45,8 +45,8 @@
   border-radius: 50%;
   transition:
     background-color 0.3s,
-    transform 0.3s 0.6s,
-    border-radius 0.3s 0.6s;
+    transform 0.3s 0.4s,
+    border-radius 0.3s 0.4s;
 }
 
 .dot1 {
