@@ -2,10 +2,11 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 import { useEffect, useState } from 'react'
+import sections from '#/constants/sections'
 
 const initialState = {
   isOnTop: true,
-  currentSection: 'welcome',
+  sectionsIntersection: sections.slice(0, 2).map(({ id }) => ({ id, intersected: true })),
   locale: 'en',
   theme: 'light',
   showcase: {}
@@ -16,7 +17,19 @@ const store = create(
     (set) => ({
       ...initialState,
       setOnTop: (isOnTop) => set(() => ({ isOnTop })),
-      setCurrentSection: (currentSection) => set(() => ({ currentSection })),
+      setSectionIntersected: (id, intersected) =>
+        set((state) => {
+          const sectionsIntersection = [...state.sectionsIntersection]
+          const section = sectionsIntersection.find(
+            (sectionIntersection) => sectionIntersection.id === id
+          )
+          if (section) section.intersected = intersected
+          else sectionsIntersection.push({ id, intersected })
+
+          return {
+            sectionsIntersection
+          }
+        }),
       toggleTheme: () =>
         set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       toggleLocale: () =>
@@ -25,12 +38,10 @@ const store = create(
         set(() => ({ showcase: { open, ...showcase } })),
       closeShowcase: () =>
         set((state) => ({ showcase: { ...state.showcase, open: false } }))
-      // closeShowcase: () => set(() => ({ showcase: { open: false } }))
     }),
     {
       name: 'app-storage',
-      partialize: ({ currentSection, locale, theme }) => ({
-        currentSection,
+      partialize: ({ locale, theme }) => ({
         locale,
         theme
       })

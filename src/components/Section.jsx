@@ -11,17 +11,17 @@ const Section = ({
   id,
   children
 }) => {
-  const { setCurrentSection } = useAppStore()
+  const { setSectionIntersected } = useAppStore()
   const sectionRef = useRef(null)
 
   const isIntersected = useIntersectionObserver(sectionRef, {
     once: false,
-    threshold: 0.4
+    threshold: 0.3
   })
 
   useEffect(() => {
-    if (!isIntersected || !id || !setCurrentSection) return
-    setCurrentSection(id)
+    if (!setSectionIntersected || !id) return
+    setSectionIntersected(id, isIntersected)
   }, [isIntersected])
 
   const mouseEvent = (e) => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 function useIntersectionObserver(ref, { once = true, ...options }) {
-  const [intersected, setIntersected] = useState(true)
+  const [isIntersected, setIntersected] = useState(true)
 
   const updateEntry = ([entry]) => {
     setIntersected(entry?.isIntersecting)
@@ -11,7 +11,7 @@ function useIntersectionObserver(ref, { once = true, ...options }) {
     const hasIOSupport = !!window.IntersectionObserver
     const node = ref?.current
 
-    if (!hasIOSupport || !node || (once && intersected)) return
+    if (!hasIOSupport || !node || (once && isIntersected)) return
 
     const observer = new IntersectionObserver(updateEntry, options)
     observer.observe(node)
@@ -19,7 +19,7 @@ function useIntersectionObserver(ref, { once = true, ...options }) {
     return () => observer.disconnect()
   }, [ref, options])
 
-  return intersected
+  return isIntersected
 }
 
 export default useIntersectionObserver

@@ -8,9 +8,12 @@ import sections from '#/constants/sections'
 import useAppStore from '#/store'
 
 function AllSections() {
-  const { currentSection, isOnTop, setOnTop } = useAppStore()
-
+  const { sectionsIntersection, isOnTop, setOnTop } = useAppStore()
   const [loaded, setLoaded] = useState(false)
+
+  const currentSection = isOnTop
+    ? 'welcome'
+    : sectionsIntersection.find(({ intersected }) => intersected)?.id
 
   useEffect(() => {
     setLoaded(true)
