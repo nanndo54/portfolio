@@ -1,9 +1,9 @@
-import spanish from '#/assets/lang/es.json'
-import english from '#/assets/lang/en.json'
+import es from '#/assets/lang/es.json'
+import en from '#/assets/lang/en.json'
 
 const languages = {
-  es: spanish,
-  en: english
+  es,
+  en
 }
 
 const languageIsSupported = (languageCode) =>
