@@ -1,6 +1,6 @@
 header.base {
   height: 22rem;
-  margin: 6rem auto 0;
+  margin: 0 auto;
   padding: 3rem 0;
 
   transition:
@@ -17,7 +17,11 @@ header.base {
   justify-content: center;
   gap: 1.5rem;
 
-  transition: opacity 0.2s;
+  transform: translateY(10rem);
+
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 p.presentation {
@@ -37,12 +41,12 @@ p.presentation {
 .avatar {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 
   height: 20rem;
   width: 20rem;
 
-  transform: translate(calc(50vw + 7.5rem), 7.2rem);
+  transform: translate(calc(28rem - 50vw), 10.5rem);
   background-clip: content-box;
 
   transition:
@@ -54,7 +58,7 @@ p.presentation {
 }
 
 .base.overlay .avatar {
-  transform: translate(calc(100vw - 13.2rem), -8rem) scale(0.17);
+  transform: translate(7rem, -8rem) scale(0.17);
   pointer-events: all;
 }
 
@@ -100,6 +104,7 @@ p.presentation {
 .base.overlay .info {
   opacity: 0;
   pointer-events: none;
+  transform: none;
 }
 
 .base .contact {
@@ -195,22 +200,39 @@ p.presentation {
   font-size: 10rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   header.base {
-    height: 42rem;
-    margin: 5rem auto;
+    height: 32rem;
+    padding: 3rem 1rem;
     justify-content: flex-end;
   }
 
-  .base .avatar {
-    transform: translate(calc(50vw + -10rem), 8rem);
+  .base .info {
+    align-self: center;
+    transform: translateY(12rem);
   }
 
-  .info {
-    align-self: center;
+  .base .avatar {
+    transform: translate(calc(10rem - 50vw), 5rem) scale(0.85);
   }
 
   .base .links {
     display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .base .avatar {
+    transform: translate(calc(10rem - 50vw), 4rem) scale(0.75);
+  }
+}
+
+@media (max-height: 700px) and (min-width: 950px) {
+  .info {
+    transform: translateY(4rem);
+  }
+
+  .avatar {
+    transform: translate(calc(28rem - 50vw), 4.5rem);
   }
 }

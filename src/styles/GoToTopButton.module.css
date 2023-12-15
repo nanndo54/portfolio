@@ -18,8 +18,9 @@
 
 .base p {
   font-size: 1rem;
-  opacity: 0;
+  color: var(--content-color);
 
+  opacity: 0;
   transform: translateY(1rem);
 
   transition:

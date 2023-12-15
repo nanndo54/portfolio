@@ -46,7 +46,7 @@ async function render(pageContext) {
         gtag('config', 'G-9XT17RG3ZV')
       </script>
     </head>
-    <body>
+    <body id=''>
       <main>${dangerouslySkipEscape(pageHtml)}</main>
     </body>
   </html>`

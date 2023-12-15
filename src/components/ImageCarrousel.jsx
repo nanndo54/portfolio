@@ -49,7 +49,7 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           handleImageChange((imageIndex - 1 + images.length) % images.length)
         }
         noBorder
-        aria-hidden
+        aria-label='Ver imagen anterior'
       >
         <Icon src={ArrowIcon} contentColor />
       </IconButton>
@@ -80,7 +80,7 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           handleImageChange((imageIndex + 1 + images.length) % images.length)
         }
         noBorder
-        aria-hidden
+        aria-label='Ver imagen anterior'
       >
         <Icon src={ArrowIcon} contentColor />
       </IconButton>
