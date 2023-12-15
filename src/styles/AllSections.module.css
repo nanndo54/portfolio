@@ -23,14 +23,14 @@
   opacity: 0.25;
 }
 
-.base.isLoading section {
-  /* transform: translateY(25rem); */
-  opacity: 0.25;
-}
-
 .base.isOnTop section {
   opacity: 0.75;
   transform: translateY(calc(100vh - 34rem));
+}
+
+.base.isLoading section {
+  transform: translateY(calc(100vh - 32rem));
+  opacity: 0.25;
 }
 
 .base::-webkit-scrollbar {
@@ -47,11 +47,19 @@
   .base.isOnTop section {
     transform: translateY(calc(100vh - 53rem));
   }
+
+  .base.isLoading section {
+    transform: translateY(calc(100vh - 51rem));
+  }
 }
 
 @media (max-width: 950px) and (max-height: 950px) {
   .base.isOnTop section {
     transform: translateY(calc(100vh - 43rem));
+  }
+
+  .base.isLoading section {
+    transform: translateY(calc(100vh - 41rem));
   }
 }
 
@@ -59,16 +67,28 @@
   .base.isOnTop section {
     transform: translateY(calc(100vh - 39rem));
   }
+
+  .base.isLoading section {
+    transform: translateY(calc(100vh - 37rem));
+  }
 }
 
 @media (max-height: 700px) {
   .base.isOnTop section {
     transform: translateY(calc(100vh - 30rem));
   }
+
+  .base.isLoading section {
+    transform: translateY(calc(100vh - 28rem));
+  }
 }
 
 @media (max-height: 500px) {
   .base.isOnTop section {
     transform: translateY(calc(100vh - 25rem));
+  }
+
+  .base.isLoading section {
+    transform: translateY(calc(100vh - 23rem));
   }
 }
