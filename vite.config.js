@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import vike from 'vike/plugin'
 import ssr from 'vike/plugin'
 import svgr from 'vite-plugin-svgr'
 import autoprefixer from 'autoprefixer'
@@ -7,7 +8,7 @@ import path from 'path'
 
 export default defineConfig(({ mode }) => ({
   base: '/portfolio/',
-  plugins: [react(), ssr({ prerender: true }), svgr()],
+  plugins: [react(), vike(), ssr({ prerender: true }), svgr()],
   resolve: {
     alias: {
       '#': '/src'

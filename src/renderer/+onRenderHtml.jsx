@@ -1,5 +1,3 @@
-export const passToClient = ['pageProps', 'urlPathname']
-
 import ReactDOMServer from 'react-dom/server'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 
@@ -57,4 +55,4 @@ async function render(pageContext) {
   }
 }
 
-export { render }
+export default render

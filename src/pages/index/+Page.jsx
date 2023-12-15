@@ -4,4 +4,4 @@ function Page() {
   return <App />
 }
 
-export { Page }
+export default Page

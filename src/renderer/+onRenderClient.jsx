@@ -9,4 +9,4 @@ async function render(pageContext) {
   hydrateRoot(root, <Page {...pageProps} />)
 }
 
-export { render }
+export default render
