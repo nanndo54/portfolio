@@ -1,16 +1,18 @@
+.base > * {
+  border: 1px solid red;
+}
+
 .base {
   height: 100%;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-  transition:
-    opacity 0.2s ease-out,
-    transform 0.2s ease-out;
-}
 
-.base.isLoading {
-  transform: translateY(1rem);
-  opacity: 0.25;
+  background-color: var(--primary-color);
+  background-image: linear-gradient(transparent, var(--primary-color) 100vh),
+    url('/src/assets/svg/background.svg');
+  background-attachment: local;
+  transition: background-color 0.5s;
 }
 
 .base section {
@@ -23,6 +25,15 @@
 
 .base.isOnTop section {
   transform: translateY(12rem);
+}
+
+.base.isLoading header {
+  opacity: 0.25;
+}
+
+.base.isLoading section {
+  transform: translateY(14rem);
+  opacity: 0.25;
 }
 
 .base::-webkit-scrollbar {

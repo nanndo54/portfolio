@@ -80,21 +80,16 @@ body {
   --subtitle-font: 'Taviraj', serif;
   --body-font: 'Hind Madurai', sans-serif;
 
+  background-color: var(--dim-primary-color);
   color: var(--font-color);
   font-family: var(--body-font);
 
   height: 100dvh;
 
+  transition: background-color 0.5s;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-
-  background-color: var(--primary-color);
-  background-image: url('/src/assets/svg/background.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: background-color 0.5s;
 }
 
 body.dark {
@@ -104,7 +99,7 @@ body.dark {
   --content-color: rgb(225, 225, 235);
   --dim-content-color: rgb(220, 220, 230, 0.1);
 
-  --primary-color: rgb(32, 38, 55);
+  --primary-color: rgb(32, 38, 55, 0.7);
   --dim-primary-color: rgba(35, 35, 45, 0.4);
 
   --accent-color: rgb(98, 185, 211);

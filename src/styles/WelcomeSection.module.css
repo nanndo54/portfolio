@@ -3,7 +3,9 @@ header.base {
   margin: 6rem auto 0;
   padding: 3rem 0;
 
-  transition: height 0.3s;
+  transition:
+    opacity 0.2s,
+    height 0.3s;
 }
 
 .info {

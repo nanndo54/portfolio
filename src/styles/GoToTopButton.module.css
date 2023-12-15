@@ -1,6 +1,6 @@
 .base {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 3rem;
   right: 2.5rem;
 
   transform: translateY(8rem);
@@ -97,7 +97,7 @@
 
 @media (max-width: 1100px) {
   .base {
-    bottom: 1.5rem;
-    right: 1rem;
+    bottom: 3rem;
+    right: 1.5rem;
   }
 }

@@ -19,7 +19,7 @@ function AllSections() {
   }, [])
 
   useEffect(() => {
-    history.replaceState(null, null, `#${currentSection}`)
+    if (currentSection) history.replaceState(null, null, `#${currentSection}`)
   }, [currentSection])
 
   const handlePageScroll = (ev) => {
