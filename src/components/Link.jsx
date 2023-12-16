@@ -2,29 +2,27 @@ import styles from '#/styles/Link.module.css'
 
 function Link({ className = '', href, children, noDecoration = false, ...props }) {
   const isHashLink = href?.startsWith('#')
+  const componentProps = {
+    className: `${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`,
+    href,
+    ...props
+  }
 
   return isHashLink ? (
-    <button
-      type='button'
-      className={`${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`}
-      onClick={() => {
+    <a
+      {...componentProps}
+      onClick={(ev) => {
+        ev.preventDefault()
         const element = document.querySelector(href)
         if (!element) return
 
         element.scrollIntoView({ behavior: 'smooth' })
       }}
-      {...props}
     >
       {children}
-    </button>
+    </a>
   ) : (
-    <a
-      className={`${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`}
-      target={'_blank'}
-      rel={'noreferrer'}
-      href={href}
-      {...props}
-    >
+    <a {...componentProps} target={'_blank'} rel={'noreferrer'}>
       {children}
     </a>
   )

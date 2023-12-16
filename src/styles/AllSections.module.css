@@ -5,10 +5,13 @@
   scroll-behavior: smooth;
 
   background-color: var(--primary-color);
-  background-image: linear-gradient(transparent, var(--primary-color) 100vh),
-    url('/src/assets/svg/background.svg');
+  background-image: url('/src/assets/svg/background.svg'),
+    linear-gradient(transparent, var(--primary-color) 100vh);
+  background-repeat: repeat-y;
   background-attachment: local;
-  transition: background-color 0.5s;
+  transition:
+    background-color 0.5s,
+    background-image 0.5s;
 }
 
 .base section {
@@ -19,18 +22,94 @@
     transform 0.2s ease-out;
 }
 
-.base.isLoading header {
+.base .seeContentIcon {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: calc(50%);
+
+  height: 2rem;
+  width: 2rem;
+}
+
+.base .seeContentIcon svg {
+  fill: var(--content-color);
+
+  transition:
+    fill 0.5s,
+    transform 0.2s;
+  transform: translateY(20rem) rotate(270deg);
+}
+
+.base.isOnTop .seeContentIcon svg {
+  fill: var(--content-color);
+
+  transform: translateY(50rem) rotate(270deg);
+}
+
+.base.isLoading > * > header {
   opacity: 0.25;
 }
 
-.base.isOnTop section {
+.base.isOnTop > * > :not(header) {
   opacity: 0.75;
   transform: translateY(calc(100vh - 34rem));
 }
 
-.base.isLoading section {
+.base.isLoading > * > :not(header) {
   transform: translateY(calc(100vh - 32rem));
   opacity: 0.25;
+}
+
+@media (max-width: 950px) {
+  .base.isOnTop > * > :not(header) {
+    transform: translateY(calc(100vh - 53rem));
+  }
+
+  .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 51rem));
+  }
+}
+
+@media (max-width: 950px) and (max-height: 950px) {
+  .base.isOnTop > * > :not(header) {
+    transform: translateY(calc(100vh - 43rem));
+  }
+
+  .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 41rem));
+  }
+}
+
+@media (max-width: 950px) and (max-height: 800px) {
+  .base.isOnTop > * > :not(header) {
+    transform: translateY(calc(100vh - 39rem));
+  }
+
+  .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 37rem));
+  }
+}
+
+@media (max-height: 700px) {
+  .base.isOnTop > * > :not(header) {
+    transform: translateY(calc(100vh - 30rem));
+  }
+
+  .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 28rem));
+  }
+}
+
+@media (max-height: 500px) {
+  .base.isOnTop > * > :not(header) {
+    transform: translateY(calc(100vh - 25rem));
+  }
+
+  .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 23rem));
+  }
 }
 
 .base::-webkit-scrollbar {
@@ -41,54 +120,4 @@
 
 .base::-webkit-scrollbar-thumb {
   background-color: var(--secondary-accent-color);
-}
-
-@media (max-width: 950px) {
-  .base.isOnTop section {
-    transform: translateY(calc(100vh - 53rem));
-  }
-
-  .base.isLoading section {
-    transform: translateY(calc(100vh - 51rem));
-  }
-}
-
-@media (max-width: 950px) and (max-height: 950px) {
-  .base.isOnTop section {
-    transform: translateY(calc(100vh - 43rem));
-  }
-
-  .base.isLoading section {
-    transform: translateY(calc(100vh - 41rem));
-  }
-}
-
-@media (max-width: 950px) and (max-height: 800px) {
-  .base.isOnTop section {
-    transform: translateY(calc(100vh - 39rem));
-  }
-
-  .base.isLoading section {
-    transform: translateY(calc(100vh - 37rem));
-  }
-}
-
-@media (max-height: 700px) {
-  .base.isOnTop section {
-    transform: translateY(calc(100vh - 30rem));
-  }
-
-  .base.isLoading section {
-    transform: translateY(calc(100vh - 28rem));
-  }
-}
-
-@media (max-height: 500px) {
-  .base.isOnTop section {
-    transform: translateY(calc(100vh - 25rem));
-  }
-
-  .base.isLoading section {
-    transform: translateY(calc(100vh - 23rem));
-  }
 }

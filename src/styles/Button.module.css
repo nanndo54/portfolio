@@ -29,15 +29,12 @@
   transition:
     background-position 0.5s,
     color 0.5s,
-    transform 0.25s;
+    transform 0.2s;
   text-decoration: none;
 }
 
-.base:hover {
-  transform: scale(1.01);
-}
 .base:active {
-  transform: scale(0.99);
+  transform: scale(0.95);
 }
 
 .base > * {

@@ -12,6 +12,7 @@
 
   opacity: 0;
 
+  overflow: hidden;
   pointer-events: none;
   transition: opacity 0.1s;
   z-index: 3;
@@ -25,12 +26,12 @@
 }
 
 .base .content {
-  transition: transform 0.15s;
-  width: 45rem;
+  overflow: visible;
+  z-index: 5;
 }
 
-.base .content:has(svg) {
-  width: 25rem;
+.base .content * {
+  transition: transform 0s ease-out;
 }
 
 .content > * {
@@ -43,6 +44,7 @@
 }
 
 .content svg {
+  width: 15rem;
   filter: drop-shadow(0 2rem 2rem #00000088);
 }
 
@@ -61,7 +63,7 @@
   box-shadow:
     inset 0 20rem 20rem -20rem #000000cc,
     inset 0 -20rem 20rem -20rem #000000cc;
-  pointer-events: none;
+  z-index: 4;
 }
 
 .base.open .overlay * {
@@ -71,6 +73,13 @@
 .content img[src*='.png'],
 .content img[src*='.svg'] {
   box-shadow: none;
+}
+
+.overlay .title {
+  position: absolute;
+  top: 1.5rem;
+  margin: 0 auto;
+  color: var(--footer-font-color);
 }
 
 .overlay .closeButton {

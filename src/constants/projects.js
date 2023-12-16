@@ -19,8 +19,8 @@ const projects = [
     technologies: ['JavaScript', 'HTML', 'CSS'],
     icon: MiniTranslatorIcon,
     images: [
-      { src: miniTranslatorImg1, alt: 'Mini Translator 1' },
-      { src: miniTranslatorImg2, alt: 'Mini Translator 2' }
+      { src: miniTranslatorImg1, alt: 'Traduciendo del francés al español' },
+      { src: miniTranslatorImg2, alt: 'Traduciendo del español al inglés' }
     ]
   },
   {
@@ -31,10 +31,19 @@ const projects = [
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
     icon: QuizGameIcon,
     images: [
-      { src: quizGameImg1, alt: 'Quiz Game 1' },
-      { src: quizGameImg2, alt: 'Quiz Game 2' },
-      { src: quizGameImg3, alt: 'Quiz Game 3' },
-      { src: quizGameImg4, alt: 'Quiz Game 4' }
+      { src: quizGameImg1, alt: 'Menu de configuración del juego' },
+      {
+        src: quizGameImg2,
+        alt: 'Pregunta del juego: ¿Cuál de estos países colinda con Austria?'
+      },
+      {
+        src: quizGameImg3,
+        alt: 'Pregunta del juego: ¿Cuál de estas palabras se usa para describir un grupo de abejas?'
+      },
+      {
+        src: quizGameImg4,
+        alt: 'Menú de puntuación del juego donde se observan las respuestas correctas y el tiempo transcurrido'
+      }
     ]
   },
   {

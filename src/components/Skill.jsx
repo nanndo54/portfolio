@@ -18,7 +18,7 @@ function Skill({ size = 'medium', name, icon, props }) {
       <button
         className={styles.icon}
         title={name}
-        onClick={() => openShowcase({ element: iconElement })}
+        onClick={() => openShowcase({ element: iconElement, alt: name })}
       >
         {iconElement}
       </button>
