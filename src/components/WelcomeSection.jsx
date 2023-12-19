@@ -10,8 +10,7 @@ import Link from '#/components/Link'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
-import photo from '#/assets/img/profile-photo.jpg'
-import { CvIcon, LogoIcon } from '#/constants/icons'
+import { CvIcon, LogoIcon } from '#/constants/icons.json'
 import useAppStore from '#/state/store'
 import sections from '#/constants/sections'
 import getCurrentSection from '#/state/getCurrentSection'
@@ -67,7 +66,7 @@ function WelcomeSection({ id }) {
           tabIndex={isOnTop ? -1 : 0}
         >
           <Icon src={LogoIcon} width={80} />
-          <Image src={photo} alt='Mi fotografía' noZoom />
+          <Image src='img/profile-photo.jpg' alt='Mi fotografía' noZoom />
         </button>
         <ContactIcons
           className={`${styles.contact} ${menuOpen ? styles.open : ''}`}

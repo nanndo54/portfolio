@@ -15,10 +15,11 @@ function Image({
   const ref = useRef()
   const { openShowcase } = useAppStore()
 
+  const imageSrc = `/src/assets/${src}`
   const imageElement = (
     <img
       ref={ref}
-      src={src}
+      src={imageSrc}
       alt={alt}
       className={`${className} ${styles.base} ${
         noBorder ? styles.noBorder : ''
@@ -32,7 +33,7 @@ function Image({
   return noZoom ? (
     imageElement
   ) : (
-    <button type='button' onClick={() => openShowcase({ src, alt })}>
+    <button type='button' onClick={() => openShowcase({ imageSrc, alt })}>
       {imageElement}
     </button>
   )

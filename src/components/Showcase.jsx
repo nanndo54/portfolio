@@ -8,7 +8,7 @@ import Text from '#/components/Text'
 import Image from '#/components/Image'
 
 import useAppStore from '#/state/store'
-import { CloseIcon, MinusIcon, PlusIcon, ZoomIcon } from '#/constants/icons'
+import { CloseIcon, MinusIcon, PlusIcon, ZoomIcon } from '#/constants/icons.json'
 
 const initialScale = 1
 

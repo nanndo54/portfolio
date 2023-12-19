@@ -5,8 +5,8 @@ import JobExperience from '#/components/JobExperience'
 import Text from '#/components/Text'
 import Icon from '#/components/Icon'
 
-import jobs from '#/constants/jobs'
-import { ArrowIcon } from '#/constants/icons'
+import jobs from '#/constants/jobs.json'
+import { ArrowIcon } from '#/constants/icons.json'
 
 function JobExperiencesSection({ id }) {
   const years = jobs.reduce((acc, project) => {

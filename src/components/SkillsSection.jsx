@@ -2,9 +2,9 @@ import styles from '#/styles/SkillsSection.module.css'
 
 import Section from '#/components/Section'
 import Skill from '#/components/Skill'
-
-import skills from '#/constants/skills'
 import Text from '#/components/Text'
+
+import skills from '#/constants/skills.json'
 
 function SkillsSection({ id }) {
   return (

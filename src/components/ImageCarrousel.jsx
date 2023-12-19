@@ -3,17 +3,14 @@ import { useRef, useState } from 'react'
 
 import useAppStore from '#/state/store'
 import IconButton from '#/components/IconButton'
-import { ArrowIcon } from '#/constants/icons'
+import { ArrowIcon } from '#/constants/icons.json'
 import Image from '#/components/Image'
 import useDebouncedCallback from '#/hooks/useDebouncedCallback'
 import Icon from '#/components/Icon'
-// import useDragScroll from '#/hooks/useDragScroll'
 
 function ImageCarrousel({ images, className = '', noBorder = false, noZoom = false }) {
   const { openShowcase } = useAppStore()
   const contentRef = useRef()
-
-  // useDragScroll(contentRef)
 
   const [imageIndex, setImageIndex] = useState(0)
 

@@ -2,7 +2,7 @@ import styles from '#/styles/ContactIcons.module.css'
 
 import Icon from '#/components/Icon'
 
-import contacts from '#/constants/contacts'
+import contacts from '#/constants/contacts.json'
 import IconButton from '#/components/IconButton'
 
 function ContactIcons({ className = '', tabIndex }) {

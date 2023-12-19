@@ -6,7 +6,14 @@ import ImageCarrousel from '#/components/ImageCarrousel'
 import Skill from '#/components/Skill'
 import Text from '#/components/Text'
 
-import { getSkill } from '#/constants/skills'
+import skills from '#/constants/skills.json'
+
+const allSkills = Object.values(skills).reduce(
+  (allSkills, skills) => [...allSkills, ...skills],
+  []
+)
+
+const getSkill = (name) => allSkills.find((skill) => skill.name === name)
 
 function Project({ name, web, code, technologies = [], icon, images = [] }) {
   const skills = technologies.map(getSkill)
