@@ -56,6 +56,10 @@ async function startServer() {
     res.send(body)
   })
 
+  app.get('/', async (_, res) => {
+    res.redirect(301, '/portfolio/')
+  })
+
   const port = process.env.PORT || 3000
   app.listen(port)
   console.log(`Server running at http://localhost:${port}/portfolio`)

@@ -3,11 +3,8 @@ import { useEffect, useState } from 'react'
 
 import Footer from '#/components/Footer'
 import BlockQuote from '#/components/BlockQuote'
-import Link from '#/components/Link'
-import Icon from '#/components/Icon'
 
 import sections from '#/constants/sections'
-import { ArrowIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 import getCurrentSection from '#/state/getCurrentSection'
 
@@ -38,20 +35,8 @@ function AllSections() {
       id='base'
       onScroll={handlePageScroll}
     >
-      {sections.map(({ id, Component }, index) => (
-        <>
-          {index === 1 && (
-            <Link
-              href={`#${id}`}
-              className={styles.seeContentIcon}
-              aria-label='Ver contenido'
-              noBorder
-            >
-              <Icon src={ArrowIcon} />
-            </Link>
-          )}
-          <Component key={id} id={id} />
-        </>
+      {sections.map(({ id, Component }) => (
+        <Component key={id} id={id} />
       ))}
       <BlockQuote author='Carl Sagan' quote='quote.carl-sagan1' />
       <Footer />

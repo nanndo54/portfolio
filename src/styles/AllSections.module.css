@@ -9,6 +9,7 @@
     linear-gradient(transparent, var(--primary-color) 100vh);
   background-repeat: repeat-y;
   background-attachment: local;
+  background-size: 100%;
   transition:
     background-color 0.5s,
     background-image 0.5s;

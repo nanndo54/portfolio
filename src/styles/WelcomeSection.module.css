@@ -170,7 +170,7 @@ p.presentation {
   top: 0;
   right: 0;
   width: 90rem;
-  font-size: 8rem;
+  font-size: 7.5rem;
 
   opacity: 0;
 
@@ -199,7 +199,7 @@ p.presentation {
 }
 
 .base .link.current {
-  font-size: 9.5rem;
+  font-size: 9rem;
 }
 
 @media (max-width: 950px) {

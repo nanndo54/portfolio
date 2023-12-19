@@ -127,9 +127,11 @@
 .zoomButtons button {
   height: 2.5rem;
   width: 2.5rem;
+  padding: 0.4rem;
   border-color: var(--footer-font-color);
 }
 
 .zoomButtons svg {
   fill: var(--footer-font-color);
+  stroke: var(--footer-font-color);
 }
