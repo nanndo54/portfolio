@@ -92,7 +92,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.dark {
+body[dark] {
   --font-color: rgb(220, 220, 250);
   --alternate-font-color: rgb(30, 30, 30);
 
@@ -141,4 +141,10 @@ button:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(32, 38, 55, 0.7);
+  }
 }

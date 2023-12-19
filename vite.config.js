@@ -1,16 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
-import svgr from 'vite-plugin-svgr'
+import svgr from '@svgr/rollup'
 import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 export default defineConfig(({ mode }) => ({
   base: '/portfolio/',
-  plugins: [react(), vike({ prerender: true }), svgr()],
+  plugins: [react(), vike({ prerender: true }), svgr({ exportType: 'named' })],
   resolve: {
     alias: {
       '#': '/src'
+      // '#': path.resolve(__dirname, './src')
     }
   },
   publicDir: 'src/public',

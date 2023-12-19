@@ -42,7 +42,7 @@ function Showcase() {
               }}
             >
               {alt && (
-                <Text as='h5' className={styles.title}>
+                <Text as='p' className={styles.title}>
                   {alt}
                 </Text>
               )}

@@ -6,9 +6,4 @@ const languages = {
   en
 }
 
-const languageIsSupported = (languageCode) =>
-  languageCode && Object.keys(languages).find((code) => languageCode.startsWith(code))
-
 export default languages
-
-export { languageIsSupported }

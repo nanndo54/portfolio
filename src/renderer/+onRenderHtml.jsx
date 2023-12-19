@@ -35,6 +35,8 @@ async function render(pageContext) {
       <meta property="og:type" content="website" />
       <meta name="color-scheme" content="dark light">
       <link rel="icon" type="image/svg+xml" href="${logo}" />
+      <meta name="theme-color" content="#2784ee">
+      <meta name="apple-mobile-web-app-status-bar-style" content="#2784ee">
       <script>
         window.dataLayer = window.dataLayer || []
         function gtag() {
@@ -44,7 +46,7 @@ async function render(pageContext) {
         gtag('config', 'G-9XT17RG3ZV')
       </script>
     </head>
-    <body id=''>
+    <body>
       <main>${dangerouslySkipEscape(pageHtml)}</main>
     </body>
   </html>`

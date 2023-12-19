@@ -4,16 +4,11 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 import useAppStore from '#/state/store'
 
-const verifyTheme = (theme) => {
-  if (theme === 'dark') document.querySelector('body').classList.add('dark')
-  else document.querySelector('body').classList.remove('dark')
-}
-
 function Navbar() {
   const { locale, theme, toggleLocale, toggleTheme } = useAppStore()
 
   useEffect(() => {
-    verifyTheme(theme)
+    document.querySelector('body').toggleAttribute('dark', theme === 'dark')
   }, [theme])
 
   return (

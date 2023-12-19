@@ -1,8 +1,13 @@
+import useSvg from '#/hooks/useSvg'
 import styles from '#/styles/Icon.module.css'
 
-function Icon({ className = '', contentColor, src: IconComponent, ...props }) {
+function Icon({ className = '', contentColor, src, ...props }) {
+  const { loading, SvgIcon } = useSvg(src)
+
+  if (loading || !SvgIcon)
+    return <div className='rounded-full bg-slate-400 animate-pulse h-8 w-8'></div>
   return (
-    <IconComponent
+    <SvgIcon
       className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${className}`}
       {...props}
     />
