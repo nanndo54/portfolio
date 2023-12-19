@@ -20,9 +20,6 @@ function JobExperiencesSection({ id }) {
   return (
     <Section id={id}>
       <Text as='h2' localeId='job-experience.title' />
-
-      {/* <Logo /> */}
-      {/* <SvgIcon icon='/src/assets/svg/logo.svg?react' /> */}
       <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>
         <div className={styles.timeline}>
