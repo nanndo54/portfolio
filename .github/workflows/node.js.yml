@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     container: pandoc/latex
 
+    strategy:
+      matrix:
+        node-version: [20.x]
+        
     steps:
     - uses: actions/checkout@v2
     - name: Install Dependencies
