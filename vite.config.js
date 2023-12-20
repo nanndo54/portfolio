@@ -15,7 +15,9 @@ export default defineConfig(({ mode }) => ({
   publicDir: 'src/public',
   build: {
     rollupOptions: {
-      assetFileNames: `assets/[name].[ext]`
+      output: {
+        assetFileNames: `assets/[name].[ext]`
+      }
     }
   },
   css: {
