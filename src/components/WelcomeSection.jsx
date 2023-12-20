@@ -30,7 +30,7 @@ function WelcomeSection({ id }) {
     if (isOnTop) return
 
     if (Audio) {
-      const squeakAudio = new Audio('/src/assets/sounds/squeak.mp3')
+      const squeakAudio = new Audio('/sounds/squeak.mp3')
       squeakAudio.volume = 0.3
       squeakAudio.play()
     }

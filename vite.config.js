@@ -1,12 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
-import svgr from '@svgr/rollup'
+import svgr from 'vite-plugin-svgr'
 import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), vike({ prerender: true }), svgr({ exportType: 'named' })],
+  plugins: [
+    react(),
+    vike({ prerender: true }),
+    svgr({ svgrOptions: { exportType: 'named' } })
+  ],
   resolve: {
     alias: {
       '#': '/src'

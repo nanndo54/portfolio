@@ -13,7 +13,6 @@
     "lint:format": "prettier  --log-level warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
-    "@svgr/rollup": "8.1.0",
     "@vitejs/plugin-react": "4.2.1",
     "compression": "1.7.4",
     "cross-env": "7.0.3",
@@ -38,7 +37,8 @@
     "eslint-plugin-prettier": "5.1.0",
     "eslint-plugin-react": "7.33.2",
     "pre-commit": "1.2.2",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "vite-plugin-svgr": "4.2.0"
   },
   "browserslist": [
     "> 0.2%",
