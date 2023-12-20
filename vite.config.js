@@ -6,12 +6,10 @@ import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 export default defineConfig(({ mode }) => ({
-  base: '/portfolio/',
   plugins: [react(), vike({ prerender: true }), svgr({ exportType: 'named' })],
   resolve: {
     alias: {
       '#': '/src'
-      // '#': path.resolve(__dirname, './src')
     }
   },
   publicDir: 'src/public',
