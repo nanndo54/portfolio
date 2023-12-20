@@ -30,6 +30,7 @@ jobs:
         source-directory: 'dist'
         destination-github-username: 'nanndo54'
         destination-repository-name: 'nanndo54.github.io'
+        target-directory: /docs
         user-email: nanndo54@outlook.com
         target-branch: main
         commit-message: See ORIGIN_COMMIT from $GITHUB_REF
