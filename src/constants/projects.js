@@ -1,6 +1,6 @@
-import miniTranslatorIcon from '#/assets/projects/icons/mini-translator-icon.svg'
-import quizGameIcon from '#/assets/projects/icons/quiz-game-icon.svg'
-import jolcIcon from '#/assets/projects/icons/jolc-icon.svg'
+import miniTranslatorIcon from '#/assets/projects/icons/mini-translator-icon.svg?react'
+import quizGameIcon from '#/assets/projects/icons/quiz-game-icon.svg?react'
+import jolcIcon from '#/assets/projects/icons/jolc-icon.svg?react'
 
 import miniTranslatorImg1 from '#/assets/projects/images/mini-translator-img1.jpg'
 import miniTranslatorImg2 from '#/assets/projects/images/mini-translator-img2.jpg'

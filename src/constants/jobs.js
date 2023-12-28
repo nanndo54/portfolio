@@ -1,4 +1,4 @@
-import koloLogo from '#/assets/svg/kolo-icon.svg'
+import koloLogo from '#/assets/svg/kolo-icon.svg?react'
 import koloImg1 from '#/assets/images/kolo-img.jpg'
 
 const jobs = [

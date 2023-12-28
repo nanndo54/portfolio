@@ -15,13 +15,15 @@ function Button({
   href,
   onClick,
   icon,
+  iconOnStart = false,
   children,
   ...props
 }) {
   const childrenElement = (
     <>
+      {icon && iconOnStart && <Icon src={icon} className={styles.icon} />}
       {children}
-      {icon && <Icon src={icon} className={styles.icon} />}
+      {icon && !iconOnStart && <Icon src={icon} className={styles.icon} />}
     </>
   )
 

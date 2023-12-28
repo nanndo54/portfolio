@@ -9,7 +9,11 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     vike({ prerender: true }),
-    svgr({ svgrOptions: { exportType: 'named' } })
+    svgr({
+      svgrOptions: {
+        plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx']
+      }
+    })
   ],
   resolve: {
     alias: {

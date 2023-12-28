@@ -59,6 +59,10 @@ function WelcomeSection({ id }) {
           >
             <Text localeId='welcome.cv' />
           </Button>
+          <ContactIcons
+            className={`${styles.contact} ${menuOpen ? styles.open : ''}`}
+            tabIndex={menuOpen ? 0 : -1}
+          />
         </div>
       </div>
       <div className={styles.avatar}>
@@ -70,10 +74,6 @@ function WelcomeSection({ id }) {
           <Icon src={logoIcon} width={80} />
           <Image src={profileImage} alt='Mi fotografía' noZoom />
         </button>
-        <ContactIcons
-          className={`${styles.contact} ${menuOpen ? styles.open : ''}`}
-          tabIndex={menuOpen ? 0 : -1}
-        />
         <div className={styles.links}>
           {sections
             .filter(({ hideInNavbar }) => !hideInNavbar)

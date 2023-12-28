@@ -1,6 +1,6 @@
-import linkedinIcon from '#/assets/svg/linkedin-icon.svg'
-import githubIcon from '#/assets/svg/github-icon.svg'
-import emailIcon from '#/assets/svg/email-icon.svg'
+import linkedinIcon from '#/assets/svg/linkedin-icon.svg?react'
+import githubIcon from '#/assets/svg/github-icon.svg?react'
+import emailIcon from '#/assets/svg/email-icon.svg?react'
 
 const contacts = [
   {

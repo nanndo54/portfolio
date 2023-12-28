@@ -1,17 +1,15 @@
 import styles from '#/styles/Icon.module.css'
 
-import useSvg from '#/hooks/useSvg'
-
-function Icon({ className = '', contentColor, src, ...props }) {
-  const { loading, SvgIcon } = useSvg(`${src}?react`)
-
-  return loading || !SvgIcon ? (
-    <div />
-  ) : (
-    <SvgIcon
-      className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${className}`}
-      {...props}
-    />
+function Icon({ className = '', contentColor, src: Icon, ...props }) {
+  return (
+    Icon && (
+      <Icon
+        className={`${styles.base} ${
+          contentColor ? styles.contentColor : ''
+        } ${className}`}
+        {...props}
+      />
+    )
   )
 }
 

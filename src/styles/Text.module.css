@@ -84,6 +84,7 @@ h6.base {
 
 strong {
   font-weight: 700;
+  font-size: 1.15rem;
   background: linear-gradient(
     to right,
     var(--accent-color),
