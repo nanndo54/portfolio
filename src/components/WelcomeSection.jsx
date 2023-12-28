@@ -6,21 +6,17 @@ import Button from '#/components/Button'
 import ContactIcons from '#/components/ContactIcons'
 import Icon from '#/components/Icon'
 import Image from '#/components/Image'
-import Link from '#/components/Link'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
 import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
-import sections from '#/constants/sections'
-import getCurrentSection from '#/state/getCurrentSection'
 
 import profileImage from '#/assets/images/profile-photo.jpg'
 
 function WelcomeSection({ id }) {
   const { isOnTop } = useAppStore()
   const intl = useIntl()
-  const currentSection = getCurrentSection()
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -74,23 +70,6 @@ function WelcomeSection({ id }) {
           <Icon src={logoIcon} width={80} />
           <Image src={profileImage} alt='Mi fotografía' noZoom />
         </button>
-        <div className={styles.links}>
-          {sections
-            .filter(({ hideInNavbar }) => !hideInNavbar)
-            .map(({ id }) => (
-              <Link
-                key={id}
-                href={`#${id}`}
-                className={`${styles.link} ${
-                  id === currentSection ? styles.current : ''
-                }`}
-                noDecoration
-                tabIndex={isOnTop ? -1 : 0}
-              >
-                <Text localeId={`${id}.title`} />
-              </Link>
-            ))}
-        </div>
       </div>
     </Section>
   )

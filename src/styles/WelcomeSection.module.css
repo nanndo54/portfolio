@@ -113,100 +113,6 @@ p.presentation {
   pointer-events: none;
   transform: none;
 }
-/* 
-.base .contact {
-  position: absolute;
-  top: 0;
-  right: 0;
-  justify-content: flex-end;
-  gap: 3rem;
-
-  height: 100%;
-  width: 350%;
-
-  transition:
-    transform 0.1s ease-out,
-    opacity 0.5s;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.base .contact a {
-  height: 18rem;
-  width: 18rem;
-  padding: 3.4rem;
-  border-width: 0.7rem;
-}
-
-.contact a + a {
-  margin-left: -21rem;
-
-  transition:
-    border 0.5s,
-    margin-left 0.25s ease-out;
-}
-
-.base.overlay .contact {
-  opacity: 1;
-  transform: translateX(-25rem);
-
-  pointer-events: initial;
-}
-
-.base.overlay .contact a + a {
-  margin-left: 0;
-}
-
-.base .contact.open {
-  opacity: 1;
-
-  transition:
-    transform 0.2s 0.2s ease-out,
-    opacity 0.3s;
-}
-
-.base .contact.open a + a {
-  transition:
-    border 0.5s,
-    margin-left 0.2s 0.25s ease-in-out;
-} */
-
-.base .links {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 90rem;
-  font-size: 7.5rem;
-
-  opacity: 0;
-
-  transition: opacity 0.1s ease-out;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2rem;
-}
-
-.base.overlay .links {
-  transform: translateY(30rem);
-  transition: opacity 0.2s 0.2s ease-out;
-
-  opacity: 1;
-}
-
-.base .link {
-  color: var(--content-color);
-  text-wrap: nowrap;
-  height: 13rem;
-  line-height: 1;
-
-  transition: font-size 0.2s;
-}
-
-.base .link.current {
-  font-size: 9rem;
-}
 
 @media (max-width: 950px) {
   header.base {
@@ -222,10 +128,6 @@ p.presentation {
 
   .base .avatar {
     transform: translate(calc(10rem - 50vw), 4rem) scale(0.8);
-  }
-
-  .base .links {
-    display: none;
   }
 }
 

@@ -35,6 +35,7 @@ export default [
   {
     id: 'contact',
     icon: 'email',
-    Component: ContactSection
+    Component: ContactSection,
+    hideInNavbar: true
   }
 ]
