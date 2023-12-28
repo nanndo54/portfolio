@@ -4,7 +4,7 @@ import Section from '#/components/Section'
 import Skill from '#/components/Skill'
 import Text from '#/components/Text'
 
-import skills from '#/constants/skills.json'
+import skills from '#/constants/skills'
 
 function SkillsSection({ id }) {
   return (

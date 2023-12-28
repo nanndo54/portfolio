@@ -3,10 +3,11 @@ import styles from '#/styles/Icon.module.css'
 import useSvg from '#/hooks/useSvg'
 
 function Icon({ className = '', contentColor, src, ...props }) {
-  const { loading, SvgIcon } = useSvg(`/src/assets/${src}?react`)
+  const { loading, SvgIcon } = useSvg(`${src}?react`)
 
-  if (loading || !SvgIcon) return <div>loading</div>
-  return (
+  return loading || !SvgIcon ? (
+    <div />
+  ) : (
     <SvgIcon
       className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${className}`}
       {...props}

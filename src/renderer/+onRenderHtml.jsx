@@ -10,7 +10,7 @@ async function render(pageContext) {
   const title = (documentProps && documentProps.title) || 'Pablo Cabrera | Portfolio'
   const desc =
     (documentProps && documentProps.description) ||
-    "My personal portfolio. Hi! I'm Pablo Cabrera (pabloc54), FullStack Web Developer at your dispose"
+    "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Web Developer at your dispose"
 
   const documentHtml = escapeInject`<!DOCTYPE html>
   <html lang="en" translate="no">
@@ -27,14 +27,14 @@ async function render(pageContext) {
       <meta property="og:title" content="Pablo Cabrera | Portfolio" />
       <meta
         property="og:description"
-        content="My personal portfolio. Hi! I'm Pablo Cabrera (pabloc54), FullStack Developer at your dispose"
+        content="My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Developer at your dispose"
       />
-      <meta property="og:url" content="https://pabloc54.dev" />
+      <meta property="og:url" content="https://nanndo54.dev" />
       <meta property="og:type" content="website" />
       <meta name="color-scheme" content="dark light">
       <link rel="icon" type="image/svg+xml" href="/src/assets/svg/logo.svg" />
-      <meta name="theme-color" content="#2784ee">
-      <meta name="apple-mobile-web-app-status-bar-style" content="#2784ee">
+      <meta name="theme-color" content="#7c7edf">
+      <meta name="apple-mobile-web-app-status-bar-style" content="#7c7edf">
       <script>
         window.dataLayer = window.dataLayer || []
         function gtag() {

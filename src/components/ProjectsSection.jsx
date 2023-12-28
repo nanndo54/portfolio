@@ -5,8 +5,8 @@ import Project from '#/components/Project'
 import Text from '#/components/Text'
 import Icon from '#/components/Icon'
 
-import projects from '#/constants/projects.json'
-import { ArrowIcon } from '#/constants/icons.json'
+import projects from '#/constants/projects'
+import { ArrowIcon } from '#/constants/icons'
 
 function ProjectsSection({ id }) {
   const years = projects.reduce((acc, project) => {

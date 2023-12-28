@@ -6,7 +6,7 @@ import ImageCarrousel from '#/components/ImageCarrousel'
 import Skill from '#/components/Skill'
 import Text from '#/components/Text'
 
-import skills from '#/constants/skills.json'
+import skills from '#/constants/skills'
 
 const allSkills = Object.values(skills).reduce(
   (allSkills, skills) => [...allSkills, ...skills],

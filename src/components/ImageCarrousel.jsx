@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 
 import useAppStore from '#/state/store'
 import IconButton from '#/components/IconButton'
-import { ArrowIcon } from '#/constants/icons.json'
+import { ArrowIcon } from '#/constants/icons'
 import Image from '#/components/Image'
 import useDebouncedCallback from '#/hooks/useDebouncedCallback'
 import Icon from '#/components/Icon'
