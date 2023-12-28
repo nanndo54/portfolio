@@ -10,7 +10,7 @@ import Link from '#/components/Link'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
-import { CvIcon, LogoIcon } from '#/constants/icons'
+import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 import sections from '#/constants/sections'
 import getCurrentSection from '#/state/getCurrentSection'
@@ -54,7 +54,7 @@ function WelcomeSection({ id }) {
           <Button
             href={intl.formatMessage({ id: 'link.cv' })}
             download='Pablo Cabrera - CV.pdf'
-            icon={CvIcon}
+            icon={cvIcon}
             tabIndex={isOnTop ? 0 : -1}
           >
             <Text localeId='welcome.cv' />
@@ -67,7 +67,7 @@ function WelcomeSection({ id }) {
           onClick={(ev) => handleMenuButton(ev.target.value)}
           tabIndex={isOnTop ? -1 : 0}
         >
-          <Icon src={LogoIcon} width={80} />
+          <Icon src={logoIcon} width={80} />
           <Image src={profileImage} alt='Mi fotografía' noZoom />
         </button>
         <ContactIcons

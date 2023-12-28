@@ -32,7 +32,7 @@ function Image({
   return noZoom ? (
     imageElement
   ) : (
-    <button type='button' onClick={() => openShowcase({ src, alt })}>
+    <button type='button' onClick={() => openShowcase({ images: [{ src, alt }] })}>
       {imageElement}
     </button>
   )

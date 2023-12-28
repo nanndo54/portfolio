@@ -34,10 +34,12 @@ const store = create(
         set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       toggleLocale: () =>
         set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' })),
-      openShowcase: ({ open = true, ...showcase }) =>
-        set(() => ({ showcase: { open, ...showcase } })),
+      openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
+        set(() => ({ showcase: { open, index, images, ...showcase } })),
       closeShowcase: () =>
-        set((state) => ({ showcase: { ...state.showcase, open: false } }))
+        set((state) => ({ showcase: { ...state.showcase, open: false } })),
+      setShowcase: (showcase) =>
+        set((state) => ({ showcase: { ...state.showcase, ...showcase } }))
     }),
     {
       name: 'app-storage',

@@ -6,7 +6,7 @@ import Text from '#/components/Text'
 import Icon from '#/components/Icon'
 
 import jobs from '#/constants/jobs'
-import { ArrowIcon } from '#/constants/icons'
+import { arrowIcon } from '#/constants/icons'
 
 function JobExperiencesSection({ id }) {
   const years = jobs.reduce((acc, project) => {
@@ -23,7 +23,7 @@ function JobExperiencesSection({ id }) {
       <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>
         <div className={styles.timeline}>
-          <Icon src={ArrowIcon} />
+          <Icon src={arrowIcon} />
         </div>
         <div className={styles.allExperiences}>
           {Object.entries(years).map(([year, experiences]) => (

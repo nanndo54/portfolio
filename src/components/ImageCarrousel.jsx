@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 
 import useAppStore from '#/state/store'
 import IconButton from '#/components/IconButton'
-import { ArrowIcon } from '#/constants/icons'
+import { arrowIcon } from '#/constants/icons'
 import Image from '#/components/Image'
 import useDebouncedCallback from '#/hooks/useDebouncedCallback'
 import Icon from '#/components/Icon'
@@ -48,7 +48,7 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
         noBorder
         aria-label='Ver imagen anterior'
       >
-        <Icon src={ArrowIcon} contentColor />
+        <Icon src={arrowIcon} contentColor />
       </IconButton>
       {noZoom ? (
         <div
@@ -64,9 +64,7 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           className={`${className} ${styles.container} ${
             noBorder ? styles.noBorder : ''
           }`}
-          onClick={() =>
-            openShowcase({ src: images[imageIndex].src, alt: images[imageIndex].alt })
-          }
+          onClick={() => openShowcase({ images, index: imageIndex })}
         >
           {contentElement}
         </button>
@@ -77,9 +75,9 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           handleImageChange((imageIndex + 1 + images.length) % images.length)
         }
         noBorder
-        aria-label='Ver imagen anterior'
+        aria-label='Ver imagen siguiente'
       >
-        <Icon src={ArrowIcon} contentColor />
+        <Icon src={arrowIcon} contentColor />
       </IconButton>
       <div className={styles.dots}>
         {images.map((_, index) => (
