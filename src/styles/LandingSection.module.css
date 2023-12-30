@@ -22,6 +22,10 @@ header.base {
   transition:
     transform 0.2s,
     opacity 0.2s;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
 }
 
 p.presentation {
@@ -54,20 +58,20 @@ p.presentation {
   height: 20rem;
   width: 20rem;
 
-  transform: translate(calc(28rem - 50vw), 10.5rem);
   background-clip: content-box;
 
   transition:
     transform 0.25s ease,
     border 0.5s;
 
-  z-index: 2;
-  pointer-events: none;
-}
-
-.base.overlay .avatar {
   transform: translate(6.5rem, -7.5rem) scale(0.18);
   pointer-events: all;
+  z-index: 2;
+}
+
+body[top] .avatar {
+  transform: translate(calc(28rem - 50vw), 10.5rem);
+  pointer-events: none;
 }
 
 .avatar > button {
@@ -83,8 +87,8 @@ p.presentation {
   height: 100%;
   width: 100%;
 
-  opacity: 0.5;
-  transform: scale(1.12);
+  opacity: 1;
+  transform: scale(0.9);
 
   transition:
     transform 0.3s,
@@ -97,21 +101,23 @@ p.presentation {
   border-width: 0.5rem;
   border-radius: 55% 45% 54% 46% / 54% 41% 59% 46%;
   filter: grayscale(15%);
+
+  opacity: 0;
 }
 
-.base.overlay .avatar > button > svg {
+body[top] .avatar > button > svg {
+  opacity: 0.5;
+  transform: scale(1.12);
+}
+
+body[top] .avatar > button > img {
   opacity: 1;
-  transform: scale(0.9);
 }
 
-.base.overlay .avatar > button > img {
-  opacity: 0;
-}
-
-.base.overlay .info {
-  opacity: 0;
-  pointer-events: none;
-  transform: none;
+body[top] .info {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(10rem);
 }
 
 @media (max-width: 950px) {
@@ -137,7 +143,7 @@ p.presentation {
     gap: 1rem;
   }
 
-  .base.overlay .avatar {
+  body[top] .base .avatar {
     transform: translate(7rem, -8rem) scale(0.15);
   }
 }

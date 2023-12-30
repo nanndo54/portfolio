@@ -6,21 +6,14 @@ import BlockQuote from '#/components/BlockQuote'
 
 import sections from '#/constants/sections'
 import useAppStore from '#/state/store'
-import getCurrentSection from '#/state/getCurrentSection'
 
 function AllSections() {
   const { isOnTop, setOnTop } = useAppStore()
   const [isLoading, setLoading] = useState(true)
 
-  const currentSection = getCurrentSection()
-
   useEffect(() => {
     setLoading(false)
   }, [])
-
-  useEffect(() => {
-    if (currentSection) history.replaceState(null, null, `#${currentSection}`)
-  }, [currentSection])
 
   const handlePageScroll = (ev) => {
     const newIsOnTop = ev.target.scrollTop < 40
@@ -29,10 +22,7 @@ function AllSections() {
 
   return (
     <div
-      className={`${styles.base} ${isLoading ? styles.isLoading : ''} ${
-        isOnTop ? styles.isOnTop : ''
-      }`}
-      id='base'
+      className={`${styles.base} ${isLoading ? styles.isLoading : ''}`}
       onScroll={handlePageScroll}
     >
       {sections.map(({ id, Component }) => (

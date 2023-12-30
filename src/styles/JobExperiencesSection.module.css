@@ -1,7 +1,41 @@
+.base {
+  overflow: visible;
+}
+
 .content {
   display: grid;
   grid-template-columns: 0.7rem 1fr;
   gap: 2.5rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  height: 2.4rem;
+  width: 2.4rem;
+
+  opacity: 0;
+
+  fill: var(--content-color);
+  transform: translateY(-7rem);
+
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.arrow svg {
+  transform: rotate(-90deg);
+}
+
+body[top] .arrow {
+  opacity: 1;
+  transform: translateY(-3.8rem);
+}
+
+body[top] .arrow:hover {
+  transform: translateY(-4rem);
 }
 
 .timeline {

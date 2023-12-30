@@ -4,6 +4,7 @@ import Section from '#/components/Section'
 import JobExperience from '#/components/JobExperience'
 import Text from '#/components/Text'
 import Icon from '#/components/Icon'
+import Link from '#/components/Link'
 
 import jobs from '#/constants/jobs'
 import { arrowIcon } from '#/constants/icons'
@@ -18,7 +19,10 @@ function JobExperiencesSection({ id }) {
   }, {})
 
   return (
-    <Section id={id}>
+    <Section id={id} className={styles.base}>
+      <Link href={`#${id}`} className={styles.arrow} aria-label='Ver experiencia laboral'>
+        <Icon src={arrowIcon} />
+      </Link>
       <Text as='h2' localeId='job-experience.title' />
       <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>

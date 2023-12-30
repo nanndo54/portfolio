@@ -26,10 +26,10 @@
 
   border-radius: 2.5rem;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
-.base.background:hover::after {
+/* .base.background:hover::after {
   opacity: 0.15;
 }
 
@@ -52,7 +52,7 @@
   opacity: 0;
   transition: opacity 0.2s;
   z-index: -1;
-}
+} */
 
 @media (max-width: 950px) {
   .base {

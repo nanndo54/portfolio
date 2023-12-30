@@ -1,4 +1,4 @@
-import WelcomeSection from '#/components/WelcomeSection'
+import LandingSection from '#/components/LandingSection'
 import JobExperiencesSection from '#/components/JobExperiencesSection'
 import ProjectsSection from '#/components/ProjectsSection'
 import AboutMeSection from '#/components/AboutMeSection'
@@ -7,34 +7,28 @@ import ContactSection from '#/components/ContactSection'
 
 export default [
   {
-    id: 'welcome',
-    icon: 'home',
-    Component: WelcomeSection,
+    id: 'landing',
+    Component: LandingSection,
     hideInNavbar: true
   },
   {
     id: 'job-experience',
-    icon: 'work',
     Component: JobExperiencesSection
   },
   {
     id: 'projects',
-    icon: 'code',
     Component: ProjectsSection
   },
   {
     id: 'about-me',
-    icon: 'person',
     Component: AboutMeSection
   },
   {
     id: 'skills',
-    icon: 'build',
     Component: SkillsSection
   },
   {
     id: 'contact',
-    icon: 'email',
     Component: ContactSection,
     hideInNavbar: true
   }

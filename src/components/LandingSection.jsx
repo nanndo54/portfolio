@@ -1,5 +1,4 @@
-import styles from '#/styles/WelcomeSection.module.css'
-import { useEffect, useState } from 'react'
+import styles from '#/styles/LandingSection.module.css'
 import { useIntl } from 'react-intl'
 
 import Button from '#/components/Button'
@@ -12,17 +11,11 @@ import Text from '#/components/Text'
 import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 
-import profileImage from '#/assets/images/profile-photo.jpg'
+import profileImage from '#/assets/landing/profile-photo.jpg'
 
-function WelcomeSection({ id }) {
+function LandingSection({ id }) {
   const { isOnTop } = useAppStore()
   const intl = useIntl()
-
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    setMenuOpen(!isOnTop)
-  }, [isOnTop])
 
   const handleMenuButton = () => {
     if (isOnTop) return
@@ -32,17 +25,10 @@ function WelcomeSection({ id }) {
       squeakAudio.volume = 0.3
       squeakAudio.play()
     }
-
-    setMenuOpen(!menuOpen)
   }
 
   return (
-    <Section
-      as='header'
-      background={false}
-      className={`${styles.base} ${isOnTop ? '' : styles.overlay}`}
-      id={id}
-    >
+    <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
         <Text as='h1'>Pablo Cabrera</Text>
         <Text as='p' localeId='welcome.presentation' className={styles.presentation} />
@@ -55,10 +41,7 @@ function WelcomeSection({ id }) {
           >
             <Text localeId='welcome.cv' />
           </Button>
-          <ContactIcons
-            className={`${styles.contact} ${menuOpen ? styles.open : ''}`}
-            tabIndex={menuOpen ? 0 : -1}
-          />
+          <ContactIcons className={styles.contact} />
         </div>
       </div>
       <div className={styles.avatar}>
@@ -75,4 +58,4 @@ function WelcomeSection({ id }) {
   )
 }
 
-export default WelcomeSection
+export default LandingSection

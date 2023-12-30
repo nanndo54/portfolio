@@ -3,8 +3,6 @@
   bottom: 3rem;
   right: 2.5rem;
 
-  transform: translateY(8rem);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +10,13 @@
   transition: transform 0.3s;
 }
 
-.base.show {
-  transform: translateY(0);
+body[top] .base {
+  transform: translateY(8rem);
 }
 
-.base p {
+.label {
   font-size: 1rem;
   color: var(--content-color);
-
-  opacity: 0;
-  transform: translateY(1rem);
 
   transition:
     color 0.5s,
@@ -43,7 +38,7 @@
   background-color: var(--content-color);
   position: absolute;
 
-  border-radius: 50%;
+  border-radius: 20%;
   transition:
     background-color 0.3s,
     transform 0.3s 0.4s,
@@ -53,44 +48,44 @@
 .dot1 {
   height: 18px;
   width: 18px;
-  transform: translateX(15px);
+  transform: scale(50%, 200%) translate(28px, 8px);
 }
 
 .dot2 {
   height: 14px;
   width: 14px;
-  transform: translate(7px, 20px);
+  transform: translate(11px, 7px) rotate(40deg) scale(50%, 150%);
 }
 
 .dot3 {
   height: 10px;
   width: 10px;
-  transform: translate(23px, 36px);
-}
-
-.base.show p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.base.show .icon > div {
-  border-radius: 20%;
-}
-
-.base.show .dot1 {
-  transform: scale(50%, 200%) translate(28px, 8px);
-}
-
-.base.show .dot2 {
-  transform: translate(11px, 7px) rotate(40deg) scale(50%, 150%);
-}
-
-.base.show .dot3 {
   transform: translate(23px, 9px) rotate(-40deg) scale(70%, 210%);
 }
 
+body[top] .label {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+body[top] .icon > div {
+  border-radius: 50%;
+}
+
+body[top] .dot1 {
+  transform: translateX(15px);
+}
+
+body[top] .dot2 {
+  transform: translate(7px, 20px);
+}
+
+body[top] .dot3 {
+  transform: translate(23px, 36px);
+}
+
 @keyframes appear-button {
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }

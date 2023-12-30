@@ -1,15 +1,15 @@
-import miniTranslatorIcon from '#/assets/projects/icons/mini-translator-icon.svg?react'
-import quizGameIcon from '#/assets/projects/icons/quiz-game-icon.svg?react'
-import jolcIcon from '#/assets/projects/icons/jolc-icon.svg?react'
+import miniTranslatorIcon from '#/assets/projects/mini-translator/icon.svg?react'
+import quizGameIcon from '#/assets/projects/quiz-game/icon.svg?react'
+import jolcIcon from '#/assets/projects/jolc/icon.svg?react'
 
-import miniTranslatorImg1 from '#/assets/projects/images/mini-translator-img1.jpg'
-import miniTranslatorImg2 from '#/assets/projects/images/mini-translator-img2.jpg'
-import quizGameImg1 from '#/assets/projects/images/quiz-game-img1.jpg'
-import quizGameImg2 from '#/assets/projects/images/quiz-game-img2.jpg'
-import quizGameImg3 from '#/assets/projects/images/quiz-game-img3.jpg'
-import quizGameImg4 from '#/assets/projects/images/quiz-game-img4.jpg'
-import jolcImg1 from '#/assets/projects/images/jolc-img1.jpg'
-import jolcImg2 from '#/assets/projects/images/jolc-img2.jpg'
+import miniTranslatorImg1 from '#/assets/projects/mini-translator/img1.jpg'
+import miniTranslatorImg2 from '#/assets/projects/mini-translator/img2.jpg'
+import quizGameImg1 from '#/assets/projects/quiz-game/img1.jpg'
+import quizGameImg2 from '#/assets/projects/quiz-game/img2.jpg'
+import quizGameImg3 from '#/assets/projects/quiz-game/img3.jpg'
+import quizGameImg4 from '#/assets/projects/quiz-game/img4.jpg'
+import jolcImg1 from '#/assets/projects/jolc/img1.jpg'
+import jolcImg2 from '#/assets/projects/jolc/img2.jpg'
 
 const projects = [
   {

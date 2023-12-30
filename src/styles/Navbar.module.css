@@ -61,7 +61,7 @@
   color: var(--accent-color);
 }
 
-.base.isOnTop .endItems {
+body[top] .endItems {
   transform: translateY(-3rem);
   opacity: 0;
 }

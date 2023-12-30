@@ -1,5 +1,5 @@
-import koloLogo from '#/assets/svg/kolo-icon.svg?react'
-import koloImg1 from '#/assets/images/kolo-img.jpg'
+import koloLogo from '#/assets/job-experience/kolo/logo.svg?react'
+import koloImg1 from '#/assets/job-experience/kolo/img1.jpg'
 
 const jobs = [
   {

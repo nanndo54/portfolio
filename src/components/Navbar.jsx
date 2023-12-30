@@ -1,5 +1,4 @@
 import styles from '#/styles/Navbar.module.css'
-import { useEffect } from 'react'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 import useAppStore from '#/state/store'
@@ -13,12 +12,8 @@ function Navbar() {
   const { isOnTop, locale, theme, toggleLocale, toggleTheme } = useAppStore()
   const currentSection = getCurrentSection()
 
-  useEffect(() => {
-    document.querySelector('body').toggleAttribute('dark', theme === 'dark')
-  }, [theme])
-
   return (
-    <nav className={`${styles.base} ${isOnTop ? styles.isOnTop : ''}`}>
+    <nav className={styles.base}>
       <div className={styles.startItems}>
         <DarkModeSwitch
           checked={theme === 'dark'}
@@ -31,6 +26,7 @@ function Navbar() {
           className={styles.language}
           onClick={toggleLocale}
           aria-label={locale}
+          noBorder
         >
           {locale}
         </IconButton>
@@ -42,7 +38,7 @@ function Navbar() {
             <Link
               key={id}
               href={`#${id}`}
-              className={`${styles.link} ${id === currentSection ? styles.current : ''}`}
+              className={id === currentSection ? styles.current : ''}
               noDecoration
               tabIndex={isOnTop ? -1 : 0}
             >
