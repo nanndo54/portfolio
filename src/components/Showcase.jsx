@@ -13,12 +13,12 @@ import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants
 const initialScale = 1
 
 function Showcase() {
+  const { showcase, closeShowcase, setShowcase } = useAppStore()
   const ref = useRef()
 
   const [scale, setScale] = useState(initialScale)
-  const { showcase, closeShowcase, setShowcase } = useAppStore()
 
-  const { open, images, index, element } = showcase
+  const { open, images, index, element, onIndexChange } = showcase
   const image = images?.[index]
   const singleImage = images?.length <= 1
   const src = image?.src
@@ -26,21 +26,34 @@ function Showcase() {
 
   const handleClose = () => {
     closeShowcase()
-    if (ref.current) {
-      ref.current.resetTransform()
-      ref.current.resetTransform()
-    }
+    ref.current?.resetTransform()
   }
 
-  const handleEscape = (ev) => {
+  const handleShowPreviousImage = () => {
+    const newIndex = (index - 1 + images.length) % images.length
+    setShowcase({ index: newIndex })
+    ref.current?.resetTransform()
+    onIndexChange?.(newIndex)
+  }
+
+  const handleShowNextImage = () => {
+    const newIndex = (index + 1 + images.length) % images.length
+    setShowcase({ index: newIndex })
+    ref.current?.resetTransform()
+    onIndexChange?.(newIndex)
+  }
+
+  const handleKeyDown = (ev) => {
     if (ev.key === 'Escape') handleClose()
+    if (ev.key === 'ArrowLeft') handleShowPreviousImage()
+    if (ev.key === 'ArrowRight') handleShowNextImage()
   }
 
   useEffect(() => {
-    window.addEventListener('keydown', handleEscape)
+    window.addEventListener('keydown', handleKeyDown)
 
-    return () => window.removeEventListener('keydown', handleEscape)
-  }, [open])
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [open, index])
 
   return (
     <div
@@ -70,11 +83,10 @@ function Showcase() {
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
             <IconButton
               className={styles.previousImage}
-              onClick={() =>
-                setShowcase({ index: (index - 1 + images.length) % images.length })
-              }
+              onClick={handleShowPreviousImage}
               noBorder
               aria-label='Ver imagen anterior'
+              tabIndex={open ? 0 : -1}
             >
               <Icon src={arrowIcon} contentColor />
             </IconButton>
@@ -83,11 +95,10 @@ function Showcase() {
             </TransformComponent>
             <IconButton
               className={styles.nextImage}
-              onClick={() =>
-                setShowcase({ index: (index + 1 + images.length) % images.length })
-              }
+              onClick={handleShowNextImage}
               noBorder
               aria-label='Ver imagen siguiente'
+              tabIndex={open ? 0 : -1}
             >
               <Icon src={arrowIcon} contentColor />
             </IconButton>

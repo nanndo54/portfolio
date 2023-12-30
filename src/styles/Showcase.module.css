@@ -74,6 +74,7 @@
 }
 
 .content img {
+  width: 70vw;
   box-shadow: 0 0 5rem #00000088;
 }
 
@@ -158,4 +159,10 @@
 .base.singleImage .nextImage,
 .base.singleImage .dots {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .content img {
+    width: 100vw;
+  }
 }

@@ -64,7 +64,9 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           className={`${className} ${styles.container} ${
             noBorder ? styles.noBorder : ''
           }`}
-          onClick={() => openShowcase({ images, index: imageIndex })}
+          onClick={() =>
+            openShowcase({ images, index: imageIndex, onIndexChange: handleImageChange })
+          }
         >
           {contentElement}
         </button>

@@ -73,6 +73,7 @@ body[top] .endItems {
 
 @media (max-width: 700px) {
   .base {
+    height: 4rem;
     pointer-events: all;
 
     padding: 0 1.2rem;
@@ -87,9 +88,12 @@ body[top] .endItems {
     padding: 0;
   }
 
-  .startItems,
-  .endItems {
+  .startItems {
     gap: 0.7rem;
+  }
+
+  .endItems {
+    display: none;
   }
 }
 

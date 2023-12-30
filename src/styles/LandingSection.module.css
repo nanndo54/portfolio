@@ -132,7 +132,7 @@ body[top] .info {
     transform: translateY(12rem);
   }
 
-  .base .avatar {
+  body[top] .avatar {
     transform: translate(calc(10rem - 50vw), 4rem) scale(0.8);
   }
 }
@@ -143,8 +143,12 @@ body[top] .info {
     gap: 1rem;
   }
 
-  body[top] .base .avatar {
+  .avatar {
     transform: translate(7rem, -8rem) scale(0.15);
+  }
+
+  body[top] .avatar {
+    transform: translate(calc(10rem - 50vw), 4rem) scale(0.66);
   }
 }
 
@@ -153,7 +157,7 @@ body[top] .info {
     transform: translateY(4rem);
   }
 
-  .avatar {
+  body[top] .avatar {
     transform: translate(calc(28rem - 50vw), 4.5rem);
   }
 }

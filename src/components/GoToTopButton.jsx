@@ -8,7 +8,7 @@ function GoToTopButton() {
   const { isOnTop } = useAppStore()
 
   return (
-    <Link href='#welcome' className={styles.base} tabIndex={isOnTop ? -1 : 0}>
+    <Link href='#landing' className={styles.base} tabIndex={isOnTop ? -1 : 0}>
       <div className={styles.icon}>
         <div className={styles.dot1} />
         <div className={styles.dot2} />

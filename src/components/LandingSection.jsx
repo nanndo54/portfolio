@@ -12,6 +12,7 @@ import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 
 import profileImage from '#/assets/landing/profile-photo.jpg'
+import squeak from '#/assets/landing/squeak.mp3'
 
 function LandingSection({ id }) {
   const { isOnTop } = useAppStore()
@@ -21,7 +22,7 @@ function LandingSection({ id }) {
     if (isOnTop) return
 
     if (Audio) {
-      const squeakAudio = new Audio('/sounds/squeak.mp3')
+      const squeakAudio = new Audio(squeak)
       squeakAudio.volume = 0.3
       squeakAudio.play()
     }
@@ -31,7 +32,7 @@ function LandingSection({ id }) {
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
         <Text as='h1'>Pablo Cabrera</Text>
-        <Text as='p' localeId='welcome.presentation' className={styles.presentation} />
+        <Text as='p' localeId='landing.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
           <Button
             href={intl.formatMessage({ id: 'link.cv' })}
@@ -39,7 +40,7 @@ function LandingSection({ id }) {
             icon={cvIcon}
             tabIndex={isOnTop ? 0 : -1}
           >
-            <Text localeId='welcome.cv' />
+            <Text localeId='landing.cv' />
           </Button>
           <ContactIcons className={styles.contact} />
         </div>
