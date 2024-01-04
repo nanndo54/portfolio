@@ -7,3 +7,7 @@
 .contentColor {
   fill: var(--content-color);
 }
+
+.lightColor {
+  fill: var(--light-color);
+}

@@ -31,25 +31,17 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
   }, 100)
 
   const contentElement = (
-    <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-      {images.map(({ src, alt }, index) => (
-        <Image key={index} src={src} alt={alt} noBorder noZoom />
-      ))}
-    </div>
+    <>
+      <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
+        {images.map(({ src, alt }, index) => (
+          <Image key={index} src={src} alt={alt} noBorder noZoom />
+        ))}
+      </div>
+    </>
   )
 
   return (
     <div className={`${styles.base} ${singleImage ? styles.singleImage : ''}`}>
-      <IconButton
-        className={styles.previousImage}
-        onClick={() =>
-          handleImageChange((imageIndex - 1 + images.length) % images.length)
-        }
-        noBorder
-        aria-label='Ver imagen anterior'
-      >
-        <Icon src={arrowIcon} contentColor />
-      </IconButton>
       {noZoom ? (
         <div
           className={`${className} ${styles.container} ${
@@ -71,15 +63,28 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           {contentElement}
         </button>
       )}
+
+      <IconButton
+        className={styles.previousImage}
+        onClick={(ev) => {
+          ev.stopPropagation()
+          handleImageChange((imageIndex - 1 + images.length) % images.length)
+        }}
+        noBorder
+        aria-label='Ver imagen anterior'
+      >
+        <Icon src={arrowIcon} lightColor />
+      </IconButton>
       <IconButton
         className={styles.nextImage}
-        onClick={() =>
+        onClick={(ev) => {
+          ev.stopPropagation()
           handleImageChange((imageIndex + 1 + images.length) % images.length)
-        }
+        }}
         noBorder
         aria-label='Ver imagen siguiente'
       >
-        <Icon src={arrowIcon} contentColor />
+        <Icon src={arrowIcon} lightColor />
       </IconButton>
       <div className={styles.dots}>
         {images.map((_, index) => (
@@ -87,7 +92,10 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
             aria-label={`Ver imagen ${index + 1}`}
             key={index}
             className={imageIndex === index ? styles.selected : ''}
-            onClick={() => handleImageChange(index)}
+            onClick={(ev) => {
+              ev.stopPropagation()
+              handleImageChange(index)
+            }}
           />
         ))}
       </div>

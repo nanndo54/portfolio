@@ -7,7 +7,7 @@ import ImageCarrousel from '#/components/ImageCarrousel'
 
 function JobExperience({ company, logo, images, web }) {
   return (
-    <article className={styles.base}>
+    <article className={`${styles.base} blur-background`}>
       <div className={styles.header}>
         <div className={styles.title}>
           <Icon src={logo} alt={company} />

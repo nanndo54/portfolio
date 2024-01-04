@@ -70,11 +70,13 @@ body {
   --accent-color: rgb(57, 148, 223);
   --dim-accent-color: rgba(39, 132, 238, 0.35);
 
-  --secondary-accent-color: rgb(112, 79, 243);
+  --secondary-accent-color: rgb(148, 125, 238);
   --dim-secondary-accent-color: rgba(109, 72, 255, 0.35);
 
-  --footer-background-color: rgb(15, 15, 25);
-  --footer-font-color: rgb(230, 230, 240);
+  --light-color: rgb(230, 230, 240);
+  --dim-light-color: rgb(230, 230, 240, 0.3);
+  --dark-color: rgb(15, 15, 25);
+  --dim-dark-color: rgb(15, 15, 25, 0.3);
 
   --title-font: 'Maitree', serif;
   --subtitle-font: 'Taviraj', serif;
@@ -107,9 +109,6 @@ body[dark] {
 
   --secondary-accent-color: rgb(138, 116, 223);
   --dim-secondary-accent-color: rgba(154, 131, 248, 0.4);
-
-  --footer-background-color: rgb(15, 15, 25);
-  --footer-font-color: rgb(230, 230, 240);
 }
 
 main {
@@ -128,9 +127,16 @@ button:hover {
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+.blur-background {
+  box-shadow: var(--dim-accent-color) 0 0 0.15rem 0.02rem inset;
+  backdrop-filter: blur(0.5rem);
+
+  border: 0.3rem solid var(--dim-accent-color);
+  border-radius: 2rem;
+
+  transition: border-color 0.2s;
+
+  overflow: hidden;
 }
 
 .no-select,
@@ -147,4 +153,9 @@ button:hover {
   body {
     background-color: rgb(32, 38, 55, 0.7);
   }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

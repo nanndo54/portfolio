@@ -4,7 +4,7 @@ import Text from '#/components/Text'
 
 function BlockQuote({ quote, author }) {
   return (
-    <Section as='blockquote' className={styles.base}>
+    <Section as='blockquote' className={`${styles.base} blur-background`}>
       <span>
         <span className={styles.quote}>“</span>
         <Text localeId={quote} />

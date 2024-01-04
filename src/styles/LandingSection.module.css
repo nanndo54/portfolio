@@ -1,15 +1,15 @@
 header.base {
   height: 22rem;
+  width: 58rem;
   margin: 0 auto;
   padding: 3rem 0;
 
-  transition:
-    opacity 0.2s,
-    height 0.3s;
+  transition: opacity 0.2s;
 }
 
 .info {
   align-self: flex-start;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -29,7 +29,6 @@ header.base {
 }
 
 p.presentation {
-  text-align: center;
   font-size: 1.2rem;
   max-width: 28rem;
 }
@@ -70,7 +69,7 @@ p.presentation {
 }
 
 body[top] .avatar {
-  transform: translate(calc(28rem - 50vw), 10.5rem);
+  transform: translate(calc(27rem - 50vw), 10.5rem);
   pointer-events: none;
 }
 
@@ -120,16 +119,16 @@ body[top] .info {
   transform: translateY(10rem);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
   header.base {
-    height: 32rem;
+    width: 100%;
     padding: 3rem 1rem;
     justify-content: flex-end;
   }
 
-  .base .info {
+  body[top] .info {
     align-self: center;
-    transform: translateY(12rem);
+    transform: translateY(25rem);
   }
 
   body[top] .avatar {
@@ -152,12 +151,33 @@ body[top] .info {
   }
 }
 
-@media (max-height: 700px) and (min-width: 950px) {
-  .info {
-    transform: translateY(4rem);
+@media (max-height: 800px) and (max-width: 700px) {
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .avatar {
+    transform: translate(7rem, -8rem) scale(0.15);
+  }
+
+  body[top] .info {
+    align-self: center;
+    transform: translateY(19rem) scale(0.8);
   }
 
   body[top] .avatar {
-    transform: translate(calc(28rem - 50vw), 4.5rem);
+    transform: translate(calc(10rem - 50vw), 1.8rem) scale(0.6);
+  }
+}
+
+@media (max-height: 800px) and (min-width: 700px) {
+  body[top] .avatar {
+    transform: translate(calc(24rem - 50vw), 4.5rem) scale(0.8);
+  }
+
+  body[top] .info {
+    align-self: flex-start;
+    transform: translateY(4rem) scale(0.8);
   }
 }

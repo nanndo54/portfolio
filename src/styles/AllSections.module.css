@@ -15,12 +15,35 @@
     background-image 0.5s;
 }
 
-.base section {
-  transition:
-    background-color 0.5s,
-    box-shadow 0.5s,
-    color 0.5s,
-    transform 0.2s ease-out;
+.base::after {
+  content: '';
+  background: radial-gradient(
+    var(--accent-color),
+    var(--dim-accent-color) 40%,
+    #ffffff00 60%
+  );
+  border-radius: 50%;
+
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 30rem);
+  left: calc(var(--x, 0) * 1px - 30rem);
+
+  width: 60rem;
+  height: 60rem;
+
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.base:hover::after {
+  opacity: 0.08;
+}
+
+@media (pointer: coarse) {
+  .base::after {
+    display: none;
+  }
 }
 
 .base.isLoading > * > header {
@@ -29,61 +52,23 @@
 
 body[top] .base > * > :not(header) {
   opacity: 0.7;
-  transform: translateY(calc(100vh - 34rem));
+  transform: translateY(calc(100vh - 29rem));
 }
 
-.base.isLoading > * > :not(header) {
-  transform: translateY(calc(100vh - 32rem));
+body[top] .base.isLoading > * > :not(header) {
+  transform: translateY(calc(100vh - 25rem));
   opacity: 0.25;
-}
-
-@media (max-width: 950px) {
-  body[top] .base > * > :not(header) {
-    transform: translateY(calc(100vh - 53rem));
-  }
-
-  .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 51rem));
-  }
-}
-
-@media (max-width: 950px) and (max-height: 950px) {
-  body[top] .base > * > :not(header) {
-    transform: translateY(calc(100vh - 43rem));
-  }
-
-  .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 41rem));
-  }
-}
-
-@media (max-width: 950px) and (max-height: 800px) {
-  body[top] .base > * > :not(header) {
-    transform: translateY(calc(100vh - 39rem));
-  }
-
-  .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 37rem));
-  }
-}
-
-@media (max-height: 700px) {
-  body[top] .base > * > :not(header) {
-    transform: translateY(calc(100vh - 30rem));
-  }
-
-  .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 28rem));
-  }
 }
 
 @media (max-height: 500px) {
   body[top] .base > * > :not(header) {
+    opacity: 0.7;
     transform: translateY(calc(100vh - 25rem));
   }
 
-  .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 23rem));
+  body[top] .base.isLoading > * > :not(header) {
+    transform: translateY(calc(100vh - 21rem));
+    opacity: 0.25;
   }
 }
 

@@ -3,13 +3,12 @@
 }
 
 .base {
-  width: 57rem;
+  width: 62rem;
   height: fit-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 3rem;
+  padding: 2rem;
   margin: 0 auto;
-  align-items: center;
 
   display: flex;
   flex: 1;
@@ -17,44 +16,15 @@
   justify-items: center;
 
   gap: 2.5rem;
+
+  transition:
+    background-color 0.5s,
+    box-shadow 0.5s,
+    color 0.5s,
+    transform 0.2s ease-out;
 }
 
-.base.background {
-  background-color: var(--dim-primary-color);
-  box-shadow: var(--dim-accent-color) 0 0 0.4rem 0.1rem inset;
-  backdrop-filter: blur(0.3rem);
-
-  border-radius: 2.5rem;
-
-  overflow: visible;
-}
-
-/* .base.background:hover::after {
-  opacity: 0.15;
-}
-
-.base.background::after {
-  content: '';
-  background: radial-gradient(
-    rgb(100, 120, 220, 1),
-    var(--dim-accent-color) 40%,
-    #ffffff00 60%
-  );
-  border-radius: 50%;
-
-  position: absolute;
-  top: calc(var(--y, 0) * 1px - 25rem);
-  left: calc(var(--x, 0) * 1px - 25rem);
-
-  width: 50rem;
-  height: 50rem;
-
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: -1;
-} */
-
-@media (max-width: 950px) {
+@media (max-width: 63rem) {
   .base {
     width: 100%;
     border-radius: 0;
@@ -62,7 +32,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 31rem) {
   .base {
     padding: 2rem 1.5rem;
   }

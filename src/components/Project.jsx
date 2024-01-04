@@ -19,7 +19,7 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
   const skills = technologies.map(getSkill)
 
   return (
-    <article className={styles.base}>
+    <article className={`${styles.base} blur-background`}>
       <div className={styles.header}>
         <div className={styles.title}>
           <Icon src={icon} height={34} alt={name} />
@@ -33,6 +33,8 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
             <Skill key={skill.name} {...skill} size='small' />
           ))}
         </div>
+      </div>
+      <div className={styles.display}>
         <ImageCarrousel images={images} />
       </div>
       <div className={styles.footer}>

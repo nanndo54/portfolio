@@ -1,11 +1,11 @@
 import styles from '#/styles/Icon.module.css'
 
-function Icon({ className = '', contentColor, src: Icon, ...props }) {
+function Icon({ className = '', contentColor, lightColor, src: Icon, ...props }) {
   return (
     Icon && (
       <Icon
-        className={`${styles.base} ${
-          contentColor ? styles.contentColor : ''
+        className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${
+          lightColor ? styles.lightColor : ''
         } ${className}`}
         {...props}
       />

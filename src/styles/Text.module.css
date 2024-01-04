@@ -1,11 +1,10 @@
 p.base {
+  text-wrap: pretty;
   font-size: 1.15rem;
   font-weight: 400;
 }
 
 .base:is(h1, h2, h3, h4, h5, h6) {
-  width: fit-content;
-  text-align: center;
   font-weight: 500;
   line-height: 1.3;
   font-family: var(--subtitle-font);
@@ -45,15 +44,16 @@ h1.base::after {
 }
 
 h2.base {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 h3.base {
-  font-size: 2.15rem;
+  font-size: 2.1rem;
 }
 
 h4.base {
-  font-size: 1.95rem;
+  font-size: 1.8rem;
 }
 
 h5.base {
@@ -74,11 +74,11 @@ h6.base {
   }
 
   h3.base {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h4.base {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 

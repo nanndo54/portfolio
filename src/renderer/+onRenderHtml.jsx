@@ -1,6 +1,8 @@
 import ReactDOMServer from 'react-dom/server'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 
+import logoIcon from '#/assets/svg/logo.svg'
+
 async function render(pageContext) {
   const { Page, pageProps } = pageContext
 
@@ -32,7 +34,7 @@ async function render(pageContext) {
       <meta property="og:url" content="https://nanndo54.dev" />
       <meta property="og:type" content="website" />
       <meta name="color-scheme" content="dark light">
-      <link rel="icon" type="image/svg+xml" href="/src/assets/svg/logo.svg" />
+      <link rel="icon" type="image/svg+xml" href="${logoIcon}" />
       <meta name="theme-color" content="#7c7edf">
       <meta name="apple-mobile-web-app-status-bar-style" content="#7c7edf">
       <script>

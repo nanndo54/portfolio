@@ -88,7 +88,7 @@ function Showcase() {
               aria-label='Ver imagen anterior'
               tabIndex={open ? 0 : -1}
             >
-              <Icon src={arrowIcon} contentColor />
+              <Icon src={arrowIcon} lightColor />
             </IconButton>
             <TransformComponent wrapperClass={styles.canvas}>
               {src ? <Image src={src} alt={alt} noBorder noZoom /> : element}
@@ -100,7 +100,7 @@ function Showcase() {
               aria-label='Ver imagen siguiente'
               tabIndex={open ? 0 : -1}
             >
-              <Icon src={arrowIcon} contentColor />
+              <Icon src={arrowIcon} lightColor />
             </IconButton>
           </div>
           <div className={styles.footer} onClick={(ev) => ev.stopPropagation()}>

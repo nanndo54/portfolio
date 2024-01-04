@@ -1,22 +1,31 @@
 import styles from '#/styles/JobExperiencesSection.module.css'
+import { useMemo } from 'react'
 
-import Section from '#/components/Section'
-import JobExperience from '#/components/JobExperience'
-import Text from '#/components/Text'
 import Icon from '#/components/Icon'
+import JobExperience from '#/components/JobExperience'
 import Link from '#/components/Link'
+import Section from '#/components/Section'
+import Text from '#/components/Text'
 
 import jobs from '#/constants/jobs'
 import { arrowIcon } from '#/constants/icons'
 
 function JobExperiencesSection({ id }) {
-  const years = jobs.reduce((acc, project) => {
-    const year = project.year
-    if (!acc[year]) acc[year] = []
-    acc[year].push(project)
+  const jobsPerYear = useMemo(() => {
+    return jobs
+      .reduce((acc, project) => {
+        let yearObject = acc.find((yearObject) => yearObject.year === project.year)
+        if (!yearObject) {
+          yearObject = { year: project.year, jobs: [] }
+          acc.push(yearObject)
+        }
 
-    return acc
-  }, {})
+        yearObject.jobs.push(project)
+
+        return acc
+      }, [])
+      .sort((a, b) => b.year - a.year)
+  }, [jobs])
 
   return (
     <Section id={id} className={styles.base}>
@@ -24,18 +33,19 @@ function JobExperiencesSection({ id }) {
         <Icon src={arrowIcon} />
       </Link>
       <Text as='h2' localeId='job-experience.title' />
-      <Text as='p' localeId='job-experience.text1' />
       <div className={styles.content}>
         <div className={styles.timeline}>
           <Icon src={arrowIcon} />
         </div>
         <div className={styles.allExperiences}>
-          {Object.entries(years).map(([year, experiences]) => (
-            <div key={year} className={styles.experiences}>
+          {jobsPerYear.map(({ year, jobs }) => (
+            <div key={year}>
               <Text as='h3'>{year}</Text>
-              {experiences.map((experience, i) => (
-                <JobExperience key={i} {...experience} />
-              ))}
+              <div className={styles.experiences}>
+                {jobs.map((experience, i) => (
+                  <JobExperience key={i} {...experience} />
+                ))}
+              </div>
             </div>
           ))}
         </div>

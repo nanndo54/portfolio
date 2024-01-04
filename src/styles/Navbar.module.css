@@ -47,18 +47,21 @@
 
 .endItems a {
   font-size: 1.1rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 1rem;
   font-weight: 700;
+
+  padding: 0.3rem 0.6rem;
+  border-width: 0.15rem;
+  border-radius: 1rem;
+
   color: var(--font-color);
 }
 
 .endItems a.current {
-  background-color: var(--dim-primary-color);
-  box-shadow: var(--dim-accent-color) 0 0 0.2rem 0 inset;
-  backdrop-filter: blur(0.2rem);
-
   color: var(--accent-color);
+}
+
+.endItems a:not(.current) {
+  text-shadow: 0rem 0rem 0.4rem var(--dim-primary-color);
 }
 
 body[top] .endItems {

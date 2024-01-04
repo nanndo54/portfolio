@@ -8,8 +8,8 @@
 
   gap: 1.2rem;
 
-  border: 0.35rem solid var(--dim-accent-color);
-  border-radius: 1rem;
+  border: 0.25rem solid var(--dim-accent-color);
+  border-radius: 2rem;
 
   transition: border 0.5s;
 }
@@ -44,7 +44,6 @@
 .base .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.2rem;
 }
 
