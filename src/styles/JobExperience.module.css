@@ -7,11 +7,6 @@
   align-content: space-between;
 
   gap: 1.2rem;
-
-  border: 0.25rem solid var(--dim-accent-color);
-  border-radius: 2rem;
-
-  transition: border 0.5s;
 }
 
 .base .header {

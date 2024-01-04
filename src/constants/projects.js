@@ -14,7 +14,7 @@ import jolcImg2 from '#/assets/projects/jolc/img2.jpg'
 const projects = [
   {
     name: 'Quiz Game',
-    year: 2022,
+    year: 2023,
     web: 'https://nanndo54.dev/quiz-game/',
     code: 'https://github.com/nanndo54/quiz-game',
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     name: 'Mini Translator',
-    year: 2022,
+    year: 2023,
     web: 'https://nanndo54.dev/mini-translator/',
     code: 'https://github.com/nanndo54/mini-translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],
@@ -58,7 +58,7 @@ const projects = [
   },
   {
     name: 'JOLC',
-    year: 2021,
+    year: 2022,
     web: 'https://jolc2.herokuapp.com/',
     code: 'https://github.com/nanndo54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python', 'JavaScript', 'HTML', 'CSS'],

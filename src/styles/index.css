@@ -134,9 +134,15 @@ button:hover {
   border: 0.3rem solid var(--dim-accent-color);
   border-radius: 2rem;
 
-  transition: border-color 0.2s;
+  transition:
+    background-color 0.3s,
+    border-color 0.2s;
 
   overflow: hidden;
+}
+
+.blur-background:hover {
+  background-color: var(--dim-content-color);
 }
 
 .no-select,

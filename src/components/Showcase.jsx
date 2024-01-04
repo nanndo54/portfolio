@@ -72,6 +72,11 @@ function Showcase() {
       >
         <div className={styles.overlay} onClick={handleClose}>
           <div className={styles.header}>
+            {!singleImage && (
+              <Text as='span' className={styles.imageIndex}>
+                {index + 1}/{images?.length}
+              </Text>
+            )}
             {alt && <Text as='p'>{alt}</Text>}
             <IconButton
               icon={closeIcon}

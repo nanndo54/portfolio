@@ -7,7 +7,7 @@ function ContactSection({ id }) {
   return (
     <Section className={styles.base} id={id} background={false}>
       <Text as='h1' localeId='contact.title' />
-      <Text as='h2' localeId='contact.text1' />
+      {/* <Text as='h2' localeId='contact.text1' /> */}
     </Section>
   )
 }

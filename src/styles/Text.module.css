@@ -8,6 +8,7 @@ p.base {
   font-weight: 500;
   line-height: 1.3;
   font-family: var(--subtitle-font);
+  width: fit-content;
 }
 
 .base:is(h4, h5, h6) {
@@ -26,7 +27,7 @@ h1.base {
     opacity 0.2s;
 }
 
-h1.base::after {
+.base:is(h1, h2)::after {
   content: '';
   display: block;
   width: calc(100% + 1.6rem);

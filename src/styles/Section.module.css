@@ -24,6 +24,10 @@
     transform 0.2s ease-out;
 }
 
+.base h2 {
+  align-self: center;
+}
+
 @media (max-width: 63rem) {
   .base {
     width: 100%;
