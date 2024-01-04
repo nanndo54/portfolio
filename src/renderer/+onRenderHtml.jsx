@@ -20,7 +20,6 @@ async function render(pageContext) {
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${title}</title>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XT17RG3ZV"></script>
       <meta
         name="description"
         content="${desc}"
@@ -37,13 +36,15 @@ async function render(pageContext) {
       <link rel="icon" type="image/svg+xml" href="${logoIcon}" />
       <meta name="theme-color" content="#7c7edf">
       <meta name="apple-mobile-web-app-status-bar-style" content="#7c7edf">
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHDRE3GHKF"></script>
       <script>
-        window.dataLayer = window.dataLayer || []
-        function gtag() {
-          dataLayer.push(arguments)
-        }
-        gtag('js', new Date())
-        gtag('config', 'G-9XT17RG3ZV')
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LHDRE3GHKF');
       </script>
     </head>
     <body top>
