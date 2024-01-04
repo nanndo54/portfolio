@@ -2,8 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
 import svgr from 'vite-plugin-svgr'
+import sitemap from 'vite-plugin-sitemap'
+
 import autoprefixer from 'autoprefixer'
 import path from 'path'
+
+const hostname = 'https://nanndo54.dev'
+const dynamicRoutes = ['/', '/quiz-game', '/mini-translator', '/jolc']
 
 export default defineConfig(({ mode }) => ({
   plugins: [
@@ -13,6 +18,12 @@ export default defineConfig(({ mode }) => ({
       svgrOptions: {
         plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx']
       }
+    }),
+    sitemap({
+      hostname,
+      dynamicRoutes,
+      extensions: ['html', 'pdf'],
+      outDir: 'dist/client'
     })
   ],
   resolve: {
@@ -21,13 +32,6 @@ export default defineConfig(({ mode }) => ({
     }
   },
   publicDir: 'src/public',
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: `assets/[name].[ext]`
-      }
-    }
-  },
   css: {
     modules:
       mode === 'development'
