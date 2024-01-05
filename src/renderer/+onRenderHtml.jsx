@@ -19,7 +19,6 @@ async function render(pageContext) {
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>${title}</title>
       <meta
         name="description"
         content="${desc}"
@@ -43,9 +42,10 @@ async function render(pageContext) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-LHDRE3GHKF');
       </script>
+
+      <title>${title}</title>
     </head>
     <body top>
       <main>${dangerouslySkipEscape(pageHtml)}</main>

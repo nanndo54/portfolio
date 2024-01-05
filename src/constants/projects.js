@@ -59,7 +59,7 @@ const projects = [
   {
     name: 'JOLC',
     year: 2022,
-    web: 'https://jolc2.herokuapp.com/',
+    web: 'https://nanndo54.dev/jolc/',
     code: 'https://github.com/nanndo54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python', 'JavaScript', 'HTML', 'CSS'],
     icon: jolcIcon,
