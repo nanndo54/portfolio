@@ -4,8 +4,8 @@ import Section from '#/components/Section'
 import Text from '#/components/Text'
 import Image from '#/components/Image'
 
-import image1 from '#/assets/about-me/guatemala.jpg'
-import image2 from '#/assets/about-me/campus.jpg'
+import image1 from '/about-me/guatemala.jpg'
+import image2 from '/about-me/campus.jpg'
 
 function AboutMeSection({ id }) {
   return (

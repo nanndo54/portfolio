@@ -11,8 +11,8 @@ import Text from '#/components/Text'
 import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 
-import profileImage from '#/assets/landing/profile-photo.jpg'
-import squeak from '#/assets/landing/squeak.mp3'
+import profileImage from '/landing/profile-photo.jpg'
+import squeak from '/landing/squeak.mp3'
 
 function LandingSection({ id }) {
   const { isOnTop } = useAppStore()

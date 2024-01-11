@@ -1,7 +1,7 @@
 import ReactDOMServer from 'react-dom/server'
 import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 
-import logoIcon from '#/assets/svg/logo.svg'
+import logoIcon from '#/assets/icons/general/logo.svg'
 
 async function render(pageContext) {
   const { Page, pageProps } = pageContext
