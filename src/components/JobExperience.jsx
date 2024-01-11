@@ -16,7 +16,7 @@ function JobExperience({ company, logo, images, web }) {
         </div>
       </div>
       <div className={styles.content}>
-        <Text localeId={`job-experience.${company.toLowerCase()}`} />
+        <Text as='p' localeId={`job-experience.${company.toLowerCase()}`} />
         <ImageCarrousel images={images} />
       </div>
       <div className={styles.footer}>

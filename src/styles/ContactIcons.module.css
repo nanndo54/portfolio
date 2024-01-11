@@ -15,7 +15,14 @@
   border-color: var(--dim-accent-color);
   border-radius: 50%;
 
-  transition: border 0.5s;
+  transition:
+    border-color 0.5s,
+    fill 0.5s;
+}
+
+.base a:hover {
+  transform: none;
+  border-color: var(--dim-secondary-accent-color);
 }
 
 .base a svg {

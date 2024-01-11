@@ -38,7 +38,9 @@ function Navbar() {
             <Link
               key={id}
               href={`#${id}`}
-              className={id === currentSection ? `${styles.current} blur-background` : ''}
+              className={`${styles.link} ${
+                id === currentSection ? `${styles.current} blur-background` : ''
+              }`}
               noDecoration
               tabIndex={isOnTop ? -1 : 0}
             >

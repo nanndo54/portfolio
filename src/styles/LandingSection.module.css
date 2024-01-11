@@ -45,10 +45,6 @@ p.presentation {
   transform: scale(1.15);
 }
 
-.contact {
-  transform: none;
-}
-
 .avatar {
   position: absolute;
   top: 0;

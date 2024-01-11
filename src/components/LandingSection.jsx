@@ -31,7 +31,7 @@ function LandingSection({ id }) {
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
-        <Text as='h1'>Pablo Cabrera</Text>
+        <Text as='h1'>nanndo54</Text>
         <Text as='p' localeId='landing.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
           <Button

@@ -46,11 +46,12 @@
 }
 
 .endItems a {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
+  font-family: var(--subtitle-font);
 
   padding: 0.3rem 0.6rem;
-  border-width: 0.15rem;
+  border: 0.15rem solid transparent;
   border-radius: 1rem;
 
   color: var(--font-color);
@@ -58,6 +59,7 @@
 
 .endItems a.current {
   color: var(--accent-color);
+  border-color: var(--dim-accent-color);
 }
 
 .endItems a:not(.current) {
@@ -70,7 +72,7 @@ body[top] .endItems {
 }
 
 .language {
-  font-family: var(--title-font);
+  font-family: var(--subtitle-font);
   font-size: 1.7rem;
 }
 

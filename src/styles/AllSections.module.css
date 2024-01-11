@@ -5,8 +5,7 @@
   scroll-behavior: smooth;
 
   background-color: var(--primary-color);
-  background-image: url('/src/assets/svg/background.svg'),
-    linear-gradient(transparent, var(--primary-color) 100vh);
+  background-image: url('/src/assets/svg/background.svg');
   background-repeat: repeat-y;
   background-attachment: local;
   background-size: 100%;
