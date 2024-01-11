@@ -19,10 +19,8 @@ function Showcase() {
   const [scale, setScale] = useState(initialScale)
 
   const { open, images, index, element, onIndexChange } = showcase
-  const image = images?.[index]
+  const src = images?.[index]
   const singleImage = images?.length <= 1
-  const src = image?.src
-  const alt = image?.alt
 
   const handleClose = () => {
     closeShowcase()
@@ -77,7 +75,7 @@ function Showcase() {
                 {index + 1}/{images?.length}
               </Text>
             )}
-            {alt && <Text as='p'>{alt}</Text>}
+            {/* {alt && <Text as='p'>{alt}</Text>} */}
             <IconButton
               icon={closeIcon}
               className={styles.closeButton}
@@ -96,7 +94,7 @@ function Showcase() {
               <Icon src={arrowIcon} lightColor />
             </IconButton>
             <TransformComponent wrapperClass={styles.canvas}>
-              {src ? <Image src={src} alt={alt} noBorder noZoom /> : element}
+              {src ? <Image src={src} noBorder noZoom /> : element}
             </TransformComponent>
             <IconButton
               className={styles.nextImage}

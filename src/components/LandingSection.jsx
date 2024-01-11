@@ -11,8 +11,8 @@ import Text from '#/components/Text'
 import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 
-import profileImage from '/landing/profile-photo.jpg'
 import squeak from '/landing/squeak.mp3'
+import images from '#/constants/images'
 
 function LandingSection({ id }) {
   const { isOnTop } = useAppStore()
@@ -52,7 +52,7 @@ function LandingSection({ id }) {
           tabIndex={isOnTop ? -1 : 0}
         >
           <Icon src={logoIcon} width={80} />
-          <Image src={profileImage} alt='Mi fotografía' noZoom />
+          <Image src={images.landing.profilePhoto} alt='Mi fotografía' noZoom />
         </button>
       </div>
     </Section>

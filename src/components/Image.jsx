@@ -4,8 +4,7 @@ import { useRef } from 'react'
 import useAppStore from '#/state/store'
 
 function Image({
-  src,
-  alt,
+  src: image,
   className = '',
   height,
   width,
@@ -13,13 +12,15 @@ function Image({
   noZoom = false
 }) {
   const ref = useRef()
-  const { openShowcase } = useAppStore()
+  const { locale, openShowcase } = useAppStore()
+
+  const { src, alt } = image
 
   const imageElement = (
     <img
       ref={ref}
       src={src}
-      alt={alt}
+      alt={alt[locale]}
       className={`${className} ${styles.base} ${
         noBorder ? styles.noBorder : ''
       } no-select`}
@@ -32,7 +33,7 @@ function Image({
   return noZoom ? (
     imageElement
   ) : (
-    <button type='button' onClick={() => openShowcase({ images: [{ src, alt }] })}>
+    <button type='button' onClick={() => openShowcase({ images: [image] })}>
       {imageElement}
     </button>
   )

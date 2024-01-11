@@ -31,13 +31,11 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
   }, 100)
 
   const contentElement = (
-    <>
-      <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-        {images.map(({ src, alt }, index) => (
-          <Image key={index} src={src} alt={alt} noBorder noZoom />
-        ))}
-      </div>
-    </>
+    <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
+      {images.map((src, index) => (
+        <Image key={index} src={src} noBorder noZoom />
+      ))}
+    </div>
   )
 
   return (
