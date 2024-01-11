@@ -8,7 +8,7 @@ const jobs = [
     logo: koloIcon,
     images: images.jobs.kolo,
     web: 'https://info.kolo-app.com',
-    year: 2022
+    year: 2023
   }
 ]
 

@@ -41,6 +41,10 @@ body[top] .arrow:hover svg {
 }
 
 .timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   position: relative;
   background-color: var(--content-color);
 
@@ -58,9 +62,8 @@ body[top] .arrow:hover svg {
   width: 0.5rem;
   height: 0.5rem;
 
-  position: relative;
-  top: -1.8rem;
-  margin: auto;
+  position: absolute;
+  bottom: -1.8rem;
 }
 
 .timeline::after {
@@ -72,9 +75,8 @@ body[top] .arrow:hover svg {
   width: 0.6rem;
   height: 0.6rem;
 
-  position: relative;
-  top: -1.5rem;
-  margin: auto;
+  position: absolute;
+  bottom: -1rem;
 }
 
 .timeline svg {
@@ -83,8 +85,8 @@ body[top] .arrow:hover svg {
   fill: var(--content-color);
 
   position: absolute;
-  bottom: 0;
-  transform: translate(-1.4rem, 1rem) scaleX(0.8) rotate(90deg);
+  top: 0;
+  transform: translateY(-1rem) scaleX(0.8) rotate(-90deg);
 }
 
 .allExperiences {
@@ -93,7 +95,7 @@ body[top] .arrow:hover svg {
   align-items: flex-start;
   gap: 2.5rem;
 
-  padding: 1.2rem 0;
+  padding: 3.5rem 0 1rem;
 }
 
 .allExperiences h3 {
