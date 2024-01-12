@@ -36,15 +36,6 @@ async function render(pageContext) {
       <meta name="theme-color" content="#7c7edf">
       <meta name="apple-mobile-web-app-status-bar-style" content="#7c7edf">
 
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHDRE3GHKF"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LHDRE3GHKF');
-      </script>
-
       <title>${title}</title>
     </head>
     <body top>

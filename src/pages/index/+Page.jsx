@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { IntlProvider } from 'react-intl'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/react'
 
 import Navbar from '#/components/Navbar'
 import AllSections from '#/components/AllSections'
@@ -32,13 +33,16 @@ function Page() {
   }, [currentSection])
 
   return (
-    <IntlProvider locale={locale} messages={messages}>
-      <Showcase />
-      <Navbar />
-      <AllSections />
-      <GoToTopButton />
+    <>
+      <IntlProvider locale={locale} messages={messages}>
+        <Showcase />
+        <Navbar />
+        <AllSections />
+        <GoToTopButton />
+      </IntlProvider>
       <SpeedInsights />
-    </IntlProvider>
+      <Analytics mode='production' />
+    </>
   )
 }
 
