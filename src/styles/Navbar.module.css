@@ -37,7 +37,6 @@
 }
 
 .endItems {
-  gap: 0.1rem;
   margin-right: 5rem;
 
   transition:
@@ -46,9 +45,10 @@
 }
 
 .endItems a {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: var(--subtitle-font);
+  font-size: 1.1rem;
+  font-family: var(--title-font);
+  font-weight: 400;
+  line-height: 1;
 
   padding: 0.3rem 0.6rem;
   border: 0.15rem solid transparent;
@@ -71,9 +71,12 @@ body[top] .endItems {
   opacity: 0;
 }
 
-.language {
+.startItems .language {
   font-family: var(--subtitle-font);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 2;
+
+  height: 1.6rem;
 }
 
 @media (max-width: 700px) {
