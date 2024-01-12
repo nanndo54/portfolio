@@ -42,6 +42,10 @@
   gap: 1.2rem;
 }
 
+.base .display {
+  margin: 1rem -1.65rem;
+}
+
 .base .footer {
   display: flex;
   align-items: center;
