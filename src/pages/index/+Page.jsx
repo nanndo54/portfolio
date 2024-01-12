@@ -1,5 +1,6 @@
-import { IntlProvider } from 'react-intl'
 import { useEffect } from 'react'
+import { IntlProvider } from 'react-intl'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 import Navbar from '#/components/Navbar'
 import AllSections from '#/components/AllSections'
@@ -7,8 +8,8 @@ import Showcase from '#/components/Showcase'
 import GoToTopButton from '#/components/GoToTopButton'
 
 import useAppStore from '#/state/store'
-import languages from '#/constants/languages'
 import getCurrentSection from '#/state/getCurrentSection'
+import languages from '#/constants/languages'
 
 function Page() {
   const { isOnTop, locale, theme } = useAppStore()
@@ -36,6 +37,7 @@ function Page() {
       <Navbar />
       <AllSections />
       <GoToTopButton />
+      <SpeedInsights />
     </IntlProvider>
   )
 }
