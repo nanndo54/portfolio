@@ -8,7 +8,6 @@ import autoprefixer from 'autoprefixer'
 import path from 'path'
 
 const hostname = 'https://nanndo54.dev'
-const dynamicRoutes = ['/', '/quiz-game', '/mini-translator', '/jolc']
 
 export default defineConfig(({ mode }) => ({
   plugins: [
@@ -21,7 +20,6 @@ export default defineConfig(({ mode }) => ({
     }),
     sitemap({
       hostname,
-      dynamicRoutes,
       extensions: ['html', 'pdf'],
       outDir: 'dist/client'
     })

@@ -5,7 +5,7 @@ const projects = [
   {
     name: 'Quiz Game',
     year: 2023,
-    web: 'https://nanndo54.dev/quiz-game/',
+    web: 'https://quiz.nanndo54.dev/',
     code: 'https://github.com/nanndo54/quiz-game',
     technologies: ['ReactJS', 'Redux', 'JavaScript', 'HTML', 'CSS'],
     icon: quizGameIcon,
@@ -14,7 +14,7 @@ const projects = [
   {
     name: 'Mini Translator',
     year: 2023,
-    web: 'https://nanndo54.dev/mini-translator/',
+    web: 'https://translator.nanndo54.dev/',
     code: 'https://github.com/nanndo54/mini-translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],
     icon: miniTranslatorIcon,
@@ -23,7 +23,7 @@ const projects = [
   {
     name: 'JOLC',
     year: 2022,
-    web: 'https://nanndo54.dev/jolc/',
+    web: 'https://jolc.nanndo54.dev/',
     code: 'https://github.com/nanndo54/jolc',
     technologies: ['ReactJS', 'Redux', 'Python', 'JavaScript', 'HTML', 'CSS'],
     icon: jolcIcon,

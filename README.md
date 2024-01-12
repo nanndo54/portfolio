@@ -1,6 +1,6 @@
 # Portfolio
 
-Deployed on [https://nanndo54.dev](https://nanndo54.dev)!
+> Deployed on [Vercel](https://nanndo54.dev)!
 
 ## License
 
