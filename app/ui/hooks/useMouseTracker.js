@@ -22,6 +22,8 @@ function useMouseTracker(ref, callback) {
     ref.current.addEventListener('wheel', delayedMouseEvent, { passive: true })
 
     return () => {
+      if (!ref.current) return
+
       ref.current.removeEventListener('mousemove', mouseEvent)
       ref.current.removeEventListener('pointermove', mouseEvent)
       ref.current.removeEventListener('wheel', delayedMouseEvent, {

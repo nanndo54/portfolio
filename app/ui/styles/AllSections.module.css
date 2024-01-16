@@ -45,32 +45,6 @@
   }
 }
 
-.base.isLoading > * > header {
-  opacity: 0.25;
-}
-
-main[top='true'] .base > * > :not(header) {
-  opacity: 0.7;
-  transform: translateY(calc(100vh - 29rem));
-}
-
-main[top='true'] .base.isLoading > * > :not(header) {
-  transform: translateY(calc(100vh - 25rem));
-  opacity: 0.25;
-}
-
-@media (max-height: 500px) {
-  main[top='true'] .base > * > :not(header) {
-    opacity: 0.7;
-    transform: translateY(calc(100vh - 25rem));
-  }
-
-  main[top='true'] .base.isLoading > * > :not(header) {
-    transform: translateY(calc(100vh - 21rem));
-    opacity: 0.25;
-  }
-}
-
 .base::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;

@@ -21,7 +21,13 @@
     background-color 0.5s,
     box-shadow 0.5s,
     color 0.5s,
-    transform 0.2s ease-out;
+    transform 0.2s ease-out,
+    opacity 0.2s ease-out;
+}
+
+main[top='true'] section.base {
+  transform: translateY(calc(100vh - 29rem));
+  opacity: 0.75;
 }
 
 .base h2 {
@@ -42,8 +48,8 @@
   }
 }
 
-@keyframes appear-section {
-  to {
-    opacity: 1;
+@media (max-height: 500px) {
+  main[top='true'] section.base {
+    transform: translateY(calc(100vh - 25rem));
   }
 }

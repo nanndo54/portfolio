@@ -6,8 +6,10 @@ export function useSvg(path) {
 
   useEffect(() => {
     setLoading(true)
-    import(path)
-      .then((module) => (importedIconRef.current = module.ReactComponent))
+    import(`/app/ui/assets/icons/${path}`)
+      .then((module) => {
+        return (importedIconRef.current = module.default)
+      })
       .finally(() => setLoading(false))
   }, [path])
 

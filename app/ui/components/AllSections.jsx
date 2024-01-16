@@ -1,5 +1,5 @@
 import styles from '#/styles/AllSections.module.css'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import Footer from '#/components/Footer'
 import BlockQuote from '#/components/BlockQuote'
@@ -11,16 +11,11 @@ import useMouseTracker from '#/hooks/useMouseTracker'
 function AllSections() {
   const ref = useRef(null)
   const { isOnTop, setOnTop } = useAppStore()
-  const [isLoading, setLoading] = useState(true)
 
   useMouseTracker(ref, (x, y) => {
     ref.current.style.setProperty('--x', x)
     ref.current.style.setProperty('--y', y)
   })
-
-  useEffect(() => {
-    setLoading(false)
-  }, [])
 
   const handlePageScroll = (ev) => {
     const newIsOnTop = ev.target.scrollTop < 40
@@ -28,11 +23,7 @@ function AllSections() {
   }
 
   return (
-    <div
-      className={`${styles.base} ${isLoading ? styles.isLoading : ''}`}
-      onScroll={handlePageScroll}
-      ref={ref}
-    >
+    <div className={styles.base} onScroll={handlePageScroll} ref={ref}>
       {sections.map(({ id, Component }) => (
         <Component key={id} id={id} />
       ))}

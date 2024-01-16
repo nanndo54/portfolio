@@ -1,7 +1,8 @@
+import { hind_guntur, merriweather, palanquin_dark } from 'app/fonts'
 import './ui/global.css'
 
 export const metadata = {
-  title: 'nanndo54 | My Portfolio',
+  title: 'Portfolio | nanndo54',
   description:
     "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Web Developer at your dispose",
   keywords: 'portfolio, frontend, javascript, developer',
@@ -18,7 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' translate='no'>
-      <body>{children}</body>
+      <body
+        className={`${palanquin_dark.variable} ${merriweather.variable} ${hind_guntur.variable}`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
