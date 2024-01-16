@@ -24,6 +24,7 @@ function AllSections() {
 
   const handlePageScroll = (ev) => {
     const newIsOnTop = ev.target.scrollTop < 40
+    console.log('🚀 | ev.target.scrollTop:', ev.target.scrollTop)
     if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
   }
 

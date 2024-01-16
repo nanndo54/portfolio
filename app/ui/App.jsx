@@ -22,18 +22,18 @@ function Page() {
     document.querySelector('html').lang = locale
   }, [locale])
 
-  useEffect(() => {
-    const bodyElement = document.querySelector('body')
-    bodyElement.toggleAttribute('dark', theme === 'dark')
-    bodyElement.toggleAttribute('top', isOnTop)
-  }, [theme, isOnTop])
+  // useEffect(() => {
+  //   const bodyElement = document.querySelector('body')
+  //   bodyElement.toggleAttribute('dark', theme === 'dark')
+  //   bodyElement.toggleAttribute('top', isOnTop)
+  // }, [theme, isOnTop])
 
   useEffect(() => {
     if (currentSection) history.replaceState(null, null, `#${currentSection}`)
   }, [currentSection])
 
   return (
-    <>
+    <main top={isOnTop} dark={theme === 'dark'}>
       <IntlProvider locale={locale} messages={messages}>
         <Showcase />
         <Navbar />
@@ -42,7 +42,7 @@ function Page() {
       </IntlProvider>
       <SpeedInsights />
       <Analytics mode='production' />
-    </>
+    </main>
   )
 }
 

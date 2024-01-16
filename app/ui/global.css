@@ -120,10 +120,19 @@ button {
   font: inherit;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
-button:hover {
-  cursor: pointer;
+strong {
+  font-weight: 600;
+  font-size: 1.15rem;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--secondary-accent-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .blur-background {

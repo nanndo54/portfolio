@@ -3,13 +3,11 @@
   "version": "2.0.0",
   "private": "true",
   "scripts": {
-    "dev": "npm run server",
-    "prod": "npm run lint && npm run build && npm run server:prod",
-    "build": "vite build",
-    "server": "node ./server",
-    "server:prod": "cross-env NODE_ENV=production node ./server",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "npm run lint:format && npm run lint:fix ",
-    "lint:fix": "eslint ./src --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
+    "lint:fix": "eslint ./app --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
     "lint:format": "prettier  --log-level warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
@@ -19,6 +17,7 @@
     "cross-env": "7.0.3",
     "express": "4.18.2",
     "html-react-parser": "5.1.0",
+    "next": "14.0.4",
     "react": "18.2.0",
     "react-content-loader": "6.2.1",
     "react-dom": "18.2.0",
@@ -31,6 +30,7 @@
   },
   "devDependencies": {
     "@svgr/plugin-svgo": "8.1.0",
+    "@svgr/webpack": "8.1.0",
     "@vitejs/plugin-react": "4.2.1",
     "autoprefixer": "10.4.16",
     "eslint": "8.56.0",
