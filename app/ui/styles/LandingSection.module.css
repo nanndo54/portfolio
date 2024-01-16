@@ -64,7 +64,7 @@ p.presentation {
   z-index: 2;
 }
 
-body[top] .avatar {
+main[top='true'] .avatar {
   transform: translate(calc(27rem - 50vw), 10.5rem);
   pointer-events: none;
 }
@@ -100,16 +100,16 @@ body[top] .avatar {
   opacity: 0;
 }
 
-body[top] .avatar > button > svg {
+main[top='true'] .avatar > button > svg {
   opacity: 0.5;
   transform: scale(1.12);
 }
 
-body[top] .avatar > button > img {
+main[top='true'] .avatar > button > img {
   opacity: 1;
 }
 
-body[top] .info {
+main[top='true'] .info {
   opacity: 1;
   pointer-events: all;
   transform: translateY(10rem);
@@ -122,12 +122,12 @@ body[top] .info {
     justify-content: flex-end;
   }
 
-  body[top] .info {
+  main[top='true'] .info {
     align-self: center;
     transform: translateY(25rem);
   }
 
-  body[top] .avatar {
+  main[top='true'] .avatar {
     transform: translate(calc(10rem - 50vw), 4rem) scale(0.8);
   }
 }
@@ -142,7 +142,7 @@ body[top] .info {
     transform: translate(7rem, -8rem) scale(0.15);
   }
 
-  body[top] .avatar {
+  main[top='true'] .avatar {
     transform: translate(calc(10rem - 50vw), 4rem) scale(0.66);
   }
 }
@@ -157,22 +157,22 @@ body[top] .info {
     transform: translate(7rem, -8rem) scale(0.15);
   }
 
-  body[top] .info {
+  main[top='true'] .info {
     align-self: center;
     transform: translateY(19rem) scale(0.8);
   }
 
-  body[top] .avatar {
+  main[top='true'] .avatar {
     transform: translate(calc(10rem - 50vw), 1.8rem) scale(0.6);
   }
 }
 
 @media (max-height: 800px) and (min-width: 700px) {
-  body[top] .avatar {
+  main[top='true'] .avatar {
     transform: translate(calc(24rem - 50vw), 4.5rem) scale(0.8);
   }
 
-  body[top] .info {
+  main[top='true'] .info {
     align-self: flex-start;
     transform: translateY(4rem) scale(0.8);
   }

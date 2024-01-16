@@ -6,7 +6,7 @@ export function useSvg(path) {
 
   useEffect(() => {
     setLoading(true)
-    import(/* @vite-ignore */ path)
+    import(path)
       .then((module) => (importedIconRef.current = module.ReactComponent))
       .finally(() => setLoading(false))
   }, [path])

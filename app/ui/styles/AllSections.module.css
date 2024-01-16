@@ -49,23 +49,23 @@
   opacity: 0.25;
 }
 
-body[top] .base > * > :not(header) {
+main[top='true'] .base > * > :not(header) {
   opacity: 0.7;
   transform: translateY(calc(100vh - 29rem));
 }
 
-body[top] .base.isLoading > * > :not(header) {
+main[top='true'] .base.isLoading > * > :not(header) {
   transform: translateY(calc(100vh - 25rem));
   opacity: 0.25;
 }
 
 @media (max-height: 500px) {
-  body[top] .base > * > :not(header) {
+  main[top='true'] .base > * > :not(header) {
     opacity: 0.7;
     transform: translateY(calc(100vh - 25rem));
   }
 
-  body[top] .base.isLoading > * > :not(header) {
+  main[top='true'] .base.isLoading > * > :not(header) {
     transform: translateY(calc(100vh - 21rem));
     opacity: 0.25;
   }

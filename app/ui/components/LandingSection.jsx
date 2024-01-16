@@ -11,7 +11,6 @@ import Text from '#/components/Text'
 import { cvIcon, logoIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
 
-// import squeak from '/landing/squeak.mp3'
 import images from '#/constants/images'
 
 function LandingSection({ id }) {
@@ -22,9 +21,9 @@ function LandingSection({ id }) {
     if (isOnTop) return
 
     if (Audio) {
-      // const squeakAudio = new Audio(squeak)
-      // squeakAudio.volume = 0.3
-      // squeakAudio.play()
+      const squeakAudio = new Audio('/landing/squeak.mp3')
+      squeakAudio.volume = 0.3
+      squeakAudio.play()
     }
   }
 

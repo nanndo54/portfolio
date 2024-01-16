@@ -15,7 +15,7 @@ function useMouseTracker(ref, callback) {
   }
 
   useEffect(() => {
-    if (!ref?.current) return
+    if (!ref.current) return
 
     ref.current.addEventListener('mousemove', mouseEvent)
     ref.current.addEventListener('pointermove', mouseEvent)

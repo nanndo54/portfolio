@@ -10,7 +10,7 @@
   transition: transform 0.3s;
 }
 
-body[top] .base {
+main[top='true'] .base {
   transform: translateY(8rem);
 }
 
@@ -63,24 +63,24 @@ body[top] .base {
   transform: translate(23px, 9px) rotate(-40deg) scale(70%, 210%);
 }
 
-body[top] .label {
+main[top='true'] .label {
   opacity: 0;
   transform: translateY(1rem);
 }
 
-body[top] .icon > div {
+main[top='true'] .icon > div {
   border-radius: 50%;
 }
 
-body[top] .dot1 {
+main[top='true'] .dot1 {
   transform: translateX(15px);
 }
 
-body[top] .dot2 {
+main[top='true'] .dot2 {
   transform: translate(7px, 20px);
 }
 
-body[top] .dot3 {
+main[top='true'] .dot3 {
   transform: translate(23px, 36px);
 }
 

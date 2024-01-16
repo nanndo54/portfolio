@@ -58,6 +58,27 @@ html {
 }
 
 body {
+  height: 100dvh;
+
+  transition: background-color 0.5s;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  height: 100%;
+  color: var(--font-color);
+  font-family: var(--body-font);
+
+  --title-font: 'Palanquin Dark', serif;
+  --subtitle-font: 'Merriweather', serif;
+  --body-font: 'Hind Guntur', sans-serif;
+  --light-color: rgb(230, 230, 240);
+  --dim-light-color: rgb(230, 230, 240, 0.3);
+  --dark-color: rgb(15, 15, 25);
+  --dim-dark-color: rgb(15, 15, 25, 0.3);
+
   --font-color: rgb(30, 30, 30);
   --alternate-font-color: rgb(235, 235, 255);
 
@@ -72,28 +93,9 @@ body {
 
   --secondary-accent-color: rgb(148, 125, 238);
   --dim-secondary-accent-color: rgba(109, 72, 255, 0.35);
-
-  --light-color: rgb(230, 230, 240);
-  --dim-light-color: rgb(230, 230, 240, 0.3);
-  --dark-color: rgb(15, 15, 25);
-  --dim-dark-color: rgb(15, 15, 25, 0.3);
-
-  --title-font: 'Palanquin Dark', serif;
-  --subtitle-font: 'Merriweather', serif;
-  --body-font: 'Hind Guntur', sans-serif;
-
-  color: var(--font-color);
-  font-family: var(--body-font);
-
-  height: 100dvh;
-
-  transition: background-color 0.5s;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-body[dark] {
+main[dark='true'] {
   --font-color: rgb(220, 220, 250);
   --alternate-font-color: rgb(30, 30, 30);
 
@@ -108,10 +110,6 @@ body[dark] {
 
   --secondary-accent-color: rgb(138, 116, 223);
   --dim-secondary-accent-color: rgba(154, 131, 248, 0.4);
-}
-
-main {
-  height: 100%;
 }
 
 button {

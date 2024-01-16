@@ -31,12 +31,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-body[top] .arrow {
+main[top='true'] .arrow {
   opacity: 1;
   transform: translateY(-2rem);
 }
 
-body[top] .arrow:hover svg {
+main[top='true'] .arrow:hover svg {
   transform: translateY(-0.5rem) rotate(-90deg);
 }
 

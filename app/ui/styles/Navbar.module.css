@@ -66,7 +66,7 @@
   text-shadow: 0rem 0rem 0.4rem var(--dim-primary-color);
 }
 
-body[top] .endItems {
+main[top='true'] .endItems {
   transform: translateY(-3rem);
   opacity: 0;
 }
