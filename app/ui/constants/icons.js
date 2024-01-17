@@ -11,8 +11,7 @@ export const emailIcon = 'landing/email-icon.svg'
 export const githubIcon = 'landing/github-icon.svg'
 export const linkedinIcon = 'landing/linkedin-icon.svg'
 
-export const koloIcon = 'job-experience/kolo-icon.svg'
-
+export const koloEmpresasIcon = 'projects/kolo-empresas-icon.svg'
 export const quizGameIcon = 'projects/quiz-game-icon.svg'
 export const miniTranslatorIcon = 'projects/mini-translator-icon.svg'
 export const jolcIcon = 'projects/jolc-icon.svg'

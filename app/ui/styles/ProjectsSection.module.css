@@ -1,3 +1,39 @@
+.base {
+  overflow: visible;
+}
+
+.arrow {
+  position: absolute;
+  align-self: center;
+  top: 0;
+  margin: auto;
+  height: 2.4rem;
+  width: 2.4rem;
+
+  opacity: 0;
+
+  fill: var(--content-color);
+  transform: translateY(-7rem);
+
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.arrow svg {
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+main[top='true'] .arrow {
+  opacity: 1;
+  transform: translateY(-2rem);
+}
+
+main[top='true'] .arrow:hover svg {
+  transform: translateY(-0.5rem) rotate(-90deg);
+}
+
 .content {
   display: grid;
   grid-template-columns: 0.7rem 1fr;
@@ -14,7 +50,6 @@
 
   width: 100%;
   border-radius: 0.7rem;
-  margin-top: 1rem;
 }
 
 .timeline::before {
@@ -65,7 +100,7 @@
 .allProjects h3 {
   position: relative;
   margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .allProjects h3::before {

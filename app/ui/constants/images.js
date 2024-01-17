@@ -10,10 +10,10 @@ const images = {
       width: 320
     }
   },
-  jobs: {
-    kolo: [
+  projects: {
+    koloEmpresas: [
       {
-        src: '/job-experience/kolo/img1.jpg',
+        src: '/projects/kolo-empresas/img1.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -22,7 +22,7 @@ const images = {
         width: 426
       },
       {
-        src: '/job-experience/kolo/img2.jpg',
+        src: '/projects/kolo-empresas/img2.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -31,7 +31,7 @@ const images = {
         width: 426
       },
       {
-        src: '/job-experience/kolo/img3.jpg',
+        src: '/projects/kolo-empresas/img3.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -40,7 +40,7 @@ const images = {
         width: 426
       },
       {
-        src: '/job-experience/kolo/img4.jpg',
+        src: '/projects/kolo-empresas/img4.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -48,9 +48,7 @@ const images = {
         height: 210,
         width: 426
       }
-    ]
-  },
-  projects: {
+    ],
     quizGame: [
       {
         src: '/projects/quiz-game/img1.jpg',

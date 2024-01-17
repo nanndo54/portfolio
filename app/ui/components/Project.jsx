@@ -34,9 +34,11 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
       </div>
       <ImageCarrousel images={images} />
       <div className={styles.footer}>
-        <Button href={code} type='secondary'>
-          <Text localeId='projects.button1' />
-        </Button>
+        {code && (
+          <Button href={code} type='secondary'>
+            <Text localeId='projects.button1' />
+          </Button>
+        )}
         <Button href={web}>
           <Text localeId='projects.button2' />
         </Button>

@@ -13,7 +13,8 @@ function Image({
   priority = false,
   className = '',
   noBorder = false,
-  noZoom = false
+  noZoom = false,
+  ariaHidden = false
 }) {
   const ref = useRef()
   const { locale, openShowcase } = useAppStore()
@@ -31,6 +32,7 @@ function Image({
       width={width}
       fill={fill}
       priority={priority}
+      aria-hidden={ariaHidden}
     />
   )
 

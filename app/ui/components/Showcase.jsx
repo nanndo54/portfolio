@@ -11,6 +11,8 @@ import useAppStore from '#/state/store'
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants/icons'
 
 const initialScale = 1
+const defaultImageWidth = 1080
+const defaultImageHeight = 720
 
 function Showcase() {
   const { locale, showcase, closeShowcase, setShowcase } = useAppStore()
@@ -100,10 +102,11 @@ function Showcase() {
                 <Image
                   src={src}
                   alt={alt}
-                  width={1080}
-                  height={(height * 1080) / width}
+                  width={defaultImageWidth}
+                  height={(height * defaultImageWidth) / width || defaultImageHeight}
                   noBorder
                   noZoom
+                  ariaHidden={!open}
                 />
               ) : (
                 element

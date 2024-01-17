@@ -6,14 +6,21 @@ export const metadata = {
   description:
     "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Web Developer at your dispose",
   keywords: 'portfolio, frontend, javascript, developer',
-  'og:title': 'Pablo Cabrera | Portfolio',
-  'og:description':
-    "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Developer at your dispose",
-  'og:url': 'https://nanndo54.dev',
-  'og:type': 'website',
-  'color-scheme': 'dark light',
-  'theme-color': '#7c7edf',
-  'apple-mobile-web-app-status-bar-style': '#7c7edf'
+  colorScheme: 'dark light',
+  themeColor: '#7c7edf',
+  appleWebApp: {
+    statusBarStyle: '#7c7edf',
+    title: 'Portfolio | nanndo54'
+  },
+  openGraph: {
+    title: 'Portfolio | nanndo54',
+    description:
+      "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Developer at your dispose",
+    url: 'https://nanndo54.dev',
+    siteName: 'Portfolio | nanndo54',
+    type: 'website',
+    locale: 'en_US'
+  }
 }
 
 export default function RootLayout({ children }) {
