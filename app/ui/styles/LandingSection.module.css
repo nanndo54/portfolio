@@ -5,7 +5,7 @@ header.base {
   padding: 3rem 0;
 
   opacity: 0.25;
-  animation: landing-initial-load 0.4s ease 0.2s forwards;
+  animation: 0.4s ease appear-landing 0.2s forwards;
 }
 
 .info {
@@ -195,7 +195,7 @@ main[top='true'] .info {
   }
 }
 
-@keyframes landing-initial-load {
+@keyframes appear-landing {
   to {
     opacity: 1;
   }

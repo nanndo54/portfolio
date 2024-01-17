@@ -1,5 +1,5 @@
 import styles from '#/styles/Showcase.module.css'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
 import Icon from '#/components/Icon'
@@ -26,36 +26,36 @@ function Showcase() {
 
   const singleImage = images?.length <= 1
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     closeShowcase()
     ref.current?.resetTransform()
-  }
+  }, [closeShowcase, ref])
 
-  const handleShowPreviousImage = () => {
+  const handleShowPreviousImage = useCallback(() => {
     const newIndex = (index - 1 + images.length) % images.length
     setShowcase({ index: newIndex })
     ref.current?.resetTransform()
     onIndexChange?.(newIndex)
-  }
+  }, [index, images, onIndexChange, setShowcase])
 
-  const handleShowNextImage = () => {
+  const handleShowNextImage = useCallback(() => {
     const newIndex = (index + 1 + images.length) % images.length
     setShowcase({ index: newIndex })
     ref.current?.resetTransform()
     onIndexChange?.(newIndex)
-  }
-
-  const handleKeyDown = (ev) => {
-    if (ev.key === 'Escape') handleClose()
-    if (ev.key === 'ArrowLeft') handleShowPreviousImage()
-    if (ev.key === 'ArrowRight') handleShowNextImage()
-  }
+  }, [index, images, onIndexChange, setShowcase])
 
   useEffect(() => {
+    const handleKeyDown = (ev) => {
+      if (ev.key === 'Escape') handleClose()
+      if (ev.key === 'ArrowLeft') handleShowPreviousImage()
+      if (ev.key === 'ArrowRight') handleShowNextImage()
+    }
+
     window.addEventListener('keydown', handleKeyDown)
 
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [open, index])
+  }, [open, index, handleClose, handleShowPreviousImage, handleShowNextImage])
 
   return (
     <div

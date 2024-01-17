@@ -1,36 +1,38 @@
 import { useEffect } from 'react'
 
 function useMouseTracker(ref, callback) {
-  const mouseEvent = (e) => {
-    if (!ref?.current) return
-
-    const { x, y } = ref.current.getBoundingClientRect()
-    callback(e.clientX - x, e.clientY - y)
-  }
-
-  const delayedMouseEvent = (e) => {
-    setTimeout(() => {
-      mouseEvent(e)
-    }, 20)
-  }
-
   useEffect(() => {
-    if (!ref.current) return
+    const element = ref.current
 
-    ref.current.addEventListener('mousemove', mouseEvent)
-    ref.current.addEventListener('pointermove', mouseEvent)
-    ref.current.addEventListener('wheel', delayedMouseEvent, { passive: true })
+    if (element) return
+
+    const mouseEvent = (e) => {
+      if (!ref?.current) return
+
+      const { x, y } = ref.current.getBoundingClientRect()
+      callback(e.clientX - x, e.clientY - y)
+    }
+
+    const delayedMouseEvent = (e) => {
+      setTimeout(() => {
+        mouseEvent(e)
+      }, 20)
+    }
+
+    element.addEventListener('mousemove', mouseEvent)
+    element.addEventListener('pointermove', mouseEvent)
+    element.addEventListener('wheel', delayedMouseEvent, { passive: true })
 
     return () => {
-      if (!ref.current) return
+      if (!element) return
 
-      ref.current.removeEventListener('mousemove', mouseEvent)
-      ref.current.removeEventListener('pointermove', mouseEvent)
-      ref.current.removeEventListener('wheel', delayedMouseEvent, {
+      element.removeEventListener('mousemove', mouseEvent)
+      element.removeEventListener('pointermove', mouseEvent)
+      element.removeEventListener('wheel', delayedMouseEvent, {
         passive: true
       })
     }
-  }, [ref])
+  }, [ref, callback])
 }
 
 export default useMouseTracker

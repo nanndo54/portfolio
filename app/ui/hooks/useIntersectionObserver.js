@@ -17,7 +17,7 @@ function useIntersectionObserver(ref, { once = true, ...options }) {
     observer.observe(node)
 
     return () => observer.disconnect()
-  }, [ref, options])
+  }, [ref, once, options, isIntersected])
 
   return isIntersected
 }

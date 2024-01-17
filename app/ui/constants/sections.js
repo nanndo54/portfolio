@@ -4,7 +4,7 @@ import AboutMeSection from '#/components/AboutMeSection'
 import SkillsSection from '#/components/SkillsSection'
 import ContactSection from '#/components/ContactSection'
 
-export default [
+const sections = [
   {
     id: 'landing',
     Component: LandingSection,
@@ -27,3 +27,5 @@ export default [
     Component: ContactSection
   }
 ]
+
+export default sections

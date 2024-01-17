@@ -22,7 +22,7 @@ const Section = ({
   useEffect(() => {
     if (!setSectionIntersected || !id) return
     setSectionIntersected(id, isIntersected)
-  }, [isIntersected])
+  }, [id, setSectionIntersected, isIntersected])
 
   return (
     <div className={styles.layout} id={id}>

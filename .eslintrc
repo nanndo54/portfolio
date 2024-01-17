@@ -20,7 +20,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "next/core-web-vitals"
   ],
   "plugins": ["prettier"],
   "rules": {
@@ -41,6 +42,7 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    "jsx-a11y/no-noninteractive-element-interactions": "off"
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/alt-text": "off"
   }
 }

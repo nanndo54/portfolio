@@ -25,7 +25,7 @@ function ProjectsSection({ id }) {
         return acc
       }, [])
       .sort((a, b) => b.year - a.year)
-  }, [projects])
+  }, [])
 
   return (
     <Section id={id} className={styles.base}>

@@ -6,8 +6,6 @@ export const metadata = {
   description:
     "My personal portfolio. Hi! I'm Pablo Cabrera (nanndo54), FullStack Web Developer at your dispose",
   keywords: 'portfolio, frontend, javascript, developer',
-  colorScheme: 'dark light',
-  themeColor: '#7c7edf',
   appleWebApp: {
     statusBarStyle: '#7c7edf',
     title: 'Portfolio | nanndo54'
@@ -21,6 +19,11 @@ export const metadata = {
     type: 'website',
     locale: 'en_US'
   }
+}
+
+export const viewport = {
+  colorScheme: 'dark light',
+  themeColor: '#7c7edf'
 }
 
 export default function RootLayout({ children }) {
