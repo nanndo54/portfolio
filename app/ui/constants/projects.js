@@ -13,7 +13,7 @@ const projects = [
   },
   {
     name: 'Mini Translator',
-    year: 2023,
+    year: 2022,
     web: 'https://translator.nanndo54.dev/',
     code: 'https://github.com/nanndo54/mini-translator',
     technologies: ['JavaScript', 'HTML', 'CSS'],

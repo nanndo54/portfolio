@@ -13,13 +13,15 @@ import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants
 const initialScale = 1
 
 function Showcase() {
-  const { showcase, closeShowcase, setShowcase } = useAppStore()
+  const { locale, showcase, closeShowcase, setShowcase } = useAppStore()
   const ref = useRef()
 
   const [scale, setScale] = useState(initialScale)
 
   const { open, images, index, element, onIndexChange } = showcase
-  const src = images?.[index]
+  const image = images?.[index] || {}
+  const { alt = {}, src, width, height } = image
+
   const singleImage = images?.length <= 1
 
   const handleClose = () => {
@@ -75,7 +77,7 @@ function Showcase() {
                 {index + 1}/{images?.length}
               </Text>
             )}
-            {/* {alt && <Text as='p'>{alt}</Text>} */}
+            <Text as='p'>{alt[locale]}</Text>
             <IconButton
               icon={closeIcon}
               className={styles.closeButton}
@@ -94,7 +96,18 @@ function Showcase() {
               <Icon src={arrowIcon} lightColor />
             </IconButton>
             <TransformComponent wrapperClass={styles.canvas}>
-              {src ? <Image src={src} noBorder noZoom /> : element}
+              {image ? (
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={1080}
+                  height={(height * 1080) / width}
+                  noBorder
+                  noZoom
+                />
+              ) : (
+                element
+              )}
             </TransformComponent>
             <IconButton
               className={styles.nextImage}

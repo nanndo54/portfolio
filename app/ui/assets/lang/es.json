@@ -10,7 +10,7 @@
   "projects.title": "Proyectos",
   "projects.button1": "Código",
   "projects.button2": "Sitio web",
-  "project.mini translator": "Traductor en línea en tiempo real. Facilita la traducción entre más de 100 lenguajes, así como el dictado del texto, todo desde una interfaz de usuario minimalista e intuitiva.",
+  "project.mini translator": "Traductor minimalista en tiempo real. Facilita la traducción entre más de 100 lenguajes, así como el dictado del texto..",
   "project.quiz game": "Juego de preguntas en línea. Tiene una interfaz cómoda y sencilla, ¡para proveer una divertida y educativa experiencia!",
   "project.jolc": "Intérprete de JOLC, un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
   "about-me.title": "Sobre mí",

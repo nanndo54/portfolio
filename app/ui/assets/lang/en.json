@@ -10,7 +10,7 @@
   "projects.title": "Personal works",
   "projects.button1": "Code",
   "projects.button2": "Website",
-  "project.mini translator": "Real-time translation online. Mini Translator eases the translation between 100+ languages, as well as text spelling, everything from a minimalistic and intuitive GUI.",
+  "project.mini translator": "Real-time minimalistic translation tool. Mini Translator eases the translation between 100+ languages, as well as text spelling.",
   "project.quiz game": "Quiz game online. The GUI aims to be comfortable and simple, to provide knowledge and fun at the same time!",
   "project.jolc": "Web interpreter for a programming language derived from Julia, named JOLC. Eases the debug of the language via AST, error and symbols reports.",
   "about-me.title": "About me",

@@ -3,15 +3,14 @@ import { useIntl } from 'react-intl'
 
 import Button from '#/components/Button'
 import ContactIcons from '#/components/ContactIcons'
-import Icon from '#/components/Icon'
 import Image from '#/components/Image'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
-import { cvIcon, logoIcon } from '#/constants/icons'
-import useAppStore from '#/state/store'
-
+import { CvIcon, LogoIcon } from '#/constants/icons'
 import images from '#/constants/images'
+
+import useAppStore from '#/state/store'
 
 function LandingSection({ id }) {
   const { isOnTop } = useAppStore()
@@ -20,11 +19,9 @@ function LandingSection({ id }) {
   const handleMenuButton = () => {
     if (isOnTop) return
 
-    if (Audio) {
-      const squeakAudio = new Audio('/landing/squeak.mp3')
-      squeakAudio.volume = 0.3
-      squeakAudio.play()
-    }
+    const squeakAudio = new Audio('/landing/squeak.mp3')
+    squeakAudio.volume = 0.3
+    squeakAudio.play()
   }
 
   return (
@@ -36,10 +33,10 @@ function LandingSection({ id }) {
           <Button
             href={intl.formatMessage({ id: 'link.cv' })}
             download='Pablo Cabrera - CV.pdf'
-            icon={cvIcon}
             tabIndex={isOnTop ? 0 : -1}
           >
             <Text localeId='landing.cv' />
+            <CvIcon />
           </Button>
           <ContactIcons className={styles.contact} />
         </div>
@@ -50,8 +47,8 @@ function LandingSection({ id }) {
           onClick={(ev) => handleMenuButton(ev.target.value)}
           tabIndex={isOnTop ? -1 : 0}
         >
-          <Icon src={logoIcon} width={80} />
-          <Image src={images.landing.profilePhoto} alt='Mi fotografía' noZoom />
+          <LogoIcon width={80} />
+          <Image {...images.landing.profilePhoto} priority noZoom />
         </button>
       </div>
     </Section>

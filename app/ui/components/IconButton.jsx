@@ -12,7 +12,7 @@ function IconButton({
   children,
   ...props
 }) {
-  const childrenElement = icon ? <Icon src={icon} className={styles.icon} /> : children
+  const childrenElement = icon ? <Icon src={icon} /> : children
 
   return href ? (
     <Link className={`${className} ${styles.base}`} href={href} {...props} noDecoration>

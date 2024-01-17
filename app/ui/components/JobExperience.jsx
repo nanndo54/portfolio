@@ -14,13 +14,9 @@ function JobExperience({ company, logo, images, web }) {
           <Text as='h4'>{company}</Text>
           {/* <Text as='h4'>{position}</Text> */}
         </div>
-      </div>
-      <div className={styles.content}>
         <Text as='p' localeId={`job-experience.${company.toLowerCase()}`} />
       </div>
-      <div className={styles.display}>
-        <ImageCarrousel images={images} />
-      </div>
+      <ImageCarrousel images={images} />
       <div className={styles.footer}>
         <Button href={web}>
           <Text localeId='projects.button2' />

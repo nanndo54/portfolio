@@ -28,7 +28,7 @@
   transform: scale(0.98);
 }
 
-.icon {
+.base > svg {
   height: 100%;
   width: 100%;
 }

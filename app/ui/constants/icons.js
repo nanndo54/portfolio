@@ -1,11 +1,12 @@
+export { default as LogoIcon } from 'app/icon.svg'
+export { default as CvIcon } from '#/assets/icons/landing/cv-icon.svg'
+
 export const arrowIcon = 'general/arrow-icon.svg'
 export const closeIcon = 'general/close-icon.svg'
-export const logoIcon = 'general/logo.svg'
 export const minusIcon = 'general/minus-icon.svg'
 export const plusIcon = 'general/plus-icon.svg'
 export const zoomIcon = 'general/zoom-icon.svg'
 
-export const cvIcon = 'landing/cv-icon.svg'
 export const emailIcon = 'landing/email-icon.svg'
 export const githubIcon = 'landing/github-icon.svg'
 export const linkedinIcon = 'landing/linkedin-icon.svg'

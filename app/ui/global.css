@@ -115,6 +115,11 @@ strong {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
   height: 0;
+  width: 0;
+}
+
+.base::-webkit-scrollbar-thumb {
+  height: 0;
+  width: 0;
 }

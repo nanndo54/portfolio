@@ -3,7 +3,6 @@
   pointer-events: none;
 
   position: fixed;
-  transform: translateY(-3.5rem);
 
   padding: 0 2rem;
   width: 100%;
@@ -106,7 +105,11 @@ main[top='true'] .endItems {
 }
 
 @keyframes appear-navbar {
+  from {
+    transform: translateY(-3.5rem);
+  }
+
   to {
-    transform: translateY(0);
+    transform: none;
   }
 }

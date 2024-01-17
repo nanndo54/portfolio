@@ -25,8 +25,6 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
           <Icon src={icon} height={34} alt={name} />
           <Text as='h4'>{name}</Text>
         </div>
-      </div>
-      <div className={styles.content}>
         <Text as='p' localeId={`project.${name.toLowerCase()}`} />
         <div className={styles.skills}>
           {skills.map((skill) => (
@@ -34,9 +32,7 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
           ))}
         </div>
       </div>
-      <div className={styles.display}>
-        <ImageCarrousel images={images} />
-      </div>
+      <ImageCarrousel images={images} />
       <div className={styles.footer}>
         <Button href={code} type='secondary'>
           <Text localeId='projects.button1' />

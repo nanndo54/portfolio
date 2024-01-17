@@ -5,7 +5,7 @@ header.base {
   padding: 3rem 0;
 
   opacity: 0.25;
-  animation: loaded 0.4s ease 0.2s forwards;
+  animation: landing-initial-load 0.4s ease 0.2s forwards;
 }
 
 .info {
@@ -40,10 +40,26 @@ p.presentation {
   gap: 0.8rem;
 
   margin-top: 1rem;
+
+  scale: 1.2;
   transition:
     transform 0.3s,
     opacity 0.2s;
-  transform: scale(1.15);
+
+  animation: appear-cta-buttons 0.8s ease forwards;
+}
+
+@keyframes appear-cta-buttons {
+  from,
+  30% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .avatar {
@@ -60,7 +76,7 @@ p.presentation {
     transform 0.25s ease,
     border 0.5s;
 
-  transform: translate(6.5rem, -7.5rem) scale(0.18);
+  transform: translate(6.5rem, -7.5rem) scale(0.16);
   pointer-events: all;
   z-index: 2;
 }
@@ -140,7 +156,7 @@ main[top='true'] .info {
   }
 
   .avatar {
-    transform: translate(7rem, -8rem) scale(0.15);
+    transform: translate(7rem, -8rem) scale(0.14);
   }
 
   main[top='true'] .avatar {
@@ -155,7 +171,7 @@ main[top='true'] .info {
   }
 
   .avatar {
-    transform: translate(7rem, -8rem) scale(0.15);
+    transform: translate(7rem, -8rem) scale(0.14);
   }
 
   main[top='true'] .info {
@@ -179,7 +195,7 @@ main[top='true'] .info {
   }
 }
 
-@keyframes loaded {
+@keyframes landing-initial-load {
   to {
     opacity: 1;
   }

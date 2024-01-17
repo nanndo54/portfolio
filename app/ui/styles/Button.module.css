@@ -60,7 +60,7 @@
   border-color: var(--accent-color);
 }
 
-.icon {
+.base > svg {
   fill: var(--alternate-font-color);
   width: 1.5rem;
   height: 1.5rem;

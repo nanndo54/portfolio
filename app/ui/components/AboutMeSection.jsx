@@ -11,11 +11,11 @@ function AboutMeSection({ id }) {
       <Text as='h2' localeId='about-me.title' />
       <Text as='p' localeId='about-me.text1' />
       <div className={styles.subsection}>
-        <Image src={images.aboutMe.guatemala} alt='Guatemala, Lago de Atitlán' />
+        <Image {...images.aboutMe.guatemala} />
         <Text as='p' localeId='about-me.text2' />
       </div>
       <div className={styles.subsection}>
-        <Image src={images.aboutMe.campus} alt='USAC' />
+        <Image {...images.aboutMe.campus} />
         <Text as='p' localeId='about-me.text3' />
       </div>
     </Section>

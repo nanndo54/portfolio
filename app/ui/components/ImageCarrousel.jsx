@@ -32,14 +32,25 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
 
   const contentElement = (
     <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-      {images.map((src, index) => (
-        <Image key={index} src={src} noBorder noZoom />
+      {images.map((image, index) => (
+        <Image key={index} {...image} noBorder noZoom />
       ))}
     </div>
   )
 
   return (
     <div className={`${styles.base} ${singleImage ? styles.singleImage : ''}`}>
+      <IconButton
+        className={styles.previousImage}
+        onClick={(ev) => {
+          ev.stopPropagation()
+          handleImageChange((imageIndex - 1 + images.length) % images.length)
+        }}
+        noBorder
+        aria-label='Ver imagen anterior'
+      >
+        <Icon src={arrowIcon} lightColor />
+      </IconButton>
       {noZoom ? (
         <div
           className={`${className} ${styles.container} ${
@@ -61,18 +72,6 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
           {contentElement}
         </button>
       )}
-
-      <IconButton
-        className={styles.previousImage}
-        onClick={(ev) => {
-          ev.stopPropagation()
-          handleImageChange((imageIndex - 1 + images.length) % images.length)
-        }}
-        noBorder
-        aria-label='Ver imagen anterior'
-      >
-        <Icon src={arrowIcon} lightColor />
-      </IconButton>
       <IconButton
         className={styles.nextImage}
         onClick={(ev) => {
