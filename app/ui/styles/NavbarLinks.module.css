@@ -1,0 +1,39 @@
+.base {
+  display: flex;
+  align-items: center;
+
+  margin-right: 5rem;
+
+  pointer-events: all;
+  transition:
+    transform 0.5s,
+    opacity 0.3s;
+}
+
+.base a {
+  font-size: 1.1rem;
+  font-family: var(--title-font);
+  font-weight: 400;
+  line-height: 1;
+
+  padding: 0.3rem 0.6rem;
+  border: 0.15rem solid transparent;
+  border-radius: 1rem;
+
+  color: var(--font-color);
+}
+
+.base a.current {
+  color: var(--accent-color);
+  border-color: var(--dim-accent-color);
+}
+
+.base a:not(.current) {
+  text-shadow: 0rem 0rem 0.4rem var(--dim-primary-color);
+}
+
+@media (max-width: 700px) {
+  .base {
+    display: none;
+  }
+}

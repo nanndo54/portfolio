@@ -3,26 +3,17 @@ import { useIntl } from 'react-intl'
 
 import Button from '#/components/Button'
 import ContactIcons from '#/components/ContactIcons'
-import Image from '#/components/Image'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
-import { CvIcon, LogoIcon } from '#/constants/icons'
-import images from '#/constants/images'
+import { CvIcon } from '#/constants/icons'
 
+import Avatar from '#/components/Avatar'
 import useAppStore from '#/state/store'
 
 function LandingSection({ id }) {
   const { isOnTop } = useAppStore()
   const intl = useIntl()
-
-  const handleMenuButton = () => {
-    if (isOnTop) return
-
-    const squeakAudio = new Audio('/landing/squeak.mp3')
-    squeakAudio.volume = 0.3
-    squeakAudio.play()
-  }
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -41,16 +32,7 @@ function LandingSection({ id }) {
           <ContactIcons className={styles.contact} />
         </div>
       </div>
-      <div className={styles.avatar}>
-        <button
-          type='button'
-          onClick={(ev) => handleMenuButton(ev.target.value)}
-          tabIndex={isOnTop ? -1 : 0}
-        >
-          <LogoIcon width={80} />
-          <Image {...images.landing.profilePhoto} priority noZoom />
-        </button>
-      </div>
+      <Avatar />
     </Section>
   )
 }

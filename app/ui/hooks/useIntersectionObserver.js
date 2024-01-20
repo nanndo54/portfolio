@@ -8,7 +8,7 @@ function useIntersectionObserver(ref, { once = true, ...options }) {
   }
 
   useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver
+    const hasIOSupport = Boolean(window.IntersectionObserver)
     const node = ref?.current
 
     if (!hasIOSupport || !node || (once && isIntersected)) return

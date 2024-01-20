@@ -1,8 +1,8 @@
+import AboutMeSection from '#/components/AboutMeSection'
+import ContactSection from '#/components/ContactSection'
 import LandingSection from '#/components/LandingSection'
 import ProjectsSection from '#/components/ProjectsSection'
-import AboutMeSection from '#/components/AboutMeSection'
 import SkillsSection from '#/components/SkillsSection'
-import ContactSection from '#/components/ContactSection'
 
 const sections = [
   {

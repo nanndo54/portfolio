@@ -1,31 +1,25 @@
 import styles from '#/styles/Link.module.css'
+import { default as NextLink } from 'next/link'
 
-function Link({ className = '', href, children, noDecoration = false, ...props }) {
+export default function Link({
+  className = '',
+  href,
+  children,
+  noDecoration = false,
+  ...props
+}) {
   const isHashLink = href?.startsWith('#')
-  const componentProps = {
-    className: `${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`,
-    href,
-    ...props
-  }
 
-  return isHashLink ? (
-    <a
-      {...componentProps}
-      onClick={(ev) => {
-        ev.preventDefault()
-        const element = document.querySelector(href)
-        if (!element) return
-
-        element.scrollIntoView({ behavior: 'smooth' })
-      }}
+  return (
+    <NextLink
+      replace={isHashLink}
+      className={`${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`}
+      href={href}
+      target={isHashLink ? '_self' : '_blank'}
+      rel='noopener noreferrer'
+      {...props}
     >
       {children}
-    </a>
-  ) : (
-    <a {...componentProps} target={'_blank'} rel={'noreferrer'}>
-      {children}
-    </a>
+    </NextLink>
   )
 }
-
-export default Link

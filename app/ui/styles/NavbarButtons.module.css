@@ -1,0 +1,21 @@
+.base {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  pointer-events: all;
+}
+
+.base .language {
+  font-family: var(--subtitle-font);
+  font-size: 1.5rem;
+  line-height: 2;
+
+  height: 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .base {
+    gap: 0.7rem;
+  }
+}

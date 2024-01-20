@@ -1,8 +1,8 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-import { useEffect, useState } from 'react'
 import sections from '#/constants/sections'
+import { useEffect, useState } from 'react'
 
 const initialState = {
   isOnTop: true,
@@ -33,7 +33,10 @@ const store = create(
       toggleTheme: () =>
         set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       toggleLocale: () =>
-        set((state) => ({ locale: state.locale === 'es' ? 'en' : 'es' })),
+        set((state) => {
+          document.querySelector('html').lang = state.locale
+          return { locale: state.locale === 'es' ? 'en' : 'es' }
+        }),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),
       closeShowcase: () =>

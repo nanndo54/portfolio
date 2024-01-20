@@ -1,8 +1,6 @@
 .base {
-  height: 100%;
-
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  color: var(--font-color);
+  font-family: var(--body-font);
 
   background-color: var(--primary-color);
   background-image: url('/background.svg');
@@ -12,9 +10,46 @@
   transition:
     background-color 0.5s,
     background-image 0.5s;
+
+  --light-color: rgb(230, 230, 240);
+  --dim-light-color: rgb(230, 230, 240, 0.3);
+  --dark-color: rgb(15, 15, 25);
+  --dim-dark-color: rgb(15, 15, 25, 0.3);
+
+  --font-color: rgb(30, 30, 30);
+  --alternate-font-color: rgb(235, 235, 255);
+
+  --content-color: rgb(50, 50, 50);
+  --dim-content-color: rgba(100, 100, 100, 0.05);
+
+  --primary-color: rgb(222, 228, 253);
+  --dim-primary-color: rgba(210, 210, 250, 0.4);
+
+  --accent-color: rgb(57, 148, 223);
+  --dim-accent-color: rgba(39, 132, 238, 0.35);
+
+  --secondary-accent-color: rgb(148, 125, 238);
+  --dim-secondary-accent-color: rgba(109, 72, 255, 0.35);
 }
 
-.base::after {
+.base[dark='true'] {
+  --font-color: rgb(220, 220, 250);
+  --alternate-font-color: rgb(30, 30, 30);
+
+  --content-color: rgb(225, 225, 235);
+  --dim-content-color: rgb(220, 220, 230, 0.1);
+
+  --primary-color: rgb(32, 38, 55);
+  --dim-primary-color: rgba(35, 35, 45, 0.4);
+
+  --accent-color: rgb(98, 185, 211);
+  --dim-accent-color: rgba(90, 187, 235, 0.4);
+
+  --secondary-accent-color: rgb(138, 116, 223);
+  --dim-secondary-accent-color: rgba(154, 131, 248, 0.4);
+}
+
+/* .base::after {
   content: '';
   background: radial-gradient(
     var(--accent-color),
@@ -37,7 +72,7 @@
 
 .base:hover::after {
   opacity: 0.08;
-}
+} */
 
 @media (pointer: coarse) {
   .base::after {

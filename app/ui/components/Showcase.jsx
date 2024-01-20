@@ -1,14 +1,16 @@
+'use client'
+
 import styles from '#/styles/Showcase.module.css'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch'
 
 import Icon from '#/components/Icon'
 import IconButton from '#/components/IconButton'
-import Text from '#/components/Text'
 import Image from '#/components/Image'
+import Text from '#/components/Text'
 
-import useAppStore from '#/state/store'
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants/icons'
+import useAppStore from '#/state/store'
 
 const initialScale = 1
 const defaultImageWidth = 1080
