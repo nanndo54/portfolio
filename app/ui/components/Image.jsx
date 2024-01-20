@@ -1,5 +1,4 @@
 import styles from '#/styles/Image.module.css'
-import { useRef } from 'react'
 import { default as NextImage } from 'next/image'
 
 import useAppStore from '#/state/store'
@@ -16,12 +15,10 @@ function Image({
   noZoom = false,
   ariaHidden = false
 }) {
-  const ref = useRef()
   const { locale, openShowcase } = useAppStore()
 
   const imageElement = (
     <NextImage
-      ref={ref}
       src={src}
       alt={alt[locale]}
       className={`${className} ${styles.base} ${
