@@ -1,5 +1,3 @@
-'use client'
-
 import styles from '#/styles/Navbar.module.css'
 
 import NavbarButtons from '#/components/NavbarButtons'

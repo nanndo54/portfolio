@@ -1,8 +1,8 @@
 import styles from '#/styles/AboutMeSection.module.css'
 
+import Image from '#/components/Image'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
-import Image from '#/components/Image'
 import images from '#/constants/images'
 
 function AboutMeSection({ id }) {

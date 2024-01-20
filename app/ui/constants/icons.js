@@ -1,5 +1,5 @@
-export { default as LogoIcon } from 'app/icon.svg'
 export { default as CvIcon } from '#/assets/icons/landing/cv-icon.svg'
+export { default as LogoIcon } from 'app/icon.svg'
 
 export const arrowIcon = 'general/arrow-icon.svg'
 export const closeIcon = 'general/close-icon.svg'

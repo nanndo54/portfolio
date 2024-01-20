@@ -6,7 +6,8 @@ import styles from '#/styles/NavbarButtons.module.css'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 export default function NavbarButtons() {
-  const { locale, theme, toggleLocale, toggleTheme } = useAppStore()
+  const { theme, toggleLocale, toggleTheme } = useAppStore()
+  const locale = 'en'
 
   return (
     <div className={styles.base}>

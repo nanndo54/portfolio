@@ -17,7 +17,8 @@ const defaultImageWidth = 1080
 const defaultImageHeight = 720
 
 function Showcase() {
-  const { locale, showcase, closeShowcase, setShowcase } = useAppStore()
+  const { showcase, closeShowcase, setShowcase } = useAppStore()
+  const locale = 'en'
   const ref = useRef()
 
   const [scale, setScale] = useState(initialScale)
@@ -100,7 +101,7 @@ function Showcase() {
               <Icon src={arrowIcon} lightColor />
             </IconButton>
             <TransformComponent wrapperClass={styles.canvas}>
-              {image ? (
+              {image.src ? (
                 <Image
                   src={src}
                   alt={alt}

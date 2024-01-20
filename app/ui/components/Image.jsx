@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '#/styles/Image.module.css'
 import { default as NextImage } from 'next/image'
 
@@ -15,7 +17,8 @@ function Image({
   noZoom = false,
   ariaHidden = false
 }) {
-  const { locale, openShowcase } = useAppStore()
+  const { openShowcase } = useAppStore()
+  const locale = 'en'
 
   const imageElement = (
     <NextImage

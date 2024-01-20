@@ -1,3 +1,5 @@
+'use client'
+
 import useSvg from '#/hooks/useSvg'
 import styles from '#/styles/Icon.module.css'
 

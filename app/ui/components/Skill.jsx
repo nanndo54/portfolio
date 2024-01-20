@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '#/styles/Skill.module.css'
 
 import Icon from '#/components/Icon'

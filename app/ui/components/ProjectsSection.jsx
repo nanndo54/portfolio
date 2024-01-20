@@ -6,9 +6,9 @@ import Project from '#/components/Project'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
 
-import projects from '#/constants/projects'
-import { arrowIcon } from '#/constants/icons'
 import Link from '#/components/Link'
+import { arrowIcon } from '#/constants/icons'
+import projects from '#/constants/projects'
 
 function ProjectsSection({ id }) {
   const projectsPerYear = useMemo(() => {

@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
@@ -7,7 +9,6 @@ import { useEffect, useState } from 'react'
 const initialState = {
   isOnTop: true,
   sectionsIntersection: sections.slice(0, 2).map(({ id }) => ({ id, intersected: true })),
-  locale: 'en',
   theme: 'light',
   showcase: {}
 }
@@ -16,7 +17,13 @@ const store = create(
   persist(
     (set) => ({
       ...initialState,
-      setOnTop: (isOnTop) => set(() => ({ isOnTop })),
+      setOnTop: (isOnTop) =>
+        set(() => {
+          const mainElement = document.querySelector('main')
+          mainElement.setAttribute('top', isOnTop)
+
+          return { isOnTop }
+        }),
       setSectionIntersected: (id, intersected) =>
         set((state) => {
           const sectionsIntersection = [...state.sectionsIntersection]
@@ -31,11 +38,13 @@ const store = create(
           }
         }),
       toggleTheme: () =>
-        set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
-      toggleLocale: () =>
         set((state) => {
-          document.querySelector('html').lang = state.locale
-          return { locale: state.locale === 'es' ? 'en' : 'es' }
+          const theme = state.theme === 'light' ? 'dark' : 'light'
+
+          const mainElement = document.querySelector('main')
+          mainElement.setAttribute('dark', theme === 'dark')
+
+          return { theme }
         }),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),
@@ -46,8 +55,7 @@ const store = create(
     }),
     {
       name: 'app-storage',
-      partialize: ({ locale, theme }) => ({
-        locale,
+      partialize: ({ theme }) => ({
         theme
       })
     }
