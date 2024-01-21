@@ -6,4 +6,5 @@
 
 .noDecoration {
   text-decoration: none;
+  color: var(--content-color);
 }

@@ -8,7 +8,14 @@ const classNameByType = {
   tertiary: styles.tertiary
 }
 
-function Button({ className = '', type = 'primary', href, onClick, children, ...props }) {
+export default async function Button({
+  className = '',
+  type = 'primary',
+  href,
+  onClick,
+  children,
+  ...props
+}) {
   return href ? (
     <Link
       className={`${styles.base} ${className} ${classNameByType[type]}`}
@@ -29,5 +36,3 @@ function Button({ className = '', type = 'primary', href, onClick, children, ...
     </button>
   )
 }
-
-export default Button

@@ -3,7 +3,7 @@
   font-family: var(--body-font);
 
   background-color: var(--primary-color);
-  background-image: url('/background.svg');
+  background-image: url('/static/background.svg');
   background-repeat: repeat-y;
   background-attachment: local;
   background-size: 100%;

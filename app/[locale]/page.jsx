@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }]
 }
 
-export default function Page() {
+export default async function Page() {
   // useMouseTracker(ref, (x, y) => {
   //   ref.current.style.setProperty('--x', x)
   //   ref.current.style.setProperty('--y', y)

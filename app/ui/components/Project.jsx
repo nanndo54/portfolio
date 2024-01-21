@@ -15,14 +15,21 @@ const allSkills = Object.values(skills).reduce(
 
 const getSkill = (name) => allSkills.find((skill) => skill.name === name)
 
-function Project({ name, web, code, technologies = [], icon, images = [] }) {
+export default async function Project({
+  name,
+  web,
+  code,
+  technologies = [],
+  icon,
+  images = []
+}) {
   const skills = technologies.map(getSkill)
 
   return (
     <article className={`${styles.base} blur-background`}>
       <div className={styles.header}>
         <div className={styles.title}>
-          <Icon src={icon} height={34} alt={name} />
+          <Icon src={icon} alt={name} />
           <Text as='h4'>{name}</Text>
         </div>
         <Text as='p' localeId={`project.${name.toLowerCase()}`} />
@@ -35,16 +42,14 @@ function Project({ name, web, code, technologies = [], icon, images = [] }) {
       <ImageCarrousel images={images} />
       <div className={styles.footer}>
         {code && (
-          <Button href={code} type='secondary'>
+          <Button type='secondary' href={code} isExternal>
             <Text localeId='projects.button1' />
           </Button>
         )}
-        <Button href={web}>
+        <Button href={web} isExternal>
           <Text localeId='projects.button2' />
         </Button>
       </div>
     </article>
   )
 }
-
-export default Project

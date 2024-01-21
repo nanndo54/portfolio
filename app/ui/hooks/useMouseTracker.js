@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-function useMouseTracker(ref, callback) {
+export default function useMouseTracker(ref, callback) {
   useEffect(() => {
     const element = ref.current
 
@@ -34,5 +34,3 @@ function useMouseTracker(ref, callback) {
     }
   }, [ref, callback])
 }
-
-export default useMouseTracker

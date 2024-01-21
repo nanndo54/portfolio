@@ -16,7 +16,7 @@ const initialScale = 1
 const defaultImageWidth = 1080
 const defaultImageHeight = 720
 
-function Showcase() {
+export default function Showcase() {
   const { showcase, closeShowcase, setShowcase } = useAppStore()
   const locale = 'en'
   const ref = useRef()
@@ -146,5 +146,3 @@ function Showcase() {
     </div>
   )
 }
-
-export default Showcase

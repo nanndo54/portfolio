@@ -1,5 +1,5 @@
 {
-  "link.cv": "cv/en.pdf",
+  "link.cv": "static/landing/cv/en.pdf",
   "landing.title": "Home",
   "landing.status": "(Looking for a job)",
   "landing.presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",

@@ -19,8 +19,6 @@ function getLocale(request) {
 export function middleware(request) {
   const pathname = request.nextUrl.pathname
 
-  if (['/manifest.json', '/icon.svg', '/background.svg'].includes(pathname)) return
-
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
@@ -34,6 +32,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_vercel|_next/static|_next/image|favicon.ico).*)']
+  matcher: ['/']
 }

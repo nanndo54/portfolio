@@ -1,31 +1,45 @@
 'use client'
 
-import IconButton from '#/components/IconButton'
+import Link from '#/components/Link'
 import useAppStore from '#/state/store'
 import styles from '#/styles/NavbarButtons.module.css'
+import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 export default function NavbarButtons() {
-  const { theme, toggleLocale, toggleTheme } = useAppStore()
-  const locale = 'en'
+  const pathName = usePathname()
+  const { isOnTop, theme, toggleTheme } = useAppStore()
+  const locale = pathName.split('/')[1]
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main')
+    mainElement.setAttribute('dark', theme === 'dark')
+  }, [theme])
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main')
+    mainElement.setAttribute('top', isOnTop)
+  }, [isOnTop])
 
   return (
     <div className={styles.base}>
       <DarkModeSwitch
         checked={theme === 'dark'}
         onChange={toggleTheme}
-        moonColor='var(--content-color)'
-        sunColor='var(--content-color)'
+        color='var(--content-color)'
         aria-hidden
       />
-      <IconButton
+      <Link
+        href={locale === 'en' ? '/es' : '/en'}
+        replace
+        scroll={false}
         className={styles.language}
-        onClick={toggleLocale}
         aria-label={locale}
-        noBorder
+        noDecoration
       >
         {locale}
-      </IconButton>
+      </Link>
     </div>
   )
 }

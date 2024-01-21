@@ -6,7 +6,7 @@ import Text from '#/components/Text'
 
 import skills from '#/constants/skills'
 
-function SkillsSection({ id }) {
+export default async function SkillsSection({ id }) {
   return (
     <Section id={id}>
       <Text as='h2' localeId='skills.title' />
@@ -23,5 +23,3 @@ function SkillsSection({ id }) {
     </Section>
   )
 }
-
-export default SkillsSection

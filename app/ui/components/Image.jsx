@@ -5,7 +5,7 @@ import { default as NextImage } from 'next/image'
 
 import useAppStore from '#/state/store'
 
-function Image({
+export default function Image({
   src,
   alt,
   height,
@@ -22,7 +22,7 @@ function Image({
 
   const imageElement = (
     <NextImage
-      src={src}
+      src={`/static/${src}`}
       alt={alt[locale]}
       className={`${className} ${styles.base} ${
         noBorder ? styles.noBorder : ''
@@ -44,5 +44,3 @@ function Image({
     </button>
   )
 }
-
-export default Image

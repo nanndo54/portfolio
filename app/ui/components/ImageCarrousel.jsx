@@ -10,7 +10,12 @@ import { arrowIcon } from '#/constants/icons'
 import useDebouncedCallback from '#/hooks/useDebouncedCallback'
 import useAppStore from '#/state/store'
 
-function ImageCarrousel({ images, className = '', noBorder = false, noZoom = false }) {
+export default function ImageCarrousel({
+  images,
+  className = '',
+  noBorder = false,
+  noZoom = false
+}) {
   const { openShowcase } = useAppStore()
   const contentRef = useRef()
 
@@ -101,5 +106,3 @@ function ImageCarrousel({ images, className = '', noBorder = false, noZoom = fal
     </div>
   )
 }
-
-export default ImageCarrousel

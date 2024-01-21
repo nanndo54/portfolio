@@ -2,7 +2,7 @@ import styles from '#/styles/GoToTopButton.module.css'
 
 import Link from '#/components/Link'
 
-function GoToTopButton() {
+export default async function GoToTopButton() {
   return (
     <Link href='#landing' className={styles.base}>
       <div className={styles.icon}>
@@ -13,5 +13,3 @@ function GoToTopButton() {
     </Link>
   )
 }
-
-export default GoToTopButton

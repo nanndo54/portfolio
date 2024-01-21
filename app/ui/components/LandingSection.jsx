@@ -9,7 +9,7 @@ import Text from '#/components/Text'
 import { CvIcon } from '#/constants/icons'
 import getLocaleText from 'app/lib/getLocaleText'
 
-function LandingSection({ id }) {
+export default async function LandingSection({ id }) {
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
@@ -31,5 +31,3 @@ function LandingSection({ id }) {
     </Section>
   )
 }
-
-export default LandingSection

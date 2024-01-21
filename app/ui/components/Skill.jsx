@@ -3,15 +3,14 @@
 import styles from '#/styles/Skill.module.css'
 
 import Icon from '#/components/Icon'
-import useAppStore from '#/state/store'
 
 const classNameBySize = {
   small: styles.small
 }
 
-function Skill({ size = 'medium', name, icon, props }) {
+export default function Skill({ size = 'medium', name, icon, props }) {
   const className = `${styles.base} ${classNameBySize[size] || ''}`
-  const { openShowcase } = useAppStore()
+  // const { openShowcase } = useAppStore()
 
   const iconElement = <Icon src={icon} alt={name} {...props} />
 
@@ -20,7 +19,7 @@ function Skill({ size = 'medium', name, icon, props }) {
       <button
         className={styles.icon}
         title={name}
-        onClick={() => openShowcase({ element: iconElement, alt: name })}
+        // onClick={() => openShowcase({ element: iconElement, alt: name })}
       >
         {iconElement}
       </button>
@@ -28,5 +27,3 @@ function Skill({ size = 'medium', name, icon, props }) {
     </div>
   )
 }
-
-export default Skill

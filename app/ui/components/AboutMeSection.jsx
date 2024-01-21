@@ -5,7 +5,7 @@ import Section from '#/components/Section'
 import Text from '#/components/Text'
 import images from '#/constants/images'
 
-function AboutMeSection({ id }) {
+export default async function AboutMeSection({ id }) {
   return (
     <Section id={id}>
       <Text as='h2' localeId='about-me.title' />
@@ -21,5 +21,3 @@ function AboutMeSection({ id }) {
     </Section>
   )
 }
-
-export default AboutMeSection

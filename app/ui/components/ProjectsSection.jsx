@@ -10,7 +10,7 @@ import Link from '#/components/Link'
 import { arrowIcon } from '#/constants/icons'
 import projects from '#/constants/projects'
 
-function ProjectsSection({ id }) {
+export default async function ProjectsSection({ id }) {
   const projectsPerYear = useMemo(() => {
     return projects
       .reduce((acc, project) => {
@@ -53,5 +53,3 @@ function ProjectsSection({ id }) {
     </Section>
   )
 }
-
-export default ProjectsSection

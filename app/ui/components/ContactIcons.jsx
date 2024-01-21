@@ -2,10 +2,10 @@ import styles from '#/styles/ContactIcons.module.css'
 
 import Icon from '#/components/Icon'
 
-import contacts from '#/constants/contacts'
 import IconButton from '#/components/IconButton'
+import contacts from '#/constants/contacts'
 
-function ContactIcons({ tabIndex }) {
+export default async function ContactIcons({ tabIndex }) {
   return (
     <nav className={styles.base}>
       {contacts.map(({ name, icon, url, props }) => (
@@ -16,5 +16,3 @@ function ContactIcons({ tabIndex }) {
     </nav>
   )
 }
-
-export default ContactIcons

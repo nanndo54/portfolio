@@ -41,9 +41,6 @@ const store = create(
         set((state) => {
           const theme = state.theme === 'light' ? 'dark' : 'light'
 
-          const mainElement = document.querySelector('main')
-          mainElement.setAttribute('dark', theme === 'dark')
-
           return { theme }
         }),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
@@ -62,7 +59,7 @@ const store = create(
   )
 )
 
-const useAppStore = (callback = (state) => state) => {
+export default function useAppStore(callback = (state) => state) {
   const newState = store(callback)
   const [state, setState] = useState(initialState)
 
@@ -72,9 +69,3 @@ const useAppStore = (callback = (state) => state) => {
 
   return state
 }
-
-const { getState } = store
-
-export { getState }
-
-export default useAppStore

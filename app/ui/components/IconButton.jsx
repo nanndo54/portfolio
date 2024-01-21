@@ -3,7 +3,7 @@ import styles from '#/styles/IconButton.module.css'
 import Icon from '#/components/Icon'
 import Link from '#/components/Link'
 
-function IconButton({
+export default function IconButton({
   className = '',
   noBorder = false,
   href,
@@ -29,5 +29,3 @@ function IconButton({
     </button>
   )
 }
-
-export default IconButton

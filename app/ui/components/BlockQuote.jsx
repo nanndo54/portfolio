@@ -1,8 +1,8 @@
-import styles from '#/styles/BlockQuote.module.css'
 import Section from '#/components/Section'
 import Text from '#/components/Text'
+import styles from '#/styles/BlockQuote.module.css'
 
-function BlockQuote({ quote, author }) {
+export default async function BlockQuote({ quote, author }) {
   return (
     <Section as='blockquote' className={`${styles.base} blur-background`}>
       <span>
@@ -14,5 +14,3 @@ function BlockQuote({ quote, author }) {
     </Section>
   )
 }
-
-export default BlockQuote

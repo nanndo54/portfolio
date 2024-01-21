@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useSvg(path) {
+export default function useSvg(path) {
   const importedIconRef = useRef()
   const [loading, setLoading] = useState(false)
 
@@ -15,5 +15,3 @@ export function useSvg(path) {
 
   return { loading, SvgIcon: importedIconRef.current }
 }
-
-export default useSvg

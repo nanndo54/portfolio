@@ -1,7 +1,7 @@
 const images = {
   landing: {
     profilePhoto: {
-      src: '/landing/profile-photo.jpg',
+      src: 'landing/profile-photo.jpg',
       alt: {
         en: 'Photograph of me',
         es: 'Mi fotografía'
@@ -13,7 +13,7 @@ const images = {
   projects: {
     koloEmpresas: [
       {
-        src: '/projects/kolo-empresas/img1.jpg',
+        src: 'projects/kolo-empresas/img1.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -22,7 +22,7 @@ const images = {
         width: 426
       },
       {
-        src: '/projects/kolo-empresas/img2.jpg',
+        src: 'projects/kolo-empresas/img2.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -31,7 +31,7 @@ const images = {
         width: 426
       },
       {
-        src: '/projects/kolo-empresas/img3.jpg',
+        src: 'projects/kolo-empresas/img3.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -40,7 +40,7 @@ const images = {
         width: 426
       },
       {
-        src: '/projects/kolo-empresas/img4.jpg',
+        src: 'projects/kolo-empresas/img4.jpg',
         alt: {
           en: 'Kolo',
           es: 'Kolo'
@@ -51,7 +51,7 @@ const images = {
     ],
     quizGame: [
       {
-        src: '/projects/quiz-game/img1.jpg',
+        src: 'projects/quiz-game/img1.jpg',
         alt: {
           en: 'Start menu',
           es: 'Menú de inicio'
@@ -60,7 +60,7 @@ const images = {
         width: 420
       },
       {
-        src: '/projects/quiz-game/img2.jpg',
+        src: 'projects/quiz-game/img2.jpg',
         alt: {
           en: 'Game question: Which of these countries borders Austria?',
           es: 'Pregunta del juego: ¿Cuál de estos países colinda con Austria?'
@@ -69,7 +69,7 @@ const images = {
         width: 420
       },
       {
-        src: '/projects/quiz-game/img3.jpg',
+        src: 'projects/quiz-game/img3.jpg',
         alt: {
           en: 'Game question: Which of these words is used to describe a group of bees?',
           es: 'Pregunta del juego: ¿Cuál de estas palabras se usa para describir un grupo de abejas?'
@@ -78,7 +78,7 @@ const images = {
         width: 420
       },
       {
-        src: '/projects/quiz-game/img4.jpg',
+        src: 'projects/quiz-game/img4.jpg',
         alt: {
           en: 'Game score menu where the correct answers and the elapsed time are observed',
           es: 'Menú de puntuación del juego donde se observan las respuestas correctas y el tiempo transcurrido'
@@ -89,7 +89,7 @@ const images = {
     ],
     miniTranslator: [
       {
-        src: '/projects/mini-translator/img1.jpg',
+        src: 'projects/mini-translator/img1.jpg',
         alt: {
           en: 'Translating from French to Spanish',
           es: 'Traduciendo del francés al español'
@@ -98,7 +98,7 @@ const images = {
         width: 420
       },
       {
-        src: '/projects/mini-translator/img2.jpg',
+        src: 'projects/mini-translator/img2.jpg',
         alt: {
           en: 'Translating from Spanish to English',
           es: 'Traduciendo del español al inglés'
@@ -109,7 +109,7 @@ const images = {
     ],
     jolc: [
       {
-        src: '/projects/jolc/img1.jpg',
+        src: 'projects/jolc/img1.jpg',
         alt: {
           en: 'JOLC 1',
           es: 'JOLC 1'
@@ -118,7 +118,7 @@ const images = {
         width: 420
       },
       {
-        src: '/projects/jolc/img2.jpg',
+        src: 'projects/jolc/img2.jpg',
         alt: {
           en: 'JOLC 2',
           es: 'JOLC 2'
@@ -130,7 +130,7 @@ const images = {
   },
   aboutMe: {
     guatemala: {
-      src: '/about-me/guatemala.jpg',
+      src: 'about-me/guatemala.jpg',
       alt: {
         en: 'Guatemala, Atitlán Lake',
         es: 'Guatemala, Lago de Atitlán'
@@ -139,7 +139,7 @@ const images = {
       width: 355
     },
     campus: {
-      src: '/about-me/campus.jpg',
+      src: 'about-me/campus.jpg',
       alt: {
         en: 'USAC, Faculty of Engineering',
         es: 'USAC, Facultad de Ingeniería'
