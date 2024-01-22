@@ -3,8 +3,6 @@ p.base {
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.4;
-
-  transition: color 0.5s;
 }
 
 h1.base {
@@ -15,11 +13,6 @@ h1.base {
   letter-spacing: 0.1rem;
   line-height: 1.15;
   text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color);
-
-  transition:
-    color 0.5s,
-    text-shadow 0.5s,
-    opacity 0.2s;
 }
 
 .base:is(h2, h3, h4, h5, h6) {

@@ -50,6 +50,8 @@ main[top='true'] .arrow:hover svg {
 
   width: 100%;
   border-radius: 0.7rem;
+
+  transition: background-color 0.5s;
 }
 
 .timeline::before {
@@ -63,6 +65,8 @@ main[top='true'] .arrow:hover svg {
 
   position: absolute;
   bottom: -1.8rem;
+
+  transition: background-color 0.5s;
 }
 
 .timeline::after {
@@ -76,6 +80,8 @@ main[top='true'] .arrow:hover svg {
 
   position: absolute;
   bottom: -1rem;
+
+  transition: background-color 0.5s;
 }
 
 .timeline svg {
@@ -116,6 +122,8 @@ main[top='true'] .arrow:hover svg {
   position: absolute;
   top: 50%;
   left: -4.5rem;
+
+  transition: background-color 0.5s;
 }
 
 .projects {

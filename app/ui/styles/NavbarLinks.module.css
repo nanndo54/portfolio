@@ -11,6 +11,7 @@
 }
 
 .base a {
+  color: var(--font-color);
   font-size: 1.1rem;
   font-family: var(--title-font);
   font-weight: 400;
@@ -20,7 +21,10 @@
   border: 0.15rem solid transparent;
   border-radius: 1rem;
 
-  color: var(--font-color);
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    text-shadow 0.3s;
 }
 
 .base a.current {
