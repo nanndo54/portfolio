@@ -17,7 +17,8 @@
 
   transition:
     opacity 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+    transform 0.3s ease-in-out,
+    fill 0.5s;
 }
 
 .arrow svg {

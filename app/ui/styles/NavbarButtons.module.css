@@ -10,6 +10,8 @@
   font-family: var(--subtitle-font);
   font-size: 1.6rem;
   padding: 0.2rem 0.4rem;
+
+  transition: color 0.5s;
 }
 
 @media (max-width: 700px) {

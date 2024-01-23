@@ -1,4 +1,10 @@
 .base {
+  position: relative;
+
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
   color: var(--font-color);
   font-family: var(--body-font);
 
@@ -7,6 +13,7 @@
   background-repeat: repeat-y;
   background-attachment: local;
   background-size: 100%;
+
   transition:
     background-color 0.5s,
     background-image 0.5s;
@@ -80,12 +87,7 @@
   }
 }
 
-.base::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: var(--dim-primary-color);
-}
-
-.base::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-accent-color);
+.base ::-webkit-scrollbar {
+  height: 0;
+  width: 0;
 }

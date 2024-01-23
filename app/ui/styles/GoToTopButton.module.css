@@ -1,6 +1,6 @@
 .base {
   position: fixed;
-  bottom: 3rem;
+  bottom: 4.5rem;
   right: 2.5rem;
 
   display: flex;
@@ -81,7 +81,7 @@ main[top='true'] .dot3 {
 
 @media (max-width: 1100px) {
   .base {
-    bottom: 3rem;
-    right: 1.5rem;
+    bottom: 3.5rem;
+    right: 1.3rem;
   }
 }

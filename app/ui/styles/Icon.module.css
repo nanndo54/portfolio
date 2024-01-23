@@ -11,3 +11,7 @@
 .lightColor {
   fill: var(--light-color);
 }
+
+.darkColor {
+  fill: var(--dark-color);
+}

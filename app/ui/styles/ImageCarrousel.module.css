@@ -1,7 +1,5 @@
 .base {
   position: relative;
-  height: auto;
-  width: 100%;
 }
 
 .base.singleImage .previousImage,
@@ -21,16 +19,24 @@
 .content {
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
 
   width: 100%;
   height: 100%;
   object-fit: contain;
+
+  animation: setup-scroll 0s 1s forwards;
 }
 
 .base:hover .previousImage,
 .base:hover .nextImage {
   opacity: 1;
+}
+
+@media (hover: none) {
+  .base .previousImage,
+  .base .nextImage {
+    opacity: 1;
+  }
 }
 
 .content img {
@@ -42,10 +48,10 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 2rem;
+  width: 2.25rem;
 
   opacity: 0;
-  filter: drop-shadow(0 0 0.5rem var(--dark-color));
+  filter: drop-shadow(0 0 0.2rem var(--dark-color));
   transition:
     transform 0.1s ease-in-out,
     opacity 0.2s 0.1s;
@@ -53,7 +59,8 @@
 }
 
 .previousImage {
-  left: 1rem;
+  left: 0;
+  padding-left: 0.5rem;
 }
 
 .previousImage svg {
@@ -61,7 +68,8 @@
 }
 
 .nextImage {
-  right: 1rem;
+  right: 0;
+  padding-right: 0.5rem;
 }
 
 .dots {
@@ -81,7 +89,7 @@
   padding: 0;
   border-radius: 50%;
   border: 0.2rem solid var(--light-color);
-  box-shadow: 0 0 0.2rem var(--dark-color);
+  filter: drop-shadow(0 0 0.35rem var(--dark-color));
   transition:
     background-color 0.5s,
     border-color 0.5s;
@@ -90,4 +98,10 @@
 .dots button.selected {
   border-color: transparent;
   background-color: var(--light-color);
+}
+
+@keyframes setup-scroll {
+  to {
+    scroll-snap-type: x mandatory;
+  }
 }

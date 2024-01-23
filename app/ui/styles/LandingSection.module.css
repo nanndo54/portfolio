@@ -4,8 +4,8 @@ header.base {
   margin: 0 auto;
   padding: 3rem 0;
 
-  opacity: 0.25;
-  animation: 0.4s ease appear-landing 0.2s forwards;
+  opacity: 0.5;
+  animation: 0.5s ease appear-landing 0.2s forwards;
 }
 
 .info {
@@ -46,7 +46,7 @@ p.presentation {
     transform 0.3s,
     opacity 0.2s;
 
-  animation: appear-cta-buttons 0.8s ease forwards;
+  animation: appear-cta-buttons 0.7s ease-out forwards;
 }
 
 main[top='true'] .info {
@@ -83,14 +83,14 @@ main[top='true'] .info {
 
   main[top='true'] .info {
     align-self: center;
-    transform: translateY(19rem) scale(0.8);
+    transform: translateY(19rem);
   }
 }
 
 @media (max-height: 800px) and (min-width: 700px) {
   main[top='true'] .info {
     align-self: flex-start;
-    transform: translateY(4rem) scale(0.8);
+    transform: translateY(4rem);
   }
 }
 

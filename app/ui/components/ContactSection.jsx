@@ -5,7 +5,7 @@ import Section from '#/components/Section'
 export default async function ContactSection({ id, dictionary }) {
   return (
     <Section className={styles.base} id={id} background={false}>
-      <h1>{dictionary.title}</h1>
+      <h2>{dictionary.title}</h2>
     </Section>
   )
 }

@@ -18,6 +18,7 @@ export default function Skill({ size = 'medium', name, icon, props }) {
   return (
     <div className={className}>
       <button
+        type='button'
         className={styles.icon}
         title={name}
         onClick={() => openShowcase({ element: iconElement, alt: name })}

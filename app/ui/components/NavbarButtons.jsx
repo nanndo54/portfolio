@@ -24,7 +24,8 @@ export default function NavbarButtons({ locale }) {
       <DarkModeSwitch
         checked={theme === 'dark'}
         onChange={toggleTheme}
-        color='var(--content-color)'
+        moonColor='var(--content-color)'
+        sunColor='var(--content-color)'
         aria-hidden
       />
       <Link

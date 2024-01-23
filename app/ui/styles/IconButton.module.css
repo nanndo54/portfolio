@@ -3,15 +3,20 @@
   align-items: center;
   justify-content: center;
 
-  fill: var(--primary-color);
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.25rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 6%;
 
-  border: 0.225rem solid var(--primary-color);
-  border-radius: 0.9rem;
+  border: 0.23rem solid var(--dim-accent-color);
+  border-radius: 50%;
 
-  transition: transform 0.1s ease-in-out;
+  transition: border-color 0.5s;
+}
+
+.base > * {
+  transition:
+    fill 0.5s,
+    scale 0.25s ease-out;
 }
 
 .noBorder {
@@ -21,11 +26,15 @@
 }
 
 .base:hover {
-  transform: scale(1.03);
+  border-color: var(--accent-color);
 }
 
-.base:active {
-  transform: scale(0.98);
+.base:hover > * {
+  scale: 1.04;
+}
+
+.base:active > * {
+  scale: 0.96;
 }
 
 .base > svg {

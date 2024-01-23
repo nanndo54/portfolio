@@ -7,6 +7,7 @@ export default function Icon({
   className = '',
   contentColor,
   lightColor,
+  darkColor,
   src,
   ...props
 }) {
@@ -15,9 +16,9 @@ export default function Icon({
   return (
     SvgIcon && (
       <SvgIcon
-        className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${
-          lightColor ? styles.lightColor : ''
-        } ${className}`}
+        className={`${styles.base} ${contentColor ? styles.contentColor : ''} 
+        ${lightColor ? styles.lightColor : ''}
+         ${darkColor ? styles.darkColor : ''} ${className}`}
         {...props}
       />
     )

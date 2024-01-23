@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 
-  margin-right: 5rem;
+  margin-right: 4.2rem;
 
   pointer-events: all;
   transition:
@@ -12,12 +12,12 @@
 
 .base a {
   color: var(--font-color);
-  font-size: 1.1rem;
-  font-family: var(--title-font);
-  font-weight: 400;
+  font-size: 1.06rem;
+  font-family: var(--subtitle-font);
+  font-weight: 600;
   line-height: 1;
 
-  padding: 0.3rem 0.6rem;
+  padding: 0.35rem 0.6rem;
   border: 0.15rem solid transparent;
   border-radius: 1rem;
 

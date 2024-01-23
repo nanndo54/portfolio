@@ -18,8 +18,9 @@
 }
 
 main[top='true'] .avatar {
+  position: absolute;
   transform: translate(calc(27rem - 50vw), 10.5rem);
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .avatar > button {
@@ -61,7 +62,7 @@ main[top='true'] .avatar > button > svg {
 main[top='true'] .avatar > button > img {
   opacity: 1;
 }
-
+/* 
 @media (max-width: 900px) {
   main[top='true'] .avatar {
     transform: translate(calc(10rem - 50vw), 4rem) scale(0.8);
@@ -92,4 +93,4 @@ main[top='true'] .avatar > button > img {
   main[top='true'] .avatar {
     transform: translate(calc(24rem - 50vw), 4.5rem) scale(0.8);
   }
-}
+} */

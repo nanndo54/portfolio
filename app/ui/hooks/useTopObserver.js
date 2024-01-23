@@ -4,17 +4,25 @@ import { useCallback, useEffect } from 'react'
 export default function useTopObserver() {
   const { isOnTop, setOnTop } = useAppStore()
 
-  const handleWindowTop = useCallback(() => {
-    const newIsOnTop = window.scrollY < 40
-    if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
-  }, [isOnTop, setOnTop])
+  const handleTopListener = useCallback(
+    (ev) => {
+      const newIsOnTop = ev.target.scrollTop < 20
+      if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
+    },
+    [isOnTop, setOnTop]
+  )
 
   useEffect(() => {
-    handleWindowTop()
-    window.addEventListener('scroll', handleWindowTop)
+    const element = document.querySelector('main')
+    element.addEventListener('scroll', handleTopListener)
 
-    return () => {
-      window.removeEventListener('scroll', handleWindowTop)
-    }
-  }, [handleWindowTop])
+    return () => element.removeEventListener('scroll', handleTopListener)
+  }, [handleTopListener])
+
+  useEffect(() => {
+    const element = document.querySelector('main')
+    element.addEventListener('scroll', handleTopListener)
+
+    return () => element.removeEventListener('scroll', handleTopListener)
+  }, [handleTopListener])
 }

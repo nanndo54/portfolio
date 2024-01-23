@@ -1,6 +1,7 @@
 const sections = [
   {
-    id: 'landing'
+    id: 'landing',
+    hideInNavbar: true
   },
   {
     id: 'projects'
