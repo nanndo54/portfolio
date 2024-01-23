@@ -9,18 +9,21 @@ import Showcase from '#/components/Showcase'
 import sections from '#/constants/sections'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { getDictionary } from 'dictionaries'
 
-export default async function Page() {
+export default async function Page({ params: { locale } }) {
+  const dictionary = await getDictionary(locale)
+
   return (
     <main className={styles.base} top='true'>
-      <Navbar />
-      <Showcase />
+      <Navbar locale={locale} dictionary={dictionary} />
       {sections.map(({ id, Component }) => (
-        <Component key={id} id={id} />
+        <Component key={id} id={id} dictionary={dictionary[id]} />
       ))}
-      <GoToTopButton />
-      <BlockQuote author='Carl Sagan' quote='quote.carl-sagan1' />
+      <BlockQuote dictionary={dictionary.quote} />
       <Footer />
+      <Showcase locale={locale} />
+      <GoToTopButton />
       <SpeedInsights debug={false} />
       <Analytics debug={false} />
     </main>

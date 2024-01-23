@@ -15,12 +15,11 @@ const initialScale = 1
 const defaultImageWidth = 1080
 const defaultImageHeight = 720
 
-export default function Showcase() {
+export default function Showcase({ locale }) {
   const { showcase, closeShowcase, setShowcase } = useAppStore()
-  // const locale = 'en'
   const ref = useRef()
 
-  const [, setScale] = useState(initialScale)
+  const [scale, setScale] = useState(initialScale)
 
   const { open, images, index, element, onIndexChange } = showcase
   const image = images?.[index] || {}
@@ -76,12 +75,12 @@ export default function Showcase() {
       >
         <div className={styles.overlay} onClick={handleClose}>
           <div className={styles.header}>
-            {/* {!singleImage && (
-              <Text as='span' className={styles.imageIndex}>
+            {!singleImage && (
+              <span className={styles.imageIndex}>
                 {index + 1}/{images?.length}
-              </Text>
+              </span>
             )}
-            <Text as='p'>{alt[locale]}</Text> */}
+            <p>{alt[locale]}</p>
             <IconButton
               icon={closeIcon}
               className={styles.closeButton}
@@ -126,7 +125,7 @@ export default function Showcase() {
           </div>
           <div className={styles.footer} onClick={(ev) => ev.stopPropagation()}>
             <Icon src={zoomIcon} />
-            {/* <Text as='p'>{(scale * 100).toFixed(0)}%</Text> */}
+            <p>{(scale * 100).toFixed(0)}%</p>
             <span className={styles.buttons}>
               <IconButton
                 icon={minusIcon}

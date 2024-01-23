@@ -3,14 +3,11 @@
 import Link from '#/components/Link'
 import useAppStore from '#/state/store'
 import styles from '#/styles/NavbarButtons.module.css'
-import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
-export default function NavbarButtons() {
-  const pathName = usePathname()
+export default function NavbarButtons({ locale }) {
   const { isOnTop, theme, toggleTheme } = useAppStore()
-  const locale = pathName.split('/')[1]
 
   useEffect(() => {
     const mainElement = document.querySelector('main')

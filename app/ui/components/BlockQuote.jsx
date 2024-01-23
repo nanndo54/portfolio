@@ -1,16 +1,15 @@
 import Section from '#/components/Section'
-import Text from '#/components/Text'
 import styles from '#/styles/BlockQuote.module.css'
 
-export default async function BlockQuote({ quote, author }) {
+export default async function BlockQuote({ dictionary }) {
   return (
     <Section as='blockquote' className={`${styles.base} blur-background`}>
       <span>
         <span className={styles.quote}>“</span>
-        <Text localeId={quote} />
+        {dictionary.text}
         <span className={styles.quote}>”</span>
       </span>
-      <div className={styles.author}>— {author}</div>
+      <div className={styles.author}>— {dictionary.author}</div>
     </Section>
   )
 }

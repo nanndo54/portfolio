@@ -13,8 +13,6 @@ export default function Link({
   noDecoration = false,
   ...props
 }) {
-  // const isHashLink = href?.startsWith('#')
-
   return (
     <NextLink
       prefetch={false}

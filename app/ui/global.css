@@ -17,6 +17,90 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  text-wrap: pretty;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 5.4rem;
+
+  letter-spacing: 0.1rem;
+  line-height: 1.15;
+  text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color);
+}
+
+:is(h2, h3, h4, h5, h6) {
+  font-family: var(--subtitle-font);
+  font-weight: 400;
+  line-height: 1;
+}
+
+:is(h4, h5, h6) {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: calc(100% + 2rem);
+  height: 0.8rem;
+
+  margin: auto;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 200%;
+  border-bottom-left-radius: 1rem;
+  background-color: var(--dim-accent-color);
+
+  transform: translateX(-1rem);
+
+  transition: background-color 0.5s;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+
 button {
   background-color: transparent;
   color: inherit;

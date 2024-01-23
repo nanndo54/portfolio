@@ -4,7 +4,6 @@ import Button from '#/components/Button'
 import Icon from '#/components/Icon'
 import ImageCarrousel from '#/components/ImageCarrousel'
 import Skill from '#/components/Skill'
-import Text from '#/components/Text'
 
 import skills from '#/constants/skills'
 
@@ -21,7 +20,8 @@ export default async function Project({
   code,
   technologies = [],
   icon,
-  images = []
+  images = [],
+  dictionary
 }) {
   const skills = technologies.map(getSkill)
 
@@ -30,9 +30,9 @@ export default async function Project({
       <div className={styles.header}>
         <div className={styles.title}>
           <Icon src={icon} alt={name} />
-          <Text as='h4'>{name}</Text>
+          <h4>{name}</h4>
         </div>
-        <Text as='p' localeId={`project.${name.toLowerCase()}`} />
+        <p>{dictionary[name.toLowerCase()]}</p>
         <div className={styles.skills}>
           {skills.map((skill) => (
             <Skill key={skill.name} {...skill} size='small' />
@@ -43,11 +43,11 @@ export default async function Project({
       <div className={styles.footer}>
         {code && (
           <Button type='secondary' href={code} isExternal>
-            <Text localeId='projects.button1' />
+            {dictionary.button1}
           </Button>
         )}
         <Button href={web} isExternal>
-          <Text localeId='projects.button2' />
+          {dictionary.button2}
         </Button>
       </div>
     </article>
