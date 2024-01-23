@@ -7,7 +7,6 @@ import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch'
 import Icon from '#/components/Icon'
 import IconButton from '#/components/IconButton'
 import Image from '#/components/Image'
-import Text from '#/components/Text'
 
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants/icons'
 import useAppStore from '#/state/store'
@@ -18,10 +17,10 @@ const defaultImageHeight = 720
 
 export default function Showcase() {
   const { showcase, closeShowcase, setShowcase } = useAppStore()
-  const locale = 'en'
+  // const locale = 'en'
   const ref = useRef()
 
-  const [scale, setScale] = useState(initialScale)
+  const [, setScale] = useState(initialScale)
 
   const { open, images, index, element, onIndexChange } = showcase
   const image = images?.[index] || {}
@@ -77,12 +76,12 @@ export default function Showcase() {
       >
         <div className={styles.overlay} onClick={handleClose}>
           <div className={styles.header}>
-            {!singleImage && (
+            {/* {!singleImage && (
               <Text as='span' className={styles.imageIndex}>
                 {index + 1}/{images?.length}
               </Text>
             )}
-            <Text as='p'>{alt[locale]}</Text>
+            <Text as='p'>{alt[locale]}</Text> */}
             <IconButton
               icon={closeIcon}
               className={styles.closeButton}
@@ -127,7 +126,7 @@ export default function Showcase() {
           </div>
           <div className={styles.footer} onClick={(ev) => ev.stopPropagation()}>
             <Icon src={zoomIcon} />
-            <Text as='p'>{(scale * 100).toFixed(0)}%</Text>
+            {/* <Text as='p'>{(scale * 100).toFixed(0)}%</Text> */}
             <span className={styles.buttons}>
               <IconButton
                 icon={minusIcon}

@@ -3,12 +3,11 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-import sections from '#/constants/sections'
 import { useEffect, useState } from 'react'
 
 const initialState = {
   isOnTop: true,
-  sectionsIntersection: sections.slice(0, 2).map(({ id }) => ({ id, intersected: true })),
+  sectionsIntersection: [],
   theme: 'light',
   showcase: {}
 }

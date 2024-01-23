@@ -1,4 +1,4 @@
-import sections from '#/constants/sections'
+import sections from '#/constants/section-ids'
 import useAppStore from '#/state/store'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'

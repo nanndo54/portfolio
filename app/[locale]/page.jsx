@@ -10,16 +10,7 @@ import sections from '#/constants/sections'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 
-export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }]
-}
-
 export default async function Page() {
-  // useMouseTracker(ref, (x, y) => {
-  //   ref.current.style.setProperty('--x', x)
-  //   ref.current.style.setProperty('--y', y)
-  // })
-
   return (
     <main className={styles.base} top='true'>
       <Navbar />

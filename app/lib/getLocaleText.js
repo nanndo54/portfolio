@@ -1,9 +1,11 @@
-import languages from '#/constants/languages'
+import 'server-only'
+
+import { getDictionary } from 'dictionaries'
 import parse from 'html-react-parser'
 
-export default function getLocaleText(localeId) {
+export default async function getLocaleText(localeId) {
   const locale = 'en'
-  const language = languages[locale]
+  const dictionary = await getDictionary(locale)
 
-  return parse(language[localeId])
+  return parse(dictionary[localeId])
 }

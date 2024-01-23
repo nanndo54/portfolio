@@ -1,6 +1,3 @@
-import '#/global.css'
-import { hind_guntur, merriweather, palanquin_dark } from 'app/fonts'
-
 export const metadata = {
   title: 'Portfolio | nanndo54',
   description:
@@ -26,14 +23,6 @@ export const viewport = {
   themeColor: '#7c7edf'
 }
 
-export default function RootLayout({ children, params: { locale } }) {
-  return (
-    <html lang={locale} translate='no'>
-      <body
-        className={`${palanquin_dark.variable} ${merriweather.variable} ${hind_guntur.variable}`}
-      >
-        {children}
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }) {
+  return children
 }

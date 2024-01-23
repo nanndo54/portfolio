@@ -1,3 +1,5 @@
+'server-only'
+
 import AboutMeSection from '#/components/AboutMeSection'
 import ContactSection from '#/components/ContactSection'
 import LandingSection from '#/components/LandingSection'

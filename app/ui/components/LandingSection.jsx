@@ -7,7 +7,6 @@ import Section from '#/components/Section'
 import Text from '#/components/Text'
 
 import { CvIcon } from '#/constants/icons'
-import getLocaleText from 'app/lib/getLocaleText'
 
 export default async function LandingSection({ id }) {
   return (
@@ -17,11 +16,11 @@ export default async function LandingSection({ id }) {
         <Text as='p' localeId='landing.presentation' className={styles.presentation} />
         <div className={styles.buttons}>
           <Button
-            href={getLocaleText('link.cv')}
+            // href={getLocaleText('landing.cv')}
             download='Pablo Cabrera - CV.pdf'
             // tabIndex={isOnTop ? 0 : -1}
           >
-            <Text localeId='landing.cv' />
+            <Text localeId='landing.cta' />
             <CvIcon />
           </Button>
           <ContactIcons className={styles.contact} />

@@ -14,7 +14,7 @@ export default function Avatar() {
   const handleMenuButton = () => {
     if (isOnTop) return
 
-    const squeakAudio = new Audio('/landing/squeak.mp3')
+    const squeakAudio = new Audio('/static/landing/squeak.mp3')
     squeakAudio.volume = 0.3
     squeakAudio.play()
   }

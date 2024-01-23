@@ -1,9 +1,9 @@
 {
-  "link.cv": "static/landing/cv/en.pdf",
+  "landing.cv": "static/landing/cv/en.pdf",
   "landing.title": "Home",
   "landing.status": "(Looking for a job)",
   "landing.presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
-  "landing.cv": "Download my CV!",
+  "landing.cta": "Download my CV!",
   "projects.title": "Projects",
   "projects.button1": "Code",
   "projects.button2": "Website",
