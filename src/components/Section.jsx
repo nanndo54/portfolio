@@ -1,5 +1,5 @@
 import styles from '@/styles/Section.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 export default async function Section({
   background = true,

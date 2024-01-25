@@ -4,7 +4,7 @@ import styles from '@/styles/Skill.module.css'
 
 import IconButton from '@/components/IconButton'
 import useAppStore from '@/state/store'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 const classNameBySize = {
   small: styles.small

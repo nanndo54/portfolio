@@ -2,7 +2,7 @@ import styles from '@/styles/IconButton.module.css'
 
 import Icon from '@/components/Icon'
 import Link from '@/components/Link'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 export default function IconButton({
   className = '',

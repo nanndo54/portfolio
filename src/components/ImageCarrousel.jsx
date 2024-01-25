@@ -8,7 +8,7 @@ import Image from '@/components/Image'
 import { arrowIcon } from '@/constants/icons'
 import useDebouncedCallback from '@/hooks/useDebouncedCallback'
 import useAppStore from '@/state/store'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 export default function ImageCarrousel({
   images,

@@ -6,7 +6,7 @@ import ImageCarrousel from '@/components/ImageCarrousel'
 import Skill from '@/components/Skill'
 
 import skills from '@/constants/skills'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 const allSkills = Object.values(skills).reduce(
   (allSkills, skills) => [...allSkills, ...skills],

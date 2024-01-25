@@ -1,7 +1,7 @@
 import styles from '@/styles/Button.module.css'
 
 import Link from '@/components/Link'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 const classNameByType = {
   primary: '',

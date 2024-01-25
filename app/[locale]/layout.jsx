@@ -1,5 +1,5 @@
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 import { i18n } from 'i18n/config'
 import './global.css'
 

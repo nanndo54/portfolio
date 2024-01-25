@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/styles/Link.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 import { default as NextLink } from 'next/link'
 
 export default function Link({

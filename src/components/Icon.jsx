@@ -1,5 +1,5 @@
 import styles from '@/styles/Icon.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 import Image from 'next/image'
 
 export default function Icon({

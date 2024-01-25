@@ -10,7 +10,7 @@ import Image from '@/components/Image'
 
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '@/constants/icons'
 import useAppStore from '@/state/store'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 const initialScale = 1
 const defaultImageWidth = 2016

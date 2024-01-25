@@ -3,7 +3,7 @@
 import Link from '@/components/Link'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import styles from '@/styles/NavbarLinks.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 export default function NavbarLinks({ links }) {
   const currentSection = useSectionObserver()

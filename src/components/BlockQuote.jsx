@@ -1,6 +1,6 @@
 import Section from '@/components/Section'
 import styles from '@/styles/BlockQuote.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 export default async function BlockQuote({ dictionary }) {
   return (
