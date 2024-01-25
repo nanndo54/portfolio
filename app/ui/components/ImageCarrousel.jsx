@@ -12,6 +12,8 @@ import useAppStore from '#/state/store'
 
 export default function ImageCarrousel({
   images,
+  height,
+  width,
   className = '',
   noBorder = false,
   noZoom = false
@@ -40,7 +42,7 @@ export default function ImageCarrousel({
   const contentElement = (
     <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
       {images.map((image, index) => (
-        <Image key={index} {...image} noBorder noZoom />
+        <Image key={index} {...image} height={height} width={width} noBorder noZoom />
       ))}
     </div>
   )

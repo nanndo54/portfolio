@@ -15,116 +15,106 @@ const images = {
       {
         src: 'projects/kolo-empresas/img1.jpg',
         alt: {
-          en: 'Kolo',
-          es: 'Kolo'
-        },
-        height: 210,
-        width: 426
-      },
-      {
-        src: 'projects/kolo-empresas/img2.jpg',
-        alt: {
-          en: 'Kolo',
-          es: 'Kolo'
-        },
-        height: 210,
-        width: 426
-      },
-      {
-        src: 'projects/kolo-empresas/img3.jpg',
-        alt: {
-          en: 'Kolo',
-          es: 'Kolo'
-        },
-        height: 210,
-        width: 426
-      },
-      {
-        src: 'projects/kolo-empresas/img4.jpg',
-        alt: {
-          en: 'Kolo',
-          es: 'Kolo'
-        },
-        height: 210,
-        width: 426
+          en: 'KOLO splash screen',
+          es: 'Pantalla de bienvenida de KOLO'
+        }
       }
     ],
     quizGame: [
       {
         src: 'projects/quiz-game/img1.jpg',
         alt: {
-          en: 'Start menu',
-          es: 'Menú de inicio'
-        },
-        height: 240,
-        width: 420
+          en: 'Quiz Game splash screen',
+          es: 'Pantalla de bienvenida de Quiz Game'
+        }
       },
       {
         src: 'projects/quiz-game/img2.jpg',
         alt: {
-          en: 'Game question: Which of these countries borders Austria?',
-          es: 'Pregunta del juego: ¿Cuál de estos países colinda con Austria?'
-        },
-        height: 240,
-        width: 420
+          en: 'Quiz Game configuration menu, where the number of questions and the categories are selected',
+          es: 'Menú de configuración de Quiz Game, donde se selecciona el número de preguntas y las categorías'
+        }
       },
       {
         src: 'projects/quiz-game/img3.jpg',
         alt: {
-          en: 'Game question: Which of these words is used to describe a group of bees?',
-          es: 'Pregunta del juego: ¿Cuál de estas palabras se usa para describir un grupo de abejas?'
-        },
-        height: 240,
-        width: 420
+          en: 'Game question: Which Irish rock band released the studio album "The Unforgettable Fire"?',
+          es: 'Pregunta del juego: ¿Qué banda de rock irlandesa lanzó el álbum de estudio "The Unforgettable Fire"?'
+        }
       },
       {
         src: 'projects/quiz-game/img4.jpg',
         alt: {
+          en: 'Game question: Who won the first season of American Idol?',
+          es: 'Pregunta del juego: ¿Quién ganó la primera temporada de American Idol?'
+        }
+      },
+      {
+        src: 'projects/quiz-game/img5.jpg',
+        alt: {
+          en: 'Game question: What is the name of the currency used by both Chile and Colombia?',
+          es: 'Pregunta del juego: ¿Cuál es el nombre de la moneda utilizada tanto por Chile como por Colombia?'
+        }
+      },
+      {
+        src: 'projects/quiz-game/img6.jpg',
+        alt: {
           en: 'Game score menu where the correct answers and the elapsed time are observed',
           es: 'Menú de puntuación del juego donde se observan las respuestas correctas y el tiempo transcurrido'
-        },
-        height: 240,
-        width: 420
+        }
       }
     ],
     miniTranslator: [
       {
         src: 'projects/mini-translator/img1.jpg',
         alt: {
-          en: 'Translating from French to Spanish',
-          es: 'Traduciendo del francés al español'
-        },
-        height: 240,
-        width: 420
+          en: 'Mini Translator splash screen',
+          es: 'Pantalla de bienvenida de Mini Translator'
+        }
       },
       {
         src: 'projects/mini-translator/img2.jpg',
         alt: {
-          en: 'Translating from Spanish to English',
-          es: 'Traduciendo del español al inglés'
-        },
-        height: 240,
-        width: 420
+          en: 'Translating from spanish to japanese: ¿How are you today pal?',
+          es: 'Traduciendo del español al japonés: ¿Cómo te encuentras el día de hoy amigo?'
+        }
+      },
+      {
+        src: 'projects/mini-translator/img3.jpg',
+        alt: {
+          en: 'Translating from english to spanish: I have to get to the airport before 5 p.m.',
+          es: 'Traduciendo del inglés al español: Tengo que llegar al aeropuerto antes de las 5 de la tarde'
+        }
+      },
+      {
+        src: 'projects/mini-translator/img4.jpg',
+        alt: {
+          en: 'Translating from english to portuguese: Thank you very much!',
+          es: 'Traduciendo del inglés al portugués: ¡Muchas gracias!'
+        }
       }
     ],
     jolc: [
       {
         src: 'projects/jolc/img1.jpg',
         alt: {
-          en: 'JOLC 1',
-          es: 'JOLC 1'
-        },
-        height: 240,
-        width: 420
+          en: 'JOLC splash screen',
+          es: 'Pantalla de bienvenida de JOLC'
+        }
       },
       {
         src: 'projects/jolc/img2.jpg',
         alt: {
-          en: 'JOLC 2',
+          en: 'Interpreting JOLC code, a factorial function is being called with one argument: 10; the result can be seen in the console: 3628800',
           es: 'JOLC 2'
-        },
-        height: 240,
-        width: 420
+        }
+      },
+      {
+        src: 'projects/jolc/img3.jpg',
+        alt: {
+          en: 'JOLC reporting the AST generated after some code execution; The app menu is also shown',
+          es: 'El AST generado por JOLC después de una ejecución de código; También se muestra el menú de la aplicación'
+        }
       }
     ]
   },

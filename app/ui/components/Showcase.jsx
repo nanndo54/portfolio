@@ -12,8 +12,8 @@ import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '#/constants
 import useAppStore from '#/state/store'
 
 const initialScale = 1
-const defaultImageWidth = 1080
-const defaultImageHeight = 720
+const defaultImageWidth = 2016
+const defaultImageHeight = 1080
 
 export default function Showcase({ locale }) {
   const { showcase, closeShowcase, setShowcase } = useAppStore()
