@@ -5,26 +5,21 @@
   margin-right: 4.2rem;
 
   pointer-events: all;
-  transition:
-    transform 0.5s,
-    opacity 0.3s;
 }
 
 .base a {
-  color: var(--foreground-color);
-  font-size: 1.06rem;
+  font-size: 1.05rem;
   font-family: var(--subtitle-font);
   font-weight: 600;
-  line-height: 1;
 
-  padding: 0.35rem 0.6rem;
+  padding: 0.15rem 0.6rem;
   border: 0.15rem solid transparent;
   border-radius: 1rem;
 
   transition:
-    color 0.3s,
-    border-color 0.3s,
-    text-shadow 0.3s;
+    color 0.2s ease-out,
+    border-color 0.2s ease-out,
+    text-shadow 0.2s ease-out;
 }
 
 .base a.current {

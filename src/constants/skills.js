@@ -47,7 +47,8 @@ const skills = {
     {
       name: 'ExpressJS',
       icon: expressIcon,
-      props: { contentColor: true }
+      props: { contentColor: true },
+      showcaseProps: { lightColor: true }
     },
     {
       name: 'Go',

@@ -6,7 +6,8 @@
   --light-filter-value: invert(0.9);
   transition:
     filter 0.5s,
-    scale 0.5s;
+    scale 0.2s ease-out;
+  will-change: scale;
 }
 
 .base.contentColor {
@@ -25,6 +26,6 @@ main[dark='true'] .base.backgroundColor {
   filter: var(--dark-filter-value);
 }
 
-.lightColor {
+.base.lightColor {
   filter: var(--light-filter-value);
 }

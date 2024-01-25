@@ -24,7 +24,7 @@ export default function Showcase({ locale }) {
 
   const { open, images, index, onIndexChange } = showcase
   const image = images?.[index] || {}
-  const { alt = {}, src, width, height, icon } = image
+  const { alt = {}, src, height, width, icon, props } = image
 
   const singleImage = images?.length <= 1
 
@@ -105,7 +105,7 @@ export default function Showcase({ locale }) {
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
               {image.src &&
                 (icon ? (
-                  <Icon src={src} alt={alt} aria-hidden={!open} />
+                  <Icon src={src} alt={alt} aria-hidden={!open} {...props} />
                 ) : (
                   <Image
                     src={src}

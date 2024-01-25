@@ -11,15 +11,7 @@
   width: 4.2rem;
 }
 
-.base img,
-.base img * {
-  height: 80%;
-  width: 80%;
-}
-
 .small .icon {
-  height: 2.4rem;
-  width: 2.4rem;
-  padding: 0.2rem;
-  border-width: 0.15rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }

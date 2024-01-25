@@ -5,12 +5,15 @@
 
   width: 2.8rem;
   height: 2.8rem;
-  padding: 5%;
 
-  border: 0.23rem solid var(--dim-accent-color);
+  border: 0.2rem solid var(--dim-accent-color);
   border-radius: 50%;
 
   transition: border-color 0.5s;
+}
+
+.base > * {
+  padding: 17.5%;
 }
 
 .noBorder {
@@ -24,7 +27,7 @@
 }
 
 .base:hover > * {
-  scale: 1.04;
+  scale: 1.05;
 }
 
 .base:active > * {

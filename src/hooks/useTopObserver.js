@@ -6,7 +6,7 @@ export default function useTopObserver() {
 
   const handleTopListener = useCallback(
     (ev) => {
-      const newIsOnTop = ev.target.scrollTop < 20
+      const newIsOnTop = ev.target.scrollTop < 5
       if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
     },
     [isOnTop, setOnTop]

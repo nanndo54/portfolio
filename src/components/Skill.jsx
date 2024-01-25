@@ -10,7 +10,7 @@ const classNameBySize = {
   small: styles.small
 }
 
-export default function Skill({ size = 'medium', name, icon, props }) {
+export default function Skill({ size = 'medium', name, icon, props, showcaseProps }) {
   const { openShowcase } = useAppStore()
 
   return (
@@ -22,7 +22,7 @@ export default function Skill({ size = 'medium', name, icon, props }) {
         title={name}
         onClick={() =>
           openShowcase({
-            images: [{ src: icon, alt: name, icon: true }]
+            images: [{ src: icon, alt: name, icon: true, props: showcaseProps }]
           })
         }
       />

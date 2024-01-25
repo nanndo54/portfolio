@@ -13,7 +13,7 @@
   justify-content: space-between;
 
   transition: background-color 0.5s;
-  animation: appear-navbar 0.5s forwards;
+  animation: appear-navbar 0.5s ease-out forwards;
 }
 
 .logo {
@@ -44,9 +44,16 @@
 @keyframes appear-navbar {
   from {
     transform: translateY(-3.5rem);
+    will-change: transform;
+  }
+
+  from,
+  30% {
+    transform: translateY(-3.5rem);
   }
 
   to {
     transform: none;
+    will-change: unset;
   }
 }

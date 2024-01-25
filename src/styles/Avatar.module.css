@@ -8,9 +8,8 @@
 
   background-clip: content-box;
 
-  transition:
-    transform 0.25s ease,
-    border 0.5s;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
 
   transform: translate(6.5rem, -7.5rem) scale(0.16);
   pointer-events: all;
@@ -40,15 +39,16 @@ main[top='true'] .base {
   transform: scale(0.9);
 
   transition:
-    transform 0.3s,
-    opacity 0.3s;
+    transform 0.2s,
+    opacity 0.2s;
+  will-change: transform;
 
   pointer-events: none;
 }
 
 .base .picture {
-  border-width: 0.5rem;
-  border-radius: 55% 45% 54% 46% / 54% 41% 59% 46%;
+  border-width: 0.4rem;
+  border-radius: 50%;
   filter: grayscale(15%);
 
   opacity: 0;

@@ -14,16 +14,6 @@ main[top='true'] .base {
   transform: translateY(8rem);
 }
 
-.label {
-  font-size: 1rem;
-  color: var(--content-color);
-
-  transition:
-    color 0.5s,
-    opacity 0.5s 0.4s,
-    transform 0.5s 0.3s;
-}
-
 .icon {
   height: 3rem;
   width: 3rem;
@@ -56,11 +46,6 @@ main[top='true'] .base {
   height: 10px;
   width: 10px;
   transform: translate(23px, 9px) rotate(-40deg) scale(70%, 210%);
-}
-
-main[top='true'] .label {
-  opacity: 0;
-  transform: translateY(1rem);
 }
 
 main[top='true'] .icon > div {

@@ -21,6 +21,8 @@ p {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
+
+  transition: color 0.5s;
 }
 
 h1 {
@@ -31,6 +33,10 @@ h1 {
   scale: 1.18 1;
   line-height: 1.15;
   text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color);
+
+  transition:
+    color 0.5s,
+    text-shadow 0.5s;
 }
 
 :is(h2, h3, h4, h5, h6) {
@@ -38,6 +44,8 @@ h1 {
   font-family: var(--subtitle-font);
   font-weight: 600;
   line-height: 1;
+
+  transition: color 0.5s;
 }
 
 :is(h4, h5, h6) {
@@ -140,15 +148,15 @@ strong {
 }
 
 .blur-background {
+  border: 0.3rem solid var(--dim-accent-color);
+  border-radius: 2rem;
   box-shadow: var(--dim-accent-color) 0 0 0.15rem 0.02rem inset;
   backdrop-filter: blur(0.5rem);
 
-  border: 0.3rem solid var(--dim-accent-color);
-  border-radius: 2rem;
-
   transition:
-    background-color 0.3s,
-    border-color 0.2s;
+    background-color 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
 
   overflow: hidden;
 }
@@ -169,6 +177,6 @@ strong {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(32, 38, 55, 0.7);
+    background-color: rgb(32, 38, 55);
   }
 }

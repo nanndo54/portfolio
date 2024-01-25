@@ -23,6 +23,7 @@ header.base {
   transition:
     transform 0.2s,
     opacity 0.2s;
+  will-change: transform, opacity;
 
   opacity: 0;
   pointer-events: none;
@@ -42,17 +43,15 @@ p.presentation {
   margin-top: 1rem;
 
   scale: 1.2;
-  transition:
-    transform 0.3s,
-    opacity 0.2s;
 
-  animation: appear-cta-buttons 0.7s ease-out forwards;
+  animation: appear-cta-buttons 0.5s ease-out forwards;
 }
 
 main[top='true'] .info {
   opacity: 1;
-  pointer-events: all;
   transform: translateY(10rem);
+
+  pointer-events: all;
 }
 
 @media (max-width: 900px) {
@@ -101,14 +100,21 @@ main[top='true'] .info {
 }
 
 @keyframes appear-cta-buttons {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    will-change: transform, opacity;
+  }
+
   from,
   30% {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(1.5rem);
   }
 
   to {
     transform: none;
     opacity: 1;
+    will-change: unset;
   }
 }

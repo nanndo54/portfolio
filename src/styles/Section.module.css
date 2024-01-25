@@ -18,11 +18,8 @@
   gap: 2rem;
 
   transition:
-    background-color 0.5s,
-    box-shadow 0.5s,
-    color 0.5s,
-    transform 0.2s ease-out,
-    opacity 0.2s ease-out;
+    transform 0.25s ease-out,
+    opacity 0.25s ease-out;
 }
 
 main[top='true'] .base:is(section, blockquote) {
