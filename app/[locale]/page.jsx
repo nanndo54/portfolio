@@ -17,8 +17,8 @@ export default async function Page({ params: { locale } }) {
   return (
     <main className={styles.base} top='true'>
       <Navbar locale={locale} dictionary={dictionary} />
-      {sections.map(({ id, Component }) => (
-        <Component key={id} id={id} dictionary={dictionary[id]} />
+      {sections.map(({ id, Tag }) => (
+        <Tag key={id} id={id} dictionary={dictionary[id]} />
       ))}
       <BlockQuote dictionary={dictionary.quote} />
       <Footer />

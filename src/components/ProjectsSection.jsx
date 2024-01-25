@@ -29,7 +29,7 @@ export default async function ProjectsSection({ id, dictionary }) {
   return (
     <Section id={id} className={styles.base}>
       <Link href={`#${id}`} className={styles.arrow} aria-label='Ver proyectos' replace>
-        <Icon src={arrowIcon} contentColor />
+        <Icon src={arrowIcon} contentColor priority />
       </Link>
       <h2>{dictionary.title}</h2>
       <div className={styles.content}>

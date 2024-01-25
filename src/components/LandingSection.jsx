@@ -24,7 +24,7 @@ export default async function LandingSection({ id, dictionary }) {
             // tabIndex={isOnTop ? 0 : -1}
           >
             {dictionary.cta}
-            <Icon src={cvIcon} backgroundColor />
+            <Icon src={cvIcon} backgroundColor priority />
           </Button>
           <ContactIcons className={styles.contact} />
         </div>

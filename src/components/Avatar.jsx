@@ -27,7 +27,7 @@ export default function Avatar() {
         onClick={(ev) => handleMenuButton(ev.target.value)}
         tabIndex={isOnTop ? -1 : 0}
       >
-        <Icon className={styles.icon} src={logoIcon} alt='logo' />
+        <Icon className={styles.icon} src={logoIcon} alt='logo' priority />
         <Image
           className={styles.picture}
           {...images.landing.profilePhoto}

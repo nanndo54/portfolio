@@ -1,31 +1,38 @@
 .base {
+  display: block;
   height: 100%;
   width: 100%;
 
-  --dark-filter-value: invert(0.18);
-  --light-filter-value: invert(0.9);
   transition:
     filter 0.5s,
     scale 0.2s ease-out;
   will-change: scale;
 }
 
-.base.contentColor {
+.icon {
+  height: 100%;
+  width: 100%;
+
+  --dark-filter-value: invert(0.18);
+  --light-filter-value: invert(0.9);
+}
+
+.base.contentColor .icon {
   filter: var(--dark-filter-value);
 }
 
-main[dark='true'] .base.contentColor {
+main[dark='true'] .base.contentColor .icon {
   filter: var(--light-filter-value);
 }
 
-.base.backgroundColor {
+.base.backgroundColor .icon {
   filter: var(--light-filter-value);
 }
 
-main[dark='true'] .base.backgroundColor {
+main[dark='true'] .base.backgroundColor .icon {
   filter: var(--dark-filter-value);
 }
 
-.base.lightColor {
+.base.lightColor .icon {
   filter: var(--light-filter-value);
 }

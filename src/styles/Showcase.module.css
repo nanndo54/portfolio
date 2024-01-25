@@ -93,7 +93,7 @@
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }
 
-.icon svg {
+.icon picture {
   width: 15rem;
 
   box-shadow: none;
@@ -118,9 +118,9 @@
   width: 2.5rem;
 }
 
-.footer > svg {
-  height: 2rem;
-  width: 2rem;
+.footer > picture {
+  height: 3rem;
+  width: 3rem;
 }
 
 .buttons {
@@ -132,9 +132,8 @@
 }
 
 .buttons button {
-  height: 2.5rem;
-  width: 2.5rem;
-  padding: 0.4rem;
+  height: 2.6rem;
+  width: 2.6rem;
   border-color: var(--light-color);
 }
 
@@ -146,7 +145,7 @@
   z-index: 4;
 }
 
-.previousImage svg {
+.previousImage picture {
   transform: rotate(180deg);
 }
 
@@ -190,7 +189,7 @@
     width: 100vw;
   }
 
-  .icon svg {
+  .icon picture {
     width: 50vw;
   }
 }

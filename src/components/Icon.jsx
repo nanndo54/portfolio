@@ -1,34 +1,20 @@
 import styles from '@/styles/Icon.module.css'
 import clsx from 'clsx/lite'
+import Image from 'next/image'
 import SVG from 'react-inlinesvg'
 
 export default function Icon({
   className = '',
+  src,
+  alt = '',
+  priority = false,
   contentColor = false,
   backgroundColor = false,
   lightColor = false,
-  src,
-  alt = '',
   ...props
 }) {
   return (
-    // <Image
-    //   className={clsx(
-    //     className,
-    //     styles.base,
-    //     contentColor && styles.contentColor,
-    //     backgroundColor && styles.backgroundColor,
-    //     lightColor && styles.lightColor
-    //   )}
-    //   src={`/static/icons/${src}`}
-    //   alt={alt}
-    //   height={30}
-    //   width={30}
-    //   priority={priority}
-    //   unoptimized
-    //   {...props}
-    // />
-    <SVG
+    <picture
       className={clsx(
         className,
         styles.base,
@@ -36,11 +22,26 @@ export default function Icon({
         backgroundColor && styles.backgroundColor,
         lightColor && styles.lightColor
       )}
-      src={`/static/icons/${src}`}
-      height={30}
-      width={30}
-      title={alt}
-      {...props}
-    />
+    >
+      {priority ? (
+        <Image
+          className={styles.icon}
+          src={`/static/icons/${src}`}
+          alt={alt}
+          height={30}
+          width={30}
+          priority
+          unoptimized
+          {...props}
+        />
+      ) : (
+        <SVG
+          className={styles.icon}
+          src={`/static/icons/${src}`}
+          title={alt}
+          {...props}
+        />
+      )}
+    </picture>
   )
 }

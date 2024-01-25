@@ -20,9 +20,8 @@
   display: flex;
   overflow-x: scroll;
 
+  height: auto;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
 
   animation: setup-scroll 0s 1s forwards;
 }
@@ -60,16 +59,14 @@
 
 .previousImage {
   left: 0;
-  padding-left: 0.5rem;
 }
 
-.previousImage svg {
+.previousImage picture {
   transform: rotate(180deg);
 }
 
 .nextImage {
   right: 0;
-  padding-right: 0.5rem;
 }
 
 .dots {

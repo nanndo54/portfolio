@@ -6,9 +6,8 @@
   position: absolute;
   align-self: center;
   top: 0;
-  margin: auto;
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 2.5rem;
+  width: 2.5rem;
 
   opacity: 0;
 
@@ -20,7 +19,9 @@
   will-change: opacity, transform;
 }
 
-.arrow svg {
+.arrow picture {
+  height: 100%;
+  width: 100%;
   transform: rotate(-90deg);
   transition: transform 0.5s;
 }
@@ -30,13 +31,13 @@ main[top='true'] .arrow {
   transform: translateY(-2rem);
 }
 
-main[top='true'] .arrow:hover svg {
+main[top='true'] .arrow:hover picture {
   transform: translateY(-0.5rem) rotate(-90deg);
 }
 
 .content {
   display: grid;
-  grid-template-columns: 0.7rem 1fr;
+  grid-template-columns: 0.75rem 1fr;
   gap: 2.5rem;
 }
 
@@ -60,11 +61,11 @@ main[top='true'] .arrow:hover svg {
   background-color: var(--content-color);
   border-radius: 50%;
 
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.4rem;
+  height: 0.4rem;
 
   position: absolute;
-  bottom: -1.8rem;
+  bottom: -1.65rem;
 
   transition: background-color 0.5s;
 }
@@ -75,8 +76,8 @@ main[top='true'] .arrow:hover svg {
   background-color: var(--content-color);
   border-radius: 50%;
 
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.55rem;
+  height: 0.55rem;
 
   position: absolute;
   bottom: -1rem;
@@ -84,7 +85,7 @@ main[top='true'] .arrow:hover svg {
   transition: background-color 0.5s;
 }
 
-.timeline svg {
+.timeline picture {
   width: 3.5rem;
   height: 3.5rem;
 

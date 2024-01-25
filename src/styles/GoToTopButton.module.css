@@ -17,6 +17,8 @@ main[top='true'] .base {
 .icon {
   height: 3rem;
   width: 3rem;
+
+  filter: drop-shadow(0 0 0.1rem var(--background-color));
 }
 
 .icon > div {

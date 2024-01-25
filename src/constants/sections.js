@@ -9,24 +9,24 @@ import SkillsSection from '@/components/SkillsSection'
 const sections = [
   {
     id: 'landing',
-    Component: LandingSection,
+    Tag: LandingSection,
     hideInNavbar: true
   },
   {
     id: 'projects',
-    Component: ProjectsSection
+    Tag: ProjectsSection
   },
   {
     id: 'skills',
-    Component: SkillsSection
+    Tag: SkillsSection
   },
   {
     id: 'about-me',
-    Component: AboutMeSection
+    Tag: AboutMeSection
   },
   {
     id: 'contact',
-    Component: ContactSection
+    Tag: ContactSection
   }
 ]
 

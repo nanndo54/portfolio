@@ -10,7 +10,7 @@ export default async function ContactIcons({ tabIndex }) {
         <IconButton
           key={name}
           icon={icon}
-          iconProps={props}
+          iconProps={{ ...props, priority: true }}
           aria-label={name}
           href={url}
           tabIndex={tabIndex}

@@ -3,29 +3,28 @@
   top: 0;
   right: 0;
 
-  height: 20rem;
-  width: 20rem;
+  height: 16rem;
+  width: 16rem;
 
   background-clip: content-box;
 
   transition: transform 0.2s ease-out;
   will-change: transform;
 
-  transform: translate(6.5rem, -7.5rem) scale(0.16);
+  transform: translate(4.5rem, -5.5rem) scale(0.16);
   pointer-events: all;
   z-index: 2;
 }
 
 main[top='true'] .base {
   position: absolute;
-  transform: translate(calc(27rem - 50vw), 10.5rem);
+  transform: translate(calc(23rem - 50vw), 12.5rem);
   pointer-events: none;
 }
 
 .base > button {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .base .icon {
@@ -36,12 +35,11 @@ main[top='true'] .base {
   width: 100%;
 
   opacity: 1;
-  transform: scale(0.9);
 
   transition:
-    transform 0.2s,
-    opacity 0.2s;
-  will-change: transform;
+    opacity 0.4s,
+    scale 0.4s;
+  will-change: opacity, scale;
 
   pointer-events: none;
 }
@@ -56,41 +54,33 @@ main[top='true'] .base {
 
 main[top='true'] .base .icon {
   opacity: 0.5;
-  transform: scale(1.12);
+  scale: 1.1;
 }
 
 main[top='true'] .base .picture {
   opacity: 1;
 }
-/* 
+
 @media (max-width: 900px) {
   main[top='true'] .base {
-    transform: translate(calc(10rem - 50vw), 4rem) scale(0.8);
+    transform: translate(calc(8rem - 50vw), 9rem) scale(1.1);
   }
 }
 
 @media (max-width: 700px) {
   .base {
-    transform: translate(7rem, -8rem) scale(0.14);
-  }
-
-  main[top='true'] .base {
-    transform: translate(calc(10rem - 50vw), 4rem) scale(0.66);
+    transform: translate(5.5rem, -6rem) scale(0.14);
   }
 }
 
-@media (max-height: 800px) and (max-width: 700px) {
-  .base {
-    transform: translate(7rem, -8rem) scale(0.14);
-  }
-
+@media (max-width: 500px) {
   main[top='true'] .base {
-    transform: translate(calc(10rem - 50vw), 1.8rem) scale(0.6);
+    transform: translate(calc(8rem - 50vw), 7.5rem) scale(1.05);
   }
 }
 
-@media (max-height: 800px) and (min-width: 700px) {
+@media (max-width: 500px) and (max-height: 850px) {
   main[top='true'] .base {
-    transform: translate(calc(24rem - 50vw), 4.5rem) scale(0.8);
+    transform: translate(calc(8rem - 50vw), 3.5rem) scale(0.8);
   }
-} */
+}
