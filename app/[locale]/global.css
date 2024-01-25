@@ -30,7 +30,7 @@ h1 {
 
   scale: 1.18 1;
   line-height: 1.15;
-  /* text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color); */
+  text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color);
 }
 
 :is(h2, h3, h4, h5, h6) {
@@ -154,7 +154,7 @@ strong {
 }
 
 .blur-background:hover {
-  background-color: var(--dim-content-color);
+  background-color: #ffffff0a;
 }
 
 .no-select,

@@ -5,18 +5,27 @@ import Section from '@/components/Section'
 import images from '@/constants/images'
 
 export default async function AboutMeSection({ id, dictionary }) {
+  const subsections = [
+    {
+      image: images.aboutMe.guatemala,
+      text: dictionary.text2
+    },
+    {
+      image: images.aboutMe.campus,
+      text: dictionary.text3
+    }
+  ]
+
   return (
     <Section id={id}>
       <h2>{dictionary.title}</h2>
       <p>{dictionary.text1}</p>
-      <div className={styles.subsection}>
-        <Image {...images.aboutMe.guatemala} />
-        <p>{dictionary.text2}</p>
-      </div>
-      <div className={styles.subsection}>
-        <Image {...images.aboutMe.campus} />
-        <p>{dictionary.text3}</p>
-      </div>
+      {subsections.map(({ image, text }, i) => (
+        <div key={i} className={styles.subsection}>
+          <Image {...image} />
+          <p>{text}</p>
+        </div>
+      ))}
     </Section>
   )
 }

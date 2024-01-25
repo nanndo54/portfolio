@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/styles/ImageCarrousel.module.css'
-import { useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
@@ -15,22 +15,36 @@ export default function ImageCarrousel({
   height,
   width,
   noBorder = false,
-  noZoom = false
+  noZoom = false,
+  noAuto = false
 }) {
   const { openShowcase } = useAppStore()
   const contentRef = useRef()
-
   const [imageIndex, setImageIndex] = useState(0)
 
   const singleImage = images.length <= 1
 
-  const handleImageChange = (index) => {
-    contentRef.current.scrollTo({
-      left: contentRef.current.clientWidth * index,
-      behavior: 'smooth'
-    })
-    setImageIndex(index)
-  }
+  const handleImageChange = useCallback(
+    (index) => {
+      const newImageIndex = (index + images.length) % images.length
+      contentRef.current.scrollTo({
+        left: contentRef.current.clientWidth * newImageIndex,
+        behavior: 'smooth'
+      })
+      setImageIndex(newImageIndex)
+    },
+    [images.length]
+  )
+
+  useEffect(() => {
+    if (noAuto || singleImage) return
+    const interval = setInterval(
+      () => handleImageChange(imageIndex + 1),
+      5000 + Math.random() * 3000
+    )
+
+    return () => clearInterval(interval)
+  }, [noAuto, singleImage, handleImageChange, imageIndex, images])
 
   const handleScroll = useDebouncedCallback((event) => {
     const { scrollLeft, clientWidth } = event.target
@@ -54,7 +68,7 @@ export default function ImageCarrousel({
         className={styles.previousImage}
         onClick={(ev) => {
           ev.stopPropagation()
-          handleImageChange((imageIndex - 1 + images.length) % images.length)
+          handleImageChange(imageIndex - 1)
         }}
         noBorder
         aria-label='Ver imagen anterior'
@@ -80,7 +94,7 @@ export default function ImageCarrousel({
         className={styles.nextImage}
         onClick={(ev) => {
           ev.stopPropagation()
-          handleImageChange((imageIndex + 1 + images.length) % images.length)
+          handleImageChange(imageIndex + 1)
         }}
         noBorder
         aria-label='Ver imagen siguiente'
