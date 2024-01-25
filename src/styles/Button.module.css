@@ -64,7 +64,7 @@
   border-color: var(--accent-color);
 }
 
-.base > img {
+.base > svg {
   height: 45%;
 }
 

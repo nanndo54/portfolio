@@ -93,7 +93,7 @@
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }
 
-.icon img {
+.icon svg {
   width: 15rem;
 
   box-shadow: none;
@@ -118,7 +118,7 @@
   width: 2.5rem;
 }
 
-.footer > img {
+.footer > svg {
   height: 2rem;
   width: 2rem;
 }
@@ -146,7 +146,7 @@
   z-index: 4;
 }
 
-.previousImage img {
+.previousImage svg {
   transform: rotate(180deg);
 }
 
@@ -190,7 +190,7 @@
     width: 100vw;
   }
 
-  .canvas.icon img {
+  .icon svg {
     width: 50vw;
   }
 }

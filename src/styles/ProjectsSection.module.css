@@ -20,7 +20,7 @@
   will-change: opacity, transform;
 }
 
-.arrow img {
+.arrow svg {
   transform: rotate(-90deg);
   transition: transform 0.5s;
 }
@@ -30,7 +30,7 @@ main[top='true'] .arrow {
   transform: translateY(-2rem);
 }
 
-main[top='true'] .arrow:hover img {
+main[top='true'] .arrow:hover svg {
   transform: translateY(-0.5rem) rotate(-90deg);
 }
 
@@ -84,7 +84,7 @@ main[top='true'] .arrow:hover img {
   transition: background-color 0.5s;
 }
 
-.timeline img {
+.timeline svg {
   width: 3.5rem;
   height: 3.5rem;
 
