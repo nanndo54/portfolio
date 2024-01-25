@@ -1,0 +1,52 @@
+.base {
+  z-index: 2;
+  pointer-events: none;
+
+  position: fixed;
+
+  padding: 0 2rem;
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: background-color 0.5s;
+  animation: appear-navbar 0.5s forwards;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  margin: 0 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .base {
+    height: 4rem;
+    pointer-events: all;
+
+    padding: 0 1.2rem;
+    background-color: var(--dim-background-color);
+    box-shadow: var(--dim-content-color) 0 -0.4rem 1rem -0.7rem inset;
+    backdrop-filter: blur(0.3rem);
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+  }
+}
+
+@keyframes appear-navbar {
+  from {
+    transform: translateY(-3.5rem);
+  }
+
+  to {
+    transform: none;
+  }
+}

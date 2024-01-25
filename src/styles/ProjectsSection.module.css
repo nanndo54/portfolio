@@ -1,0 +1,150 @@
+.base {
+  overflow: visible;
+}
+
+.arrow {
+  position: absolute;
+  align-self: center;
+  top: 0;
+  margin: auto;
+  height: 2.4rem;
+  width: 2.4rem;
+
+  opacity: 0;
+
+  transform: translateY(-7rem);
+
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.arrow img {
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+main[top='true'] .arrow {
+  opacity: 1;
+  transform: translateY(-2rem);
+}
+
+main[top='true'] .arrow:hover img {
+  transform: translateY(-0.5rem) rotate(-90deg);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 0.7rem 1fr;
+  gap: 2.5rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  background-color: var(--content-color);
+
+  width: 100%;
+  border-radius: 0.7rem;
+
+  transition: background-color 0.5s;
+}
+
+.timeline::before {
+  content: '';
+  display: block;
+  background-color: var(--content-color);
+  border-radius: 50%;
+
+  width: 0.5rem;
+  height: 0.5rem;
+
+  position: absolute;
+  bottom: -1.8rem;
+
+  transition: background-color 0.5s;
+}
+
+.timeline::after {
+  content: '';
+  display: block;
+  background-color: var(--content-color);
+  border-radius: 50%;
+
+  width: 0.6rem;
+  height: 0.6rem;
+
+  position: absolute;
+  bottom: -1rem;
+
+  transition: background-color 0.5s;
+}
+
+.timeline img {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  position: absolute;
+  top: 0;
+  transform: translateY(-1rem) scaleX(0.8) rotate(-90deg);
+}
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+
+  padding: 3.5rem 0 1rem;
+}
+
+.allProjects h3 {
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.allProjects h3::before {
+  content: '';
+  display: block;
+  width: 3.7rem;
+  height: 0.2rem;
+
+  margin: auto;
+  border-radius: 0.1rem;
+  background-color: var(--content-color);
+
+  position: absolute;
+  top: 50%;
+  left: -4.5rem;
+
+  transition: background-color 0.5s;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .content {
+    grid-template-columns: 0.7rem 1fr;
+    gap: 1.8rem;
+  }
+
+  .allProjects h3::before {
+    width: 3rem;
+
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

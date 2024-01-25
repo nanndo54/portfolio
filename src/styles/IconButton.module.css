@@ -1,0 +1,32 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 5%;
+
+  border: 0.23rem solid var(--dim-accent-color);
+  border-radius: 50%;
+
+  transition: border-color 0.5s;
+}
+
+.noBorder {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.base:hover {
+  border-color: var(--accent-color);
+}
+
+.base:hover > * {
+  scale: 1.04;
+}
+
+.base:active > * {
+  scale: 0.96;
+}

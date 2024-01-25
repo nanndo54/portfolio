@@ -1,0 +1,30 @@
+.base {
+  height: 100%;
+  width: 100%;
+
+  --dark-filter-value: invert(0.18);
+  --light-filter-value: invert(0.9);
+  transition:
+    filter 0.5s,
+    scale 0.5s;
+}
+
+.base.contentColor {
+  filter: var(--dark-filter-value);
+}
+
+main[dark='true'] .base.contentColor {
+  filter: var(--light-filter-value);
+}
+
+.base.backgroundColor {
+  filter: var(--light-filter-value);
+}
+
+main[dark='true'] .base.backgroundColor {
+  filter: var(--dark-filter-value);
+}
+
+.lightColor {
+  filter: var(--light-filter-value);
+}

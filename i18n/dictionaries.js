@@ -1,7 +1,7 @@
 import 'server-only'
-import { locales } from './config'
+import { i18n } from './config'
 
-const dictionaries = locales.reduce((acc, lang) => {
+const dictionaries = i18n.locales.reduce((acc, lang) => {
   acc[lang] = () => import(`./locales/${lang}.json`).then((m) => m.default)
   return acc
 }, {})

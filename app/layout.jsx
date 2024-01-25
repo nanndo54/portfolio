@@ -1,5 +1,3 @@
-export const runtime = 'nodejs'
-
 export const metadata = {
   title: 'Portfolio | nanndo54',
   description:

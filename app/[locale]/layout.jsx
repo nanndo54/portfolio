@@ -1,6 +1,6 @@
-import '#/global.css'
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
 import { i18n } from 'i18n/config'
+import './global.css'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }))
