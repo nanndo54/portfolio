@@ -34,8 +34,7 @@ export default function useSectionObserver() {
   }, [setSectionIntersected])
 
   useEffect(() => {
-    if (currentSection)
-      router.replace(`#${currentSection}`, { scroll: false, shallow: true })
+    if (currentSection) router.replace(`#${currentSection}`, { scroll: false })
   }, [currentSection, router])
 
   return currentSection

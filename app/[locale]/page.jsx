@@ -9,7 +9,7 @@ import Showcase from '#/components/Showcase'
 import sections from '#/constants/sections'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import { getDictionary } from 'dictionaries'
+import { getDictionary } from 'i18n/dictionaries'
 
 export default async function Page({ params: { locale } }) {
   const dictionary = await getDictionary(locale)

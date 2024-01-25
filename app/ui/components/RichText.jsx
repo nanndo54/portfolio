@@ -1,6 +1,5 @@
 'use client'
 
-import styles from '#/styles/Text.module.css'
 import parse from 'html-react-parser'
 
 export default function RichText({ children, as: Tag, className = '', ...props }) {
@@ -9,7 +8,7 @@ export default function RichText({ children, as: Tag, className = '', ...props }
   )
 
   return Tag ? (
-    <Tag className={`${styles.base} ${className}`} {...props}>
+    <Tag className={className} {...props}>
       {childrenElement}
     </Tag>
   ) : (

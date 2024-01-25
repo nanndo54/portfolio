@@ -1,6 +1,6 @@
 import { Hind, Proza_Libre } from 'next/font/google'
 
-export const palanquin_dark = Proza_Libre({
+export const titleFont = Proza_Libre({
   display: 'swap',
   style: 'normal',
   weight: ['500', '600', '700'],
@@ -8,7 +8,7 @@ export const palanquin_dark = Proza_Libre({
   variable: '--title-font'
 })
 
-export const merriweather = Proza_Libre({
+export const subTitleFont = Proza_Libre({
   display: 'swap',
   style: ['normal'],
   weight: ['500', '600'],
@@ -16,7 +16,7 @@ export const merriweather = Proza_Libre({
   variable: '--subtitle-font'
 })
 
-export const hind_guntur = Hind({
+export const bodyFont = Hind({
   display: 'swap',
   style: 'normal',
   weight: ['400', '600'],
