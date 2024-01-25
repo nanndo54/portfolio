@@ -1,19 +1,18 @@
 import styles from '@/styles/Section.module.css'
+import clsx from 'clsx'
 
 export default async function Section({
   background = true,
-  as: Component = 'section',
+  as: Tag = 'section',
   className = '',
   id,
   children
 }) {
   return (
     <div className={styles.layout} id={id}>
-      <Component
-        className={`${styles.base} ${className} ${background ? styles.background : ''}`}
-      >
+      <Tag className={clsx(className, styles.base, background && styles.background)}>
         {children}
-      </Component>
+      </Tag>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import styles from '@/styles/IconButton.module.css'
 
 import Icon from '@/components/Icon'
 import Link from '@/components/Link'
+import clsx from 'clsx'
 
 export default function IconButton({
   className = '',
@@ -15,13 +16,19 @@ export default function IconButton({
   const childrenElement = <Icon src={icon} {...iconProps} />
 
   return href ? (
-    <Link className={`${className} ${styles.base}`} href={href} {...props} noDecoration>
+    <Link
+      className={clsx(className, styles.base)}
+      href={href}
+      isExternal
+      noDecoration
+      {...props}
+    >
       {childrenElement}
     </Link>
   ) : (
     <button
       type='button'
-      className={`${className} ${styles.base} ${noBorder ? styles.noBorder : ''}`}
+      className={clsx(className, styles.base, noBorder && styles.noBorder)}
       onClick={onClick}
       {...props}
     >

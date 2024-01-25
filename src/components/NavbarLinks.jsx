@@ -3,6 +3,7 @@
 import Link from '@/components/Link'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import styles from '@/styles/NavbarLinks.module.css'
+import clsx from 'clsx'
 
 export default function NavbarLinks({ links }) {
   const currentSection = useSectionObserver()
@@ -13,9 +14,11 @@ export default function NavbarLinks({ links }) {
         <Link
           key={id}
           href={`#${id}`}
-          className={`${styles.link} ${
-            id === currentSection ? `${styles.current} blur-background` : ''
-          }`}
+          className={clsx(
+            styles.link,
+            id === currentSection && `${styles.current} blur-background`
+          )}
+          replace
           noDecoration
         >
           {label}

@@ -1,6 +1,7 @@
 'use client'
 
 import styles from '@/styles/Image.module.css'
+import clsx from 'clsx'
 import { default as NextImage } from 'next/image'
 
 import useAppStore from '@/state/store'
@@ -24,9 +25,7 @@ export default function Image({
     <NextImage
       src={`/static/${src}`}
       alt={alt[locale]}
-      className={`${className} ${styles.base} ${
-        noBorder ? styles.noBorder : ''
-      } no-select`}
+      className={clsx(className, styles.base, noBorder && styles.noBorder, 'no-select')}
       draggable={false}
       height={height}
       width={width}

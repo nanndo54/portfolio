@@ -20,7 +20,7 @@
 main[top='true'] .base {
   position: absolute;
   transform: translate(calc(27rem - 50vw), 10.5rem);
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .base > button {

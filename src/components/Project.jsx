@@ -6,6 +6,7 @@ import ImageCarrousel from '@/components/ImageCarrousel'
 import Skill from '@/components/Skill'
 
 import skills from '@/constants/skills'
+import clsx from 'clsx'
 
 const allSkills = Object.values(skills).reduce(
   (allSkills, skills) => [...allSkills, ...skills],
@@ -26,7 +27,7 @@ export default async function Project({
   const skills = technologies.map(getSkill)
 
   return (
-    <article className={`${styles.base} blur-background`}>
+    <article className={clsx(styles.base, 'blur-background')}>
       <div className={styles.header}>
         <div className={styles.title}>
           <Icon src={icon} alt={name} />

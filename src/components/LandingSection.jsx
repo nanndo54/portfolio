@@ -20,6 +20,7 @@ export default async function LandingSection({ id, dictionary }) {
           <Button
             href={dictionary.cv}
             download='Pablo Cabrera - CV.pdf'
+            isExternal
             // tabIndex={isOnTop ? 0 : -1}
           >
             {dictionary.cta}

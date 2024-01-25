@@ -10,6 +10,7 @@ import Image from '@/components/Image'
 
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '@/constants/icons'
 import useAppStore from '@/state/store'
+import clsx from 'clsx'
 
 const initialScale = 1
 const defaultImageWidth = 2016
@@ -60,9 +61,11 @@ export default function Showcase({ locale }) {
 
   return (
     <div
-      className={`${styles.base} ${open ? styles.open : ''} ${
-        singleImage ? styles.singleImage : ''
-      }`}
+      className={clsx(
+        styles.base,
+        open && styles.open,
+        singleImage && styles.singleImage
+      )}
     >
       <TransformWrapper
         initialScale={initialScale}
@@ -99,9 +102,7 @@ export default function Showcase({ locale }) {
               aria-label='Ver imagen anterior'
               tabIndex={open ? 0 : -1}
             />
-            <TransformComponent
-              wrapperClass={`${styles.canvas} ${icon ? styles.icon : ''}`}
-            >
+            <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
               {image.src &&
                 (icon ? (
                   <Icon src={src} alt={alt} aria-hidden={!open} />

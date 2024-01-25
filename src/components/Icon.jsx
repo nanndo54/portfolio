@@ -1,4 +1,5 @@
 import styles from '@/styles/Icon.module.css'
+import clsx from 'clsx'
 import Image from 'next/image'
 
 export default function Icon({
@@ -11,11 +12,15 @@ export default function Icon({
   priority = false,
   ...props
 }) {
-  // const { SvgIcon } = useSvg(src)
-
   return (
     <Image
-      className={`${styles.base} ${contentColor ? styles.contentColor : ''} ${backgroundColor ? styles.backgroundColor : ''} ${lightColor ? styles.lightColor : ''} ${className}`}
+      className={clsx(
+        className,
+        styles.base,
+        contentColor && styles.contentColor,
+        backgroundColor && styles.backgroundColor,
+        lightColor && styles.lightColor
+      )}
       src={`/static/icons/${src}`}
       alt={alt}
       height={30}

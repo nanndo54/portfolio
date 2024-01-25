@@ -8,12 +8,12 @@ import Image from '@/components/Image'
 import { arrowIcon } from '@/constants/icons'
 import useDebouncedCallback from '@/hooks/useDebouncedCallback'
 import useAppStore from '@/state/store'
+import clsx from 'clsx'
 
 export default function ImageCarrousel({
   images,
   height,
   width,
-  className = '',
   noBorder = false,
   noZoom = false
 }) {
@@ -47,7 +47,7 @@ export default function ImageCarrousel({
   )
 
   return (
-    <div className={`${styles.base} ${singleImage ? styles.singleImage : ''}`}>
+    <div className={clsx(styles.base, singleImage && styles.singleImage)}>
       <IconButton
         icon={arrowIcon}
         iconProps={{ lightColor: true }}
@@ -60,19 +60,13 @@ export default function ImageCarrousel({
         aria-label='Ver imagen anterior'
       />
       {noZoom ? (
-        <div
-          className={`${className} ${styles.container} ${
-            noBorder ? styles.noBorder : ''
-          }`}
-        >
+        <div className={clsx(styles.container, noBorder && styles.noBorder)}>
           {contentElement}
         </div>
       ) : (
         <button
           type='button'
-          className={`${className} ${styles.container} ${
-            noBorder ? styles.noBorder : ''
-          }`}
+          className={clsx(styles.container, noBorder && styles.noBorder)}
           onClick={() =>
             openShowcase({ images, index: imageIndex, onIndexChange: handleImageChange })
           }

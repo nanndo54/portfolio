@@ -1,9 +1,10 @@
 import Section from '@/components/Section'
 import styles from '@/styles/BlockQuote.module.css'
+import clsx from 'clsx'
 
 export default async function BlockQuote({ dictionary }) {
   return (
-    <Section as='blockquote' className={`${styles.base} blur-background`}>
+    <Section as='blockquote' className={clsx(styles.base, 'blur-background')}>
       <span>
         <span className={styles.quote}>“</span>
         {dictionary.text}

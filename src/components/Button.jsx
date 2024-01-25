@@ -1,13 +1,13 @@
 import styles from '@/styles/Button.module.css'
 
 import Link from '@/components/Link'
+import clsx from 'clsx'
 
 const classNameByType = {
   primary: '',
   secondary: styles.secondary,
   tertiary: styles.tertiary
 }
-
 export default async function Button({
   className = '',
   type = 'primary',
@@ -18,7 +18,7 @@ export default async function Button({
 }) {
   return href ? (
     <Link
-      className={`${styles.base} ${className} ${classNameByType[type]}`}
+      className={clsx(className, styles.base, classNameByType[type])}
       href={href}
       noDecoration
       {...props}
@@ -28,7 +28,7 @@ export default async function Button({
   ) : (
     <button
       type='button'
-      className={`${className} ${classNameByType[type]} ${styles.base}`}
+      className={clsx(className, styles.base, classNameByType[type])}
       onClick={onClick}
       {...props}
     >

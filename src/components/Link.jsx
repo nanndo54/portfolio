@@ -1,11 +1,12 @@
 'use client'
 
 import styles from '@/styles/Link.module.css'
+import clsx from 'clsx'
 import { default as NextLink } from 'next/link'
 
 export default function Link({
   className = '',
-  href,
+  href = '#',
   replace = false,
   locale,
   isExternal = false,
@@ -16,7 +17,7 @@ export default function Link({
   return (
     <NextLink
       prefetch={false}
-      className={`${className} ${styles.base} ${noDecoration ? styles.noDecoration : ''}`}
+      className={clsx(className, styles.base, noDecoration && styles.noDecoration)}
       href={href}
       replace={replace}
       locale={locale}

@@ -1,4 +1,5 @@
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
+import clsx from 'clsx'
 import { i18n } from 'i18n/config'
 import './global.css'
 
@@ -10,7 +11,7 @@ export default function Layout({ children, params: { locale } }) {
   return (
     <html lang={locale} translate='no'>
       <body
-        className={`${titleFont.variable} ${subTitleFont.variable} ${bodyFont.variable}`}
+        className={clsx(titleFont.variable, subTitleFont.variable, bodyFont.variable)}
       >
         {children}
       </body>

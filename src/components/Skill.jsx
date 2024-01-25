@@ -4,17 +4,17 @@ import styles from '@/styles/Skill.module.css'
 
 import IconButton from '@/components/IconButton'
 import useAppStore from '@/state/store'
+import clsx from 'clsx'
 
 const classNameBySize = {
   small: styles.small
 }
 
 export default function Skill({ size = 'medium', name, icon, props }) {
-  const className = `${styles.base} ${classNameBySize[size] || ''}`
   const { openShowcase } = useAppStore()
 
   return (
-    <div className={className}>
+    <div className={clsx(styles.base, classNameBySize[size])}>
       <IconButton
         icon={icon}
         iconProps={props}
