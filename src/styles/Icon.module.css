@@ -19,7 +19,15 @@
 }
 
 .border > * {
-  padding: 17.5%;
+  padding: 20%;
+}
+
+.secondary {
+  border-color: var(--dim-secondary-accent-color);
+}
+
+.secondary:hover {
+  border-color: var(--secondary-accent-color);
 }
 
 .base:hover {

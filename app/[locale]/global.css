@@ -29,14 +29,14 @@ body {
   --content-color: rgb(50, 50, 50);
   --dim-content-color: rgba(100, 100, 100, 0.05);
 
-  --background-color: rgb(222, 228, 253);
+  --background-color: rgb(244, 245, 250);
   --dim-background-color: rgba(210, 210, 250, 0.4);
 
-  --accent-color: rgb(57, 148, 223);
-  --dim-accent-color: rgba(39, 132, 238, 0.35);
+  --accent-color: #6295f5;
+  --dim-accent-color: #6295f5a0;
 
-  --secondary-accent-color: rgb(148, 125, 238);
-  --dim-secondary-accent-color: rgba(109, 72, 255, 0.35);
+  --secondary-accent-color: #6266f5;
+  --dim-secondary-accent-color: #6266f577;
 }
 
 body:has(main[dark='true']) {
@@ -49,11 +49,11 @@ body:has(main[dark='true']) {
   --background-color: rgb(32, 38, 55);
   --dim-background-color: rgba(35, 35, 45, 0.4);
 
-  --accent-color: rgb(98, 185, 211);
-  --dim-accent-color: rgba(90, 187, 235, 0.4);
+  --accent-color: #6266f5;
+  --dim-accent-color: #6266f577;
 
-  --secondary-accent-color: rgb(138, 116, 223);
-  --dim-secondary-accent-color: rgba(154, 131, 248, 0.4);
+  --secondary-accent-color: #6295f5;
+  --dim-secondary-accent-color: #6295f577;
 }
 
 p {
@@ -73,11 +73,8 @@ h1 {
 
   scale: 1.2 1;
   line-height: 1.15;
-  /* text-shadow: 0.24rem 0.24rem 0.1rem var(--dim-accent-color); */
 
-  transition:
-    color 0.5s,
-    text-shadow 0.5s;
+  transition: color 0.5s;
 }
 
 :is(h2, h3, h4, h5, h6) {

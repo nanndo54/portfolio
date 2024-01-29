@@ -4,10 +4,10 @@ import Link from '@/components/Link'
 import clsx from 'clsx/lite'
 
 const classNameByType = {
-  primary: '',
   secondary: styles.secondary,
   tertiary: styles.tertiary
 }
+
 export default async function Button({
   className = '',
   type = 'primary',

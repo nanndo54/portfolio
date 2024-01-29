@@ -3,8 +3,13 @@ import clsx from 'clsx/lite'
 import Image from 'next/image'
 import SVG from 'react-inlinesvg'
 
+const classNameByType = {
+  secondary: styles.secondary
+}
+
 export default function Icon({
   className = '',
+  type = 'primary',
   border = false,
   src,
   alt = '',
@@ -18,6 +23,7 @@ export default function Icon({
     <picture
       className={clsx(
         className,
+        classNameByType[type],
         border && styles.border,
         styles.base,
         contentColor && styles.contentColor,
