@@ -4,7 +4,7 @@ import styles from '@/styles/Image.module.css'
 import clsx from 'clsx/lite'
 import { default as NextImage } from 'next/image'
 
-import useAppStore from '@/state/store'
+import OpenShowcase from '@/components/OpenShowcase'
 
 export default function Image({
   src,
@@ -18,7 +18,6 @@ export default function Image({
   noZoom = false,
   ...props
 }) {
-  const { openShowcase } = useAppStore()
   const locale = 'en'
 
   const imageElement = (
@@ -38,8 +37,6 @@ export default function Image({
   return noZoom ? (
     imageElement
   ) : (
-    <button type='button' onClick={() => openShowcase({ images: [{ src, alt }] })}>
-      {imageElement}
-    </button>
+    <OpenShowcase images={[{ src, alt }]}>{imageElement}</OpenShowcase>
   )
 }

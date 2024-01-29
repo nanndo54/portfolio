@@ -5,9 +5,9 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
+import OpenShowcase from '@/components/OpenShowcase'
 import { arrowIcon } from '@/constants/icons'
 import useDebouncedCallback from '@/hooks/useDebouncedCallback'
-import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 
 export default function ImageCarrousel({
@@ -18,7 +18,6 @@ export default function ImageCarrousel({
   noZoom = false,
   noAuto = false
 }) {
-  const { openShowcase } = useAppStore()
   const contentRef = useRef()
   const [imageIndex, setImageIndex] = useState(0)
 
@@ -70,7 +69,6 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        noBorder
         aria-label='Ver imagen anterior'
       />
       {noZoom ? (
@@ -78,15 +76,13 @@ export default function ImageCarrousel({
           {contentElement}
         </div>
       ) : (
-        <button
-          type='button'
-          className={clsx(styles.container, noBorder && styles.noBorder)}
-          onClick={() =>
-            openShowcase({ images, index: imageIndex, onIndexChange: handleImageChange })
-          }
+        <OpenShowcase
+          images={images}
+          index={imageIndex}
+          onIndexChange={handleImageChange}
         >
           {contentElement}
-        </button>
+        </OpenShowcase>
       )}
       <IconButton
         icon={arrowIcon}
@@ -96,7 +92,6 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex + 1)
         }}
-        noBorder
         aria-label='Ver imagen siguiente'
       />
       <div className={styles.dots}>

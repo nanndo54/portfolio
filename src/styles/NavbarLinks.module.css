@@ -8,11 +8,10 @@
 }
 
 .base a {
-  font-size: 1.05rem;
-  font-family: var(--subtitle-font);
+  font-size: 1.1rem;
   font-weight: 600;
 
-  padding: 0.15rem 0.6rem;
+  padding: 0 0.75rem;
   border: 0.15rem solid transparent;
   border-radius: 1rem;
 

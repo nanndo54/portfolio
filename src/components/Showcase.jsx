@@ -89,7 +89,6 @@ export default function Showcase({ locale }) {
               iconProps={{ lightColor: true }}
               className={styles.closeButton}
               aria-label='Cerrar'
-              noBorder
             />
           </div>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
@@ -98,7 +97,6 @@ export default function Showcase({ locale }) {
               iconProps={{ lightColor: true }}
               className={styles.previousImage}
               onClick={handleShowPreviousImage}
-              noBorder
               aria-label='Ver imagen anterior'
               tabIndex={open ? 0 : -1}
             />
@@ -123,7 +121,6 @@ export default function Showcase({ locale }) {
               iconProps={{ lightColor: true }}
               className={styles.nextImage}
               onClick={handleShowNextImage}
-              noBorder
               aria-label='Ver imagen siguiente'
               tabIndex={open ? 0 : -1}
             />
@@ -134,13 +131,13 @@ export default function Showcase({ locale }) {
             <span className={styles.buttons}>
               <IconButton
                 icon={minusIcon}
-                iconProps={{ lightColor: true }}
+                iconProps={{ lightColor: true, border: true }}
                 onClick={() => ref.current?.zoomOut(0.2)}
                 aria-label='Reducir'
               />
               <IconButton
                 icon={plusIcon}
-                iconProps={{ lightColor: true }}
+                iconProps={{ lightColor: true, border: true }}
                 onClick={() => ref.current?.zoomIn(0.2)}
                 aria-label='Agrandar'
               />

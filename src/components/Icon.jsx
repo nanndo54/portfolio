@@ -5,6 +5,7 @@ import SVG from 'react-inlinesvg'
 
 export default function Icon({
   className = '',
+  border = false,
   src,
   alt = '',
   priority = false,
@@ -17,6 +18,7 @@ export default function Icon({
     <picture
       className={clsx(
         className,
+        border && styles.border,
         styles.base,
         contentColor && styles.contentColor,
         backgroundColor && styles.backgroundColor,

@@ -1,32 +1,22 @@
-'use client'
-
 import styles from '@/styles/Skill.module.css'
 
-import IconButton from '@/components/IconButton'
-import useAppStore from '@/state/store'
-import clsx from 'clsx/lite'
+import Icon from '@/components/Icon'
+import OpenShowcase from '@/components/OpenShowcase'
 
-const classNameBySize = {
-  small: styles.small
-}
-
-export default function Skill({ size = 'medium', name, icon, props, showcaseProps }) {
-  const { openShowcase } = useAppStore()
-
+export default async function Skill({
+  size = 'medium',
+  name,
+  icon,
+  props,
+  showcaseProps
+}) {
   return (
-    <div className={clsx(styles.base, classNameBySize[size])}>
-      <IconButton
-        icon={icon}
-        iconProps={props}
-        className={styles.icon}
-        title={name}
-        onClick={() =>
-          openShowcase({
-            images: [{ src: icon, alt: name, icon: true, props: showcaseProps }]
-          })
-        }
-      />
+    <OpenShowcase
+      className={styles.base}
+      images={[{ src: icon, alt: name, icon: true, props: showcaseProps }]}
+    >
+      <Icon className={styles.icon} border src={icon} title={name} {...props} />
       {size !== 'small' && <span>{name}</span>}
-    </div>
+    </OpenShowcase>
   )
 }

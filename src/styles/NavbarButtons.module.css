@@ -7,8 +7,9 @@
 }
 
 .base .language {
-  font-family: var(--subtitle-font);
   font-size: 1.6rem;
+  font-weight: 600;
+
   padding: 0.2rem 0.4rem;
 
   transition: color 0.5s;

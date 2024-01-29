@@ -6,6 +6,7 @@ header.base {
 }
 
 .info {
+  width: 28rem;
   align-self: flex-start;
   text-align: center;
 
@@ -27,14 +28,16 @@ header.base {
 
 main[top='true'] .info {
   opacity: 1;
-  /* transform: translateY(10rem); */
 
   pointer-events: all;
 }
 
+.title {
+  width: 100%;
+}
+
 .presentation {
   font-size: 1.25rem;
-  max-width: 27rem;
 }
 
 .buttons {
@@ -67,7 +70,6 @@ main[top='true'] .info {
 
 @media (max-width: 500px) {
   .info {
-    /* transform: translateY(12rem); */
     gap: 1.5rem;
   }
 

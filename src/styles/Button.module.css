@@ -1,9 +1,8 @@
 .base {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 
   height: 3rem;
   width: max-content;
@@ -11,8 +10,7 @@
   border-radius: 1rem;
 
   color: var(--alternate-foreground-color);
-  font-family: var(--title-font);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
 
@@ -40,10 +38,6 @@
   scale: 0.98;
 }
 
-.base > * {
-  flex: 1;
-}
-
 .base:hover {
   background-position: left;
 }
@@ -65,7 +59,8 @@
 }
 
 .base > picture {
-  height: 45%;
+  height: 50%;
+  width: auto;
 }
 
 @media (max-width: 700px) {

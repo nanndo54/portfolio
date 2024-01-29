@@ -2,19 +2,40 @@
   display: block;
   height: 100%;
   width: 100%;
+  font-size: 1rem;
 
   transition:
-    filter 0.5s,
-    scale 0.2s ease-out;
+    scale 0.2s ease-out,
+    border-color 0.5s;
   will-change: scale;
+
+  --dark-filter-value: invert(0.18);
+  --light-filter-value: invert(0.9);
+}
+
+.border {
+  border: 0.24rem solid var(--dim-accent-color);
+  border-radius: 50%;
+}
+
+.border > * {
+  padding: 17.5%;
+}
+
+.base:hover {
+  border-color: var(--accent-color);
+  scale: 1.05;
+}
+
+.base:active {
+  scale: 0.96;
 }
 
 .icon {
   height: 100%;
   width: 100%;
 
-  --dark-filter-value: invert(0.18);
-  --light-filter-value: invert(0.9);
+  transition: filter 0.5s;
 }
 
 .base.contentColor .icon {

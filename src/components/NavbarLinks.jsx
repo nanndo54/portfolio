@@ -1,12 +1,13 @@
 'use client'
 
-import Link from '@/components/Link'
-import useSectionObserver from '@/hooks/useSectionObserver'
 import styles from '@/styles/NavbarLinks.module.css'
+
+import Link from '@/components/Link'
+import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 
 export default function NavbarLinks({ links }) {
-  const currentSection = useSectionObserver()
+  const { currentSection } = useAppStore()
 
   return (
     <div className={styles.base}>

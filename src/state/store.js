@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react'
 
 const initialState = {
   isOnTop: true,
-  sectionsIntersection: [],
   theme: 'light',
+  currentSection: 'landing',
   showcase: {}
 }
 
@@ -23,25 +23,13 @@ const store = create(
 
           return { isOnTop }
         }),
-      setSectionIntersected: (id, intersected) =>
-        set((state) => {
-          const sectionsIntersection = [...state.sectionsIntersection]
-          const section = sectionsIntersection.find(
-            (sectionIntersection) => sectionIntersection.id === id
-          )
-          if (section) section.intersected = intersected
-          else sectionsIntersection.push({ id, intersected })
-
-          return {
-            sectionsIntersection
-          }
-        }),
       toggleTheme: () =>
         set((state) => {
           const theme = state.theme === 'light' ? 'dark' : 'light'
 
           return { theme }
         }),
+      setCurrentSection: (currentSection) => set(() => ({ currentSection })),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),
       closeShowcase: () =>

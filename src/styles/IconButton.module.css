@@ -3,33 +3,6 @@
   align-items: center;
   justify-content: center;
 
-  width: 2.8rem;
   height: 2.8rem;
-
-  border: 0.2rem solid var(--dim-accent-color);
-  border-radius: 50%;
-
-  transition: border-color 0.5s;
-}
-
-.base > * {
-  padding: 17.5%;
-}
-
-.noBorder {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-}
-
-.base:hover {
-  border-color: var(--accent-color);
-}
-
-.base:hover > * {
-  scale: 1.05;
-}
-
-.base:active > * {
-  scale: 0.96;
+  width: 2.8rem;
 }

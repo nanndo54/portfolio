@@ -5,6 +5,7 @@ import Icon from '@/components/Icon'
 import ImageCarrousel from '@/components/ImageCarrousel'
 import Skill from '@/components/Skill'
 
+import { codeIcon, webIcon } from '@/constants/icons'
 import skills from '@/constants/skills'
 import clsx from 'clsx/lite'
 
@@ -45,10 +46,12 @@ export default async function Project({
         {code && (
           <Button type='secondary' href={code} isExternal>
             {dictionary.button1}
+            <Icon src={codeIcon} contentColor />
           </Button>
         )}
         <Button href={web} isExternal>
           {dictionary.button2}
+          <Icon src={webIcon} backgroundColor />
         </Button>
       </div>
     </article>

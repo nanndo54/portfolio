@@ -6,7 +6,6 @@ import clsx from 'clsx/lite'
 
 export default function IconButton({
   className = '',
-  noBorder = false,
   href,
   onClick,
   icon,
@@ -28,7 +27,7 @@ export default function IconButton({
   ) : (
     <button
       type='button'
-      className={clsx(className, styles.base, noBorder && styles.noBorder)}
+      className={clsx(className, styles.base)}
       onClick={onClick}
       {...props}
     >

@@ -3,8 +3,7 @@ import { useEffect } from 'react'
 export default function useMouseTracker(ref, callback) {
   useEffect(() => {
     const element = ref.current
-
-    if (element) return
+    if (!element) return
 
     const mouseEvent = (e) => {
       if (!ref?.current) return

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "0.5.4",
+    "@plaiceholder/next": "^3.0.0",
     "@vercel/analytics": "1.1.2",
     "@vercel/speed-insights": "1.0.5",
     "clsx": "2.1.0",
@@ -22,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-inlinesvg": "4.1.1",
     "react-toggle-dark-mode": "1.1.1",
+    "react-useanimations": "2.10.0",
     "react-zoom-pan-pinch": "3.3.0",
     "server-only": "0.0.1",
     "zustand": "4.5.0"

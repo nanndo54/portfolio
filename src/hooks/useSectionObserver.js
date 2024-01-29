@@ -1,11 +1,12 @@
 import sections from '@/constants/section-ids'
 import useAppStore from '@/state/store'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function useSectionObserver() {
   const router = useRouter()
-  const { isOnTop, sectionsIntersection, setSectionIntersected } = useAppStore()
+  const { isOnTop, setCurrentSection } = useAppStore()
+  const [sectionsIntersection, setSectionsIntersected] = useState([])
 
   const currentSection = isOnTop
     ? sections[0].id
@@ -18,8 +19,19 @@ export default function useSectionObserver() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (setSectionIntersected)
-          setSectionIntersected(entry.target.id, entry.isIntersecting)
+        const id = entry.target.id
+        const intersected = entry.isIntersecting
+
+        setSectionsIntersected((sectionsIntersection) => {
+          const newSectionsIntersection = [...sectionsIntersection]
+          const section = newSectionsIntersection.find(
+            (sectionIntersection) => sectionIntersection.id === id
+          )
+          if (section) section.intersected = intersected
+          else newSectionsIntersection.push({ id, intersected })
+
+          return newSectionsIntersection
+        })
       },
       { threshold: 0.3 }
     )
@@ -31,11 +43,12 @@ export default function useSectionObserver() {
     return () => {
       observer.disconnect()
     }
-  }, [setSectionIntersected])
+  }, [])
 
   useEffect(() => {
-    if (currentSection) router.replace(`#${currentSection}`, { scroll: false })
-  }, [currentSection, router])
+    if (!currentSection) return
 
-  return currentSection
+    if (setCurrentSection) setCurrentSection(currentSection)
+    router.replace(`#${currentSection}`, { scroll: false })
+  }, [currentSection, setCurrentSection, router])
 }

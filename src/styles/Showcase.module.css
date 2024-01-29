@@ -63,10 +63,10 @@
 
   width: 3rem;
 
-  font-family: monospace;
   font-size: 1.25rem;
-  text-align: center;
+  font-family: monospace;
   font-weight: 600;
+  text-align: center;
 }
 
 .header > p {
@@ -103,24 +103,28 @@
 .base .footer {
   width: 100%;
   height: 6rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  text-align: right;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 0.1rem;
 
   z-index: 4;
   box-shadow: inset 0 -5.75rem 1.1rem -0.8rem var(--dim-dark-color);
 }
 
 .footer > p {
-  width: 2.5rem;
+  font-family: monospace;
+  font-weight: 600;
+
+  width: 3.25rem;
 }
 
 .footer > picture {
-  height: 3rem;
-  width: 3rem;
+  height: 2.8rem;
+  width: 2.8rem;
 }
 
 .buttons {
@@ -129,9 +133,11 @@
   justify-content: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
+
+  margin-left: 0.75rem;
 }
 
-.buttons button {
+.buttons picture {
   height: 2.6rem;
   width: 2.6rem;
   border-color: var(--light-color);
