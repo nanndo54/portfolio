@@ -16,8 +16,8 @@ export default function ImageCarrousel({
   height,
   width,
   border = false,
-  noZoom = false,
-  noAuto = false
+  zoom = true
+  // noAuto = false
 }) {
   const contentRef = useRef()
   const [imageIndex, setImageIndex] = useState(0)
@@ -55,7 +55,7 @@ export default function ImageCarrousel({
   const contentElement = (
     <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
       {images.map((image, index) => (
-        <Image key={index} {...image} height={height} width={width} noZoom />
+        <Image key={index} {...image} height={height} width={width} zoom={false} />
       ))}
     </div>
   )
@@ -79,7 +79,12 @@ export default function ImageCarrousel({
         }}
         aria-label='Ver imagen anterior'
       />
-      <OpenShowcase images={images} index={imageIndex} onIndexChange={handleImageChange}>
+      <OpenShowcase
+        disable={!zoom}
+        images={images}
+        index={imageIndex}
+        onIndexChange={handleImageChange}
+      >
         <div className={styles.container} style={{ maxHeight: height, maxWidth: width }}>
           {contentElement}
         </div>

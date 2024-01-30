@@ -27,10 +27,10 @@ export default async function Page({ params: { locale } }) {
         <Showcase locale={locale} />
         <GoToTopButton />
 
-        <div class={styles.background}>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className={styles.background}>
+          <div />
+          <div />
+          <div />
         </div>
 
         <SpeedInsights debug={false} />

@@ -26,7 +26,7 @@ export default function Avatar() {
           {...images.landing.profilePhoto}
           border
           priority
-          noZoom
+          zoom={false}
         />
       </button>
     </div>

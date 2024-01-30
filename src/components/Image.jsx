@@ -15,7 +15,7 @@ export default function Image({
   priority = false,
   className = '',
   border = false,
-  noZoom = false,
+  zoom = false,
   ...props
 }) {
   const locale = 'en'
@@ -34,9 +34,9 @@ export default function Image({
     />
   )
 
-  return noZoom ? (
-    imageElement
-  ) : (
-    <OpenShowcase images={[{ src, alt }]}>{imageElement}</OpenShowcase>
+  return (
+    <OpenShowcase disable={!zoom} images={[{ src, alt }]}>
+      {imageElement}
+    </OpenShowcase>
   )
 }
