@@ -110,7 +110,6 @@ export default function Showcase({ locale }) {
                     alt={alt}
                     width={defaultImageWidth}
                     height={(height * defaultImageWidth) / width || defaultImageHeight}
-                    noBorder
                     noZoom
                     aria-hidden={!open}
                   />

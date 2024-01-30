@@ -6,7 +6,7 @@ header.base {
 }
 
 .info {
-  width: 28rem;
+  max-width: 27.5rem;
   align-self: flex-start;
   text-align: center;
 

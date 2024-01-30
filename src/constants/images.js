@@ -6,8 +6,8 @@ const images = {
         en: 'Photograph of me',
         es: 'Mi fotografía'
       },
-      height: 320,
-      width: 320
+      height: 256,
+      width: 256
     }
   },
   projects: {
@@ -119,24 +119,49 @@ const images = {
     ]
   },
   aboutMe: {
-    guatemala: {
-      src: 'about-me/guatemala.jpg',
-      alt: {
-        en: 'Guatemala, Atitlán Lake',
-        es: 'Guatemala, Lago de Atitlán'
+    guatemala: [
+      {
+        src: 'about-me/guatemala/img1.jpg',
+        alt: {
+          en: 'Guatemala, Atitlán Lake',
+          es: 'Guatemala, Lago de Atitlán'
+        }
       },
-      height: 196,
-      width: 355
-    },
-    campus: {
-      src: 'about-me/campus.jpg',
-      alt: {
-        en: 'USAC, Faculty of Engineering',
-        es: 'USAC, Facultad de Ingeniería'
+      {
+        src: 'about-me/guatemala/img2.jpg',
+        alt: {
+          en: 'Guatemala, Atitlán Lake',
+          es: 'Guatemala, Lago de Atitlán'
+        }
       },
-      height: 196,
-      width: 355
-    }
+      {
+        src: 'about-me/guatemala/img3.jpg',
+        alt: {
+          en: 'Guatemala, Atitlán Lake',
+          es: 'Guatemala, Lago de Atitlán'
+        }
+      }
+    ],
+    usac: [
+      {
+        src: 'about-me/usac/img1.jpg',
+        alt: {
+          en: 'USAC, Faculty of Engineering',
+          es: 'USAC, Facultad de Ingeniería'
+        },
+        height: 196,
+        width: 355
+      },
+      {
+        src: 'about-me/usac/img2.jpg',
+        alt: {
+          en: 'USAC, Faculty of Engineering',
+          es: 'USAC, Facultad de Ingeniería'
+        },
+        height: 196,
+        width: 355
+      }
+    ]
   }
 }
 

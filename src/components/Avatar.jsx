@@ -24,6 +24,7 @@ export default function Avatar() {
         <Image
           className={styles.picture}
           {...images.landing.profilePhoto}
+          border
           priority
           noZoom
         />

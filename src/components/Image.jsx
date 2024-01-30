@@ -14,7 +14,7 @@ export default function Image({
   fill = false,
   priority = false,
   className = '',
-  noBorder = false,
+  border = false,
   noZoom = false,
   ...props
 }) {
@@ -24,7 +24,7 @@ export default function Image({
     <NextImage
       src={`/static/${src}`}
       alt={alt[locale]}
-      className={clsx(className, styles.base, noBorder && styles.noBorder, 'no-select')}
+      className={clsx(className, styles.base, border && styles.border, 'no-select')}
       draggable={false}
       height={height}
       width={width}

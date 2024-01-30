@@ -1,19 +1,35 @@
 .base {
   position: relative;
+  font-size: 0;
+}
+
+.border {
+  padding: 0.8rem;
+  border: 0.25rem solid var(--dim-accent-color);
+  border-radius: 1.5rem;
+
+  transition: border-color 0.5s;
+}
+
+.border .container {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.border .previousImage {
+  width: 2.5rem;
+  padding-left: 1rem;
+}
+
+.border .nextImage {
+  width: 2.5rem;
+  padding-right: 1rem;
 }
 
 .base.singleImage .previousImage,
 .base.singleImage .nextImage,
 .base.singleImage .dots {
   display: none;
-}
-
-.container {
-  width: 100%;
-
-  transition:
-    border-color 0.5s,
-    opacity 0.5s;
 }
 
 .content {
@@ -50,7 +66,7 @@
   width: 2.25rem;
 
   opacity: 0;
-  filter: drop-shadow(0 0 0.2rem var(--dark-color));
+  filter: drop-shadow(0 0 0.15rem var(--dark-color));
   transition:
     transform 0.1s ease-in-out,
     opacity 0.2s 0.1s;
@@ -58,6 +74,7 @@
 }
 
 .previousImage {
+  padding-left: 0.5rem;
   left: 0;
 }
 
@@ -66,12 +83,14 @@
 }
 
 .nextImage {
+  padding-right: 0.5rem;
   right: 0;
 }
 
 .dots {
   position: absolute;
   bottom: 1.2rem;
+  left: 0;
   width: 100%;
 
   display: flex;

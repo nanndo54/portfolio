@@ -2,19 +2,13 @@
   height: auto;
   width: 100%;
 
-  padding: 0.8rem;
-  border-radius: 1.5rem;
-  border: 0.25rem solid var(--dim-accent-color);
-
-  transition:
-    border 0.5s,
-    opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
-.base.noBorder {
-  border: none;
-  border-radius: 0;
-  padding: 0;
+.border {
+  padding: 0.8rem;
+  border: 0.25rem solid var(--dim-accent-color);
+  border-radius: 1.5rem;
 }
 
 main[dark='true'] .base {

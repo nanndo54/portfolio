@@ -1,17 +1,17 @@
 import styles from '@/styles/AboutMeSection.module.css'
 
-import Image from '@/components/Image'
+import ImageCarrousel from '@/components/ImageCarrousel'
 import Section from '@/components/Section'
 import images from '@/constants/images'
 
 export default async function AboutMeSection({ id, dictionary }) {
   const subsections = [
     {
-      image: images.aboutMe.guatemala,
+      images: images.aboutMe.guatemala,
       text: dictionary.text2
     },
     {
-      image: images.aboutMe.campus,
+      images: images.aboutMe.usac,
       text: dictionary.text3
     }
   ]
@@ -20,9 +20,15 @@ export default async function AboutMeSection({ id, dictionary }) {
     <Section id={id}>
       <h2>{dictionary.title}</h2>
       <p>{dictionary.text1}</p>
-      {subsections.map(({ image, text }, i) => (
+      {subsections.map(({ images, text }, i) => (
         <div key={i} className={styles.subsection}>
-          <Image {...image} />
+          <ImageCarrousel
+            className={styles.images}
+            border
+            images={images}
+            height={171}
+            width={256}
+          />
           <p>{text}</p>
         </div>
       ))}

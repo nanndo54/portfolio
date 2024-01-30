@@ -2,11 +2,11 @@
 
 import useAppStore from '@/state/store'
 
-export default function OpenShowcase({ children, ...showcase }) {
+export default function OpenShowcase({ className = '', children, ...showcase }) {
   const { openShowcase } = useAppStore()
 
   return (
-    <button type='button' onClick={() => openShowcase(showcase)}>
+    <button type='button' className={className} onClick={() => openShowcase(showcase)}>
       {children}
     </button>
   )

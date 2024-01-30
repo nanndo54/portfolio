@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/styles/ImageCarrousel.module.css'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 
 import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
@@ -11,10 +11,11 @@ import useDebouncedCallback from '@/hooks/useDebouncedCallback'
 import clsx from 'clsx/lite'
 
 export default function ImageCarrousel({
+  className,
   images,
   height,
   width,
-  noBorder = false,
+  border = false,
   noZoom = false,
   noAuto = false
 }) {
@@ -35,15 +36,15 @@ export default function ImageCarrousel({
     [images.length]
   )
 
-  useEffect(() => {
-    if (noAuto || singleImage) return
-    const interval = setInterval(
-      () => handleImageChange(imageIndex + 1),
-      5000 + Math.random() * 3000
-    )
+  // useEffect(() => {
+  //   if (noAuto || singleImage) return
+  //   const interval = setInterval(
+  //     () => handleImageChange(imageIndex + 1),
+  //     5000 + Math.random() * 3000
+  //   )
 
-    return () => clearInterval(interval)
-  }, [noAuto, singleImage, handleImageChange, imageIndex, images])
+  //   return () => clearInterval(interval)
+  // }, [noAuto, singleImage, handleImageChange, imageIndex, images])
 
   const handleScroll = useDebouncedCallback((event) => {
     const { scrollLeft, clientWidth } = event.target
@@ -54,13 +55,20 @@ export default function ImageCarrousel({
   const contentElement = (
     <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
       {images.map((image, index) => (
-        <Image key={index} {...image} height={height} width={width} noBorder noZoom />
+        <Image key={index} {...image} height={height} width={width} noZoom />
       ))}
     </div>
   )
 
   return (
-    <div className={clsx(styles.base, singleImage && styles.singleImage)}>
+    <div
+      className={clsx(
+        className,
+        styles.base,
+        border && styles.border,
+        singleImage && styles.singleImage
+      )}
+    >
       <IconButton
         icon={arrowIcon}
         iconProps={{ lightColor: true }}
@@ -71,19 +79,11 @@ export default function ImageCarrousel({
         }}
         aria-label='Ver imagen anterior'
       />
-      {noZoom ? (
-        <div className={clsx(styles.container, noBorder && styles.noBorder)}>
+      <OpenShowcase images={images} index={imageIndex} onIndexChange={handleImageChange}>
+        <div className={styles.container} style={{ maxHeight: height, maxWidth: width }}>
           {contentElement}
         </div>
-      ) : (
-        <OpenShowcase
-          images={images}
-          index={imageIndex}
-          onIndexChange={handleImageChange}
-        >
-          {contentElement}
-        </OpenShowcase>
-      )}
+      </OpenShowcase>
       <IconButton
         icon={arrowIcon}
         iconProps={{ lightColor: true }}

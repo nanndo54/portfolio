@@ -3,7 +3,7 @@ import { Lora, Mukta, Proza_Libre } from 'next/font/google'
 export const titleFont = Lora({
   display: 'swap',
   style: 'italic',
-  weight: ['500'],
+  weight: ['600'],
   subsets: ['latin'],
   variable: '--title-font'
 })

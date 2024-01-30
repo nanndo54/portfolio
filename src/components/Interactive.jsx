@@ -5,15 +5,27 @@ import styles from '@/styles/Interactive.module.css'
 import useMouseTracker from '@/hooks/useMouseTracker'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import useTopObserver from '@/hooks/useTopObserver'
-import { useRef } from 'react'
+import useAppStore from '@/state/store'
+import { useEffect, useRef } from 'react'
 
 export default function Interactive({ children }) {
+  const { theme, isOnTop } = useAppStore()
   const ref = useRef()
 
   useMouseTracker(ref, (x, y) => {
     ref.current.style.setProperty('--x', x)
     ref.current.style.setProperty('--y', y)
   })
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main')
+    mainElement.setAttribute('dark', theme === 'dark')
+  }, [theme])
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main')
+    mainElement.setAttribute('top', isOnTop)
+  }, [isOnTop])
 
   useTopObserver()
 
