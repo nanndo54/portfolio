@@ -1,6 +1,7 @@
 .base {
   display: flex;
   align-items: center;
+  gap: 0.25rem;
 
   margin-right: 4.2rem;
 
@@ -8,12 +9,12 @@
 }
 
 .base a {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 
-  padding: 0 0.75rem;
+  padding: 0 0.5rem;
   border: 0.15rem solid transparent;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 
   transition:
     color 0.2s ease-out,

@@ -7,12 +7,13 @@ import clsx from 'clsx/lite'
 export default function IconButton({
   className = '',
   href,
+  ariaLabel,
+  tabIndex,
   onClick,
-  icon,
-  iconProps = {},
+  src,
   ...props
 }) {
-  const childrenElement = <Icon src={icon} {...iconProps} />
+  const childrenElement = <Icon src={src} {...props} />
 
   return href ? (
     <Link
@@ -20,7 +21,8 @@ export default function IconButton({
       href={href}
       isExternal
       noDecoration
-      {...props}
+      ariaLabel={ariaLabel}
+      tabIndex={tabIndex}
     >
       {childrenElement}
     </Link>
@@ -29,7 +31,8 @@ export default function IconButton({
       type='button'
       className={clsx(className, styles.base)}
       onClick={onClick}
-      {...props}
+      aria-label={ariaLabel}
+      tabIndex={tabIndex}
     >
       {childrenElement}
     </button>

@@ -17,7 +17,6 @@ export default function ImageCarrousel({
   width,
   border = false,
   zoom = true
-  // noAuto = false
 }) {
   const contentRef = useRef()
   const [imageIndex, setImageIndex] = useState(0)
@@ -35,16 +34,6 @@ export default function ImageCarrousel({
     },
     [images.length]
   )
-
-  // useEffect(() => {
-  //   if (noAuto || singleImage) return
-  //   const interval = setInterval(
-  //     () => handleImageChange(imageIndex + 1),
-  //     5000 + Math.random() * 3000
-  //   )
-
-  //   return () => clearInterval(interval)
-  // }, [noAuto, singleImage, handleImageChange, imageIndex, images])
 
   const handleScroll = useDebouncedCallback((event) => {
     const { scrollLeft, clientWidth } = event.target
@@ -70,14 +59,14 @@ export default function ImageCarrousel({
       )}
     >
       <IconButton
-        icon={arrowIcon}
-        iconProps={{ lightColor: true }}
+        src={arrowIcon}
+        lightColor
         className={styles.previousImage}
         onClick={(ev) => {
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        aria-label='Ver imagen anterior'
+        ariaLabel='Ver imagen anterior'
       />
       <OpenShowcase
         disable={!zoom}
@@ -90,14 +79,14 @@ export default function ImageCarrousel({
         </div>
       </OpenShowcase>
       <IconButton
-        icon={arrowIcon}
-        iconProps={{ lightColor: true }}
+        src={arrowIcon}
+        lightColor
         className={styles.nextImage}
         onClick={(ev) => {
           ev.stopPropagation()
           handleImageChange(imageIndex + 1)
         }}
-        aria-label='Ver imagen siguiente'
+        ariaLabel='Ver imagen siguiente'
       />
       <div className={styles.dots}>
         {images.map((_, index) => (

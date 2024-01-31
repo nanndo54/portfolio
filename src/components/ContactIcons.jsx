@@ -9,11 +9,13 @@ export default async function ContactIcons({ tabIndex }) {
       {contacts.map(({ name, icon, url, props }) => (
         <IconButton
           key={name}
-          icon={icon}
-          iconProps={{ ...props, border: true }}
+          src={icon}
+          border
           aria-label={name}
           href={url}
           tabIndex={tabIndex}
+          priority
+          {...props}
         />
       ))}
     </nav>

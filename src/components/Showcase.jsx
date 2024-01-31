@@ -85,19 +85,19 @@ export default function Showcase({ locale }) {
             )}
             <p>{alt[locale]}</p>
             <IconButton
-              icon={closeIcon}
-              iconProps={{ lightColor: true }}
+              src={closeIcon}
+              lightColor
               className={styles.closeButton}
-              aria-label='Cerrar'
+              ariaLabel='Cerrar'
             />
           </div>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
             <IconButton
-              icon={arrowIcon}
-              iconProps={{ lightColor: true }}
+              src={arrowIcon}
+              lightColor
               className={styles.previousImage}
               onClick={handleShowPreviousImage}
-              aria-label='Ver imagen anterior'
+              ariaLabel='Ver imagen anterior'
               tabIndex={open ? 0 : -1}
             />
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
@@ -116,11 +116,11 @@ export default function Showcase({ locale }) {
                 ))}
             </TransformComponent>
             <IconButton
-              icon={arrowIcon}
-              iconProps={{ lightColor: true }}
+              src={arrowIcon}
+              lightColor
               className={styles.nextImage}
               onClick={handleShowNextImage}
-              aria-label='Ver imagen siguiente'
+              ariaLabel='Ver imagen siguiente'
               tabIndex={open ? 0 : -1}
             />
           </div>
@@ -129,16 +129,18 @@ export default function Showcase({ locale }) {
             <p>{(scale * 100).toFixed(0)}%</p>
             <span className={styles.buttons}>
               <IconButton
-                icon={minusIcon}
-                iconProps={{ lightColor: true, border: true }}
+                src={minusIcon}
+                lightColor
+                border
                 onClick={() => ref.current?.zoomOut(0.2)}
-                aria-label='Reducir'
+                ariaLabel='Reducir'
               />
               <IconButton
-                icon={plusIcon}
-                iconProps={{ lightColor: true, border: true }}
+                src={plusIcon}
+                lightColor
+                border
                 onClick={() => ref.current?.zoomIn(0.2)}
-                aria-label='Agrandar'
+                ariaLabel='Agrandar'
               />
             </span>
           </div>
