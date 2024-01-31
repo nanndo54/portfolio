@@ -9,11 +9,11 @@
   border-radius: 50%;
 
   position: absolute;
-  top: calc(var(--y, 0) * 1px - 50vw);
-  left: calc(var(--x, 0) * 1px - 50vw);
+  top: calc(var(--y, 0) * 1px - 30vw);
+  left: calc(var(--x, 0) * 1px - 30vw);
 
-  width: 100vw;
-  height: 100vw;
+  width: 60vw;
+  height: 60vw;
 
   opacity: 0;
   transition: opacity 0.2s;
