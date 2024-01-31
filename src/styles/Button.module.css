@@ -6,7 +6,7 @@
 
   height: 2.8rem;
   width: max-content;
-  padding: 0rem 1rem;
+  padding: 0 1rem;
   border-radius: 1rem;
 
   color: var(--alternate-foreground-color);
@@ -21,7 +21,6 @@
   );
   background-size: 150% 100%;
   background-position: right;
-  box-shadow: var(--dim-content-color) 0 0 0.35rem 0.35rem inset;
 
   transition:
     background-position 0.5s,

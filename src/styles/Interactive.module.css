@@ -5,19 +5,15 @@
 
 .base::after {
   content: '';
-  background: radial-gradient(
-    var(--accent-color),
-    var(--accent-color) 40%,
-    #ffffff00 60%
-  );
+  background: radial-gradient(closest-side, var(--accent-color), #ffffff00);
   border-radius: 50%;
 
   position: absolute;
-  top: calc(var(--y, 0) * 1px - 30rem);
-  left: calc(var(--x, 0) * 1px - 30rem);
+  top: calc(var(--y, 0) * 1px - 50vw);
+  left: calc(var(--x, 0) * 1px - 50vw);
 
-  width: 60rem;
-  height: 60rem;
+  width: 100vw;
+  height: 100vw;
 
   opacity: 0;
   transition: opacity 0.2s;
@@ -26,7 +22,7 @@
 }
 
 .base:hover::after {
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 @media (pointer: coarse) {

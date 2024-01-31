@@ -13,7 +13,7 @@ export default function Icon({
   border = false,
   src,
   alt = '',
-  priority = true,
+  priority = false,
   contentColor = false,
   backgroundColor = false,
   lightColor = false,

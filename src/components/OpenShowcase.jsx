@@ -1,6 +1,7 @@
 'use client'
 
 import useAppStore from '@/state/store'
+import styles from '@/styles/OpenShowcase.module.css'
 
 export default function OpenShowcase({ disable = false, children, ...showcase }) {
   const { openShowcase } = useAppStore()
@@ -8,7 +9,7 @@ export default function OpenShowcase({ disable = false, children, ...showcase })
   return disable ? (
     children
   ) : (
-    <button type='button' onClick={() => openShowcase(showcase)}>
+    <button className={styles.base} type='button' onClick={() => openShowcase(showcase)}>
       {children}
     </button>
   )

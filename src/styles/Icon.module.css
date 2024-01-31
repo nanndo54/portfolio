@@ -7,7 +7,8 @@
   transition:
     scale 0.2s ease-out,
     border-color 0.5s,
-    background-color 0.5s;
+    background-color 0.5s,
+    backdrop-filter 0.5s;
   will-change: scale;
 
   --dark-filter-value: invert(0.18);

@@ -48,6 +48,8 @@ export default function Showcase({ locale }) {
   }, [index, images, onIndexChange, setShowcase])
 
   useEffect(() => {
+    if (!open) return
+
     const handleKeyDown = (ev) => {
       if (ev.key === 'Escape') handleClose()
       if (ev.key === 'ArrowLeft') handleShowPreviousImage()
@@ -57,7 +59,7 @@ export default function Showcase({ locale }) {
     window.addEventListener('keydown', handleKeyDown)
 
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [open, index, handleClose, handleShowPreviousImage, handleShowNextImage])
+  }, [open, handleClose, handleShowPreviousImage, handleShowNextImage])
 
   return (
     <div

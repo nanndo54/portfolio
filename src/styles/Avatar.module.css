@@ -18,7 +18,7 @@
 
 main[top='false'] .base {
   position: fixed;
-  transform: translate(4.5rem, -5.5rem) scale(0.16);
+  transform: translate(4rem, -5rem) scale(0.16);
   pointer-events: all;
 }
 
@@ -35,7 +35,7 @@ main[top='false'] .base {
   width: 100%;
 
   opacity: 0.5;
-  scale: 1.1;
+  scale: 1.05;
 
   transition:
     opacity 0.4s,
@@ -46,8 +46,8 @@ main[top='false'] .base {
 }
 
 .base .picture {
-  border-width: 0.15rem;
-  border-color: var(--secondary-accent-color);
+  border-width: 0.5rem;
+  border-color: var(--dim-secondary-accent-color);
   border-radius: 50%;
   filter: grayscale(15%);
 }
@@ -68,7 +68,7 @@ main[top='false'] .base .picture {
 
 @media (max-width: 700px) {
   main[top='false'] .base {
-    transform: translate(5.5rem, -6rem) scale(0.14);
+    transform: translate(5rem, -5.5rem) scale(0.14);
   }
 }
 

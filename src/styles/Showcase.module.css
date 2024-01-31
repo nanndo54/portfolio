@@ -95,9 +95,6 @@
 
 .icon picture {
   width: 15rem;
-}
-
-.icon picture:has(svg) {
   filter: drop-shadow(0 0 0.4rem var(--dark-color));
 }
 
@@ -132,8 +129,8 @@
 }
 
 .footer > picture {
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 2.3rem;
+  width: 2.3rem;
 }
 
 .buttons {
@@ -152,12 +149,18 @@
   border-color: var(--light-color);
 }
 
-.previousImage {
+.previousImage,
+.nextImage {
   position: absolute;
-  left: 2rem;
+  width: 2.2rem;
   top: 50%;
 
+  filter: drop-shadow(0 0 0.2rem var(--dark-color));
   z-index: 4;
+}
+
+.previousImage {
+  left: 1.5rem;
 }
 
 .previousImage picture {
@@ -165,11 +168,7 @@
 }
 
 .nextImage {
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-
-  z-index: 4;
+  right: 1.5rem;
 }
 
 .base.singleImage .previousImage,

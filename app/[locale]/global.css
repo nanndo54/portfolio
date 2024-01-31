@@ -29,13 +29,13 @@ body {
   --content-color: rgb(50, 50, 50);
   --dim-content-color: rgba(100, 100, 100, 0.05);
 
-  --background-color: rgb(244, 245, 250);
-  --dim-background-color: rgba(210, 210, 250, 0.4);
+  --background-color: rgb(252, 252, 255);
+  --dim-background-color: rgba(252, 252, 255, 0.25);
 
   --accent-color: #519cff;
   --dim-accent-color: #6295f560;
 
-  --secondary-accent-color: #656afd;
+  --secondary-accent-color: #5359f3;
   --dim-secondary-accent-color: #656afd60;
 }
 
@@ -46,14 +46,14 @@ body:has(main[dark='true']) {
   --content-color: rgb(225, 225, 235);
   --dim-content-color: rgb(220, 220, 230, 0.1);
 
-  --background-color: rgb(32, 38, 55);
-  --dim-background-color: rgba(35, 35, 45, 0.4);
+  --background-color: rgb(11, 13, 17);
+  --dim-background-color: rgb(11, 13, 17, 0.25);
 
-  --accent-color: #6295f5;
-  --dim-accent-color: #6295f565;
+  --accent-color: #519cff;
+  --dim-accent-color: #6295f520;
 
-  --secondary-accent-color: #6266f5;
-  --dim-secondary-accent-color: #6266f565;
+  --secondary-accent-color: #6b6ff3;
+  --dim-secondary-accent-color: #6b6ff330;
 }
 
 p {
@@ -68,8 +68,9 @@ p {
 h1 {
   font-family: var(--title-font);
   font-weight: 600;
-  font-size: 3.8rem;
-  letter-spacing: 0.2rem;
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem var(--accent-color);
 
   scale: 1.2 1;
   line-height: 1.15;
@@ -198,10 +199,11 @@ strong {
 .blur-background {
   border: 0.125rem solid var(--dim-accent-color);
   border-radius: 2rem;
-  background-color: #ffffff1a;
-  backdrop-filter: blur(0.5rem) saturate(150%) brightness(101%);
+  background-color: var(--dim-background-color);
+  backdrop-filter: blur(0.5rem) saturate(150%) brightness(96%);
 
   transition:
+    backdrop-filter 0.5s,
     background-color 0.5s,
     border-color 0.5s;
 
@@ -209,7 +211,7 @@ strong {
 }
 
 .blur-background:hover {
-  background-color: #ffffff2f;
+  backdrop-filter: blur(0.5rem) saturate(200%) brightness(104%);
 }
 
 .no-select,
