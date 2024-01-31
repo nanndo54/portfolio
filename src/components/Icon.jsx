@@ -20,7 +20,7 @@ export default function Icon({
   ...props
 }) {
   return (
-    <picture
+    <figure
       className={clsx(
         className,
         classNameByType[type],
@@ -50,6 +50,6 @@ export default function Icon({
           {...props}
         />
       )}
-    </picture>
+    </figure>
   )
 }

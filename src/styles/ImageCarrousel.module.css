@@ -78,7 +78,7 @@
   left: 0;
 }
 
-.previousImage picture {
+.previousImage figure {
   transform: rotate(180deg);
 }
 

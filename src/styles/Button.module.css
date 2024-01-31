@@ -57,7 +57,7 @@
   border-color: var(--accent-color);
 }
 
-.base > picture {
+.base > figure {
   height: 50%;
   width: auto;
 }

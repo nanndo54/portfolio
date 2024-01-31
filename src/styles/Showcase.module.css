@@ -93,16 +93,16 @@
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }
 
-.icon picture {
+.icon figure {
   width: 15rem;
   filter: drop-shadow(0 0 0.4rem var(--dark-color));
 }
 
-.icon picture img {
+.icon figure img {
   width: 100%;
 }
 
-.icon picture:hover {
+.icon figure:hover {
   scale: none;
 }
 
@@ -128,7 +128,7 @@
   width: 3.25rem;
 }
 
-.footer > picture {
+.footer > figure {
   height: 2.3rem;
   width: 2.3rem;
 }
@@ -143,7 +143,7 @@
   margin-left: 0.75rem;
 }
 
-.buttons picture {
+.buttons figure {
   height: 2.6rem;
   width: 2.6rem;
   border-color: var(--light-color);
@@ -163,7 +163,7 @@
   left: 1.5rem;
 }
 
-.previousImage picture {
+.previousImage figure {
   transform: rotate(180deg);
 }
 
@@ -203,7 +203,7 @@
     width: 100vw;
   }
 
-  .icon picture {
+  .icon figure {
     width: 50vw;
   }
 }

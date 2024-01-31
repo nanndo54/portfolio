@@ -34,14 +34,14 @@
   }
 }
 
-.arrow picture {
+.arrow figure {
   height: 100%;
   width: 100%;
   transform: rotate(-90deg);
   transition: transform 0.5s;
 }
 
-.arrow:hover picture {
+.arrow:hover figure {
   transform: translateY(-0.5rem) rotate(-90deg);
 }
 
@@ -100,7 +100,7 @@ main[top='false'] .arrow {
   transition: background-color 0.5s;
 }
 
-.timeline picture {
+.timeline figure {
   width: 3.5rem;
   height: 3.5rem;
 
@@ -153,7 +153,7 @@ main[top='false'] .arrow {
     gap: 1.8rem;
   }
 
-  .timeline picture {
+  .timeline figure {
     width: 2.8rem;
     height: 2.8rem;
   }

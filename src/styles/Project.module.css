@@ -23,7 +23,7 @@
   gap: 0.6rem;
 }
 
-.title picture {
+.title figure {
   height: 1.75rem;
   width: 1.75rem;
   filter: drop-shadow(0 0 0.015rem var(--dark-color));
@@ -51,7 +51,7 @@
   gap: 0.75rem;
 }
 
-.skills picture {
+.skills figure {
   height: 2.25rem;
   width: 2.25rem;
 }
