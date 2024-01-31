@@ -3,12 +3,12 @@
   top: 0;
   right: 0;
 
-  height: 16rem;
-  width: 16rem;
+  height: 15rem;
+  width: 15rem;
 
   background-clip: content-box;
 
-  transform: translate(calc(23rem - 50vw), 12.5rem);
+  transform: translate(calc(22rem - 50vw), 12.5rem);
   transition: transform 0.2s ease-out;
   will-change: transform;
 
@@ -46,7 +46,8 @@ main[top='false'] .base {
 }
 
 .base .picture {
-  border-width: 0.4rem;
+  border-width: 0.15rem;
+  border-color: var(--secondary-accent-color);
   border-radius: 50%;
   filter: grayscale(15%);
 }
@@ -59,9 +60,9 @@ main[top='false'] .base .picture {
   opacity: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .base {
-    transform: translate(calc(8rem - 50vw), 9rem) scale(1.1);
+    transform: translate(calc(8rem - 50vw), 9rem);
   }
 }
 
@@ -73,12 +74,12 @@ main[top='false'] .base .picture {
 
 @media (max-width: 500px) {
   .base {
-    transform: translate(calc(8rem - 50vw), 7.5rem) scale(1.05);
+    transform: translate(calc(8rem - 50vw), 7.5rem);
   }
 }
 
-@media (max-width: 500px) and (max-height: 850px) {
+@media (max-width: 500px) and (max-height: 800px) {
   .base {
-    transform: translate(calc(8rem - 50vw), 3.5rem) scale(0.8);
+    transform: translate(calc(8rem - 50vw), 5rem) scale(0.8);
   }
 }

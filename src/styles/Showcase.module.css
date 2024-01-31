@@ -86,7 +86,7 @@
   overflow: visible;
 }
 
-.canvas img {
+.canvas:not(.icon) img {
   height: auto;
   width: 70vw;
 
@@ -95,9 +95,14 @@
 
 .icon picture {
   width: 15rem;
+}
 
-  box-shadow: none;
+.icon picture:has(svg) {
   filter: drop-shadow(0 0 0.4rem var(--dark-color));
+}
+
+.icon picture img {
+  width: 100%;
 }
 
 .icon picture:hover {

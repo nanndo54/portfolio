@@ -37,11 +37,11 @@ export default async function Project({
         <p>{dictionary[name.toLowerCase()]}</p>
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <Skill key={skill.name} {...skill} size='small' />
+            <Skill key={skill.name} {...skill} type='secondary' size='small' />
           ))}
         </div>
       </div>
-      <ImageCarrousel images={images} height={209} width={418} />
+      <ImageCarrousel images={images} height={213} width={426} />
       <div className={styles.footer}>
         {code && (
           <Button type='secondary' href={code} isExternal>

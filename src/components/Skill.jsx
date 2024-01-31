@@ -5,8 +5,9 @@ import OpenShowcase from '@/components/OpenShowcase'
 
 export default async function Skill({
   size = 'medium',
-  name,
   icon,
+  type,
+  name,
   props,
   showcaseProps
 }) {
@@ -15,9 +16,9 @@ export default async function Skill({
       <div className={styles.base}>
         <Icon
           className={styles.icon}
-          type='secondary'
-          border
           src={icon}
+          type={type}
+          border
           title={name}
           {...props}
         />

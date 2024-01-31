@@ -13,7 +13,7 @@ export default function Icon({
   border = false,
   src,
   alt = '',
-  priority = false,
+  priority = true,
   contentColor = false,
   backgroundColor = false,
   lightColor = false,
@@ -24,7 +24,7 @@ export default function Icon({
       className={clsx(
         className,
         classNameByType[type],
-        border && styles.border,
+        border && `${styles.border} blur-background`,
         styles.base,
         contentColor && styles.contentColor,
         backgroundColor && styles.backgroundColor,

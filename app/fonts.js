@@ -10,8 +10,8 @@ export const titleFont = Lora({
 
 export const subTitleFont = Proza_Libre({
   display: 'swap',
-  style: ['normal'],
-  weight: ['600'],
+  style: 'normal',
+  weight: ['600', '500'],
   subsets: ['latin'],
   variable: '--subtitle-font'
 })

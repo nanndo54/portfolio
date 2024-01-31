@@ -10,7 +10,7 @@
 
 .border {
   padding: 0.8rem;
-  border: 0.25rem solid var(--dim-accent-color);
+  border: 0.1rem solid var(--accent-color);
   border-radius: 1.5rem;
 }
 

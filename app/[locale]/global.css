@@ -32,11 +32,11 @@ body {
   --background-color: rgb(244, 245, 250);
   --dim-background-color: rgba(210, 210, 250, 0.4);
 
-  --accent-color: #6295f5;
-  --dim-accent-color: #6295f5a0;
+  --accent-color: #519cff;
+  --dim-accent-color: #6295f560;
 
-  --secondary-accent-color: #6266f5;
-  --dim-secondary-accent-color: #6266f577;
+  --secondary-accent-color: #656afd;
+  --dim-secondary-accent-color: #656afd60;
 }
 
 body:has(main[dark='true']) {
@@ -49,11 +49,11 @@ body:has(main[dark='true']) {
   --background-color: rgb(32, 38, 55);
   --dim-background-color: rgba(35, 35, 45, 0.4);
 
-  --accent-color: #6266f5;
-  --dim-accent-color: #6266f577;
+  --accent-color: #6295f5;
+  --dim-accent-color: #6295f565;
 
-  --secondary-accent-color: #6295f5;
-  --dim-secondary-accent-color: #6295f577;
+  --secondary-accent-color: #6266f5;
+  --dim-secondary-accent-color: #6266f565;
 }
 
 p {
@@ -68,8 +68,8 @@ p {
 h1 {
   font-family: var(--title-font);
   font-weight: 600;
-  font-size: 4rem;
-  letter-spacing: 0.15rem;
+  font-size: 3.8rem;
+  letter-spacing: 0.2rem;
 
   scale: 1.2 1;
   line-height: 1.15;
@@ -125,7 +125,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
 }
 
 h5 {
@@ -142,7 +142,7 @@ h6 {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
   }
 
   h2 {
@@ -160,11 +160,15 @@ h6 {
   }
 
   h4 {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  p {
+    font-size: 1.1rem;
+  }
+
   h1 {
     font-size: 3rem;
   }
@@ -192,21 +196,20 @@ strong {
 }
 
 .blur-background {
-  border: 0.3rem solid var(--dim-accent-color);
+  border: 0.125rem solid var(--dim-accent-color);
   border-radius: 2rem;
-  box-shadow: var(--dim-accent-color) 0 0 0.15rem 0.02rem inset;
-  backdrop-filter: blur(0.5rem);
+  background-color: #ffffff1a;
+  backdrop-filter: blur(0.5rem) saturate(150%) brightness(101%);
 
   transition:
-    background-color 0.25s,
-    border-color 0.25s,
-    box-shadow 0.25s;
+    background-color 0.5s,
+    border-color 0.5s;
 
   overflow: hidden;
 }
 
 .blur-background:hover {
-  background-color: #ffffff0a;
+  background-color: #ffffff2f;
 }
 
 .no-select,

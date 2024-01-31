@@ -13,7 +13,7 @@
   font-weight: 600;
 
   padding: 0 0.5rem;
-  border: 0.15rem solid transparent;
+  border: 0.1rem solid transparent;
   border-radius: 1.5rem;
 
   transition:
@@ -23,8 +23,7 @@
 }
 
 .base a.current {
-  color: var(--accent-color);
-  border-color: var(--dim-accent-color);
+  border-color: var(--accent-color);
 }
 
 .base a:not(.current) {

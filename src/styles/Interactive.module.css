@@ -7,7 +7,7 @@
   content: '';
   background: radial-gradient(
     var(--accent-color),
-    var(--dim-accent-color) 40%,
+    var(--accent-color) 40%,
     #ffffff00 60%
   );
   border-radius: 50%;
@@ -26,7 +26,7 @@
 }
 
 .base:hover::after {
-  opacity: 0.08;
+  opacity: 0.05;
 }
 
 @media (pointer: coarse) {

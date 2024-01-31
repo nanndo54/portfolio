@@ -10,7 +10,14 @@
 
   /* background-color: var(--background-color); */
   /* background-image: url('/static/background.svg'); */
-  background-repeat: repeat-y;
+  background-image: radial-gradient(
+      at 47% 45%,
+      var(--dim-accent-color) 0,
+      transparent 89%
+    ),
+    radial-gradient(at 82% 65%, var(--dim-secondary-accent-color) 0, transparent 55%);
+
+  /* background-repeat: repeat-y; */
   background-attachment: local;
   background-size: 100vw, 100%;
 }
@@ -21,6 +28,7 @@
 }
 
 .background {
+  display: none;
   position: absolute;
   overflow: hidden;
   width: 100%;

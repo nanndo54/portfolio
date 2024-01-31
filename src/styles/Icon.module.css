@@ -6,15 +6,24 @@
 
   transition:
     scale 0.2s ease-out,
-    border-color 0.5s;
+    border-color 0.5s,
+    background-color 0.5s;
   will-change: scale;
 
   --dark-filter-value: invert(0.18);
   --light-filter-value: invert(0.9);
 }
 
+.base:hover {
+  scale: 1.05;
+}
+
+.base:active {
+  scale: 0.96;
+}
+
 .border {
-  border: 0.2rem solid var(--dim-accent-color);
+  border: 0.1rem solid var(--accent-color);
   border-radius: 50%;
 }
 
@@ -23,20 +32,7 @@
 }
 
 .secondary {
-  border-color: var(--dim-secondary-accent-color);
-}
-
-.secondary:hover {
   border-color: var(--secondary-accent-color);
-}
-
-.base:hover {
-  border-color: var(--accent-color);
-  scale: 1.05;
-}
-
-.base:active {
-  scale: 0.96;
 }
 
 .icon {
