@@ -16,7 +16,7 @@
 
 @media (max-width: 700px) {
   .subsection {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1.75rem;
   }
 

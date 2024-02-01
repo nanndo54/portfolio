@@ -5,7 +5,7 @@
 
 .base::after {
   content: '';
-  background: radial-gradient(closest-side, var(--accent-color), #ffffff00);
+  background: radial-gradient(closest-side, var(--accent-color), transparent);
   border-radius: 50%;
 
   position: absolute;

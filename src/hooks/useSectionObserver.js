@@ -1,4 +1,4 @@
-import sections from '@/constants/section-ids'
+import sections from '@/constants/sections'
 import useAppStore from '@/state/store'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -37,6 +37,7 @@ export default function useSectionObserver() {
     )
 
     sectionsElements.forEach((element) => {
+      console.log('🚀 | element:', element)
       observer.observe(element)
     })
 
@@ -49,6 +50,6 @@ export default function useSectionObserver() {
     if (!currentSection) return
 
     if (setCurrentSection) setCurrentSection(currentSection)
-    // router.replace(`#${currentSection}`, { scroll: false })
+    router.replace(`#${currentSection}`, { scroll: false })
   }, [currentSection, setCurrentSection, router])
 }

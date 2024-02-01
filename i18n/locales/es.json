@@ -1,31 +1,252 @@
 {
-  "landing": {
-    "cv": "static/landing/cv/es.pdf",
-    "title": "Inicio",
-    "status": "(En busca de trabajo)",
-    "presentation": "¡Hola! Soy <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
-    "cta": "¡Descarga mi CV!"
-  },
-  "projects": {
-    "title": "Proyectos",
-    "button1": "Código",
-    "button2": "Sitio web",
-    "kolo empresas": "ERP que permite al pequeño y mediano empresario manejar, crece e innovar su empresa de manera accesible y personalizable.",
-    "mini translator": "Traductor minimalista en tiempo real. Facilita la traducción entre más de 100 lenguajes, así como el dictado del texto..",
-    "quiz game": "Juego de preguntas en línea. Tiene una interfaz cómoda y sencilla, ¡para proveer una divertida y educativa experiencia!",
-    "jolc": "Intérprete de JOLC, un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes."
-  },
-  "skills": {
-    "title": "Habilidades"
-  },
   "about-me": {
     "title": "Sobre mí",
-    "text1": "Mi nombre es Pablo Cabrera. Me gusta mucho el desarrollo de software, las buenas prácticas y el clean code. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
-    "text2": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
-    "text3": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo."
+    "text": "Mi nombre es Pablo Cabrera. Me gusta mucho el desarrollo de software, las buenas prácticas y el clean code. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
+    "list": [
+      {
+        "text": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
+        "images": [
+          {
+            "src": "about-me/guatemala/img1.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img2.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img3.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          }
+        ]
+      },
+      {
+        "text": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
+        "images": [
+          {
+            "src": "about-me/usac/img1.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          },
+          {
+            "src": "about-me/usac/img2.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          }
+        ]
+      }
+    ]
   },
   "contact": {
     "title": "¡Contáctame!"
+  },
+  "landing": {
+    "title": "Inicio",
+    "presentation": "¡Hola! Soy un <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
+    "status": "(Buscando empleo)",
+    "cta": "Descarga mi CV!",
+    "cv": "static/landing/cv/es.pdf",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "icon": "landing/linkedin-icon.svg",
+        "url": "https://www.linkedin.com/in/nanndo54"
+      },
+      {
+        "name": "GitHub",
+        "icon": "landing/github-icon.svg",
+        "props": {
+          "contentColor": true
+        },
+        "url": "https://github.com/nanndo54"
+      },
+      {
+        "name": "Email",
+        "icon": "landing/email-icon.svg",
+        "url": "mailto:nanndo54@outlook.com"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "codeButton": "Código",
+    "websiteButton": "Sitio web",
+    "list": [
+      {
+        "year": 2023,
+        "icon": "projects/kolo-empresas-icon.svg",
+        "name": "KOLO Empresas",
+        "description": "ERP que permite al pequeño y mediano empresario manejar, crece e innovar su empresa de manera accesible y personalizable.",
+        "website": "https://info.kolo-app.com",
+        "technologies": ["ReactJS", "Redux", "Java", "MySQL", "AWS"],
+        "images": [
+          {
+            "src": "projects/kolo-empresas/img1.jpg",
+            "alt": "Pantalla de bienvenida de KOLO"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "icon": "projects/quiz-game-icon.svg",
+        "name": "Quiz Game",
+        "description": "Juego de preguntas en línea. Tiene una interfaz cómoda y sencilla, ¡para proveer una divertida y educativa experiencia!",
+        "website": "https://quiz.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/quiz-game",
+        "technologies": ["ReactJS", "Redux", "HTML", "CSS"],
+        "images": [
+          {
+            "src": "projects/quiz-game/img1.jpg",
+            "alt": "Pantalla de bienvenida de Quiz Game"
+          },
+          {
+            "src": "projects/quiz-game/img2.jpg",
+            "alt": "Menú de configuración de Quiz Game, donde se selecciona el número de preguntas y las categorías"
+          },
+          {
+            "src": "projects/quiz-game/img3.jpg",
+            "alt": "Pregunta del juego: ¿Qué banda de rock irlandesa lanzó el álbum de estudio \"The Unforgettable Fire\"?"
+          },
+          {
+            "src": "projects/quiz-game/img4.jpg",
+            "alt": "Pregunta del juego: ¿Quién ganó la primera temporada de American Idol?"
+          },
+          {
+            "src": "projects/quiz-game/img5.jpg",
+            "alt": "Pregunta del juego: ¿Cuál es el nombre de la moneda utilizada tanto por Chile como por Colombia?"
+          },
+          {
+            "src": "projects/quiz-game/img6.jpg",
+            "alt": "Menú de puntuación del juego donde se observan las respuestas correctas y el tiempo transcurrido"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "icon": "projects/mini-translator-icon.svg",
+        "name": "Mini Translator",
+        "description": "Traductor minimalista en tiempo real. Facilita la traducción entre más de 100 lenguajes, así como el dictado del texto.",
+        "website": "https://translator.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/mini-translator",
+        "technologies": ["JavaScript", "HTML", "CSS"],
+        "images": [
+          {
+            "src": "projects/mini-translator/img1.jpg",
+            "alt": "Pantalla de bienvenida de Mini Translator"
+          },
+          {
+            "src": "projects/mini-translator/img2.jpg",
+            "alt": "Traduciendo del español al japonés: ¿Cómo te encuentras el día de hoy amigo?"
+          },
+          {
+            "src": "projects/mini-translator/img3.jpg",
+            "alt": "Traduciendo del inglés al español: Tengo que llegar al aeropuerto antes de las 5 de la tarde"
+          },
+          {
+            "src": "projects/mini-translator/img4.jpg",
+            "alt": "Traduciendo del inglés al portugués: ¡Muchas gracias!"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "icon": "projects/jolc-icon.svg",
+        "name": "JOLC",
+        "description": "Intérprete de JOLC, un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
+        "website": "https://jolc.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/jolc",
+        "technologies": ["ReactJS", "Redux", "Python", "HTML", "CSS"],
+        "images": [
+          {
+            "src": "projects/jolc/img1.jpg",
+            "alt": "Pantalla de bienvenida de JOLC"
+          },
+          {
+            "src": "projects/jolc/img2.jpg",
+            "alt": "Interpretando código JOLC, se está llamando a una función factorial con un argumento: 10; el resultado se puede observar en la consola: 3628800"
+          },
+          {
+            "src": "projects/jolc/img3.jpg",
+            "alt": "El AST generado por JOLC después de una ejecución de código; También se muestra el menú de la aplicación"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "list": {
+      "FrontEnd": [
+        {
+          "name": "HTML",
+          "icon": "skills/html-icon.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "skills/css-icon.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "skills/javascript-icon.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "skills/typescript-icon.svg"
+        },
+        {
+          "name": "ReactJS",
+          "icon": "skills/reactjs-icon.svg"
+        },
+        {
+          "name": "Redux",
+          "icon": "skills/redux-icon.svg"
+        }
+      ],
+      "BackEnd": [
+        {
+          "name": "ExpressJS",
+          "icon": "skills/express-icon.svg",
+          "props": {
+            "contentColor": true
+          },
+          "showcaseProps": {
+            "lightColor": true
+          }
+        },
+        {
+          "name": "Go",
+          "icon": "skills/go-icon.svg"
+        },
+        {
+          "name": "Python",
+          "icon": "skills/python-icon.svg"
+        },
+        {
+          "name": "MongoDB",
+          "icon": "skills/mongodb-icon.svg"
+        },
+        {
+          "name": "MySQL",
+          "icon": "skills/mysql-icon.svg"
+        },
+        {
+          "name": "PL/SQL",
+          "icon": "skills/oraclesql-icon.svg"
+        }
+      ],
+      "Otras": [
+        {
+          "name": "Java",
+          "icon": "skills/java-icon.svg"
+        },
+        {
+          "name": "AWS",
+          "icon": "skills/aws-icon.svg"
+        },
+        {
+          "name": "OCI",
+          "icon": "skills/oraclecloud-icon.svg"
+        }
+      ]
+    }
   },
   "quote": {
     "author": "Carl Sagan",

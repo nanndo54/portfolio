@@ -1,10 +1,10 @@
 'server-only'
 
-import AboutMeSection from '@/components/AboutMeSection'
-import ContactSection from '@/components/ContactSection'
-import LandingSection from '@/components/LandingSection'
-import ProjectsSection from '@/components/ProjectsSection'
-import SkillsSection from '@/components/SkillsSection'
+import AboutMeSection from '@/sections/AboutMeSection'
+import ContactSection from '@/sections/ContactSection'
+import LandingSection from '@/sections/LandingSection'
+import ProjectsSection from '@/sections/ProjectsSection'
+import SkillsSection from '@/sections/SkillsSection'
 
 const sections = [
   {

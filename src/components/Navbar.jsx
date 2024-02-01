@@ -2,7 +2,7 @@ import styles from '@/styles/Navbar.module.css'
 
 import NavbarButtons from '@/components/NavbarButtons'
 import NavbarLinks from '@/components/NavbarLinks'
-import sections from '@/constants/section-ids'
+import sections from '@/constants/sections'
 
 export default async function Navbar({ locale, dictionary }) {
   const links = []

@@ -3,6 +3,10 @@ header.base {
   width: 48rem;
   margin: 0 auto;
   padding: 3rem 0;
+
+  /* background: radial-gradient(at 47% 85%, var(--dim-accent-color) 0, red 49%); */
+
+  overflow: visible;
 }
 
 .info {

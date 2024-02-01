@@ -2,7 +2,7 @@ import styles from './page.module.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import { getDictionary } from 'i18n/dictionaries'
+import { getDictionary } from 'i18n/get-dictionary'
 
 import BlockQuote from '@/components/BlockQuote'
 import Footer from '@/components/Footer'
@@ -26,12 +26,6 @@ export default async function Page({ params: { locale } }) {
         <Footer />
         <Showcase locale={locale} />
         <GoToTopButton />
-
-        <div className={styles.background}>
-          <div />
-          <div />
-          <div />
-        </div>
 
         <SpeedInsights debug={false} />
         <Analytics debug={false} />

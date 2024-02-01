@@ -3,29 +3,28 @@ import styles from '@/styles/Project.module.css'
 import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 import ImageCarrousel from '@/components/ImageCarrousel'
-import Skill from '@/components/Skill'
 
-import { codeIcon, webIcon } from '@/constants/icons'
-import skills from '@/constants/skills'
+import { codeIcon, websiteIcon } from '@/constants/icons'
 import clsx from 'clsx/lite'
 
-const allSkills = Object.values(skills).reduce(
-  (allSkills, skills) => [...allSkills, ...skills],
-  []
-)
+// const allSkills = Object.values(cv.skills).reduce(
+//   (allSkills, skills) => [...allSkills, ...skills],
+//   []
+// )
 
-const getSkill = (name) => allSkills.find((skill) => skill.name === name)
+// const getSkill = (name) => allSkills.find((skill) => skill.name === name)
 
 export default async function Project({
+  icon,
   name,
-  web,
+  description,
+  website,
   code,
   technologies = [],
-  icon,
   images = [],
   dictionary
 }) {
-  const skills = technologies.map(getSkill)
+  // const skills = technologies.map(getSkill)
 
   return (
     <article className={clsx(styles.base, 'blur-background')}>
@@ -34,24 +33,24 @@ export default async function Project({
           <Icon src={icon} alt={name} />
           <h4>{name}</h4>
         </div>
-        <p>{dictionary[name.toLowerCase()]}</p>
+        <p>{description}</p>
         <div className={styles.skills}>
-          {skills.map((skill) => (
+          {/* {skills.map((skill) => (
             <Skill key={skill.name} {...skill} type='secondary' size='small' />
-          ))}
+          ))} */}
         </div>
       </div>
       <ImageCarrousel images={images} height={213} width={426} />
       <div className={styles.footer}>
         {code && (
           <Button type='secondary' href={code} isExternal>
-            {dictionary.button1}
+            {dictionary.codeButton}
             <Icon src={codeIcon} contentColor />
           </Button>
         )}
-        <Button href={web} isExternal>
-          {dictionary.button2}
-          <Icon src={webIcon} backgroundColor />
+        <Button href={website} isExternal>
+          {dictionary.websiteButton}
+          <Icon src={websiteIcon} backgroundColor />
         </Button>
       </div>
     </article>

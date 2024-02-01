@@ -1,5 +1,5 @@
 {
-  "about-me": {
+  "aboutMe": {
     "title": "About me",
     "text": "My name is Pablo Cabrera. I really like software development, good practices and clean code. I'm a big fan of sports, video games of many genres and the current affairs of the world of technology.",
     "list": [
@@ -39,11 +39,6 @@
     "title": "Contact me!"
   },
   "landing": {
-    "title": "Home",
-    "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
-    "status": "(Looking for a job)",
-    "cta": "Download my CV!",
-    "cv": "static/landing/cv/en.pdf",
     "links": [
       {
         "name": "LinkedIn",
