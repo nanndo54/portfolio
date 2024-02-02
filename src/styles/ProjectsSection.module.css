@@ -1,4 +1,5 @@
 .base {
+  position: relative;
   overflow: visible;
 }
 
@@ -43,11 +44,6 @@
 
 .arrow:hover figure {
   transform: translateY(-0.5rem) rotate(-90deg);
-}
-
-main[top='false'] .arrow {
-  transform: translateY(-7rem);
-  opacity: 0;
 }
 
 .content {
@@ -168,5 +164,26 @@ main[top='false'] .arrow {
 
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .arrow {
+    animation: arrow-scroll linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 50vh;
+  }
+
+  @keyframes arrow-scroll {
+    to {
+      transform: translateY(-7rem);
+      opacity: 0;
+    }
+  }
+}
+@supports not (animation-timeline: scroll()) {
+  main[top='false'] .arrow {
+    transform: translateY(-7rem);
+    opacity: 0;
   }
 }

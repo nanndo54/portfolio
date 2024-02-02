@@ -47,7 +47,7 @@
   filter: var(--dark-filter-value);
 }
 
-main[dark='true'] .base.contentColor .icon {
+body[dark='true'] .base.contentColor .icon {
   filter: var(--light-filter-value);
 }
 
@@ -55,7 +55,7 @@ main[dark='true'] .base.contentColor .icon {
   filter: var(--light-filter-value);
 }
 
-main[dark='true'] .base.backgroundColor .icon {
+body[dark='true'] .base.backgroundColor .icon {
   filter: var(--dark-filter-value);
 }
 

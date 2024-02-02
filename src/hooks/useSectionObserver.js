@@ -5,12 +5,10 @@ import { useEffect, useState } from 'react'
 
 export default function useSectionObserver() {
   const router = useRouter()
-  const { isOnTop, setCurrentSection } = useAppStore()
+  const { setCurrentSection } = useAppStore()
   const [sectionsIntersection, setSectionsIntersected] = useState([])
 
-  const currentSection = isOnTop
-    ? sections[0].id
-    : sectionsIntersection.find(({ intersected }) => intersected)?.id
+  const currentSection = sectionsIntersection.find(({ intersected }) => intersected)?.id
 
   useEffect(() => {
     const sectionsElements = sections.map((section) =>
@@ -37,7 +35,6 @@ export default function useSectionObserver() {
     )
 
     sectionsElements.forEach((element) => {
-      console.log('🚀 | element:', element)
       observer.observe(element)
     })
 

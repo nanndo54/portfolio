@@ -41,14 +41,6 @@ export default function ImageCarrousel({
     setImageIndex(index)
   }, 100)
 
-  const contentElement = (
-    <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-      {images.map((image, index) => (
-        <Image key={index} {...image} height={height} width={width} zoom={false} />
-      ))}
-    </div>
-  )
-
   return (
     <div
       className={clsx(
@@ -66,7 +58,7 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        ariaLabel='Ver imagen anterior'
+        aria-label='Ver imagen anterior'
       />
       <OpenShowcase
         disable={!zoom}
@@ -75,7 +67,11 @@ export default function ImageCarrousel({
         onIndexChange={handleImageChange}
       >
         <div className={styles.container} style={{ maxHeight: height, maxWidth: width }}>
-          {contentElement}
+          <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
+            {images.map((image, index) => (
+              <Image key={index} {...image} height={height} width={width} zoom={false} />
+            ))}
+          </div>
         </div>
       </OpenShowcase>
       <IconButton
@@ -86,11 +82,12 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex + 1)
         }}
-        ariaLabel='Ver imagen siguiente'
+        aria-label='Ver imagen siguiente'
       />
       <div className={styles.dots}>
         {images.map((_, index) => (
           <button
+            type='button'
             aria-label={`Ver imagen ${index + 1}`}
             key={index}
             className={imageIndex === index ? styles.selected : ''}

@@ -79,7 +79,7 @@ export default function Showcase({ locale }) {
         ref={ref}
       >
         <div className={styles.overlay} onClick={handleClose}>
-          <div className={styles.header}>
+          <header>
             {!singleImage && (
               <span className={styles.imageIndex}>
                 {index + 1}/{images?.length}
@@ -90,16 +90,16 @@ export default function Showcase({ locale }) {
               src={closeIcon}
               lightColor
               className={styles.closeButton}
-              ariaLabel='Cerrar'
+              aria-label='Cerrar'
             />
-          </div>
+          </header>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
             <IconButton
               src={arrowIcon}
               lightColor
               className={styles.previousImage}
               onClick={handleShowPreviousImage}
-              ariaLabel='Ver imagen anterior'
+              aria-label='Ver imagen anterior'
               tabIndex={open ? 0 : -1}
             />
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
@@ -122,11 +122,11 @@ export default function Showcase({ locale }) {
               lightColor
               className={styles.nextImage}
               onClick={handleShowNextImage}
-              ariaLabel='Ver imagen siguiente'
+              aria-label='Ver imagen siguiente'
               tabIndex={open ? 0 : -1}
             />
           </div>
-          <div className={styles.footer} onClick={(ev) => ev.stopPropagation()}>
+          <footer onClick={(ev) => ev.stopPropagation()}>
             <Icon src={zoomIcon} lightColor />
             <p>{(scale * 100).toFixed(0)}%</p>
             <span className={styles.buttons}>
@@ -135,17 +135,17 @@ export default function Showcase({ locale }) {
                 lightColor
                 border
                 onClick={() => ref.current?.zoomOut(0.2)}
-                ariaLabel='Reducir'
+                aria-label='Reducir'
               />
               <IconButton
                 src={plusIcon}
                 lightColor
                 border
                 onClick={() => ref.current?.zoomIn(0.2)}
-                ariaLabel='Agrandar'
+                aria-label='Agrandar'
               />
             </span>
-          </div>
+          </footer>
         </div>
       </TransformWrapper>
     </div>

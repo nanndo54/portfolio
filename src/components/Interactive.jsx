@@ -9,7 +9,7 @@ import useAppStore from '@/state/store'
 import { useEffect, useRef } from 'react'
 
 export default function Interactive({ children }) {
-  const { theme, isOnTop } = useAppStore()
+  const { theme, isOnTop, toggleTheme } = useAppStore()
   const ref = useRef()
 
   useMouseTracker(ref, (x, y) => {
@@ -18,13 +18,11 @@ export default function Interactive({ children }) {
   })
 
   useEffect(() => {
-    const mainElement = document.querySelector('main')
-    mainElement.setAttribute('dark', theme === 'dark')
-  }, [theme])
+    document.body.setAttribute('dark', theme === 'dark')
+  }, [theme, toggleTheme])
 
   useEffect(() => {
-    const mainElement = document.querySelector('main')
-    mainElement.setAttribute('top', isOnTop)
+    document.body.setAttribute('top', isOnTop)
   }, [isOnTop])
 
   useTopObserver()

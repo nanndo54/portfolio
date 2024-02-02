@@ -1,33 +1,6 @@
 .base {
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
-  color: var(--foreground-color);
-  font-family: var(--body-font);
-
-  background-color: var(--background-color);
-  background-image: radial-gradient(
-      130% 50rem at 35% 25rem,
-      var(--dim-accent-color) 0,
-      transparent 100%
-    ),
-    radial-gradient(
-      at 10% calc(100vh + 60rem),
-      var(--dim-secondary-accent-color) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 90% calc(100vh + 130rem),
-      var(--dim-accent-color) 0,
-      transparent 50%
-    );
-
-  background-attachment: local;
-
-  transition: background-color 0.5s;
 }
 
 .base ::-webkit-scrollbar {
@@ -35,6 +8,6 @@
   width: 0;
 }
 
-main[dark='true'] .background div {
+body[dark='true'] .background div {
   opacity: 0.4;
 }

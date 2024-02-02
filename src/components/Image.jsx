@@ -18,12 +18,10 @@ export default function Image({
   zoom = false,
   ...props
 }) {
-  const locale = 'en'
-
   const imageElement = (
     <NextImage
       src={`/static/${src}`}
-      alt={alt[locale]}
+      alt={alt}
       className={clsx(className, styles.base, border && styles.border, 'no-select')}
       draggable={false}
       height={height}

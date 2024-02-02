@@ -7,7 +7,7 @@ import clsx from 'clsx/lite'
 export default function IconButton({
   className = '',
   href,
-  ariaLabel,
+  'aria-label': ariaLabel,
   tabIndex,
   onClick,
   src,
@@ -21,7 +21,7 @@ export default function IconButton({
       href={href}
       isExternal
       noDecoration
-      ariaLabel={ariaLabel}
+      aria-label={ariaLabel}
       tabIndex={tabIndex}
     >
       {childrenElement}

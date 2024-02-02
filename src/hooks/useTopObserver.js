@@ -2,27 +2,19 @@ import useAppStore from '@/state/store'
 import { useCallback, useEffect } from 'react'
 
 export default function useTopObserver() {
-  const { isOnTop, setOnTop } = useAppStore()
+  const { setOnTop } = useAppStore()
 
-  const handleTopListener = useCallback(
-    (ev) => {
-      const newIsOnTop = ev.target.scrollTop < 5
-      if (setOnTop && newIsOnTop !== isOnTop) setOnTop(newIsOnTop)
-    },
-    [isOnTop, setOnTop]
-  )
+  const handleTopListener = useCallback(() => {
+    const newIsOnTop = document.documentElement.scrollTop < 50
+    setOnTop?.(newIsOnTop)
+  }, [setOnTop])
 
   useEffect(() => {
-    const element = document.querySelector('main')
-    element.addEventListener('scroll', handleTopListener)
+    if (CSS.supports('animation-timeline', 'scroll()')) return
 
-    return () => element.removeEventListener('scroll', handleTopListener)
-  }, [handleTopListener])
+    handleTopListener()
+    window.addEventListener('scroll', handleTopListener)
 
-  useEffect(() => {
-    const element = document.querySelector('main')
-    element.addEventListener('scroll', handleTopListener)
-
-    return () => element.removeEventListener('scroll', handleTopListener)
+    return () => window.removeEventListener('scroll', handleTopListener)
   }, [handleTopListener])
 }

@@ -7,7 +7,7 @@ import { default as NextLink } from 'next/link'
 export default function Link({
   className = '',
   href = '#',
-  ariaLabel,
+  'aria-label': ariaLabel,
   replace = false,
   locale,
   isExternal = false,

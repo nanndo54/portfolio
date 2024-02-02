@@ -9,10 +9,11 @@ export default async function Section({
   children
 }) {
   return (
-    <div className={styles.layout} id={id}>
-      <Tag className={clsx(className, styles.base, background && styles.background)}>
-        {children}
-      </Tag>
-    </div>
+    <Tag
+      id={id}
+      className={clsx(className, styles.base, background && styles.background)}
+    >
+      {children}
+    </Tag>
   )
 }

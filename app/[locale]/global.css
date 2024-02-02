@@ -1,19 +1,35 @@
-html {
-  font-size: 16px;
-  height: 100dvh;
-  width: 100dvw;
-  overflow: hidden;
-}
-
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  min-height: 100dvh;
+
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+
+  color: var(--foreground-color);
+  font-family: var(--body-font);
+
+  background-color: var(--background-color);
+  background-image: radial-gradient(
+      at 10% calc(100vh + 60rem),
+      var(--dim-secondary-accent-color) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 90% calc(100vh + 130rem),
+      var(--dim-accent-color) 0,
+      transparent 50%
+    );
+
+  transition: background-color 0.5s;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,7 +55,7 @@ body {
   --dim-secondary-accent-color: #656afd60;
 }
 
-body:has(main[dark='true']) {
+body[dark='true'] {
   --foreground-color: rgb(220, 220, 250);
   --alternate-foreground-color: rgb(30, 30, 30);
 
@@ -54,6 +70,25 @@ body:has(main[dark='true']) {
 
   --secondary-accent-color: #6b6ff3;
   --dim-secondary-accent-color: #6b6ff330;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([dark]) {
+    --foreground-color: rgb(220, 220, 250);
+    --alternate-foreground-color: rgb(30, 30, 30);
+
+    --content-color: rgb(225, 225, 235);
+    --dim-content-color: rgb(220, 220, 230, 0.1);
+
+    --background-color: rgb(11, 13, 17);
+    --dim-background-color: rgb(11, 13, 17, 0.25);
+
+    --accent-color: #519cff;
+    --dim-accent-color: #6295f520;
+
+    --secondary-accent-color: #6b6ff3;
+    --dim-secondary-accent-color: #6b6ff330;
+  }
 }
 
 p {
@@ -171,7 +206,7 @@ h6 {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -222,10 +257,4 @@ strong {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(32, 38, 55);
-  }
 }

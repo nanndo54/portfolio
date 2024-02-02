@@ -10,7 +10,6 @@ import { downloadIcon } from '@/constants/icons'
 
 export default async function LandingSection({ id, dictionary }) {
   const { presentation, cv, cta, links } = dictionary
-  console.log('🚀 | dictionary:', dictionary)
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>

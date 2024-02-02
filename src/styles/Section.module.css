@@ -24,11 +24,6 @@
     opacity 0.25s ease-out;
 }
 
-main[top='true'] .base:is(section, blockquote) {
-  transform: translateY(calc(100vh - 29rem));
-  opacity: 0.75;
-}
-
 .base h2 {
   align-self: center;
 }
@@ -44,11 +39,5 @@ main[top='true'] .base:is(section, blockquote) {
 @media (max-width: 31rem) {
   .base {
     padding: 2rem 1.5rem;
-  }
-}
-
-@media (max-height: 500px) {
-  main[top='true'] .base:is(section, blockquote) {
-    transform: translateY(calc(100vh - 25rem));
   }
 }

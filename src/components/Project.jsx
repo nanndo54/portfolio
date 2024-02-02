@@ -28,7 +28,7 @@ export default async function Project({
 
   return (
     <article className={clsx(styles.base, 'blur-background')}>
-      <div className={styles.header}>
+      <header>
         <div className={styles.title}>
           <Icon src={icon} alt={name} />
           <h4>{name}</h4>
@@ -39,9 +39,9 @@ export default async function Project({
             <Skill key={skill.name} {...skill} type='secondary' size='small' />
           ))} */}
         </div>
-      </div>
+      </header>
       <ImageCarrousel images={images} height={213} width={426} />
-      <div className={styles.footer}>
+      <footer>
         {code && (
           <Button type='secondary' href={code} isExternal>
             {dictionary.codeButton}
@@ -52,7 +52,7 @@ export default async function Project({
           {dictionary.websiteButton}
           <Icon src={websiteIcon} backgroundColor />
         </Button>
-      </div>
+      </footer>
     </article>
   )
 }

@@ -53,7 +53,7 @@
   }
 
   to {
-    transform: none;
+    transform: unset;
     will-change: unset;
   }
 }

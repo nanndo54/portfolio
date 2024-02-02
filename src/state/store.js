@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 const initialState = {
   isOnTop: true,
-  theme: 'light',
+  theme: undefined,
   currentSection: 'landing',
   showcase: {}
 }
@@ -23,9 +23,9 @@ const store = create(
 
           return { isOnTop }
         }),
-      toggleTheme: () =>
-        set((state) => {
-          const theme = state.theme === 'light' ? 'dark' : 'light'
+      toggleTheme: (dark) =>
+        set(() => {
+          const theme = dark ? 'dark' : 'light'
 
           return { theme }
         }),
@@ -41,7 +41,13 @@ const store = create(
       name: 'app-storage',
       partialize: ({ theme }) => ({
         theme
-      })
+      }),
+      onRehydrateStorage: () => {
+        return (state) => {
+          if (state.theme == null && state.toggleTheme)
+            state.toggleTheme(window.matchMedia('(prefers-color-scheme: dark)').matches)
+        }
+      }
     }
   )
 )

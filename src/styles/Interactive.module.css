@@ -1,6 +1,9 @@
 .base {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+
+  position: relative;
 }
 
 .base::after {
@@ -9,11 +12,11 @@
   border-radius: 50%;
 
   position: absolute;
-  top: calc(var(--y, 0) * 1px - 30vw);
-  left: calc(var(--x, 0) * 1px - 30vw);
+  top: calc(var(--y, 0) * 1px - 35vw);
+  left: calc(var(--x, 0) * 1px - 35vw);
 
-  width: 60vw;
-  height: 60vw;
+  width: 70vw;
+  height: 70vw;
 
   opacity: 0;
   transition: opacity 0.2s;
