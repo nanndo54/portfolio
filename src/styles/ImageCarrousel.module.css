@@ -33,13 +33,13 @@
 }
 
 .content {
-  display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+  white-space: nowrap;
 
   height: auto;
   width: 100%;
 
-  animation: setup-scroll 0s 1s forwards;
+  animation: setup-scroll 0s 1.5s forwards;
 }
 
 .base:hover .previousImage,
@@ -55,6 +55,7 @@
 }
 
 .content img {
+  display: inline;
   scroll-snap-align: start;
 }
 
