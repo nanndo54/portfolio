@@ -4,15 +4,9 @@ import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 import ImageCarrousel from '@/components/ImageCarrousel'
 
+import Skill from '@/components/Skill'
 import { codeIcon, websiteIcon } from '@/constants/icons'
 import clsx from 'clsx/lite'
-
-// const allSkills = Object.values(cv.skills).reduce(
-//   (allSkills, skills) => [...allSkills, ...skills],
-//   []
-// )
-
-// const getSkill = (name) => allSkills.find((skill) => skill.name === name)
 
 export default async function Project({
   icon,
@@ -20,11 +14,14 @@ export default async function Project({
   description,
   website,
   code,
+  allSkills,
   technologies = [],
   images = [],
   dictionary
 }) {
-  // const skills = technologies.map(getSkill)
+  const skills = technologies.map((name) =>
+    allSkills.find((skill) => skill.name === name)
+  )
 
   return (
     <article className={clsx(styles.base, 'blur-background')}>
@@ -35,9 +32,9 @@ export default async function Project({
         </div>
         <p>{description}</p>
         <div className={styles.skills}>
-          {/* {skills.map((skill) => (
+          {skills.map((skill) => (
             <Skill key={skill.name} {...skill} type='secondary' size='small' />
-          ))} */}
+          ))}
         </div>
       </header>
       <ImageCarrousel images={images} height={213} width={426} />

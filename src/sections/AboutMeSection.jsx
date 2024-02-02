@@ -4,13 +4,13 @@ import ImageCarrousel from '@/components/ImageCarrousel'
 import Section from '@/components/Section'
 
 export default async function AboutMeSection({ id, dictionary }) {
-  const { title, text, list } = dictionary
+  const { title, text, list: subsections } = dictionary[id]
 
   return (
     <Section id={id}>
       <h2>{title}</h2>
       <p>{text}</p>
-      {list.map(({ images, text }, i) => (
+      {subsections.map(({ images, text }, i) => (
         <div key={i} className={styles.subsection}>
           <ImageCarrousel
             className={styles.images}

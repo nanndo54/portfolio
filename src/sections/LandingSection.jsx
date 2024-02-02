@@ -9,7 +9,7 @@ import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
 
 export default async function LandingSection({ id, dictionary }) {
-  const { presentation, cv, cta, links } = dictionary
+  const { presentation, cv, cta, links } = dictionary[id]
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>

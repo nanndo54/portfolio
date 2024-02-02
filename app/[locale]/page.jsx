@@ -20,7 +20,7 @@ export default async function Page({ params: { locale } }) {
       <main className={styles.base} top='true'>
         <Navbar locale={locale} dictionary={dictionary} />
         {sections.map(({ id, Tag }) => (
-          <Tag key={id} id={id} dictionary={dictionary[id]} />
+          <Tag key={id} id={id} dictionary={dictionary} />
         ))}
         <BlockQuote dictionary={dictionary.quote} />
         <Footer />

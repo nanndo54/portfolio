@@ -9,10 +9,16 @@ import Link from '@/components/Link'
 import { arrowIcon } from '@/constants/icons'
 
 export default async function ProjectsSection({ id, dictionary }) {
-  const { title, list } = dictionary
+  const { title, list: projects } = dictionary[id]
+  const { list: skills } = dictionary.skills
+
+  const allSkills = Object.values(skills).reduce(
+    (allSkills, skills) => [...allSkills, ...skills],
+    []
+  )
 
   const projectsPerYear = useMemo(() => {
-    return list
+    return projects
       .reduce((acc, project) => {
         let yearObject = acc.find((yearObject) => yearObject.year === project.year)
         if (!yearObject) {
@@ -25,7 +31,7 @@ export default async function ProjectsSection({ id, dictionary }) {
         return acc
       }, [])
       .sort((a, b) => b.year - a.year)
-  }, [list])
+  }, [projects])
 
   return (
     <Section id={id} className={styles.base}>
@@ -43,7 +49,12 @@ export default async function ProjectsSection({ id, dictionary }) {
               <h3>{year}</h3>
               <div className={styles.projects}>
                 {projects.map((project, i) => (
-                  <Project key={i} {...project} dictionary={dictionary} />
+                  <Project
+                    key={i}
+                    {...project}
+                    allSkills={allSkills}
+                    dictionary={dictionary[id]}
+                  />
                 ))}
               </div>
             </div>
