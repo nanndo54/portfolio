@@ -4,10 +4,6 @@ header.base {
   width: 48rem;
   margin: 0 auto;
   padding: 0;
-
-  /* background: radial-gradient(at 47% 85%, var(--dim-accent-color) 0, red 49%); */
-
-  overflow: visible;
 }
 
 .info {
@@ -93,8 +89,8 @@ header.base {
 
 @supports (animation-timeline: scroll()) {
   .info {
-    animation: info-scroll linear forwards;
-    animation-timeline: scroll();
+    animation: info-scroll ease forwards;
+    animation-timeline: scroll(root);
     animation-range: 0 50vh;
   }
 
@@ -106,7 +102,7 @@ header.base {
   }
 }
 @supports not (animation-timeline: scroll()) {
-  main[top='false'] .info {
+  body[top='false'] .info {
     opacity: 0.25;
     pointer-events: none;
   }

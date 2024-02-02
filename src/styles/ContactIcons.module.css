@@ -13,6 +13,10 @@
   animation: appear-contact-icon 0.4s ease-out forwards;
 }
 
+.base figure {
+  border-color: var(--secondary-accent-color) !important;
+}
+
 .base a:nth-child(1) {
   animation-delay: 0.4s;
 }

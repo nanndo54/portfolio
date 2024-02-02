@@ -59,8 +59,8 @@
   .dot1,
   .dot2,
   .dot3 {
-    animation: linear forwards;
-    animation-timeline: scroll();
+    animation: ease forwards;
+    animation-timeline: scroll(root);
     animation-range: 20rem 50vh;
   }
 
@@ -109,23 +109,23 @@
   }
 }
 @supports not (animation-timeline: scroll()) {
-  main[top='false'] .base {
+  body[top='false'] .base {
     transform: unset;
   }
 
-  main[top='false'] .icon > div {
+  body[top='false'] .icon > div {
     border-radius: 25%;
   }
 
-  main[top='false'] .dot1 {
+  body[top='false'] .dot1 {
     transform: translate(0.4rem, 0.7rem) scale(0.5, 2);
   }
 
-  main[top='false'] .dot2 {
+  body[top='false'] .dot2 {
     transform: translate(0.125rem, 0.2rem) rotate(40deg) scale(0.5, 1.5);
   }
 
-  main[top='false'] .dot3 {
+  body[top='false'] .dot3 {
     transform: translate(1rem, 0.335rem) rotate(-40deg) scale(0.65, 2);
   }
 }

@@ -18,8 +18,7 @@ const store = create(
       ...initialState,
       setOnTop: (isOnTop) =>
         set(() => {
-          const mainElement = document.querySelector('main')
-          mainElement.setAttribute('top', isOnTop)
+          document.body.setAttribute('top', isOnTop)
 
           return { isOnTop }
         }),

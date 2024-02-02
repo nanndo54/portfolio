@@ -19,6 +19,16 @@ body {
 
   background-color: var(--background-color);
   background-image: radial-gradient(
+      60rem 40rem at 35% 20rem,
+      var(--dim-accent-color) 0,
+      transparent 80%
+    ),
+    radial-gradient(
+      30rem 25rem at 75% 20rem,
+      var(--dim-secondary-accent-color) 0,
+      transparent 65%
+    ),
+    radial-gradient(
       at 10% calc(100vh + 60rem),
       var(--dim-secondary-accent-color) 0,
       transparent 50%

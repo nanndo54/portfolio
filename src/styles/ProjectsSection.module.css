@@ -169,8 +169,8 @@
 
 @supports (animation-timeline: scroll()) {
   .arrow {
-    animation: arrow-scroll linear forwards;
-    animation-timeline: scroll();
+    animation: arrow-scroll ease forwards;
+    animation-timeline: scroll(root);
     animation-range: 0 50vh;
   }
 
@@ -182,7 +182,7 @@
   }
 }
 @supports not (animation-timeline: scroll()) {
-  main[top='false'] .arrow {
+  body[top='false'] .arrow {
     transform: translateY(-7rem);
     opacity: 0;
   }

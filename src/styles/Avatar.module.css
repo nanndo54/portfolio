@@ -42,7 +42,7 @@
 
 .base .picture {
   border-width: 0.5rem;
-  border-color: var(--dim-secondary-accent-color);
+  border-color: var(--dim-accent-color);
   border-radius: 50%;
   filter: grayscale(15%);
 }
@@ -63,8 +63,8 @@
   .base,
   .base .icon,
   .base .picture {
-    animation: linear forwards;
-    animation-timeline: scroll();
+    animation: ease-out forwards;
+    animation-timeline: scroll(root);
     animation-range: 0 50vh;
   }
 
@@ -100,22 +100,22 @@
   }
 }
 @supports not (animation-timeline: scroll()) {
-  main[top='false'] .base {
+  body[top='false'] .base {
     position: fixed;
     transform: translate(4rem, -5rem) scale(0.16);
     pointer-events: all;
   }
 
-  main[top='false'] .base .icon {
+  body[top='false'] .base .icon {
     opacity: 1;
   }
 
-  main[top='false'] .base .picture {
+  body[top='false'] .base .picture {
     opacity: 0;
   }
 
   @media (max-width: 700px) {
-    main[top='false'] .base {
+    body[top='false'] .base {
       transform: translate(5rem, -5.5rem) scale(0.14);
     }
   }
