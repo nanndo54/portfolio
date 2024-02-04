@@ -7,8 +7,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 export default function NavbarButtons() {
   const { dictionary, theme, toggleTheme } = useAppStore()
-
-  const locale = dictionary.id
+  const { id: locale, aria } = dictionary
 
   return (
     <div className={styles.base}>
@@ -17,7 +16,7 @@ export default function NavbarButtons() {
         onChange={toggleTheme}
         moonColor='var(--content-color)'
         sunColor='var(--content-color)'
-        aria-hidden
+        aria-label={theme === 'dark' ? aria.setLightMode : aria.setDarkMode}
       />
       <Link
         href={locale === 'en' ? '/es' : '/en'}

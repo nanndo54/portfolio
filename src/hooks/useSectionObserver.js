@@ -46,7 +46,7 @@ export default function useSectionObserver() {
   useEffect(() => {
     if (!currentSection) return
 
-    if (setCurrentSection) setCurrentSection(currentSection)
+    setCurrentSection(currentSection)
     router.replace(`#${currentSection}`, { scroll: false })
   }, [currentSection, setCurrentSection, router])
 }

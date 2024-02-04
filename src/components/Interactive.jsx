@@ -18,7 +18,7 @@ export default function Interactive({ dictionary, children }) {
   })
 
   useEffect(() => {
-    if (setDictionary) setDictionary(dictionary)
+    setDictionary(dictionary)
   }, [dictionary, setDictionary])
 
   useEffect(() => {

@@ -254,12 +254,14 @@
     "text": "What makes us great is the fact that we can see how small we are."
   },
   "aria": {
-    "close": "Cerrar",
-    "goToTop": "Ir al inicio",
-    "nextImage": "Ver imagen siguiente",
-    "previousImage": "Ver imagen anterior",
-    "seeImage": "Ver imagen",
-    "zoomIn": "Acercar",
-    "zoomOut": "Alejar"
+    "close": "Close",
+    "goToTop": "Go to top",
+    "nextImage": "See next image",
+    "previousImage": "See previous image",
+    "seeImage": "See image",
+    "setDarkMode": "Activate dark mode",
+    "setLightMode": "Activate light mode",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
   }
 }

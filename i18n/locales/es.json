@@ -259,6 +259,8 @@
     "nextImage": "Ver imagen siguiente",
     "previousImage": "Ver imagen anterior",
     "seeImage": "Ver imagen",
+    "setDarkMode": "Activar modo oscuro",
+    "setLightMode": "Activar modo claro",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar"
   }

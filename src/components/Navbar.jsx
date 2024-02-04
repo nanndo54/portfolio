@@ -4,7 +4,7 @@ import NavbarButtons from '@/components/NavbarButtons'
 import NavbarLinks from '@/components/NavbarLinks'
 import sections from '@/constants/sections'
 
-export default async function Navbar({ locale, dictionary }) {
+export default async function Navbar({ dictionary }) {
   const links = []
 
   for (const section of sections.filter(({ hideInNavbar }) => !hideInNavbar)) {
@@ -15,7 +15,7 @@ export default async function Navbar({ locale, dictionary }) {
 
   return (
     <nav className={styles.base}>
-      <NavbarButtons locale={locale} />
+      <NavbarButtons />
       <NavbarLinks links={links} />
     </nav>
   )

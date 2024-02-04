@@ -3,17 +3,15 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-import { useEffect, useState } from 'react'
-
 const initialState = {
   isOnTop: true,
   theme: undefined,
-  dictionary: {},
+  dictionary: { aria: {} },
   currentSection: 'landing',
   showcase: {}
 }
 
-const store = create(
+const useAppStore = create(
   persist(
     (set) => ({
       ...initialState,
@@ -53,13 +51,4 @@ const store = create(
   )
 )
 
-export default function useAppStore(callback = (state) => state) {
-  const newState = store(callback)
-  const [state, setState] = useState(initialState)
-
-  useEffect(() => {
-    setState(newState)
-  }, [newState])
-
-  return state
-}
+export default useAppStore

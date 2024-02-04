@@ -3,13 +3,13 @@
 import styles from '@/styles/GoToTopButton.module.css'
 
 import Link from '@/components/Link'
-import useAriaLabel from '@/hooks/useAriaLabel'
+import useAppStore from '@/state/store'
 
 export default function GoToTopButton() {
-  const [ariaGoToTop] = useAriaLabel('goToTop')
+  const { aria } = useAppStore((state) => state.dictionary)
 
   return (
-    <Link href='#landing' className={styles.base} aria-label={ariaGoToTop}>
+    <Link href='#landing' className={styles.base} aria-label={aria.goToTop}>
       <div className={styles.icon}>
         <div className={styles.dot1} />
         <div className={styles.dot2} />

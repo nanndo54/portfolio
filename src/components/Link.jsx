@@ -7,7 +7,6 @@ import { default as NextLink } from 'next/link'
 export default function Link({
   className = '',
   href = '#',
-  'aria-label': ariaLabel,
   replace = false,
   locale,
   isExternal = false,
@@ -20,7 +19,6 @@ export default function Link({
       prefetch={false}
       className={clsx(className, styles.base, noDecoration && styles.noDecoration)}
       href={href}
-      aria-label={ariaLabel}
       replace={replace}
       locale={locale}
       target={isExternal ? '_blank' : '_self'}

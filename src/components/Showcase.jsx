@@ -9,7 +9,6 @@ import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
 
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '@/constants/icons'
-import useAriaLabel from '@/hooks/useAriaLabel'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 
@@ -17,17 +16,16 @@ const initialScale = 1
 const defaultImageWidth = 2016
 const defaultImageHeight = 1080
 
-export default function Showcase({ locale }) {
+export default function Showcase() {
   const { showcase, closeShowcase, setShowcase } = useAppStore()
-  const [ariaClose, ariaPreviousImage, ariaNextImage, ariaZoomIn, ariaZoomOut] =
-    useAriaLabel('close', 'previousImage', 'nextImage', 'zoomIn', 'zoomOut')
+  const { aria } = useAppStore((state) => state.dictionary)
   const ref = useRef()
 
   const [scale, setScale] = useState(initialScale)
 
   const { open, images, index, onIndexChange } = showcase
   const image = images?.[index] || {}
-  const { alt = {}, src, height, width, icon, props } = image
+  const { alt, src, height, width, icon, props } = image
 
   const singleImage = images?.length <= 1
 
@@ -88,12 +86,12 @@ export default function Showcase({ locale }) {
                 {index + 1}/{images?.length}
               </span>
             )}
-            <p>{alt[locale]}</p>
+            <p>{alt}</p>
             <IconButton
               src={closeIcon}
               lightColor
               className={styles.closeButton}
-              aria-label={ariaClose}
+              aria-label={aria.close}
             />
           </header>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
@@ -102,7 +100,7 @@ export default function Showcase({ locale }) {
               lightColor
               className={styles.previousImage}
               onClick={handleShowPreviousImage}
-              aria-label={ariaPreviousImage}
+              aria-label={aria.previousImage}
               tabIndex={open ? 0 : -1}
             />
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
@@ -113,10 +111,10 @@ export default function Showcase({ locale }) {
                   <Image
                     src={src}
                     alt={alt}
+                    aria-hidden={!open}
                     width={defaultImageWidth}
                     height={(height * defaultImageWidth) / width || defaultImageHeight}
                     zoom={false}
-                    aria-hidden={!open}
                   />
                 ))}
             </TransformComponent>
@@ -125,7 +123,7 @@ export default function Showcase({ locale }) {
               lightColor
               className={styles.nextImage}
               onClick={handleShowNextImage}
-              aria-label={ariaNextImage}
+              aria-label={aria.nextImage}
               tabIndex={open ? 0 : -1}
             />
           </div>
@@ -138,14 +136,14 @@ export default function Showcase({ locale }) {
                 lightColor
                 border
                 onClick={() => ref.current?.zoomOut(0.2)}
-                aria-label={ariaZoomOut}
+                aria-label={aria.zoomOut}
               />
               <IconButton
                 src={plusIcon}
                 lightColor
                 border
                 onClick={() => ref.current?.zoomIn(0.2)}
-                aria-label={ariaZoomIn}
+                aria-label={aria.zoomIn}
               />
             </span>
           </footer>

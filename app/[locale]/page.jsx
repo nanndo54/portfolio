@@ -18,13 +18,13 @@ export default async function Page({ params: { locale } }) {
   return (
     <Interactive dictionary={dictionary}>
       <main className={styles.base} top='true'>
-        <Navbar locale={locale} dictionary={dictionary} />
+        <Navbar dictionary={dictionary} />
         {sections.map(({ id, Tag }) => (
           <Tag key={id} id={id} dictionary={dictionary} />
         ))}
         <BlockQuote dictionary={dictionary.quote} />
         <Footer />
-        <Showcase locale={locale} />
+        <Showcase />
         <GoToTopButton />
 
         <SpeedInsights debug={false} />
