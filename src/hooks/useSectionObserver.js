@@ -11,9 +11,9 @@ export default function useSectionObserver() {
   const currentSection = sectionsIntersection.find(({ intersected }) => intersected)?.id
 
   useEffect(() => {
-    const sectionsElements = sections.map((section) =>
-      document.getElementById(section.id)
-    )
+    const sectionsElements = sections
+      .filter(({ ignore }) => !ignore)
+      .map((section) => document.getElementById(section.id))
 
     const observer = new IntersectionObserver(
       ([entry]) => {

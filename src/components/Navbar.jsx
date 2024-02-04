@@ -7,7 +7,7 @@ import sections from '@/constants/sections'
 export default async function Navbar({ dictionary }) {
   const links = []
 
-  for (const section of sections.filter(({ hideInNavbar }) => !hideInNavbar)) {
+  for (const section of sections.filter(({ ignore }) => !ignore)) {
     const { id } = section
     const label = dictionary[id].title
     links.push({ id, label })
