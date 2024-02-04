@@ -1,43 +1,5 @@
 {
-  "about-me": {
-    "title": "Sobre mí",
-    "text": "Mi nombre es Pablo Cabrera. Me gusta mucho el desarrollo de software, las buenas prácticas y el clean code. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
-    "list": [
-      {
-        "text": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
-        "images": [
-          {
-            "src": "about-me/guatemala/img1.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          },
-          {
-            "src": "about-me/guatemala/img2.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          },
-          {
-            "src": "about-me/guatemala/img3.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          }
-        ]
-      },
-      {
-        "text": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
-        "images": [
-          {
-            "src": "about-me/usac/img1.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
-          },
-          {
-            "src": "about-me/usac/img2.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
-          }
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "title": "¡Contáctame!"
-  },
+  "id": "es",
   "landing": {
     "title": "Inicio",
     "presentation": "¡Hola! Soy un <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
@@ -248,8 +210,56 @@
       ]
     }
   },
+  "about-me": {
+    "title": "Sobre mí",
+    "text": "Mi nombre es Pablo Cabrera. Me gusta mucho el desarrollo de software, las buenas prácticas y el clean code. Soy aficionado de los deportes, los videojuegos de muchos géneros y la actualidad del mundo de la tecnología.",
+    "list": [
+      {
+        "text": "Soy de la capital de Guatemala 🇬🇹, lugar de volcanes, de gran clima y gente alegre. Por supuesto, estoy abierto a trabajar con equipos internacionales mediante teletrabajo.",
+        "images": [
+          {
+            "src": "about-me/guatemala/img1.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img2.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img3.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          }
+        ]
+      },
+      {
+        "text": "Estoy cursando un grado de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala, gracias al cual he desarrollado una gran habilidad en el desarrollo de software y el trabajo colaborativo.",
+        "images": [
+          {
+            "src": "about-me/usac/img1.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          },
+          {
+            "src": "about-me/usac/img2.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "¡Contáctame!"
+  },
   "quote": {
     "author": "Carl Sagan",
     "text": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos."
+  },
+  "aria": {
+    "close": "Cerrar",
+    "goToTop": "Ir al inicio",
+    "nextImage": "Ver imagen siguiente",
+    "previousImage": "Ver imagen anterior",
+    "seeImage": "Ver imagen",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar"
   }
 }

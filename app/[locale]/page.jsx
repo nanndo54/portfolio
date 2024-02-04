@@ -16,7 +16,7 @@ export default async function Page({ params: { locale } }) {
   const dictionary = await getDictionary(locale)
 
   return (
-    <Interactive>
+    <Interactive dictionary={dictionary}>
       <main className={styles.base} top='true'>
         <Navbar locale={locale} dictionary={dictionary} />
         {sections.map(({ id, Tag }) => (

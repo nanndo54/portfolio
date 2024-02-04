@@ -5,7 +5,6 @@ import Icon from '@/components/Icon'
 import Project from '@/components/Project'
 import Section from '@/components/Section'
 
-import Link from '@/components/Link'
 import { arrowIcon } from '@/constants/icons'
 
 export default async function ProjectsSection({ id, dictionary }) {
@@ -35,9 +34,6 @@ export default async function ProjectsSection({ id, dictionary }) {
 
   return (
     <Section id={id} className={styles.base}>
-      <Link href={`#${id}`} className={styles.arrow} aria-label='Ver proyectos' replace>
-        <Icon src={arrowIcon} contentColor priority />
-      </Link>
       <h2>{title}</h2>
       <div className={styles.content}>
         <div className={styles.timeline}>

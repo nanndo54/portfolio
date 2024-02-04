@@ -3,49 +3,6 @@
   overflow: visible;
 }
 
-.arrow {
-  position: absolute;
-  align-self: center;
-  top: 0;
-  height: 2.5rem;
-  width: 2.5rem;
-
-  transform: translateY(-2rem);
-  opacity: 1;
-
-  transition:
-    transform 0.4s ease-out,
-    opacity 0.4s ease-out;
-
-  animation: appear-arrow 0.5s ease-out;
-}
-
-@keyframes appear-arrow {
-  from {
-    will-change: transform, opacity;
-  }
-  from,
-  30% {
-    transform: translateY(0.5rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-2rem);
-    opacity: 1;
-  }
-}
-
-.arrow figure {
-  height: 100%;
-  width: 100%;
-  transform: rotate(-90deg);
-  transition: transform 0.5s;
-}
-
-.arrow:hover figure {
-  transform: translateY(-0.5rem) rotate(-90deg);
-}
-
 .content {
   display: grid;
   grid-template-columns: 0.75rem 1fr;
@@ -164,26 +121,5 @@
 
   .projects {
     grid-template-columns: 1fr;
-  }
-}
-
-@supports (animation-timeline: scroll()) {
-  .arrow {
-    animation: arrow-scroll ease forwards;
-    animation-timeline: scroll(root);
-    animation-range: 0 50vh;
-  }
-
-  @keyframes arrow-scroll {
-    to {
-      transform: translateY(-7rem);
-      opacity: 0;
-    }
-  }
-}
-@supports not (animation-timeline: scroll()) {
-  body[top='false'] .arrow {
-    transform: translateY(-7rem);
-    opacity: 0;
   }
 }

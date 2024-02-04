@@ -7,6 +7,7 @@ import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
 import OpenShowcase from '@/components/OpenShowcase'
 import { arrowIcon } from '@/constants/icons'
+import useAriaLabel from '@/hooks/useAriaLabel'
 import useDebouncedCallback from '@/hooks/useDebouncedCallback'
 import clsx from 'clsx/lite'
 
@@ -18,6 +19,11 @@ export default function ImageCarrousel({
   border = false,
   zoom = true
 }) {
+  const [ariaPreviousImage, ariaNextImage, ariaSeeImage] = useAriaLabel(
+    'previousImage',
+    'nextImage'
+  )
+
   const contentRef = useRef()
   const [imageIndex, setImageIndex] = useState(0)
 
@@ -58,7 +64,7 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        aria-label='Ver imagen anterior'
+        aria-label={ariaPreviousImage}
       />
       <OpenShowcase
         disable={!zoom}
@@ -82,13 +88,13 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex + 1)
         }}
-        aria-label='Ver imagen siguiente'
+        aria-label={ariaNextImage}
       />
       <div className={styles.dots}>
         {images.map((_, index) => (
           <button
             type='button'
-            aria-label={`Ver imagen ${index + 1}`}
+            aria-label={`${ariaSeeImage} ${index + 1}`}
             key={index}
             className={imageIndex === index ? styles.selected : ''}
             onClick={(ev) => {

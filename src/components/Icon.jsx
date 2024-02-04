@@ -46,7 +46,7 @@ export default function Icon({
         <SVG
           className={styles.icon}
           src={`/static/icons/${src}`}
-          title={alt}
+          // title={alt}
           {...props}
         />
       )}

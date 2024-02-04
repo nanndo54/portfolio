@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 const initialState = {
   isOnTop: true,
   theme: undefined,
+  dictionary: {},
   currentSection: 'landing',
   showcase: {}
 }
@@ -28,6 +29,7 @@ const store = create(
 
           return { theme }
         }),
+      setDictionary: (dictionary) => set(() => ({ dictionary })),
       setCurrentSection: (currentSection) => set(() => ({ currentSection })),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),

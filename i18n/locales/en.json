@@ -1,43 +1,5 @@
 {
-  "about-me": {
-    "title": "About me",
-    "text": "My name is Pablo Cabrera. I really like software development, good practices and clean code. I'm a big fan of sports, video games of many genres and the current affairs of the world of technology.",
-    "list": [
-      {
-        "text": "I live in the capital of Guatemala 🇬🇹, a place of volcanoes, great weather and nice people. Of course, I'm willing to work with international teams via remote work.",
-        "images": [
-          {
-            "src": "about-me/guatemala/img1.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          },
-          {
-            "src": "about-me/guatemala/img2.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          },
-          {
-            "src": "about-me/guatemala/img3.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          }
-        ]
-      },
-      {
-        "text": "I'm studying a degree in Science and Systems Engineering at \"Universidad de San Carlos de Guatemala\", thanks to which I developed great skills in software development and collaborative work.",
-        "images": [
-          {
-            "src": "about-me/usac/img1.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
-          },
-          {
-            "src": "about-me/usac/img2.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
-          }
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "title": "Contact me!"
-  },
+  "id": "en",
   "landing": {
     "title": "Home",
     "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
@@ -248,8 +210,56 @@
       ]
     }
   },
+  "about-me": {
+    "title": "About me",
+    "text": "My name is Pablo Cabrera. I really like software development, good practices and clean code. I'm a big fan of sports, video games of many genres and the current affairs of the world of technology.",
+    "list": [
+      {
+        "text": "I live in the capital of Guatemala 🇬🇹, a place of volcanoes, great weather and nice people. Of course, I'm willing to work with international teams via remote work.",
+        "images": [
+          {
+            "src": "about-me/guatemala/img1.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img2.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          },
+          {
+            "src": "about-me/guatemala/img3.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          }
+        ]
+      },
+      {
+        "text": "I'm studying a degree in Science and Systems Engineering at \"Universidad de San Carlos de Guatemala\", thanks to which I developed great skills in software development and collaborative work.",
+        "images": [
+          {
+            "src": "about-me/usac/img1.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          },
+          {
+            "src": "about-me/usac/img2.jpg",
+            "alt": "USAC, Facultad de Ingeniería"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact me!"
+  },
   "quote": {
     "author": "Carl Sagan",
     "text": "What makes us great is the fact that we can see how small we are."
+  },
+  "aria": {
+    "close": "Cerrar",
+    "goToTop": "Ir al inicio",
+    "nextImage": "Ver imagen siguiente",
+    "previousImage": "Ver imagen anterior",
+    "seeImage": "Ver imagen",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar"
   }
 }

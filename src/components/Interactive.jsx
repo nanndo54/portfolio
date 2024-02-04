@@ -8,14 +8,18 @@ import useTopObserver from '@/hooks/useTopObserver'
 import useAppStore from '@/state/store'
 import { useEffect, useRef } from 'react'
 
-export default function Interactive({ children }) {
-  const { theme, isOnTop, toggleTheme } = useAppStore()
+export default function Interactive({ dictionary, children }) {
+  const { theme, isOnTop, setDictionary, toggleTheme } = useAppStore()
   const ref = useRef()
 
   useMouseTracker(ref, (x, y) => {
     ref.current.style.setProperty('--x', x)
     ref.current.style.setProperty('--y', y)
   })
+
+  useEffect(() => {
+    if (setDictionary) setDictionary(dictionary)
+  }, [dictionary, setDictionary])
 
   useEffect(() => {
     document.body.setAttribute('dark', theme === 'dark')

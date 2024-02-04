@@ -5,8 +5,10 @@ import useAppStore from '@/state/store'
 import styles from '@/styles/NavbarButtons.module.css'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
-export default function NavbarButtons({ locale }) {
-  const { theme, toggleTheme } = useAppStore()
+export default function NavbarButtons() {
+  const { dictionary, theme, toggleTheme } = useAppStore()
+
+  const locale = dictionary.id
 
   return (
     <div className={styles.base}>
