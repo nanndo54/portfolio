@@ -15,11 +15,11 @@
   --light-filter-value: invert(0.9);
 }
 
-.base:hover {
+.hover:hover {
   scale: 1.05;
 }
 
-.base:active {
+.hover:active {
   scale: 0.96;
 }
 

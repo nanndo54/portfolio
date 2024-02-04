@@ -32,14 +32,11 @@
 
 .base:hover {
   scale: 1.01;
+  background-position: left;
 }
 
 .base:active {
   scale: 0.98;
-}
-
-.base:hover {
-  background-position: left;
 }
 
 .secondary {

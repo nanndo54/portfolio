@@ -5,28 +5,26 @@
 
 html {
   font-size: 16px;
-  min-height: 100dvh;
-
-  scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
   width: 100%;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
 
   color: var(--foreground-color);
   font-family: var(--body-font);
 
   background-color: var(--background-color);
   background-image: radial-gradient(
-      60rem 40rem at 35% 20rem,
+      50vw 40vh at 30% 20rem,
       var(--dim-accent-color) 0,
-      transparent 80%
+      transparent 70%
     ),
     radial-gradient(
-      30rem 25rem at 75% 20rem,
+      40vw 30vh at 70% 15rem,
       var(--dim-secondary-accent-color) 0,
-      transparent 65%
+      transparent 60%
     ),
     radial-gradient(
       at 10% calc(100vh + 60rem),
@@ -55,11 +53,11 @@ body {
   --content-color: rgb(50, 50, 50);
   --dim-content-color: rgba(100, 100, 100, 0.05);
 
-  --background-color: rgb(252, 252, 255);
-  --dim-background-color: rgba(252, 252, 255, 0.25);
+  --background-color: rgb(245, 245, 252);
+  --dim-background-color: rgba(245, 245, 252, 0.25);
 
   --accent-color: #519cff;
-  --dim-accent-color: #6295f560;
+  --dim-accent-color: #6295f577;
 
   --secondary-accent-color: #5359f3;
   --dim-secondary-accent-color: #656afd60;
@@ -76,7 +74,7 @@ body[dark='true'] {
   --dim-background-color: rgb(11, 13, 17, 0.25);
 
   --accent-color: #519cff;
-  --dim-accent-color: #6295f520;
+  --dim-accent-color: #6295f530;
 
   --secondary-accent-color: #6b6ff3;
   --dim-secondary-accent-color: #6b6ff330;
@@ -245,7 +243,7 @@ strong {
   border: 0.125rem solid var(--dim-accent-color);
   border-radius: 2rem;
   background-color: var(--dim-background-color);
-  backdrop-filter: blur(0.5rem) saturate(150%) brightness(96%);
+  backdrop-filter: blur(0.25rem) saturate(150%) brightness(96%);
 
   transition:
     backdrop-filter 0.5s,

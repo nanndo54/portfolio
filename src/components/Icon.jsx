@@ -11,6 +11,7 @@ export default function Icon({
   className = '',
   type = 'primary',
   border = false,
+  hover = false,
   src,
   alt = '',
   priority = false,
@@ -23,9 +24,10 @@ export default function Icon({
     <figure
       className={clsx(
         className,
+        styles.base,
         classNameByType[type],
         border && `${styles.border} blur-background`,
-        styles.base,
+        hover && styles.hover,
         contentColor && styles.contentColor,
         backgroundColor && styles.backgroundColor,
         lightColor && styles.lightColor

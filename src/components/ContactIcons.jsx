@@ -10,6 +10,7 @@ export default async function ContactIcons({ links, tabIndex }) {
           key={name}
           src={icon}
           border
+          hover
           aria-label={name}
           href={url}
           tabIndex={tabIndex}

@@ -61,12 +61,12 @@
   .dot3 {
     animation: ease forwards;
     animation-timeline: scroll(root);
-    animation-range: 20rem 50vh;
+    animation-range: 40rem 70rem;
   }
 
   .base {
     animation-name: icon-scroll;
-    animation-range: 0 50vh;
+    animation-range: 20rem 50rem;
   }
 
   .dot1 {
