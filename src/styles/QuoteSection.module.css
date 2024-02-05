@@ -1,21 +1,20 @@
 blockquote.base {
   max-width: 42rem;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   text-align: center;
   text-wrap: balance;
   line-height: 1.4;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 
   margin: 3rem auto;
   padding: 1.5rem 2rem;
 
-  border-radius: 1.5rem;
+  border-radius: 2.5rem;
 }
 
 .base sup {
   font-size: 3rem;
   vertical-align: super;
-  letter-spacing: 0.05rem;
   line-height: 0;
 
   padding: 0 0.5rem;
@@ -24,9 +23,6 @@ blockquote.base {
 }
 
 .base .author {
-  font-size: 1.6rem;
-  letter-spacing: 0.15rem;
-
   align-self: flex-end;
   justify-self: flex-end;
 }

@@ -7,6 +7,10 @@
     "status": "(Buscando empleo)",
     "cta": "Descarga mi CV!",
     "cv": "static/landing/cv/es.pdf",
+    "avatar": {
+      "src": "landing/profile-photo.jpg",
+      "alt": "Mi foto"
+    },
     "links": [
       {
         "name": "LinkedIn",
@@ -257,6 +261,7 @@
   "aria": {
     "close": "Cerrar",
     "goToTop": "Ir al inicio",
+    "myLogo": "Mi logo",
     "nextImage": "Ver imagen siguiente",
     "previousImage": "Ver imagen anterior",
     "seeImage": "Ver imagen",

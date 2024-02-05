@@ -1,6 +1,5 @@
 .base {
-  position: relative;
-  overflow: visible;
+  gap: 0.5rem;
 }
 
 .content {

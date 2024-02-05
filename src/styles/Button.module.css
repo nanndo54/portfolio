@@ -10,7 +10,7 @@
   border-radius: 1rem;
 
   color: var(--alternate-foreground-color);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
   text-wrap: nowrap;
@@ -31,17 +31,12 @@
 }
 
 .base:hover {
-  scale: 1.01;
   background-position: left;
-}
-
-.base:active {
-  scale: 0.98;
 }
 
 .secondary {
   background: none;
-  border: 0.15rem solid var(--secondary-accent-color);
+  border: 0.1rem solid var(--secondary-accent-color);
   color: var(--content-color);
 
   transition:

@@ -5,7 +5,7 @@
   font-size: 0;
 
   transition:
-    scale 0.2s ease-out,
+    scale 0.25s ease-out,
     border-color 0.5s,
     background-color 0.5s,
     backdrop-filter 0.5s;
@@ -13,14 +13,6 @@
 
   --dark-filter-value: invert(0.18);
   --light-filter-value: invert(0.9);
-}
-
-.hover:hover {
-  scale: 1.05;
-}
-
-.hover:active {
-  scale: 0.96;
 }
 
 .border {

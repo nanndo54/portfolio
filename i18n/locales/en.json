@@ -7,6 +7,10 @@
     "status": "(Looking for a job)",
     "cta": "Download my CV!",
     "cv": "static/landing/cv/en.pdf",
+    "avatar": {
+      "src": "landing/profile-photo.jpg",
+      "alt": "My photo"
+    },
     "links": [
       {
         "name": "LinkedIn",
@@ -257,6 +261,7 @@
   "aria": {
     "close": "Close",
     "goToTop": "Go to top",
+    "myLogo": "My logo",
     "nextImage": "See next image",
     "previousImage": "See previous image",
     "seeImage": "See image",

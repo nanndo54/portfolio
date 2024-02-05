@@ -11,7 +11,7 @@ export default function Icon({
   className = '',
   type = 'primary',
   border = false,
-  hover = false,
+  scaleAnimation = false,
   src,
   alt = '',
   priority = false,
@@ -27,7 +27,7 @@ export default function Icon({
         styles.base,
         classNameByType[type],
         border && `${styles.border} blur-background`,
-        hover && styles.hover,
+        scaleAnimation && 'scale-animation',
         contentColor && styles.contentColor,
         backgroundColor && styles.backgroundColor,
         lightColor && styles.lightColor

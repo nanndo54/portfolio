@@ -1,6 +1,6 @@
 header.base {
   justify-content: flex-start;
-  height: max(36rem, calc(100vh - 20rem));
+  height: max(32rem, calc(100vh - 16rem));
   width: 48rem;
   margin: 0 auto;
   padding: 0;
@@ -25,6 +25,10 @@ header.base {
   will-change: transform, opacity;
 }
 
+.base:hover .info {
+  opacity: 1 !important;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -39,7 +43,7 @@ header.base {
 
 @media (max-width: 800px) {
   header.base {
-    height: max(45rem, calc(100vh - 10rem));
+    height: max(41rem, calc(100vh - 6rem));
     width: 100%;
   }
 
@@ -97,13 +101,11 @@ header.base {
   @keyframes info-scroll {
     to {
       opacity: 0.25;
-      pointer-events: none;
     }
   }
 }
 @supports not (animation-timeline: scroll()) {
   body[top='false'] .info {
     opacity: 0.25;
-    pointer-events: none;
   }
 }

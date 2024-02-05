@@ -9,7 +9,7 @@ import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
 
 export default async function LandingSection({ id, dictionary }) {
-  const { presentation, cv, cta, links } = dictionary[id]
+  const { presentation, cv, cta, links, avatar } = dictionary[id]
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -31,7 +31,7 @@ export default async function LandingSection({ id, dictionary }) {
           <ContactIcons links={links} className={styles.contact} />
         </div>
       </div>
-      <Avatar />
+      <Avatar photo={avatar} />
     </Section>
   )
 }

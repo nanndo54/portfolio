@@ -17,7 +17,8 @@ export default function NavbarLinks({ links }) {
           href={`#${id}`}
           className={clsx(
             styles.link,
-            id === currentSection && `${styles.current} blur-background`
+            id === currentSection && `${styles.current} blur-background`,
+            'scale-animation'
           )}
           replace
           noDecoration

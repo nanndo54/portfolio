@@ -37,7 +37,7 @@ export default async function Project({
           ))}
         </div>
       </header>
-      <ImageCarrousel images={images} height={213} width={426} />
+      <ImageCarrousel images={images} height={211} width={422} />
       <footer>
         {code && (
           <Button type='secondary' href={code} isExternal>

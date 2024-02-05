@@ -12,6 +12,7 @@ export default function NavbarButtons() {
   return (
     <div className={styles.base}>
       <DarkModeSwitch
+        className='scale-animation'
         checked={theme === 'dark'}
         onChange={toggleTheme}
         moonColor='var(--content-color)'
@@ -19,10 +20,10 @@ export default function NavbarButtons() {
         aria-label={theme === 'dark' ? aria.setLightMode : aria.setDarkMode}
       />
       <Link
+        className={`${styles.language} scale-animation`}
         href={locale === 'en' ? '/es' : '/en'}
         replace
         scroll={false}
-        className={styles.language}
         aria-label={locale}
         noDecoration
       >

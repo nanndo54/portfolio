@@ -34,9 +34,11 @@ export default function useSectionObserver() {
       { threshold: 0.3 }
     )
 
-    sectionsElements.forEach((element) => {
-      observer.observe(element)
-    })
+    sectionsElements
+      .filter((element) => element != null)
+      .forEach((element) => {
+        observer.observe(element)
+      })
 
     return () => {
       observer.disconnect()

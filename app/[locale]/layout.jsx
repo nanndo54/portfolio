@@ -11,6 +11,7 @@ export async function generateMetadata({ params: { locale } }) {
 
   return {
     description,
+    metadataBase: `https://nanndo54.dev/${locale}`,
     openGraph: {
       siteName: 'Portfolio | nanndo54',
       type: 'website',

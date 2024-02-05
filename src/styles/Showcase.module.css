@@ -103,10 +103,6 @@
   width: 100%;
 }
 
-.icon figure:hover {
-  scale: none;
-}
-
 .base footer {
   width: 100%;
   height: 6rem;

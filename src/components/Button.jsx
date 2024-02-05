@@ -18,7 +18,7 @@ export default async function Button({
 }) {
   return href ? (
     <Link
-      className={clsx(className, styles.base, classNameByType[type])}
+      className={clsx(className, styles.base, classNameByType[type], 'scale-animation')}
       href={href}
       noDecoration
       {...props}

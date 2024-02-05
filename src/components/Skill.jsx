@@ -17,7 +17,14 @@ export default async function Skill({
       title={name}
     >
       <div className={styles.base}>
-        <Icon className={styles.icon} src={icon} type={type} border hover {...props} />
+        <Icon
+          className={styles.icon}
+          src={icon}
+          type={type}
+          border
+          scaleAnimation
+          {...props}
+        />
         {size !== 'small' && <span>{name}</span>}
       </div>
     </OpenShowcase>

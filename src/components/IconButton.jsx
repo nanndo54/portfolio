@@ -13,7 +13,7 @@ export default function IconButton({
   src,
   ...props
 }) {
-  const childrenElement = <Icon src={src} hover {...props} />
+  const childrenElement = <Icon src={src} scaleAnimation {...props} />
 
   return href ? (
     <Link
