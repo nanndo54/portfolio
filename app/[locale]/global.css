@@ -123,7 +123,7 @@ h1 {
 :is(h2, h3, h4, h5, h6) {
   text-wrap: pretty;
   font-family: var(--subtitle-font);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
 
   transition: color 0.5s;

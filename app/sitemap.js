@@ -7,7 +7,7 @@ export default function sitemap() {
       priority: 1
     },
     {
-      url: 'https://nanndo54.dev/blog',
+      url: 'https://nanndo54.dev/es',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8

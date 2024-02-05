@@ -1,4 +1,4 @@
-import { Lora, Mukta, Proza_Libre } from 'next/font/google'
+import { Lora, Mukta } from 'next/font/google'
 
 export const titleFont = Lora({
   display: 'swap',
@@ -8,10 +8,10 @@ export const titleFont = Lora({
   variable: '--title-font'
 })
 
-export const subTitleFont = Proza_Libre({
+export const subTitleFont = Mukta({
   display: 'swap',
   style: 'normal',
-  weight: ['600', '500'],
+  weight: ['700'],
   subsets: ['latin'],
   variable: '--subtitle-font'
 })
@@ -19,7 +19,7 @@ export const subTitleFont = Proza_Libre({
 export const bodyFont = Mukta({
   display: 'swap',
   style: 'normal',
-  weight: ['400', '600', '700'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--body-font'
 })
