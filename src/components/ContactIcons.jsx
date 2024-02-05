@@ -14,7 +14,7 @@ export default async function ContactIcons({ links, tabIndex }) {
           aria-label={name}
           href={url}
           tabIndex={tabIndex}
-          priority
+          // priority
           {...props}
         />
       ))}

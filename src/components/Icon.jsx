@@ -1,7 +1,7 @@
 import styles from '@/styles/Icon.module.css'
 import clsx from 'clsx/lite'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import SVG from 'react-inlinesvg'
 
 const classNameByType = {
   secondary: styles.secondary
@@ -20,6 +20,8 @@ export default function Icon({
   lightColor = false,
   ...props
 }) {
+  const SvgIcon = dynamic(() => import(`/public/static/icons/${src}`))
+
   return (
     <figure
       className={clsx(
@@ -45,12 +47,7 @@ export default function Icon({
           {...props}
         />
       ) : (
-        <SVG
-          className={styles.icon}
-          src={`/static/icons/${src}`}
-          title={alt}
-          {...props}
-        />
+        <SvgIcon className={styles.icon} title={alt} {...props} />
       )}
     </figure>
   )
