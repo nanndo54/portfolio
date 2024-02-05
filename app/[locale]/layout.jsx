@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }))
 }
 
-export default function Layout({ children, params: { locale } }) {
+export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} translate='no'>
       <body
