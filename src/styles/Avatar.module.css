@@ -49,7 +49,6 @@
   padding: 0.5rem;
   border-color: var(--dim-accent-color);
   border-radius: 50%;
-  filter: grayscale(15%);
 }
 
 @media (max-width: 800px) {

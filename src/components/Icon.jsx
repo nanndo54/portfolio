@@ -20,7 +20,7 @@ export default function Icon({
   lightColor = false,
   ...props
 }) {
-  const SvgIcon = dynamic(() => import(`/public/static/icons/${src}`))
+  const SvgIcon = !priority && dynamic(() => import(`/public/static/icons/${src}`))
 
   return (
     <figure

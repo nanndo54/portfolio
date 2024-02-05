@@ -20,7 +20,7 @@ export default async function Page({ params: { locale } }) {
 
   return (
     <Interactive dictionary={dictionary}>
-      <main className={styles.base} top='true'>
+      <main className={styles.base}>
         <Navbar dictionary={dictionary} />
         {sections.map(({ id, Tag }) => (
           <Tag key={id} id={id} dictionary={dictionary} />

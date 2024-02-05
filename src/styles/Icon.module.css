@@ -39,11 +39,15 @@
   filter: var(--dark-filter-value);
 }
 
-body[dark='true'] .base.contentColor .icon {
+.base.backgroundColor .icon {
   filter: var(--light-filter-value);
 }
 
-.base.backgroundColor .icon {
+.base.lightColor .icon {
+  filter: var(--light-filter-value);
+}
+
+body[dark='true'] .base.contentColor .icon {
   filter: var(--light-filter-value);
 }
 
@@ -51,6 +55,12 @@ body[dark='true'] .base.backgroundColor .icon {
   filter: var(--dark-filter-value);
 }
 
-.base.lightColor .icon {
-  filter: var(--light-filter-value);
+@media (prefers-color-scheme: dark) {
+  .base.contentColor .icon {
+    filter: var(--light-filter-value);
+  }
+
+  .base.backgroundColor .icon {
+    filter: var(--dark-filter-value);
+  }
 }

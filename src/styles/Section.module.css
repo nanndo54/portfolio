@@ -1,13 +1,9 @@
 .base {
   width: 62rem;
-  height: fit-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
   padding: 2rem;
   margin: 0 auto;
 
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-items: center;
 
