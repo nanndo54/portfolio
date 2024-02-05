@@ -30,7 +30,6 @@ export default async function Button({
       type='button'
       className={clsx(className, styles.base, classNameByType[type])}
       onClick={onClick}
-      {...props}
     >
       {children}
     </button>

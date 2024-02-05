@@ -6,7 +6,7 @@
     "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
     "status": "(Looking for a job)",
     "cta": "Download my CV!",
-    "cv": "static/landing/cv/en.pdf",
+    "cv": "cv/en.pdf",
     "avatar": {
       "src": "landing/profile-photo.jpg",
       "alt": "My photo"
@@ -128,7 +128,7 @@
           },
           {
             "src": "projects/jolc/img2.jpg",
-            "alt": "Interpreting JOLC code, a factorial function is being called with one argument: 10; the result can be seen in the console: 3628800"
+            "alt": "Interpreting JOLC code, a factorial function is being called"
           },
           {
             "src": "projects/jolc/img3.jpg",

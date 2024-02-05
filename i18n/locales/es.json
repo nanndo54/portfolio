@@ -6,7 +6,7 @@
     "presentation": "¡Hola! Soy un <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
     "status": "(Buscando empleo)",
     "cta": "Descarga mi CV!",
-    "cv": "static/landing/cv/es.pdf",
+    "cv": "cv/es.pdf",
     "avatar": {
       "src": "landing/profile-photo.jpg",
       "alt": "Mi foto"
@@ -128,7 +128,7 @@
           },
           {
             "src": "projects/jolc/img2.jpg",
-            "alt": "Interpretando código JOLC, se está llamando a una función factorial con un argumento: 10; el resultado se puede observar en la consola: 3628800"
+            "alt": "Interpretando código JOLC, se está llamando a una función factorial"
           },
           {
             "src": "projects/jolc/img3.jpg",

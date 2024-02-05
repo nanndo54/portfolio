@@ -4,7 +4,7 @@ import Icon from '@/components/Icon'
 import OpenShowcase from '@/components/OpenShowcase'
 
 export default async function Skill({
-  size = 'medium',
+  // size = 'medium',
   icon,
   type,
   name,
@@ -25,7 +25,7 @@ export default async function Skill({
           scaleAnimation
           {...props}
         />
-        {size !== 'small' && <span>{name}</span>}
+        {/* {size !== 'small' && <span>{name}</span>} */}
       </div>
     </OpenShowcase>
   )

@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@cv": ["./cv.json"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"]

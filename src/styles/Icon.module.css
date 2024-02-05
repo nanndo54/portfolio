@@ -10,9 +10,6 @@
     background-color 0.5s,
     backdrop-filter 0.5s;
   will-change: scale;
-
-  --dark-filter-value: invert(0.18);
-  --light-filter-value: invert(0.9);
 }
 
 .border {
@@ -32,35 +29,35 @@
   height: 100%;
   width: 100%;
 
-  transition: filter 0.5s;
+  transition: fill 0.5s;
 }
 
 .base.contentColor .icon {
-  filter: var(--dark-filter-value);
+  fill: var(--content-color);
 }
 
 .base.backgroundColor .icon {
-  filter: var(--light-filter-value);
+  fill: var(--background-color);
 }
 
 .base.lightColor .icon {
-  filter: var(--light-filter-value);
+  fill: var(--light-color);
 }
 
 body[dark='true'] .base.contentColor .icon {
-  filter: var(--light-filter-value);
+  fill: var(--content-color);
 }
 
 body[dark='true'] .base.backgroundColor .icon {
-  filter: var(--dark-filter-value);
+  fill: var(--background-color);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .base.contentColor .icon {
-    filter: var(--light-filter-value);
+    fill: var(--content-color);
   }
 
   .base.backgroundColor .icon {
-    filter: var(--dark-filter-value);
+    fill: var(--background-color);
   }
-}
+} */

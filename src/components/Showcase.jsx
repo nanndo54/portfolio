@@ -79,7 +79,7 @@ export default function Showcase() {
         centerZoomedOut
         ref={ref}
       >
-        <div className={styles.overlay} onClick={handleClose} onScroll={console.log}>
+        <div className={styles.overlay} onClick={handleClose}>
           <header>
             {!singleImage && (
               <span className={styles.imageIndex}>
