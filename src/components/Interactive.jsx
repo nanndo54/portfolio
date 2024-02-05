@@ -6,7 +6,7 @@ import useMouseTracker from '@/hooks/useMouseTracker'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import useTopObserver from '@/hooks/useTopObserver'
 import useAppStore from '@/state/store'
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function Interactive({ dictionary, children }) {
   const { theme, isOnTop, setDictionary } = useAppStore()
@@ -20,13 +20,6 @@ export default function Interactive({ dictionary, children }) {
   useEffect(() => {
     setDictionary(dictionary)
   }, [dictionary, setDictionary])
-
-  useLayoutEffect(() => {
-    // document.body.setAttribute(
-    //   'dark',
-    //   window.matchMedia('(prefers-color-scheme: dark)').matches
-    // )
-  }, [])
 
   useEffect(() => {
     document.body.setAttribute('dark', theme === 'dark')
