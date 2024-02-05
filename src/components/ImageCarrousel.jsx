@@ -14,8 +14,8 @@ import clsx from 'clsx/lite'
 export default function ImageCarrousel({
   className,
   images,
-  height,
-  width,
+  // height,
+  // width,
   border = false,
   zoom = true
 }) {
@@ -69,10 +69,10 @@ export default function ImageCarrousel({
         index={imageIndex}
         onIndexChange={handleImageChange}
       >
-        <div className={styles.container} style={{ maxHeight: height, maxWidth: width }}>
+        <div className={styles.container}>
           <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
             {images.map((image, index) => (
-              <Image key={index} {...image} height={height} width={width} zoom={false} />
+              <Image key={index} {...image} zoom={false} />
             ))}
           </div>
         </div>
