@@ -18,12 +18,11 @@ export default function Avatar({ photo }) {
 
   return (
     <button type='button' className={styles.base} onClick={handleMenuButton}>
-      <Icon className={styles.icon} src={logoIcon} alt={aria.myLogo} priority />
+      <Icon className={styles.icon} src={logoIcon} alt={aria.myLogo} />
       <Icon
         className={clsx(styles.icon, styles.front)}
         src={logoIcon}
         alt={aria.myLogo}
-        priority
       />
       <Image
         className={styles.picture}

@@ -30,7 +30,6 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <body
         className={clsx(titleFont.variable, subTitleFont.variable, bodyFont.variable)}
         top='true'
-        // dark={false}
       >
         {children}
       </body>
