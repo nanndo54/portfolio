@@ -1,7 +1,23 @@
+import './global.css'
+
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
 import clsx from 'clsx/lite'
 import { i18n } from 'i18n/config'
-import './global.css'
+import { getDictionary } from 'i18n/get-dictionary'
+
+export async function generateMetadata({ params: { locale } }) {
+  const dictionary = await getDictionary(locale)
+  const { description } = dictionary
+
+  return {
+    description,
+    openGraph: {
+      siteName: 'Portfolio | nanndo54',
+      type: 'website',
+      locale
+    }
+  }
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }))
