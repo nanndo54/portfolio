@@ -1,11 +1,12 @@
 'use client'
 
-import Icon from '@/components/Icon'
 import Image from '@/components/Image'
 import { logoIcon } from '@/constants/icons'
 import useAppStore from '@/state/store'
 import styles from '@/styles/Avatar.module.css'
 import clsx from 'clsx/lite'
+
+import LogoIcon from 'public/static/icons/landing/logo-icon.svg'
 
 export default function Avatar({ photo }) {
   const { aria } = useAppStore((state) => state.dictionary)
@@ -18,12 +19,8 @@ export default function Avatar({ photo }) {
 
   return (
     <button type='button' className={styles.base} onClick={handleMenuButton}>
-      <Icon className={styles.icon} src={logoIcon} alt={aria.myLogo} />
-      <Icon
-        className={clsx(styles.icon, styles.front)}
-        src={logoIcon}
-        alt={aria.myLogo}
-      />
+      <LogoIcon className={styles.icon} src={logoIcon} />
+      <LogoIcon className={clsx(styles.icon, styles.front)} src={logoIcon} />
       <Image
         className={styles.picture}
         {...photo}
