@@ -11,6 +11,18 @@ export default function robots() {
       },
       {
         userAgent: '*',
+        allow: '/cv/'
+      },
+      {
+        userAgent: '*',
+        allow: '/splash/'
+      },
+      {
+        userAgent: '*',
+        allow: '/static/'
+      },
+      {
+        userAgent: '*',
         disallow: '/'
       }
     ],
