@@ -9,7 +9,7 @@ const classNameByType = {
 }
 
 export default async function Button({
-  className = '',
+  className,
   type = 'primary',
   href,
   onClick,

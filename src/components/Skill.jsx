@@ -4,7 +4,7 @@ import Icon from '@/components/Icon'
 import OpenShowcase from '@/components/OpenShowcase'
 
 export default async function Skill({
-  // size = 'medium',
+  size = 'medium',
   icon,
   type,
   name,
@@ -13,20 +13,19 @@ export default async function Skill({
 }) {
   return (
     <OpenShowcase
+      className={styles.base}
       images={[{ src: icon, alt: name, icon: true, props: showcaseProps }]}
       title={name}
     >
-      <div className={styles.base}>
-        <Icon
-          className={styles.icon}
-          src={icon}
-          type={type}
-          border
-          scaleAnimation
-          {...props}
-        />
-        {/* {size !== 'small' && <span>{name}</span>} */}
-      </div>
+      <Icon
+        className={styles.icon}
+        src={icon}
+        type={type}
+        border
+        scaleAnimation
+        {...props}
+      />
+      {size !== 'small' && <span>{name}</span>}
     </OpenShowcase>
   )
 }

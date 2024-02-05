@@ -14,8 +14,8 @@ import clsx from 'clsx/lite'
 export default function ImageCarrousel({
   className,
   images,
-  // height,
-  // width,
+  height,
+  width,
   border = false,
   zoom = true
 }) {
@@ -61,7 +61,7 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        aria-label={aria.previousImage}
+        title={aria.previousImage}
       />
       <OpenShowcase
         disable={!zoom}
@@ -69,12 +69,10 @@ export default function ImageCarrousel({
         index={imageIndex}
         onIndexChange={handleImageChange}
       >
-        <div className={styles.container}>
-          <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-            {images.map((image, index) => (
-              <Image key={index} {...image} zoom={false} />
-            ))}
-          </div>
+        <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
+          {images.map((image, index) => (
+            <Image key={index} {...image} height={height} width={width} zoom={false} />
+          ))}
         </div>
       </OpenShowcase>
       <IconButton
@@ -85,15 +83,15 @@ export default function ImageCarrousel({
           ev.stopPropagation()
           handleImageChange(imageIndex + 1)
         }}
-        aria-label={aria.nextImage}
+        title={aria.nextImage}
       />
       <div className={styles.dots}>
         {images.map((_, index) => (
           <button
             type='button'
-            aria-label={`${aria.seeImage} ${index + 1}`}
+            title={`${aria.seeImage} ${index + 1}`}
             key={index}
-            className={imageIndex === index ? styles.selected : ''}
+            className={clsx(imageIndex === index && styles.selected)}
             onClick={(ev) => {
               ev.stopPropagation()
               handleImageChange(index)

@@ -4,7 +4,7 @@ import clsx from 'clsx/lite'
 export default async function Section({
   background = true,
   as: Tag = 'section',
-  className = '',
+  className,
   id,
   children
 }) {

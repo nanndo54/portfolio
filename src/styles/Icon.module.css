@@ -47,12 +47,10 @@
 body[dark='true'] .base.contentColor .icon {
   fill: var(--content-color);
 }
-
 body[dark='true'] .base.backgroundColor .icon {
   fill: var(--background-color);
 }
-
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   .base.contentColor .icon {
     fill: var(--content-color);
   }
@@ -60,4 +58,4 @@ body[dark='true'] .base.backgroundColor .icon {
   .base.backgroundColor .icon {
     fill: var(--background-color);
   }
-} */
+}

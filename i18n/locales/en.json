@@ -266,6 +266,7 @@
     "seeImage": "See image",
     "setDarkMode": "Activate dark mode",
     "setLightMode": "Activate light mode",
+    "toggleLocale": "Change language to spanish",
     "zoomIn": "Zoom in",
     "zoomOut": "Zoom out"
   }

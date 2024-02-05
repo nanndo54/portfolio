@@ -9,7 +9,7 @@ export default function GoToTopButton() {
   const { aria } = useAppStore((state) => state.dictionary)
 
   return (
-    <Link href='#landing' className={styles.base} aria-label={aria.goToTop}>
+    <Link href='#landing' className={styles.base} title={aria.goToTop}>
       <div className={styles.icon}>
         <div className={styles.dot1} />
         <div className={styles.dot2} />

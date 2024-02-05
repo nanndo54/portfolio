@@ -2,15 +2,12 @@
 
 import Image from '@/components/Image'
 import { logoIcon } from '@/constants/icons'
-import useAppStore from '@/state/store'
 import styles from '@/styles/Avatar.module.css'
 import clsx from 'clsx/lite'
 
 import LogoIcon from 'public/static/icons/landing/logo-icon.svg'
 
 export default function Avatar({ photo }) {
-  const { aria } = useAppStore((state) => state.dictionary)
-
   const handleMenuButton = () => {
     const squeakAudio = new Audio('/static/landing/squeak.mp3')
     squeakAudio.volume = 0.3

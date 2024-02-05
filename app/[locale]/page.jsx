@@ -8,12 +8,12 @@ import Footer from '@/components/Footer'
 import GoToTopButton from '@/components/GoToTopButton'
 import Interactive from '@/components/Interactive'
 import Navbar from '@/components/Navbar'
+import Showcase from '@/components/Showcase'
 import sections from '@/constants/sections'
-import dynamic from 'next/dynamic'
 
-const Showcase = dynamic(() => import('@/components/Showcase'), {
-  ssr: false
-})
+// const Showcase = dynamic(() => import('@/components/Showcase'), {
+//   ssr: false
+// })
 
 export default async function Page({ params: { locale } }) {
   const dictionary = await getDictionary(locale)

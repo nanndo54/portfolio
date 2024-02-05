@@ -91,7 +91,7 @@ export default function Showcase() {
               src={closeIcon}
               lightColor
               className={styles.closeButton}
-              aria-label={aria.close}
+              title={aria.close}
             />
           </header>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
@@ -100,7 +100,7 @@ export default function Showcase() {
               lightColor
               className={styles.previousImage}
               onClick={handleShowPreviousImage}
-              aria-label={aria.previousImage}
+              title={aria.previousImage}
               tabIndex={open ? 0 : -1}
             />
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
@@ -111,6 +111,7 @@ export default function Showcase() {
                   <Image
                     src={src}
                     alt={alt}
+                    priority
                     aria-hidden={!open}
                     width={defaultImageWidth}
                     height={(height * defaultImageWidth) / width || defaultImageHeight}
@@ -123,7 +124,7 @@ export default function Showcase() {
               lightColor
               className={styles.nextImage}
               onClick={handleShowNextImage}
-              aria-label={aria.nextImage}
+              title={aria.nextImage}
               tabIndex={open ? 0 : -1}
             />
           </div>
@@ -136,14 +137,14 @@ export default function Showcase() {
                 lightColor
                 border
                 onClick={() => ref.current?.zoomOut(0.2)}
-                aria-label={aria.zoomOut}
+                title={aria.zoomOut}
               />
               <IconButton
                 src={plusIcon}
                 lightColor
                 border
                 onClick={() => ref.current?.zoomIn(0.2)}
-                aria-label={aria.zoomIn}
+                title={aria.zoomIn}
               />
             </span>
           </footer>

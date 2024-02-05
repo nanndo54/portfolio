@@ -17,14 +17,14 @@ export default function NavbarButtons() {
         onChange={toggleTheme}
         moonColor='var(--content-color)'
         sunColor='var(--content-color)'
-        aria-label={theme === 'dark' ? aria.setLightMode : aria.setDarkMode}
+        title={theme === 'dark' ? aria.setLightMode : aria.setDarkMode}
       />
       <Link
         className={`${styles.language} scale-animation`}
+        title={aria.toggleLocale}
         href={locale === 'en' ? '/es' : '/en'}
         replace
         scroll={false}
-        aria-label={locale}
         noDecoration
       >
         {locale}

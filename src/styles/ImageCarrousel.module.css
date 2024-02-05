@@ -11,19 +11,22 @@
   transition: border-color 0.5s;
 }
 
-.border .container {
+.border .content {
   border-radius: 0.75rem;
-  overflow: hidden;
 }
 
 .border .previousImage {
-  width: 2.5rem;
+  width: 3rem;
   padding-left: 1rem;
 }
 
 .border .nextImage {
-  width: 2.5rem;
+  width: 3rem;
   padding-right: 1rem;
+}
+
+.border .dots {
+  bottom: 1.75rem;
 }
 
 .base.singleImage .previousImage,

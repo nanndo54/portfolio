@@ -11,9 +11,10 @@ export default async function ContactIcons({ links, tabIndex }) {
           src={icon}
           border
           scaleAnimation
-          aria-label={name}
+          title={name}
           href={url}
           tabIndex={tabIndex}
+          priority
           {...props}
         />
       ))}
