@@ -1,13 +1,13 @@
 'use client'
 
 import styles from '@/styles/ImageCarrousel.module.css'
-import { useCallback, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
 import OpenShowcase from '@/components/OpenShowcase'
 import { arrowIcon } from '@/constants/icons'
-import useDebouncedCallback from '@/hooks/useDebouncedCallback'
+import useCarrousel from '@/hooks/useCarrousel'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 
@@ -19,30 +19,17 @@ export default function ImageCarrousel({
   border = false,
   zoom = true
 }) {
-  const { aria } = useAppStore((state) => state.dictionary)
-
   const contentRef = useRef()
-  const [imageIndex, setImageIndex] = useState(0)
-
-  const singleImage = images.length <= 1
-
-  const handleImageChange = useCallback(
-    (index) => {
-      const newImageIndex = (index + images.length) % images.length
+  const { aria } = useAppStore((state) => state.dictionary)
+  const { imageIndex, singleImage, handleImageChange, onScroll } = useCarrousel({
+    images,
+    onImageChange: (newImageIndex) => {
       contentRef.current.scrollTo({
         left: contentRef.current.clientWidth * newImageIndex,
         behavior: 'smooth'
       })
-      setImageIndex(newImageIndex)
-    },
-    [images.length]
-  )
-
-  const handleScroll = useDebouncedCallback((event) => {
-    const { scrollLeft, clientWidth } = event.target
-    const index = Math.round(scrollLeft / clientWidth)
-    setImageIndex(index)
-  }, 100)
+    }
+  })
 
   return (
     <div
@@ -68,12 +55,17 @@ export default function ImageCarrousel({
         images={images}
         index={imageIndex}
         onIndexChange={handleImageChange}
+        className={styles.content}
+        ref={contentRef}
+        onScroll={onScroll}
+        style={{
+          width: `clamp(100%, ${width}px, 100%)`,
+          aspectRatio: Math.fround(width / height)
+        }}
       >
-        <div className={styles.content} ref={contentRef} onScroll={handleScroll}>
-          {images.map((image, index) => (
-            <Image key={index} {...image} height={height} width={width} zoom={false} />
-          ))}
-        </div>
+        {images.map((image, index) => (
+          <Image key={index} {...image} height={height} width={width} zoom={false} />
+        ))}
       </OpenShowcase>
       <IconButton
         src={arrowIcon}

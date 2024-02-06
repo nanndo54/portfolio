@@ -9,6 +9,7 @@ import IconButton from '@/components/IconButton'
 import Image from '@/components/Image'
 
 import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '@/constants/icons'
+import useCarrousel from '@/hooks/useCarrousel'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 
@@ -17,50 +18,42 @@ const defaultImageWidth = 2016
 const defaultImageHeight = 1080
 
 export default function Showcase() {
-  const { showcase, closeShowcase, setShowcase } = useAppStore()
+  const { showcase, closeShowcase } = useAppStore()
   const { aria } = useAppStore((state) => state.dictionary)
   const ref = useRef()
 
   const [scale, setScale] = useState(initialScale)
+  const { open, images, index: initialIndex, onIndexChange } = showcase
 
-  const { open, images, index, onIndexChange } = showcase
-  const image = images?.[index] || {}
+  const { image, imageIndex, singleImage, handleImageChange } = useCarrousel({
+    initialIndex,
+    images,
+    onImageChange: (newImageIndex) => {
+      ref.current.resetTransform()
+      if (onIndexChange) onIndexChange(newImageIndex)
+    }
+  })
+
   const { alt, src, height, width, icon, props } = image
-
-  const singleImage = images?.length <= 1
 
   const handleClose = useCallback(() => {
     closeShowcase()
     ref.current?.resetTransform()
   }, [closeShowcase, ref])
 
-  const handleShowPreviousImage = useCallback(() => {
-    const newIndex = (index - 1 + images.length) % images.length
-    setShowcase({ index: newIndex })
-    ref.current?.resetTransform()
-    onIndexChange?.(newIndex)
-  }, [index, images, onIndexChange, setShowcase])
-
-  const handleShowNextImage = useCallback(() => {
-    const newIndex = (index + 1 + images.length) % images.length
-    setShowcase({ index: newIndex })
-    ref.current?.resetTransform()
-    onIndexChange?.(newIndex)
-  }, [index, images, onIndexChange, setShowcase])
-
   useEffect(() => {
     if (!open) return
 
     const handleKeyDown = (ev) => {
       if (ev.key === 'Escape') handleClose()
-      if (ev.key === 'ArrowLeft') handleShowPreviousImage()
-      if (ev.key === 'ArrowRight') handleShowNextImage()
+      if (ev.key === 'ArrowLeft') handleImageChange(imageIndex - 1)
+      if (ev.key === 'ArrowRight') handleImageChange(imageIndex + 1)
     }
 
     window.addEventListener('keydown', handleKeyDown)
 
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [open, handleClose, handleShowPreviousImage, handleShowNextImage])
+  }, [open, imageIndex, handleClose, handleImageChange])
 
   return (
     <div
@@ -83,7 +76,7 @@ export default function Showcase() {
           <header>
             {!singleImage && (
               <span className={styles.imageIndex}>
-                {index + 1}/{images?.length}
+                {imageIndex + 1}/{images?.length}
               </span>
             )}
             <p>{alt}</p>
@@ -99,7 +92,7 @@ export default function Showcase() {
               src={arrowIcon}
               lightColor
               className={styles.previousImage}
-              onClick={handleShowPreviousImage}
+              onClick={() => handleImageChange(imageIndex - 1)}
               title={aria.previousImage}
               tabIndex={open ? 0 : -1}
             />
@@ -123,7 +116,7 @@ export default function Showcase() {
               src={arrowIcon}
               lightColor
               className={styles.nextImage}
-              onClick={handleShowNextImage}
+              onClick={() => handleImageChange(imageIndex + 1)}
               title={aria.nextImage}
               tabIndex={open ? 0 : -1}
             />

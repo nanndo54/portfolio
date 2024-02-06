@@ -5,11 +5,9 @@
   font-size: 0;
 
   transition:
-    scale 0.25s ease-out,
     border-color 0.5s,
     background-color 0.5s,
     backdrop-filter 0.5s;
-  will-change: scale;
 }
 
 .border {
@@ -29,7 +27,9 @@
   height: 100%;
   width: 100%;
 
-  transition: fill 0.5s;
+  transition:
+    scale 0.25s ease-out,
+    fill 0.5s;
 }
 
 .base.contentColor .icon {
@@ -42,20 +42,4 @@
 
 .base.lightColor .icon {
   fill: var(--light-color);
-}
-
-body[dark='true'] .base.contentColor .icon {
-  fill: var(--content-color);
-}
-body[dark='true'] .base.backgroundColor .icon {
-  fill: var(--background-color);
-}
-@media (prefers-color-scheme: dark) {
-  .base.contentColor .icon {
-    fill: var(--content-color);
-  }
-
-  .base.backgroundColor .icon {
-    fill: var(--background-color);
-  }
 }

@@ -42,11 +42,6 @@
 }
 
 @keyframes appear-navbar {
-  from {
-    transform: translateY(-3.5rem);
-    will-change: transform;
-  }
-
   from,
   30% {
     transform: translateY(-3.5rem);
@@ -54,6 +49,5 @@
 
   to {
     transform: unset;
-    will-change: unset;
   }
 }

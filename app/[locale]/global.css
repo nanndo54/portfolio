@@ -163,7 +163,7 @@ h6 {
   }
 
   h1 {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
   }
 
   h2 {
@@ -191,7 +191,7 @@ h6 {
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
   }
 }
 
@@ -238,6 +238,7 @@ strong {
 .scale-animation {
   transition: scale 0.25s ease-out;
   transform-origin: center;
+  will-change: scale;
 }
 
 .scale-animation:hover {

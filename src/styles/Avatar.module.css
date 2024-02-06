@@ -3,17 +3,15 @@
   top: 0;
   right: 0;
 
-  height: 15rem;
-  width: 15rem;
+  height: 13rem;
+  width: 13rem;
   margin: auto;
 
   background-clip: content-box;
 
-  transform: translate(calc(22rem - 50vw), 9.5rem);
+  transform: translate(calc(21rem - 50vw), 10.5rem);
   transition: transform 0.2s ease-out;
-  will-change: transform;
 
-  pointer-events: none;
   z-index: 2;
 }
 
@@ -24,24 +22,21 @@
 
 .base .icon {
   position: absolute;
-  top: -0.5rem;
-  left: -0.75rem;
+  top: -0.1rem;
+  left: -0.4rem;
   height: 100%;
   width: 100%;
 
-  scale: 1.07;
+  scale: 1.04;
 
   transition:
     opacity 0.4s,
     scale 0.4s;
-  will-change: opacity, scale;
-
-  pointer-events: none;
 }
 
 .icon.front {
-  z-index: 1;
-  clip-path: polygon(0 12.75rem, 100% 13rem, 100% 100%, 0 100%);
+  z-index: 10;
+  clip-path: polygon(0 85%, 100% 90%, 100% 100%, 0 100%);
 }
 
 .base .picture {
@@ -49,17 +44,18 @@
   padding: 0.5rem;
   border-color: var(--dim-accent-color);
   border-radius: 50%;
+  z-index: -1;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .base {
-    transform: translate(calc(7.5rem - 50vw), 7rem) scale(0.9);
+    transform: translate(calc(7.5rem - 50vw), 7rem);
   }
 }
 
-@media (max-width: 800px) and (max-height: 800px) {
+@media (max-width: 700px) and (max-height: 700px) {
   .base {
-    transform: translate(calc(7.5rem - 50vw), 5rem) scale(0.8);
+    transform: translate(calc(7.5rem - 50vw), 4.5rem);
   }
 }
 
@@ -76,24 +72,35 @@
     animation-name: avatar-scroll;
   }
 
-  .base .icon {
-    animation-name: icon-scroll;
+  .base.icon.front {
+    animation-name: icon-front-scroll;
   }
 
   .base .picture {
     animation-name: picture-scroll;
   }
 
-  @keyframes avatar-scroll {
-    to {
-      transform: translate(4rem, -5rem) scale(0.16);
-      pointer-events: all;
+  @media (max-width: 700px) {
+    .base {
+      animation-name: avatar-scroll-mobile;
     }
   }
 
-  @keyframes icon-scroll {
+  @keyframes avatar-scroll {
     to {
-      opacity: 1;
+      transform: translate(3.5rem, -4rem) scale(0.18);
+    }
+  }
+
+  @keyframes avatar-scroll-mobile {
+    to {
+      transform: translate(4rem, -4.5rem) scale(0.16);
+    }
+  }
+
+  @keyframes icon-front-scroll {
+    to {
+      opacity: 0;
     }
   }
 
@@ -106,12 +113,7 @@
 @supports not (animation-timeline: scroll()) {
   body[top='false'] .base {
     position: fixed;
-    transform: translate(4rem, -5rem) scale(0.16);
-    pointer-events: all;
-  }
-
-  body[top='false'] .base .icon {
-    opacity: 1;
+    transform: translate(45rem, -5rem) scale(0.16);
   }
 
   body[top='false'] .base .picture {

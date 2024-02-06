@@ -5,7 +5,6 @@ import clsx from 'clsx/lite'
 import { default as NextImage } from 'next/image'
 
 import OpenShowcase from '@/components/OpenShowcase'
-// import { getPlaiceholder } from "plaiceholder";
 
 export default function Image({
   src,
@@ -19,6 +18,12 @@ export default function Image({
   zoom = false,
   ...props
 }) {
+  // const [blurData, setBlurData] = useState()
+
+  // useEffect(() => {
+  //   // getPlaiceholder
+  // }, [src])
+
   return (
     <OpenShowcase disable={!zoom} images={[{ src, alt }]}>
       <NextImage
@@ -30,7 +35,8 @@ export default function Image({
         width={width}
         fill={fill}
         priority={priority}
-        // placeholder={priority ? undefined : 'blur'}
+        placeholder={'blur'}
+        blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAzElEQVR42mL8//8/AyUYTFhZGJ'
         {...props}
       />
     </OpenShowcase>

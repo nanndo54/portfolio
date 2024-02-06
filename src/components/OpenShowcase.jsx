@@ -3,26 +3,29 @@
 import useAppStore from '@/state/store'
 import styles from '@/styles/OpenShowcase.module.css'
 import clsx from 'clsx/lite'
+import { forwardRef } from 'react'
 
-export default function OpenShowcase({
-  className,
-  disable = false,
-  title,
-  children,
-  ...showcase
-}) {
-  const { openShowcase } = useAppStore()
+const OpenShowcase = forwardRef(function (
+  { className, disable = false, children, images, index, onIndexChange, ...props },
+  ref
+) {
+  const { openShowcase, dictionary } = useAppStore()
+  const { aria } = dictionary
 
   return disable ? (
     children
   ) : (
     <button
+      ref={ref}
       className={clsx(className, styles.base)}
       type='button'
-      title={title}
-      onClick={() => openShowcase(showcase)}
+      title={aria.openShowcase}
+      onClick={() => openShowcase({ images, index, onIndexChange })}
+      {...props}
     >
       {children}
     </button>
   )
-}
+})
+
+export default OpenShowcase

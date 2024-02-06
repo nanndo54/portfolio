@@ -3,7 +3,11 @@
   align-items: center;
   justify-items: space-between;
 
-  gap: 2.5rem;
+  gap: 2rem;
+}
+
+.subsection:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .images {
@@ -14,13 +18,10 @@
   flex: 7;
 }
 
-@media (max-width: 700px) {
-  .subsection {
+@media (max-width: 800px) {
+  .subsection,
+  .subsection:nth-child(even) {
     flex-direction: column-reverse;
     gap: 1.75rem;
-  }
-
-  .subsection.reversed :first-child {
-    order: 1;
   }
 }

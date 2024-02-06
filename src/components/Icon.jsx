@@ -35,17 +35,20 @@ export default function Icon({
         styles.base,
         classNameByType[type],
         border && `${styles.border} blur-background`,
-        scaleAnimation && 'scale-animation',
         contentColor && styles.contentColor,
         backgroundColor && styles.backgroundColor,
         lightColor && styles.lightColor
       )}
     >
       {priority ? (
-        <SvgIcon className={styles.icon} title={alt} {...props} />
+        <SvgIcon
+          className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
+          title={alt}
+          {...props}
+        />
       ) : (
         <SVG
-          className={styles.icon}
+          className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
           title={alt}
           src={`/static/icons/${src}`}
           {...props}

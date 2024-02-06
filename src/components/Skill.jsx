@@ -15,7 +15,6 @@ export default async function Skill({
     <OpenShowcase
       className={styles.base}
       images={[{ src: icon, alt: name, icon: true, props: showcaseProps }]}
-      title={name}
     >
       <Icon
         className={styles.icon}
