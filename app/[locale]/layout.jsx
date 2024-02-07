@@ -3,8 +3,8 @@ import './global.css'
 
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
 import clsx from 'clsx/lite'
-import { i18n } from 'i18n/config'
-import getDictionary from 'i18n/server'
+import getDictionary, { getStaticParams } from 'i18n/server'
+import { setStaticParamsLocale } from 'next-international/server'
 
 export async function generateMetadata({ params: { locale } }) {
   const { description } = await getDictionary()
@@ -27,11 +27,13 @@ export async function generateMetadata({ params: { locale } }) {
   }
 }
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ locale }))
+export function generateStaticParams() {
+  return getStaticParams()
 }
 
 export default async function LocaleLayout({ children, params: { locale } }) {
+  setStaticParamsLocale(locale)
+
   return (
     <html lang={locale} translate='no'>
       <Theme>
