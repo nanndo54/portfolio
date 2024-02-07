@@ -12,15 +12,18 @@ import { arrowIcon, closeIcon, minusIcon, plusIcon, zoomIcon } from '@/constants
 import useCarrousel from '@/hooks/useCarrousel'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
+import useDictionary from 'i18n/client'
 
 const initialScale = 1
 const defaultImageWidth = 2016
 const defaultImageHeight = 1080
 
 export default function Showcase() {
-  const { showcase, closeShowcase } = useAppStore()
-  const { aria } = useAppStore((state) => state.dictionary)
   const ref = useRef()
+  const { showcase, closeShowcase } = useAppStore()
+  const dictionary = useDictionary()
+
+  const { aria } = dictionary
 
   const [scale, setScale] = useState(initialScale)
   const { open, images, index: initialIndex, onIndexChange } = showcase

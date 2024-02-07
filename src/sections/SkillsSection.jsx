@@ -2,9 +2,12 @@ import styles from '@/styles/SkillsSection.module.css'
 
 import Section from '@/components/Section'
 import Skill from '@/components/Skill'
+import getDictionary from 'i18n/server'
 
-export default async function SkillsSection({ id, dictionary }) {
-  const { title, list: skills } = dictionary[id]
+export default async function SkillsSection({ id }) {
+  const dictionary = await getDictionary(id)
+
+  const { title, list: skills } = dictionary
 
   return (
     <Section id={id}>

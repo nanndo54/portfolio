@@ -3,13 +3,16 @@
 import useAppStore from '@/state/store'
 import styles from '@/styles/OpenShowcase.module.css'
 import clsx from 'clsx/lite'
+import useDictionary from 'i18n/client'
 import { forwardRef } from 'react'
 
 const OpenShowcase = forwardRef(function (
   { className, disable = false, children, images, index, onIndexChange, ...props },
   ref
 ) {
-  const { openShowcase, dictionary } = useAppStore()
+  const { openShowcase } = useAppStore()
+  const dictionary = useDictionary()
+
   const { aria } = dictionary
 
   return disable ? (

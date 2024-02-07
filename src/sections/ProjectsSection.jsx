@@ -1,36 +1,37 @@
 import styles from '@/styles/ProjectsSection.module.css'
-import { useMemo } from 'react'
 
 import Icon from '@/components/Icon'
 import Project from '@/components/Project'
 import Section from '@/components/Section'
 
 import { arrowIcon } from '@/constants/icons'
+import getDictionary from 'i18n/server'
 
-export default async function ProjectsSection({ id, dictionary }) {
-  const { title, list: projects } = dictionary[id]
-  const { list: skills } = dictionary.skills
+export default async function ProjectsSection({ id }) {
+  const dictionary = await getDictionary(id)
+  const skillsDictionary = await getDictionary('skills')
+
+  const { title, list: projects } = dictionary
+  const { list: skills } = skillsDictionary
 
   const allSkills = Object.values(skills).reduce(
     (allSkills, skills) => [...allSkills, ...skills],
     []
   )
 
-  const projectsPerYear = useMemo(() => {
-    return projects
-      .reduce((acc, project) => {
-        let yearObject = acc.find((yearObject) => yearObject.year === project.year)
-        if (!yearObject) {
-          yearObject = { year: project.year, projects: [] }
-          acc.push(yearObject)
-        }
+  const projectsPerYear = projects
+    .reduce((acc, project) => {
+      let yearObject = acc.find((yearObject) => yearObject.year === project.year)
+      if (!yearObject) {
+        yearObject = { year: project.year, projects: [] }
+        acc.push(yearObject)
+      }
 
-        yearObject.projects.push(project)
+      yearObject.projects.push(project)
 
-        return acc
-      }, [])
-      .sort((a, b) => b.year - a.year)
-  }, [projects])
+      return acc
+    }, [])
+    .sort((a, b) => b.year - a.year)
 
   return (
     <Section id={id} className={styles.base}>
@@ -45,12 +46,7 @@ export default async function ProjectsSection({ id, dictionary }) {
               <h3>{year}</h3>
               <div className={styles.projects}>
                 {projects.map((project, i) => (
-                  <Project
-                    key={i}
-                    {...project}
-                    allSkills={allSkills}
-                    dictionary={dictionary[id]}
-                  />
+                  <Project key={i} {...project} allSkills={allSkills} />
                 ))}
               </div>
             </div>

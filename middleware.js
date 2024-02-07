@@ -1,36 +1,18 @@
-import { NextResponse } from 'next/server'
+import { createI18nMiddleware } from 'next-international/middleware'
 
-import { i18n } from './i18n/config'
-
-import { match as matchLocale } from '@formatjs/intl-localematcher'
-import Negotiator from 'negotiator'
-
-function getLocale(request) {
-  const negotiatorHeaders = {}
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
-
-  const locales = i18n.locales
-
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales)
-
-  return matchLocale(languages, locales, i18n.defaultLocale)
-}
+const I18nMiddleware = createI18nMiddleware({
+  locales: ['en', 'es'],
+  defaultLocale: 'en'
+})
 
 export function middleware(request) {
-  const pathname = request.nextUrl.pathname
-
-  const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-
-  if (!pathnameIsMissingLocale) return
-  const locale = getLocale(request)
-
-  return NextResponse.redirect(
-    new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
-  )
+  return I18nMiddleware(request)
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|opengraph-image|twitter-image|.*\\..*).*)']
+  matcher: ['/((?!api|static|.*\\..*|_next|favicon.ico|robots.txt).*)']
 }
+
+// export const config = {
+//   matcher: ['/((?!api|_next|opengraph-image|twitter-image|.*\\..*).*)']
+// }

@@ -1,12 +1,10 @@
-'use client'
-
 import styles from '@/styles/GoToTopButton.module.css'
 
 import Link from '@/components/Link'
-import useAppStore from '@/state/store'
+import getDictionary from 'i18n/server'
 
-export default function GoToTopButton() {
-  const { aria } = useAppStore((state) => state.dictionary)
+export default async function GoToTopButton() {
+  const { aria } = await getDictionary()
 
   return (
     <Link href='#landing' className={styles.base} title={aria.goToTop}>

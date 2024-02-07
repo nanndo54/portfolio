@@ -7,9 +7,12 @@ import Icon from '@/components/Icon'
 import RichText from '@/components/RichText'
 import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
+import getDictionary from 'i18n/server'
 
-export default async function LandingSection({ id, dictionary }) {
-  const { presentation, cv, cta, links, avatar } = dictionary[id]
+export default async function LandingSection({ id }) {
+  const dictionary = await getDictionary(id)
+
+  const { presentation, cv, cta, links, avatar } = dictionary
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>

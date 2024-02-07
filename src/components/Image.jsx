@@ -35,8 +35,8 @@ export default function Image({
         width={width}
         fill={fill}
         priority={priority}
-        placeholder={'blur'}
-        blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAzElEQVR42mL8//8/AyUYTFhZGJ'
+        // placeholder='blur'
+        // blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAzElEQVR42mL8//8/AyUYTFhZGJ'
         {...props}
       />
     </OpenShowcase>

@@ -24,6 +24,7 @@ const nextConfig = {
           {
             loader: '@svgr/webpack',
             options: {
+              memo: true,
               svgoConfig: {
                 plugins: [
                   'preset-default',

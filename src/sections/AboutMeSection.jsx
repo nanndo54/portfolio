@@ -2,9 +2,12 @@ import styles from '@/styles/AboutMeSection.module.css'
 
 import ImageCarrousel from '@/components/ImageCarrousel'
 import Section from '@/components/Section'
+import getDictionary from 'i18n/server'
 
-export default async function AboutMeSection({ id, dictionary }) {
-  const { title, text, list: subsections } = dictionary[id]
+export default async function AboutMeSection({ id }) {
+  const dictionary = await getDictionary(id)
+
+  const { title, text, list: subsections } = dictionary
 
   return (
     <Section id={id}>

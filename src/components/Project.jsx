@@ -7,6 +7,7 @@ import ImageCarrousel from '@/components/ImageCarrousel'
 import Skill from '@/components/Skill'
 import { codeIcon, websiteIcon } from '@/constants/icons'
 import clsx from 'clsx/lite'
+import getDictionary from 'i18n/server'
 
 export default async function Project({
   icon,
@@ -16,9 +17,10 @@ export default async function Project({
   code,
   allSkills,
   technologies = [],
-  images = [],
-  dictionary
+  images = []
 }) {
+  const dictionary = await getDictionary()
+
   const skills = technologies.map((name) =>
     allSkills.find((skill) => skill.name === name)
   )
@@ -41,12 +43,12 @@ export default async function Project({
       <footer>
         {code && (
           <Button type='secondary' href={code} isExternal>
-            {dictionary.codeButton}
+            {/* {dictionary.codeButton} */}
             <Icon src={codeIcon} contentColor />
           </Button>
         )}
         <Button href={website} isExternal>
-          {dictionary.websiteButton}
+          {/* {dictionary.websiteButton} */}
           <Icon src={websiteIcon} backgroundColor />
         </Button>
       </footer>

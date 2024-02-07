@@ -6,7 +6,6 @@ import { persist } from 'zustand/middleware'
 const initialState = {
   isOnTop: true,
   theme: undefined,
-  dictionary: { aria: {} },
   currentSection: 'landing',
   showcase: {}
 }
@@ -27,7 +26,6 @@ const useAppStore = create(
 
           return { theme }
         }),
-      setDictionary: (dictionary) => set(() => ({ dictionary })),
       setCurrentSection: (currentSection) => set(() => ({ currentSection })),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),

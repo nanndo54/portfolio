@@ -3,11 +3,13 @@
 import Link from '@/components/Link'
 import useAppStore from '@/state/store'
 import styles from '@/styles/NavbarButtons.module.css'
+import useDictionary, { useCurrentLocale } from 'i18n/client'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 export default function NavbarButtons() {
-  const { dictionary, theme, toggleTheme } = useAppStore()
-  const { id: locale, aria } = dictionary
+  const { theme, toggleTheme } = useAppStore()
+  const { aria } = useDictionary()
+  const locale = useCurrentLocale()
 
   return (
     <div className={styles.base}>

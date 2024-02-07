@@ -4,11 +4,10 @@ import './global.css'
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
 import clsx from 'clsx/lite'
 import { i18n } from 'i18n/config'
-import { getDictionary } from 'i18n/get-dictionary'
+import getDictionary from 'i18n/server'
 
 export async function generateMetadata({ params: { locale } }) {
-  const dictionary = await getDictionary(locale)
-  const { description } = dictionary
+  const { description } = await getDictionary()
 
   return {
     description,
@@ -32,7 +31,7 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }))
 }
 
-export default function LocaleLayout({ children, params: { locale } }) {
+export default async function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} translate='no'>
       <Theme>

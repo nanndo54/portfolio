@@ -8,8 +8,8 @@ import Image from '@/components/Image'
 import OpenShowcase from '@/components/OpenShowcase'
 import { arrowIcon } from '@/constants/icons'
 import useCarrousel from '@/hooks/useCarrousel'
-import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
+import useDictionary from 'i18n/client'
 
 export default function ImageCarrousel({
   className,
@@ -20,7 +20,7 @@ export default function ImageCarrousel({
   zoom = true
 }) {
   const contentRef = useRef()
-  const { aria } = useAppStore((state) => state.dictionary)
+  const { aria } = useDictionary()
   const { imageIndex, singleImage, handleImageChange, onScroll } = useCarrousel({
     images,
     onImageChange: (newImageIndex) => {
