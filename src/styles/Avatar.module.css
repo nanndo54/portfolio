@@ -12,6 +12,7 @@
   transform: translate(calc(21rem - 50vw), 10.5rem);
   transition: transform 0.2s ease-out;
 
+  cursor: initial;
   z-index: 2;
 }
 
@@ -49,13 +50,13 @@
 
 @media (max-width: 700px) {
   .base {
-    transform: translate(calc(7.5rem - 50vw), 7rem);
+    transform: translate(calc(6.5rem - 50vw), 7rem);
   }
 }
 
 @media (max-width: 700px) and (max-height: 700px) {
   .base {
-    transform: translate(calc(7.5rem - 50vw), 4.5rem);
+    transform: translate(calc(6.5rem - 50vw), 5rem);
   }
 }
 
@@ -72,12 +73,9 @@
     animation-name: avatar-scroll;
   }
 
-  .base.icon.front {
-    animation-name: icon-front-scroll;
-  }
-
+  .base.icon.front,
   .base .picture {
-    animation-name: picture-scroll;
+    animation-name: disappear-scroll;
   }
 
   @media (max-width: 700px) {
@@ -98,13 +96,7 @@
     }
   }
 
-  @keyframes icon-front-scroll {
-    to {
-      opacity: 0;
-    }
-  }
-
-  @keyframes picture-scroll {
+  @keyframes disappear-scroll {
     to {
       opacity: 0;
     }
@@ -112,17 +104,17 @@
 }
 @supports not (animation-timeline: scroll()) {
   body[top='false'] .base {
-    position: fixed;
-    transform: translate(45rem, -5rem) scale(0.16);
+    transform: translate(3.5rem, -4rem) scale(0.18);
   }
 
+  body[top='false'] .base.icon.front,
   body[top='false'] .base .picture {
     opacity: 0;
   }
 
   @media (max-width: 700px) {
     body[top='false'] .base {
-      transform: translate(5rem, -5.5rem) scale(0.14);
+      transform: translate(4rem, -4.5rem) scale(0.16);
     }
   }
 }

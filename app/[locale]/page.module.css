@@ -2,8 +2,3 @@
   height: 100%;
   width: 100%;
 }
-
-.base ::-webkit-scrollbar {
-  height: 0;
-  width: 0;
-}

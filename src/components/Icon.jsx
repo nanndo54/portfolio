@@ -1,8 +1,7 @@
 import styles from '@/styles/Icon.module.css'
 import clsx from 'clsx/lite'
 import dynamic from 'next/dynamic'
-import { memo } from 'react'
-import SVG from 'react-inlinesvg'
+import { useMemo } from 'react'
 
 const classNameByType = {
   secondary: styles.secondary
@@ -18,15 +17,13 @@ export default function Icon({
   contentColor = false,
   backgroundColor = false,
   lightColor = false,
-  priority = false,
+  priority = true,
   ...props
 }) {
-  const SvgIcon =
-    priority &&
-    memo(
-      dynamic(() => import(`/public/icons/${src}`)),
-      []
-    )
+  const SvgIcon = useMemo(
+    () => priority && dynamic(() => import(`/public/icons/${src}`)),
+    [priority, src]
+  )
 
   return (
     <figure
@@ -47,12 +44,13 @@ export default function Icon({
           {...props}
         />
       ) : (
-        <SVG
-          className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
-          title={alt}
-          src={`/icons/${src}`}
-          {...props}
-        />
+        // <SVG
+        //   className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
+        //   title={alt}
+        //   src={`/icons/${src}`}
+        //   {...props}
+        // />
+        'test'
       )}
     </figure>
   )

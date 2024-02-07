@@ -35,9 +35,16 @@
   display: none;
 }
 
+.showcase {
+  height: auto;
+  width: 100%;
+}
+
 .content {
   overflow-x: auto;
   white-space: nowrap;
+
+  scroll-snap-type: x mandatory;
 }
 
 .base:hover .previousImage,
@@ -53,7 +60,6 @@
 }
 
 .content img {
-  display: inline;
   scroll-snap-align: start;
 }
 

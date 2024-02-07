@@ -4,12 +4,16 @@ import useAppStore from '@/state/store'
 import styles from '@/styles/OpenShowcase.module.css'
 import clsx from 'clsx/lite'
 import useDictionary from 'i18n/client'
-import { forwardRef } from 'react'
 
-const OpenShowcase = forwardRef(function (
-  { className, disable = false, children, images, index, onIndexChange, ...props },
-  ref
-) {
+export default function OpenShowcase({
+  className,
+  disable = false,
+  children,
+  images,
+  index,
+  onIndexChange,
+  ...props
+}) {
   const { openShowcase } = useAppStore()
   const dictionary = useDictionary()
 
@@ -19,7 +23,6 @@ const OpenShowcase = forwardRef(function (
     children
   ) : (
     <button
-      ref={ref}
       className={clsx(className, styles.base)}
       type='button'
       title={aria.openShowcase}
@@ -29,6 +32,4 @@ const OpenShowcase = forwardRef(function (
       {children}
     </button>
   )
-})
-
-export default OpenShowcase
+}

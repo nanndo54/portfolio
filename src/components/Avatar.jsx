@@ -1,8 +1,8 @@
+import Icon from '@/components/Icon'
 import Image from '@/components/Image'
+import { logoIcon } from '@/constants/icons'
 import styles from '@/styles/Avatar.module.css'
 import clsx from 'clsx/lite'
-
-import LogoIcon from 'public/icons/landing/logo-icon.svg'
 
 export default async function Avatar({ photo }) {
   // const handleMenuButton = () => {
@@ -13,8 +13,8 @@ export default async function Avatar({ photo }) {
 
   return (
     <button type='button' className={styles.base}>
-      <LogoIcon className={styles.icon} />
-      <LogoIcon className={clsx(styles.icon, styles.front)} />
+      <Icon className={styles.icon} src={logoIcon} />
+      <Icon className={clsx(styles.icon, styles.front)} src={logoIcon} />
       <Image
         className={styles.picture}
         {...photo}

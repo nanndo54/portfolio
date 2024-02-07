@@ -11,6 +11,9 @@
 }
 
 .images {
+  height: auto;
+  width: 100%;
+
   flex: 3;
 }
 
@@ -23,5 +26,9 @@
   .subsection:nth-child(even) {
     flex-direction: column-reverse;
     gap: 1.75rem;
+  }
+
+  .images {
+    width: 80%;
   }
 }

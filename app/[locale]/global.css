@@ -258,3 +258,12 @@ strong {
   -ms-user-select: none;
   user-select: none;
 }
+
+body * {
+  scrollbar-width: none;
+}
+
+body ::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}

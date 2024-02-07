@@ -51,21 +51,25 @@ export default function ImageCarrousel({
         title={aria.previousImage}
       />
       <OpenShowcase
+        className={styles.showcase}
         disable={!zoom}
         images={images}
         index={imageIndex}
         onIndexChange={handleImageChange}
-        className={styles.content}
-        ref={contentRef}
-        onScroll={onScroll}
-        style={{
-          width: `clamp(100%, ${width}px, 100%)`,
-          aspectRatio: Math.fround(width / height)
-        }}
       >
-        {images.map((image, index) => (
-          <Image key={index} {...image} height={height} width={width} zoom={false} />
-        ))}
+        <div
+          className={styles.content}
+          ref={contentRef}
+          onScroll={onScroll}
+          style={{
+            width: `clamp(100%, ${width}px, 100%)`,
+            aspectRatio: Math.fround(width / height)
+          }}
+        >
+          {images.map((image, index) => (
+            <Image key={index} {...image} height={height} width={width} zoom={false} />
+          ))}
+        </div>
       </OpenShowcase>
       <IconButton
         src={arrowIcon}
