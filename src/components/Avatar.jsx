@@ -2,7 +2,7 @@ import Image from '@/components/Image'
 import styles from '@/styles/Avatar.module.css'
 import clsx from 'clsx/lite'
 
-import LogoIcon from 'public/static/icons/landing/logo-icon.svg'
+import LogoIcon from 'public/icons/landing/logo-icon.svg'
 
 export default async function Avatar({ photo }) {
   // const handleMenuButton = () => {

@@ -24,7 +24,7 @@ export default function Icon({
   const SvgIcon =
     priority &&
     memo(
-      dynamic(() => import(`/public/static/icons/${src}`)),
+      dynamic(() => import(`/public/icons/${src}`)),
       []
     )
 
@@ -50,7 +50,7 @@ export default function Icon({
         <SVG
           className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
           title={alt}
-          src={`/static/icons/${src}`}
+          src={`/icons/${src}`}
           {...props}
         />
       )}

@@ -19,7 +19,8 @@ export default async function Project({
   technologies = [],
   images = []
 }) {
-  const dictionary = await getDictionary()
+  const dictionary = await getDictionary('projects')
+  const { codeButton, websiteButton } = dictionary
 
   const skills = technologies.map((name) =>
     allSkills.find((skill) => skill.name === name)
@@ -43,12 +44,12 @@ export default async function Project({
       <footer>
         {code && (
           <Button type='secondary' href={code} isExternal>
-            {/* {dictionary.codeButton} */}
+            {codeButton}
             <Icon src={codeIcon} contentColor />
           </Button>
         )}
         <Button href={website} isExternal>
-          {/* {dictionary.websiteButton} */}
+          {websiteButton}
           <Icon src={websiteIcon} backgroundColor />
         </Button>
       </footer>

@@ -27,7 +27,7 @@ export default function Image({
   return (
     <OpenShowcase disable={!zoom} images={[{ src, alt }]}>
       <NextImage
-        src={`/static/${src}`}
+        src={`/images/${src}`}
         alt={alt}
         className={clsx(className, styles.base, border && styles.border, 'no-select')}
         draggable={false}

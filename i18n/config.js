@@ -1,7 +1,5 @@
-// import 'server-only'
-
-import en from 'locales/en'
-import es from 'locales/es'
+import en from './locales/en'
+import es from './locales/es'
 
 export const dictionaries = {
   en,
