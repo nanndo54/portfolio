@@ -6,7 +6,7 @@ import useMouseTracker from '@/hooks/useMouseTracker'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import useTopObserver from '@/hooks/useTopObserver'
 import useAppStore from '@/state/store'
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
 export default function Interactive({ children }) {
   const { theme } = useAppStore()
@@ -14,8 +14,8 @@ export default function Interactive({ children }) {
   const layoutRef = useRef()
 
   useMouseTracker(ref, (x, y) => {
-    document.body.style.setProperty('--x', `${x}px`)
-    document.body.style.setProperty('--y', `${y}px`)
+    ref.current.style.setProperty('--x', `${x}px`)
+    ref.current.style.setProperty('--y', `${y}px`)
   })
 
   // useEffect(() => {
@@ -46,7 +46,7 @@ export default function Interactive({ children }) {
   // }
   // }, [])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.setAttribute('dark', theme === 'dark')
   }, [theme])
 
@@ -55,11 +55,9 @@ export default function Interactive({ children }) {
   useSectionObserver()
 
   return (
-    <>
+    <div ref={ref} className={styles.base}>
+      {children}
       <div ref={layoutRef} className={styles.layout} />
-      <div ref={ref} className={styles.base}>
-        {children}
-      </div>
-    </>
+    </div>
   )
 }

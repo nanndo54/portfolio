@@ -5,6 +5,7 @@ header.base {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .info {
@@ -20,6 +21,10 @@ header.base {
   transition:
     transform 0.2s,
     opacity 0.2s;
+}
+
+.presentation {
+  font-size: 1.125rem;
 }
 
 .avatar {
@@ -62,7 +67,6 @@ header.base {
   .buttons {
     flex-direction: column;
     gap: 0.75rem;
-    scale: 1.125;
   }
 }
 

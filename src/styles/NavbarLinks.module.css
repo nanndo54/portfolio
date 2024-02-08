@@ -9,13 +9,10 @@
 .base .logo {
   height: 2rem;
   width: 2rem;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
 }
 
 .base a:not(:first-child) {
-  position: relative;
-  top: -5rem;
-
   font-family: var(--title-font);
   font-weight: 700;
   white-space: nowrap;
@@ -25,7 +22,9 @@
   border: 0.1rem solid transparent;
   border-radius: 1.5rem;
 
+  transform: translateY(-5rem);
   transition:
+    transform 0.25s ease-out,
     scale 0.25s ease-out,
     background-color 0.2s ease-out,
     backdrop-filter 0.2s ease-out,
@@ -39,7 +38,7 @@
 }
 
 @media (max-width: 650px) {
-  .base {
+  .base a:not(:first-child) {
     display: none;
   }
 }
@@ -53,12 +52,12 @@
 
   @keyframes navbar-links-scroll {
     to {
-      transform: translateY(5rem);
+      transform: translateY(0);
     }
   }
 }
 @supports not (animation-timeline: scroll()) {
-  body[top='false'] .base {
-    transform: translateY(5rem);
+  body[top='false'] .base a:not(:first-child) {
+    transform: translateY(0);
   }
 }

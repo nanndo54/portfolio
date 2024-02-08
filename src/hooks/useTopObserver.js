@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback, useLayoutEffect } from 'react'
 
 export default function useTopObserver() {
   const handleTopListener = useCallback(() => {
@@ -6,7 +6,7 @@ export default function useTopObserver() {
     document.body.setAttribute('top', newIsOnTop)
   }, [])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (CSS.supports('animation-timeline', 'scroll()')) return
 
     handleTopListener()

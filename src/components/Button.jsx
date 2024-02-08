@@ -20,12 +20,7 @@ export default function Button({
   return (
     <Tag
       type='button'
-      className={clsx(
-        className,
-        styles.base,
-        classNameByVariant[variant],
-        'scale-animation'
-      )}
+      className={clsx(className, styles.base, classNameByVariant[variant])}
       onClick={onClick}
       {...props}
     >

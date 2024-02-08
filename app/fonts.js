@@ -11,7 +11,7 @@ export const titleFont = Poppins({
 export const subTitleFont = Poppins({
   display: 'swap',
   style: 'italic',
-  weight: ['600'],
+  weight: ['500', '600'],
   subsets: ['latin'],
   variable: '--subtitle-font'
 })
@@ -19,7 +19,7 @@ export const subTitleFont = Poppins({
 export const bodyFont = Inter({
   display: 'swap',
   style: 'normal',
-  weight: ['400', '700'],
+  weight: ['400', '600'],
   subsets: ['latin'],
   variable: '--body-font'
 })

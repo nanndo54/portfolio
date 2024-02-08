@@ -30,7 +30,7 @@
 }
 
 .title h4 {
-  color: var(--secondary-accent-color);
+  /* color: var(--accent-color); */
 }
 
 .base footer {

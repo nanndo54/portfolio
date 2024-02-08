@@ -1,29 +1,28 @@
 .layout {
   position: absolute;
+  top: 0;
 
   height: 100%;
   width: 100%;
-
   opacity: 0;
 
-  background-color: var(--dim-accent-color);
-  mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%);
+  background-color: var(--dimmest-accent-color);
+  mask: radial-gradient(25rem 25rem at var(--x) var(--y), black, transparent 100%);
   transition: 400ms mask ease;
+  pointer-events: none;
 }
 
 .base:hover .layout {
-  opacity: 1;
+  opacity: 0.75;
 }
 
-.layout,
-.layout * {
-  pointer-events: none;
+@media (pointer: coarse) {
+  .layout {
+    display: none;
+  }
 }
 
 .shadow {
   position: absolute;
   border: 2px solid var(--accent-color);
-}
-
-@media (pointer: coarse) {
 }

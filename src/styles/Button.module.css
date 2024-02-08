@@ -20,7 +20,7 @@
     var(--secondary-accent-color) 100%
   );
   background-size: 150% 100%;
-  background-position: right;
+  background-position: left;
 
   transition:
     background-position 0.5s,
@@ -29,12 +29,12 @@
 }
 
 .base:hover {
-  background-position: left;
+  background-position: right;
 }
 
 .secondary {
   background-image: none;
-  border: 0.1rem solid var(--secondary-accent-color);
+  border: 0.1rem solid var(--accent-color);
   color: var(--foreground-color);
 
   transition:

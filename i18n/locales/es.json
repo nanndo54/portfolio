@@ -40,7 +40,7 @@
       {
         "year": 2023,
         "icon": "projects/kolo-empresas-icon.svg",
-        "name": "KOLO Empresas",
+        "name": "Kolo Empresas",
         "description": "ERP que permite al pequeño y mediano empresario manejar, crece e innovar su empresa de manera accesible y personalizable.",
         "website": "https://info.kolo-app.com",
         "technologies": ["ReactJS", "Redux", "Java", "MySQL", "AWS"],
