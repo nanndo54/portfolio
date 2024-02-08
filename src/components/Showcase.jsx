@@ -85,18 +85,18 @@ export default function Showcase() {
             <p>{alt}</p>
             <IconButton
               src={closeIcon}
-              lightColor
-              className={styles.closeButton}
+              iconProps={{ lightColor: true }}
               title={aria.close}
+              className={styles.closeButton}
             />
           </header>
           <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
             <IconButton
               src={arrowIcon}
-              lightColor
+              iconProps={{ lightColor: true }}
+              title={aria.previousImage}
               className={styles.previousImage}
               onClick={() => handleImageChange(imageIndex - 1)}
-              title={aria.previousImage}
               tabIndex={open ? 0 : -1}
             />
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
@@ -107,20 +107,19 @@ export default function Showcase() {
                   <Image
                     src={src}
                     alt={alt}
-                    priority
                     aria-hidden={!open}
-                    width={defaultImageWidth}
                     height={(height * defaultImageWidth) / width || defaultImageHeight}
+                    width={defaultImageWidth}
                     zoom={false}
                   />
                 ))}
             </TransformComponent>
             <IconButton
               src={arrowIcon}
-              lightColor
+              iconProps={{ lightColor: true }}
+              title={aria.nextImage}
               className={styles.nextImage}
               onClick={() => handleImageChange(imageIndex + 1)}
-              title={aria.nextImage}
               tabIndex={open ? 0 : -1}
             />
           </div>
@@ -130,17 +129,15 @@ export default function Showcase() {
             <span className={styles.buttons}>
               <IconButton
                 src={minusIcon}
-                lightColor
-                border
-                onClick={() => ref.current?.zoomOut(0.2)}
+                iconProps={{ lightColor: true, border: true }}
                 title={aria.zoomOut}
+                onClick={() => ref.current?.zoomOut(0.2)}
               />
               <IconButton
                 src={plusIcon}
-                lightColor
-                border
-                onClick={() => ref.current?.zoomIn(0.2)}
+                iconProps={{ lightColor: true, border: true }}
                 title={aria.zoomIn}
+                onClick={() => ref.current?.zoomIn(0.2)}
               />
             </span>
           </footer>

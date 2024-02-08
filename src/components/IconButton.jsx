@@ -1,40 +1,24 @@
+'use client'
+
 import styles from '@/styles/IconButton.module.css'
 
 import Icon from '@/components/Icon'
-import Link from '@/components/Link'
 import clsx from 'clsx/lite'
 
 export default function IconButton({
+  as: Tag = 'button',
   className,
-  href,
   title,
-  tabIndex,
   onClick,
   src,
+  iconProps,
   ...props
 }) {
-  const childrenElement = <Icon src={src} scaleAnimation {...props} />
+  props = Tag === 'button' ? { type: 'button', title, onClick } : props
 
-  return href ? (
-    <Link
-      className={clsx(className, styles.base)}
-      href={href}
-      isExternal
-      noDecoration
-      title={title}
-      tabIndex={tabIndex}
-    >
-      {childrenElement}
-    </Link>
-  ) : (
-    <button
-      type='button'
-      className={clsx(className, styles.base)}
-      onClick={onClick}
-      title={title}
-      tabIndex={tabIndex}
-    >
-      {childrenElement}
-    </button>
+  return (
+    <Tag className={clsx(className, styles.base)} {...props}>
+      <Icon src={src} scaleAnimation {...iconProps} />
+    </Tag>
   )
 }

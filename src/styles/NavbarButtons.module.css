@@ -7,7 +7,8 @@
 }
 
 .base .language {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-family: var(--title-font);
   font-weight: 700;
 
   padding: 0.2rem 0.4rem;

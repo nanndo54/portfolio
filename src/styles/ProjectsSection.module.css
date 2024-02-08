@@ -1,11 +1,6 @@
 .base {
-  gap: 0.5rem;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 0.75rem 1fr;
-  gap: 2.5rem;
+  gap: 0.25rem;
+  position: relative;
 }
 
 .timeline {
@@ -13,10 +8,14 @@
   flex-direction: column;
   align-items: center;
 
-  position: relative;
-  background-color: var(--content-color);
+  position: absolute;
+  top: 6.5rem;
+  left: -0.25rem;
 
-  width: 100%;
+  background-color: var(--foreground-color);
+
+  height: calc(100% - 10rem);
+  width: 0.625rem;
   border-radius: 0.7rem;
 
   transition: background-color 0.5s;
@@ -25,7 +24,7 @@
 .timeline::before {
   content: '';
   display: block;
-  background-color: var(--content-color);
+  background-color: var(--foreground-color);
   border-radius: 50%;
 
   width: 0.4rem;
@@ -40,7 +39,7 @@
 .timeline::after {
   content: '';
   display: block;
-  background-color: var(--content-color);
+  background-color: var(--foreground-color);
   border-radius: 50%;
 
   width: 0.55rem;
@@ -53,8 +52,8 @@
 }
 
 .timeline figure {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
 
   position: absolute;
   top: 0;
@@ -67,57 +66,59 @@
   align-items: flex-start;
   gap: 2.5rem;
 
-  padding: 3.5rem 0 1rem;
+  padding: 2rem 0 1rem;
 }
 
 .allProjects h3 {
   position: relative;
-  margin-left: 1.5rem;
   margin-bottom: 1.5rem;
+  margin-left: 1rem;
 }
 
 .allProjects h3::before {
   content: '';
   display: block;
-  width: 3.7rem;
+  width: 2rem;
   height: 0.2rem;
 
   margin: auto;
   border-radius: 0.1rem;
-  background-color: var(--content-color);
+  background-color: var(--foreground-color);
 
   position: absolute;
   top: 50%;
-  left: -4.5rem;
+  left: -2.5rem;
 
   transition: background-color 0.5s;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
-@media (max-width: 700px) {
-  .content {
-    grid-template-columns: 0.5rem 1fr;
-    gap: 1.8rem;
+@media (max-width: 1000px) {
+  .timeline {
+    top: 6rem;
+    left: 2rem;
   }
 
-  .timeline figure {
-    width: 2.8rem;
-    height: 2.8rem;
+  .allProjects {
+    margin-left: 3rem;
+  }
+
+  .allProjects h3 {
+    margin-left: 1rem;
   }
 
   .allProjects h3::before {
-    width: 3rem;
-
-    position: absolute;
-    top: 50%;
-    left: -3.5rem;
+    width: 2rem;
+    left: -2.5rem;
   }
+}
 
+@media (max-width: 700px) {
   .projects {
     grid-template-columns: 1fr;
   }

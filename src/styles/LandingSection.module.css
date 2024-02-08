@@ -1,27 +1,29 @@
 header.base {
-  justify-content: flex-start;
-  height: max(30rem, calc(100vh - 18rem));
-  width: 48rem;
-  margin: 0 auto;
-  padding: 0;
+  height: max(30rem, calc(100vh - 25rem));
+  padding: 2rem 2rem 0;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .info {
   max-width: 27.5rem;
-  align-self: flex-start;
   text-align: center;
+  align-items: center;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.1rem;
-
-  transform: translateY(10rem);
+  justify-content: space-between;
+  gap: 0.8rem;
 
   transition:
     transform 0.2s,
     opacity 0.2s;
+}
+
+.avatar {
+  flex-shrink: 2;
 }
 
 .base:hover .info {
@@ -33,42 +35,34 @@ header.base {
   align-items: center;
   gap: 0.75rem;
 
-  margin-top: 0.5rem;
-
-  scale: 1.1;
+  margin-top: 1rem;
 
   animation: appear-cta-buttons 0.5s ease-out forwards;
 }
 
-@media (max-width: 700px) {
+.buttons > * {
+  min-width: 13rem;
+}
+
+@media (max-width: 800px) {
   header.base {
-    height: max(36rem, calc(100vh - 12rem));
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+
+    height: max(42rem, calc(100vh - 15rem));
     width: 100%;
+    padding: 4rem 1rem 0;
   }
 
   .info {
-    align-self: center;
-    transform: translateY(22rem);
+    gap: 1rem;
   }
 }
-
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .buttons {
     flex-direction: column;
     gap: 0.75rem;
-    scale: 1.3;
-  }
-}
-
-@media (max-width: 700px) and (max-height: 700px) {
-  .info {
-    gap: 0.5rem;
-    transform: translateY(19rem);
-  }
-
-  .buttons {
-    scale: 1;
-    gap: 0.6rem;
+    scale: 1.125;
   }
 }
 
@@ -82,24 +76,5 @@ header.base {
   to {
     transform: unset;
     opacity: 1;
-  }
-}
-
-@supports (animation-timeline: scroll()) {
-  .info {
-    animation: info-scroll ease forwards;
-    animation-timeline: scroll(root);
-    animation-range: 0 50vh;
-  }
-
-  @keyframes info-scroll {
-    to {
-      opacity: 0.25;
-    }
-  }
-}
-@supports not (animation-timeline: scroll()) {
-  body[top='false'] .info {
-    opacity: 0.25;
   }
 }

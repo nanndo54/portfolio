@@ -1,9 +1,9 @@
 import styles from '@/styles/LandingSection.module.css'
 
 import Avatar from '@/components/Avatar'
-import Button from '@/components/Button'
-import ContactIcons from '@/components/ContactIcons'
+import EmailButton from '@/components/EmailButton'
 import Icon from '@/components/Icon'
+import Link from '@/components/Link'
 import RichText from '@/components/RichText'
 import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
@@ -12,29 +12,31 @@ import getDictionary from 'i18n/server'
 export default async function LandingSection({ id }) {
   const dictionary = await getDictionary(id)
 
-  const { presentation, cv, cta, links, avatar } = dictionary
+  const { presentation, cv, cta, avatar } = dictionary
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
-        <h1 className={styles.title}>nanndo54</h1>
+        <h1 className={styles.title}>Pablo Cabrera</h1>
         <RichText as='p' className={styles.presentation}>
           {presentation}
         </RichText>
         <div className={styles.buttons}>
-          <Button
+          <EmailButton />
+          <Link
+            asButton
             href={cv}
             download='Pablo Cabrera - CV.pdf'
             isExternal
-            // tabIndex={isOnTop ? 0 : -1}
+            decoration={false}
           >
             {cta}
-            <Icon src={downloadIcon} backgroundColor priority />
-          </Button>
-          <ContactIcons links={links} className={styles.contact} />
+            <Icon src={downloadIcon} backgroundColor />
+          </Link>
+          {/* <ContactIcons links={links} className={styles.contact} /> */}
         </div>
       </div>
-      <Avatar photo={avatar} />
+      <Avatar className={styles.avatar} photo={avatar} />
     </Section>
   )
 }

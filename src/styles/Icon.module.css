@@ -32,12 +32,16 @@
     fill 0.5s;
 }
 
-.base.contentColor .icon {
-  fill: var(--content-color);
+.base.foregroundColor .icon {
+  fill: var(--foreground-color);
 }
 
 .base.backgroundColor .icon {
   fill: var(--background-color);
+}
+
+.base.accentColor .icon {
+  fill: var(--accent-color);
 }
 
 .base.lightColor .icon {

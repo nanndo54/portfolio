@@ -1,33 +1,22 @@
-'use client'
-
 import Link from '@/components/Link'
-import useAppStore from '@/state/store'
+import ThemeButton from '@/components/ThemeButton'
 import styles from '@/styles/NavbarButtons.module.css'
-import useDictionary, { useCurrentLocale } from 'i18n/client'
-import { DarkModeSwitch } from 'react-toggle-dark-mode'
+import getDictionary, { getCurrentLocale } from 'i18n/server'
 
-export default function NavbarButtons() {
-  const { theme, toggleTheme } = useAppStore()
-  const { aria } = useDictionary()
-  const locale = useCurrentLocale()
+export default async function NavbarButtons() {
+  const { aria } = await getDictionary()
+  const locale = getCurrentLocale()
 
   return (
     <div className={styles.base}>
-      <DarkModeSwitch
-        className='scale-animation'
-        checked={theme === 'dark'}
-        onChange={toggleTheme}
-        moonColor='var(--content-color)'
-        sunColor='var(--content-color)'
-        title={theme === 'dark' ? aria.setLightMode : aria.setDarkMode}
-      />
+      <ThemeButton />
       <Link
         className={`${styles.language} scale-animation`}
         title={aria.toggleLocale}
         href={locale === 'en' ? '/es' : '/en'}
         replace
         scroll={false}
-        noDecoration
+        decoration={false}
       >
         {locale}
       </Link>

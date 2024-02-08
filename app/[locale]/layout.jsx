@@ -1,4 +1,3 @@
-import Theme from 'app/Theme'
 import './global.css'
 
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
@@ -36,14 +35,12 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale} translate='no'>
-      <Theme>
-        <body
-          className={clsx(titleFont.variable, subTitleFont.variable, bodyFont.variable)}
-          top='true'
-        >
-          {children}
-        </body>
-      </Theme>
+      <body
+        className={clsx(titleFont.variable, subTitleFont.variable, bodyFont.variable)}
+        top='true'
+      >
+        {children}
+      </body>
     </html>
   )
 }

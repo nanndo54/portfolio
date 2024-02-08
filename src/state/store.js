@@ -4,9 +4,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 const initialState = {
-  isOnTop: true,
   theme: undefined,
-  currentSection: 'landing',
   showcase: {}
 }
 
@@ -14,19 +12,7 @@ const useAppStore = create(
   persist(
     (set) => ({
       ...initialState,
-      setOnTop: (isOnTop) =>
-        set(() => {
-          document.body.setAttribute('top', isOnTop)
-
-          return { isOnTop }
-        }),
-      toggleTheme: (dark) =>
-        set(() => {
-          const theme = dark ? 'dark' : 'light'
-
-          return { theme }
-        }),
-      setCurrentSection: (currentSection) => set(() => ({ currentSection })),
+      toggleTheme: (dark) => set(() => ({ theme: dark ? 'dark' : 'light' })),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),
       closeShowcase: () =>
@@ -38,7 +24,11 @@ const useAppStore = create(
       name: 'app-storage',
       partialize: ({ theme }) => ({
         theme
-      })
+      }),
+      onRehydrateStorage: () => (state) => {
+        if (state.theme != null) return
+        state.toggleTheme(window.matchMedia('(prefers-color-scheme: dark)').matches)
+      }
     }
   )
 )

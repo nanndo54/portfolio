@@ -1,10 +1,8 @@
-import Icon from '@/components/Icon'
 import Image from '@/components/Image'
-import { logoIcon } from '@/constants/icons'
 import styles from '@/styles/Avatar.module.css'
 import clsx from 'clsx/lite'
 
-export default async function Avatar({ photo }) {
+export default async function Avatar({ className, photo }) {
   // const handleMenuButton = () => {
   //   const squeakAudio = new Audio('/static/landing/squeak.mp3')
   //   squeakAudio.volume = 0.3
@@ -12,18 +10,18 @@ export default async function Avatar({ photo }) {
   // }
 
   return (
-    <button type='button' className={styles.base}>
-      <Icon className={styles.icon} src={logoIcon} />
-      <Icon className={clsx(styles.icon, styles.front)} src={logoIcon} />
+    <div className={clsx(styles.base, className)}>
       <Image
-        className={styles.picture}
+        className={styles.img}
         {...photo}
-        height={208}
-        width={208}
-        border
+        height={1000}
+        width={1000}
         priority
         zoom={false}
       />
-    </button>
+      <div className={styles.back}>
+        <Image {...photo} aria-hidden height={1000} width={1000} priority zoom={false} />
+      </div>
+    </div>
   )
 }

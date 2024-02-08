@@ -1,6 +1,7 @@
 import styles from '@/styles/ContactIcons.module.css'
 
 import IconButton from '@/components/IconButton'
+import Link from '@/components/Link'
 
 export default async function ContactIcons({ links, tabIndex }) {
   return (
@@ -8,13 +9,16 @@ export default async function ContactIcons({ links, tabIndex }) {
       {links.map(({ name, icon, url, props }) => (
         <IconButton
           key={name}
+          as={Link}
           src={icon}
-          border
-          scaleAnimation
+          iconProps={{
+            border: true,
+            scaleAnimation: true,
+            priority: true
+          }}
           title={name}
           href={url}
           tabIndex={tabIndex}
-          priority
           {...props}
         />
       ))}

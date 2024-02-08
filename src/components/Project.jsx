@@ -1,9 +1,9 @@
 import styles from '@/styles/Project.module.css'
 
-import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 import ImageCarrousel from '@/components/ImageCarrousel'
 
+import Link from '@/components/Link'
 import Skill from '@/components/Skill'
 import { codeIcon, websiteIcon } from '@/constants/icons'
 import clsx from 'clsx/lite'
@@ -43,15 +43,15 @@ export default async function Project({
       <ImageCarrousel images={images} height={213} width={426} />
       <footer>
         {code && (
-          <Button type='secondary' href={code} isExternal>
+          <Link asButton variant='secondary' href={code} isExternal decoration={false}>
             {codeButton}
-            <Icon src={codeIcon} contentColor />
-          </Button>
+            <Icon src={codeIcon} foregroundColor />
+          </Link>
         )}
-        <Button href={website} isExternal>
+        <Link asButton href={website} isExternal decoration={false}>
           {websiteButton}
           <Icon src={websiteIcon} backgroundColor />
-        </Button>
+        </Link>
       </footer>
     </article>
   )

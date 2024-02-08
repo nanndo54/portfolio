@@ -5,10 +5,10 @@
     "title": "Home",
     "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
     "status": "(Looking for a job)",
-    "cta": "Download my CV!",
+    "cta": "Download my CV",
     "cv": "cv/en.pdf",
     "avatar": {
-      "src": "landing/profile-photo.jpg",
+      "src": "landing/test.png",
       "alt": "My photo"
     },
     "links": [
@@ -21,7 +21,7 @@
         "name": "GitHub",
         "icon": "landing/github-icon.svg",
         "props": {
-          "contentColor": true
+          "foregroundColor": true
         },
         "url": "https://github.com/nanndo54"
       },
@@ -172,7 +172,7 @@
           "name": "ExpressJS",
           "icon": "skills/express-icon.svg",
           "props": {
-            "contentColor": true
+            "foregroundColor": true
           },
           "showcaseProps": {
             "lightColor": true

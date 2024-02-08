@@ -19,7 +19,7 @@
 }
 
 .icon > div {
-  background-color: var(--content-color);
+  background-color: var(--foreground-color);
   position: absolute;
 
   border-radius: 50%;

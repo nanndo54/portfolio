@@ -14,16 +14,13 @@ export default function Icon({
   scaleAnimation = false,
   src,
   alt,
-  contentColor = false,
+  foregroundColor = false,
   backgroundColor = false,
+  accentColor = false,
   lightColor = false,
-  priority = true,
   ...props
 }) {
-  const SvgIcon = useMemo(
-    () => priority && dynamic(() => import(`/public/icons/${src}`)),
-    [priority, src]
-  )
+  const SvgIcon = useMemo(() => dynamic(() => import(`/public/icons/${src}`)), [src])
 
   return (
     <figure
@@ -32,26 +29,17 @@ export default function Icon({
         styles.base,
         classNameByType[type],
         border && `${styles.border} blur-background`,
-        contentColor && styles.contentColor,
+        foregroundColor && styles.foregroundColor,
         backgroundColor && styles.backgroundColor,
+        accentColor && styles.accentColor,
         lightColor && styles.lightColor
       )}
     >
-      {priority ? (
-        <SvgIcon
-          className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
-          title={alt}
-          {...props}
-        />
-      ) : (
-        // <SVG
-        //   className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
-        //   title={alt}
-        //   src={`/icons/${src}`}
-        //   {...props}
-        // />
-        'test'
-      )}
+      <SvgIcon
+        className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
+        title={alt}
+        {...props}
+      />
     </figure>
   )
 }

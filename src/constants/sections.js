@@ -1,5 +1,3 @@
-'server-only'
-
 import LandingSection from '@/sections/LandingSection'
 import dynamic from 'next/dynamic'
 
@@ -7,7 +5,7 @@ const sections = [
   {
     id: 'landing',
     Tag: LandingSection,
-    ignore: true
+    hide: true
   },
   {
     id: 'projects',
@@ -28,6 +26,7 @@ const sections = [
   {
     id: 'quote',
     Tag: dynamic(() => import('@/sections/QuoteSection')),
+    hide: true,
     ignore: true
   }
 ]

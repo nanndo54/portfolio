@@ -15,6 +15,7 @@ export default async function AboutMeSection({ id }) {
       <p>{text}</p>
       {subsections.map(({ images, text }, i) => (
         <div key={i} className={styles.subsection}>
+          <p>{text}</p>
           <ImageCarrousel
             className={styles.images}
             border
@@ -22,7 +23,6 @@ export default async function AboutMeSection({ id }) {
             height={171}
             width={256}
           />
-          <p>{text}</p>
         </div>
       ))}
     </Section>

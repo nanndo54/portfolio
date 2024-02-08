@@ -1,22 +1,22 @@
-import { Lora, Mukta } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 
-export const titleFont = Lora({
+export const titleFont = Poppins({
   display: 'swap',
   style: 'italic',
-  weight: ['600'],
+  weight: ['700'],
   subsets: ['latin'],
   variable: '--title-font'
 })
 
-export const subTitleFont = Mukta({
+export const subTitleFont = Poppins({
   display: 'swap',
-  style: 'normal',
-  weight: ['700'],
+  style: 'italic',
+  weight: ['600'],
   subsets: ['latin'],
   variable: '--subtitle-font'
 })
 
-export const bodyFont = Mukta({
+export const bodyFont = Inter({
   display: 'swap',
   style: 'normal',
   weight: ['400', '700'],

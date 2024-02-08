@@ -1,35 +1,29 @@
-.base {
+.layout {
+  position: absolute;
+
   height: 100%;
   width: 100%;
-  overflow: hidden;
-
-  position: relative;
-}
-
-.base::after {
-  content: '';
-  background: radial-gradient(closest-side, var(--accent-color), transparent);
-  border-radius: 50%;
-
-  position: absolute;
-  top: calc(var(--y, 0) * 1px - 35vw);
-  left: calc(var(--x, 0) * 1px - 35vw);
-
-  width: 70vw;
-  height: 70vw;
 
   opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-  z-index: 2;
+
+  background-color: var(--dim-accent-color);
+  mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%);
+  transition: 400ms mask ease;
 }
 
-.base:hover::after {
-  opacity: 0.08;
+.base:hover .layout {
+  opacity: 1;
+}
+
+.layout,
+.layout * {
+  pointer-events: none;
+}
+
+.shadow {
+  position: absolute;
+  border: 2px solid var(--accent-color);
 }
 
 @media (pointer: coarse) {
-  .base::after {
-    display: none;
-  }
 }

@@ -18,23 +18,22 @@
 }
 
 .base:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .base h2 {
-  align-self: center;
+  margin-left: 4rem;
 }
 
-@media (max-width: 63rem) {
+@media (max-width: 1000px) {
   .base {
     width: 100%;
-    border-radius: 0;
-    padding: 2.5rem;
+    padding: 2rem 1.5rem;
   }
 }
 
-@media (max-width: 31rem) {
-  .base {
-    padding: 2rem 1.5rem;
+@media (max-width: 700px) {
+  .base h2 {
+    margin-left: 2rem;
   }
 }

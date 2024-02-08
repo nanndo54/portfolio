@@ -3,6 +3,7 @@
   pointer-events: none;
 
   position: fixed;
+  top: -3.5rem;
 
   padding: 0 2rem;
   width: 100%;
@@ -11,16 +12,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 
+  box-shadow: var(--dim-dark-color) 0 4rem 3rem -2.5rem inset;
   transition: background-color 0.5s;
-  animation: appear-navbar 0.5s ease-out forwards;
-}
-
-.logo {
-  height: 3rem;
-  width: 3rem;
-  padding: 0;
-  margin: 0 0.6rem;
+  animation: appear-navbar 0.3s 0.2s ease-out forwards;
 }
 
 @media (max-width: 700px) {
@@ -30,24 +26,12 @@
 
     padding: 0 1.2rem;
     background-color: var(--dim-background-color);
-    box-shadow: var(--dim-content-color) 0 -0.4rem 1rem -0.7rem inset;
     backdrop-filter: blur(0.3rem);
-  }
-
-  .logo {
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0;
   }
 }
 
 @keyframes appear-navbar {
-  from,
-  30% {
-    transform: translateY(-3.5rem);
-  }
-
   to {
-    transform: unset;
+    transform: translateY(3.5rem);
   }
 }

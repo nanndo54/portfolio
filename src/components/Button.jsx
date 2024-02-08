@@ -1,37 +1,35 @@
+'use client'
+
 import styles from '@/styles/Button.module.css'
 
-import Link from '@/components/Link'
 import clsx from 'clsx/lite'
 
-const classNameByType = {
+const classNameByVariant = {
   secondary: styles.secondary,
   tertiary: styles.tertiary
 }
 
-export default async function Button({
+export default function Button({
+  as: Tag = 'button',
   className,
-  type = 'primary',
-  href,
+  variant = 'primary',
   onClick,
   children,
   ...props
 }) {
-  return href ? (
-    <Link
-      className={clsx(className, styles.base, classNameByType[type], 'scale-animation')}
-      href={href}
-      noDecoration
+  return (
+    <Tag
+      type='button'
+      className={clsx(
+        className,
+        styles.base,
+        classNameByVariant[variant],
+        'scale-animation'
+      )}
+      onClick={onClick}
       {...props}
     >
       {children}
-    </Link>
-  ) : (
-    <button
-      type='button'
-      className={clsx(className, styles.base, classNameByType[type])}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    </Tag>
   )
 }

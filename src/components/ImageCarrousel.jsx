@@ -42,13 +42,13 @@ export default function ImageCarrousel({
     >
       <IconButton
         src={arrowIcon}
-        lightColor
+        iconProps={{ lightColor: true }}
+        title={aria.previousImage}
         className={styles.previousImage}
         onClick={(ev) => {
           ev.stopPropagation()
           handleImageChange(imageIndex - 1)
         }}
-        title={aria.previousImage}
       />
       <OpenShowcase
         className={styles.showcase}
@@ -73,7 +73,7 @@ export default function ImageCarrousel({
       </OpenShowcase>
       <IconButton
         src={arrowIcon}
-        lightColor
+        iconProps={{ lightColor: true }}
         className={styles.nextImage}
         onClick={(ev) => {
           ev.stopPropagation()

@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 
 import Footer from '@/components/Footer'
-import GoToTopButton from '@/components/GoToTopButton'
 import Interactive from '@/components/Interactive'
 import Navbar from '@/components/Navbar'
 import sections from '@/constants/sections'
@@ -24,7 +23,7 @@ export default async function Page() {
         ))}
         <Footer />
         <Showcase />
-        <GoToTopButton />
+        {/* <GoToTopButton /> */}
 
         <SpeedInsights debug={false} />
         <Analytics debug={false} />

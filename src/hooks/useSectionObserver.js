@@ -1,19 +1,18 @@
 import sections from '@/constants/sections'
-import useAppStore from '@/state/store'
+import styles from '@/styles/NavbarLinks.module.css'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function useSectionObserver() {
   const router = useRouter()
-  const { setCurrentSection } = useAppStore()
   const [sectionsIntersection, setSectionsIntersected] = useState([])
 
   const currentSection = sectionsIntersection.find(({ intersected }) => intersected)?.id
 
   useEffect(() => {
-    const sectionsElements = sections
-      .filter(({ ignore }) => !ignore)
-      .map((section) => document.getElementById(section.id))
+    const sectionsElements = sections.map((section) =>
+      document.getElementById(section.id)
+    )
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -48,7 +47,19 @@ export default function useSectionObserver() {
   useEffect(() => {
     if (!currentSection) return
 
-    setCurrentSection(currentSection)
+    const currentElement = document.querySelector(`a.${styles.current}`)
+    if (currentElement) currentElement.classList.remove(styles.current, 'blur-background')
+
+    const section = sections.find(({ id }) => id === currentSection)
+
+    if (section.hide) {
+      router.replace('', { scroll: false })
+      return
+    }
+
+    const linkElement = document.querySelector(`a[href="#${currentSection}"]`)
+    if (linkElement) linkElement.classList.add(styles.current, 'blur-background')
+
     router.replace(`#${currentSection}`, { scroll: false })
-  }, [currentSection, setCurrentSection, router])
+  }, [currentSection, router])
 }

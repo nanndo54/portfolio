@@ -1,10 +1,4 @@
-.base {
-  background-color: transparent;
+.base.decoration {
   color: var(--secondary-accent-color);
   text-decoration: 0.15rem underline var(--accent-color);
-}
-
-.noDecoration {
-  text-decoration: none;
-  color: var(--content-color);
 }

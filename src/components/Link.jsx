@@ -1,24 +1,35 @@
-'use client'
-
+import buttonStyles from '@/styles/Button.module.css'
 import styles from '@/styles/Link.module.css'
 import clsx from 'clsx/lite'
 import { default as NextLink } from 'next/link'
 
-export default function Link({
+const classNameByVariant = {
+  secondary: buttonStyles.secondary,
+  tertiary: buttonStyles.tertiary
+}
+
+export default async function Link({
   className,
   title,
   href = '#',
-  replace = false,
   locale,
+  replace = false,
   isExternal = false,
+  decoration = true,
   children,
-  noDecoration = false,
+  asButton = false,
+  variant,
   ...props
 }) {
   return (
     <NextLink
       prefetch={false}
-      className={clsx(className, styles.base, noDecoration && styles.noDecoration)}
+      className={clsx(
+        className,
+        asButton ? buttonStyles.base : styles.base,
+        classNameByVariant[variant],
+        decoration && styles.decoration
+      )}
       title={title}
       href={href}
       replace={replace}

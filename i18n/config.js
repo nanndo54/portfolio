@@ -6,7 +6,7 @@ export const dictionaries = {
   es
 }
 
-const locales = Object.keys(dictionaries)
+export const locales = Object.keys(dictionaries)
 
 export const i18n = {
   locales,

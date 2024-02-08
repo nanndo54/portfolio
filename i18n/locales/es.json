@@ -21,7 +21,7 @@
         "name": "GitHub",
         "icon": "landing/github-icon.svg",
         "props": {
-          "contentColor": true
+          "foregroundColor": true
         },
         "url": "https://github.com/nanndo54"
       },
@@ -172,7 +172,7 @@
           "name": "ExpressJS",
           "icon": "skills/express-icon.svg",
           "props": {
-            "contentColor": true
+            "foregroundColor": true
           },
           "showcaseProps": {
             "lightColor": true
