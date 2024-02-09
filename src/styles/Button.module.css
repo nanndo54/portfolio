@@ -34,7 +34,6 @@
 
 .secondary {
   background-image: none;
-  border: 0.1rem solid var(--accent-color);
   color: var(--foreground-color);
 
   transition:

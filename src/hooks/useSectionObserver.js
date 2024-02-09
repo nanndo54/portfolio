@@ -48,7 +48,7 @@ export default function useSectionObserver() {
     if (!currentSection) return
 
     const currentElement = document.querySelector(`a.${styles.current}`)
-    if (currentElement) currentElement.classList.remove(styles.current, 'blur-background')
+    if (currentElement) currentElement.classList.remove(styles.current)
 
     const section = sections.find(({ id }) => id === currentSection)
 
@@ -58,7 +58,7 @@ export default function useSectionObserver() {
     }
 
     const linkElement = document.querySelector(`a[href="#${currentSection}"]`)
-    if (linkElement) linkElement.classList.add(styles.current, 'blur-background')
+    if (linkElement) linkElement.classList.add(styles.current)
 
     router.replace(`#${currentSection}`, { scroll: false })
   }, [currentSection, router])

@@ -12,16 +12,13 @@ export default async function Avatar({ className, photo }) {
   return (
     <div className={clsx(styles.base, className)}>
       <Image
-        className={styles.img}
+        className={clsx(styles.img, 'border')}
         {...photo}
-        height={1000}
-        width={1000}
+        height={352}
+        width={352}
         priority
         zoom={false}
       />
-      <div className={styles.back}>
-        <Image {...photo} aria-hidden height={1000} width={1000} priority zoom={false} />
-      </div>
     </div>
   )
 }

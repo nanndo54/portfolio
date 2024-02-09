@@ -5,7 +5,6 @@
 
 .border {
   padding: 0.75rem;
-  border: 0.1rem solid var(--accent-color);
   border-radius: 1.5rem;
 
   transition: border-color 0.5s;

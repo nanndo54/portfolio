@@ -12,12 +12,12 @@ import getDictionary from 'i18n/server'
 export default async function LandingSection({ id }) {
   const dictionary = await getDictionary(id)
 
-  const { presentation, cv, cta, avatar } = dictionary
+  const { name, presentation, cv, cvButton, avatar } = dictionary
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
-        <h1 className={styles.title}>Pablo Cabrera</h1>
+        <h1 className={styles.title}>{name}</h1>
         <RichText as='p' className={styles.presentation}>
           {presentation}
         </RichText>
@@ -26,11 +26,11 @@ export default async function LandingSection({ id }) {
           <Link
             asButton
             href={cv}
-            download='Pablo Cabrera - CV.pdf'
+            download={`${name} - CV.pdf`}
             isExternal
             decoration={false}
           >
-            {cta}
+            {cvButton}
             <Icon src={downloadIcon} backgroundColor />
           </Link>
           {/* <ContactIcons links={links} className={styles.contact} /> */}

@@ -89,7 +89,7 @@
 
 .canvas:not(.icon) img {
   height: auto;
-  width: 70vw;
+  max-width: 70vw;
 
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }
@@ -197,7 +197,7 @@
   }
 
   .canvas img {
-    width: 100vw;
+    max-width: 100vw;
   }
 
   .icon figure {

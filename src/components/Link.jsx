@@ -4,8 +4,8 @@ import clsx from 'clsx/lite'
 import { default as NextLink } from 'next/link'
 
 const classNameByVariant = {
-  secondary: buttonStyles.secondary,
-  tertiary: buttonStyles.tertiary
+  primary: '',
+  secondary: `${buttonStyles.secondary} blur-background`
 }
 
 export default async function Link({

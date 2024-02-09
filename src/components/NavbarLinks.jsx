@@ -28,7 +28,8 @@ export default async function NavbarLinks() {
         <Link
           key={id}
           href={`#${id}`}
-          className={clsx(styles.link, 'scale-animation')}
+          title={`Go to ${id} section`}
+          className={clsx(styles.link)}
           replace
           decoration={false}
         >

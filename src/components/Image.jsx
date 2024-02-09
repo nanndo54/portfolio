@@ -29,7 +29,12 @@ export default function Image({
       <NextImage
         src={`/images/${src}`}
         alt={alt}
-        className={clsx(className, styles.base, border && styles.border, 'no-select')}
+        className={clsx(
+          className,
+          styles.base,
+          border && `${styles.border} blur-background`,
+          'no-select'
+        )}
         draggable={false}
         height={height}
         width={width}

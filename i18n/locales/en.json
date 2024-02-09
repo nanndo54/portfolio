@@ -1,14 +1,16 @@
 {
-  "id": "en",
   "description": "Hi! I'm Pablo Cabrera (nanndo54), Full-Stack Web Developer at your dispose.",
   "landing": {
     "title": "Home",
+    "name": "Pablo Cabrera",
     "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
+    "email": "nanndo54@outlook.com",
     "status": "(Looking for a job)",
-    "cta": "Download my CV",
+    "emailButton": "Copy my email",
+    "cvButton": "Download my CV",
     "cv": "cv/en.pdf",
     "avatar": {
-      "src": "landing/test.png",
+      "src": "landing/profile-photo.png",
       "alt": "My photo"
     },
     "links": [

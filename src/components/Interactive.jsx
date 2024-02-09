@@ -2,11 +2,35 @@
 
 import styles from '@/styles/Interactive.module.css'
 
+import useDebouncedCallback from '@/hooks/useDebouncedCallback'
 import useMouseTracker from '@/hooks/useMouseTracker'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import useTopObserver from '@/hooks/useTopObserver'
 import useAppStore from '@/state/store'
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
+
+const interactiveElementTypes = [
+  {
+    name: 'blur-background'
+  },
+  {
+    name: 'border',
+    clone: true
+  },
+  {
+    name: 'texting',
+    clone: true,
+    includeChildren: true
+  }
+]
+
+const interactiveClasses = interactiveElementTypes.map((element) => element.name)
+
+const getInteractiveElementType = (element) => {
+  return interactiveElementTypes.find((className) =>
+    element.classList.contains(className.name)
+  )
+}
 
 export default function Interactive({ children }) {
   const { theme } = useAppStore()
@@ -18,33 +42,67 @@ export default function Interactive({ children }) {
     ref.current.style.setProperty('--y', `${y}px`)
   })
 
-  // useEffect(() => {
-  // const elements = document.querySelectorAll('article')
+  const alterSize = useDebouncedCallback(() => {
+    const elements = document.querySelectorAll(
+      interactiveClasses.map((className) => `.${className}`).join(',')
+    )
 
-  // const test = () => {
-  //   const layoutElement = layoutRef.current
-  //   layoutElement.innerHTML = ''
+    for (const element of elements) {
+      const interactiveElement = element.interactiveElement
+      interactiveElement.style.width = `${element.offsetWidth}px`
+      interactiveElement.style.height = `${element.offsetHeight}px`
 
-  //   for (const element of elements) {
-  //     const el = element.cloneNode()
-  //     el.classList = styles.shadow
-  //     el.style.width = `${element.offsetWidth}px`
-  //     el.style.height = `${element.offsetHeight}px`
-  //     el.style.top = `${element.offsetTop}px`
-  //     el.style.left = `${element.offsetLeft}px`
-  //     el.style.borderRadius = `${window.getComputedStyle(element).borderRadius}`
-  //     layoutElement.appendChild(el)
-  //   }
-  // }
+      const viewportOffset = element.getBoundingClientRect()
+      interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
+      interactiveElement.style.left = `${viewportOffset.left}px`
 
-  // test()
+      interactiveElement.style.opacity = null
+    }
 
-  // window.addEventListener('resize', test)
+    layoutRef.current.style.opacity = null
+    layoutRef.current.style.transition = null
+  }, 500)
 
-  // return () => {
-  //   window.removeEventListener('resize', test)
-  // }
-  // }, [])
+  useEffect(() => {
+    const handleWindowResize = () => {
+      layoutRef.current.style.opacity = 0
+      layoutRef.current.style.transition = 'none'
+      alterSize()
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [alterSize])
+
+  useEffect(() => {
+    // if (!elements) return
+
+    const elements = document.querySelectorAll(
+      interactiveClasses.map((className) => `.${className}`).join(',')
+    )
+    const newElements = Array.from(elements).filter(
+      (element) => !element.interactiveElement
+    )
+
+    for (const element of newElements) {
+      const interactiveElementType = getInteractiveElementType(element)
+
+      const interactiveElement = interactiveElementType.clone
+        ? element.cloneNode(interactiveElementType.includeChildren)
+        : document.createElement('div')
+      interactiveElement.classList = styles[interactiveElementType.name]
+
+      interactiveElement.style.borderRadius =
+        window.getComputedStyle(element).borderRadius
+      interactiveElement.style.opacity = 0
+
+      layoutRef.current.appendChild(interactiveElement)
+      element.interactiveElement = interactiveElement
+    }
+
+    alterSize(newElements)
+  }, [alterSize])
 
   useLayoutEffect(() => {
     document.body.setAttribute('dark', theme === 'dark')
@@ -57,7 +115,7 @@ export default function Interactive({ children }) {
   return (
     <div ref={ref} className={styles.base}>
       {children}
-      <div ref={layoutRef} className={styles.layout} />
+      <div ref={layoutRef} aria-hidden className={styles.layout} />
     </div>
   )
 }

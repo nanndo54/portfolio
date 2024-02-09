@@ -31,12 +31,12 @@ export default async function Project({
       <header>
         <div className={styles.title}>
           <Icon src={icon} alt={name} />
-          <h4>{name}</h4>
+          <h4 className='texting'>{name}</h4>
         </div>
         <p>{description}</p>
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <Skill key={skill.name} {...skill} type='secondary' size='small' />
+            <Skill key={skill.name} {...skill} size='small' />
           ))}
         </div>
       </header>

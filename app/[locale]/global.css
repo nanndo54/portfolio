@@ -54,7 +54,7 @@ body {
   --accent: 210, 85%, 55%;
   --secondary-accent: 246, 85%, 55%;
   --dim: 0.4;
-  --dimmest: 0.175;
+  --dimmest: 0.125;
 
   --light-color: hsl(var(--light));
   --dim-light-color: hsl(var(--light), var(--dim));
@@ -65,6 +65,8 @@ body {
   --dimmest-dark-color: hsl(var(--dark), var(--dimmest));
 
   --foreground-color: var(--dark-color);
+  --dim-foreground-color: var(--dim-dark-color);
+  --dimmest-foreground-color: var(--dimmest-dark-color);
 
   --background-color: var(--light-color);
   --dim-background-color: var(--dim-light-color);
@@ -80,12 +82,16 @@ body {
 }
 
 body[dark='true'] {
-  --dim: 0.3;
+  --dim: 0.4;
   --dimmest: 0.125;
 
   --foreground-color: var(--light-color);
+  --dim-foreground-color: var(--dim-light-color);
+  --dimmest-foreground-color: var(--dimmest-light-color);
+
   --background-color: var(--dark-color);
   --dim-background-color: var(--dim-dark-color);
+  --dimmest-background-color: var(--dimmest-dark-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,8 +99,12 @@ body[dark='true'] {
     --dimmest: 0.125;
 
     --foreground-color: var(--light-color);
+    --dim-foreground-color: var(--dim-light-color);
+    --dimmest-foreground-color: var(--dimmest-light-color);
+
     --background-color: var(--dark-color);
     --dim-background-color: var(--dim-dark-color);
+    --dimmest-background-color: var(--dimmest-dark-color);
   }
 }
 
@@ -222,20 +232,16 @@ strong {
 }
 
 .blur-background {
-  border: 0.125rem solid var(--dim-accent-color);
+  border: 0.1rem solid var(--dim-accent-color);
   border-radius: 2rem;
-  backdrop-filter: blur(0.5rem) saturate(150%) brightness(98%);
 
   transition:
-    backdrop-filter 0.4s,
     background-color 0.4s,
     border-color 0.4s;
 }
 
-.blur-background:hover {
-  border-color: var(--accent-color);
-  /* background-color: var(--dimmest-background-color); */
-  backdrop-filter: blur(0.5rem) saturate(200%) brightness(102%);
+.border {
+  filter: drop-shadow(0 0 0.125rem var(--dim-accent-color));
 }
 
 .scale-animation {

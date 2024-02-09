@@ -1,3 +1,11 @@
+.base {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .layout {
   position: absolute;
   top: 0;
@@ -6,14 +14,20 @@
   width: 100%;
   opacity: 0;
 
-  background-color: var(--dimmest-accent-color);
-  mask: radial-gradient(25rem 25rem at var(--x) var(--y), black, transparent 100%);
-  transition: 400ms mask ease;
+  mask: radial-gradient(min(20rem, 75vw) at var(--x) var(--y), black, transparent 100%);
+  transition:
+    0.5s mask,
+    0.5s opacity;
+  will-change: mask;
   pointer-events: none;
 }
 
+.layout:empty {
+  opacity: 0 !important;
+}
+
 .base:hover .layout {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 @media (pointer: coarse) {
@@ -22,7 +36,28 @@
   }
 }
 
-.shadow {
+.blur-background {
   position: absolute;
-  border: 2px solid var(--accent-color);
+  background-color: var(--dimmest-secondary-accent-color);
+  border: 0.15rem solid var(--secondary-accent-color);
+  box-shadow: 0 0 0 0.05rem inset var(--dim-accent-color);
+}
+
+.border {
+  position: absolute;
+  filter: drop-shadow(0rem -0.5rem 0.5rem var(--secondary-accent-color));
+}
+
+.texting {
+  position: absolute;
+  white-space: nowrap;
+  color: var(--foreground-color);
+
+  background-image: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--secondary-accent-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

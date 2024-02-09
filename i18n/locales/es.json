@@ -1,14 +1,16 @@
 {
-  "id": "es",
   "description": "¡Hola! Soy Pablo Cabrera (nanndo54), Desarrollador Web Full-Stack a tu servicio.",
   "landing": {
     "title": "Inicio",
+    "name": "Pablo Cabrera",
     "presentation": "¡Hola! Soy un <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
+    "email": "nanndo54@outlook.com",
     "status": "(Buscando empleo)",
-    "cta": "Descarga mi CV!",
+    "emailButton": "Copiar mi correo",
+    "cvButton": "Descarga mi CV!",
     "cv": "cv/es.pdf",
     "avatar": {
-      "src": "landing/profile-photo.jpg",
+      "src": "landing/profile-photo.png",
       "alt": "Mi foto"
     },
     "links": [

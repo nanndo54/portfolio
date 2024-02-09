@@ -33,8 +33,16 @@
     text-shadow 0.2s ease-out;
 }
 
+.base a:hover {
+  border-color: var(--dim-accent-color);
+}
+
 .base a.current {
   border-color: var(--accent-color);
+}
+
+.base a.current:hover {
+  border-color: var(--secondary-accent-color);
 }
 
 @media (max-width: 650px) {

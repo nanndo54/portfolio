@@ -17,17 +17,6 @@
   box-shadow: 0 3rem 2rem 1rem var(--dim-background);
 }
 
-.base .back {
-  filter: drop-shadow(0 0 5rem var(--background-color)) blur(1rem);
-
-  scale: 1.03;
-  z-index: -1;
-}
-
-.base .back img {
-  clip-path: inset(75% 0 0 0);
-}
-
 @media (max-width: 800px) {
   .base {
     width: 17rem;

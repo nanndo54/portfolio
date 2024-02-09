@@ -11,7 +11,7 @@
 }
 
 .border {
-  border: 0.1rem solid var(--accent-color);
+  border: 0.1rem solid var(--dim-accent-color);
   border-radius: 50%;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .secondary {
-  border-color: var(--secondary-accent-color);
+  border-color: var(--dim-secondary-accent-color);
 }
 
 .icon {

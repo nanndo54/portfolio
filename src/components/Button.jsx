@@ -5,12 +5,11 @@ import styles from '@/styles/Button.module.css'
 import clsx from 'clsx/lite'
 
 const classNameByVariant = {
-  secondary: styles.secondary,
-  tertiary: styles.tertiary
+  primary: '',
+  secondary: `${styles.secondary} blur-background`
 }
 
 export default function Button({
-  as: Tag = 'button',
   className,
   variant = 'primary',
   onClick,
@@ -18,13 +17,13 @@ export default function Button({
   ...props
 }) {
   return (
-    <Tag
+    <button
       type='button'
       className={clsx(className, styles.base, classNameByVariant[variant])}
       onClick={onClick}
       {...props}
     >
       {children}
-    </Tag>
+    </button>
   )
 }
