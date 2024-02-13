@@ -32,7 +32,7 @@ export default function Image({
         className={clsx(
           className,
           styles.base,
-          border && `${styles.border} blur-background`,
+          border && `${styles.border} interactive-border`,
           'no-select'
         )}
         draggable={false}

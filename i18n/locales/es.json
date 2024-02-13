@@ -3,7 +3,7 @@
   "landing": {
     "title": "Inicio",
     "name": "Pablo Cabrera",
-    "presentation": "¡Hola! Soy un <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
+    "presentation": "¡Hola! Soy <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en tecnologías web y diseño.",
     "email": "nanndo54@outlook.com",
     "status": "(Buscando empleo)",
     "emailButton": "Copiar mi correo",
@@ -258,7 +258,7 @@
   },
   "quote": {
     "author": "Carl Sagan",
-    "text": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos."
+    "text": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos"
   },
   "aria": {
     "close": "Cerrar",

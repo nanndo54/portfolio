@@ -27,11 +27,11 @@ export default async function Project({
   )
 
   return (
-    <article className={clsx(styles.base, 'blur-background')}>
+    <article className={clsx(styles.base, 'interactive-border')}>
       <header>
         <div className={styles.title}>
           <Icon src={icon} alt={name} />
-          <h4 className='texting'>{name}</h4>
+          <h4 className='interactive-text'>{name}</h4>
         </div>
         <p>{description}</p>
         <div className={styles.skills}>

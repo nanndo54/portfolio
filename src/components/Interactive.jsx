@@ -3,7 +3,7 @@
 import styles from '@/styles/Interactive.module.css'
 
 import useDebouncedCallback from '@/hooks/useDebouncedCallback'
-import useMouseTracker from '@/hooks/useMouseTracker'
+import useInteractive from '@/hooks/useInteractive'
 import useSectionObserver from '@/hooks/useSectionObserver'
 import useTopObserver from '@/hooks/useTopObserver'
 import useAppStore from '@/state/store'
@@ -11,14 +11,14 @@ import { useEffect, useLayoutEffect, useRef } from 'react'
 
 const interactiveElementTypes = [
   {
-    name: 'blur-background'
+    name: 'interactive-border'
   },
   {
-    name: 'border',
+    name: 'interactive-aura',
     clone: true
   },
   {
-    name: 'texting',
+    name: 'interactive-text',
     clone: true,
     includeChildren: true
   }
@@ -37,7 +37,7 @@ export default function Interactive({ children }) {
   const ref = useRef()
   const layoutRef = useRef()
 
-  useMouseTracker(ref, (x, y) => {
+  useInteractive(ref, (x, y) => {
     ref.current.style.setProperty('--x', `${x}px`)
     ref.current.style.setProperty('--y', `${y}px`)
   })
@@ -64,6 +64,8 @@ export default function Interactive({ children }) {
   }, 500)
 
   useEffect(() => {
+    if (!layoutRef.current) return
+
     const handleWindowResize = () => {
       layoutRef.current.style.opacity = 0
       layoutRef.current.style.transition = 'none'
@@ -76,7 +78,7 @@ export default function Interactive({ children }) {
   }, [alterSize])
 
   useEffect(() => {
-    // if (!elements) return
+    if (!layoutRef.current) return
 
     const elements = document.querySelectorAll(
       interactiveClasses.map((className) => `.${className}`).join(',')

@@ -5,7 +5,7 @@ import { default as NextLink } from 'next/link'
 
 const classNameByVariant = {
   primary: '',
-  secondary: `${buttonStyles.secondary} blur-background`
+  secondary: `${buttonStyles.secondary} interactive-border`
 }
 
 export default async function Link({

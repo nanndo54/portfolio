@@ -90,6 +90,7 @@
 .canvas:not(.icon) img {
   height: auto;
   max-width: 70vw;
+  max-height: 70vh;
 
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }

@@ -9,7 +9,7 @@ header.base {
 }
 
 .info {
-  max-width: 27.5rem;
+  max-width: 28rem;
   text-align: center;
   align-items: center;
 
@@ -21,10 +21,6 @@ header.base {
   transition:
     transform 0.2s,
     opacity 0.2s;
-}
-
-.presentation {
-  font-size: 1.125rem;
 }
 
 .avatar {

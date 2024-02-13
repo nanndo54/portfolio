@@ -6,7 +6,7 @@ import clsx from 'clsx/lite'
 
 const classNameByVariant = {
   primary: '',
-  secondary: `${styles.secondary} blur-background`
+  secondary: `${styles.secondary} interactive-border`
 }
 
 export default function Button({

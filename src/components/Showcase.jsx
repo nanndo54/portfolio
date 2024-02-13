@@ -28,21 +28,23 @@ export default function Showcase() {
   const [scale, setScale] = useState(initialScale)
   const { open, images, index: initialIndex, onIndexChange } = showcase
 
-  const { image, imageIndex, singleImage, handleImageChange } = useCarrousel({
-    initialIndex,
-    images,
-    onImageChange: (newImageIndex) => {
-      ref.current.resetTransform()
-      if (onIndexChange) onIndexChange(newImageIndex)
-    }
-  })
+  const { image, imageIndex, singleImage, handleImageChange, resetCarrousel } =
+    useCarrousel({
+      initialIndex,
+      images,
+      onImageChange: (newImageIndex) => {
+        ref.current.resetTransform()
+        if (onIndexChange) onIndexChange(newImageIndex)
+      }
+    })
 
   const { alt, src, height, width, icon, props } = image
 
   const handleClose = useCallback(() => {
     closeShowcase()
     ref.current?.resetTransform()
-  }, [closeShowcase, ref])
+    resetCarrousel()
+  }, [closeShowcase, ref, resetCarrousel])
 
   useEffect(() => {
     if (!open) return

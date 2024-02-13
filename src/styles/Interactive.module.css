@@ -1,20 +1,21 @@
 .base {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .layout {
   position: absolute;
-  top: 0;
 
   height: 100%;
   width: 100%;
   opacity: 0;
 
-  mask: radial-gradient(min(20rem, 75vw) at var(--x) var(--y), black, transparent 100%);
+  mask: radial-gradient(
+    min(20rem, 75vw) at var(--x) var(--y),
+    black 20%,
+    transparent 100%
+  );
   transition:
     0.5s mask,
     0.5s opacity;
@@ -32,32 +33,27 @@
 
 @media (pointer: coarse) {
   .layout {
-    display: none;
+    opacity: 1;
   }
 }
 
-.blur-background {
+.interactive-border {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border: 0.15rem solid var(--secondary-accent-color);
-  box-shadow: 0 0 0 0.05rem inset var(--dim-accent-color);
+  box-shadow: 0 0 0 0.05rem inset var(--dimmest-accent-color);
 }
 
-.border {
+.interactive-aura {
   position: absolute;
   filter: drop-shadow(0rem -0.5rem 0.5rem var(--secondary-accent-color));
 }
 
-.texting {
+.interactive-text {
   position: absolute;
   white-space: nowrap;
   color: var(--foreground-color);
-
-  background-image: linear-gradient(
-    to right,
-    var(--accent-color),
-    var(--secondary-accent-color)
-  );
+  background-color: var(--secondary-accent-color);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.1rem transparent;
 }

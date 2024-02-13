@@ -51,8 +51,8 @@ body {
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
-  --accent: 210, 85%, 55%;
-  --secondary-accent: 246, 85%, 55%;
+  --accent: 210, 80%, 55%;
+  --secondary-accent: 246, 80%, 60%;
   --dim: 0.4;
   --dimmest: 0.125;
 
@@ -134,7 +134,7 @@ p {
   transition: color 0.5s;
 }
 
-:is(h4, h5, h6) {
+:is(h3, h4, h5, h6) {
   font-family: var(--body-font);
   font-weight: 600;
 }
@@ -162,11 +162,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
 }
 
 h4 {
-  font-size: 1.375rem;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 700px) {
@@ -231,17 +231,18 @@ strong {
   -webkit-text-fill-color: transparent;
 }
 
-.blur-background {
-  border: 0.1rem solid var(--dim-accent-color);
-  border-radius: 2rem;
+.interactive-border {
+  border: 0.125rem solid var(--dim-accent-color);
+  border-radius: 1.5rem;
 
   transition:
-    background-color 0.4s,
-    border-color 0.4s;
+    filter 0.4s,
+    background-color 0.5s,
+    border-color 0.5s;
 }
 
-.border {
-  filter: drop-shadow(0 0 0.125rem var(--dim-accent-color));
+.interactive-border:hover {
+  filter: brightness(1.1) saturate(1.1);
 }
 
 .scale-animation {

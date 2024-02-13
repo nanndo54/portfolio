@@ -1,9 +1,11 @@
+'use client'
+
 import { useEffect } from 'react'
 
-export default function useMouseTracker(ref, callback) {
+export default function useInteractive(ref, callback) {
   useEffect(() => {
     const element = ref.current
-    if (!element) return
+    if (window.matchMedia('(pointer: coarse)').matches || !element) return
 
     const mouseEvent = (e) => {
       if (!ref?.current) return
@@ -30,6 +32,27 @@ export default function useMouseTracker(ref, callback) {
       element.removeEventListener('wheel', delayedMouseEvent, {
         passive: true
       })
+    }
+  }, [ref, callback])
+
+  useEffect(() => {
+    if (!window.matchMedia('(pointer: coarse)').matches) return
+
+    const scrollEvent = () => {
+      if (!ref?.current) return
+
+      const x = window.screen.width / 2
+      const y = document.documentElement.scrollTop + window.screen.height / 2
+
+      callback(x, y)
+    }
+
+    window.addEventListener('scroll', scrollEvent)
+
+    return () => {
+      if (!window) return
+
+      window.removeEventListener('scroll', scrollEvent)
     }
   }, [ref, callback])
 }

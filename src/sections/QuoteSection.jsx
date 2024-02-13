@@ -10,7 +10,7 @@ export default async function QuoteSection({ id }) {
   const { text, author } = dictionary
 
   return (
-    <Section as='blockquote' className={clsx(styles.base, 'blur-background')}>
+    <Section as='blockquote' className={clsx(styles.base, 'interactive-border')}>
       <span>
         <sup>“</sup>
         <RichText>{text}</RichText>

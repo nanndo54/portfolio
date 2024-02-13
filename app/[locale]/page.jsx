@@ -23,8 +23,6 @@ export default async function Page() {
         ))}
         <Footer />
         <Showcase />
-        {/* <GoToTopButton /> */}
-
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </main>

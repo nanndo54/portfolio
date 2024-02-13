@@ -36,7 +36,7 @@ export default function ImageCarrousel({
       className={clsx(
         className,
         styles.base,
-        border && `${styles.border} blur-background`,
+        border && `${styles.border} interactive-border`,
         singleImage && styles.singleImage
       )}
     >

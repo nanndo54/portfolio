@@ -27,5 +27,9 @@ export default function useCarrousel({ initialIndex = 0, images = [], onImageCha
     setImageIndex(newImageIndex)
   }, 100)
 
-  return { image, imageIndex, singleImage, handleImageChange, onScroll }
+  const resetCarrousel = useCallback(() => {
+    setImageIndex(0)
+  }, [])
+
+  return { image, imageIndex, singleImage, handleImageChange, onScroll, resetCarrousel }
 }

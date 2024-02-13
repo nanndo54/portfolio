@@ -12,10 +12,10 @@ export default async function Avatar({ className, photo }) {
   return (
     <div className={clsx(styles.base, className)}>
       <Image
-        className={clsx(styles.img, 'border')}
+        className={clsx(styles.img, 'interactive-aura')}
         {...photo}
-        height={352}
-        width={352}
+        height={704}
+        width={704}
         priority
         zoom={false}
       />
