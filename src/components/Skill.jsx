@@ -21,7 +21,7 @@ export default async function Skill({
         src={icon}
         type={type}
         border
-        interactive={true}
+        interactive
         scaleAnimation
         {...props}
       />

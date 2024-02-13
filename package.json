@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npm run lint:format && npm run lint:fix ",
-    "lint:fix": "eslint ./app --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
+    "lint": "next lint",
+    "lint:fix": "eslint . --ext .jsx,.js --quiet --fix --ignore-path ./.eslintignore",
     "lint:format": "prettier  --log-level warn --write \"./**/*.{js,jsx,css,md,json}\" --ignore-path ./.prettierignore"
   },
   "dependencies": {
@@ -17,13 +17,12 @@
     "@vercel/speed-insights": "1.0.9",
     "client-only": "0.0.1",
     "clsx": "2.1.0",
-    "html-react-parser": "5.1.2",
+    "html-react-parser": "5.1.4",
     "next": "14.1.0",
-    "next-international": "1.2.3",
+    "next-international": "1.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toggle-dark-mode": "1.1.1",
-    "react-useanimations": "2.10.0",
     "react-zoom-pan-pinch": "3.4.2",
     "server-only": "0.0.1",
     "zustand": "4.5.0"

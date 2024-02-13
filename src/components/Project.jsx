@@ -48,7 +48,7 @@ export default async function Project({
             <Icon src={codeIcon} foregroundColor />
           </Link>
         )}
-        <Link asButton href={website} isExternal decoration={false}>
+        <Link asButton variant='primary' href={website} isExternal decoration={false}>
           {websiteButton}
           <Icon src={websiteIcon} backgroundColor />
         </Link>

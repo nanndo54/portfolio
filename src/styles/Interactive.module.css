@@ -34,6 +34,8 @@
 @media (pointer: coarse) {
   .layout {
     opacity: 1;
+
+    mask: radial-gradient(100vw 55vh at var(--x) var(--y), black 20%, transparent 100%);
   }
 }
 
@@ -49,11 +51,26 @@
   filter: drop-shadow(0rem -0.5rem 0.5rem var(--secondary-accent-color));
 }
 
+/* .interactive-button-primary {
+  position: absolute;
+  background-color: var(--secondary-accent-color);
+  filter: contrast(0.5);
+} */
+
+.interactive-button-secondary {
+  position: absolute;
+  background-color: var(--dimmest-secondary-accent-color);
+  border: 0.15rem solid var(--secondary-accent-color);
+
+  color: var(--secondary-accent-color);
+}
+
 .interactive-text {
   position: absolute;
   white-space: nowrap;
-  color: var(--foreground-color);
+  color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
   background-clip: text;
-  -webkit-text-stroke: 0.1rem transparent;
+  /* -webkit-text-stroke: 0.075rem transparent; */
+  text-decoration: var(--secondary-accent-color) solid underline;
 }

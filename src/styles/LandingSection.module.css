@@ -27,10 +27,6 @@ header.base {
   flex-shrink: 2;
 }
 
-.base:hover .info {
-  /* opacity: 1 !important; */
-}
-
 .buttons {
   display: flex;
   align-items: center;

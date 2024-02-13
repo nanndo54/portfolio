@@ -21,6 +21,14 @@ const interactiveElementTypes = [
     name: 'interactive-text',
     clone: true,
     includeChildren: true
+  },
+  // {
+  //   name: 'interactive-button-primary'
+  // },
+  {
+    name: 'interactive-button-secondary',
+    clone: true,
+    includeChildren: true
   }
 ]
 
@@ -43,12 +51,16 @@ export default function Interactive({ children }) {
   })
 
   const alterSize = useDebouncedCallback(() => {
+    if (!layoutRef.current) return
+
     const elements = document.querySelectorAll(
       interactiveClasses.map((className) => `.${className}`).join(',')
     )
 
     for (const element of elements) {
       const interactiveElement = element.interactiveElement
+      if (!interactiveElement) continue
+
       interactiveElement.style.width = `${element.offsetWidth}px`
       interactiveElement.style.height = `${element.offsetHeight}px`
 
@@ -78,32 +90,38 @@ export default function Interactive({ children }) {
   }, [alterSize])
 
   useEffect(() => {
-    if (!layoutRef.current) return
+    setTimeout(() => {
+      if (!layoutRef.current) return
 
-    const elements = document.querySelectorAll(
-      interactiveClasses.map((className) => `.${className}`).join(',')
-    )
-    const newElements = Array.from(elements).filter(
-      (element) => !element.interactiveElement
-    )
+      const elements = document.querySelectorAll(
+        interactiveClasses.map((className) => `.${className}`).join(',')
+      )
+      const newElements = Array.from(elements).filter(
+        (element) => !element.interactiveElement
+      )
 
-    for (const element of newElements) {
-      const interactiveElementType = getInteractiveElementType(element)
+      if (newElements.length === 0) return
 
-      const interactiveElement = interactiveElementType.clone
-        ? element.cloneNode(interactiveElementType.includeChildren)
-        : document.createElement('div')
-      interactiveElement.classList = styles[interactiveElementType.name]
+      for (const element of newElements) {
+        const interactiveElementType = getInteractiveElementType(element)
 
-      interactiveElement.style.borderRadius =
-        window.getComputedStyle(element).borderRadius
-      interactiveElement.style.opacity = 0
+        const interactiveElement = interactiveElementType.clone
+          ? element.cloneNode(interactiveElementType.includeChildren)
+          : document.createElement('div')
 
-      layoutRef.current.appendChild(interactiveElement)
-      element.interactiveElement = interactiveElement
-    }
+        interactiveElement.classList.remove(interactiveElementType.name)
+        interactiveElement.classList.add(styles[interactiveElementType.name])
 
-    alterSize(newElements)
+        interactiveElement.style.borderRadius =
+          window.getComputedStyle(element).borderRadius
+        interactiveElement.style.opacity = 0
+
+        layoutRef.current.appendChild(interactiveElement)
+        element.interactiveElement = interactiveElement
+      }
+
+      alterSize(newElements)
+    }, 200)
   }, [alterSize])
 
   useLayoutEffect(() => {

@@ -29,6 +29,10 @@
   filter: drop-shadow(0 0 0.015rem var(--dark-color));
 }
 
+.title h4 {
+  text-decoration: var(--accent-color) solid underline;
+}
+
 .base footer {
   padding: 0.5rem 1.2rem 1.2rem;
 

@@ -51,8 +51,8 @@ body {
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
-  --accent: 210, 80%, 55%;
-  --secondary-accent: 246, 80%, 60%;
+  --accent: 210, 85%, 65%;
+  --secondary-accent: 246, 85%, 65%;
   --dim: 0.4;
   --dimmest: 0.125;
 
@@ -82,6 +82,8 @@ body {
 }
 
 body[dark='true'] {
+  --accent: 210, 80%, 55%;
+  --secondary-accent: 246, 80%, 60%;
   --dim: 0.4;
   --dimmest: 0.125;
 
@@ -243,6 +245,13 @@ strong {
 
 .interactive-border:hover {
   filter: brightness(1.1) saturate(1.1);
+}
+
+.interactive-button-secondary {
+  border: 0.125rem solid var(--dim-accent-color);
+  border-radius: 1.5rem;
+
+  transition: background-color 0.5s;
 }
 
 .scale-animation {

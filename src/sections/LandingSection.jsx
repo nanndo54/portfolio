@@ -25,6 +25,7 @@ export default async function LandingSection({ id }) {
           <EmailButton />
           <Link
             asButton
+            variant='primary'
             href={cv}
             download={`${name} - CV.pdf`}
             isExternal

@@ -5,8 +5,8 @@ import styles from '@/styles/Button.module.css'
 import clsx from 'clsx/lite'
 
 const classNameByVariant = {
-  primary: '',
-  secondary: `${styles.secondary} interactive-border`
+  primary: `${styles.primary} interactive-button-primary`,
+  secondary: `${styles.secondary} interactive-button-secondary`
 }
 
 export default function Button({

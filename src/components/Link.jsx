@@ -4,8 +4,8 @@ import clsx from 'clsx/lite'
 import { default as NextLink } from 'next/link'
 
 const classNameByVariant = {
-  primary: '',
-  secondary: `${buttonStyles.secondary} interactive-border`
+  primary: `${buttonStyles.primary} interactive-button-primary`,
+  secondary: `${buttonStyles.secondary} interactive-button-secondary`
 }
 
 export default async function Link({
