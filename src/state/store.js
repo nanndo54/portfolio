@@ -5,6 +5,7 @@ import { persist } from 'zustand/middleware'
 
 const initialState = {
   theme: undefined,
+  currentSection: undefined,
   showcase: {}
 }
 
@@ -13,6 +14,7 @@ const useAppStore = create(
     (set) => ({
       ...initialState,
       toggleTheme: (dark) => set(() => ({ theme: dark ? 'dark' : 'light' })),
+      setCurrentSection: (currentSection) => set(() => ({ currentSection })),
       openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
         set(() => ({ showcase: { open, index, images, ...showcase } })),
       closeShowcase: () =>

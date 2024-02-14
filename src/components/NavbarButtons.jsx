@@ -14,7 +14,6 @@ export default async function NavbarButtons() {
         className={`${styles.language} scale-animation`}
         title={aria.toggleLocale}
         href={locale === 'en' ? '/es' : '/en'}
-        replace
         scroll={false}
         decoration={false}
       >

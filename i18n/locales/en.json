@@ -141,81 +141,90 @@
     ]
   },
   "skills": {
-    "title": "Skills",
-    "list": {
-      "FrontEnd": [
-        {
-          "name": "HTML",
-          "icon": "skills/html-icon.svg"
-        },
-        {
-          "name": "CSS",
-          "icon": "skills/css-icon.svg"
-        },
-        {
-          "name": "JavaScript",
-          "icon": "skills/javascript-icon.svg"
-        },
-        {
-          "name": "TypeScript",
-          "icon": "skills/typescript-icon.svg"
-        },
-        {
-          "name": "ReactJS",
-          "icon": "skills/reactjs-icon.svg"
-        },
-        {
-          "name": "Redux",
-          "icon": "skills/redux-icon.svg"
-        }
-      ],
-      "BackEnd": [
-        {
-          "name": "ExpressJS",
-          "icon": "skills/express-icon.svg",
-          "props": {
-            "foregroundColor": true
+    "title": "Habilidades",
+    "list": [
+      {
+        "name": "Front-End",
+        "list": [
+          {
+            "name": "HTML",
+            "icon": "skills/html-icon.svg"
           },
-          "showcaseProps": {
-            "lightColor": true
+          {
+            "name": "CSS",
+            "icon": "skills/css-icon.svg"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "skills/javascript-icon.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "skills/typescript-icon.svg"
+          },
+          {
+            "name": "ReactJS",
+            "icon": "skills/reactjs-icon.svg"
+          },
+          {
+            "name": "Redux",
+            "icon": "skills/redux-icon.svg"
           }
-        },
-        {
-          "name": "Go",
-          "icon": "skills/go-icon.svg"
-        },
-        {
-          "name": "Python",
-          "icon": "skills/python-icon.svg"
-        },
-        {
-          "name": "MongoDB",
-          "icon": "skills/mongodb-icon.svg"
-        },
-        {
-          "name": "MySQL",
-          "icon": "skills/mysql-icon.svg"
-        },
-        {
-          "name": "PL/SQL",
-          "icon": "skills/oraclesql-icon.svg"
-        }
-      ],
-      "Otras": [
-        {
-          "name": "Java",
-          "icon": "skills/java-icon.svg"
-        },
-        {
-          "name": "AWS",
-          "icon": "skills/aws-icon.svg"
-        },
-        {
-          "name": "OCI",
-          "icon": "skills/oraclecloud-icon.svg"
-        }
-      ]
-    }
+        ]
+      },
+      {
+        "name": "Back-End",
+        "list": [
+          {
+            "name": "ExpressJS",
+            "icon": "skills/express-icon.svg",
+            "props": {
+              "foregroundColor": true
+            },
+            "showcaseProps": {
+              "lightColor": true
+            }
+          },
+          {
+            "name": "Java",
+            "icon": "skills/java-icon.svg"
+          },
+          {
+            "name": "Go",
+            "icon": "skills/go-icon.svg"
+          },
+          {
+            "name": "Python",
+            "icon": "skills/python-icon.svg"
+          },
+          {
+            "name": "MongoDB",
+            "icon": "skills/mongodb-icon.svg"
+          },
+          {
+            "name": "MySQL",
+            "icon": "skills/mysql-icon.svg"
+          },
+          {
+            "name": "PL/SQL",
+            "icon": "skills/oraclesql-icon.svg"
+          }
+        ]
+      },
+      {
+        "name": "Otras",
+        "list": [
+          {
+            "name": "AWS",
+            "icon": "skills/aws-icon.svg"
+          },
+          {
+            "name": "OCI",
+            "icon": "skills/oraclecloud-icon.svg"
+          }
+        ]
+      }
+    ]
   },
   "about-me": {
     "title": "About me",
@@ -262,7 +271,7 @@
   },
   "aria": {
     "close": "Close",
-    "goToTop": "Go to top",
+    "goTo": "Go to",
     "nextImage": "See next image",
     "openShowcase": "Expand",
     "previousImage": "See previous image",

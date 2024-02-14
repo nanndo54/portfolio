@@ -17,7 +17,7 @@
   transition:
     background-position 0.5s,
     color 0.5s,
-    box-shadow 0.25s,
+    box-shadow 0.1s,
     scale 0.2s ease-out;
 }
 
@@ -31,7 +31,7 @@
     var(--accent-color) 0%,
     var(--secondary-accent-color) 100%
   );
-  background-size: 150% 100%;
+  background-size: 200% 100%;
   background-position: left;
 }
 

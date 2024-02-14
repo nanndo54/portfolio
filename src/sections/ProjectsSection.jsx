@@ -12,10 +12,10 @@ export default async function ProjectsSection({ id }) {
   const skillsDictionary = await getDictionary('skills')
 
   const { title, list: projects } = dictionary
-  const { list: skills } = skillsDictionary
+  const { list: skillsGroups } = skillsDictionary
 
-  const allSkills = Object.values(skills).reduce(
-    (allSkills, skills) => [...allSkills, ...skills],
+  const allSkills = skillsGroups.reduce(
+    (allSkills, skillGroup) => [...allSkills, ...skillGroup.list],
     []
   )
 
@@ -35,23 +35,21 @@ export default async function ProjectsSection({ id }) {
 
   return (
     <Section id={id} className={styles.base}>
-      <div className={styles.content}>
-        <h2>{title}</h2>
-        <div className={styles.timeline}>
-          <Icon src={arrowIcon} foregroundColor />
-        </div>
-        <div className={styles.allProjects}>
-          {projectsPerYear.map(({ year, projects }) => (
-            <div key={year}>
-              <h3>{year}</h3>
-              <div className={styles.projects}>
-                {projects.map((project, i) => (
-                  <Project key={i} {...project} allSkills={allSkills} />
-                ))}
-              </div>
+      <h2>{title}</h2>
+      <div className={styles.timeline}>
+        <Icon src={arrowIcon} foregroundColor />
+      </div>
+      <div className={styles.allProjects}>
+        {projectsPerYear.map(({ year, projects }) => (
+          <div key={year}>
+            <h3>{year}</h3>
+            <div className={styles.projects}>
+              {projects.map((project, i) => (
+                <Project key={i} {...project} allSkills={allSkills} />
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </Section>
   )

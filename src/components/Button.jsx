@@ -9,13 +9,7 @@ const classNameByVariant = {
   secondary: `${styles.secondary} interactive-button-secondary`
 }
 
-export default function Button({
-  className,
-  variant = 'primary',
-  onClick,
-  children,
-  ...props
-}) {
+export default function Button({ className, variant, onClick, children, ...props }) {
   return (
     <button
       type='button'

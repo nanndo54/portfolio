@@ -92,7 +92,7 @@ export default function Showcase() {
               className={styles.closeButton}
             />
           </header>
-          <div className={styles.content} onClick={(ev) => ev.stopPropagation()}>
+          <div onClick={(ev) => ev.stopPropagation()}>
             <IconButton
               src={arrowIcon}
               iconProps={{ lightColor: true }}

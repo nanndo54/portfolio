@@ -14,9 +14,11 @@
   gap: 2rem;
 
   box-shadow: var(--dim-dark-color) 0 4rem 3rem -2.5rem inset;
+
   transform: translateY(-3.5rem);
+  opacity: 0;
+  animation: appear-navbar 0.5s 0.2s ease-in-out forwards;
   transition: background-color 0.5s;
-  animation: appear-navbar 0.3s 0.3s ease-out forwards;
 }
 
 @media (max-width: 700px) {
@@ -32,6 +34,7 @@
 
 @keyframes appear-navbar {
   to {
-    transform: translateY(0);
+    opacity: 1;
+    transform: unset;
   }
 }

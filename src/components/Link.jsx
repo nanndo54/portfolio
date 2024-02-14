@@ -14,6 +14,7 @@ export default async function Link({
   href = '#',
   locale,
   replace = false,
+  prefetch = false,
   isExternal = false,
   decoration = true,
   children,
@@ -23,7 +24,8 @@ export default async function Link({
 }) {
   return (
     <NextLink
-      prefetch={false}
+      replace={replace}
+      prefetch={prefetch}
       className={clsx(
         className,
         asButton ? buttonStyles.base : styles.base,
@@ -32,7 +34,6 @@ export default async function Link({
       )}
       title={title}
       href={href}
-      replace={replace}
       locale={locale}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? ' noopener noreferrer' : undefined}

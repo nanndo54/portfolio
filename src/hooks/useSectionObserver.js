@@ -1,9 +1,10 @@
 import sections from '@/constants/sections'
-import styles from '@/styles/NavbarLinks.module.css'
+import useAppStore from '@/state/store'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function useSectionObserver() {
+  const { setCurrentSection } = useAppStore()
   const router = useRouter()
   const [sectionsIntersection, setSectionsIntersected] = useState([])
 
@@ -47,19 +48,9 @@ export default function useSectionObserver() {
   useEffect(() => {
     if (!currentSection) return
 
-    const currentElement = document.querySelector(`a.${styles.current}`)
-    if (currentElement) currentElement.classList.remove(styles.current)
+    setCurrentSection(currentSection)
 
     const section = sections.find(({ id }) => id === currentSection)
-
-    if (section.hide) {
-      router.replace('', { scroll: false })
-      return
-    }
-
-    const linkElement = document.querySelector(`a[href="#${currentSection}"]`)
-    if (linkElement) linkElement.classList.add(styles.current)
-
-    router.replace(`#${currentSection}`, { scroll: false })
-  }, [currentSection, router])
+    router.replace(section.hide ? '' : `#${currentSection}`, { scroll: false })
+  }, [setCurrentSection, currentSection, router])
 }

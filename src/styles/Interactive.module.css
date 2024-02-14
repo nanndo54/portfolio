@@ -1,16 +1,12 @@
-.base {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .layout {
   position: absolute;
+  top: 0;
+  left: 0;
 
   height: 100%;
   width: 100%;
-  opacity: 0;
 
+  opacity: 0;
   mask: radial-gradient(
     min(20rem, 75vw) at var(--x) var(--y),
     black 20%,
@@ -27,14 +23,13 @@
   opacity: 0 !important;
 }
 
-.base:hover .layout {
+body:hover .layout {
   opacity: 1;
 }
 
 @media (pointer: coarse) {
   .layout {
     opacity: 1;
-
     mask: radial-gradient(100vw 55vh at var(--x) var(--y), black 20%, transparent 100%);
   }
 }
@@ -48,7 +43,7 @@
 
 .interactive-aura {
   position: absolute;
-  filter: drop-shadow(0rem -0.5rem 0.5rem var(--secondary-accent-color));
+  filter: drop-shadow(0 -0.5rem 0.5rem var(--secondary-accent-color)) !important;
 }
 
 /* .interactive-button-primary {
@@ -65,12 +60,21 @@
   color: var(--secondary-accent-color);
 }
 
+.interactive-button-secondary svg {
+  fill: var(--secondary-accent-color) !important;
+}
+
 .interactive-text {
   position: absolute;
   white-space: nowrap;
   color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
   background-clip: text;
-  /* -webkit-text-stroke: 0.075rem transparent; */
   text-decoration: var(--secondary-accent-color) solid underline;
+}
+
+.layout strong {
+  position: absolute;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.01rem transparent;
 }
