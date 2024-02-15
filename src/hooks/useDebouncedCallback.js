@@ -1,20 +1,8 @@
-import { useCallback, useRef } from 'react'
+import { debounce } from 'lib/debounce'
+import { useMemo } from 'react'
 
 const useDebouncedCallback = (callback, wait) => {
-  const timeout = useRef()
-
-  return useCallback(
-    (...args) => {
-      const later = () => {
-        clearTimeout(timeout.current)
-        callback(...args)
-      }
-
-      clearTimeout(timeout.current)
-      timeout.current = setTimeout(later, wait)
-    },
-    [callback, wait]
-  )
+  return useMemo(() => debounce(callback, wait), [callback, wait])
 }
 
 export default useDebouncedCallback

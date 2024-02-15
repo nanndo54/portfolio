@@ -89,13 +89,13 @@
 .canvas:not(.icon) img {
   height: auto;
   max-width: 70vw;
-  max-height: 70vh;
+  max-height: 70dvh;
 
   box-shadow: 0 0 3rem 0.2rem var(--dark-color);
 }
 
 .canvas.icon figure {
-  max-height: 70vh;
+  max-height: 70dvh;
   max-width: 15rem;
   filter: drop-shadow(0 0 0.4rem var(--dark-color));
 }

@@ -2,8 +2,8 @@
 
 import styles from '@/styles/Interactive.module.css'
 
-import useDebouncedCallback from '@/hooks/useDebouncedCallback'
-import { useEffect } from 'react'
+import { debounce } from 'lib/debounce'
+import { useCallback, useEffect } from 'react'
 
 const interactiveElementTypes = [
   {
@@ -36,10 +36,13 @@ const interactiveElementTypes = [
 const getElements = () => {
   return document.querySelectorAll(
     interactiveElementTypes
-      .map((interactiveElementType) =>
-        interactiveElementType.tag
-          ? interactiveElementType.tag
-          : `.${interactiveElementType.className}`
+      .map(
+        (interactiveElementType) =>
+          `main ${
+            interactiveElementType.tag
+              ? interactiveElementType.tag
+              : `.${interactiveElementType.className}`
+          }`
       )
       .join(',')
   )
@@ -53,43 +56,49 @@ const getInteractiveElementType = (element) => {
   )
 }
 
+const alterSize = debounce(({ elements, callback }) => {
+  elements ??= getElements()
+
+  for (const element of elements) {
+    const interactiveElement = element.interactiveElement
+    if (!interactiveElement) continue
+
+    interactiveElement.style.width = `${element.offsetWidth}px`
+    interactiveElement.style.height = `${element.offsetHeight}px`
+
+    const viewportOffset = element.getBoundingClientRect()
+    interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
+    interactiveElement.style.left = `${viewportOffset.left}px`
+
+    interactiveElement.style.opacity = null
+  }
+
+  if (callback) callback()
+}, 500)
+
 export default function useInteractiveLayout(layoutRef) {
-  const alterSize = useDebouncedCallback(() => {
-    if (!layoutRef.current) return
-
-    const elements = getElements()
-
-    for (const element of elements) {
-      const interactiveElement = element.interactiveElement
-      if (!interactiveElement) continue
-
-      interactiveElement.style.width = `${element.offsetWidth}px`
-      interactiveElement.style.height = `${element.offsetHeight}px`
-
-      const viewportOffset = element.getBoundingClientRect()
-      interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
-      interactiveElement.style.left = `${viewportOffset.left}px`
-
-      interactiveElement.style.opacity = null
-    }
-
-    layoutRef.current.style.opacity = null
-    layoutRef.current.style.transition = null
-  }, 500)
+  const refreshLayoutElements = useCallback(
+    ({ elements }) => {
+      layoutRef.current.style.opacity = 0
+      layoutRef.current.style.transition = 'none'
+      alterSize({
+        elements,
+        callback: () => {
+          layoutRef.current.style.opacity = null
+          layoutRef.current.style.transition = null
+        }
+      })
+    },
+    [layoutRef]
+  )
 
   useEffect(() => {
     if (!layoutRef.current) return
 
-    const handleWindowResize = () => {
-      layoutRef.current.style.opacity = 0
-      layoutRef.current.style.transition = 'none'
-      alterSize()
-    }
+    window.addEventListener('resize', refreshLayoutElements)
 
-    window.addEventListener('resize', handleWindowResize)
-
-    return () => window.removeEventListener('resize', handleWindowResize)
-  }, [layoutRef, alterSize])
+    return () => window.removeEventListener('resize', refreshLayoutElements)
+  }, [layoutRef, refreshLayoutElements])
 
   useEffect(() => {
     setTimeout(() => {
@@ -124,7 +133,7 @@ export default function useInteractiveLayout(layoutRef) {
         element.interactiveElement = interactiveElement
       }
 
-      alterSize(newElements)
+      refreshLayoutElements({ elements: newElements })
     }, 200)
-  }, [layoutRef, alterSize])
+  }, [layoutRef, refreshLayoutElements])
 }

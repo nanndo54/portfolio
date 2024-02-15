@@ -118,16 +118,15 @@
 
   .allProjects h3 {
     position: static;
-    top: 7rem;
-    margin-bottom: 1rem;
   }
 
   .allProjects h3::before {
-    content: none;
+    width: calc(100% + 1.5rem);
   }
 
   .projects {
     margin-right: 0;
+    margin-top: 0;
 
     grid-template-columns: 1fr;
   }

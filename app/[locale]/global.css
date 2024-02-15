@@ -179,7 +179,8 @@ h4 {
 }
 
 @media (max-width: 700px) {
-  p {
+  p,
+  strong {
     font-size: 1.075rem;
   }
 
@@ -230,7 +231,6 @@ button {
 
 strong {
   font-weight: 700;
-  font-size: inherit;
   background-image: linear-gradient(
     to right,
     var(--accent-color),

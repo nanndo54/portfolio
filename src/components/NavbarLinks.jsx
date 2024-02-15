@@ -65,10 +65,9 @@ export default function NavbarLinks() {
           <Button
             key={id}
             className={clsx(styles.link, currentSectionId === id && styles.current)}
-            onClick={() => {
+            onClick={() =>
               document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-              console.log('🚀 | document:', document)
-            }}
+            }
             title={`${aria.goTo} ${id}`}
           >
             {label}

@@ -19,10 +19,6 @@
   pointer-events: none;
 }
 
-.layout:empty {
-  opacity: 0 !important;
-}
-
 body:hover .layout {
   opacity: 1;
 }
@@ -76,5 +72,5 @@ body:hover .layout {
 .layout strong {
   position: absolute;
   white-space: nowrap;
-  -webkit-text-stroke: 0.01rem transparent;
+  -webkit-text-stroke: 0.075rem transparent;
 }
