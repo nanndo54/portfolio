@@ -3,7 +3,7 @@
 import styles from '@/styles/Interactive.module.css'
 
 import { debounce } from 'lib/debounce'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const interactiveElementTypes = [
   {
@@ -92,13 +92,22 @@ export default function useInteractiveLayout(layoutRef) {
     [layoutRef]
   )
 
+  const [windowWidth, setWindowWidth] = useState()
+
+  const handleWindowResize = useCallback(() => {
+    setWindowWidth(window.innerWidth)
+
+    if (window.innerWidth === windowWidth) return
+    refreshLayoutElements({})
+  }, [windowWidth, refreshLayoutElements])
+
   useEffect(() => {
     if (!layoutRef.current) return
 
-    window.addEventListener('resize', refreshLayoutElements)
+    window.addEventListener('resize', handleWindowResize)
 
-    return () => window.removeEventListener('resize', refreshLayoutElements)
-  }, [layoutRef, refreshLayoutElements])
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [layoutRef, handleWindowResize])
 
   useEffect(() => {
     setTimeout(() => {

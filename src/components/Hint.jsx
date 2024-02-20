@@ -2,7 +2,7 @@
 
 import styles from '@/styles/Hint.module.css'
 
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 import { useState } from 'react'
 
 const CLICK_TIMEOUT = 1200

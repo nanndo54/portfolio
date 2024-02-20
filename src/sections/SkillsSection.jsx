@@ -1,7 +1,7 @@
 import styles from '@/styles/SkillsSection.module.css'
 
 import Section from '@/components/Section'
-import Skill from '@/components/Skill'
+import SkillsGroup from '@/components/SkillsGroup'
 import getDictionary from 'i18n/server'
 
 export default async function SkillsSection({ id }) {
@@ -12,16 +12,11 @@ export default async function SkillsSection({ id }) {
   return (
     <Section id={id}>
       <h2>{title}</h2>
-      {skillsGroups.map((skillGroup) => (
-        <div className={styles.subsection} key={skillGroup.name}>
-          <h3>{skillGroup.name}</h3>
-          <div className={styles.skills}>
-            {skillGroup.list.map((skill) => (
-              <Skill key={skill.name} {...skill} />
-            ))}
-          </div>
-        </div>
-      ))}
+      <div className={styles.allSkills}>
+        {skillsGroups.map((skillGroup) => (
+          <SkillsGroup key={skillGroup.name} {...skillGroup} />
+        ))}
+      </div>
     </Section>
   )
 }

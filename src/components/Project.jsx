@@ -15,16 +15,11 @@ export default async function Project({
   description,
   website,
   code,
-  allSkills,
-  technologies = [],
+  skills = [],
   images = []
 }) {
   const dictionary = await getDictionary('projects')
   const { codeButton, websiteButton } = dictionary
-
-  const skills = technologies.map((name) =>
-    allSkills.find((skill) => skill.name === name)
-  )
 
   return (
     <article className={clsx(styles.base, 'interactive-border')}>
@@ -36,7 +31,7 @@ export default async function Project({
         <p>{description}</p>
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <Skill key={skill.name} {...skill} size='small' />
+            <Skill key={skill.name} {...skill} />
           ))}
         </div>
       </header>

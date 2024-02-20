@@ -45,7 +45,7 @@
         "name": "Kolo Empresas",
         "description": "ERP that allows small and medium-sized entrepreneurs to manage, grow and innovate their company in an accessible and customizable way.",
         "website": "https://info.kolo-app.com",
-        "technologies": ["ReactJS", "Redux", "Java", "MySQL", "AWS"],
+        "skills": ["ReactJS", "Redux", "Java", "MySQL", "AWS"],
         "images": [
           {
             "src": "projects/kolo-empresas/img1.jpg",
@@ -60,7 +60,7 @@
         "description": "Quiz game online. The GUI aims to be comfortable and simple, to provide knowledge and fun at the same time!",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
-        "technologies": ["ReactJS", "Redux", "HTML", "CSS"],
+        "skills": ["ReactJS", "Redux", "HTML", "CSS"],
         "images": [
           {
             "src": "projects/quiz-game/img1.jpg",
@@ -95,7 +95,7 @@
         "description": "Real-time minimalistic translation tool. Mini Translator eases the translation between 100+ languages, as well as text spelling.",
         "website": "https://translator.nanndo54.dev/",
         "code": "https://github.com/nanndo54/mini-translator",
-        "technologies": ["JavaScript", "HTML", "CSS"],
+        "skills": ["JavaScript", "HTML", "CSS"],
         "images": [
           {
             "src": "projects/mini-translator/img1.jpg",
@@ -122,7 +122,7 @@
         "description": "Web interpreter for a programming language derived from Julia, named JOLC. Eases the debug of the language via AST, error and symbols reports.",
         "website": "https://jolc.nanndo54.dev/",
         "code": "https://github.com/nanndo54/jolc",
-        "technologies": ["ReactJS", "Redux", "Python", "HTML", "CSS"],
+        "skills": ["ReactJS", "Redux", "Python", "HTML", "CSS"],
         "images": [
           {
             "src": "projects/jolc/img1.jpg",

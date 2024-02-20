@@ -27,7 +27,12 @@ export default async function ProjectsSection({ id }) {
         acc.push(yearObject)
       }
 
-      yearObject.projects.push(project)
+      yearObject.projects.push({
+        ...project,
+        skills: project.skills.map((name) =>
+          allSkills.find((skill) => skill.name === name)
+        )
+      })
 
       return acc
     }, [])
