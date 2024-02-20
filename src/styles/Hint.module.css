@@ -1,0 +1,19 @@
+.base::before,
+.base::after {
+  font-family: var(--subtitle-font);
+
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    transform 0.5s var(--spring-easing),
+    background-color 0.5s,
+    color 0.5s;
+}
+
+.hide::before,
+.hide::after {
+  opacity: 0 !important;
+}

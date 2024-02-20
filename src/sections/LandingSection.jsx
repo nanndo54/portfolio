@@ -2,6 +2,7 @@ import styles from '@/styles/LandingSection.module.css'
 
 import Avatar from '@/components/Avatar'
 import EmailButton from '@/components/EmailButton'
+import Hint from '@/components/Hint'
 import Icon from '@/components/Icon'
 import Link from '@/components/Link'
 import RichText from '@/components/RichText'
@@ -10,9 +11,10 @@ import { downloadIcon } from '@/constants/icons'
 import getDictionary from 'i18n/server'
 
 export default async function LandingSection({ id }) {
-  const dictionary = await getDictionary(id)
+  const dictionary = await getDictionary()
 
-  const { name, presentation, cv, cvButton, avatar } = dictionary
+  const { landing, aria } = dictionary
+  const { name, presentation, cv, cvButton, avatar } = landing
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -23,17 +25,19 @@ export default async function LandingSection({ id }) {
         </RichText>
         <div className={styles.buttons}>
           <EmailButton />
-          <Link
-            asButton
-            variant='primary'
-            href={cv}
-            download={`${name} - CV.pdf`}
-            isExternal
-            decoration={false}
-          >
-            {cvButton}
-            <Icon src={downloadIcon} backgroundColor />
-          </Link>
+          <Hint position='bottom' label={aria.downloaded} showOnClick>
+            <Link
+              asButton
+              variant='primary'
+              href={cv}
+              download={`${name} CV.pdf`}
+              isExternal
+              decoration={false}
+            >
+              {cvButton}
+              <Icon src={downloadIcon} backgroundColor />
+            </Link>
+          </Hint>
           {/* <ContactIcons links={links} className={styles.contact} /> */}
         </div>
       </div>

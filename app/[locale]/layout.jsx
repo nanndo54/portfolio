@@ -1,3 +1,4 @@
+import 'node_modules/hint.css/hint.min.css'
 import './global.css'
 
 import { bodyFont, subTitleFont, titleFont } from 'app/fonts'

@@ -271,14 +271,15 @@
   },
   "aria": {
     "close": "Close",
+    "copied": "Copied! ✅",
+    "downloaded": "Downloaded! ✅",
     "goTo": "Go to",
     "nextImage": "See next image",
     "openShowcase": "Expand",
     "previousImage": "See previous image",
     "seeImage": "See image",
-    "setDarkMode": "Activate dark mode",
-    "setLightMode": "Activate light mode",
-    "toggleLocale": "Change language to spanish",
+    "toggleLocale": "Cambiar a español",
+    "toggleTheme": "Toggle dark theme",
     "zoomIn": "Zoom in",
     "zoomOut": "Zoom out"
   }

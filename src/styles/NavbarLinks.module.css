@@ -73,12 +73,12 @@
 }
 
 .menu.open {
-  opacity: 1;
+  opacity: 0.85;
   pointer-events: all;
 }
 
 .menu .link {
-  color: var(--foreground-color);
+  color: var(--light-color);
   width: 100%;
 }
 

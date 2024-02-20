@@ -271,14 +271,15 @@
   },
   "aria": {
     "close": "Cerrar",
+    "copied": "¡Copiado! ✅",
+    "downloaded": "¡Descargado! ✅",
     "goTo": "Navegar a",
     "nextImage": "Ver imagen siguiente",
     "openShowcase": "Abrir en grande",
     "previousImage": "Ver imagen anterior",
     "seeImage": "Ver imagen",
-    "setDarkMode": "Activar modo oscuro",
-    "setLightMode": "Activar modo claro",
-    "toggleLocale": "Cambiar idioma a inglés",
+    "toggleLocale": "Change to english",
+    "toggleTheme": "Cambiar tema oscuro",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar"
   }

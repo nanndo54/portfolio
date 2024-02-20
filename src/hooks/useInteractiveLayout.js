@@ -128,6 +128,8 @@ export default function useInteractiveLayout(layoutRef) {
         if (borderRadius !== '0px') interactiveElement.style.borderRadius = borderRadius
 
         interactiveElement.style.opacity = 0
+        if (interactiveElementType.clone)
+          interactiveElement.setAttribute('aria-hidden', 'true')
 
         layoutRef.current.appendChild(interactiveElement)
         element.interactiveElement = interactiveElement

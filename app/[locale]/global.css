@@ -4,14 +4,23 @@
 }
 
 html {
+}
+
+:root {
   font-size: 16px;
+
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  width: 100%;
   min-height: 100dvh;
-  scroll-behavior: smooth;
   font-size: 1.125rem;
 
   color: var(--foreground-color);
@@ -50,9 +59,6 @@ body {
     );
 
   transition: background-color 0.5s;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;

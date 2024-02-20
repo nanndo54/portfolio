@@ -25,7 +25,7 @@ export default function Interactive({ children }) {
   return (
     <>
       {children}
-      <div ref={layoutRef} aria-hidden className={styles.layout} />
+      <div ref={layoutRef} className={styles.layout} />
     </>
   )
 }
