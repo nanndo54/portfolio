@@ -38,7 +38,7 @@ export default function Showcase() {
       }
     })
 
-  const { alt, src, height, width, icon, props } = image
+  const { alt, src, height, width, icon, contrast } = image
 
   const handleClose = useCallback(() => {
     closeShowcase()
@@ -104,7 +104,7 @@ export default function Showcase() {
             <TransformComponent wrapperClass={clsx(styles.canvas, icon && styles.icon)}>
               {image.src &&
                 (icon ? (
-                  <Icon src={src} alt={alt} aria-hidden={!open} {...props} />
+                  <Icon src={src} alt={alt} aria-hidden={!open} lightColor={contrast} />
                 ) : (
                   <Image
                     src={src}

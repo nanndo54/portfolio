@@ -4,13 +4,19 @@ import Hint from '@/components/Hint'
 import Icon from '@/components/Icon'
 import OpenShowcase from '@/components/OpenShowcase'
 
-export default async function Skill({ icon, type, name, props, showcaseProps }) {
+export default async function Skill({
+  icon,
+  type,
+  name,
+  contrast = false,
+  hintPosition = 'bottom'
+}) {
   return (
     <OpenShowcase
       className={styles.base}
-      images={[{ src: icon, alt: name, icon: true, props: showcaseProps }]}
+      images={[{ src: icon, alt: name, icon: true, contrast }]}
     >
-      <Hint position='bottom' label={name}>
+      <Hint position={hintPosition} label={name}>
         <Icon
           className={styles.icon}
           src={icon}
@@ -18,7 +24,7 @@ export default async function Skill({ icon, type, name, props, showcaseProps }) 
           border
           interactive
           scaleAnimation
-          {...props}
+          foregroundColor={contrast}
         />
       </Hint>
     </OpenShowcase>

@@ -11,11 +11,11 @@ export default async function ProjectsSection({ id }) {
   const dictionary = await getDictionary(id)
   const skillsDictionary = await getDictionary('skills')
 
-  const { title, list: projects } = dictionary
-  const { list: skillsGroups } = skillsDictionary
+  const { title, content: projects } = dictionary
+  const { content: skillsGroups } = skillsDictionary
 
   const allSkills = skillsGroups.reduce(
-    (allSkills, skillGroup) => [...allSkills, ...skillGroup.list],
+    (allSkills, skillGroup) => [...allSkills, ...skillGroup.skills],
     []
   )
 
@@ -29,8 +29,8 @@ export default async function ProjectsSection({ id }) {
 
       yearObject.projects.push({
         ...project,
-        skills: project.skills.map((name) =>
-          allSkills.find((skill) => skill.name === name)
+        skills: project.skills.map(
+          (name) => allSkills.find((skill) => skill.name === name) || {}
         )
       })
 
@@ -40,7 +40,7 @@ export default async function ProjectsSection({ id }) {
 
   return (
     <Section id={id} className={styles.base}>
-      <h2>{title}</h2>
+      <h2 className='interactive-text'>{title}</h2>
       <div className={styles.timeline}>
         <Icon src={arrowIcon} foregroundColor />
       </div>

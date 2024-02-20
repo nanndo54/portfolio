@@ -38,14 +38,23 @@
     "title": "Projects",
     "codeButton": "Code",
     "websiteButton": "Website",
-    "list": [
+    "content": [
       {
         "year": 2023,
         "icon": "projects/kolo-empresas-icon.svg",
         "name": "Kolo Empresas",
         "description": "ERP that allows small and medium-sized entrepreneurs to manage, grow and innovate their company in an accessible and customizable way.",
         "website": "https://info.kolo-app.com",
-        "skills": ["ReactJS", "Redux", "Java", "MySQL", "AWS"],
+        "skills": [
+          "React.js",
+          "Redux",
+          "TypeScript",
+          "Java",
+          "MySQL",
+          "AWS",
+          "Firebase",
+          "Jira"
+        ],
         "images": [
           {
             "src": "projects/kolo-empresas/img1.jpg",
@@ -60,7 +69,7 @@
         "description": "Quiz game online. The GUI aims to be comfortable and simple, to provide knowledge and fun at the same time!",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
-        "skills": ["ReactJS", "Redux", "HTML", "CSS"],
+        "skills": ["React.js", "Redux", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/quiz-game/img1.jpg",
@@ -95,7 +104,7 @@
         "description": "Real-time minimalistic translation tool. Mini Translator eases the translation between 100+ languages, as well as text spelling.",
         "website": "https://translator.nanndo54.dev/",
         "code": "https://github.com/nanndo54/mini-translator",
-        "skills": ["JavaScript", "HTML", "CSS"],
+        "skills": ["JavaScript", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/mini-translator/img1.jpg",
@@ -122,7 +131,7 @@
         "description": "Web interpreter for a programming language derived from Julia, named JOLC. Eases the debug of the language via AST, error and symbols reports.",
         "website": "https://jolc.nanndo54.dev/",
         "code": "https://github.com/nanndo54/jolc",
-        "skills": ["ReactJS", "Redux", "Python", "HTML", "CSS"],
+        "skills": ["React.js", "Redux", "Python", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/jolc/img1.jpg",
@@ -142,85 +151,169 @@
   },
   "skills": {
     "title": "Habilidades",
-    "list": [
-      {
-        "name": "Front-End",
-        "list": [
-          {
-            "name": "HTML",
-            "icon": "skills/html-icon.svg"
-          },
-          {
-            "name": "CSS",
-            "icon": "skills/css-icon.svg"
-          },
-          {
-            "name": "JavaScript",
-            "icon": "skills/javascript-icon.svg"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "skills/typescript-icon.svg"
-          },
-          {
-            "name": "ReactJS",
-            "icon": "skills/reactjs-icon.svg"
-          },
-          {
-            "name": "Redux",
-            "icon": "skills/redux-icon.svg"
-          }
-        ]
-      },
+    "content": [
       {
         "name": "Back-End",
-        "list": [
+        "skills": [
           {
-            "name": "ExpressJS",
-            "icon": "skills/express-icon.svg",
-            "props": {
-              "foregroundColor": true
-            },
-            "showcaseProps": {
-              "lightColor": true
-            }
+            "name": "Express.js",
+            "icon": "skills/backend/expressjs.svg",
+            "contrast": true
+          },
+          {
+            "name": "GO",
+            "icon": "skills/backend/go.svg"
           },
           {
             "name": "Java",
-            "icon": "skills/java-icon.svg"
+            "icon": "skills/backend/java.svg"
           },
           {
-            "name": "Go",
-            "icon": "skills/go-icon.svg"
+            "name": "Linux",
+            "icon": "skills/backend/linux.svg"
+          },
+          {
+            "name": "Next.js",
+            "icon": "skills/backend/nextjs.svg"
+          },
+          {
+            "name": "Nginx",
+            "icon": "skills/backend/nginx.svg"
+          },
+          {
+            "name": "Node.js",
+            "icon": "skills/backend/nodejs.svg"
           },
           {
             "name": "Python",
-            "icon": "skills/python-icon.svg"
-          },
-          {
-            "name": "MongoDB",
-            "icon": "skills/mongodb-icon.svg"
-          },
-          {
-            "name": "MySQL",
-            "icon": "skills/mysql-icon.svg"
-          },
-          {
-            "name": "PL/SQL",
-            "icon": "skills/oraclesql-icon.svg"
+            "icon": "skills/backend/python.svg"
           }
         ]
       },
       {
-        "name": "Others",
-        "list": [
+        "name": "Cloud",
+        "skills": [
           {
             "name": "AWS",
-            "icon": "skills/aws-icon.svg"
+            "icon": "skills/cloud/aws.svg"
           },
           {
-            "name": "OCI",
-            "icon": "skills/oraclecloud-icon.svg"
+            "name": "Cloudflare",
+            "icon": "skills/cloud/cloudflare.svg"
+          },
+          {
+            "name": "Firebase",
+            "icon": "skills/cloud/firebase.svg"
+          },
+          {
+            "name": "Netlify",
+            "icon": "skills/cloud/netlify.svg"
+          },
+          {
+            "name": "Oracle Cloud",
+            "icon": "skills/cloud/oraclecloud.svg"
+          },
+          {
+            "name": "Vercel",
+            "icon": "skills/cloud/vercel.svg",
+            "contrast": true
+          }
+        ]
+      },
+      {
+        "name": "Database",
+        "skills": [
+          {
+            "name": "MongoDB",
+            "icon": "skills/database/mongodb.svg"
+          },
+          {
+            "name": "MySQL",
+            "icon": "skills/database/mysql.svg"
+          },
+          {
+            "name": "Oracle SQL",
+            "icon": "skills/database/oraclesql.svg"
+          },
+          {
+            "name": "SQL Server",
+            "icon": "skills/database/sqlserver.svg"
+          }
+        ]
+      },
+      {
+        "name": "Front-End",
+        "skills": [
+          {
+            "name": "CSS3",
+            "icon": "skills/frontend/css3.svg"
+          },
+          {
+            "name": "HTML5",
+            "icon": "skills/frontend/html5.svg"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "skills/frontend/javascript.svg"
+          },
+          {
+            "name": "React.js",
+            "icon": "skills/frontend/reactjs.svg"
+          },
+          {
+            "name": "Redux",
+            "icon": "skills/frontend/redux.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "skills/frontend/typescript.svg"
+          },
+          {
+            "name": "Vite.js",
+            "icon": "skills/frontend/vitejs.svg"
+          }
+        ]
+      },
+      {
+        "name": "Testing",
+        "skills": [
+          {
+            "name": "Cypress.io",
+            "icon": "skills/testing/cypressio.svg"
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "skills": [
+          {
+            "name": "Docker",
+            "icon": "skills/tools/docker.svg"
+          },
+          {
+            "name": "Git",
+            "icon": "skills/tools/git.svg"
+          },
+          {
+            "name": "JetBrains",
+            "icon": "skills/tools/jetbrains.svg"
+          },
+          {
+            "name": "Jira",
+            "icon": "skills/tools/jira.svg"
+          },
+          {
+            "name": "Kubernetes",
+            "icon": "skills/tools/kubernetes.svg"
+          },
+          {
+            "name": "Slack",
+            "icon": "skills/tools/slack.svg"
+          },
+          {
+            "name": "WordPress",
+            "icon": "skills/tools/wordpress.svg",
+            "contrast": true
           }
         ]
       }
@@ -229,7 +322,7 @@
   "about-me": {
     "title": "About me",
     "text": "My name is Pablo Cabrera. I really like software development, good practices and clean code. I'm a big fan of sports, video games of many genres and the current affairs of the world of technology.",
-    "list": [
+    "content": [
       {
         "text": "I live in the capital of Guatemala 🇬🇹, a place of volcanoes, great weather and nice people. Of course, I'm willing to work with international teams via remote work.",
         "images": [

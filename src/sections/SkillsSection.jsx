@@ -7,11 +7,11 @@ import getDictionary from 'i18n/server'
 export default async function SkillsSection({ id }) {
   const dictionary = await getDictionary(id)
 
-  const { title, list: skillsGroups } = dictionary
+  const { title, content: skillsGroups } = dictionary
 
   return (
     <Section id={id}>
-      <h2>{title}</h2>
+      <h2 className='interactive-text'>{title}</h2>
       <div className={styles.allSkills}>
         {skillsGroups.map((skillGroup) => (
           <SkillsGroup key={skillGroup.name} {...skillGroup} />

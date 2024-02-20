@@ -9,7 +9,7 @@ export default async function ContactSection({ id }) {
 
   return (
     <Section className={styles.base} id={id} background={false}>
-      <h2>{title}</h2>
+      <h2 className='interactive-text'>{title}</h2>
     </Section>
   )
 }
