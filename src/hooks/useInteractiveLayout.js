@@ -33,20 +33,21 @@ const interactiveElementTypes = [
   }
 ]
 
-const getElements = () => {
-  return document.querySelectorAll(
-    interactiveElementTypes
-      .map(
-        (interactiveElementType) =>
-          `main ${
-            interactiveElementType.tag
-              ? interactiveElementType.tag
-              : `.${interactiveElementType.className}`
-          }`
+const getElements = () =>
+  typeof window === 'undefined'
+    ? []
+    : document.querySelectorAll(
+        interactiveElementTypes
+          .map(
+            (interactiveElementType) =>
+              `main ${
+                interactiveElementType.tag
+                  ? interactiveElementType.tag
+                  : `.${interactiveElementType.className}`
+              }`
+          )
+          .join(',')
       )
-      .join(',')
-  )
-}
 
 const getInteractiveElementType = (element) => {
   return interactiveElementTypes.find((interactiveElementType) =>
@@ -109,20 +110,22 @@ export default function useInteractiveLayout(layoutRef) {
     return () => window.removeEventListener('resize', handleWindowResize)
   }, [layoutRef, handleWindowResize])
 
+  const elements = getElements()
+
   useEffect(() => {
     setTimeout(() => {
       if (!layoutRef.current) return
 
-      const elements = getElements()
-
       const newElements = Array.from(elements).filter(
         (element) => !element.interactiveElement
       )
+      console.log('🚀 | newElements:', newElements)
 
       if (newElements.length === 0) return
 
       for (const element of newElements) {
         const interactiveElementType = getInteractiveElementType(element)
+        console.log('🚀 | interactiveElementType:', interactiveElementType)
 
         const interactiveElement = interactiveElementType.clone
           ? element.cloneNode(interactiveElementType.includeChildren)
@@ -146,5 +149,5 @@ export default function useInteractiveLayout(layoutRef) {
 
       refreshLayoutElements({ elements: newElements })
     }, 200)
-  }, [layoutRef, refreshLayoutElements])
+  }, [layoutRef, elements, refreshLayoutElements])
 }

@@ -17,6 +17,8 @@
     0.5s opacity;
   will-change: mask;
   pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
 body:hover .layout {
@@ -72,5 +74,5 @@ body:hover .layout {
 .layout strong {
   position: absolute;
   white-space: nowrap;
-  -webkit-text-stroke: 0.075rem transparent;
+  -webkit-text-stroke: 0.05rem transparent;
 }

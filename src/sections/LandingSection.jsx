@@ -8,6 +8,7 @@ import Link from '@/components/Link'
 import RichText from '@/components/RichText'
 import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
+import clsx from 'clsx'
 import getDictionary from 'i18n/server'
 
 export default async function LandingSection({ id }) {
@@ -19,7 +20,7 @@ export default async function LandingSection({ id }) {
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
-        <h1>{name}</h1>
+        <h1 className={clsx(styles.title, 'interactive-text')}>{name}</h1>
         <RichText as='p' className={styles.presentation}>
           {presentation}
         </RichText>

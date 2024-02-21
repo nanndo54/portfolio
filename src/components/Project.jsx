@@ -31,7 +31,7 @@ export default async function Project({
         <p>{description}</p>
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <Skill key={skill.name} {...skill} />
+            <Skill key={skill.name} {...skill} interactive />
           ))}
         </div>
       </header>

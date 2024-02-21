@@ -9,6 +9,7 @@ export default async function Skill({
   type,
   name,
   contrast = false,
+  interactive = false,
   hintPosition = 'bottom'
 }) {
   return (
@@ -21,10 +22,10 @@ export default async function Skill({
           className={styles.icon}
           src={icon}
           type={type}
-          border
-          interactive
-          scaleAnimation
+          interactive={interactive}
           foregroundColor={contrast}
+          border
+          scaleAnimation
         />
       </Hint>
     </OpenShowcase>

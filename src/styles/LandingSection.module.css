@@ -23,6 +23,10 @@ header.base {
     opacity 0.2s;
 }
 
+.title {
+  align-self: flex-start;
+}
+
 .avatar {
   flex-shrink: 2;
 }

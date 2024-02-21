@@ -1,10 +1,14 @@
 .base::before,
 .base::after {
+  position: absolute;
+  overflow: hidden;
+
   font-family: var(--subtitle-font);
 
   background-color: var(--foreground-color);
   color: var(--background-color);
 
+  z-index: 2;
   transition:
     opacity 0.3s,
     visibility 0.3s,
