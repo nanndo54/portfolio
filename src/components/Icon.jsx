@@ -1,3 +1,4 @@
+import Hint from '@/components/Hint'
 import styles from '@/styles/Icon.module.css'
 import clsx from 'clsx/lite'
 import dynamic from 'next/dynamic'
@@ -12,6 +13,7 @@ export default function Icon({
   type = 'primary',
   border = false,
   interactive = false,
+  hint,
   scaleAnimation = false,
   src,
   alt,
@@ -22,6 +24,14 @@ export default function Icon({
   ...props
 }) {
   const SvgIcon = useMemo(() => dynamic(() => import(`/public/icons/${src}`)), [src])
+
+  const iconElement = (
+    <SvgIcon
+      className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
+      title={alt}
+      {...props}
+    />
+  )
 
   return (
     <figure
@@ -37,11 +47,7 @@ export default function Icon({
         lightColor && styles.lightColor
       )}
     >
-      <SvgIcon
-        className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
-        title={alt}
-        {...props}
-      />
+      {hint ? <Hint label={hint}>{iconElement}</Hint> : iconElement}
     </figure>
   )
 }

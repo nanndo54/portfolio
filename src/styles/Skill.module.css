@@ -4,9 +4,12 @@
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
+
+  height: 3.5rem;
+  width: 3.5rem;
+  border: none;
+  border-radius: 50%;
 }
 
 .icon {
-  height: 3.5rem;
-  width: 3.5rem;
 }

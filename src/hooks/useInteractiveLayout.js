@@ -1,9 +1,7 @@
 'use client'
 
-import styles from '@/styles/Interactive.module.css'
-
 import { debounce } from 'lib/debounce'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const interactiveElementTypes = [
   {
@@ -13,6 +11,9 @@ const interactiveElementTypes = [
   },
   {
     className: 'interactive-border'
+  },
+  {
+    className: 'interactive-border-active'
   },
   {
     className: 'interactive-aura',
@@ -67,9 +68,14 @@ const alterSize = debounce(({ elements, callback }) => {
     interactiveElement.style.width = `${element.offsetWidth}px`
     interactiveElement.style.height = `${element.offsetHeight}px`
 
-    const viewportOffset = element.getBoundingClientRect()
-    interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
-    interactiveElement.style.left = `${viewportOffset.left}px`
+    if (interactiveElement.parentElement.tagName.toLowerCase() === 'area') {
+      const viewportOffset = element.getBoundingClientRect()
+      interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
+      interactiveElement.style.left = `${viewportOffset.left}px`
+    } else {
+      interactiveElement.style.top = `${element.offsetTop}px`
+      interactiveElement.style.left = `${element.offsetLeft}px`
+    }
 
     interactiveElement.style.opacity = null
   }
@@ -77,7 +83,28 @@ const alterSize = debounce(({ elements, callback }) => {
   if (callback) callback()
 }, 500)
 
+const handleElementsMutation = (mutations) => {
+  for (const mutation of mutations) {
+    const active = mutation.target.getAttribute('active') === 'true'
+
+    if (active)
+      alterSize({
+        elements: [mutation.target],
+        callback: () => {
+          mutation.target.interactiveElement.setAttribute('active', active)
+        }
+      })
+    else {
+      mutation.target.interactiveElement.style.transition = 'none'
+      mutation.target.interactiveElement.removeAttribute('active')
+      mutation.target.interactiveElement.style.transition = null
+    }
+  }
+}
+
 export default function useInteractiveLayout(layoutRef) {
+  const mutationObserverRef = useRef(null)
+
   const refreshLayoutElements = useCallback(
     ({ elements }) => {
       layoutRef.current.style.opacity = 0
@@ -103,6 +130,12 @@ export default function useInteractiveLayout(layoutRef) {
   }, [windowWidth, refreshLayoutElements])
 
   useEffect(() => {
+    mutationObserverRef.current = new MutationObserver(handleElementsMutation)
+
+    return () => mutationObserverRef.current.disconnect()
+  }, [])
+
+  useEffect(() => {
     if (!layoutRef.current) return
 
     window.addEventListener('resize', handleWindowResize)
@@ -119,32 +152,34 @@ export default function useInteractiveLayout(layoutRef) {
       const newElements = Array.from(elements).filter(
         (element) => !element.interactiveElement
       )
-      console.log('🚀 | newElements:', newElements)
 
       if (newElements.length === 0) return
 
       for (const element of newElements) {
         const interactiveElementType = getInteractiveElementType(element)
-        console.log('🚀 | interactiveElementType:', interactiveElementType)
 
         const interactiveElement = interactiveElementType.clone
           ? element.cloneNode(interactiveElementType.includeChildren)
           : document.createElement('div')
 
-        if (interactiveElementType.className) {
-          interactiveElement.classList.remove(interactiveElementType.className)
-          interactiveElement.classList.add(styles[interactiveElementType.className])
-        }
-
-        const borderRadius = window.getComputedStyle(element).borderRadius
-        if (borderRadius !== '0px') interactiveElement.style.borderRadius = borderRadius
-
-        interactiveElement.style.opacity = 0
         if (interactiveElementType.clone)
           interactiveElement.setAttribute('aria-hidden', 'true')
+        else interactiveElement.classList.add(...element.classList)
 
-        layoutRef.current.appendChild(interactiveElement)
+        interactiveElement.style.opacity = 0
+
         element.interactiveElement = interactiveElement
+
+        const parent =
+          newElements.find(
+            (newElement) => newElement.contains(element) && newElement !== element
+          )?.interactiveElement ?? layoutRef.current
+        parent.appendChild(interactiveElement)
+
+        if (interactiveElement.className?.endsWith('active'))
+          mutationObserverRef.current.observe(element, {
+            attributeFilter: ['active']
+          })
       }
 
       refreshLayoutElements({ elements: newElements })

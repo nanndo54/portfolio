@@ -1,33 +1,32 @@
 import styles from '@/styles/Skill.module.css'
 
-import Hint from '@/components/Hint'
 import Icon from '@/components/Icon'
 import OpenShowcase from '@/components/OpenShowcase'
+import clsx from 'clsx/lite'
 
 export default async function Skill({
+  className,
   icon,
   type,
   name,
   contrast = false,
-  interactive = false,
-  hintPosition = 'bottom'
+  interactive = false
 }) {
   return (
     <OpenShowcase
-      className={styles.base}
+      className={clsx(className, styles.base)}
       images={[{ src: icon, alt: name, icon: true, contrast }]}
     >
-      <Hint position={hintPosition} label={name}>
-        <Icon
-          className={styles.icon}
-          src={icon}
-          type={type}
-          interactive={interactive}
-          foregroundColor={contrast}
-          border
-          scaleAnimation
-        />
-      </Hint>
+      <Icon
+        className={styles.icon}
+        src={icon}
+        type={type}
+        interactive={interactive}
+        hint={name}
+        foregroundColor={contrast}
+        border
+        scaleAnimation
+      />
     </OpenShowcase>
   )
 }

@@ -11,12 +11,12 @@ export default async function QuoteSection({ id }) {
 
   return (
     <Section as='blockquote' className={clsx(styles.base, 'interactive-border')}>
-      <span>
+      <p className={clsx(styles.quote, 'interactive-text')}>
         <sup>“</sup>
         <RichText>{text}</RichText>
         <sup>”</sup>
-      </span>
-      <div className={styles.author}>— {author}</div>
+      </p>
+      <span className={clsx(styles.author, 'interactive-text')}>— {author}</span>
     </Section>
   )
 }

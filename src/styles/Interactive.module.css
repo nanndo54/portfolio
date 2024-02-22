@@ -1,4 +1,4 @@
-.layout {
+.base {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,25 +21,35 @@
   z-index: 1;
 }
 
-body:hover .layout {
+body:hover .base {
   opacity: 1;
 }
 
 @media (pointer: coarse) {
-  .layout {
+  .base {
     opacity: 1;
     mask: radial-gradient(100vw 55vh at var(--x) var(--y), black 20%, transparent 100%);
   }
 }
 
-.interactive-border {
+.base :global(.interactive-border),
+.base :global(.interactive-border-active) {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border: 0.15rem solid var(--secondary-accent-color);
   box-shadow: 0 0 0 0.05rem inset var(--dimmest-accent-color);
 }
 
-.interactive-aura {
+.base :global(.interactive-border-active) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.base :global(.interactive-border-active[active='true']) {
+  opacity: 1;
+}
+
+.base :global(.interactive-aura) {
   position: absolute;
   filter: drop-shadow(0 -0.5rem 0.5rem var(--secondary-accent-color)) !important;
 }
@@ -50,7 +60,7 @@ body:hover .layout {
   filter: contrast(0.5);
 } */
 
-.interactive-button-secondary {
+.base :global(.interactive-button-secondary) {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border: 0.15rem solid var(--secondary-accent-color);
@@ -58,20 +68,20 @@ body:hover .layout {
   color: var(--secondary-accent-color);
 }
 
-.interactive-button-secondary svg {
+.base :global(.interactive-button-secondary) svg {
   fill: var(--secondary-accent-color) !important;
 }
 
-.interactive-text {
+.base :global(.interactive-text) {
   position: absolute;
-  white-space: nowrap;
+  text-wrap: nowrap;
   color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
   background-clip: text;
-  text-decoration: var(--secondary-accent-color) solid underline;
+  /* text-decoration: var(--secondary-accent-color) solid underline; */
 }
 
-.layout strong {
+.base strong {
   position: absolute;
   white-space: nowrap;
   -webkit-text-stroke: 0.05rem transparent;

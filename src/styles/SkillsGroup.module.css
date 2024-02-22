@@ -1,29 +1,40 @@
+.base,
+.base * {
+  /* border: 1px solid red !important; */
+}
+
+.base:has(.skills > :only-child) {
+  width: min(20rem, 100%);
+  padding: 2.5rem;
+}
+
 .base {
-  aspect-ratio: 1;
   width: min(30rem, 100%);
+  height: fit-content;
   padding: 1.5rem;
-  border-width: 0.375rem;
+  border-radius: 2.5rem;
 
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-
-  overflow: hidden;
+  gap: 2rem;
 
   background-color: var(--background-color);
   position: absolute;
 
   transition:
+    background-color 0.5s,
+    filter 0.4s,
     transform 0.15s ease-in-out,
     opacity 0.3s ease-in-out;
   opacity: 0.85;
   animation: float ease-in-out infinite;
   animation-composition: add;
+  overflow: hidden;
 }
 
 @keyframes float {
   50% {
-    translate: 0 1rem;
+    translate: 0 0.5rem;
   }
 }
 
@@ -32,22 +43,28 @@
 }
 
 .skills {
-  height: 100%;
-
+  /* 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap: 1.5rem;
+  gap: 1.5rem; */
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  grid-auto-rows: min-content;
+  gap: 2.5rem;
 }
 
-.skills figure {
-  height: 5.5rem;
-  width: 5.5rem;
+.skills > * {
+  height: 100% !important;
+  width: 100% !important;
 }
 
 @media not (pointer: coarse) {
-  .active {
+  .base[active='true'] {
     transform: none !important;
     animation: none;
     z-index: 1;
@@ -57,32 +74,32 @@
 
 .base:nth-child(1) {
   transform: translate(-16rem, -12rem) scale(0.5);
-  animation-duration: 4s;
+  animation-duration: 5s;
 }
 
 .base:nth-child(2) {
   transform: translate(1.5rem, -18rem) scale(0.4);
-  animation-duration: 4.5s;
+  animation-duration: 5.5s;
 }
 
 .base:nth-child(3) {
   transform: translate(16rem, -9rem) scale(0.45);
-  animation-duration: 4.1s;
+  animation-duration: 5.1s;
 }
 
 .base:nth-child(4) {
   transform: translate(-16rem, 10rem) scale(0.55);
-  animation-duration: 3.7s;
+  animation-duration: 4.7s;
 }
 
 .base:nth-child(5) {
   transform: translate(-1rem, 18rem) scale(0.35);
-  animation-duration: 3.85s;
+  animation-duration: 4.85s;
 }
 
 .base:nth-child(6) {
   transform: translate(15rem, 12rem) scale(0.45);
-  animation-duration: 4.05s;
+  animation-duration: 5.05s;
 }
 
 @media (max-width: 800px) {

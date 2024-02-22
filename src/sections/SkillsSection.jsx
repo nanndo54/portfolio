@@ -17,7 +17,7 @@ export default async function SkillsSection({ id }) {
         {skillsGroups.map((skillGroup) => (
           <SkillsGroup key={skillGroup.name} name={skillGroup.name}>
             {skillGroup.skills.map((skill) => (
-              <Skill key={skill.name} {...skill} />
+              <Skill key={skill.name} className='interactive-border' {...skill} />
             ))}
           </SkillsGroup>
         ))}

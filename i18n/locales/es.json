@@ -46,7 +46,7 @@
         "description": "ERP que permite al pequeño y mediano empresario manejar, crece e innovar su empresa de manera accesible y personalizable.",
         "website": "https://info.kolo-app.com",
         "skills": [
-          "React.js",
+          "React",
           "Redux",
           "TypeScript",
           "Java",
@@ -69,7 +69,7 @@
         "description": "Juego de preguntas en línea. Tiene una interfaz cómoda y sencilla, ¡para proveer una divertida y educativa experiencia!",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
-        "skills": ["React.js", "Redux", "HTML5", "CSS3", "Vite.js"],
+        "skills": ["React", "Redux", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/quiz-game/img1.jpg",
@@ -131,7 +131,7 @@
         "description": "Intérprete de JOLC, un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
         "website": "https://jolc.nanndo54.dev/",
         "code": "https://github.com/nanndo54/jolc",
-        "skills": ["React.js", "Redux", "Python", "HTML5", "CSS3"],
+        "skills": ["React", "Redux", "Python", "HTML5", "CSS3"],
         "images": [
           {
             "src": "projects/jolc/img1.jpg",
@@ -257,7 +257,7 @@
             "icon": "skills/frontend/javascript.svg"
           },
           {
-            "name": "React.js",
+            "name": "React",
             "icon": "skills/frontend/reactjs.svg"
           },
           {

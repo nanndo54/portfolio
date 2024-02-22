@@ -1,6 +1,7 @@
 'use client'
 
 import styles from '@/styles/SkillsGroup.module.css'
+import clsx from 'clsx'
 
 import { useRef } from 'react'
 
@@ -11,28 +12,27 @@ export default function SkillsGroup({ name, children }) {
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current)
 
-    const groups = document.getElementsByClassName(styles.base)
-    for (const group of groups) {
-      group.classList.remove(styles.active, 'interactive-border')
-    }
+    const skillsGroupElements = document.getElementsByClassName(styles.base)
+    for (const skillGroupElement of skillsGroupElements)
+      skillGroupElement.setAttribute('active', false)
 
-    ref.current.classList.add(styles.active, 'interactive-border')
+    ref.current.setAttribute('active', true)
   }
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
-      ref.current.classList.remove(styles.active)
-    }, 1200)
+      ref.current.setAttribute('active', false)
+    }, 1000)
   }
 
   return (
     <div
       ref={ref}
-      className={styles.base}
+      className={clsx(styles.base, 'interactive-border-active')}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <h3>{name}</h3>
+      <h3 className='interactive-text'>{name}</h3>
       <div className={styles.skills}>{children}</div>
     </div>
   )

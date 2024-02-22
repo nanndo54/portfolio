@@ -1,3 +1,7 @@
+.base {
+  z-index: 2;
+}
+
 .base::before,
 .base::after {
   position: absolute;

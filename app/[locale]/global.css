@@ -242,7 +242,9 @@ strong {
   -webkit-text-fill-color: transparent;
 }
 
-.interactive-border {
+.interactive-border,
+.interactive-border-active {
+  position: relative;
   border: 0.1875rem solid var(--dim-accent-color);
   border-radius: 1.5rem;
 
@@ -252,8 +254,9 @@ strong {
     border-color 0.5s;
 }
 
-.interactive-border:hover {
-  filter: brightness(1.1) saturate(1.1);
+.interactive-border:hover,
+.interactive-border-active:hover {
+  filter: brightness(1.05) saturate(1.1);
 }
 
 .interactive-button-secondary {
@@ -294,4 +297,9 @@ body * {
 body ::-webkit-scrollbar {
   height: 0;
   width: 0;
+}
+
+::selection {
+  color: var(--background-color);
+  background-color: var(--foreground-color);
 }
