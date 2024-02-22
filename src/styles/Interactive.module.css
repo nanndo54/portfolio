@@ -31,6 +31,22 @@ body:hover .base {
     mask: radial-gradient(100vw 55vh at var(--x) var(--y), black 20%, transparent 100%);
   }
 }
+@media not (pointer: coarse) {
+  .base :global(.interactive-border-active) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .base :global(.interactive-border-active[active='true']) {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 800px) {
+  .base :global(.interactive-border-active) {
+    opacity: 0;
+  }
+}
 
 .base :global(.interactive-border),
 .base :global(.interactive-border-active) {
@@ -40,25 +56,10 @@ body:hover .base {
   box-shadow: 0 0 0 0.05rem inset var(--dimmest-accent-color);
 }
 
-.base :global(.interactive-border-active) {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.base :global(.interactive-border-active[active='true']) {
-  opacity: 1;
-}
-
 .base :global(.interactive-aura) {
   position: absolute;
   filter: drop-shadow(0 -0.5rem 0.5rem var(--secondary-accent-color)) !important;
 }
-
-/* .interactive-button-primary {
-  position: absolute;
-  background-color: var(--secondary-accent-color);
-  filter: contrast(0.5);
-} */
 
 .base :global(.interactive-button-secondary) {
   position: absolute;

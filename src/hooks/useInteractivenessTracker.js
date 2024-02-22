@@ -15,7 +15,7 @@ export default function useInteractivenessTracker() {
     if (isCoarse || !element) return
 
     const handleTrackInteractiveness = (e) => {
-      const { x, y } = document.body.getBoundingClientRect()
+      const { x, y } = element.getBoundingClientRect()
       callback(e.clientX - x, e.clientY - y)
     }
 

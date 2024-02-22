@@ -24,9 +24,6 @@ const interactiveElementTypes = [
     clone: true,
     includeChildren: true
   },
-  // {
-  //   className: 'interactive-button-primary'
-  // },
   {
     className: 'interactive-button-secondary',
     clone: true,
@@ -68,7 +65,7 @@ const alterSize = debounce(({ elements, callback }) => {
     interactiveElement.style.width = `${element.offsetWidth}px`
     interactiveElement.style.height = `${element.offsetHeight}px`
 
-    if (interactiveElement.parentElement.tagName.toLowerCase() === 'area') {
+    if (interactiveElement.parentElement.id === 'layout') {
       const viewportOffset = element.getBoundingClientRect()
       interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
       interactiveElement.style.left = `${viewportOffset.left}px`
@@ -130,6 +127,7 @@ export default function useInteractiveLayout(layoutRef) {
   }, [windowWidth, refreshLayoutElements])
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     mutationObserverRef.current = new MutationObserver(handleElementsMutation)
 
     return () => mutationObserverRef.current.disconnect()

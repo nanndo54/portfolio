@@ -26,7 +26,7 @@ export default function SkillsGroup({ name, children }) {
   }
 
   return (
-    <div
+    <article
       ref={ref}
       className={clsx(styles.base, 'interactive-border-active')}
       onMouseEnter={handleMouseEnter}
@@ -34,6 +34,6 @@ export default function SkillsGroup({ name, children }) {
     >
       <h3 className='interactive-text'>{name}</h3>
       <div className={styles.skills}>{children}</div>
-    </div>
+    </article>
   )
 }

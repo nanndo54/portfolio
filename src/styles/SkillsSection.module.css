@@ -1,7 +1,33 @@
-.allSkills {
+.base::before {
+  content: '';
+  background-image: radial-gradient(
+    32rem at 47% 30rem,
+    var(--dimmer-accent-color) 0,
+    transparent 85%
+  );
+  overflow: visible;
+
+  width: 100%;
+  height: 75rem;
+  position: absolute;
+  left: 0;
+}
+
+.content {
   height: 50rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .content {
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+  }
 }

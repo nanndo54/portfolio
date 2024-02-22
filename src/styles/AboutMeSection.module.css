@@ -1,3 +1,18 @@
+.base::before {
+  content: '';
+  background-image: radial-gradient(
+    20rem at 65% 20rem,
+    var(--dimmer-secondary-accent-color) 0,
+    transparent 100%
+  );
+  overflow: visible;
+
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  left: 0;
+}
+
 .subsection {
   display: flex;
   align-items: center;

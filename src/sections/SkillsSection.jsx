@@ -11,9 +11,9 @@ export default async function SkillsSection({ id }) {
   const { title, content: skillsGroups } = dictionary
 
   return (
-    <Section id={id}>
+    <Section id={id} className={styles.base}>
       <h2 className='interactive-text'>{title}</h2>
-      <div className={styles.allSkills}>
+      <div className={styles.content}>
         {skillsGroups.map((skillGroup) => (
           <SkillsGroup key={skillGroup.name} name={skillGroup.name}>
             {skillGroup.skills.map((skill) => (

@@ -13,7 +13,7 @@
   justify-content: space-between;
   gap: 2rem;
 
-  box-shadow: var(--dim-dark-color) 0 4rem 3rem -2.5rem inset;
+  box-shadow: var(--dimmest-dark-color) 0 5rem 3rem -2.5rem inset;
 
   transform: translateY(-3.5rem);
   opacity: 0;
@@ -27,7 +27,7 @@
     pointer-events: all;
 
     padding: 0 1.2rem;
-    background-color: var(--dim-background-color);
+    background-color: var(--dimmer-background-color);
     backdrop-filter: blur(0.3rem);
   }
 }

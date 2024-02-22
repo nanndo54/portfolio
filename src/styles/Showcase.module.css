@@ -53,7 +53,7 @@
   justify-content: center;
 
   z-index: 4;
-  box-shadow: inset 0 5.5rem 2rem -2rem var(--dark-color);
+  box-shadow: inset 0 5.5rem 2rem -2rem var(--dim-dark-color);
 }
 
 .base header .imageIndex {
@@ -116,7 +116,7 @@
   gap: 0.1rem;
 
   z-index: 4;
-  box-shadow: inset 0 -5.25rem 2rem -2.25rem var(--dark-color);
+  box-shadow: inset 0 -5.5rem 2rem -2.25rem var(--dim-dark-color);
 }
 
 .base footer > p {

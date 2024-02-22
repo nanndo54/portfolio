@@ -153,6 +153,39 @@
     "title": "Habilidades",
     "content": [
       {
+        "name": "Front-End",
+        "skills": [
+          {
+            "name": "CSS3",
+            "icon": "skills/frontend/css3.svg"
+          },
+          {
+            "name": "HTML5",
+            "icon": "skills/frontend/html5.svg"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "skills/frontend/javascript.svg"
+          },
+          {
+            "name": "React",
+            "icon": "skills/frontend/reactjs.svg"
+          },
+          {
+            "name": "Redux",
+            "icon": "skills/frontend/redux.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "skills/frontend/typescript.svg"
+          },
+          {
+            "name": "Vite.js",
+            "icon": "skills/frontend/vitejs.svg"
+          }
+        ]
+      },
+      {
         "name": "Back-End",
         "skills": [
           {
@@ -238,39 +271,6 @@
           {
             "name": "SQL Server",
             "icon": "skills/database/sqlserver.svg"
-          }
-        ]
-      },
-      {
-        "name": "Front-End",
-        "skills": [
-          {
-            "name": "CSS3",
-            "icon": "skills/frontend/css3.svg"
-          },
-          {
-            "name": "HTML5",
-            "icon": "skills/frontend/html5.svg"
-          },
-          {
-            "name": "JavaScript",
-            "icon": "skills/frontend/javascript.svg"
-          },
-          {
-            "name": "React",
-            "icon": "skills/frontend/reactjs.svg"
-          },
-          {
-            "name": "Redux",
-            "icon": "skills/frontend/redux.svg"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "skills/frontend/typescript.svg"
-          },
-          {
-            "name": "Vite.js",
-            "icon": "skills/frontend/vitejs.svg"
           }
         ]
       },

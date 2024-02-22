@@ -10,7 +10,7 @@ export default async function AboutMeSection({ id }) {
   const { title, text, content: subsections } = dictionary
 
   return (
-    <Section id={id}>
+    <Section id={id} className={styles.base}>
       <h2 className='interactive-text'>{title}</h2>
       <p>{text}</p>
       {subsections.map(({ images, text }, i) => (

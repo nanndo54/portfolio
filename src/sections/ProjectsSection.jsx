@@ -44,7 +44,7 @@ export default async function ProjectsSection({ id }) {
       <div className={styles.timeline}>
         <Icon src={arrowIcon} foregroundColor />
       </div>
-      <div className={styles.allProjects}>
+      <div className={styles.content}>
         {projectsPerYear.map(({ year, projects }) => (
           <div key={year}>
             <h3>{year}</h3>

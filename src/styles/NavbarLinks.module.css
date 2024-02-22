@@ -64,7 +64,7 @@
   justify-content: center;
   gap: 0.5rem;
 
-  background-color: var(--dark-color);
+  background-color: var(--dim-dark-color);
 
   opacity: 0;
   pointer-events: none;
@@ -73,7 +73,7 @@
 }
 
 .menu.open {
-  opacity: 0.85;
+  opacity: 1;
   pointer-events: all;
 }
 
