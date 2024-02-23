@@ -1,16 +1,16 @@
 .base {
+  font-size: 1.5rem;
   max-width: 42rem;
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 1.5rem;
   margin-bottom: 3rem;
   border-radius: 2.5rem;
 }
 
 .base .quote {
-  font-size: 1.625rem;
   line-height: 1.4;
   letter-spacing: 0.1rem;
   text-align: center;
-  text-wrap: balance;
+  white-space: normal;
 }
 
 .base sup {
@@ -24,7 +24,6 @@
 }
 
 .base .author {
-  font-size: 1.5rem;
   font-weight: 700;
   align-self: flex-end;
 

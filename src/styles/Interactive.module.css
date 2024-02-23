@@ -28,7 +28,7 @@ body:hover .base {
 @media (pointer: coarse) {
   .base {
     opacity: 1;
-    mask: radial-gradient(100vw 55vh at var(--x) var(--y), black 20%, transparent 100%);
+    mask: radial-gradient(100vw 55vh at var(--x) var(--y), black, transparent);
   }
 }
 @media not (pointer: coarse) {
@@ -54,6 +54,7 @@ body:hover .base {
   background-color: var(--dimmest-secondary-accent-color);
   border: 0.15rem solid var(--secondary-accent-color);
   box-shadow: 0 0 0 0.05rem inset var(--dimmest-accent-color);
+  backdrop-filter: unset;
 }
 
 .base :global(.interactive-aura) {
@@ -75,7 +76,7 @@ body:hover .base {
 
 .base :global(.interactive-text) {
   position: absolute;
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
   background-clip: text;
