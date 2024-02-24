@@ -14,7 +14,7 @@ export default function Interactive({ children }) {
   const layoutRef = useRef()
 
   useInteractivenessTracker()
-  useInteractiveLayout(layoutRef)
+  useInteractiveLayout(layoutRef.current)
   useTopObserver()
   useSectionObserver()
 

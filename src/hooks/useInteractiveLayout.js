@@ -78,43 +78,24 @@ const alterSize = debounce(({ elements, callback }) => {
   }
 
   if (callback) callback()
-}, 500)
+}, 300)
 
-const handleElementsMutation = (mutations) => {
-  for (const mutation of mutations) {
-    const active = mutation.target.getAttribute('active') === 'true'
-
-    if (active)
-      alterSize({
-        elements: [mutation.target],
-        callback: () => {
-          mutation.target.interactiveElement.setAttribute('active', active)
-        }
-      })
-    else {
-      mutation.target.interactiveElement.style.transition = 'none'
-      mutation.target.interactiveElement.removeAttribute('active')
-      mutation.target.interactiveElement.style.transition = null
-    }
-  }
-}
-
-export default function useInteractiveLayout(layoutRef) {
+export default function useInteractiveLayout(layoutElement) {
   const mutationObserverRef = useRef(null)
 
   const refreshLayoutElements = useCallback(
     ({ elements }) => {
-      layoutRef.current.style.opacity = 0
-      layoutRef.current.style.transition = 'none'
+      layoutElement.style.opacity = 0
+      layoutElement.style.transition = 'none'
       alterSize({
         elements,
         callback: () => {
-          layoutRef.current.style.opacity = null
-          layoutRef.current.style.transition = null
+          layoutElement.style.opacity = null
+          layoutElement.style.transition = null
         }
       })
     },
-    [layoutRef]
+    [layoutElement]
   )
 
   const [windowWidth, setWindowWidth] = useState()
@@ -128,24 +109,41 @@ export default function useInteractiveLayout(layoutRef) {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth)
-    mutationObserverRef.current = new MutationObserver(handleElementsMutation)
+    mutationObserverRef.current = new MutationObserver((mutations) => {
+      if (layoutElement.style.opacity === '0') return
+
+      for (const mutation of mutations) {
+        const active = mutation.target.getAttribute('active') === 'true'
+
+        if (active)
+          alterSize({
+            elements: [mutation.target],
+            callback: () => {
+              mutation.target.interactiveElement.setAttribute('active', active)
+            }
+          })
+        else {
+          mutation.target.interactiveElement.removeAttribute('active')
+        }
+      }
+    })
 
     return () => mutationObserverRef.current.disconnect()
-  }, [])
+  }, [layoutElement])
 
   useEffect(() => {
-    if (!layoutRef.current) return
+    if (!layoutElement) return
 
     window.addEventListener('resize', handleWindowResize)
 
     return () => window.removeEventListener('resize', handleWindowResize)
-  }, [layoutRef, handleWindowResize])
+  }, [layoutElement, handleWindowResize])
 
   const elements = getElements()
 
   useEffect(() => {
     setTimeout(() => {
-      if (!layoutRef.current) return
+      if (!layoutElement) return
 
       const newElements = Array.from(elements).filter(
         (element) => !element.interactiveElement
@@ -171,7 +169,7 @@ export default function useInteractiveLayout(layoutRef) {
         const parent =
           newElements.find(
             (newElement) => newElement.contains(element) && newElement !== element
-          )?.interactiveElement ?? layoutRef.current
+          )?.interactiveElement ?? layoutElement
         parent.appendChild(interactiveElement)
 
         if (interactiveElement.className?.endsWith('active'))
@@ -182,5 +180,5 @@ export default function useInteractiveLayout(layoutRef) {
 
       refreshLayoutElements({ elements: newElements })
     }, 200)
-  }, [layoutRef, elements, refreshLayoutElements])
+  }, [layoutElement, elements, refreshLayoutElements])
 }
