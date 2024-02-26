@@ -23,37 +23,16 @@ body {
   font-family: var(--body-font);
 
   background-color: var(--background-color);
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       35vw 25vh at 32.5% min(23rem, calc(50vh)),
       var(--dimmer-accent-color) 0,
       transparent 85%
     ),
     radial-gradient(
-        25vw 18vh at 70% min(28rem, calc(50vh)),
-        var(--dimmer-secondary-accent-color) 0,
-        transparent 85%
-      )
-      /* radial-gradient(
-      30vw 40rem at 15vw 100rem,
-      var(--dimmest-accent-color) 0,
+      25vw 18vh at 70% min(28rem, calc(50vh)),
+      var(--dimmer-secondary-accent-color) 0,
       transparent 85%
-    ),
-    radial-gradient(
-      30vw 40rem at 75vw 150rem,
-      var(--dimmest-secondary-accent-color) 0,
-      transparent 85%
-    ),
-    radial-gradient(
-      30vw 40rem at 25vw 200rem,
-      var(--dimmest-accent-color) 0,
-      transparent 85%
-    ),
-    radial-gradient(
-      30vw 40rem at 85vw 250rem,
-      var(--dimmest-secondary-accent-color) 0,
-      transparent 85%
-    ) */;
+    );
 
   transition: background-color 0.5s;
 
@@ -275,6 +254,10 @@ strong {
   border-radius: 1.5rem;
 
   transition: background-color 0.5s;
+}
+
+.interactive-text {
+  white-space: nowrap;
 }
 
 .scale-animation {

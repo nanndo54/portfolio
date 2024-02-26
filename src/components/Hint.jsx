@@ -2,7 +2,7 @@
 
 import styles from '@/styles/Hint.module.css'
 
-import clsx from 'clsx/lite'
+import clsx from 'clsx'
 import { useState } from 'react'
 
 const CLICK_TIMEOUT = 1200
@@ -12,6 +12,7 @@ export default function Hint({
   position = 'top',
   label,
   clickLabel,
+  hideOnClick = false,
   showOnClick = false,
   children
 }) {
@@ -23,7 +24,7 @@ export default function Hint({
     'hint--no-shadow hint--rounded hint--bounce',
     `hint--${position}`,
     clicked && 'hint--always',
-    showOnClick && !clicked && styles.hide
+    (showOnClick && !clicked) || (hideOnClick && clicked && styles.hide)
   )
 
   const handleClick = () => {
@@ -40,7 +41,7 @@ export default function Hint({
     <span
       className={className}
       aria-label={hint}
-      onClick={clickLabel || showOnClick ? handleClick : undefined}
+      onClick={clickLabel || hideOnClick || showOnClick ? handleClick : undefined}
     >
       {children}
     </span>

@@ -1,5 +1,9 @@
+import AboutMeSection from '@/sections/AboutMeSection'
+import ContactSection from '@/sections/ContactSection'
 import LandingSection from '@/sections/LandingSection'
-import dynamic from 'next/dynamic'
+import ProjectsSection from '@/sections/ProjectsSection'
+import QuoteSection from '@/sections/QuoteSection'
+import SkillsSection from '@/sections/SkillsSection'
 
 const sections = [
   {
@@ -9,23 +13,23 @@ const sections = [
   },
   {
     id: 'projects',
-    Tag: dynamic(() => import('@/sections/ProjectsSection'))
+    Tag: ProjectsSection
   },
   {
     id: 'skills',
-    Tag: dynamic(() => import('@/sections/SkillsSection'))
+    Tag: SkillsSection
   },
   {
     id: 'about-me',
-    Tag: dynamic(() => import('@/sections/AboutMeSection'))
+    Tag: AboutMeSection
   },
   {
     id: 'contact',
-    Tag: dynamic(() => import('@/sections/ContactSection'))
+    Tag: ContactSection
   },
   {
     id: 'quote',
-    Tag: dynamic(() => import('@/sections/QuoteSection')),
+    Tag: QuoteSection,
     hide: true,
     ignore: true
   }

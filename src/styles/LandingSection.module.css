@@ -40,7 +40,7 @@ header.base {
 
   transform: translateY(1.5rem);
   opacity: 0;
-  animation: appear-cta-buttons 0.5s 0.2s ease-in-out forwards;
+  animation: appear-cta-buttons 0.4s ease-in-out forwards;
 }
 
 .buttons > * {

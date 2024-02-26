@@ -1,8 +1,3 @@
-.base,
-.base * {
-  /* border: 1px solid red !important; */
-}
-
 .base:has(.skills > :only-child) {
   width: min(20rem, 100%);
   padding: 2.5rem;

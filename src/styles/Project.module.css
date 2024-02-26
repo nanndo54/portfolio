@@ -1,6 +1,5 @@
 .base {
   width: 100%;
-  /* overflow: hidden; */
 
   display: flex;
   flex-direction: column;
