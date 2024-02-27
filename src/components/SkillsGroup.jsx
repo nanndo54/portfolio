@@ -10,9 +10,8 @@ export default function SkillsGroup({ name, children }) {
   const timeoutRef = useRef(null)
 
   const handleMouseEnter = () => {
-    if (ref.current.getAttribute('active') === 'true') return
-
     clearTimeout(timeoutRef.current)
+    if (ref.current.getAttribute('active') === 'true') return
 
     const skillsGroupElements = document.getElementsByClassName(styles.base)
     for (const skillGroupElement of skillsGroupElements)

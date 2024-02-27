@@ -59,7 +59,7 @@ body:hover .base {
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0 -0.5rem 0.5rem var(--secondary-accent-color)) !important;
+  filter: drop-shadow(0 -0.5rem 1.5rem var(--secondary-accent-color)) !important;
 }
 
 .base :global(.interactive-button-secondary) {

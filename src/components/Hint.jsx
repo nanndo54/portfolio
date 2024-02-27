@@ -24,7 +24,7 @@ export default function Hint({
     'hint--no-shadow hint--rounded hint--bounce',
     `hint--${position}`,
     clicked && 'hint--always',
-    (showOnClick && !clicked) || (hideOnClick && clicked && styles.hide)
+    ((showOnClick && !clicked) || (hideOnClick && clicked)) && styles.hide
   )
 
   const handleClick = () => {

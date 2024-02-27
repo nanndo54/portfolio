@@ -6,8 +6,6 @@
 .border {
   padding: 0.75rem;
   border-radius: 1.5rem;
-
-  transition: border-color 0.5s;
 }
 
 .border .content {

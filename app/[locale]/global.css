@@ -296,4 +296,5 @@ body ::-webkit-scrollbar {
 ::selection {
   color: var(--background-color);
   background-color: var(--foreground-color);
+  -webkit-text-fill-color: var(--background-color);
 }
