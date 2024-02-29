@@ -15,6 +15,9 @@ export async function generateMetadata({ params: { locale } }) {
     languages[locale] = `https://nanndo54.dev/${locale}`
   }
 
+  const image = (await import(`i18n/locales/${locale}/splash.jpg`)).default
+  const { src: url, width, height } = image
+
   return {
     description,
     metadataBase: `https://nanndo54.dev/${locale}`,
@@ -26,10 +29,10 @@ export async function generateMetadata({ params: { locale } }) {
       type: 'website',
       locale,
       images: {
-        url: `/splash/${locale}.jpg`,
+        url,
+        height,
+        width,
         type: 'image/jpeg',
-        width: 1200,
-        height: 628,
         alt: 'nanndo54.dev'
       }
     }
