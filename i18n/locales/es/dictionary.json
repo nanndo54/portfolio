@@ -8,7 +8,6 @@
     "status": "(Buscando empleo)",
     "emailButton": "Copiar mi correo",
     "cvButton": "Descarga mi CV!",
-    "cv": "cv/es.pdf",
     "avatar": {
       "src": "landing/profile-photo.png",
       "alt": "Mi foto"

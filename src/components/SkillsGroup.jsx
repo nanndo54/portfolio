@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/styles/SkillsGroup.module.css'
-import clsx from 'clsx'
+import clsx from 'clsx/lite'
 
 import { useRef } from 'react'
 

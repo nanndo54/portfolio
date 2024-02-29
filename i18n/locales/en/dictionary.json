@@ -8,7 +8,6 @@
     "status": "(Looking for a job)",
     "emailButton": "Copy my email",
     "cvButton": "Download my CV",
-    "cv": "cv/en.pdf",
     "avatar": {
       "src": "landing/profile-photo.png",
       "alt": "My photo"

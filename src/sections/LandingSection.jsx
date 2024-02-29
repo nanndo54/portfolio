@@ -8,14 +8,15 @@ import Link from '@/components/Link'
 import RichText from '@/components/RichText'
 import Section from '@/components/Section'
 import { downloadIcon } from '@/constants/icons'
-import clsx from 'clsx'
-import getDictionary from 'i18n/server'
+import clsx from 'clsx/lite'
+import getDictionary, { getCurrentLocale } from 'i18n/server'
 
 export default async function LandingSection({ id }) {
+  const locale = getCurrentLocale()
   const dictionary = await getDictionary()
 
   const { landing, aria } = dictionary
-  const { name, presentation, cv, cvButton, avatar } = landing
+  const { name, presentation, cvButton, avatar } = landing
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -27,14 +28,7 @@ export default async function LandingSection({ id }) {
         <div className={styles.buttons}>
           <EmailButton />
           <Hint position='bottom' label={aria.downloaded} showOnClick>
-            <Link
-              asButton
-              variant='primary'
-              href={cv}
-              download={`${name} CV.pdf`}
-              isExternal
-              decoration={false}
-            >
+            <Link asButton variant='primary' href={`/${locale}/cv`} decoration={false}>
               {cvButton}
               <Icon src={downloadIcon} backgroundColor />
             </Link>
