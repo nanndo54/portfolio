@@ -1,5 +1,4 @@
-<?xml version="1.0" ?>
-<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 60 60">
   <rect fill="none" height="60" rx="10" width="60" />
   <rect fill="#f1f3f4" height="30" rx="4" width="24" x="8" y="8" />
   <path

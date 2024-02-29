@@ -12,7 +12,7 @@ export default async function NavbarButtons() {
     <div className={styles.base}>
       <Hint position='bottom-left' label={aria.toggleLocale} hideOnClick>
         <Link
-          className={`${styles.language} scale-animation`}
+          className={styles.language}
           href={locale === 'en' ? '/es' : '/en'}
           scroll={false}
           decoration={false}

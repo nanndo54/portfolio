@@ -25,7 +25,6 @@ export default async function Skill({
         hint={name}
         foregroundColor={contrast}
         border
-        scaleAnimation
       />
     </OpenShowcase>
   )

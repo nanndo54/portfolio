@@ -12,7 +12,6 @@ export default function ThemeButton() {
   return (
     <Hint position='bottom-left' label={aria.toggleTheme} hideOnClick>
       <DarkModeSwitch
-        className='scale-animation'
         checked={theme === 'dark'}
         onChange={toggleTheme}
         moonColor='var(--foreground-color)'

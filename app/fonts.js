@@ -1,4 +1,4 @@
-import { Inter, Poppins } from 'next/font/google'
+import { Kanit, Poppins } from 'next/font/google'
 
 export const titleFont = Poppins({
   display: 'swap',
@@ -11,15 +11,15 @@ export const titleFont = Poppins({
 export const subTitleFont = Poppins({
   display: 'swap',
   style: 'italic',
-  weight: ['500', '600'],
+  weight: ['600'],
   subsets: ['latin'],
   variable: '--subtitle-font'
 })
 
-export const bodyFont = Inter({
+export const bodyFont = Kanit({
   display: 'swap',
-  style: 'normal',
-  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  weight: ['300', '500'],
   subsets: ['latin'],
   variable: '--body-font'
 })

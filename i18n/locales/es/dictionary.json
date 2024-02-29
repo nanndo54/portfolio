@@ -254,7 +254,7 @@
         ]
       },
       {
-        "name": "Database",
+        "name": "Bases de Datos",
         "skills": [
           {
             "name": "MongoDB",
@@ -284,7 +284,7 @@
         ]
       },
       {
-        "name": "Tools",
+        "name": "Herramientas",
         "skills": [
           {
             "name": "Docker",

@@ -6,7 +6,7 @@ export default async function Footer() {
   return (
     <footer className={styles.base}>
       Source:{' '}
-      <Link href='https://github.com/nanndo54' isExternal>
+      <Link href='https://github.com/nanndo54/portfolio' isExternal>
         GitHub
       </Link>
     </footer>

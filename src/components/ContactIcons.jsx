@@ -13,7 +13,6 @@ export default async function ContactIcons({ links, tabIndex }) {
           src={icon}
           iconProps={{
             border: true,
-            scaleAnimation: true,
             priority: true
           }}
           title={name}

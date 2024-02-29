@@ -100,8 +100,8 @@
   filter: drop-shadow(0 0 0.4rem var(--dark-color));
 }
 
-.canvas.icon figure img {
-  width: 100%;
+.canvas.icon img {
+  /* width: 100%; */
 }
 
 .base footer {

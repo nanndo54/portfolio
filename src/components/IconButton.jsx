@@ -18,7 +18,7 @@ export default function IconButton({
 
   return (
     <Tag className={clsx(className, styles.base)} {...props}>
-      <Icon src={src} scaleAnimation {...iconProps} />
+      <Icon src={src} {...iconProps} />
     </Tag>
   )
 }

@@ -14,7 +14,6 @@ export default function Icon({
   border = false,
   interactive = false,
   hint,
-  scaleAnimation = false,
   src,
   alt,
   foregroundColor = false,
@@ -25,13 +24,7 @@ export default function Icon({
 }) {
   const SvgIcon = useMemo(() => dynamic(() => import(`/public/icons/${src}`)), [src])
 
-  const iconElement = (
-    <SvgIcon
-      className={clsx(styles.icon, scaleAnimation && 'scale-animation')}
-      title={alt}
-      {...props}
-    />
-  )
+  const iconElement = <SvgIcon className={styles.icon} title={alt} {...props} />
 
   return (
     <figure
