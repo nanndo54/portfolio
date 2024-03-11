@@ -16,7 +16,7 @@ export default async function QuoteSection({ id }) {
         <RichText>{text}</RichText>
         <sup>”</sup>
       </p>
-      <span className={clsx(styles.author, 'interactive-text')}>— {author}</span>
+      <p className={clsx(styles.author, 'interactive-text')}>— {author}</p>
     </Section>
   )
 }

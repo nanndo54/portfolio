@@ -28,7 +28,7 @@ body:hover .base {
 @media (pointer: coarse) {
   .base {
     opacity: 1;
-    mask: radial-gradient(100vw 55vh at var(--x) var(--y), black, transparent);
+    mask: radial-gradient(150vw 40vh at 50% var(--y), black 20%, transparent);
   }
 }
 @media not (pointer: coarse) {
