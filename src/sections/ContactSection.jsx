@@ -8,8 +8,6 @@ export default async function ContactSection({ id }) {
   const { title } = dictionary
 
   return (
-    <Section className={styles.base} id={id} background={false}>
-      <h2 className='interactive-text'>{title}</h2>
-    </Section>
+    <Section className={styles.base} id={id} title={title} background={false}></Section>
   )
 }

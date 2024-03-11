@@ -3,11 +3,11 @@
   "landing": {
     "title": "Home",
     "name": "Pablo Cabrera",
-    "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in web technologies and design.",
+    "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in <u>web technologies</u> and <u>design</u>.",
     "email": "nanndo54@outlook.com",
     "status": "(Looking for a job)",
     "emailButton": "Copy my email",
-    "cvButton": "Download my CV",
+    "cvButton": "Download my CV!",
     "avatar": {
       "src": "landing/profile-photo.png",
       "alt": "My photo"
@@ -320,35 +320,37 @@
   },
   "about-me": {
     "title": "About me",
-    "text": "My name is Pablo Cabrera. I really like software development, good practices and clean code. I'm a big fan of sports, video games of many genres and the current affairs of the world of technology.",
     "content": [
       {
-        "text": "I live in the capital of Guatemala 🇬🇹, a place of volcanoes, great weather and nice people. Of course, I'm willing to work with international teams via remote work.",
+        "text": "My name is Pablo but my friends call me <strong>Nando</strong>. I really like software development. Since I was <u>6 years old</u> I have shown interest in the world of technology, I started programming in Pascal at <u>15 years old</u>, and now with <strong>23 years</strong> I have developed innovative products aimed at recognized companies in my country."
+      },
+      {
+        "text": "I am finishing a degree in <u>Computer Science and Systems Engineering</u> at the <strong>University of San Carlos of Guatemala</strong>, thanks to which I have polished my skills in software development. I am a firm believer that you have learned well when you are able to teach others, and I have had the opportunity to teach being a <u>teaching assistant</u> at the university.",
         "images": [
           {
-            "src": "about-me/guatemala/img1.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
+            "src": "about-me/usac/img1.jpg",
+            "alt": "\"Universidad de San Carlos de Guatemala\", Central Campus"
           },
           {
-            "src": "about-me/guatemala/img2.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
-          },
-          {
-            "src": "about-me/guatemala/img3.jpg",
-            "alt": "Guatemala, Lago de Atitlán"
+            "src": "about-me/usac/img2.jpg",
+            "alt": "\"Universidad de San Carlos de Guatemala\", Faculty of Engineering"
           }
         ]
       },
       {
-        "text": "I'm studying a degree in Science and Systems Engineering at \"Universidad de San Carlos de Guatemala\", thanks to which I developed great skills in software development and collaborative work.",
+        "text": "I am from <strong>Guatemala City</strong>, a place of volcanoes, great climate and charming people. Among my passions are science fiction movies, video games of many genres and keeping up to date with the world of technology.",
         "images": [
           {
-            "src": "about-me/usac/img1.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
+            "src": "about-me/guatemala/img1.jpg",
+            "alt": "Guatemala, Santa Catalina Arch"
           },
           {
-            "src": "about-me/usac/img2.jpg",
-            "alt": "USAC, Facultad de Ingeniería"
+            "src": "about-me/guatemala/img2.jpg",
+            "alt": "Guatemala, Guatemala City"
+          },
+          {
+            "src": "about-me/guatemala/img3.jpg",
+            "alt": "Guatemala, Lake Atitlan"
           }
         ]
       }

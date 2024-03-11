@@ -4,7 +4,7 @@ import path from 'path'
 export async function GET(_, { params }) {
   const { locale } = params
 
-  const filePath = path.resolve('', `i18n/locales/${locale}/cv.pdf`)
+  const filePath = path.resolve(`i18n/locales/${locale}`, 'cv.pdf')
   const file = await fs.readFile(filePath)
 
   return new Response(file, {

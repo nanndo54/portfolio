@@ -221,6 +221,12 @@ strong {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+u {
+  text-decoration: 0.125rem underline var(--secondary-accent-color);
+  /* white-space: nowrap; */
 }
 
 .interactive-border,

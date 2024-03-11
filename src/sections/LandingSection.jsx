@@ -27,7 +27,7 @@ export default async function LandingSection({ id }) {
         </RichText>
         <div className={styles.buttons}>
           <EmailButton />
-          <Hint position='bottom' label={aria.downloaded} showOnClick>
+          <Hint position='bottom' label={<div>{aria.downloaded}</div>} showOnClick>
             <Link asButton variant='primary' href={`/${locale}/cv`} decoration={false}>
               {cvButton}
               <Icon src={downloadIcon} backgroundColor />

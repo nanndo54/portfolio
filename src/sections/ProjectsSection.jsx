@@ -39,8 +39,7 @@ export default async function ProjectsSection({ id }) {
     .sort((a, b) => b.year - a.year)
 
   return (
-    <Section id={id} className={styles.base}>
-      <h2 className='interactive-text'>{title}</h2>
+    <Section id={id} title={title} className={styles.base}>
       <div className={styles.timeline}>
         <Icon src={arrowIcon} foregroundColor />
       </div>

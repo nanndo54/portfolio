@@ -6,6 +6,7 @@ export default async function Section({
   as: Tag = 'section',
   className,
   id,
+  title,
   children
 }) {
   return (
@@ -13,6 +14,7 @@ export default async function Section({
       id={id}
       className={clsx(className, styles.base, background && styles.background)}
     >
+      {title && <h2 className='interactive-text'>{title}</h2>}
       {children}
     </Tag>
   )
