@@ -5,6 +5,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 const interactiveElementTypes = [
   {
+    className: 'interactive-aura',
+    clone: true
+  },
+  {
     tag: 'strong',
     clone: true,
     includeChildren: true
@@ -14,10 +18,6 @@ const interactiveElementTypes = [
   },
   {
     className: 'interactive-border-active'
-  },
-  {
-    className: 'interactive-aura',
-    clone: true
   },
   {
     className: 'interactive-text',
@@ -103,7 +103,21 @@ export default function useInteractiveLayout(layoutElement) {
   const handleWindowResize = useCallback(() => {
     setWindowWidth(window.innerWidth)
 
-    if (window.innerWidth === windowWidth) return
+    const testElement = document.querySelector(
+      `main .${interactiveElementTypes[0].className}`
+    )
+
+    if (testElement != null) {
+      const viewportOffset = testElement.getBoundingClientRect()
+      const offsetTop = document.documentElement.scrollTop + viewportOffset.top
+      const isSameHeight =
+        Math.abs(
+          Number(testElement.interactiveElement.style.top.slice(0, -2)) - offsetTop
+        ) < 1
+
+      if (window.innerWidth === windowWidth && isSameHeight) return
+    }
+
     refreshLayoutElements({})
   }, [windowWidth, refreshLayoutElements])
 
