@@ -8,7 +8,7 @@ import getDictionary, { getStaticParams } from 'i18n/server'
 import { setStaticParamsLocale } from 'next-international/server'
 
 export async function generateMetadata({ params: { locale } }) {
-  const { description } = await getDictionary()
+  const { title, description } = await getDictionary('meta')
 
   const languages = {}
   for (const locale of locales) {
@@ -19,13 +19,14 @@ export async function generateMetadata({ params: { locale } }) {
   const { src: url, width, height } = image
 
   return {
+    title,
     description,
     metadataBase: `https://nanndo54.dev/${locale}`,
     alternates: {
       languages
     },
     openGraph: {
-      siteName: 'Portfolio | nanndo54',
+      siteName: title,
       type: 'website',
       locale,
       images: {
@@ -35,6 +36,9 @@ export async function generateMetadata({ params: { locale } }) {
         type: 'image/jpeg',
         alt: 'nanndo54.dev'
       }
+    },
+    appleWebApp: {
+      title
     }
   }
 }

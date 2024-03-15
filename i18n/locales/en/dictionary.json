@@ -1,5 +1,4 @@
 {
-  "description": "Hi! I'm Pablo Cabrera (nanndo54), Full-Stack Web Developer at your dispose.",
   "landing": {
     "title": "Home",
     "name": "Pablo Cabrera",
@@ -325,20 +324,20 @@
         "text": "My name is Pablo but my friends call me <strong>Nando</strong>. I really like software development. Since I was <u>6 years old</u> I have shown interest in the world of technology, I started programming in Pascal at <u>15 years old</u>, and now with <strong>23 years</strong> I have developed innovative products aimed at recognized companies in my country."
       },
       {
-        "text": "I am finishing a degree in <u>Computer Science and Systems Engineering</u> at the <strong>University of San Carlos of Guatemala</strong>, thanks to which I have polished my skills in software development. I am a firm believer that you have learned well when you are able to teach others, and I have had the opportunity to teach being a <u>teaching assistant</u> at the university.",
+        "text": "I am finishing a degree in <strong>Computer Science and Systems</strong> at the <u>University of San Carlos of Guatemala</u>, thanks to which I have polished my skills in software development. I am a firm believer that you have learned well when you are able to teach others, and I have had the opportunity to teach being a <u>teaching assistant</u> at the university.",
         "images": [
           {
             "src": "about-me/usac/img1.jpg",
-            "alt": "\"Universidad de San Carlos de Guatemala\", Central Campus"
+            "alt": "University of San Carlos of Guatemala, Central Campus"
           },
           {
             "src": "about-me/usac/img2.jpg",
-            "alt": "\"Universidad de San Carlos de Guatemala\", Faculty of Engineering"
+            "alt": "University of San Carlos of Guatemala, Faculty of Engineering"
           }
         ]
       },
       {
-        "text": "I am from <strong>Guatemala City</strong>, a place of volcanoes, great climate and charming people. Among my passions are science fiction movies, video games of many genres and keeping up to date with the world of technology.",
+        "text": "I am from <strong>Guatemala City</strong>, place of volcanoes, great climate and charming people. Among my passions are science fiction movies, video games of many genres and keeping up to date with the world of technology.",
         "images": [
           {
             "src": "about-me/guatemala/img1.jpg",
@@ -376,5 +375,9 @@
     "toggleTheme": "Toggle dark theme",
     "zoomIn": "Zoom in",
     "zoomOut": "Zoom out"
+  },
+  "meta": {
+    "title": "Pablo Cabrera's Portfolio",
+    "description": "Hi! I'm Pablo Cabrera (nanndo54), a Full-Stack Web Developer at your disposal. Let's get in touch! 🚀"
   }
 }
