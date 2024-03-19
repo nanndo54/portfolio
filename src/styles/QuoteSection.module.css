@@ -21,7 +21,7 @@
   vertical-align: super;
   line-height: 0;
 
-  padding: 0 0.5rem;
+  padding-inline: 0 0.25rem;
   position: relative;
   top: 1.5rem;
 }
@@ -40,9 +40,5 @@
 
   .base p {
     font-size: 1.375rem;
-  }
-
-  .base .author {
-    font-size: 1.25rem;
   }
 }

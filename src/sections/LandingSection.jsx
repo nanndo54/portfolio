@@ -12,7 +12,7 @@ import clsx from 'clsx/lite'
 import getDictionary, { getCurrentLocale } from 'i18n/server'
 
 export default async function LandingSection({ id }) {
-  const locale = getCurrentLocale()
+  const locale = await getCurrentLocale()
   const dictionary = await getDictionary()
 
   const { landing, aria } = dictionary

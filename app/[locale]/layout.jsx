@@ -43,8 +43,8 @@ export async function generateMetadata({ params: { locale } }) {
   }
 }
 
-export function generateStaticParams() {
-  return getStaticParams()
+export async function generateStaticParams() {
+  return await getStaticParams()
 }
 
 export default async function LocaleLayout({ children, params: { locale } }) {

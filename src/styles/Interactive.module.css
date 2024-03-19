@@ -31,25 +31,8 @@ body:hover .base {
     mask: radial-gradient(150vw 40vh at 50% var(--y), black 20%, transparent);
   }
 }
-@media not (pointer: coarse) {
-  .base :global(.interactive-border-active) {
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out;
-  }
 
-  .base :global(.interactive-border-active[active='true']) {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 800px) {
-  .base :global(.interactive-border-active) {
-    opacity: 0;
-  }
-}
-
-.base :global(.interactive-border),
-.base :global(.interactive-border-active) {
+.base :global(.interactive-border) {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border: 0.15rem solid var(--secondary-accent-color);

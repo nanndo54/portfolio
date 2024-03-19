@@ -1,4 +1,4 @@
-'use client'
+import 'client-only'
 
 import { dictionaries } from 'i18n/config'
 import { createI18nClient } from 'next-international/client'

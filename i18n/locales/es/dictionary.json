@@ -40,8 +40,8 @@
       {
         "year": 2023,
         "icon": "projects/kolo-empresas-icon.svg",
-        "name": "Kolo Empresas",
-        "description": "ERP que permite al pequeño y mediano empresario manejar, crece e innovar su empresa de manera accesible y personalizable.",
+        "name": "KOLO Empresas",
+        "description": "<u>ERP</u> que permite al pequeño y mediano empresario <u>manejar, crece e innovar su empresa</u> de manera accesible y personalizable.",
         "website": "https://info.kolo-app.com",
         "skills": [
           "React",
@@ -56,7 +56,7 @@
         "images": [
           {
             "src": "projects/kolo-empresas/img1.jpg",
-            "alt": "Pantalla de bienvenida de KOLO"
+            "alt": "Banner de KOLO Empresas"
           }
         ]
       },
@@ -64,14 +64,14 @@
         "year": 2023,
         "icon": "projects/quiz-game-icon.svg",
         "name": "Quiz Game",
-        "description": "Juego de preguntas en línea. Tiene una interfaz cómoda y sencilla, ¡para proveer una divertida y educativa experiencia!",
+        "description": "<u>Juego de preguntas en línea</u>. Tiene una interfaz cómoda y sencilla, ¡para proveer una <u>divertida</u> y <u>educativa</u> experiencia!",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
         "skills": ["React", "Redux", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/quiz-game/img1.jpg",
-            "alt": "Pantalla de bienvenida de Quiz Game"
+            "alt": "Banner de Quiz Game"
           },
           {
             "src": "projects/quiz-game/img2.jpg",
@@ -99,14 +99,14 @@
         "year": 2022,
         "icon": "projects/mini-translator-icon.svg",
         "name": "Mini Translator",
-        "description": "Traductor minimalista en tiempo real. Facilita la traducción entre más de 100 lenguajes, así como el dictado del texto.",
+        "description": "<u>Traductor minimalista</u> en tiempo real. Facilita la traducción entre <u>más de 100 lenguajes</u>, así como el dictado del texto.",
         "website": "https://translator.nanndo54.dev/",
         "code": "https://github.com/nanndo54/mini-translator",
         "skills": ["JavaScript", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/mini-translator/img1.jpg",
-            "alt": "Pantalla de bienvenida de Mini Translator"
+            "alt": "Banner de Mini Translator"
           },
           {
             "src": "projects/mini-translator/img2.jpg",
@@ -126,14 +126,14 @@
         "year": 2022,
         "icon": "projects/jolc-icon.svg",
         "name": "JOLC",
-        "description": "Intérprete de JOLC, un lenguaje de programación derivado de Julia, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
+        "description": "<u>Intérprete de JOLC</u>, un lenguaje de programación derivado de <u>Julia</u>, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
         "website": "https://jolc.nanndo54.dev/",
         "code": "https://github.com/nanndo54/jolc",
         "skills": ["React", "Redux", "Python", "HTML5", "CSS3"],
         "images": [
           {
             "src": "projects/jolc/img1.jpg",
-            "alt": "Pantalla de bienvenida de JOLC"
+            "alt": "Banner de JOLC"
           },
           {
             "src": "projects/jolc/img2.jpg",
@@ -337,7 +337,7 @@
         ]
       },
       {
-        "text": "Soy de la <strong>Ciudad de Guatemala</strong>, lugar de volcanes, gran clima y gente encantadora. Entre mis pasiones se encuentran las películas de ciencia ficción, los videojuegos de muchos géneros y mantenerme al día de la actualidad del mundo de la tecnología.",
+        "text": "Soy de la <strong>Ciudad de Guatemala</strong>, lugar de volcanes, gran clima y <u>gente encantadora</u>. Entre mis pasiones se encuentran las películas de ciencia ficción, los videojuegos de muchos géneros y mantenerme al día de la actualidad del mundo de la tecnología.",
         "images": [
           {
             "src": "about-me/guatemala/img1.jpg",
@@ -359,8 +359,8 @@
     "title": "¡Contáctame!"
   },
   "quote": {
-    "author": "Carl Sagan",
-    "text": "Lo que nos hace grandes es el hecho de poder ver lo pequeños que somos"
+    "author": "Frank Herbert",
+    "text": "<u>El misterio de la vida</u> no es un problema a resolver, sino una <u>realidad a experimentar</u>"
   },
   "aria": {
     "close": "Cerrar",
@@ -377,7 +377,7 @@
     "zoomOut": "Alejar"
   },
   "meta": {
-    "title": "Portafolio de Pablo Cabrera",
+    "title": "Pablo Cabrera | Portafolio",
     "description": "¡Hola! Soy Pablo Cabrera (nanndo54), Desarrollador Web Full-Stack a tu servicio. ¡Pongámonos en contacto! 🚀"
   }
 }

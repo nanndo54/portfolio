@@ -1,4 +1,10 @@
 .base::before,
+.base::after,
+.base {
+  z-index: 100 !important;
+}
+
+.base::before,
 .base::after {
   position: absolute;
   overflow: hidden;

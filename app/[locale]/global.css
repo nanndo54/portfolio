@@ -38,11 +38,11 @@ body {
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
-  --accent: 210, 85%, 65%;
-  --secondary-accent: 245, 85%, 65%;
-  --dim: 0.8;
-  --dimmer: 0.5;
-  --dimmest: 0.1;
+  --accent: 210, 85%, 55%;
+  --secondary-accent: 245, 85%, 60%;
+  --dim: 0.7;
+  --dimmer: 0.425;
+  --dimmest: 0.2;
 
   --light-color: hsl(var(--light));
   --dim-light-color: hsl(var(--light), var(--dim));
@@ -76,8 +76,9 @@ body {
 }
 
 body[dark='true'] {
-  --accent: 210, 85%, 60%;
-  --secondary-accent: 245, 85%, 70%;
+  --accent: 210, 85%, 65%;
+  --secondary-accent: 245, 85%, 65%;
+  --dimmer: 0.3625;
 
   --foreground-color: var(--light-color);
   --dim-foreground-color: var(--dim-light-color);
@@ -92,8 +93,9 @@ body[dark='true'] {
 
 @media (prefers-color-scheme: dark) {
   body:not([dark]) {
-    --accent: 210, 85%, 60%;
-    --secondary-accent: 245, 85%, 70%;
+    --accent: 210, 85%, 65%;
+    --secondary-accent: 245, 85%, 65%;
+    --dimmer: 0.375;
 
     --foreground-color: var(--light-color);
     --dim-foreground-color: var(--dim-light-color);
@@ -228,7 +230,7 @@ u {
 .interactive-border,
 .interactive-border-active {
   position: relative;
-  border: 0.1875rem solid var(--dimmer-accent-color);
+  border: 0.1875rem solid var(--dim-accent-color);
   border-radius: 1.5rem;
   background-color: var(--dimmer-background-color);
   backdrop-filter: blur(1rem) saturate(1.1);

@@ -1,7 +1,7 @@
 'use client'
 
 import { debounce } from 'lib/debounce'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const interactiveElementTypes = [
   {
@@ -15,9 +15,6 @@ const interactiveElementTypes = [
   },
   {
     className: 'interactive-border'
-  },
-  {
-    className: 'interactive-border-active'
   },
   {
     className: 'interactive-text',
@@ -81,8 +78,6 @@ const alterSize = debounce(({ elements, callback }) => {
 }, 300)
 
 export default function useInteractiveLayout(layoutElement) {
-  const mutationObserverRef = useRef(null)
-
   const refreshLayoutElements = useCallback(
     ({ elements }) => {
       layoutElement.style.opacity = 0
@@ -100,50 +95,31 @@ export default function useInteractiveLayout(layoutElement) {
 
   const [windowWidth, setWindowWidth] = useState()
 
-  const handleWindowResize = useCallback(() => {
-    setWindowWidth(window.innerWidth)
+  const handleWindowResize = useCallback(
+    (event) => {
+      const newWindowWidth = event.target.innerWidth
+      console.log('🚀 | newWindowWidth:', newWindowWidth)
+      setWindowWidth(newWindowWidth)
 
-    const testElement = document.querySelector(
-      `main .${interactiveElementTypes[0].className}`
-    )
+      const testElement = document.querySelector(
+        `main .${interactiveElementTypes[0].className}`
+      )
 
-    if (testElement != null) {
-      const viewportOffset = testElement.getBoundingClientRect()
-      const offsetTop = document.documentElement.scrollTop + viewportOffset.top
-      const isSameHeight =
-        Math.abs(
-          Number(testElement.interactiveElement.style.top.slice(0, -2)) - offsetTop
-        ) < 1
+      if (testElement != null) {
+        const viewportOffset = testElement.getBoundingClientRect()
+        const offsetTop = document.documentElement.scrollTop + viewportOffset.top
+        const isSameHeight =
+          Math.abs(
+            Number(testElement.interactiveElement.style.top.slice(0, -2)) - offsetTop
+          ) < 1
 
-      if (window.innerWidth === windowWidth && isSameHeight) return
-    }
-
-    refreshLayoutElements({})
-  }, [windowWidth, refreshLayoutElements])
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth)
-    mutationObserverRef.current = new MutationObserver((mutations) => {
-      if (layoutElement.style.opacity === '0') return
-
-      for (const mutation of mutations) {
-        const active = mutation.target.getAttribute('active') === 'true'
-
-        if (active)
-          alterSize({
-            elements: [mutation.target],
-            callback: () => {
-              mutation.target.interactiveElement.setAttribute('active', active)
-            }
-          })
-        else {
-          mutation.target.interactiveElement.removeAttribute('active')
-        }
+        if (newWindowWidth === windowWidth && isSameHeight) return
       }
-    })
 
-    return () => mutationObserverRef.current.disconnect()
-  }, [layoutElement])
+      refreshLayoutElements({})
+    },
+    [windowWidth, refreshLayoutElements]
+  )
 
   useEffect(() => {
     if (!layoutElement) return
@@ -185,11 +161,6 @@ export default function useInteractiveLayout(layoutElement) {
             (newElement) => newElement.contains(element) && newElement !== element
           )?.interactiveElement ?? layoutElement
         parent.appendChild(interactiveElement)
-
-        if (interactiveElement.className?.endsWith('active'))
-          mutationObserverRef.current.observe(element, {
-            attributeFilter: ['active']
-          })
       }
 
       refreshLayoutElements({ elements: newElements })

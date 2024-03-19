@@ -4,6 +4,7 @@ import Icon from '@/components/Icon'
 import ImageCarrousel from '@/components/ImageCarrousel'
 
 import Link from '@/components/Link'
+import RichText from '@/components/RichText'
 import Skill from '@/components/Skill'
 import { codeIcon, websiteIcon } from '@/constants/icons'
 import clsx from 'clsx/lite'
@@ -28,7 +29,7 @@ export default async function Project({
           <Icon src={icon} alt={name} />
           <h4 className='interactive-text'>{name}</h4>
         </div>
-        <p>{description}</p>
+        <RichText as='p'>{description}</RichText>
         <div className={styles.skills}>
           {skills.map((skill) => (
             <Skill key={skill.name} {...skill} interactive />

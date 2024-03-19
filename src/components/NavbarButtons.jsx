@@ -6,7 +6,7 @@ import getDictionary, { getCurrentLocale } from 'i18n/server'
 
 export default async function NavbarButtons() {
   const { aria } = await getDictionary()
-  const locale = getCurrentLocale()
+  const locale = await getCurrentLocale()
 
   return (
     <div className={styles.base}>

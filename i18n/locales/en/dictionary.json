@@ -40,8 +40,8 @@
       {
         "year": 2023,
         "icon": "projects/kolo-empresas-icon.svg",
-        "name": "Kolo Empresas",
-        "description": "ERP that allows small and medium-sized entrepreneurs to manage, grow and innovate their company in an accessible and customizable way.",
+        "name": "KOLO Companies",
+        "description": "<u>ERP</u> that allows small and medium-sized entrepreneurs to <u>manage, grow and innovate their company</u> in an accessible and customizable way.",
         "website": "https://info.kolo-app.com",
         "skills": [
           "React",
@@ -56,7 +56,7 @@
         "images": [
           {
             "src": "projects/kolo-empresas/img1.jpg",
-            "alt": "KOLO Empresas splash screen"
+            "alt": "KOLO Companies banner"
           }
         ]
       },
@@ -64,14 +64,14 @@
         "year": 2023,
         "icon": "projects/quiz-game-icon.svg",
         "name": "Quiz Game",
-        "description": "Quiz game online. The GUI aims to be comfortable and simple, to provide knowledge and fun at the same time!",
+        "description": "<u>Quiz game online</u>. The GUI aims to be comfortable and simple, to provide <u>knowledge</u> and <u>fun</u> at the same time!",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
         "skills": ["React", "Redux", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/quiz-game/img1.jpg",
-            "alt": "Quiz Game splash screen"
+            "alt": "Quiz Game banner"
           },
           {
             "src": "projects/quiz-game/img2.jpg",
@@ -99,14 +99,14 @@
         "year": 2022,
         "icon": "projects/mini-translator-icon.svg",
         "name": "Mini Translator",
-        "description": "Real-time minimalistic translation tool. Mini Translator eases the translation between 100+ languages, as well as text spelling.",
+        "description": "<u>Real-time minimalistic translation tool</u>. Mini Translator eases the translation between <u>100+ languages</u>, as well as text spelling.",
         "website": "https://translator.nanndo54.dev/",
         "code": "https://github.com/nanndo54/mini-translator",
         "skills": ["JavaScript", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/mini-translator/img1.jpg",
-            "alt": "Mini Translator splash screen"
+            "alt": "Mini Translator banner"
           },
           {
             "src": "projects/mini-translator/img2.jpg",
@@ -126,14 +126,14 @@
         "year": 2022,
         "icon": "projects/jolc-icon.svg",
         "name": "JOLC",
-        "description": "Web interpreter for a programming language derived from Julia, named JOLC. Eases the debug of the language via AST, error and symbols reports.",
+        "description": "<u>Web interpreter</u> for a programming language derived from <u>Julia</u>, named <u>JOLC</u>. Eases the debug of the language via AST, error and symbols reports.",
         "website": "https://jolc.nanndo54.dev/",
         "code": "https://github.com/nanndo54/jolc",
         "skills": ["React", "Redux", "Python", "HTML5", "CSS3", "Vite.js"],
         "images": [
           {
             "src": "projects/jolc/img1.jpg",
-            "alt": "JOLC splash screen"
+            "alt": "JOLC banner"
           },
           {
             "src": "projects/jolc/img2.jpg",
@@ -359,8 +359,8 @@
     "title": "Contact me!"
   },
   "quote": {
-    "author": "Carl Sagan",
-    "text": "What makes us great is the fact that we can see how small we are"
+    "author": "Frank Herbert",
+    "text": "<u>The mystery of life</u> is not a problem to be solved, but a <u>reality to be experienced</u>"
   },
   "aria": {
     "close": "Close",
@@ -377,7 +377,7 @@
     "zoomOut": "Zoom out"
   },
   "meta": {
-    "title": "Pablo Cabrera's Portfolio",
+    "title": "Pablo Cabrera | Portfolio",
     "description": "Hi! I'm Pablo Cabrera (nanndo54), a Full-Stack Web Developer at your disposal. Let's get in touch! 🚀"
   }
 }
