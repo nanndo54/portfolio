@@ -98,7 +98,6 @@ export default function useInteractiveLayout(layoutElement) {
   const handleWindowResize = useCallback(
     (event) => {
       const newWindowWidth = event.target.innerWidth
-      console.log('🚀 | newWindowWidth:', newWindowWidth)
       setWindowWidth(newWindowWidth)
 
       const testElement = document.querySelector(

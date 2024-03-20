@@ -40,20 +40,22 @@ export default async function ProjectsSection({ id }) {
 
   return (
     <Section id={id} title={title} className={styles.base}>
-      <div className={styles.timeline}>
-        <Icon src={arrowIcon} foregroundColor />
-      </div>
-      <div className={styles.content}>
-        {projectsPerYear.map(({ year, projects }) => (
-          <div key={year}>
-            <h3>{year}</h3>
-            <div className={styles.projects}>
-              {projects.map((project, i) => (
-                <Project key={i} {...project} allSkills={allSkills} />
-              ))}
+      <div className={styles.test}>
+        <div className={styles.content}>
+          {projectsPerYear.map(({ year, projects }) => (
+            <div key={year}>
+              <h3>{year}</h3>
+              <div className={styles.projects}>
+                {projects.map((project, i) => (
+                  <Project key={i} {...project} allSkills={allSkills} />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className={styles.timeline}>
+          <Icon src={arrowIcon} foregroundColor />
+        </div>
       </div>
     </Section>
   )

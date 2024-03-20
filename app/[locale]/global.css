@@ -76,7 +76,7 @@ body {
 }
 
 body[dark='true'] {
-  --accent: 210, 85%, 65%;
+  --accent: 210, 85%, 60%;
   --secondary-accent: 245, 85%, 65%;
   --dimmer: 0.3625;
 
@@ -95,7 +95,7 @@ body[dark='true'] {
   body:not([dark]) {
     --accent: 210, 85%, 65%;
     --secondary-accent: 245, 85%, 65%;
-    --dimmer: 0.375;
+    --dimmer: 0.3625;
 
     --foreground-color: var(--light-color);
     --dim-foreground-color: var(--dim-light-color);
@@ -156,17 +156,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.375rem;
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.3125rem;
 }
 
 @media (max-width: 700px) {
   p,
   strong {
-    font-size: 1.075rem;
+    font-size: 1.125rem;
   }
 
   h2 {
@@ -183,7 +183,8 @@ h4 {
 }
 
 @media (max-width: 500px) {
-  p {
+  p,
+  strong {
     font-size: 1rem;
   }
 
