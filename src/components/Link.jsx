@@ -29,6 +29,7 @@ export default async function Link({
       className={clsx(
         className,
         asButton ? buttonStyles.base : styles.base,
+        asButton && 'no-select',
         classNameByVariant[variant],
         decoration && styles.decoration
       )}

@@ -9,23 +9,18 @@ const CLICK_TIMEOUT = 1200
 const CLICK_HINT_TIMEOUT = 1500
 
 export default function Hint({
+  className,
   position = 'top',
   label,
   clickLabel,
-  hideOnClick = false,
+  showAlways = false,
+  hideAlways = false,
   showOnClick = false,
+  hideOnClick = false,
   children
 }) {
   const [hint, setHint] = useState(label)
   const [clicked, setClicked] = useState(false)
-
-  const className = clsx(
-    styles.base,
-    'hint--no-shadow hint--rounded hint--bounce',
-    `hint--${position}`,
-    clicked && 'hint--always',
-    ((showOnClick && !clicked) || (hideOnClick && clicked)) && styles.hide
-  )
 
   const handleClick = () => {
     setClicked(true)
@@ -39,7 +34,18 @@ export default function Hint({
 
   return (
     <span
-      className={className}
+      className={clsx(
+        styles.base,
+        className,
+        'hint--no-shadow hint--rounded hint--bounce',
+        `hint--${position}`,
+        (clicked || showAlways) && 'hint--always',
+        (label == null ||
+          hideAlways ||
+          (showOnClick && !clicked) ||
+          (hideOnClick && clicked)) &&
+          styles.hide
+      )}
       aria-label={hint}
       onClick={clickLabel || hideOnClick || showOnClick ? handleClick : undefined}
     >

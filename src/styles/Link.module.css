@@ -1,3 +1,10 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .base.decoration {
   color: var(--accent-color);
   text-decoration: 0.175rem underline var(--accent-color);

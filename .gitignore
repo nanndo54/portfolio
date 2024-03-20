@@ -3,6 +3,7 @@ analyze
 .DS_Store
 *.local
 dist
+.env
 
 .next
 next-env.d.ts

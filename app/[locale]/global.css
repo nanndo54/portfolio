@@ -21,6 +21,7 @@ body {
 
   color: var(--foreground-color);
   font-family: var(--body-font);
+  font-weight: 300;
 
   background-color: var(--background-color);
   background-image: radial-gradient(
@@ -42,7 +43,7 @@ body {
   --secondary-accent: 245, 85%, 60%;
   --dim: 0.7;
   --dimmer: 0.425;
-  --dimmest: 0.2;
+  --dimmest: 0.15;
 
   --light-color: hsl(var(--light));
   --dim-light-color: hsl(var(--light), var(--dim));
@@ -156,7 +157,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.375rem;
+  font-size: 1.4375rem;
 }
 
 h4 {
@@ -174,7 +175,7 @@ h4 {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
   }
 
   h4 {
@@ -211,6 +212,23 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 0;
+  cursor: text;
+  outline: none;
+}
+
+b {
+  font-weight: 500;
+
+  transition: color 0.5s;
+}
+
 strong {
   font-weight: 500;
   background-image: linear-gradient(
@@ -225,27 +243,25 @@ strong {
 
 u {
   text-decoration: 0.125rem underline var(--secondary-accent-color);
-  /* white-space: nowrap; */
 }
 
-.interactive-border,
-.interactive-border-active {
+.interactive-border {
   position: relative;
   border: 0.1875rem solid var(--dim-accent-color);
   border-radius: 1.5rem;
   background-color: var(--dimmer-background-color);
   backdrop-filter: blur(1rem) saturate(1.1);
+  filter: brightness(1);
 
   transition:
-    filter 0.4s,
-    backdrop-filter 0.4s,
+    filter 0.5s,
+    backdrop-filter 0.5s,
     background-color 0.5s,
     border-color 0.5s;
 }
 
-.interactive-border:hover,
-.interactive-border-active:hover {
-  filter: brightness(1.07);
+.interactive-border:hover {
+  filter: brightness(1.2);
 }
 
 .interactive-button-secondary {
@@ -269,11 +285,11 @@ u {
   user-select: none;
 }
 
-body * {
+body :not(textarea) {
   scrollbar-width: none;
 }
 
-body ::-webkit-scrollbar {
+body :not(textarea)::-webkit-scrollbar {
   height: 0;
   width: 0;
 }

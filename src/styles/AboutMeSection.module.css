@@ -1,11 +1,15 @@
 .base::before {
   content: '';
   background-image: radial-gradient(
-    20rem at 65% 20rem,
-    var(--dimmer-secondary-accent-color) 0,
-    transparent 100%
-  );
-  overflow: visible;
+      18rem at 30% 18rem,
+      var(--dimmest-accent-color) 0,
+      transparent 100%
+    ),
+    radial-gradient(
+      15rem at 70% 25rem,
+      var(--dimmer-secondary-accent-color) 0,
+      transparent 100%
+    );
 
   width: 100%;
   height: 40rem;

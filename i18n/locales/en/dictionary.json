@@ -1,4 +1,24 @@
 {
+  "contacts": [
+    {
+      "name": "LinkedIn",
+      "icon": "landing/linkedin-icon.svg",
+      "url": "https://www.linkedin.com/in/nanndo54"
+    },
+    {
+      "name": "GitHub",
+      "icon": "landing/github-icon.svg",
+      "props": {
+        "foregroundColor": true
+      },
+      "url": "https://github.com/nanndo54"
+    },
+    {
+      "name": "Email",
+      "icon": "landing/email-icon.svg",
+      "url": "mailto:nanndo54@outlook.com"
+    }
+  ],
   "landing": {
     "title": "Home",
     "name": "Pablo Cabrera",
@@ -11,26 +31,7 @@
       "src": "landing/profile-photo.png",
       "alt": "My photo"
     },
-    "links": [
-      {
-        "name": "LinkedIn",
-        "icon": "landing/linkedin-icon.svg",
-        "url": "https://www.linkedin.com/in/nanndo54"
-      },
-      {
-        "name": "GitHub",
-        "icon": "landing/github-icon.svg",
-        "props": {
-          "foregroundColor": true
-        },
-        "url": "https://github.com/nanndo54"
-      },
-      {
-        "name": "Email",
-        "icon": "landing/email-icon.svg",
-        "url": "mailto:nanndo54@outlook.com"
-      }
-    ]
+    "otherOptions": "Or reach me at"
   },
   "projects": {
     "title": "Projects",
@@ -356,7 +357,26 @@
     ]
   },
   "contact": {
-    "title": "Contact me!"
+    "title": "Contact me!",
+    "contactText": "Feel free to reach me at",
+    "messageText": "Or send me a message",
+    "form": {
+      "emailLabel": "Your email",
+      "nameLabel": "Your name",
+      "nameDefault": "Not entered",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Let's get in touch!",
+      "subjectDefault": "Let's get in touch!",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Hey!",
+      "submitButton": "Send message",
+      "requiredLabel": "Required field",
+      "successMessage": "I'll be in touch as soon as possible",
+      "successTooltip": "Sent! ✅",
+      "error400Message": "Form validation failed. Please check your data and try again.",
+      "error500Message": "An error occurred while sending your message. Please try again later.",
+      "errorMessage": "Unexpected error. Please try again later."
+    }
   },
   "quote": {
     "author": "Frank Herbert",

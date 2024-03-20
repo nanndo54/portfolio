@@ -1,6 +1,7 @@
 import styles from '@/styles/LandingSection.module.css'
 
 import Avatar from '@/components/Avatar'
+import ContactIcons from '@/components/ContactIcons'
 import EmailButton from '@/components/EmailButton'
 import Hint from '@/components/Hint'
 import Icon from '@/components/Icon'
@@ -16,7 +17,7 @@ export default async function LandingSection({ id }) {
   const dictionary = await getDictionary()
 
   const { landing, aria } = dictionary
-  const { name, presentation, cvButton, avatar } = landing
+  const { name, presentation, cvButton, avatar, otherOptions } = landing
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -33,7 +34,10 @@ export default async function LandingSection({ id }) {
               <Icon src={downloadIcon} backgroundColor />
             </Link>
           </Hint>
-          {/* <ContactIcons links={links} className={styles.contact} /> */}
+        </div>
+        <div className={styles.otherOptions}>
+          <b>{otherOptions}</b>
+          <ContactIcons className={styles.contact} />
         </div>
       </div>
       <Avatar className={styles.avatar} photo={avatar} />

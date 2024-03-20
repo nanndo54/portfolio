@@ -40,8 +40,8 @@ export default async function ProjectsSection({ id }) {
 
   return (
     <Section id={id} title={title} className={styles.base}>
-      <div className={styles.test}>
-        <div className={styles.content}>
+      <div className={styles.content}>
+        <div className={styles.allProjects}>
           {projectsPerYear.map(({ year, projects }) => (
             <div key={year}>
               <h3>{year}</h3>

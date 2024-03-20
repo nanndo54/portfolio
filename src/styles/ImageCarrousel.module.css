@@ -65,7 +65,7 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 2.25rem;
+  width: 2rem;
 
   opacity: 0;
   filter: drop-shadow(0 0 0.15rem var(--dark-color));
@@ -76,7 +76,7 @@
 }
 
 .previousImage {
-  padding-left: 0.25rem;
+  padding-left: 0.5rem;
   left: 0;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .nextImage {
-  padding-right: 0.25rem;
+  padding-right: 0.5rem;
   right: 0;
 }
 

@@ -47,6 +47,26 @@ header.base {
   min-width: 13rem;
 }
 
+.otherOptions {
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  margin-right: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  transform: translateY(1rem);
+  opacity: 0;
+  animation: appear-cta-buttons 0.3s 0.2s ease-in-out forwards;
+}
+
+.contact > a {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
 @media (max-width: 800px) {
   header.base {
     flex-direction: column-reverse;
@@ -59,6 +79,10 @@ header.base {
 
   .info {
     gap: 1rem;
+  }
+
+  .otherOptions {
+    align-self: unset;
   }
 }
 @media (max-width: 450px) {

@@ -1,26 +1,28 @@
+import IconLink from '@/components/IconLink'
 import styles from '@/styles/ContactIcons.module.css'
+import clsx from 'clsx/lite'
 
-import IconButton from '@/components/IconButton'
-import Link from '@/components/Link'
+import getDictionary from 'i18n/server'
 
-export default async function ContactIcons({ links, tabIndex }) {
+export default async function ContactIcons({ className }) {
+  const contacts = await getDictionary('contacts')
+
   return (
-    <nav className={styles.base}>
-      {links.map(({ name, icon, url, props }) => (
-        <IconButton
+    <div className={clsx(styles.base, className)}>
+      {contacts.map(({ name, icon, url, props }) => (
+        <IconLink
           key={name}
-          as={Link}
           src={icon}
           iconProps={{
             border: true,
-            priority: true
+            hint: name,
+            hintPosition: 'bottom',
+            ...props
           }}
           title={name}
           href={url}
-          tabIndex={tabIndex}
-          {...props}
         />
       ))}
-    </nav>
+    </div>
   )
 }

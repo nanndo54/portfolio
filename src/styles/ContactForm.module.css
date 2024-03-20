@@ -1,0 +1,65 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.base header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.requiredLabel {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.requiredLabel::before {
+  content: '*';
+  font-size: 1.5rem;
+  color: var(--accent-color);
+
+  position: relative;
+  left: -0.125rem;
+  top: 0.375rem;
+}
+
+.base footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.base footer p {
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s;
+}
+
+.base footer.show p {
+  opacity: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.row_3_2 > :first-child {
+  flex: 3;
+}
+
+.row_3_2 > :last-child {
+  flex: 2;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+}

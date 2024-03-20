@@ -6,7 +6,6 @@
   width: min(17rem, 100%);
   height: fit-content;
   padding: 1.25rem;
-  border-radius: 2.5rem;
 
   display: flex;
   flex-direction: column;
@@ -76,17 +75,8 @@
     transform: none !important;
   }
 
-  .base:has(.skills > :only-child) {
+  /* .base:has(.skills > :only-child) {
     width: 50%;
     padding: 1rem;
-  }
-
-  .base h3 {
-    font-size: 1.5rem;
-  }
-
-  .skills {
-    grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
-    gap: 1rem;
-  }
+  }  */
 }

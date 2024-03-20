@@ -14,6 +14,7 @@ export default function Icon({
   border = false,
   interactive = false,
   hint,
+  hintPosition,
   src,
   alt,
   foregroundColor = false,
@@ -40,7 +41,13 @@ export default function Icon({
         lightColor && styles.lightColor
       )}
     >
-      {hint ? <Hint label={hint}>{iconElement}</Hint> : iconElement}
+      {hint ? (
+        <Hint label={hint} position={hintPosition}>
+          {iconElement}
+        </Hint>
+      ) : (
+        iconElement
+      )}
     </figure>
   )
 }

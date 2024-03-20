@@ -22,7 +22,7 @@
     color 0.5s;
 }
 
-.hide::before,
-.hide::after {
+.hide:not(:global(.hint--always))::before,
+.hide:not(:global(.hint--always))::after {
   opacity: 0 !important;
 }

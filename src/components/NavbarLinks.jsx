@@ -38,7 +38,11 @@ export default function NavbarLinks() {
         {links.map(({ id, children }) => (
           <Button
             key={id}
-            className={clsx(styles.link, currentSectionId === id && styles.current)}
+            className={clsx(
+              styles.link,
+              currentSectionId === id && styles.current,
+              'no-select'
+            )}
             onClick={() => {
               document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
             }}
@@ -64,7 +68,11 @@ export default function NavbarLinks() {
         {links.map(({ id, label }) => (
           <Button
             key={id}
-            className={clsx(styles.link, currentSectionId === id && styles.current)}
+            className={clsx(
+              styles.link,
+              currentSectionId === id && styles.current,
+              'no-select'
+            )}
             onClick={() =>
               document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
             }

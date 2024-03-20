@@ -3,9 +3,10 @@
 import styles from '@/styles/IconButton.module.css'
 
 import Icon from '@/components/Icon'
+import Link from '@/components/Link'
 import clsx from 'clsx/lite'
 
-export default function IconButton({
+export default function IconLink({
   className,
   title,
   onClick,
@@ -14,14 +15,15 @@ export default function IconButton({
   ...props
 }) {
   return (
-    <button
+    <Link
       className={clsx(className, styles.base)}
-      type='button'
       title={title}
       onClick={onClick}
+      isExternal
+      decoration={false}
       {...props}
     >
-      <Icon src={src} {...iconProps} />
-    </button>
+      <Icon src={src} interactive {...iconProps} />
+    </Link>
   )
 }

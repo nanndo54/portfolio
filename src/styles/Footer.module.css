@@ -4,4 +4,13 @@
 
   width: 100%;
   padding: 0.75rem 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.base figure {
+  height: 1.25rem;
+  width: 1.25rem;
 }
