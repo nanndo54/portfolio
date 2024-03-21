@@ -10,9 +10,9 @@
   height: 3rem;
   width: 3rem;
 
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(1rem);
-  animation: appear-contact-icon 0.5s 0.2s ease-in-out forwards;
+  animation: appear-contact-icon 0.5s 0.2s ease-in-out forwards; */
 }
 
 .base > *:nth-child(1) {

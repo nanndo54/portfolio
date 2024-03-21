@@ -249,9 +249,9 @@ u {
   position: relative;
   border: 0.1875rem solid var(--dim-accent-color);
   border-radius: 1.5rem;
-  background-color: var(--dimmer-background-color);
-  backdrop-filter: blur(1rem) saturate(1.1);
-  filter: brightness(1);
+  /* background-color: var(--dimmer-background-color); */
+  /* backdrop-filter: blur(1rem) saturate(1.1); */
+  /* filter: brightness(1); */
 
   transition:
     filter 0.5s,
@@ -261,7 +261,8 @@ u {
 }
 
 .interactive-border:hover {
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
+  background-color: var(--dimmer-background-color);
 }
 
 .interactive-button-secondary {

@@ -14,9 +14,7 @@
   margin-right: 0.75rem;
   border-right: 0.1875rem solid transparent;
 
-  transition:
-    color 0.25s,
-    border-color 0.25s;
+  transition: border-color 0.25s;
 }
 
 .base:not(:has(.input:placeholder-shown)) {
@@ -40,7 +38,6 @@
 
 .input::placeholder {
   color: var(--dim-foreground-color);
-  transition: color 0.5s;
 }
 
 .base:has(.input:invalid:not(:placeholder-shown):not(:focus)) {

@@ -18,7 +18,7 @@
   will-change: mask;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: 5;
 }
 
 body:hover .base {
@@ -35,26 +35,30 @@ body:hover .base {
 .base :global(.interactive-border) {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
-  border: 0.15rem solid var(--secondary-accent-color);
-  box-shadow: 0 0 0 0.05rem inset var(--dimmest-accent-color);
+  border-color: var(--secondary-accent-color);
+  box-shadow: 0 0 0 0.125rem inset var(--dimmer-accent-color);
   backdrop-filter: unset;
+  filter: unset;
+  inset: inherit;
 }
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0 -0.5rem 1.5rem var(--secondary-accent-color)) !important;
+  /* filter: drop-shadow(0 -0.5rem 1rem var(--secondary-accent-color)) !important; */
+  opacity: 0;
 }
 
 .base :global(.interactive-button-secondary) {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
-  border: 0.15rem solid var(--secondary-accent-color);
+  border-color: var(--secondary-accent-color);
+  box-shadow: 0 0 0 0.0625rem inset var(--dimmer-accent-color);
 
   color: var(--secondary-accent-color);
 }
 
 .base :global(.interactive-button-secondary) svg {
-  fill: var(--secondary-accent-color) !important;
+  fill: var(--dim-secondary-accent-color) !important;
 }
 
 .base :global(.interactive-text) {

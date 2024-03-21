@@ -1,5 +1,7 @@
 'use client'
 
+import styles from '@/styles/ThemeButton.module.css'
+
 import Hint from '@/components/Hint'
 import useAppStore from '@/state/store'
 import useDictionary from 'i18n/client'
@@ -10,7 +12,12 @@ export default function ThemeButton() {
   const { aria } = useDictionary()
 
   return (
-    <Hint position='bottom-left' label={aria.toggleTheme} hideOnClick>
+    <Hint
+      className={styles.base}
+      position='bottom-left'
+      label={aria.toggleTheme}
+      hideOnClick
+    >
       <DarkModeSwitch
         checked={theme === 'dark'}
         onChange={toggleTheme}

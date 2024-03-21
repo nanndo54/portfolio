@@ -32,7 +32,7 @@ export default async function Project({
         <RichText as='p'>{description}</RichText>
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <Skill key={skill.name} {...skill} interactive />
+            <Skill key={skill.name} {...skill} />
           ))}
         </div>
       </header>

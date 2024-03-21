@@ -78,7 +78,7 @@ export default function Showcase() {
         ref={ref}
       >
         <div className={styles.overlay} onClick={handleClose}>
-          <header>
+          <header onClick={(ev) => ev.stopPropagation()}>
             {!singleImage && (
               <span className={styles.imageIndex}>
                 {imageIndex + 1}/{images?.length}
@@ -90,6 +90,7 @@ export default function Showcase() {
               iconProps={{ lightColor: true }}
               title={aria.close}
               className={styles.closeButton}
+              onClick={handleClose}
             />
           </header>
           <div onClick={(ev) => ev.stopPropagation()}>

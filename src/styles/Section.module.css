@@ -17,7 +17,7 @@
     opacity 0.25s ease-out;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .base {
     width: 100%;
     padding: 5rem 1.5rem;

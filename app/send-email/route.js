@@ -1,18 +1,25 @@
-import { EMAIL_PATTERN } from '@/constants/patterns'
+import { EMAIL_MAX_LENGTH, EMAIL_PATTERN, NAME_MAX_LENGTH } from '@/constants/patterns'
 import { sendEmail } from 'lib/send-email'
 
 export async function POST(request) {
   const data = await request.json()
-  const { name, email, subject, message } = data
+  const { email, name, subject, message } = data
 
   try {
-    if (EMAIL_PATTERN.test(email) === false) return new Response(null, { status: 400 })
+    if (
+      EMAIL_PATTERN.test(email) === false ||
+      email.length > EMAIL_MAX_LENGTH ||
+      name.length > NAME_MAX_LENGTH ||
+      subject.length > NAME_MAX_LENGTH ||
+      message.length > NAME_MAX_LENGTH
+    )
+      return new Response(null, { status: 400 })
 
     const html = `Solicitud de contacto:
-    <p><strong>Nombre:</strong> ${name}</p>
     <p><strong>Correo:</strong> ${email}</p>
+    <p><strong>Nombre:</strong> ${name}</p>
     <p>${message.replace('\n', '<br/>')}</p>
-  `
+    `
 
     await sendEmail({
       subject,

@@ -11,6 +11,7 @@ export default function Input({
   placeholder,
   textarea = false,
   required = false,
+  maxLength,
   pattern,
   defaultValue,
   autoComplete
@@ -21,6 +22,7 @@ export default function Input({
     name,
     placeholder,
     required,
+    maxLength,
     pattern,
     defaultValue,
     type: textarea ? undefined : type,

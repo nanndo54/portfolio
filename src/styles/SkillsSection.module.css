@@ -15,6 +15,7 @@
 }
 
 .content {
+  position: relative;
   height: 50rem;
 
   display: flex;
@@ -25,6 +26,7 @@
 
 @media (max-width: 900px) {
   .content {
+    position: relative;
     height: auto;
 
     display: grid;

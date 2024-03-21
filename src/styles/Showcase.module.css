@@ -18,7 +18,7 @@
   pointer-events: none;
 
   transition: opacity 0.1s;
-  z-index: 3;
+  z-index: 15;
 }
 
 .base.open {
@@ -52,7 +52,6 @@
   display: flex;
   justify-content: center;
 
-  z-index: 4;
   box-shadow: inset 0 5.5rem 2rem -2rem var(--dim-dark-color);
 }
 
@@ -111,7 +110,6 @@
   justify-content: center;
   gap: 0.1rem;
 
-  z-index: 4;
   box-shadow: inset 0 -5.5rem 2rem -2.25rem var(--dim-dark-color);
 }
 
@@ -150,7 +148,7 @@
   top: 50%;
 
   filter: drop-shadow(0 0 0.2rem var(--dark-color));
-  z-index: 4;
+  z-index: 1;
 }
 
 .previousImage {

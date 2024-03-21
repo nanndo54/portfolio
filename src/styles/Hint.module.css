@@ -1,7 +1,11 @@
-.base::before,
-.base::after,
 .base {
-  z-index: 100 !important;
+  position: relative;
+  /* z-index: 7; */
+}
+
+.base::before,
+.base::after {
+  z-index: 7;
 }
 
 .base::before,

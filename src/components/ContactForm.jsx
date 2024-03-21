@@ -6,6 +6,12 @@ import Hint from '@/components/Hint'
 import Icon from '@/components/Icon'
 import Input from '@/components/Input'
 import { sendIcon } from '@/constants/icons'
+import {
+  EMAIL_MAX_LENGTH,
+  MESSAGE_MAX_LENGTH,
+  NAME_MAX_LENGTH,
+  SUBJECT_MAX_LENGTH
+} from '@/constants/patterns'
 import clsx from 'clsx/lite'
 import useDictionary from 'i18n/client'
 import { useState } from 'react'
@@ -89,22 +95,30 @@ export default function ContactForm({ children }) {
           name='email'
           placeholder='keanureeves@company.com'
           required
+          maxLength={EMAIL_MAX_LENGTH}
           autoComplete='email'
         />
         <Input
           label={nameLabel}
           name='name'
           placeholder='Keanu Reeves'
+          maxLength={NAME_MAX_LENGTH}
           autoComplete='name'
         />
       </div>
-      <Input label={subjectLabel} name='subject' placeholder={subjectPlaceholder} />
+      <Input
+        label={subjectLabel}
+        name='subject'
+        placeholder={subjectPlaceholder}
+        maxLength={SUBJECT_MAX_LENGTH}
+      />
       <Input
         textarea
         label={messageLabel}
         name='message'
         placeholder={messagePlaceholder}
         required
+        maxLength={MESSAGE_MAX_LENGTH}
       />
       <footer className={clsx((success || error) && styles.show)}>
         <p>{success ? successMessage : error}</p>

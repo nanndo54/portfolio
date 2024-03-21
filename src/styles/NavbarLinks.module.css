@@ -70,6 +70,7 @@
   pointer-events: none;
 
   transition: opacity 0.1s;
+  z-index: 15;
 }
 
 .menu.open {
