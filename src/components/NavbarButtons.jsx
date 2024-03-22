@@ -17,6 +17,7 @@ export default async function NavbarButtons() {
           href={locale === 'en' ? '/es' : '/en'}
           scroll={false}
           decoration={false}
+          replace
         >
           {locale}
         </Link>

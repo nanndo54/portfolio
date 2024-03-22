@@ -1,5 +1,6 @@
 'use client'
 
+import { debounce } from 'lib/debounce'
 import { useCallback, useEffect } from 'react'
 
 export default function useInteractivenessTracker() {
@@ -19,15 +20,13 @@ export default function useInteractivenessTracker() {
       callback(e.clientX - x, e.clientY - y)
     }
 
-    const delayedHandleTrackInteractiveness = (e) => {
-      setTimeout(() => {
-        handleTrackInteractiveness(e)
-      }, 20)
-    }
+    const debouncedHandleTrackInteractiveness = debounce((e) => {
+      handleTrackInteractiveness(e)
+    }, 100)
 
     element.addEventListener('mousemove', handleTrackInteractiveness)
     element.addEventListener('pointermove', handleTrackInteractiveness)
-    element.addEventListener('wheel', delayedHandleTrackInteractiveness, {
+    element.addEventListener('wheel', debouncedHandleTrackInteractiveness, {
       passive: true
     })
 
@@ -36,7 +35,7 @@ export default function useInteractivenessTracker() {
 
       element.removeEventListener('mousemove', handleTrackInteractiveness)
       element.removeEventListener('pointermove', handleTrackInteractiveness)
-      element.removeEventListener('wheel', delayedHandleTrackInteractiveness, {
+      element.removeEventListener('wheel', debouncedHandleTrackInteractiveness, {
         passive: true
       })
     }
@@ -54,11 +53,11 @@ export default function useInteractivenessTracker() {
       callback(x, y)
     }
 
+    handleTrackInteractiveness()
+
     window.addEventListener('scroll', handleTrackInteractiveness)
 
     return () => {
-      if (!window) return
-
       window.removeEventListener('scroll', handleTrackInteractiveness)
     }
   }, [callback])

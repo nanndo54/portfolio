@@ -37,6 +37,9 @@ body {
 
   transition: background-color 0.5s;
 
+  --x: -1000px;
+  --y: -1000px;
+
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
   --accent: 210, 85%, 55%;
@@ -44,6 +47,8 @@ body {
   --dim: 0.7;
   --dimmer: 0.425;
   --dimmest: 0.15;
+
+  --error-color: rgb(213, 67, 67);
 
   --light-color: hsl(var(--light));
   --dim-light-color: hsl(var(--light), var(--dim));

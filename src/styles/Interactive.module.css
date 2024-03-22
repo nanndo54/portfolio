@@ -8,7 +8,7 @@
 
   opacity: 0;
   mask: radial-gradient(
-    min(20rem, 75vw) at var(--x) var(--y),
+    min(25rem, 75vw) at var(--x) var(--y),
     black 20%,
     transparent 100%
   );
@@ -72,4 +72,10 @@ body:hover .base {
   position: absolute;
   white-space: nowrap;
   -webkit-text-stroke: 0.025rem transparent;
+}
+
+@media print {
+  .base {
+    display: none;
+  }
 }

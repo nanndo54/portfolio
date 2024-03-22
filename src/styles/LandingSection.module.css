@@ -30,7 +30,7 @@ header.base {
 .avatar {
   flex-shrink: 2;
 
-  mask-image: linear-gradient(to bottom, black -20%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .buttons {
@@ -51,8 +51,7 @@ header.base {
 
 .otherOptions {
   align-self: flex-end;
-  margin-top: 0.5rem;
-  margin-right: 2.5rem;
+  /* margin-right: 2.5rem; */
 
   display: flex;
   align-items: center;

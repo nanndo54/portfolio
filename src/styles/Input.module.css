@@ -41,17 +41,16 @@
 }
 
 .base:has(.input:invalid:not(:placeholder-shown):not(:focus)) {
-  border-color: rgb(213, 67, 67) !important;
+  border-color: var(--error-color) !important;
 }
 
 .label:has(+ .input:invalid:not(:placeholder-shown):not(:focus)) {
-  color: rgb(213, 67, 67) !important;
-  border-color: rgb(213, 67, 67) !important;
+  color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
 }
 
 .base:has(.input:required) .label > *::after {
   content: '*';
-  font-size: 1rem;
   color: var(--accent-color);
 
   position: relative;
