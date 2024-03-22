@@ -5,8 +5,8 @@ import { useCallback, useEffect } from 'react'
 
 export default function useInteractivenessTracker() {
   const callback = useCallback((x, y) => {
-    document.body.style.setProperty('--x', `${x}px`)
-    document.body.style.setProperty('--y', `${y}px`)
+    if (x != null) document.body.style.setProperty('--x', `${x}px`)
+    if (y != null) document.body.style.setProperty('--y', `${y}px`)
   }, [])
 
   useEffect(() => {
@@ -47,10 +47,9 @@ export default function useInteractivenessTracker() {
     if (!isCoarse) return
 
     const handleTrackInteractiveness = () => {
-      const x = window.screen.width / 2
       const y = document.documentElement.scrollTop + window.screen.height / 2
 
-      callback(x, y)
+      callback(null, y)
     }
 
     handleTrackInteractiveness()
