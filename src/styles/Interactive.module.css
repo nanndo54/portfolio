@@ -7,11 +7,7 @@
   width: 100%;
 
   opacity: 0;
-  mask-image: radial-gradient(
-    min(25rem, 75vw) at var(--x) var(--y),
-    black 20%,
-    transparent 100%
-  );
+  mask-image: radial-gradient(25rem at var(--x) var(--y), black 20%, transparent 100%);
   transition:
     0.5s mask,
     0.5s opacity;
