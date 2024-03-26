@@ -37,9 +37,6 @@ body {
 
   transition: background-color 0.5s;
 
-  --x: -1000px;
-  --y: -1000px;
-
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
   --accent: 210, 85%, 55%;

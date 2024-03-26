@@ -5,8 +5,9 @@ import { useCallback, useEffect } from 'react'
 
 export default function useInteractivenessTracker() {
   const callback = useCallback((x, y) => {
-    if (x != null) document.body.style.setProperty('--x', `${x}px`)
-    if (y != null) document.body.style.setProperty('--y', `${y}px`)
+    const element = document.getElementById('layout')
+    if (x != null) element.style.setProperty('--x', `${x}px`)
+    if (y != null) element.style.setProperty('--y', `${y}px`)
   }, [])
 
   useEffect(() => {
