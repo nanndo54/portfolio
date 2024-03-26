@@ -4,10 +4,10 @@ import { debounce } from 'lib/debounce'
 import { useCallback, useEffect, useState } from 'react'
 
 const interactiveElementTypes = [
-  {
-    className: 'interactive-aura',
-    clone: true
-  },
+  // {
+  //   className: 'interactive-aura',
+  //   clone: true
+  // },
   {
     tag: 'strong',
     clone: true,
