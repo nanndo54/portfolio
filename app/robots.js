@@ -20,10 +20,6 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/static/'
-      },
-      {
-        userAgent: '*',
-        disallow: '/'
       }
     ],
     sitemap: 'https://nanndo54.dev/sitemap.xml'
