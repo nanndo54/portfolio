@@ -9,12 +9,12 @@ const interactiveElementTypes = [
   //   clone: true
   // },
   {
+    className: 'interactive-border'
+  },
+  {
     tag: 'strong',
     clone: true,
     includeChildren: true
-  },
-  {
-    className: 'interactive-border'
   },
   {
     className: 'interactive-text',
@@ -123,6 +123,7 @@ export default function useInteractiveLayout(layoutElement) {
   useEffect(() => {
     if (!layoutElement) return
 
+    setWindowWidth(window.innerWidth)
     window.addEventListener('resize', handleWindowResize)
 
     return () => window.removeEventListener('resize', handleWindowResize)
