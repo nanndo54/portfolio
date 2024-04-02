@@ -83,6 +83,8 @@ const alterSize = debounce(({ elements, callback }) => {
 }, 300)
 
 export default function useInteractiveLayout(layoutElement) {
+  const elements = getElements()
+
   const refreshLayoutElements = useCallback(
     ({ elements }) => {
       layoutElement.style.opacity = 0
@@ -134,8 +136,6 @@ export default function useInteractiveLayout(layoutElement) {
     return () => window.removeEventListener('resize', handleWindowResize)
   }, [layoutElement, handleWindowResize])
 
-  const elements = getElements()
-
   useEffect(() => {
     setTimeout(() => {
       if (!layoutElement) return
@@ -169,6 +169,6 @@ export default function useInteractiveLayout(layoutElement) {
       }
 
       refreshLayoutElements({ elements: newElements })
-    }, 200)
+    }, 500)
   }, [layoutElement, elements, refreshLayoutElements])
 }

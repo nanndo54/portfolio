@@ -25,7 +25,13 @@ export default function Interactive({ children }) {
   return (
     <>
       {children}
-      <div id='layout' ref={layoutRef} className={styles.base} />
+      <div
+        id='layout'
+        ref={layoutRef}
+        className={styles.base}
+        aria-hidden
+        role='presentation'
+      />
     </>
   )
 }

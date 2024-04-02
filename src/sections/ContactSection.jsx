@@ -16,7 +16,7 @@ export default async function ContactSection({ id }) {
         <ContactIcons />
       </div>
       <ContactForm>
-        <b>{messageText}</b>
+        <p>{messageText}</p>
       </ContactForm>
     </Section>
   )

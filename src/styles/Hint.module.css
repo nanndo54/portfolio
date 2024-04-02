@@ -1,13 +1,3 @@
-.base {
-  position: relative;
-  /* z-index: 7; */
-}
-
-.base::before,
-.base::after {
-  z-index: 7;
-}
-
 .base::before,
 .base::after {
   position: absolute;

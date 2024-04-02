@@ -39,10 +39,6 @@ header.base {
   gap: 0.75rem;
 
   margin-top: 1rem;
-
-  /* transform: translateY(1.5rem);
-  opacity: 0;
-  animation: appear-cta-buttons 0.4s ease-in-out forwards; */
 }
 
 .buttons > * {
@@ -56,10 +52,10 @@ header.base {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  /* 
+
   transform: translateY(1rem);
   opacity: 0;
-  animation: appear-cta-buttons 0.3s 0.2s ease-in-out forwards; */
+  animation: appear-cta-buttons 0.3s 0.2s ease-in-out forwards;
 }
 
 .contact {

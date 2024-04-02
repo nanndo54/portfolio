@@ -8,8 +8,9 @@ export default async function Avatar({ className, photo }) {
       <Image
         className={clsx(styles.img, 'interactive-aura')}
         {...photo}
-        height={704}
-        width={704}
+        height={352}
+        width={352}
+        quality={100}
         priority
         zoom={false}
       />

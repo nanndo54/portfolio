@@ -17,6 +17,7 @@ export default function Icon({
   hintPosition,
   src,
   alt,
+  hidden = false,
   foregroundColor = false,
   backgroundColor = false,
   accentColor = false,
@@ -24,8 +25,11 @@ export default function Icon({
   ...props
 }) {
   const SvgIcon = useMemo(() => dynamic(() => import(`/public/icons/${src}`)), [src])
+  const ariaHidden = hidden ? true : undefined
 
-  const iconElement = <SvgIcon className={styles.icon} title={alt} {...props} />
+  const iconElement = (
+    <SvgIcon className={styles.icon} title={alt} {...props} aria-hidden={ariaHidden} />
+  )
 
   return (
     <figure
@@ -40,6 +44,7 @@ export default function Icon({
         accentColor && styles.accentColor,
         lightColor && styles.lightColor
       )}
+      aria-hidden={ariaHidden}
     >
       {hint ? (
         <Hint label={hint} position={hintPosition}>

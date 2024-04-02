@@ -43,15 +43,18 @@ body:hover .base {
 
 .base
   :global(.interactive-border):has(:global(.interactive-border))
-  :global(.interactive-border) {
+  :global(.interactive-border),
+.base
+  :global(.interactive-border):has(:global(.interactive-button-secondary))
+  :global(.interactive-button-secondary) {
   background-color: transparent;
 }
 
-.base :global(.interactive-aura) {
+/* .base :global(.interactive-aura) {
   position: absolute;
-  /* filter: drop-shadow(0 -0.5rem 1rem var(--secondary-accent-color)) !important; */
+  filter: drop-shadow(0 -0.5rem 1rem var(--secondary-accent-color)) !important;
   opacity: 0;
-}
+} */
 
 .base :global(.interactive-button-secondary) {
   position: absolute;
@@ -77,7 +80,7 @@ body:hover .base {
 .base strong {
   position: absolute;
   white-space: nowrap;
-  -webkit-text-stroke: 0.025rem transparent;
+  -webkit-text-stroke: 0.03125rem transparent;
 }
 
 @media print {

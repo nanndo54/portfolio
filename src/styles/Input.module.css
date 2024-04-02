@@ -25,7 +25,7 @@
 .label:has(+ :focus),
 .label:not(:has(+ .input:placeholder-shown)) {
   color: var(--foreground-color);
-  border-color: var(--dim-secondary-accent-color);
+  border-color: var(--secondary-accent-color);
 }
 
 .label:not(:has(+ .input:placeholder-shown)) {

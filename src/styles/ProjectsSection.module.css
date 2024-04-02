@@ -10,10 +10,11 @@
 .base::before {
   content: '';
   background-image: radial-gradient(
-    35rem at 35% 35rem,
-    var(--dimmer-secondary-accent-color) 0,
-    transparent 100%
-  );
+      15rem at 75% 15rem,
+      var(--dimmer-secondary-accent-color),
+      transparent 100%
+    ),
+    radial-gradient(25rem at 35% 45rem, var(--dimmer-accent-color), transparent 100%);
   overflow: visible;
 
   width: 100%;
@@ -48,7 +49,7 @@
     var(--foreground-color),
     var(--foreground-color) 0.125rem,
     transparent 0.125rem,
-    transparent 1.875rem
+    transparent 1.75rem
   );
   background-repeat: no-repeat;
 
@@ -104,7 +105,7 @@
   padding-inline: 0.25rem;
   border-radius: 0.5rem;
 
-  margin: 0 0.1875rem -1.5rem auto;
+  margin: 0 0.1875rem -2rem auto;
   font-style: italic;
 
   transition:
