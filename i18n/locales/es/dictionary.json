@@ -31,7 +31,7 @@
       "src": "landing/profile-photo.png",
       "alt": "Mi foto"
     },
-    "otherOptions": "O contáctame por"
+    "otherOptions": "o conectemos por:"
   },
   "projects": {
     "title": "Proyectos",
@@ -149,11 +149,23 @@
     ]
   },
   "skills": {
-    "title": "Habilidades",
+    "title": "Skills",
     "content": [
       {
         "name": "Front-End",
         "skills": [
+          {
+            "name": "Next.js",
+            "icon": "skills/backend/nextjs.svg"
+          },
+          {
+            "name": "React",
+            "icon": "skills/frontend/reactjs.svg"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "skills/frontend/javascript.svg"
+          },
           {
             "name": "CSS3",
             "icon": "skills/frontend/css3.svg"
@@ -163,24 +175,16 @@
             "icon": "skills/frontend/html5.svg"
           },
           {
-            "name": "JavaScript",
-            "icon": "skills/frontend/javascript.svg"
-          },
-          {
-            "name": "React",
-            "icon": "skills/frontend/reactjs.svg"
-          },
-          {
-            "name": "Redux",
-            "icon": "skills/frontend/redux.svg"
-          },
-          {
             "name": "TypeScript",
             "icon": "skills/frontend/typescript.svg"
           },
           {
             "name": "Vite.js",
             "icon": "skills/frontend/vitejs.svg"
+          },
+          {
+            "name": "Redux",
+            "icon": "skills/frontend/redux.svg"
           }
         ]
       },
@@ -188,37 +192,37 @@
         "name": "Back-End",
         "skills": [
           {
+            "name": "Node.js",
+            "icon": "skills/backend/nodejs.svg"
+          },
+          {
             "name": "Express.js",
             "icon": "skills/backend/expressjs.svg",
             "contrast": true
           },
           {
-            "name": "GO",
-            "icon": "skills/backend/go.svg"
+            "name": "TypeScript",
+            "icon": "skills/frontend/typescript.svg"
+          },
+          {
+            "name": "Python",
+            "icon": "skills/backend/python.svg"
           },
           {
             "name": "Java",
             "icon": "skills/backend/java.svg"
           },
           {
+            "name": "GO",
+            "icon": "skills/backend/go.svg"
+          },
+          {
             "name": "Linux",
             "icon": "skills/backend/linux.svg"
           },
           {
-            "name": "Next.js",
-            "icon": "skills/backend/nextjs.svg"
-          },
-          {
             "name": "Nginx",
             "icon": "skills/backend/nginx.svg"
-          },
-          {
-            "name": "Node.js",
-            "icon": "skills/backend/nodejs.svg"
-          },
-          {
-            "name": "Python",
-            "icon": "skills/backend/python.svg"
           }
         ]
       },
@@ -230,12 +234,21 @@
             "icon": "skills/cloud/aws.svg"
           },
           {
-            "name": "Cloudflare",
-            "icon": "skills/cloud/cloudflare.svg"
+            "name": "Vercel",
+            "icon": "skills/cloud/vercel.svg",
+            "contrast": true
           },
           {
             "name": "Firebase",
             "icon": "skills/cloud/firebase.svg"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "icon": "skills/cloud/gcp.svg"
+          },
+          {
+            "name": "Cloudflare",
+            "icon": "skills/cloud/cloudflare.svg"
           },
           {
             "name": "Netlify",
@@ -244,32 +257,31 @@
           {
             "name": "Oracle Cloud",
             "icon": "skills/cloud/oraclecloud.svg"
-          },
-          {
-            "name": "Vercel",
-            "icon": "skills/cloud/vercel.svg",
-            "contrast": true
           }
         ]
       },
       {
-        "name": "Bases de Datos",
+        "name": "Database",
         "skills": [
-          {
-            "name": "MongoDB",
-            "icon": "skills/database/mongodb.svg"
-          },
           {
             "name": "MySQL",
             "icon": "skills/database/mysql.svg"
+          },
+          {
+            "name": "SQL Server",
+            "icon": "skills/database/sqlserver.svg"
           },
           {
             "name": "Oracle SQL",
             "icon": "skills/database/oraclesql.svg"
           },
           {
-            "name": "SQL Server",
-            "icon": "skills/database/sqlserver.svg"
+            "name": "Redis",
+            "icon": "skills/database/redis.svg"
+          },
+          {
+            "name": "MongoDB",
+            "icon": "skills/database/mongodb.svg"
           }
         ]
       },
@@ -277,13 +289,17 @@
         "name": "Testing",
         "skills": [
           {
+            "name": "Playwright",
+            "icon": "skills/testing/playwright.svg"
+          },
+          {
             "name": "Cypress.io",
             "icon": "skills/testing/cypressio.svg"
           }
         ]
       },
       {
-        "name": "Herramientas",
+        "name": "Tools",
         "skills": [
           {
             "name": "Docker",
@@ -292,6 +308,14 @@
           {
             "name": "Git",
             "icon": "skills/tools/git.svg"
+          },
+          {
+            "name": "Notion",
+            "icon": "skills/tools/notion.svg"
+          },
+          {
+            "name": "VS Code",
+            "icon": "skills/tools/vscode.svg"
           },
           {
             "name": "JetBrains",
@@ -358,7 +382,6 @@
   },
   "contact": {
     "title": "¡Contáctame!",
-    "contactText": "Contáctame por",
     "messageText": "O envíame un mensaje",
     "form": {
       "emailLabel": "Tu email",

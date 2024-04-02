@@ -7,16 +7,16 @@ import getDictionary from 'i18n/server'
 
 export default async function ContactSection({ id }) {
   const dictionary = await getDictionary(id)
-  const { title, contactText, messageText } = dictionary
+  const { title, messageText } = dictionary
 
   return (
-    <Section className={styles.base} id={id} title={title} background={false}>
-      <div className={styles.contacts}>
-        <b>{contactText}</b>
+    <Section className={styles.base} id={id} background={false}>
+      <div className={styles.title}>
+        <h2>{title}</h2>
         <ContactIcons />
       </div>
       <ContactForm>
-        <p>{messageText}</p>
+        <b>{messageText}</b>
       </ContactForm>
     </Section>
   )

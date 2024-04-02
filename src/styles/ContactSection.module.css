@@ -18,15 +18,21 @@
   pointer-events: none;
 }
 
-.contacts {
+.title {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 @media (max-width: 500px) {
-  .contacts {
-    align-self: flex-start;
+  .title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .title > div {
+    width: 100%;
   }
 }

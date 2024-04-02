@@ -43,9 +43,6 @@ export default function ContactForm({ children }) {
   const handleChange = () => {
     setSuccess(false)
     setError()
-
-    // const formData = new FormData(ev.target.form)
-    // const formObject = Object.fromEntries(formData)
   }
 
   const handleSubmit = (ev) => {

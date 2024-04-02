@@ -36,12 +36,12 @@
 }
 
 .base:nth-child(1) {
-  top: 5rem;
+  top: 6rem;
   left: 0;
 }
 
 .base:nth-child(2) {
-  top: 6rem;
+  top: 5rem;
   right: 0.25rem;
 }
 
@@ -50,8 +50,8 @@
 }
 
 .base:nth-child(4) {
-  bottom: 2rem;
-  left: 1rem;
+  bottom: 3.5rem;
+  left: 0.5rem;
 }
 
 .base:nth-child(5) {
@@ -59,8 +59,8 @@
 }
 
 .base:nth-child(6) {
-  bottom: 0.5rem;
-  right: 1rem;
+  bottom: 2.5rem;
+  right: 0.75rem;
 }
 
 @media (max-width: 900px) {

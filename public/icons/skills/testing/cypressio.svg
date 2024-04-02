@@ -1,4 +1,4 @@
-<svg viewBox="0 0 128 128" fill="#282c3e">
+<svg viewBox="0 0 128 128" fill="#52597d">
   <defs>
     <linearGradient id="b" x1="323.384" x2="56.936" y1="12.396" y2="577.503"
       gradientTransform="translate(-.876 -.754) scale(.13472)" gradientUnits="userSpaceOnUse">
@@ -17,7 +17,7 @@
       <stop offset=".164" stop-color="#1ca379"></stop>
       <stop offset=".316" stop-color="#1c8568"></stop>
       <stop offset=".516" stop-color="#1b554d"></stop>
-      <stop offset=".719" stop-color="#30354d"></stop>
+      <stop offset=".719" stop-color="#52597d"></stop>
     </linearGradient>
   </defs>
   <path

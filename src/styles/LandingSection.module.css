@@ -50,8 +50,7 @@ header.base {
 }
 
 .otherOptions {
-  align-self: flex-end;
-  /* margin-right: 2.5rem; */
+  margin-top: 0.5rem;
 
   display: flex;
   align-items: center;
@@ -61,6 +60,10 @@ header.base {
   transform: translateY(1rem);
   opacity: 0;
   animation: appear-cta-buttons 0.3s 0.2s ease-in-out forwards; */
+}
+
+.contact {
+  gap: 0.375rem;
 }
 
 .contact > a {

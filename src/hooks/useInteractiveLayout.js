@@ -12,6 +12,11 @@ const interactiveElementTypes = [
     className: 'interactive-border'
   },
   {
+    tag: 'h2',
+    clone: true,
+    includeChildren: true
+  },
+  {
     tag: 'strong',
     clone: true,
     includeChildren: true
