@@ -6,7 +6,7 @@ import clsx from 'clsx/lite'
 
 const classNameByVariant = {
   primary: `${styles.primary} interactive-button-primary`,
-  secondary: `${styles.secondary} interactive-button-secondary`
+  secondary: `${styles.secondary} interactive-border`
 }
 
 export default function Button({

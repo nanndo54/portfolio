@@ -41,7 +41,7 @@ export default async function Project({
         {code && (
           <Link asButton variant='secondary' href={code} isExternal decoration={false}>
             {codeButton}
-            <Icon src={codeIcon} foregroundColor hidden />
+            <Icon src={codeIcon} foregroundColor hidden interactive />
           </Link>
         )}
         <Link asButton variant='primary' href={website} isExternal decoration={false}>

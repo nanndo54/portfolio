@@ -36,7 +36,7 @@ export default async function LandingSection({ id }) {
           </Hint>
         </div>
         <div className={styles.otherOptions}>
-          <b>{otherOptions}</b>
+          <p>{otherOptions}</p>
           <ContactIcons className={styles.contact} />
         </div>
       </div>

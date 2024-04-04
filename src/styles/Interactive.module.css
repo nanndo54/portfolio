@@ -11,11 +11,12 @@
 
   opacity: 0;
   mask: radial-gradient(25rem at var(--x) var(--y), black 20%, transparent 100%);
+  pointer-events: none;
+
   transition:
     0.5s mask,
     0.5s opacity;
   will-change: mask;
-  pointer-events: none;
   overflow: hidden;
   z-index: 5;
 }
@@ -50,11 +51,14 @@ body:hover .base {
   background-color: transparent;
 }
 
-/* .base :global(.interactive-aura) {
+.base :global(.interactive-aura) {
   position: absolute;
   filter: drop-shadow(0 -0.5rem 1rem var(--secondary-accent-color)) !important;
-  opacity: 0;
-} */
+}
+
+.base :global(.interactive-aura) > :first-child {
+  background: var(--dim-secondary-accent-color);
+}
 
 .base :global(.interactive-button-secondary) {
   position: absolute;
@@ -75,6 +79,14 @@ body:hover .base {
   color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
   background-clip: text;
+}
+
+.base :global(.interactive-icon) {
+  position: absolute;
+}
+
+.base :global(.interactive-icon) > svg {
+  fill: var(--secondary-accent-color);
 }
 
 .base strong {

@@ -21,7 +21,7 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
 }
 
 @media (max-width: 500px) {

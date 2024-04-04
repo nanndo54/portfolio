@@ -1,7 +1,7 @@
 .base {
   width: 100%;
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
 
   display: flex;
   cursor: text;
@@ -12,7 +12,7 @@
 
   padding-right: 0.75rem;
   margin-right: 0.75rem;
-  border-right: 0.1875rem solid transparent;
+  border-right: 0.1875rem solid var(--dimmest-foreground-color);
 
   transition: border-color 0.25s;
 }
@@ -26,10 +26,6 @@
 .label:not(:has(+ .input:placeholder-shown)) {
   color: var(--foreground-color);
   border-color: var(--secondary-accent-color);
-}
-
-.label:not(:has(+ .input:placeholder-shown)) {
-  color: var(--secondary-accent-color) !important;
 }
 
 .input {

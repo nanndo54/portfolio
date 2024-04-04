@@ -38,7 +38,7 @@ export default function Icon({
         styles.base,
         classNameByType[type],
         border && styles.border,
-        interactive && 'interactive-border',
+        interactive && (border ? 'interactive-border' : 'interactive-icon'),
         foregroundColor && styles.foregroundColor,
         backgroundColor && styles.backgroundColor,
         accentColor && styles.accentColor,

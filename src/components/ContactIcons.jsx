@@ -14,9 +14,8 @@ export default async function ContactIcons({ className }) {
           key={name}
           src={icon}
           iconProps={{
-            border: true,
-            hint: name,
-            hintPosition: 'bottom',
+            foregroundColor: true,
+            interactive: true,
             ...props
           }}
           title={name}

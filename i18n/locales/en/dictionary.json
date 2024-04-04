@@ -31,7 +31,7 @@
       "src": "landing/profile-photo.png",
       "alt": "My photo"
     },
-    "otherOptions": "or let's connect via:"
+    "otherOptions": "or let's connect on"
   },
   "projects": {
     "title": "Projects",
@@ -391,7 +391,7 @@
       "subjectPlaceholder": "Let's get in touch!",
       "subjectDefault": "Let's get in touch!",
       "messageLabel": "Message",
-      "messagePlaceholder": "Hey!",
+      "messagePlaceholder": "Nice portfolio!",
       "submitButton": "Send message",
       "requiredLabel": "Required field",
       "successMessage": "I'll be in touch as soon as possible",

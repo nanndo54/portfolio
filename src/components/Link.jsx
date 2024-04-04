@@ -1,11 +1,12 @@
-import buttonStyles from '@/styles/Button.module.css'
 import styles from '@/styles/Link.module.css'
+
+import buttonStyles from '@/styles/Button.module.css'
 import clsx from 'clsx/lite'
 import { default as NextLink } from 'next/link'
 
 const classNameByVariant = {
   primary: `${buttonStyles.primary} interactive-button-primary`,
-  secondary: `${buttonStyles.secondary} interactive-button-secondary`
+  secondary: `${buttonStyles.secondary} interactive-border`
 }
 
 export default async function Link({

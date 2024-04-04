@@ -23,7 +23,7 @@ export default function IconLink({
       decoration={false}
       {...props}
     >
-      <Icon src={src} interactive {...iconProps} />
+      <Icon src={src} {...iconProps} />
     </Link>
   )
 }

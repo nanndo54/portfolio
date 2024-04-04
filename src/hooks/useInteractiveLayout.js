@@ -4,10 +4,11 @@ import { debounce } from 'lib/debounce'
 import { useCallback, useEffect, useState } from 'react'
 
 const interactiveElementTypes = [
-  // {
-  //   className: 'interactive-aura',
-  //   clone: true
-  // },
+  {
+    className: 'interactive-aura',
+    clone: true,
+    includeChildren: true
+  },
   {
     className: 'interactive-border'
   },
@@ -28,6 +29,11 @@ const interactiveElementTypes = [
   },
   {
     className: 'interactive-button-secondary',
+    clone: true,
+    includeChildren: true
+  },
+  {
+    className: 'interactive-icon',
     clone: true,
     includeChildren: true
   }
@@ -116,7 +122,7 @@ export default function useInteractiveLayout(layoutElement) {
         const offsetTop = document.documentElement.scrollTop + viewportOffset.top
         const isSameHeight =
           Math.abs(
-            Number(testElement.interactiveElement.style.top.slice(0, -2)) - offsetTop
+            Number(testElement.interactiveElement?.style.top.slice(0, -2)) - offsetTop
           ) < 1
 
         if (newWindowWidth === windowWidth && isSameHeight) return
@@ -162,7 +168,7 @@ export default function useInteractiveLayout(layoutElement) {
         element.interactiveElement = interactiveElement
 
         const parent =
-          newElements.find(
+          newElements.findLast(
             (newElement) => newElement.contains(element) && newElement !== element
           )?.interactiveElement ?? layoutElement
         parent.appendChild(interactiveElement)

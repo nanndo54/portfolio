@@ -1,6 +1,7 @@
 .base {
   height: 100%;
   width: 100%;
+  padding-bottom: 2rem;
 
   z-index: 1;
 }

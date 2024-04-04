@@ -4,13 +4,14 @@ import clsx from 'clsx/lite'
 
 export default async function Avatar({ className, photo }) {
   return (
-    <div className={clsx(styles.base, className)}>
+    <div className={clsx(styles.base, className, 'interactive-aura')}>
+      <div className={clsx(styles.box)} />
       <Image
-        className={clsx(styles.img, 'interactive-aura')}
+        className={styles.img}
         {...photo}
-        height={352}
-        width={352}
-        quality={100}
+        height={624}
+        width={624}
+        quality={80}
         priority
         zoom={false}
       />

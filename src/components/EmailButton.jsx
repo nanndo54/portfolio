@@ -14,7 +14,7 @@ export default function EmailButton() {
     <Hint position='bottom' label={email} clickLabel={aria.copied}>
       <Button variant='secondary' onClick={() => navigator.clipboard.writeText(email)}>
         {emailButton}
-        <Icon src={copyEmailIcon} foregroundColor hidden />
+        <Icon src={copyEmailIcon} foregroundColor interactive />
       </Button>
     </Hint>
   )

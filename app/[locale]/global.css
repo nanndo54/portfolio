@@ -78,9 +78,13 @@ body {
   --dimmest-secondary-accent-color: hsl(var(--secondary-accent), var(--dimmest));
 }
 
+:root:has(body[dark='true']) {
+  color-scheme: dark;
+}
+
 body[dark='true'] {
   --accent: 210, 85%, 60%;
-  --secondary-accent: 245, 85%, 65%;
+  --secondary-accent: 245, 80%, 68%;
   --dimmer: 0.3625;
 
   --foreground-color: var(--light-color);
@@ -95,7 +99,13 @@ body[dark='true'] {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root:has(body[dark='false']) {
+    color-scheme: light;
+  }
+
   body:not([dark]) {
+    color-scheme: dark;
+
     --accent: 210, 85%, 65%;
     --secondary-accent: 245, 85%, 65%;
     --dimmer: 0.3625;
@@ -250,7 +260,7 @@ u {
 .interactive-border {
   position: relative;
   border: 0.2rem solid var(--dim-accent-color);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   background-color: var(--dimmer-background-color);
 
   transition:
@@ -266,7 +276,6 @@ u {
 
 .interactive-button-secondary {
   border: 0.125rem solid var(--dim-accent-color);
-  border-radius: 1.5rem;
 
   transition: background-color 0.5s;
 }

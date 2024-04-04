@@ -26,12 +26,12 @@
     "email": "nanndo54@outlook.com",
     "status": "(Buscando empleo)",
     "emailButton": "Copia mi email",
-    "cvButton": "Descarga mi CV!",
+    "cvButton": "¡Descarga mi CV!",
     "avatar": {
       "src": "landing/profile-photo.png",
       "alt": "Mi foto"
     },
-    "otherOptions": "o conectemos por:"
+    "otherOptions": "o conectemos por"
   },
   "projects": {
     "title": "Proyectos",
@@ -65,7 +65,7 @@
         "year": 2023,
         "icon": "projects/quiz-game-icon.svg",
         "name": "Quiz Game",
-        "description": "<u>Juego de preguntas en línea</u>. Tiene una interfaz cómoda y sencilla, ¡para proveer una <u>divertida</u> y <u>educativa</u> experiencia!",
+        "description": "<u>Juego de preguntas en línea</u>. Tiene una interfaz cómoda y sencilla para proveer una <u>divertida</u> y <u>educativa</u> experiencia.",
         "website": "https://quiz.nanndo54.dev/",
         "code": "https://github.com/nanndo54/quiz-game",
         "skills": ["React", "Redux", "HTML5", "CSS3", "Vite.js"],
@@ -391,7 +391,7 @@
       "subjectPlaceholder": "¡Pongámonos en contacto!",
       "subjectDefault": "¡Pongámonos en contacto!",
       "messageLabel": "Mensaje",
-      "messagePlaceholder": "Hey!",
+      "messagePlaceholder": "¡Me gusta tu portafolio!",
       "submitButton": "Enviar mensaje",
       "requiredLabel": "Campo requerido",
       "successMessage": "Me pondré en contacto contigo lo más pronto posible",
