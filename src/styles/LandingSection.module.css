@@ -70,7 +70,7 @@ header.base {
   header.base {
     flex-direction: column-reverse;
     justify-content: flex-end;
-    gap: 0;
+    gap: 1.5rem;
 
     height: max(42rem, calc(100vh - 15rem));
     width: 100%;

@@ -6,36 +6,30 @@ import { useCallback, useEffect, useState } from 'react'
 const interactiveElementTypes = [
   {
     className: 'interactive-aura',
-    clone: true,
-    includeChildren: true
+    clone: true
   },
   {
     className: 'interactive-border'
   },
   {
     tag: 'h2',
-    clone: true,
-    includeChildren: true
+    clone: true
   },
   {
     tag: 'strong',
-    clone: true,
-    includeChildren: true
+    clone: true
   },
   {
     className: 'interactive-text',
-    clone: true,
-    includeChildren: true
+    clone: true
   },
   {
     className: 'interactive-button-secondary',
-    clone: true,
-    includeChildren: true
+    clone: true
   },
   {
     className: 'interactive-icon',
-    clone: true,
-    includeChildren: true
+    clone: true
   }
 ]
 
@@ -156,7 +150,7 @@ export default function useInteractiveLayout(layoutElement) {
         const interactiveElementType = getInteractiveElementType(element)
 
         const interactiveElement = interactiveElementType.clone
-          ? element.cloneNode(interactiveElementType.includeChildren)
+          ? element.cloneNode(true)
           : document.createElement('div')
 
         if (interactiveElementType.clone)
@@ -175,6 +169,6 @@ export default function useInteractiveLayout(layoutElement) {
       }
 
       refreshLayoutElements({ elements: newElements })
-    }, 500)
+    }, 800)
   }, [layoutElement, elements, refreshLayoutElements])
 }
