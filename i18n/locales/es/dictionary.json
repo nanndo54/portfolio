@@ -243,12 +243,12 @@
             "icon": "skills/cloud/firebase.svg"
           },
           {
-            "name": "Google Cloud Platform",
-            "icon": "skills/cloud/gcp.svg"
-          },
-          {
             "name": "Cloudflare",
             "icon": "skills/cloud/cloudflare.svg"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "icon": "skills/cloud/gcp.svg"
           },
           {
             "name": "Netlify",

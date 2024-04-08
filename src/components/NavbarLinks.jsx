@@ -35,7 +35,8 @@ export default function NavbarLinks() {
       id,
       label: dictionary[id].title
     }))
-  const currentSection = links.find(({ id }) => id === currentSectionId)?.label
+  const currentSection =
+    links.find(({ id }) => id === currentSectionId)?.label || links[0].label
 
   return (
     <>

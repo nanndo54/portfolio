@@ -4,9 +4,8 @@
 
 .quote {
   font-family: var(--title-font);
-  font-weight: 400;
   font-style: italic;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.06rem;
   white-space: normal;
 
   display: flex;
@@ -20,6 +19,14 @@
 .quote p,
 .quote strong {
   font-size: 1.4rem;
+}
+
+.quote p {
+  font-weight: 400;
+}
+
+.quote strong {
+  font-weight: 600;
 }
 
 .quote sup {
