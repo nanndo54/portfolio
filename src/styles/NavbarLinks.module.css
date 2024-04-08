@@ -5,13 +5,7 @@
   pointer-events: all;
 }
 
-.base .logo {
-  height: 2rem;
-  width: 2rem;
-  margin-right: 0.5rem;
-}
-
-.base .link:not(:first-child) {
+.link {
   font-family: var(--title-font);
   font-style: italic;
   font-weight: 700;
@@ -20,9 +14,11 @@
   color: var(--foreground-color);
 
   height: auto;
-  padding: 0 0.5rem;
-  border: 0.1rem solid transparent;
-  border-radius: 1.5rem;
+  padding-inline: 0.75rem;
+  border-radius: 0;
+  margin-left: -0.5rem;
+
+  clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
 
   transform: translateY(-5rem);
   transition:
@@ -31,20 +27,21 @@
     background-color 0.2s ease-out,
     backdrop-filter 0.2s ease-out,
     color 0.2s ease-out,
-    border-color 0.2s ease-out,
     text-shadow 0.2s ease-out;
 }
 
-.base .link:hover {
-  border-color: var(--dim-accent-color);
+.link.current {
+  background-color: var(--secondary-accent-color);
+  color: var(--background-color);
+  text-shadow: none;
 }
 
-.base .link.current {
-  border-color: var(--accent-color);
+.link:hover {
+  background-color: var(--accent-color);
 }
 
-.base .link.current:hover {
-  border-color: var(--secondary-accent-color);
+.link.current:hover {
+  background-color: var(--secondary-accent-color);
 }
 
 .navigator {
@@ -78,9 +75,25 @@
   pointer-events: all;
 }
 
+.menu .closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 .menu .link {
+  font-size: 1.25rem;
   color: var(--light-color);
-  width: 100%;
+  width: 90%;
+  padding-block: 0.25rem;
+  text-shadow: none;
+}
+
+.menu .link.current {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
 }
 
 @media (max-width: 700px) {
@@ -88,14 +101,13 @@
     display: none;
   }
 
-  .base :first-child,
   .base .navigator {
     display: block;
   }
 }
 
 @supports (animation-timeline: scroll()) {
-  .base .link:not(:first-child) {
+  .link {
     animation: navbar-links-scroll ease-out forwards;
     animation-timeline: scroll(root);
     animation-range: 0 50vh;
@@ -108,7 +120,7 @@
   }
 }
 @supports not (animation-timeline: scroll()) {
-  body[top='false'] .base .link:not(:first-child) {
+  body[top='false'] .link {
     transform: translateY(0);
   }
 }

@@ -73,12 +73,15 @@ body:hover .base {
   fill: var(--dim-secondary-accent-color) !important;
 }
 
-.base :global(.interactive-text),
+.base :global(.interactive-text) {
+  position: absolute;
+  color: var(--secondary-accent-color) !important;
+}
+
 .base h2 {
   position: absolute;
-  color: var(--secondary-accent-color);
   background-color: var(--secondary-accent-color);
-  background-clip: text;
+  /* background-color: var(--secondary-accent-color); */
 }
 
 .base :global(.interactive-icon) {

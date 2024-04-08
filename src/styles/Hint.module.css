@@ -1,6 +1,7 @@
 .base::after {
   clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
   border-radius: 0;
+  padding-inline: 0.75rem;
 }
 
 .base::before,
@@ -8,7 +9,8 @@
   position: absolute;
   overflow: hidden;
 
-  font-family: var(--subtitle-font);
+  font-family: var(--title-font);
+  font-style: italic;
 
   background-color: var(--foreground-color);
   color: var(--background-color);

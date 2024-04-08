@@ -1,0 +1,16 @@
+.base {
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  margin-right: 1rem;
+  pointer-events: all;
+}
+
+.base:active {
+  box-shadow: none;
+}
+
+.base > figure {
+  height: 100%;
+  width: 100%;
+}

@@ -3,14 +3,14 @@ import { Kanit, Poppins } from 'next/font/google'
 export const titleFont = Poppins({
   display: 'swap',
   style: 'italic',
-  weight: ['700'],
+  weight: ['600', '700'],
   subsets: ['latin'],
   variable: '--title-font'
 })
 
 export const subTitleFont = Poppins({
   display: 'swap',
-  style: 'italic',
+  style: 'normal',
   weight: ['600'],
   subsets: ['latin'],
   variable: '--subtitle-font'

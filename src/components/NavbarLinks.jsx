@@ -3,8 +3,8 @@
 import styles from '@/styles/NavbarLinks.module.css'
 
 import Button from '@/components/Button'
-import Icon from '@/components/Icon'
-import { logoIcon } from '@/constants/icons'
+import IconButton from '@/components/IconButton'
+import { closeIcon } from '@/constants/icons'
 import sections from '@/constants/sections'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
@@ -19,43 +19,34 @@ export default function NavbarLinks() {
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const links = sections
+    .slice(1)
     .filter(({ ignore }) => !ignore)
-    .map(({ id }, index) => ({
+    .map(({ id }) => ({
       id,
-      label: dictionary[id].title,
-      children:
-        index === 0 ? (
-          <Icon className={styles.logo} src={logoIcon} />
-        ) : (
-          dictionary[id].title
-        )
+      label: dictionary[id].title
     }))
   const currentSection = links.find(({ id }) => id === currentSectionId)?.label
 
   return (
     <>
       <div className={styles.base}>
-        {links.map(({ id, children }) => (
+        {links.map(({ id, label }) => (
           <Button
             key={id}
-            className={clsx(
-              styles.link,
-              currentSectionId === id && styles.current,
-              'no-select'
-            )}
+            className={clsx(styles.link, currentSectionId === id && styles.current)}
             onClick={() => {
               document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
             }}
-            title={`${aria.goTo} ${id}`}
+            title={`${aria.goTo} ${label}`}
           >
-            {children}
+            {label}
           </Button>
         ))}
         {currentSection && (
           <Button
             className={clsx(styles.link, styles.current, styles.navigator)}
             onClick={() => setMenuOpen(true)}
-            title={`navigate`}
+            title={aria.navigateTo}
           >
             {currentSection}
           </Button>
@@ -65,6 +56,12 @@ export default function NavbarLinks() {
         className={clsx(styles.menu, isMenuOpen && styles.open)}
         onClick={() => setMenuOpen(false)}
       >
+        <IconButton
+          src={closeIcon}
+          iconProps={{ lightColor: true }}
+          title={aria.close}
+          className={styles.closeButton}
+        />
         {links.map(({ id, label }) => (
           <Button
             key={id}
