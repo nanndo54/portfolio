@@ -28,7 +28,6 @@
 
     padding: 0 1.2rem;
     background-color: var(--dimmer-background-color);
-    backdrop-filter: blur(0.3rem);
   }
 }
 

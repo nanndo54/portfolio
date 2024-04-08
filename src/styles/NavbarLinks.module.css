@@ -25,7 +25,6 @@
     transform 0.25s ease-out,
     scale 0.25s ease-out,
     background-color 0.2s ease-out,
-    backdrop-filter 0.2s ease-out,
     color 0.2s ease-out,
     text-shadow 0.2s ease-out;
 }

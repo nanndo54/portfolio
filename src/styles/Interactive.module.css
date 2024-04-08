@@ -11,7 +11,7 @@
 
   opacity: 0;
   mask: radial-gradient(20rem at var(--x) var(--y), black, #000c 50%, transparent 100%);
-  /* pointer-events: none; */
+  pointer-events: none;
 
   transition:
     0.5s mask,
@@ -40,8 +40,6 @@ body:hover .base {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border-color: var(--secondary-accent-color);
-  backdrop-filter: unset;
-  filter: unset;
   inset: inherit;
 }
 
