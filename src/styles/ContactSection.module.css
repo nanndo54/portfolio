@@ -21,10 +21,10 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 6.5rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .title {
     align-items: flex-start;
     flex-direction: column;
@@ -33,6 +33,12 @@
   }
 
   .title > div {
-    width: 100%;
+    align-self: flex-end;
+    gap: 0.625rem;
+  }
+
+  .title > div > a {
+    height: 2rem;
+    width: 2rem;
   }
 }

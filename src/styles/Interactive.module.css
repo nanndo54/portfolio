@@ -46,10 +46,7 @@ body:hover .base {
 
 .base
   :global(.interactive-border):has(:global(.interactive-border))
-  :global(.interactive-border),
-.base
-  :global(.interactive-border):has(:global(.interactive-button-secondary))
-  :global(.interactive-button-secondary) {
+  :global(.interactive-border) {
   background-color: transparent;
 }
 
@@ -60,19 +57,6 @@ body:hover .base {
 
 .base :global(.interactive-aura) > :first-child {
   background: var(--dim-secondary-accent-color);
-}
-
-.base :global(.interactive-button-secondary) {
-  position: absolute;
-  background-color: var(--dimmest-secondary-accent-color);
-  border-color: var(--secondary-accent-color);
-  box-shadow: 0 0 0 0.0625rem inset var(--dimmer-accent-color);
-
-  color: var(--secondary-accent-color);
-}
-
-.base :global(.interactive-button-secondary) svg {
-  fill: var(--dim-secondary-accent-color) !important;
 }
 
 .base :global(.interactive-text) {
