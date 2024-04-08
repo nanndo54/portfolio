@@ -15,10 +15,14 @@ const useAppStore = create(
       ...initialState,
       toggleTheme: (dark) => set(() => ({ theme: dark ? 'dark' : 'light' })),
       setCurrentSection: (currentSection) => set(() => ({ currentSection })),
-      openShowcase: ({ open = true, index = 0, images = [], ...showcase }) =>
-        set(() => ({ showcase: { open, index, images, ...showcase } })),
-      closeShowcase: () =>
-        set((state) => ({ showcase: { ...state.showcase, open: false } })),
+      openShowcase: ({ open = true, index = 0, images = [], ...showcase }) => {
+        document.body.classList.add('no-scroll')
+        set(() => ({ showcase: { open, index, images, ...showcase } }))
+      },
+      closeShowcase: () => {
+        document.body.classList.remove('no-scroll')
+        set((state) => ({ showcase: { ...state.showcase, open: false } }))
+      },
       setShowcase: (showcase) =>
         set((state) => ({ showcase: { ...state.showcase, ...showcase } }))
     }),

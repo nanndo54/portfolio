@@ -4,8 +4,9 @@
   border-radius: 0.75rem;
 
   color: var(--background-color);
-  font-family: var(--subtitle-font);
+  font-size: 1.3rem;
   font-weight: 600;
+  text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
 
@@ -17,6 +18,7 @@
   transition:
     background-position 0.5s,
     background-color 0.5s,
+    border-color 0.5s,
     color 0.5s,
     box-shadow 0.1s;
 }

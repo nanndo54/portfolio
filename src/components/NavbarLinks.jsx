@@ -18,6 +18,16 @@ export default function NavbarLinks() {
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 
+  const handleOpenMenu = () => {
+    document.body.classList.add('no-scroll')
+    setMenuOpen(true)
+  }
+
+  const handleCloseMenu = () => {
+    document.body.classList.remove('no-scroll')
+    setMenuOpen(false)
+  }
+
   const links = sections
     .slice(1)
     .filter(({ ignore }) => !ignore)
@@ -45,7 +55,7 @@ export default function NavbarLinks() {
         {currentSection && (
           <Button
             className={clsx(styles.link, styles.current, styles.navigator)}
-            onClick={() => setMenuOpen(true)}
+            onClick={handleOpenMenu}
             title={aria.navigateTo}
           >
             {currentSection}
@@ -54,7 +64,7 @@ export default function NavbarLinks() {
       </div>
       <div
         className={clsx(styles.menu, isMenuOpen && styles.open)}
-        onClick={() => setMenuOpen(false)}
+        onClick={handleCloseMenu}
       >
         <IconButton
           src={closeIcon}

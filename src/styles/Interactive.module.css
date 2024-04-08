@@ -10,7 +10,7 @@
   width: 100%;
 
   opacity: 0;
-  mask: radial-gradient(25rem at var(--x) var(--y), black 20%, transparent 100%);
+  mask: radial-gradient(20rem at var(--x) var(--y), black, #000c 50%, transparent 100%);
   pointer-events: none;
 
   transition:
@@ -19,6 +19,10 @@
   will-change: mask;
   overflow: hidden;
   z-index: 5;
+}
+
+body:global(.no-scroll):hover .base {
+  opacity: 0;
 }
 
 body:hover .base {
@@ -36,9 +40,6 @@ body:hover .base {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border-color: var(--secondary-accent-color);
-  box-shadow:
-    0 0 0 0.125rem var(--dimmest-foreground-color),
-    0 0 0.125rem 0.125rem var(--dim-background-color);
   backdrop-filter: unset;
   filter: unset;
   inset: inherit;
@@ -67,7 +68,6 @@ body:hover .base {
 .base h2 {
   position: absolute;
   background-color: var(--secondary-accent-color);
-  /* background-color: var(--secondary-accent-color); */
 }
 
 .base :global(.interactive-icon) {

@@ -3,6 +3,12 @@
 }
 
 .quote {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+  white-space: normal;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -13,12 +19,7 @@
 
 .quote p,
 .quote strong {
-  font-size: 1.5rem;
-}
-
-.quote {
-  letter-spacing: 0.125rem;
-  white-space: normal;
+  font-size: 1.4rem;
 }
 
 .quote sup {
@@ -32,7 +33,9 @@
 }
 
 .quote .author {
+  font-family: var(--body-font);
   font-size: 1.5rem;
+  font-style: normal;
   letter-spacing: 0;
 
   align-self: flex-end;

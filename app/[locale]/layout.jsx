@@ -1,7 +1,7 @@
 import 'node_modules/hint.css/hint.min.css'
 import './global.css'
 
-import { bodyFont, subTitleFont, titleFont } from 'app/fonts'
+import { bodyFont, titleFont } from 'app/fonts'
 import clsx from 'clsx/lite'
 import { locales } from 'i18n/config'
 import getDictionary, { getStaticParams } from 'i18n/server'
@@ -52,10 +52,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale} translate='no'>
-      <body
-        className={clsx(titleFont.variable, subTitleFont.variable, bodyFont.variable)}
-        top='true'
-      >
+      <body className={clsx(titleFont.variable, bodyFont.variable)} top='true'>
         {children}
       </body>
     </html>

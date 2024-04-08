@@ -97,7 +97,10 @@
 }
 
 .allProjects h3 {
+  font-family: var(--title-font);
+  font-style: italic;
   color: var(--background-color);
+
   background-color: var(--foreground-color);
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 
@@ -106,7 +109,6 @@
   padding-inline: 0.5rem;
 
   margin: 0 -1.6875rem -1.75rem auto;
-  font-style: italic;
 
   transition:
     color 0.5s,
