@@ -36,7 +36,9 @@ body:hover .base {
   position: absolute;
   background-color: var(--dimmest-secondary-accent-color);
   border-color: var(--secondary-accent-color);
-  box-shadow: 0 0 0 0.125rem var(--dimmest-secondary-accent-color);
+  box-shadow:
+    0 0 0 0.125rem var(--dimmest-foreground-color),
+    0 0 0.125rem 0.125rem var(--dim-background-color);
   backdrop-filter: unset;
   filter: unset;
   inset: inherit;

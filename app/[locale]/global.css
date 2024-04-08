@@ -36,6 +36,7 @@ body {
     );
 
   transition: background-color 0.5s;
+  overflow-x: hidden;
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
