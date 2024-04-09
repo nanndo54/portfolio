@@ -11,7 +11,6 @@
 }
 
 .border {
-  border: 0.125rem solid var(--dim-accent-color);
   border-radius: 50%;
 }
 

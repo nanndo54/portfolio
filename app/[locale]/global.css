@@ -24,16 +24,6 @@ body {
   font-weight: 300;
 
   background-color: var(--background-color);
-  background-image: radial-gradient(
-      51vw 27vh at 28% 32vh,
-      var(--dimmer-accent-color) 0,
-      transparent 85%
-    ),
-    radial-gradient(
-      31vw 25vh at 78% 32vh,
-      var(--dim-secondary-accent-color) 0,
-      transparent 85%
-    );
 
   transition: background-color 0.5s;
   overflow-x: hidden;
@@ -285,12 +275,6 @@ u {
 
 .interactive-border:hover {
   background-color: var(--dim-background-color);
-}
-
-.interactive-button-secondary {
-  border: 0.125rem solid var(--dim-accent-color);
-
-  transition: background-color 0.5s;
 }
 
 .interactive-text {

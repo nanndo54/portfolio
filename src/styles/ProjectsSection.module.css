@@ -12,9 +12,9 @@
   background-image: radial-gradient(
       15rem at 75% 15rem,
       var(--dimmer-secondary-accent-color),
-      transparent 100%
+      transparent
     ),
-    radial-gradient(25rem at 35% 45rem, var(--dimmer-accent-color), transparent 100%);
+    radial-gradient(25rem at 35% 45rem, var(--dimmer-accent-color), transparent);
   overflow: visible;
 
   width: 100%;

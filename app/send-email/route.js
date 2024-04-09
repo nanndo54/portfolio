@@ -1,4 +1,10 @@
-import { EMAIL_MAX_LENGTH, EMAIL_PATTERN, NAME_MAX_LENGTH } from '@/constants/patterns'
+import {
+  EMAIL_MAX_LENGTH,
+  EMAIL_PATTERN,
+  MESSAGE_MAX_LENGTH,
+  NAME_MAX_LENGTH,
+  SUBJECT_MAX_LENGTH
+} from '@/constants/patterns'
 import { sendEmail } from 'lib/send-email'
 
 export async function POST(request) {
@@ -10,8 +16,8 @@ export async function POST(request) {
       EMAIL_PATTERN.test(email) === false ||
       email.length > EMAIL_MAX_LENGTH ||
       name.length > NAME_MAX_LENGTH ||
-      subject.length > NAME_MAX_LENGTH ||
-      message.length > NAME_MAX_LENGTH
+      subject.length > SUBJECT_MAX_LENGTH ||
+      message.length > MESSAGE_MAX_LENGTH
     )
       return new Response(null, { status: 400 })
 

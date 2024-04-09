@@ -1,5 +1,4 @@
 export const copyEmailIcon = 'landing/copy-email-icon.svg'
-export const emailIcon = 'landing/email-icon.svg'
 export const githubIcon = 'landing/github-icon.svg'
 export const logoIcon = 'landing/logo-icon.svg'
 

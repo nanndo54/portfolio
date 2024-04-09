@@ -24,10 +24,6 @@ const interactiveElementTypes = [
     clone: true
   },
   {
-    className: 'interactive-button-secondary',
-    clone: true
-  },
-  {
     className: 'interactive-icon',
     clone: true
   }

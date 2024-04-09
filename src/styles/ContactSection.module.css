@@ -3,12 +3,12 @@
   background-image: radial-gradient(
       18rem at 70% 18rem,
       var(--dimmer-accent-color),
-      transparent 100%
+      transparent
     ),
     radial-gradient(
       40rem 15rem at 40% 35rem,
       var(--dimmest-secondary-accent-color),
-      transparent 100%
+      transparent
     );
 
   width: 100%;

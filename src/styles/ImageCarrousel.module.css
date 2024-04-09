@@ -97,17 +97,17 @@
 
   display: flex;
   justify-content: center;
-  gap: 0.9rem;
+  gap: 0.75rem;
   margin: auto;
 }
 
 .dots button {
-  width: 1rem;
-  height: 1rem;
+  width: 0.85rem;
+  height: 0.85rem;
   padding: 0;
 
   border-radius: 50%;
-  border: 0.2rem solid var(--light-color);
+  border: 0.15rem solid var(--light-color);
   filter: drop-shadow(0 0 0.25rem var(--dark-color));
 
   transition:
