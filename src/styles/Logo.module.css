@@ -20,15 +20,13 @@
 }
 
 .base svg {
-  filter: grayscale(0.75) brightness(0.25);
   transition: filter 0.5s;
 }
 
-body[dark='true'] .base svg {
-  filter: grayscale(0.75) brightness(1.75);
+.base.current svg {
+  filter: grayscale(0.75) brightness(0.25);
 }
 
-.base.current svg,
 body[dark='true'] .base.current svg {
-  filter: none;
+  filter: grayscale(0.75) brightness(1.75);
 }
