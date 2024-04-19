@@ -14,6 +14,7 @@
 
   --height: 2rem;
   --width: 6.9rem;
+  --top: 0;
   --left: -1rem;
 
   clip-path: polygon(
@@ -29,6 +30,10 @@
   pointer-events: none;
 
   transition: clip-path 0.35s ease-in-out;
+}
+
+body[top='false'] .overlay {
+  --top: 100%;
 }
 
 .overlay .link {
@@ -125,10 +130,6 @@
   color: var(--background-color);
 }
 
-body[top='false'] .overlay {
-  --top: 100%;
-}
-
 @supports not (animation-timeline: scroll()) {
   .overlay {
     display: none;
@@ -168,7 +169,7 @@ body[top='false'] .overlay {
 @property --left {
   syntax: '<length>';
   inherits: true;
-  initial-value: -10px;
+  initial-value: -1000px;
 }
 
 @property --width {

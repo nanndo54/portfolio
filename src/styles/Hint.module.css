@@ -30,8 +30,8 @@
 }
 
 @media (pointer: coarse) {
-  .base::before,
-  .base::after {
+  .base:not(:global(.hint--always))::before,
+  .base:not(:global(.hint--always))::after {
     opacity: 0 !important;
   }
 }

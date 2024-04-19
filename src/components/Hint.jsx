@@ -48,6 +48,7 @@ export default function Hint({
           styles.hide
       )}
       aria-label={hint}
+      role='tooltip'
       onClick={clickLabel || hideOnClick || showOnClick ? handleClick : undefined}
     >
       {children}

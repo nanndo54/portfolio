@@ -30,6 +30,7 @@ export default function Logo() {
       {available && (
         <Hint className={styles.status} label={aria.goToContact} position='bottom'>
           <button
+            type='button'
             onClick={() => {
               document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
             }}

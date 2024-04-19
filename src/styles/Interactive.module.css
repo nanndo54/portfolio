@@ -78,8 +78,14 @@ body:hover .base {
 
 .base strong {
   position: absolute;
+
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-image: none;
+
   white-space: nowrap;
-  -webkit-text-stroke: 0.03125rem transparent;
+  color: transparent;
+  text-decoration: 0.175rem underline var(--secondary-accent-color);
 }
 
 @media print {
