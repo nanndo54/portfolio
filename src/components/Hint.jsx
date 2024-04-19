@@ -37,6 +37,7 @@ export default function Hint({
       className={clsx(
         styles.base,
         className,
+        'no-select',
         'hint--no-shadow hint--rounded hint--bounce',
         `hint--${position}`,
         (clicked || showAlways) && 'hint--always',

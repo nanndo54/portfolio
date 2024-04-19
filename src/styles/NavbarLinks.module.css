@@ -1,8 +1,39 @@
 .base {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 
   pointer-events: all;
+}
+
+.overlay {
+  position: absolute;
+  height: 5rem;
+  left: -0.5rem;
+  padding-inline: 0.5rem;
+
+  --height: 2rem;
+  --width: 6.9rem;
+  --left: -1rem;
+
+  clip-path: polygon(
+    calc(var(--left) + 0.5rem) calc(var(--top) - var(--height)),
+    calc(var(--left) + var(--width)) calc(var(--top) - var(--height)),
+    calc(var(--left) + var(--width) - 0.5rem) var(--top),
+    var(--left) var(--top)
+  );
+
+  background-color: var(--secondary-accent-color);
+
+  z-index: 1;
+  pointer-events: none;
+
+  transition: clip-path 0.35s ease-in-out;
+}
+
+.overlay .link {
+  color: var(--background-color);
+  text-shadow: none;
 }
 
 .link {
@@ -13,14 +44,13 @@
   text-shadow: 0 0 0.125rem var(--background-color);
   color: var(--foreground-color);
 
-  height: auto;
+  height: 2rem;
   padding-inline: 0.75rem;
   border-radius: 0;
   margin-left: -0.5rem;
 
   clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
 
-  transform: translateY(-5rem);
   transition:
     transform 0.25s ease-out,
     scale 0.25s ease-out,
@@ -29,23 +59,22 @@
     text-shadow 0.2s ease-out;
 }
 
-.link.current {
-  background-color: var(--secondary-accent-color);
-  color: var(--background-color);
-  text-shadow: none;
+.link:not(.navigator):hover {
+  background-color: var(--dimmer-secondary-accent-color);
 }
 
-.link:hover {
-  background-color: var(--dim-secondary-accent-color);
-}
-
-.link.current:hover {
-  background-color: var(--secondary-accent-color);
+.link:not(.navigator):active {
+  box-shadow: unset;
+  background-color: var(--dimmest-secondary-accent-color);
 }
 
 .navigator {
   display: none;
-  margin: 0;
+  margin-left: 0.5rem;
+
+  background-color: var(--secondary-accent-color);
+  color: var(--background-color);
+  text-shadow: none;
 }
 
 .menu {
@@ -96,7 +125,27 @@
   color: var(--background-color);
 }
 
-@media (max-width: 700px) {
+body[top='false'] .overlay {
+  --top: 100%;
+}
+
+@supports not (animation-timeline: scroll()) {
+  .overlay {
+    display: none;
+  }
+
+  .link.current {
+    background-color: var(--secondary-accent-color);
+    color: var(--background-color);
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .overlay {
+    display: none;
+  }
+
   .base {
     width: 100%;
   }
@@ -110,21 +159,20 @@
   }
 }
 
-@supports (animation-timeline: scroll()) {
-  .link {
-    animation: navbar-links-scroll ease-out forwards;
-    animation-timeline: scroll(root);
-    animation-range: 0 50vh;
-  }
-
-  @keyframes navbar-links-scroll {
-    to {
-      transform: translateY(0);
-    }
-  }
+@property --top {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 0%;
 }
-@supports not (animation-timeline: scroll()) {
-  body[top='false'] .link {
-    transform: translateY(0);
-  }
+
+@property --left {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: -10px;
+}
+
+@property --width {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0px;
 }

@@ -6,7 +6,9 @@
 :root {
   font-size: 16px;
 
-  background-color: Canvas;
+  /* background-color: Canvas; */
+  background-color: white;
+
   color: CanvasText;
   color-scheme: light dark;
 
@@ -37,6 +39,7 @@ body {
   --dimmest: 0.125;
 
   --error-color: rgb(213, 67, 67);
+  --success-color: rgb(67, 213, 133);
 
   --light-color: hsl(var(--light));
   --dim-light-color: hsl(var(--light), var(--dim));
@@ -101,8 +104,8 @@ body[dark='true'] {
   body:not([dark]) {
     color-scheme: dark;
 
-    --accent: 210, 85%, 65%;
-    --secondary-accent: 245, 85%, 65%;
+    --accent: 210, 85%, 60%;
+    --secondary-accent: 245, 80%, 68%;
     --dimmer: 0.3625;
 
     --foreground-color: var(--light-color);
@@ -263,13 +266,13 @@ u {
 
 .interactive-border {
   position: relative;
-  border: 0.125rem solid var(--dimmer-foreground-color);
+  border: 0.15rem solid var(--dim-accent-color);
   border-radius: 1.25rem;
-  background-color: var(--dimmer-background-color);
+  background-color: var(--dimmest-background-color);
 
   transition:
     filter 0.5s,
-    background-color 0.5s,
+    background-color 0.25s,
     border-color 0.5s;
 }
 
@@ -302,12 +305,6 @@ body :not(textarea)::-webkit-scrollbar {
 
 ::selection {
   color: var(--background-color);
-  background-color: var(--foreground-color);
+  background-color: var(--dim-accent-color);
   -webkit-text-fill-color: var(--background-color);
-}
-
-h2::selection {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  -webkit-text-fill-color: var(--foreground-color);
 }

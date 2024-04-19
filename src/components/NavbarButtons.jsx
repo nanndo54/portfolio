@@ -13,7 +13,7 @@ export default async function NavbarButtons() {
     <div className={styles.base}>
       <Hint position='bottom-left' label={aria.toggleLocale} hideOnClick>
         <Link
-          className={clsx(styles.language, 'no-select')}
+          className={clsx(styles.language)}
           href={locale === 'en' ? '/es' : '/en'}
           scroll={false}
           decoration={false}

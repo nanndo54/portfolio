@@ -25,7 +25,8 @@ const sections = [
   },
   {
     id: 'contact',
-    Tag: ContactSection
+    Tag: ContactSection,
+    ignore: true
   },
   {
     id: 'quote',

@@ -32,8 +32,12 @@ const useAppStore = create(
         theme
       }),
       onRehydrateStorage: () => (state) => {
-        if (state.theme != null) return
-        state.toggleTheme(window.matchMedia('(prefers-color-scheme: dark)').matches)
+        const prefersDarkScheme = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches
+        if (state.theme !== prefersDarkScheme) return
+
+        state.toggleTheme()
       }
     }
   )

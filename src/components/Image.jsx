@@ -32,8 +32,7 @@ export default function Image({
         className={clsx(
           className,
           styles.base,
-          border && `${styles.border} interactive-border`,
-          'no-select'
+          border && `${styles.border} interactive-border`
         )}
         draggable={false}
         height={height}

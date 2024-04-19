@@ -9,7 +9,7 @@ import sections from '@/constants/sections'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
 import useDictionary from 'i18n/client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function NavbarLinks() {
   const { currentSection: currentSectionId } = useAppStore()
@@ -38,21 +38,46 @@ export default function NavbarLinks() {
   const currentSection =
     links.find(({ id }) => id === currentSectionId)?.label || links[0].label
 
+  const linksElements = links.map(({ id, label }) => (
+    <Button
+      key={id}
+      className={clsx(styles.link, currentSectionId === id && styles.current)}
+      onClick={() => {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+      }}
+      title={`${aria.goTo} ${label}`}
+    >
+      {label}
+    </Button>
+  ))
+
+  useEffect(() => {
+    if (!CSS.supports('animation-timeline', 'scroll()')) return
+
+    const overlayElement = document.querySelector(`.${styles.overlay}`)
+    const elements = Array.from(overlayElement.children)
+
+    const elementIndex = elements.findIndex((element) =>
+      element.classList.contains(styles.current)
+    )
+    if (elementIndex === -1) return
+
+    let left = elements.slice(0, elementIndex).reduce((acc, element) => {
+      return acc + element.offsetWidth - 8
+    }, 0)
+    const width = elements[elementIndex].offsetWidth
+
+    if (width === 0) left = -1000
+
+    overlayElement.style.setProperty('--left', `${left}px`)
+    overlayElement.style.setProperty('--width', `${width}px`)
+  }, [linksElements, currentSectionId])
+
   return (
     <>
       <div className={styles.base}>
-        {links.map(({ id, label }) => (
-          <Button
-            key={id}
-            className={clsx(styles.link, currentSectionId === id && styles.current)}
-            onClick={() => {
-              document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-            }}
-            title={`${aria.goTo} ${label}`}
-          >
-            {label}
-          </Button>
-        ))}
+        <div className={clsx(styles.base, styles.overlay)}>{linksElements}</div>
+        {linksElements}
         {currentSection && (
           <Button
             className={clsx(styles.link, styles.current, styles.navigator)}
@@ -73,22 +98,7 @@ export default function NavbarLinks() {
           title={aria.close}
           className={styles.closeButton}
         />
-        {links.map(({ id, label }) => (
-          <Button
-            key={id}
-            className={clsx(
-              styles.link,
-              currentSectionId === id && styles.current,
-              'no-select'
-            )}
-            onClick={() =>
-              document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-            }
-            title={`${aria.goTo} ${id}`}
-          >
-            {label}
-          </Button>
-        ))}
+        {linksElements}
       </div>
     </>
   )

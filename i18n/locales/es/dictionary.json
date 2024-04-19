@@ -24,7 +24,7 @@
     "name": "Pablo Cabrera",
     "presentation": "¡Hola! Soy <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en <u>tecnologías web</u> y <u>diseño</u>.",
     "email": "nanndo54@outlook.com",
-    "status": "(Buscando empleo)",
+    "available": "Disponible",
     "emailButton": "Copia mi email",
     "cvButton": "¡Descarga mi CV!",
     "avatar": {
@@ -411,6 +411,7 @@
     "downloaded": "¡Descargado! ✅",
     "goTo": "Navegar a",
     "goToTop": "Ir hacia arriba",
+    "goToContact": "Ir a contacto",
     "navigateTo": "Navegar a",
     "nextImage": "Ver imagen siguiente",
     "openShowcase": "Abrir en grande",

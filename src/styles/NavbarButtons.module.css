@@ -1,4 +1,6 @@
 .base {
+  width: 5.25rem;
+
   display: flex;
   align-items: center;
   justify-content: flex-end;

@@ -11,6 +11,7 @@
 
   font-family: var(--title-font);
   font-style: italic;
+  font-weight: 600;
 
   background-color: var(--foreground-color);
   color: var(--background-color);
@@ -26,4 +27,11 @@
 .hide:not(:global(.hint--always))::before,
 .hide:not(:global(.hint--always))::after {
   opacity: 0 !important;
+}
+
+@media (pointer: coarse) {
+  .base::before,
+  .base::after {
+    opacity: 0 !important;
+  }
 }

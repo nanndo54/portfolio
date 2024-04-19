@@ -10,7 +10,7 @@
   width: 100%;
 
   opacity: 0;
-  mask: radial-gradient(30rem at var(--x) var(--y), black, #000c 60%, transparent);
+  mask: radial-gradient(27.5rem at var(--x) var(--y), black, #000c 60%, transparent);
   pointer-events: none;
 
   transition:
@@ -38,7 +38,7 @@ body:hover .base {
 
 .base :global(.interactive-border) {
   position: absolute;
-  background-color: var(--dimmest-secondary-accent-color);
+  background-color: transparent;
   border-color: var(--secondary-accent-color);
   inset: inherit;
 }

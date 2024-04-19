@@ -1,4 +1,15 @@
 .base {
+  width: 5.25rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  pointer-events: all;
+}
+
+.logo {
   height: 2rem;
   width: 2rem;
 
@@ -6,27 +17,81 @@
   margin-left: 0;
   border-radius: 0;
   flex-shrink: 0;
-
-  pointer-events: all;
 }
 
-.base:active {
+.logo:active {
   box-shadow: none;
 }
 
-.base > figure {
+.logo > figure {
   height: 100%;
   width: 100%;
 }
 
-.base svg {
+.logo svg {
+  filter: drop-shadow(0 0 0.0625rem var(--dark-color));
   transition: filter 0.5s;
 }
 
-.base.current svg {
-  filter: grayscale(1) brightness(0.25);
+.logo.current svg {
+  filter: drop-shadow(0 0 0.0625rem var(--dark-color)) grayscale(1) brightness(0.25);
 }
 
-body[dark='true'] .base.current svg {
-  filter: grayscale(1) brightness(1.75);
+body[dark='true'] .logo.current svg {
+  filter: drop-shadow(0 0 0.0625rem var(--dark-color)) grayscale(1) brightness(1.75);
+}
+
+.status {
+  position: relative;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1;
+
+  padding: 0.3rem 1.25rem 0.3rem 0.625rem;
+  border-radius: 1rem;
+  border: 0.15rem solid var(--accent-color);
+  background-color: var(--dim-background-color);
+
+  transition:
+    background-color 0.5s,
+    color 0.5s,
+    border-color 0.5s;
+}
+
+.status > ::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+
+  height: 0.35rem;
+  width: 0.35rem;
+  border-radius: 50%;
+  background-color: var(--success-color);
+
+  transform: translateY(-50%);
+  transition: background-color 0.5s;
+  animation: pulse 2s 3s infinite;
+}
+
+.status:hover {
+  border-color: var(--success-color);
+}
+
+@media (max-width: 800px) {
+  .status {
+    scale: 0.75;
+
+    position: absolute;
+    left: -1.625rem;
+    top: 70%;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    filter: drop-shadow(0 0 0.35rem var(--accent-color));
+  }
 }

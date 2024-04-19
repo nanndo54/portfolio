@@ -32,7 +32,7 @@ export default function Input({
   return (
     <label className={clsx(styles.base, 'interactive-border')}>
       <Hint
-        className={clsx(styles.label, 'no-select', 'interactive-text')}
+        className={clsx(styles.label, 'interactive-text')}
         label={required ? 'Required value' : undefined}
       >
         <b>{label}</b>
