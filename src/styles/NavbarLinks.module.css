@@ -3,6 +3,7 @@
   display: flex;
   align-items: flex-end;
 
+  overflow: visible;
   pointer-events: all;
 }
 
@@ -12,8 +13,8 @@
   left: -0.5rem;
   padding-inline: 0.5rem;
 
-  --height: 2rem;
-  --width: 8.2rem;
+  --height: 2.5rem;
+  --width: 6.9rem;
   --top: 0%;
   --left: 0px;
 
@@ -33,7 +34,7 @@
 }
 
 .overlay:not(:has(> .current)) {
-  --top: 0% !important;
+  --top: 0%;
 }
 
 body[top='false'] .overlay {
@@ -53,13 +54,14 @@ body[top='false'] .overlay {
   text-shadow: 0 0 0.125rem var(--background-color);
   color: var(--foreground-color);
 
-  height: 2rem;
+  height: 2.5rem;
   padding-inline: 0.75rem;
   border-radius: 0;
   margin-left: -0.5rem;
 
   clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
 
+  overflow: visible;
   transition:
     transform 0.25s ease-out,
     scale 0.25s ease-out,
@@ -75,6 +77,59 @@ body[top='false'] .overlay {
 .link:not(.navigator):active {
   box-shadow: unset;
   background-color: var(--dimmest-secondary-accent-color);
+}
+
+div:has(> .link) {
+  position: relative;
+}
+
+.status {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -0.7rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  padding: 0.125rem 1.125rem 0.125rem 0.3rem;
+  border-radius: 1rem;
+  border: 0.125rem solid var(--accent-color);
+  background-color: var(--dim-background-color);
+
+  pointer-events: none;
+  transition:
+    background-color 0.5s,
+    color 0.5s,
+    border-color 0.5s;
+}
+
+.status::after {
+  content: '';
+
+  position: absolute;
+  top: 37.5%;
+  right: 0.5rem;
+
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 50%;
+  background-color: var(--success-color);
+
+  transition: background-color 0.5s;
+  /* animation: pulse 2s 3s infinite; */
+}
+
+@media (max-width: 800px) {
+  .status {
+    /* border-color: var(--success-color); */
+  }
+}
+
+@keyframes pulse {
+  50% {
+    filter: drop-shadow(0 0 0.2rem var(--accent-color));
+  }
 }
 
 .navigator {

@@ -24,7 +24,6 @@
     "name": "Pablo Cabrera",
     "presentation": "¡Hola! Soy <strong>Desarrollador Web Full-Stack</strong> con amplios conocimientos en <u>tecnologías web</u> y <u>diseño</u>.",
     "email": "nanndo54@outlook.com",
-    "available": "Disponible",
     "emailButton": "Copia mi email",
     "cvButton": "¡Descarga mi CV!",
     "avatar": {
@@ -384,8 +383,8 @@
     "title": "¡Contáctame!",
     "messageText": "O envíame un mensaje",
     "form": {
-      "emailLabel": "Tu email",
-      "nameLabel": "Tu nombre",
+      "emailLabel": "Email",
+      "nameLabel": "Nombre",
       "nameDefault": "No ingresado",
       "subjectLabel": "Asunto",
       "subjectPlaceholder": "¡Pongámonos en contacto!",
@@ -406,12 +405,12 @@
     "text": "El misterio de la <strong>vida</strong> no es un problema a resolver, sino una realidad a <strong>experimentar</strong>"
   },
   "aria": {
+    "available": "Disponible",
     "close": "Cerrar",
     "copied": "¡Copiado! ✅",
     "downloaded": "¡Descargado! ✅",
     "goTo": "Navegar a",
     "goToTop": "Ir hacia arriba",
-    "goToContact": "Ir a contacto",
     "navigateTo": "Navegar a",
     "nextImage": "Ver imagen siguiente",
     "openShowcase": "Abrir en grande",

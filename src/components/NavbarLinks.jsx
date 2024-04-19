@@ -39,16 +39,20 @@ export default function NavbarLinks() {
     links.find(({ id }) => id === currentSectionId)?.label || links[0].label
 
   const linksElements = links.map(({ id, label }) => (
-    <Button
-      key={id}
-      className={clsx(styles.link, currentSectionId === id && styles.current)}
-      onClick={() => {
-        document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-      }}
-      title={`${aria.goTo} ${label}`}
-    >
-      {label}
-    </Button>
+    <div className={clsx(currentSectionId === id && styles.current)} key={id}>
+      <Button
+        className={styles.link}
+        onClick={() => {
+          document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+        }}
+        title={`${aria.goTo} ${label}`}
+      >
+        {label}
+      </Button>
+      {id === 'contact' && (
+        <span className={clsx(styles.status, 'no-select')}>{aria.available}</span>
+      )}
+    </div>
   ))
 
   useEffect(() => {
@@ -63,9 +67,9 @@ export default function NavbarLinks() {
     if (elementIndex === -1) return
 
     let left = elements.slice(0, elementIndex).reduce((acc, element) => {
-      return acc + element.offsetWidth - 8
+      return acc + element.offsetWidth
     }, 0)
-    const width = elements[elementIndex].offsetWidth
+    const width = elements[elementIndex].offsetWidth + 8
 
     if (width === 0) left = -1000
 

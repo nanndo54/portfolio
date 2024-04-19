@@ -3,6 +3,7 @@ import Hint from '@/components/Hint'
 import styles from '@/styles/Input.module.css'
 
 import clsx from 'clsx/lite'
+import useDictionary from 'i18n/client'
 
 export default function Input({
   label,
@@ -16,6 +17,9 @@ export default function Input({
   defaultValue,
   autoComplete
 }) {
+  const { form } = useDictionary('contact')
+  const { requiredLabel } = form
+
   const Tag = textarea ? 'textarea' : 'input'
   const props = {
     className: styles.input,
@@ -33,7 +37,7 @@ export default function Input({
     <label className={clsx(styles.base, 'interactive-border')}>
       <Hint
         className={clsx(styles.label, 'interactive-text')}
-        label={required ? 'Required value' : undefined}
+        label={required ? requiredLabel : undefined}
       >
         <b>{label}</b>
       </Hint>
