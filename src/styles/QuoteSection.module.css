@@ -31,12 +31,14 @@
 
 .quote sup {
   font-size: 3rem;
-  vertical-align: super;
+  vertical-align: middle;
   line-height: 0;
 
-  padding-inline: 0 0.25rem;
-  position: relative;
-  top: 1.5rem;
+  padding-inline: 0 0.5rem;
+}
+
+.quote sup:nth-child(2 of sup) {
+  padding-inline: 0.5rem 0;
 }
 
 .quote .author {

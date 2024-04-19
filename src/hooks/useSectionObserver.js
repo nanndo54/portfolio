@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react'
 export default function useSectionObserver() {
   const { setCurrentSection } = useAppStore()
   const router = useRouter()
-  const [sectionsIntersection, setSectionsIntersected] = useState([])
+  const [sectionsIntersection, setSectionsIntersected] = useState(
+    sections.filter(({ hide }) => !hide).map(({ id }) => ({ id, intersected: false }))
+  )
 
   const currentSection = sectionsIntersection.find(({ intersected }) => intersected)?.id
 

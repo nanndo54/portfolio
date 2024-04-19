@@ -34,7 +34,6 @@ export default function Image({
           styles.base,
           border && `${styles.border} interactive-border`
         )}
-        draggable={false}
         height={height}
         width={width}
         fill={fill}

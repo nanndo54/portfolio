@@ -9,7 +9,7 @@ export default async function Footer() {
     <footer className={styles.base}>
       <Link href='https://github.com/nanndo54/portfolio' isExternal>
         Source
-        <Icon src={githubIcon} backgroundColor />
+        <Icon src={githubIcon} lightColor />
       </Link>
       •<p>2024</p>
     </footer>

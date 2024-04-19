@@ -13,9 +13,9 @@
   padding-inline: 0.5rem;
 
   --height: 2rem;
-  --width: 6.9rem;
-  --top: 0;
-  --left: -1rem;
+  --width: 8.2rem;
+  --top: 0%;
+  --left: 0px;
 
   clip-path: polygon(
     calc(var(--left) + 0.5rem) calc(var(--top) - var(--height)),
@@ -29,7 +29,11 @@
   z-index: 1;
   pointer-events: none;
 
-  transition: clip-path 0.35s ease-in-out;
+  transition: clip-path 0.2s linear;
+}
+
+.overlay:not(:has(> .current)) {
+  --top: 0% !important;
 }
 
 body[top='false'] .overlay {
@@ -169,7 +173,7 @@ body[top='false'] .overlay {
 @property --left {
   syntax: '<length>';
   inherits: true;
-  initial-value: -1000px;
+  initial-value: 0px;
 }
 
 @property --width {

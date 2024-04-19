@@ -49,9 +49,9 @@ body[dark='true'] .logo.current svg {
   white-space: nowrap;
   line-height: 1;
 
-  padding: 0.3rem 1.25rem 0.3rem 0.625rem;
-  border-radius: 1rem;
-  border: 0.15rem solid var(--accent-color);
+  padding: 0.25rem 1.25rem 0.25rem 0.5rem;
+  border-radius: 0.625rem;
+  border: 0.125rem solid var(--accent-color);
   background-color: var(--dim-background-color);
 
   transition:
@@ -63,11 +63,11 @@ body[dark='true'] .logo.current svg {
 .status > ::after {
   content: '';
   position: absolute;
-  top: 40%;
+  top: 37.5%;
   right: 0.5rem;
 
-  height: 0.35rem;
-  width: 0.35rem;
+  height: 0.4rem;
+  width: 0.4rem;
   border-radius: 50%;
   background-color: var(--success-color);
 

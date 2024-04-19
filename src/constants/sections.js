@@ -26,6 +26,7 @@ const sections = [
   {
     id: 'contact',
     Tag: ContactSection,
+    hide: true,
     ignore: true
   },
   {

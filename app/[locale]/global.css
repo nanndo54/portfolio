@@ -268,7 +268,7 @@ u {
   position: relative;
   border: 0.15rem solid var(--dim-accent-color);
   border-radius: 1.25rem;
-  background-color: var(--dimmest-background-color);
+  background-color: var(--dimmer-background-color);
 
   transition:
     filter 0.5s,
