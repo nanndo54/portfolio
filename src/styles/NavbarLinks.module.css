@@ -10,18 +10,18 @@
 .overlay {
   position: absolute;
   height: 5rem;
-  left: -0.5rem;
-  padding-inline: 0.5rem;
+  left: -0.75rem;
+  padding-inline: 0.75rem;
 
   --height: 2.25rem;
-  --width: 9.5rem;
+  --width: 8.8rem;
   --top: 0%;
   --left: 0px;
 
   clip-path: polygon(
-    calc(var(--left) + 0.75rem) calc(var(--top) - var(--height)),
+    calc(var(--left) + 0.625rem) calc(var(--top) - var(--height)),
     calc(var(--left) + var(--width)) calc(var(--top) - var(--height)),
-    calc(var(--left) + var(--width) - 0.75rem) var(--top),
+    calc(var(--left) + var(--width) - 0.625rem) var(--top),
     var(--left) var(--top)
   );
 
@@ -47,6 +47,8 @@ body[top='false'] .overlay {
 }
 
 .link {
+  position: relative;
+
   font-size: 1.25rem;
   font-family: var(--title-font);
   font-style: italic;
@@ -59,11 +61,15 @@ body[top='false'] .overlay {
   height: 2.25rem;
   padding-inline: 1rem;
   border-radius: 0;
-  margin-left: -0.5rem;
+  margin-right: -0.75rem;
 
-  clip-path: polygon(0.75rem 0%, 100% 0%, calc(100% - 0.75rem) 100%, 0% 100%);
+  clip-path: polygon(
+    0.875rem 0%,
+    100% 0%,
+    calc(100% - 0.875rem) calc(100% + 0.875rem),
+    0% calc(100% + 0.875rem)
+  );
 
-  overflow: visible;
   transition:
     transform 0.25s ease-out,
     scale 0.25s ease-out,
@@ -81,26 +87,23 @@ body[top='false'] .overlay {
   background-color: var(--dimmest-secondary-accent-color);
 }
 
-div:has(> .link) {
-  position: relative;
-}
-
 .status {
   position: absolute;
-  right: -0.15rem;
+  right: 0.65rem;
   bottom: -0.7rem;
 
   font-size: 0.7rem;
   font-weight: 600;
   white-space: nowrap;
   line-height: 1;
+  text-transform: none;
 
   padding: 0.15rem 0.875rem 0.15rem 0.3rem;
   border-radius: 1rem;
   border: 0.125rem solid var(--accent-color);
   background-color: var(--dim-background-color);
+  color: var(--foreground-color);
 
-  pointer-events: none;
   transition:
     background-color 0.5s,
     color 0.5s,
@@ -185,7 +188,6 @@ div:has(> .link) {
 
 .menu .link {
   width: 90%;
-  margin: auto;
   font-size: 1.25rem;
   color: var(--light-color);
   padding-block: 0.25rem;
@@ -195,6 +197,10 @@ div:has(> .link) {
 .menu .link.current {
   background-color: var(--foreground-color);
   color: var(--background-color);
+}
+
+.menu .status {
+  display: none;
 }
 
 @supports not (animation-timeline: scroll()) {

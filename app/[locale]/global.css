@@ -34,8 +34,8 @@ body {
 
   --light: 237, 45%, 96%;
   --dark: 210, 45%, 4%;
-  --accent: 210, 85%, 55%;
-  --secondary-accent: 245, 85%, 60%;
+  --accent: 207, 80%, 50%;
+  --secondary-accent: 248, 95%, 62%;
   --dim: 0.7;
   --dimmer: 0.45;
   --dimmest: 0.125;
@@ -83,8 +83,8 @@ body.no-scroll {
 }
 
 body[dark='true'] {
-  --accent: 210, 85%, 60%;
-  --secondary-accent: 245, 80%, 68%;
+  --accent: 207, 80%, 55%;
+  --secondary-accent: 248, 95%, 69%;
   --dimmer: 0.3625;
 
   --foreground-color: var(--light-color);
@@ -106,8 +106,8 @@ body[dark='true'] {
   body:not([dark]) {
     color-scheme: dark;
 
-    --accent: 210, 85%, 60%;
-    --secondary-accent: 245, 80%, 68%;
+    --accent: 207, 80%, 55%;
+    --secondary-accent: 248, 95%, 69%;
     --dimmer: 0.3625;
 
     --foreground-color: var(--light-color);
