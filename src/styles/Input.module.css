@@ -54,6 +54,7 @@
 }
 
 .base:has(> :focus) {
+  background-color: var(--dim-background-color);
   border-color: var(--accent-color);
 }
 

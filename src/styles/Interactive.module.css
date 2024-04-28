@@ -51,12 +51,31 @@ body:hover .base {
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0 -0.5rem 1rem var(--secondary-accent-color)) !important;
+  filter: drop-shadow(0.125rem 0.125rem 0 var(--secondary-accent-color))
+    drop-shadow(-0.125rem -0.125rem 0 var(--secondary-accent-color))
+    drop-shadow(0.125rem -0.125rem 0 var(--secondary-accent-color))
+    drop-shadow(-0.125rem 0.125rem 0 var(--secondary-accent-color));
 }
 
-.base :global(.interactive-aura) > :first-child {
-  background: var(--dim-secondary-accent-color);
+.base :global(.interactive-aura) > :nth-child(1) {
+  background-image: none;
 }
+
+/*
+.base :global(.interactive-aura) > :nth-child(2) {
+   filter: drop-shadow(0 -0.1rem 0 var(--dim-foreground-color))
+    drop-shadow(0 0.25rem 0 var(--dim-foreground-color));
+}
+
+ body[dark='true'] .base :global(.interactive-aura) > :nth-child(2) {
+  filter: brightness(0.9) contrast(1.1) drop-shadow(0 -0.175rem 0 var(--foreground-color));
+}
+@media (prefers-color-scheme: dark) {
+  body:not([dark]) .base :global(.interactive-aura) > :nth-child(2) {
+    filter: brightness(0.9) contrast(1.1)
+      drop-shadow(0 -0.175rem 0 var(--foreground-color));
+  }
+} */
 
 .base :global(.interactive-text) {
   position: absolute;
@@ -86,6 +105,7 @@ body:hover .base {
   white-space: nowrap;
   color: transparent;
   text-decoration: 0.175rem underline var(--secondary-accent-color);
+  opacity: 0;
 }
 
 @media print {

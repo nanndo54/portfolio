@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '@/styles/Link.module.css'
 
 import buttonStyles from '@/styles/Button.module.css'
@@ -9,7 +11,7 @@ const classNameByVariant = {
   secondary: `${buttonStyles.secondary} interactive-border`
 }
 
-export default async function Link({
+export default function Link({
   className,
   title,
   href = '#',

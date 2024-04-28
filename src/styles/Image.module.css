@@ -17,7 +17,7 @@ body[dark='true'] .base {
   filter: brightness(0.9) contrast(1.1);
 }
 @media (prefers-color-scheme: dark) {
-  .base {
+  body:not([dark]) .base {
     filter: brightness(0.9) contrast(1.1);
   }
 }

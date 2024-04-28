@@ -35,6 +35,9 @@ const useAppStore = create(
         prefersDarkScheme
       }),
       onRehydrateStorage: () => (state) => {
+        const currentSection = window.location.hash.slice(1)
+        if (currentSection) state.setCurrentSection(currentSection)
+
         const prefersDarkScheme = window.matchMedia(
           '(prefers-color-scheme: dark)'
         ).matches
@@ -45,9 +48,6 @@ const useAppStore = create(
         if (state.prefersDarkScheme !== prefersDarkScheme && prefersDarkScheme)
           state.toggleTheme(true)
         else if (prefersDarkScheme) state.toggleTheme(true)
-
-        const currentSection = window.location.hash.slice(1)
-        if (currentSection) state.setCurrentSection(currentSection)
       }
     }
   )

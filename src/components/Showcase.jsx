@@ -127,8 +127,8 @@ export default function Showcase() {
             />
           </div>
           <footer onClick={(ev) => ev.stopPropagation()}>
-            <Icon src={zoomIcon} lightColor />
             <p>{(scale * 100).toFixed(0)}%</p>
+            <Icon src={zoomIcon} lightColor />
             <span className={styles.buttons}>
               <IconButton
                 src={minusIcon}

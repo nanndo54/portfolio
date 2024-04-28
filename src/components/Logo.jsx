@@ -1,8 +1,8 @@
 'use client'
 import styles from '@/styles/Logo.module.css'
 
-import Button from '@/components/Button'
 import Icon from '@/components/Icon'
+import Link from '@/components/Link'
 import { logoIcon } from '@/constants/icons'
 import useAppStore from '@/state/store'
 import clsx from 'clsx/lite'
@@ -15,15 +15,14 @@ export default function Logo() {
 
   return (
     <div className={styles.base}>
-      <Button
+      <Link
+        asButton
+        href='/'
         className={clsx(styles.logo, currentSection === 'landing' && styles.current)}
-        onClick={() => {
-          document.getElementById('landing').scrollIntoView({ behavior: 'smooth' })
-        }}
         title={aria.goToTop}
       >
         <Icon src={logoIcon} />
-      </Button>
+      </Link>
     </div>
   )
 }

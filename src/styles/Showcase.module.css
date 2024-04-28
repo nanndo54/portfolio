@@ -109,7 +109,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.1rem;
 
   box-shadow: inset 0 -5.5rem 2rem -2.25rem var(--dim-dark-color);
   z-index: 1;
@@ -120,11 +119,12 @@
   font-weight: 600;
 
   width: 3.25rem;
+  margin-right: 0.75rem;
 }
 
 .base footer > figure {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .buttons {
@@ -132,15 +132,13 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 0.5rem;
 
-  margin-left: 0.75rem;
+  margin-left: 0.5rem;
 }
 
-.buttons figure {
-  height: 2.6rem;
-  width: 2.6rem;
-  border-color: var(--light-color);
+.buttons > * {
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 .previousImage,

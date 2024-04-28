@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   box-sizing: border-box;
 }
@@ -6,7 +8,7 @@
 :root {
   font-size: 16px;
 
-  /* background-color: Canvas; */
+  background-color: Canvas;
   background-color: white;
 
   color: CanvasText;
@@ -19,7 +21,7 @@
 
 body {
   position: relative;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 
   color: var(--foreground-color);
   font-family: var(--body-font);
@@ -152,10 +154,11 @@ p {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 700;
   letter-spacing: -0.075rem;
   line-height: 1.15;
+  transform-origin: center;
 }
 
 h2 {
@@ -185,7 +188,7 @@ h4 {
 @media (max-width: 700px) {
   p,
   strong {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
   }
 
   h2 {
@@ -204,11 +207,11 @@ h4 {
 @media (max-width: 500px) {
   p,
   strong {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   h1 {
-    font-size: 10vw;
+    font-size: 9vw;
   }
 
   h2 {
@@ -249,7 +252,8 @@ b {
 
 strong {
   line-height: normal;
-  font-weight: 600;
+  font-weight: 700;
+
   background-image: linear-gradient(
     to right,
     var(--accent-color),

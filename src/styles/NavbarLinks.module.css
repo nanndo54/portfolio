@@ -13,15 +13,15 @@
   left: -0.5rem;
   padding-inline: 0.5rem;
 
-  --height: 2.5rem;
-  --width: 6.9rem;
+  --height: 2.25rem;
+  --width: 9.5rem;
   --top: 0%;
   --left: 0px;
 
   clip-path: polygon(
-    calc(var(--left) + 0.5rem) calc(var(--top) - var(--height)),
+    calc(var(--left) + 0.75rem) calc(var(--top) - var(--height)),
     calc(var(--left) + var(--width)) calc(var(--top) - var(--height)),
-    calc(var(--left) + var(--width) - 0.5rem) var(--top),
+    calc(var(--left) + var(--width) - 0.75rem) var(--top),
     var(--left) var(--top)
   );
 
@@ -47,19 +47,21 @@ body[top='false'] .overlay {
 }
 
 .link {
+  font-size: 1.25rem;
   font-family: var(--title-font);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
   text-shadow: 0 0 0.125rem var(--background-color);
   color: var(--foreground-color);
+  text-transform: uppercase;
 
-  height: 2.5rem;
-  padding-inline: 0.75rem;
+  height: 2.25rem;
+  padding-inline: 1rem;
   border-radius: 0;
   margin-left: -0.5rem;
 
-  clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
+  clip-path: polygon(0.75rem 0%, 100% 0%, calc(100% - 0.75rem) 100%, 0% 100%);
 
   overflow: visible;
   transition:
@@ -85,14 +87,15 @@ div:has(> .link) {
 
 .status {
   position: absolute;
-  right: -0.5rem;
+  right: -0.15rem;
   bottom: -0.7rem;
 
   font-size: 0.7rem;
   font-weight: 600;
   white-space: nowrap;
+  line-height: 1;
 
-  padding: 0.125rem 1.125rem 0.125rem 0.3rem;
+  padding: 0.15rem 0.875rem 0.15rem 0.3rem;
   border-radius: 1rem;
   border: 0.125rem solid var(--accent-color);
   background-color: var(--dim-background-color);
@@ -109,32 +112,32 @@ div:has(> .link) {
 
   position: absolute;
   top: 37.5%;
-  right: 0.5rem;
+  right: 0.35rem;
 
-  height: 0.4rem;
-  width: 0.4rem;
+  height: 0.3rem;
+  width: 0.3rem;
   border-radius: 50%;
   background-color: var(--success-color);
 
   transition: background-color 0.5s;
-  /* animation: pulse 2s 3s infinite; */
-}
-
-@media (max-width: 800px) {
-  .status {
-    /* border-color: var(--success-color); */
-  }
+  animation: pulse 5s 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
+  47% {
+    scale: 1;
+  }
   50% {
-    filter: drop-shadow(0 0 0.2rem var(--accent-color));
+    scale: 1.25;
+  }
+  65% {
+    scale: 1;
   }
 }
 
 .navigator {
   display: none;
-  margin-left: 0.5rem;
+  padding: 0 1rem;
 
   background-color: var(--secondary-accent-color);
   color: var(--background-color);
@@ -176,10 +179,15 @@ div:has(> .link) {
   height: 1.4rem;
 }
 
+.menu > :has(.link) {
+  width: 100%;
+}
+
 .menu .link {
+  width: 90%;
+  margin: auto;
   font-size: 1.25rem;
   color: var(--light-color);
-  width: 90%;
   padding-block: 0.25rem;
   text-shadow: none;
 }
@@ -201,16 +209,10 @@ div:has(> .link) {
   }
 }
 
-@media (max-width: 650px) {
-  .overlay {
-    display: none;
-  }
-
-  .base {
-    width: 100%;
-  }
-
-  .base .link {
+@media (max-width: 800px) {
+  .base .link,
+  .overlay,
+  .status {
     display: none;
   }
 

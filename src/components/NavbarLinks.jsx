@@ -4,6 +4,7 @@ import styles from '@/styles/NavbarLinks.module.css'
 
 import Button from '@/components/Button'
 import IconButton from '@/components/IconButton'
+import Link from '@/components/Link'
 import { closeIcon } from '@/constants/icons'
 import sections from '@/constants/sections'
 import useAppStore from '@/state/store'
@@ -40,15 +41,14 @@ export default function NavbarLinks() {
 
   const linksElements = links.map(({ id, label }) => (
     <div className={clsx(currentSectionId === id && styles.current)} key={id}>
-      <Button
+      <Link
+        asButton
+        href={`#${id}`}
         className={styles.link}
-        onClick={() => {
-          document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-        }}
         title={`${aria.goTo} ${label}`}
       >
         {label}
-      </Button>
+      </Link>
       {id === 'contact' && (
         <span className={clsx(styles.status, 'no-select')}>{aria.available}</span>
       )}
@@ -69,7 +69,7 @@ export default function NavbarLinks() {
     let left = elements.slice(0, elementIndex).reduce((acc, element) => {
       return acc + element.offsetWidth
     }, 0)
-    const width = elements[elementIndex].offsetWidth + 8
+    const width = elements[elementIndex].offsetWidth + 12
 
     if (width === 0) left = -1000
 
