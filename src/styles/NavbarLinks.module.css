@@ -43,6 +43,7 @@ body[top='false'] .overlay {
 
 .overlay .link {
   color: var(--background-color);
+  background-color: transparent;
   text-shadow: none;
 }
 
@@ -62,6 +63,7 @@ body[top='false'] .overlay {
   padding-inline: 1rem;
   border-radius: 0;
   margin-right: -0.75rem;
+  background-color: var(--dimmest-foreground-color);
 
   clip-path: polygon(
     0.875rem 0%,
