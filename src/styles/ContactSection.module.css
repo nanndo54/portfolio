@@ -21,10 +21,18 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 6.5rem;
+  gap: 4.5rem;
 }
 
-@media (max-width: 600px) {
+.contact {
+  font-size: 1.125rem;
+  border-left: 0.15rem solid var(--dimmer-foreground-color);
+  padding-left: 1rem;
+
+  transition: border-color 0.5s;
+}
+
+@media (max-width: 500px) {
   .title {
     align-items: flex-start;
     flex-direction: column;
@@ -32,13 +40,12 @@
     margin-bottom: 1rem;
   }
 
-  .title > div {
-    align-self: flex-end;
-    gap: 0.625rem;
-  }
+  .contact {
+    align-self: center;
 
-  .title > div > a {
-    height: 2rem;
-    width: 2rem;
+    border-left: none;
+    padding-left: 0;
+    border-block: 0.15rem solid var(--dimmer-foreground-color);
+    padding-block: 0.5rem;
   }
 }

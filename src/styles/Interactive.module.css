@@ -89,6 +89,7 @@ body:hover .base {
 
 .base :global(.interactive-icon) {
   position: absolute;
+  filter: drop-shadow(0 0 0.2rem var(--background-color));
 }
 
 .base :global(.interactive-icon) > svg {

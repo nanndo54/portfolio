@@ -13,7 +13,7 @@ export default async function ContactSection({ id }) {
     <Section className={styles.base} id={id} background={false}>
       <div className={styles.title}>
         <h2>{title}</h2>
-        <ContactIcons />
+        <ContactIcons className={styles.contact} />
       </div>
       <ContactForm>
         <p>{messageText}</p>

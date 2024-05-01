@@ -6,31 +6,27 @@
       "url": "https://www.linkedin.com/in/nanndo54"
     },
     {
-      "name": "GitHub",
-      "icon": "landing/github-icon.svg",
-      "props": {
-        "foregroundColor": true
-      },
-      "url": "https://github.com/nanndo54"
-    },
-    {
       "name": "Email",
       "icon": "landing/email-icon.svg",
       "url": "mailto:nanndo54@outlook.com"
+    },
+    {
+      "name": "GitHub",
+      "icon": "landing/github-icon.svg",
+      "url": "https://github.com/nanndo54"
     }
   ],
   "landing": {
     "title": "Home",
     "name": "Pablo Cabrera",
-    "presentation": "Hi! I'm a <strong>Full-Stack Web Developer</strong> with extensive knowledge in <u>web technologies</u> and <u>design</u>.",
+    "presentation": "Expert in <u>web technologies</u> and <strong>design</strong>.",
     "email": "nanndo54@outlook.com",
     "emailButton": "Copy my email",
     "cvButton": "Download my CV!",
     "avatar": {
       "src": "landing/profile-photo.png",
       "alt": "My photo"
-    },
-    "otherOptions": "or let's connect on"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -422,7 +418,7 @@
     "zoomOut": "Zoom out"
   },
   "meta": {
-    "title": "My Dev Portfolio",
+    "title": "My <DEV/> Portfolio",
     "description": "Hi! I'm Pablo Cabrera (nanndo54), a Full-Stack Web Developer at your disposal. Let's get in touch! 🚀"
   }
 }

@@ -45,6 +45,7 @@ body[top='false'] .overlay {
   color: var(--background-color);
   background-color: transparent;
   text-shadow: none;
+  box-shadow: none;
 }
 
 .link {
@@ -63,7 +64,8 @@ body[top='false'] .overlay {
   padding-inline: 1rem;
   border-radius: 0;
   margin-right: -0.75rem;
-  background-color: var(--dimmest-foreground-color);
+  background-color: var(--dimmest-background-color);
+  box-shadow: inset 0 0 2rem 0 var(--dimmest-foreground-color);
 
   clip-path: polygon(
     0.875rem 0%,
@@ -226,6 +228,12 @@ body[top='false'] .overlay {
 
   .base .navigator {
     display: block;
+  }
+}
+
+@media (max-width: 350px) {
+  .base {
+    display: none;
   }
 }
 

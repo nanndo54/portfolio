@@ -134,7 +134,7 @@ p {
   width: fit-content;
   text-wrap: pretty;
   transform-origin: left;
-  scale: 1.1875 1;
+  scale: 1.2 1;
 
   transition: color 0.5s;
 }
@@ -154,9 +154,9 @@ p {
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: 3rem;
   font-weight: 700;
-  letter-spacing: -0.075rem;
+  letter-spacing: -0.1rem;
   line-height: 1.15;
   transform-origin: center;
 }

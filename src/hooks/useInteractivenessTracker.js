@@ -12,9 +12,25 @@ export default function useInteractivenessTracker() {
 
   useEffect(() => {
     const isCoarse = window.matchMedia('(pointer: coarse)').matches
-    const element = document.body
 
-    if (isCoarse || !element) return
+    if (isCoarse) {
+      const handleTrackInteractiveness = () => {
+        const y = document.documentElement.scrollTop + window.screen.height / 2
+
+        setTimeout(() => callback(null, y), 200)
+      }
+
+      handleTrackInteractiveness()
+
+      window.addEventListener('scroll', handleTrackInteractiveness)
+
+      return () => {
+        window.removeEventListener('scroll', handleTrackInteractiveness)
+      }
+    }
+
+    const element = document.body
+    if (!element) return
 
     const handleTrackInteractiveness = (e) => {
       const { x, y } = element.getBoundingClientRect()
@@ -39,26 +55,6 @@ export default function useInteractivenessTracker() {
       element.removeEventListener('wheel', debouncedHandleTrackInteractiveness, {
         passive: true
       })
-    }
-  }, [callback])
-
-  useEffect(() => {
-    const isCoarse = window.matchMedia('(pointer: coarse)').matches
-
-    if (!isCoarse) return
-
-    const handleTrackInteractiveness = () => {
-      const y = document.documentElement.scrollTop + window.screen.height / 2
-
-      callback(null, y)
-    }
-
-    handleTrackInteractiveness()
-
-    window.addEventListener('scroll', handleTrackInteractiveness)
-
-    return () => {
-      window.removeEventListener('scroll', handleTrackInteractiveness)
     }
   }, [callback])
 }
