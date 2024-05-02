@@ -12,7 +12,7 @@ header.base {
   content: '';
   background-image: radial-gradient(
       15em at 70% 35em,
-      var(--dimmer-secondary-accent-color),
+      var(--dimmer-alt-accent-color),
       transparent
     ),
     radial-gradient(25em at 30% 40em, var(--dimmer-accent-color), transparent);
@@ -26,7 +26,7 @@ header.base {
 }
 
 .info {
-  width: 28.5em;
+  max-width: 28.5em;
   text-align: center;
   align-items: center;
 
@@ -108,7 +108,7 @@ header.base {
   .base::before {
     background-image: radial-gradient(
         15em 9em at 50% 9em,
-        var(--dimmer-secondary-accent-color),
+        var(--dimmer-alt-accent-color),
         transparent
       ),
       radial-gradient(20em 15em at 45% 27em, var(--dimmer-accent-color), transparent);

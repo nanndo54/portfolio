@@ -39,7 +39,7 @@ body:hover .base {
 .base :global(.interactive-border) {
   position: absolute;
   background-color: transparent;
-  border-color: var(--secondary-accent-color);
+  border-color: var(--alt-accent-color);
   inset: inherit;
 }
 
@@ -51,10 +51,10 @@ body:hover .base {
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0.125em 0.125em 0 var(--secondary-accent-color))
-    drop-shadow(-0.125em -0.125em 0 var(--secondary-accent-color))
-    drop-shadow(0.125em -0.125em 0 var(--secondary-accent-color))
-    drop-shadow(-0.125em 0.125em 0 var(--secondary-accent-color));
+  filter: drop-shadow(0.125em 0.125em 0 var(--alt-accent-color))
+    drop-shadow(-0.125em -0.125em 0 var(--alt-accent-color))
+    drop-shadow(0.125em -0.125em 0 var(--alt-accent-color))
+    drop-shadow(-0.125em 0.125em 0 var(--alt-accent-color));
 }
 
 .base :global(.interactive-aura) > :nth-child(1) {
@@ -79,22 +79,22 @@ body:hover .base {
 
 .base :global(.interactive-text) {
   position: absolute;
-  color: var(--secondary-accent-color) !important;
-  text-shadow: 0 0 0.125rem var(--secondary-accent-color);
+  color: var(--alt-accent-color) !important;
+  text-shadow: 0 0 0.125rem var(--alt-accent-color);
 }
 
 .base h2 {
   position: absolute;
-  background-color: var(--secondary-accent-color);
+  background-color: var(--alt-accent-color);
 }
 
 .base :global(.interactive-icon) {
   position: absolute;
-  filter: drop-shadow(0 0 0.2em var(--background-color));
 }
 
 .base :global(.interactive-icon) > svg {
-  fill: var(--secondary-accent-color);
+  fill: var(--alt-accent-color);
+  filter: drop-shadow(0 0 0.2em var(--background-color));
 }
 
 .base strong {
@@ -106,7 +106,7 @@ body:hover .base {
 
   white-space: nowrap;
   color: transparent;
-  text-decoration: 0.175em underline var(--secondary-accent-color);
+  text-decoration: 0.175em underline var(--alt-accent-color);
   opacity: 0;
 }
 

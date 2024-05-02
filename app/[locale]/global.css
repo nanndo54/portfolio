@@ -67,10 +67,10 @@ body {
   --dimmer-accent-color: hsl(var(--accent), var(--dimmer));
   --dimmest-accent-color: hsl(var(--accent), var(--dimmest));
 
-  --secondary-accent-color: hsl(var(--secondary-accent));
-  --dim-secondary-accent-color: hsl(var(--secondary-accent), var(--dim));
-  --dimmer-secondary-accent-color: hsl(var(--secondary-accent), var(--dimmer));
-  --dimmest-secondary-accent-color: hsl(var(--secondary-accent), var(--dimmest));
+  --alt-accent-color: hsl(var(--secondary-accent));
+  --dim-alt-accent-color: hsl(var(--secondary-accent), var(--dim));
+  --dimmer-alt-accent-color: hsl(var(--secondary-accent), var(--dimmer));
+  --dimmest-alt-accent-color: hsl(var(--secondary-accent), var(--dimmest));
 }
 
 body.no-scroll {
@@ -187,8 +187,7 @@ h4 {
 }
 
 @media (max-width: 700px) {
-  p,
-  strong {
+  p {
     font-size: 1.2rem;
   }
 
@@ -206,8 +205,7 @@ h4 {
 }
 
 @media (max-width: 500px) {
-  p,
-  strong {
+  p {
     font-size: 1.125rem;
   }
 
@@ -252,13 +250,14 @@ b {
 }
 
 strong {
+  font-size: inherit;
   line-height: normal;
   font-weight: 700;
 
   background-image: linear-gradient(
     to right,
     var(--accent-color),
-    var(--secondary-accent-color)
+    var(--alt-accent-color)
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -266,7 +265,7 @@ strong {
 }
 
 u {
-  text-decoration: 0.175rem underline var(--secondary-accent-color);
+  text-decoration: 0.175rem underline var(--alt-accent-color);
 }
 
 .interactive-border {

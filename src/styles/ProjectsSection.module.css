@@ -11,7 +11,7 @@
   content: '';
   background-image: radial-gradient(
       15em at 75% 15em,
-      var(--dimmer-secondary-accent-color),
+      var(--dimmer-alt-accent-color),
       transparent
     ),
     radial-gradient(25em at 35% 45em, var(--dimmer-accent-color), transparent);
@@ -108,7 +108,7 @@
   top: 7em;
   padding-inline: 0.5em;
 
-  margin: 0 -1.6875em -1.75em auto;
+  margin: 0 -1.5em -1.25em auto;
 
   transition:
     color 0.5s,

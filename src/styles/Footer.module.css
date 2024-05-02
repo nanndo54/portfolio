@@ -6,7 +6,7 @@
   width: min(35em, calc(100% - 2em));
   padding: 0.75em 1.5em;
   margin: 0 auto;
-  border: 0.125em solid var(--secondary-accent-color);
+  border: 0.125em solid var(--alt-accent-color);
   border-radius: 0.25em;
 
   display: flex;

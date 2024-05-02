@@ -25,7 +25,7 @@
     var(--left) var(--top)
   );
 
-  background-color: var(--secondary-accent-color);
+  background-color: var(--alt-accent-color);
 
   z-index: 1;
   pointer-events: none;
@@ -81,20 +81,20 @@ body[top='false'] .overlay {
 }
 
 .link:not(.navigator):hover {
-  background-color: var(--dimmer-secondary-accent-color);
+  background-color: var(--dimmer-alt-accent-color);
 }
 
 .link:not(.navigator):active {
   box-shadow: unset;
-  background-color: var(--dimmest-secondary-accent-color);
+  background-color: var(--dimmest-alt-accent-color);
 }
 
 .status {
   position: absolute;
-  right: 0.75em;
+  right: 1.125em;
   bottom: -0.7em;
 
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-weight: 600;
   white-space: nowrap;
   line-height: 1;
@@ -144,7 +144,7 @@ body[top='false'] .overlay {
   display: none;
   padding: 0 1.125rem;
 
-  background-color: var(--secondary-accent-color);
+  background-color: var(--alt-accent-color);
   color: var(--background-color);
 }
 
@@ -209,7 +209,7 @@ body[top='false'] .overlay {
   }
 
   .link.current {
-    background-color: var(--secondary-accent-color);
+    background-color: var(--alt-accent-color);
     color: var(--background-color);
   }
 }
@@ -223,6 +223,12 @@ body[top='false'] .overlay {
 
   .base .navigator {
     display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .base {
+    width: 100%;
   }
 }
 

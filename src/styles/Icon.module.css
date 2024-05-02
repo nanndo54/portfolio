@@ -18,7 +18,7 @@
 }
 
 .secondary {
-  border-color: var(--dim-secondary-accent-color);
+  border-color: var(--dim-alt-accent-color);
 }
 
 .icon {
