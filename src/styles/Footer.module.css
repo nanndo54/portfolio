@@ -1,17 +1,17 @@
 .base {
-  clip-path: polygon(1rem 0%, 100% 0%, calc(100% - 1rem) 100%, 0% 100%);
+  clip-path: polygon(1em 0%, 100% 0%, calc(100% - 1em) 100%, 0% 100%);
   background-color: var(--dark-color);
   color: var(--light-color);
 
-  width: min(35rem, calc(100% - 2rem));
-  padding: 0.75rem 1.5rem;
+  width: min(35em, calc(100% - 2em));
+  padding: 0.75em 1.5em;
   margin: 0 auto;
-  border: 0.125rem solid var(--secondary-accent-color);
-  border-radius: 0.25rem;
+  border: 0.125em solid var(--secondary-accent-color);
+  border-radius: 0.25em;
 
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.5em;
 
   transition: background-color 0.5s;
 }
@@ -21,6 +21,6 @@ body[dark='true'] .base {
 }
 
 .base figure {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.25em;
+  width: 1.25em;
 }

@@ -1,14 +1,14 @@
 .base::before {
   content: '';
   background-image: radial-gradient(
-      18rem at 30% 18rem,
+      18em at 30% 18em,
       var(--dimmest-accent-color),
       transparent
     ),
-    radial-gradient(15rem at 70% 25rem, var(--dimmer-secondary-accent-color), transparent);
+    radial-gradient(15em at 70% 25em, var(--dimmer-secondary-accent-color), transparent);
 
   width: 100%;
-  height: 40rem;
+  height: 40em;
   position: absolute;
   left: 0;
   pointer-events: none;
@@ -19,7 +19,7 @@
   align-items: center;
   justify-items: space-between;
 
-  gap: 2rem;
+  gap: 2em;
 }
 
 .images {
@@ -37,7 +37,7 @@
   .subsection,
   .subsection:nth-child(even) {
     flex-direction: column-reverse;
-    gap: 1.75rem;
+    gap: 1.75em;
   }
 
   .images {

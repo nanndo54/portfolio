@@ -1,17 +1,17 @@
 .base {
-  width: 5.25rem;
+  width: 5.25em;
   position: relative;
 
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
 
   pointer-events: all;
 }
 
 .logo {
-  height: 2rem;
-  width: 2rem;
+  height: 2em;
+  width: 2em;
 
   padding: 0;
   margin-left: 0;
@@ -29,14 +29,20 @@
 }
 
 .logo svg {
-  filter: drop-shadow(0 0 0.0625rem var(--dark-color));
+  filter: drop-shadow(0 0 0.0625em var(--dark-color));
   transition: filter 0.5s;
 }
 
 .logo.current svg {
-  filter: drop-shadow(0 0 0.0625rem var(--dark-color)) grayscale(1) brightness(0.25);
+  filter: drop-shadow(0 0 0.0625em var(--dark-color)) grayscale(1) brightness(0.25);
 }
 
 body[dark='true'] .logo.current svg {
-  filter: drop-shadow(0 0 0.0625rem var(--dark-color)) grayscale(1) brightness(1.75);
+  filter: drop-shadow(0 0 0.0625em var(--dark-color)) grayscale(1) brightness(1.75);
+}
+
+@media (max-width: 500px) {
+  .base {
+    width: fit-content;
+  }
 }

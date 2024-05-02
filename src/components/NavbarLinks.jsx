@@ -67,8 +67,8 @@ export default function NavbarLinks() {
 
     let left = elements.slice(0, elementIndex).reduce((acc, element) => {
       return acc + element.offsetWidth - 12
-    }, 12)
-    const width = elements[elementIndex].offsetWidth
+    }, 16)
+    const width = elements[elementIndex].offsetWidth - 4
 
     if (width === 0) left = -1000
 

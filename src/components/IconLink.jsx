@@ -19,7 +19,6 @@ export default function IconLink({
       className={clsx(className, styles.base)}
       title={title}
       onClick={onClick}
-      isExternal
       decoration={false}
       {...props}
     >

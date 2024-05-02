@@ -1,35 +1,35 @@
 .base {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.25em;
 }
 
 .base header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.25em;
 }
 
 .requiredLabel {
-  font-size: 1rem;
+  font-size: 1em;
   white-space: nowrap;
 }
 
 .requiredLabel::before {
   content: '*';
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: var(--accent-color);
 
   position: relative;
-  left: -0.125rem;
-  top: 0.375rem;
+  left: -0.125em;
+  top: 0.375em;
 }
 
 .base footer {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   align-self: flex-end;
 }
 
@@ -47,7 +47,7 @@
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1.25em;
 }
 
 .row_3_2 > :first-child {

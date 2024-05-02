@@ -1,14 +1,14 @@
 .base::before {
   content: '';
   background-image: radial-gradient(
-    32rem at 47% 30rem,
+    32em at 47% 30em,
     var(--dimmer-accent-color) 0,
     transparent 85%
   );
   overflow: visible;
 
   width: 100%;
-  height: 75rem;
+  height: 75em;
   position: absolute;
   left: 0;
   pointer-events: none;
@@ -16,7 +16,7 @@
 
 .content {
   position: relative;
-  height: 50rem;
+  height: 50em;
 
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
     height: auto;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1em;
   }
 }

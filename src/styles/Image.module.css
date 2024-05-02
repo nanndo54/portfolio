@@ -9,8 +9,8 @@
 }
 
 .border {
-  padding: 0.8rem;
-  border-radius: 1.5rem;
+  padding: 0.8em;
+  border-radius: 1.5em;
 }
 
 body[dark='true'] .base {

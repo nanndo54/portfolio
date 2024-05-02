@@ -1,7 +1,7 @@
 .base::after {
-  clip-path: polygon(0.5rem 0%, 100% 0%, calc(100% - 0.5rem) 100%, 0% 100%);
+  clip-path: polygon(0.5em 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
   border-radius: 0;
-  padding-inline: 0.75rem;
+  padding-inline: 0.75em;
 }
 
 .base::before,

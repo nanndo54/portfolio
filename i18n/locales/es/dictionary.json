@@ -398,7 +398,7 @@
   },
   "quote": {
     "author": "Frank Herbert",
-    "text": "El misterio de la <strong>vida</strong> no es un problema a resolver, sino una realidad a <strong>experimentar</strong>"
+    "text": "El misterio de la <u>vida</u> no es un problema a resolver, sino una realidad a <strong>experimentar</strong>"
   },
   "aria": {
     "available": "Disponible",
@@ -412,7 +412,7 @@
     "openShowcase": "Abrir en grande",
     "previousImage": "Ver imagen anterior",
     "seeImage": "Ver imagen",
-    "toggleLocale": "Change to english",
+    "toggleLocale": "Switch to english",
     "toggleTheme": "Cambiar tema oscuro",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar"

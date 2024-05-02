@@ -1,9 +1,9 @@
 .base {
   position: relative;
-  width: 19rem;
-  margin-bottom: 4.5rem;
+  width: 19em;
+  margin-bottom: 2.5em;
 
-  font-size: 0;
+  line-height: 0;
   overflow: visible;
 }
 
@@ -26,12 +26,12 @@
 
 .base .img {
   clip-path: polygon(27.5% 0%, 95.5% 0%, 75.5% 100%, 7.5% 100%);
-  box-shadow: 0 3rem 2rem 1rem var(--dim-background);
+  box-shadow: 0 3em 2em 1em var(--dim-background);
 }
 
 @media (max-width: 800px) {
   .base {
-    width: 15rem;
+    width: 15em;
     margin-bottom: 0;
   }
 }

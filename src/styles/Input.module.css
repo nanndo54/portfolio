@@ -1,7 +1,7 @@
 .base {
   width: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 0.75rem;
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
 
   display: flex;
   cursor: text;
@@ -10,9 +10,9 @@
 .label {
   white-space: nowrap;
 
-  padding-right: 0.75rem;
-  margin-right: 0.75rem;
-  border-right: 0.125rem solid var(--dimmer-foreground-color);
+  padding-right: 0.75em;
+  margin-right: 0.75em;
+  border-right: 0.125em solid var(--dimmer-foreground-color);
 
   transition: border-color 0.25s;
 }
@@ -50,7 +50,7 @@
   color: var(--accent-color);
 
   position: relative;
-  right: -0.25rem;
+  right: -0.25em;
 }
 
 .base:has(> :focus) {
@@ -64,6 +64,6 @@ textarea.input {
 
 @media (max-width: 500px) {
   .base {
-    font-size: 0.875rem;
+    font-size: 0.875em;
   }
 }

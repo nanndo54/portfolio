@@ -14,7 +14,6 @@ export default async function ContactIcons({ className }) {
         <Hint key={name} label={name} position='bottom'>
           <IconLink
             src={icon}
-            hint
             iconProps={{
               foregroundColor: true,
               interactive: true,
@@ -22,6 +21,7 @@ export default async function ContactIcons({ className }) {
             }}
             title={name}
             href={url}
+            isExternal
           />
         </Hint>
       ))}

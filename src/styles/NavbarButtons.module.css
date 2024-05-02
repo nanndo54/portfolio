@@ -1,5 +1,5 @@
 .base {
-  width: 5.25rem;
+  width: 5.25em;
 
   display: flex;
   align-items: center;
@@ -9,14 +9,14 @@
 }
 
 .base .language {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.5em;
+  line-height: 1.5em;
   font-family: var(--title-font);
   font-style: italic;
   font-weight: 700;
-  text-shadow: 0 0 0.1rem var(--foreground-color);
+  text-shadow: 0 0 0.125em var(--dimmer-foreground-color);
 
-  padding: 0.2rem 0.4rem;
+  padding: 0.2em 0.4em;
 
   transition:
     color 0.5s,
@@ -25,6 +25,6 @@
 
 @media (max-width: 700px) {
   .base {
-    gap: 0.7rem;
+    gap: 0.7em;
   }
 }

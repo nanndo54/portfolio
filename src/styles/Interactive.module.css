@@ -10,7 +10,7 @@
   width: 100%;
 
   opacity: 0;
-  mask: radial-gradient(27.5rem at var(--x) var(--y), black 40%, transparent);
+  mask: radial-gradient(27.5em at var(--x) var(--y), black 40%, transparent);
   pointer-events: none;
 
   transition:
@@ -51,10 +51,10 @@ body:hover .base {
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0.125rem 0.125rem 0 var(--secondary-accent-color))
-    drop-shadow(-0.125rem -0.125rem 0 var(--secondary-accent-color))
-    drop-shadow(0.125rem -0.125rem 0 var(--secondary-accent-color))
-    drop-shadow(-0.125rem 0.125rem 0 var(--secondary-accent-color));
+  filter: drop-shadow(0.125em 0.125em 0 var(--secondary-accent-color))
+    drop-shadow(-0.125em -0.125em 0 var(--secondary-accent-color))
+    drop-shadow(0.125em -0.125em 0 var(--secondary-accent-color))
+    drop-shadow(-0.125em 0.125em 0 var(--secondary-accent-color));
 }
 
 .base :global(.interactive-aura) > :nth-child(1) {
@@ -63,23 +63,24 @@ body:hover .base {
 
 /*
 .base :global(.interactive-aura) > :nth-child(2) {
-   filter: drop-shadow(0 -0.1rem 0 var(--dim-foreground-color))
-    drop-shadow(0 0.25rem 0 var(--dim-foreground-color));
+   filter: drop-shadow(0 -0.1em 0 var(--dim-foreground-color))
+    drop-shadow(0 0.25em 0 var(--dim-foreground-color));
 }
 
  body[dark='true'] .base :global(.interactive-aura) > :nth-child(2) {
-  filter: brightness(0.9) contrast(1.1) drop-shadow(0 -0.175rem 0 var(--foreground-color));
+  filter: brightness(0.9) contrast(1.1) drop-shadow(0 -0.175em 0 var(--foreground-color));
 }
 @media (prefers-color-scheme: dark) {
   body:not([dark]) .base :global(.interactive-aura) > :nth-child(2) {
     filter: brightness(0.9) contrast(1.1)
-      drop-shadow(0 -0.175rem 0 var(--foreground-color));
+      drop-shadow(0 -0.175em 0 var(--foreground-color));
   }
 } */
 
 .base :global(.interactive-text) {
   position: absolute;
   color: var(--secondary-accent-color) !important;
+  text-shadow: 0 0 0.125rem var(--secondary-accent-color);
 }
 
 .base h2 {
@@ -89,7 +90,7 @@ body:hover .base {
 
 .base :global(.interactive-icon) {
   position: absolute;
-  filter: drop-shadow(0 0 0.2rem var(--background-color));
+  filter: drop-shadow(0 0 0.2em var(--background-color));
 }
 
 .base :global(.interactive-icon) > svg {
@@ -105,7 +106,7 @@ body:hover .base {
 
   white-space: nowrap;
   color: transparent;
-  text-decoration: 0.175rem underline var(--secondary-accent-color);
+  text-decoration: 0.175em underline var(--secondary-accent-color);
   opacity: 0;
 }
 
