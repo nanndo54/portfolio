@@ -106,7 +106,7 @@
 
   position: sticky;
   top: 7em;
-  padding-inline: 0.5em;
+  padding-inline: 0.375em 0.5em;
 
   margin: 0 -1.5em -1.25em auto;
 

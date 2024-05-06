@@ -28,10 +28,11 @@ body:global(.no-scroll) .base {
 @media (max-width: 700px) {
   .base {
     height: 4em;
-    pointer-events: all;
-
+    gap: 1em;
     padding: 0 1.2em;
     background-color: var(--dimmer-background-color);
+
+    pointer-events: all;
   }
 }
 

@@ -20,9 +20,7 @@ export default async function LandingSection({ id }) {
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
       <div className={styles.info}>
-        <div className={styles.title}>
-          <h1>{name}</h1>
-        </div>
+        <h1 className={styles.title}>{name}</h1>
         <RichText as='p' className={styles.presentation}>
           {presentation}
         </RichText>

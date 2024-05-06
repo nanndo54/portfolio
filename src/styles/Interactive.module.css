@@ -51,10 +51,10 @@ body:hover .base {
 
 .base :global(.interactive-aura) {
   position: absolute;
-  filter: drop-shadow(0.125em 0.125em 0 var(--alt-accent-color))
-    drop-shadow(-0.125em -0.125em 0 var(--alt-accent-color))
-    drop-shadow(0.125em -0.125em 0 var(--alt-accent-color))
-    drop-shadow(-0.125em 0.125em 0 var(--alt-accent-color));
+  filter: drop-shadow(0.075em 0.075em 0 var(--alt-accent-color))
+    drop-shadow(-0.075em -0.075em 0 var(--alt-accent-color))
+    drop-shadow(0.075em -0.075em 0 var(--alt-accent-color))
+    drop-shadow(-0.075em 0.075em 0 var(--alt-accent-color));
 }
 
 .base :global(.interactive-aura) > :nth-child(1) {
@@ -80,7 +80,7 @@ body:hover .base {
 .base :global(.interactive-text) {
   position: absolute;
   color: var(--alt-accent-color) !important;
-  text-shadow: 0 0 0.125rem var(--alt-accent-color);
+  text-shadow: 0 0 0.1rem var(--alt-accent-color);
 }
 
 .base h2 {
@@ -103,11 +103,10 @@ body:hover .base {
   background-clip: initial;
   -webkit-text-fill-color: initial;
   background-image: none;
+  color: transparent;
 
   white-space: nowrap;
-  color: transparent;
-  text-decoration: 0.175em underline var(--alt-accent-color);
-  opacity: 0;
+  text-decoration: 0.175em underline var(--accent-color);
 }
 
 @media print {

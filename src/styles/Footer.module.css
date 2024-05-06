@@ -2,22 +2,28 @@
   clip-path: polygon(1em 0%, 100% 0%, calc(100% - 1em) 100%, 0% 100%);
   background-color: var(--dark-color);
   color: var(--light-color);
+  text-transform: uppercase;
 
-  width: min(35em, calc(100% - 2em));
-  padding: 0.75em 1.5em;
-  margin: 0 auto;
-  border: 0.125em solid var(--alt-accent-color);
-  border-radius: 0.25em;
+  width: fit-content;
+  padding: 0.75em 3em;
+  margin: 5rem auto 2rem;
 
   display: flex;
-  justify-content: center;
-  gap: 1.5em;
 
   transition: background-color 0.5s;
 }
 
 body[dark='true'] .base {
   background-color: transparent;
+}
+
+.base > :not(:first-child) {
+  margin-left: 1rem;
+}
+
+.base > :not(:first-child)::before {
+  content: '•';
+  margin-right: 1rem;
 }
 
 .base figure {

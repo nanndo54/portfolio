@@ -1,12 +1,12 @@
 .base {
   width: 900px;
-  padding: 4rem 2rem;
+  padding: 4em 2em;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
   justify-items: center;
-  gap: 1.25rem;
+  gap: 1.5em;
 
   transition:
     border-color 0.5s,
@@ -19,6 +19,6 @@
 @media (max-width: 920px) {
   .base {
     width: 100%;
-    padding: 5rem 1.5rem;
+    padding: 5em 1.5em;
   }
 }

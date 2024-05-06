@@ -3,6 +3,7 @@
 *::after {
   margin: 0;
   box-sizing: border-box;
+  font-size: inherit;
 }
 
 :root {
@@ -122,11 +123,12 @@ body[dark='true'] {
   }
 }
 
-p {
+p,
+strong {
   text-wrap: pretty;
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
 
   transition: color 0.5s;
 }
@@ -170,7 +172,7 @@ h2 {
   color: var(--background-color);
 
   background-color: var(--foreground-color);
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.625rem;
   clip-path: polygon(0.625rem 0%, 100% 0%, calc(100% - 0.625rem) 100%, 0% 100%);
 
   transition:
@@ -187,7 +189,8 @@ h4 {
 }
 
 @media (max-width: 700px) {
-  p {
+  p,
+  strong {
     font-size: 1.2rem;
   }
 
@@ -205,12 +208,13 @@ h4 {
 }
 
 @media (max-width: 500px) {
-  p {
+  p,
+  strong {
     font-size: 1.125rem;
   }
 
   h1 {
-    font-size: 9vw;
+    font-size: 9.5vw;
   }
 
   h2 {
@@ -250,8 +254,7 @@ b {
 }
 
 strong {
-  font-size: inherit;
-  line-height: normal;
+  line-height: inherit;
   font-weight: 700;
 
   background-image: linear-gradient(

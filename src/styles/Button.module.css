@@ -1,9 +1,9 @@
 .base {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   border-radius: 0.875rem;
 
   height: 2.25em;
-  padding-inline: 0.75em;
+  padding-inline: 0.625em;
 
   color: var(--background-color);
   font-weight: 600;

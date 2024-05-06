@@ -7,11 +7,11 @@ import { githubIcon } from '@/constants/icons'
 export default async function Footer() {
   return (
     <footer className={styles.base}>
-      <Link href='https://github.com/nanndo54/portfolio' isExternal>
+      <Link href='https://github.com/nanndo54/portfolio' isExternal decoration={false}>
         Source
         <Icon src={githubIcon} lightColor />
       </Link>
-      •<p>2024</p>
+      <p>2024</p>
     </footer>
   )
 }

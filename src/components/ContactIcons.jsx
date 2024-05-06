@@ -16,7 +16,6 @@ export default async function ContactIcons({ className }) {
             src={icon}
             iconProps={{
               foregroundColor: true,
-              interactive: true,
               ...props
             }}
             title={name}

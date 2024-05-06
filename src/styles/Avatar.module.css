@@ -1,10 +1,53 @@
 .base {
   position: relative;
+}
+
+.avatar {
+  position: relative;
   width: 19em;
   margin-bottom: 2.5em;
 
   line-height: 0;
   overflow: visible;
+}
+
+.band {
+  position: absolute;
+  top: 0;
+
+  width: 16.8rem;
+  padding-inline: 0.5rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  clip-path: polygon(0% 0%, calc(100% - 0.3125rem) 0%, 100% 100%, 0.3125rem 100%);
+  transform: translate(6.825rem, 10.125rem) rotate(-78.5deg);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.positions {
+  width: fit-content;
+  animation: scroll 10s 2s infinite linear;
+}
+
+.positions > :not(:first-child) {
+  margin-left: 0.375rem;
+}
+
+.positions > :not(:first-child)::before {
+  content: '•';
+  margin-right: 0.375rem;
+}
+
+.base:hover .positions {
+  animation-play-state: paused;
 }
 
 .box {
@@ -24,14 +67,29 @@
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
-.base .img {
+.avatar .img {
   clip-path: polygon(27.5% 0%, 95.5% 0%, 75.5% 100%, 7.5% 100%);
   box-shadow: 0 3em 2em 1em var(--dim-background);
 }
 
 @media (max-width: 800px) {
-  .base {
+  .avatar {
     width: 15em;
     margin-bottom: 0;
+  }
+
+  .band {
+    width: 13.25rem;
+    transform: translate(5.2rem, 7.8rem) rotate(-78.5deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    animation-timing-function: linear;
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
