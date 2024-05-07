@@ -268,12 +268,12 @@ strong {
 }
 
 u {
-  text-decoration: 0.175rem underline var(--alt-accent-color);
+  text-decoration: 0.15rem underline var(--alt-accent-color);
 }
 
 .interactive-border {
   position: relative;
-  border: 0.15rem solid var(--dim-accent-color);
+  border: 0.1875rem solid var(--dim-accent-color);
   border-radius: 1.25rem;
   background-color: var(--dimmer-background-color);
 

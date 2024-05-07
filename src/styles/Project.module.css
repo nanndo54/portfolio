@@ -48,8 +48,7 @@
 }
 
 .skills > * {
-  height: 2em;
-  width: 2em;
+  font-size: 0.5625rem;
 }
 
 .base footer a {

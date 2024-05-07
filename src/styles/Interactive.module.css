@@ -36,8 +36,11 @@ body:hover .base {
   }
 }
 
+.base * {
+  position: absolute !important;
+}
+
 .base :global(.interactive-border) {
-  position: absolute;
   background-color: transparent;
   border-color: var(--alt-accent-color);
   inset: inherit;
@@ -50,7 +53,6 @@ body:hover .base {
 }
 
 .base :global(.interactive-aura) {
-  position: absolute;
   filter: drop-shadow(0.075em 0.075em 0 var(--alt-accent-color))
     drop-shadow(-0.075em -0.075em 0 var(--alt-accent-color))
     drop-shadow(0.075em -0.075em 0 var(--alt-accent-color))
@@ -78,35 +80,31 @@ body:hover .base {
 } */
 
 .base :global(.interactive-text) {
-  position: absolute;
   color: var(--alt-accent-color) !important;
   text-shadow: 0 0 0.1rem var(--alt-accent-color);
 }
 
 .base h2 {
-  position: absolute;
   background-color: var(--alt-accent-color);
 }
 
-.base :global(.interactive-icon) {
-  position: absolute;
+/* .base :global(.interactive-icon) {
 }
 
 .base :global(.interactive-icon) > svg {
   fill: var(--alt-accent-color);
   filter: drop-shadow(0 0 0.2em var(--background-color));
-}
+} */
 
 .base strong {
-  position: absolute;
-
   background-clip: initial;
   -webkit-text-fill-color: initial;
   background-image: none;
   color: transparent;
+  text-align: left;
 
   white-space: nowrap;
-  text-decoration: 0.175em underline var(--accent-color);
+  text-decoration: 0.15em underline var(--accent-color);
 }
 
 @media print {

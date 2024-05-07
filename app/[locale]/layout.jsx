@@ -3,7 +3,7 @@ import './global.css'
 
 import { bodyFont, titleFont } from 'app/fonts'
 import clsx from 'clsx/lite'
-import { locales } from 'i18n/config'
+import { defaultLocale, locales } from 'i18n/config'
 import getDictionary, { getStaticParams } from 'i18n/server'
 import { setStaticParamsLocale } from 'next-international/server'
 
@@ -23,6 +23,7 @@ export async function generateMetadata({ params: { locale } }) {
     description,
     metadataBase: `https://nanndo54.dev/${locale}`,
     alternates: {
+      canonical: `https://nanndo54.dev/${defaultLocale}`,
       languages
     },
     openGraph: {

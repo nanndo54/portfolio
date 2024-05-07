@@ -5,6 +5,9 @@ import { useCallback, useEffect, useState } from 'react'
 
 const interactiveElementTypes = [
   {
+    className: 'interactive-layout'
+  },
+  {
     className: 'interactive-aura',
     clone: true
   },
@@ -68,8 +71,18 @@ const alterSize = debounce(({ elements, callback }) => {
       interactiveElement.style.top = `${document.documentElement.scrollTop + viewportOffset.top}px`
       interactiveElement.style.left = `${viewportOffset.left}px`
     } else {
-      interactiveElement.style.top = `${element.offsetTop}px`
-      interactiveElement.style.left = `${element.offsetLeft}px`
+      const viewportOffset = element.getBoundingClientRect()
+      const parentViewportOffset =
+        interactiveElement.parentElement.getBoundingClientRect()
+
+      const borderWidth = Number(
+        getComputedStyle(interactiveElement.parentElement)
+          .getPropertyValue('border-left-width')
+          .slice(0, -2)
+      )
+
+      interactiveElement.style.top = `${viewportOffset.top - parentViewportOffset.top - borderWidth}px`
+      interactiveElement.style.left = `${viewportOffset.left - parentViewportOffset.left - borderWidth}px`
     }
 
     interactiveElement.style.opacity = null

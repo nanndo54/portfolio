@@ -19,7 +19,7 @@ export default function robots() {
       },
       {
         userAgent: '*',
-        allow: '/static/'
+        disallow: '/static/'
       }
     ],
     sitemap: 'https://nanndo54.dev/sitemap.xml'

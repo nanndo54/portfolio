@@ -8,7 +8,9 @@ export const dictionaries = {
 
 export const locales = Object.keys(dictionaries)
 
+export const defaultLocale = locales[0]
+
 export const i18n = {
   locales,
-  defaultLocale: locales[0]
+  defaultLocale
 }
