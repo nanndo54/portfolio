@@ -19,6 +19,7 @@ export async function getStaticParams() {
 export default async function getDictionary(scope) {
   const locale = await getCurrentLocale()
   const dictionary = dictionaries[locale]
+  const scopedDictionary = scope ? dictionary[scope] : dictionary
 
-  return scope ? dictionary[scope] : dictionary
+  return await scopedDictionary
 }
