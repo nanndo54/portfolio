@@ -1,5 +1,5 @@
-import en from './locales/en/dictionary'
-import es from './locales/es/dictionary'
+import en from './locales/en/transpiled-dictionary'
+import es from './locales/es/transpiled-dictionary'
 
 export const dictionaries = {
   en,

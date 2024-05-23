@@ -1,0 +1,447 @@
+{
+  "contacts": [
+    {
+      "name": "LinkedIn",
+      "icon": "landing/linkedin-icon.svg",
+      "url": "https://www.linkedin.com/in/nanndo54"
+    },
+    {
+      "name": "Email",
+      "icon": "landing/email-icon.svg",
+      "url": "mailto:nanndo54@outlook.com"
+    },
+    {
+      "name": "GitHub",
+      "icon": "landing/github-icon.svg",
+      "url": "https://github.com/nanndo54"
+    }
+  ],
+  "landing": {
+    "title": "Inicio",
+    "name": "Pablo Cabrera",
+    "presentation": "Creando experiencias digitales <strong>inolvidables</strong>.",
+    "email": "nanndo54@outlook.com",
+    "emailButton": "Copia mi email",
+    "cvButton": "¡Descarga mi CV!",
+    "image": {
+      "src": "landing/profile-photo.png",
+      "alt": "Mi foto"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "codeButton": "Código",
+    "websiteButton": "Sitio web",
+    "content": [
+      {
+        "year": 2023,
+        "icon": "projects/kolo-empresas-icon.svg",
+        "name": "KOLO Empresas",
+        "description": "<u>ERP</u> que permite al pequeño y mediano empresario <u>manejar, crece e innovar su empresa</u> de manera accesible y personalizable.",
+        "website": "https://info.kolo-app.com",
+        "skills": [
+          "React",
+          "Redux",
+          "TypeScript",
+          "Java",
+          "MySQL",
+          "AWS",
+          "Firebase",
+          "Jira"
+        ],
+        "images": [
+          {
+            "src": "projects/kolo-empresas/img1.jpg",
+            "alt": "Banner de KOLO Empresas",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGOIrLl17OX/uvnvGURjGfrX/9/98D+DQTWDaCwAuuwM0dpLl70AAAAASUVORK5CYII="
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "icon": "projects/quiz-game-icon.svg",
+        "name": "Quiz Game",
+        "description": "<u>Juego de preguntas en línea</u>. Tiene una interfaz cómoda y sencilla para proveer una <u>divertida</u> y <u>educativa</u> experiencia.",
+        "website": "https://quiz.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/quiz-game",
+        "skills": [
+          "React",
+          "Redux",
+          "HTML5",
+          "CSS3",
+          "Vite.js"
+        ],
+        "images": [
+          {
+            "src": "projects/quiz-game/img1.jpg",
+            "alt": "Banner de Quiz Game",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGM4e+i/uHoag6Dv9af/GRbN/1VWcbq14/bmLf8BrM8OjnJRudsAAAAASUVORK5CYII="
+          },
+          {
+            "src": "projects/quiz-game/img2.jpg",
+            "alt": "Menú de configuración de Quiz Game, donde se selecciona el número de preguntas y las categorías"
+          },
+          {
+            "src": "projects/quiz-game/img3.jpg",
+            "alt": "Pregunta del juego: ¿Qué banda de rock irlandesa lanzó el álbum de estudio \"The Unforgettable Fire\"?"
+          },
+          {
+            "src": "projects/quiz-game/img4.jpg",
+            "alt": "Pregunta del juego: ¿Quién ganó la primera temporada de American Idol?"
+          },
+          {
+            "src": "projects/quiz-game/img5.jpg",
+            "alt": "Pregunta del juego: ¿Cuál es el nombre de la moneda utilizada tanto por Chile como por Colombia?"
+          },
+          {
+            "src": "projects/quiz-game/img6.jpg",
+            "alt": "Menú de puntuación del juego donde se observan las respuestas correctas y el tiempo transcurrido"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "icon": "projects/mini-translator-icon.svg",
+        "name": "Mini Translator",
+        "description": "<u>Traductor minimalista</u> en tiempo real. Facilita la traducción entre <u>más de 100 lenguajes</u>, así como el dictado del texto.",
+        "website": "https://translator.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/mini-translator",
+        "skills": [
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Vite.js"
+        ],
+        "images": [
+          {
+            "src": "projects/mini-translator/img1.jpg",
+            "alt": "Banner de Mini Translator",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGOoqJy2fv3lH9//5+b2MgiJ6fj65hUXTe/u2gAAsnEMq8GJkhgAAAAASUVORK5CYII="
+          },
+          {
+            "src": "projects/mini-translator/img2.jpg",
+            "alt": "Traduciendo del español al japonés: ¿Cómo te encuentras el día de hoy amigo?"
+          },
+          {
+            "src": "projects/mini-translator/img3.jpg",
+            "alt": "Traduciendo del inglés al español: Tengo que llegar al aeropuerto antes de las 5 de la tarde"
+          },
+          {
+            "src": "projects/mini-translator/img4.jpg",
+            "alt": "Traduciendo del inglés al portugués: ¡Muchas gracias!"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "icon": "projects/jolc-icon.svg",
+        "name": "JOLC",
+        "description": "<u>Intérprete de JOLC</u>, un lenguaje de programación derivado de <u>Julia</u>, ejecutable en la web. Facilita el debug del lenguaje mediante reportes.",
+        "website": "https://jolc.nanndo54.dev/",
+        "code": "https://github.com/nanndo54/jolc",
+        "skills": [
+          "React",
+          "Redux",
+          "Python",
+          "HTML5",
+          "CSS3"
+        ],
+        "images": [
+          {
+            "src": "projects/jolc/img1.jpg",
+            "alt": "Banner de JOLC",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVR4nGPg5FaXVbB6/OG/Z3A2A6+QloCg7szFh+IzWwFiswhu1OV4xwAAAABJRU5ErkJggg=="
+          },
+          {
+            "src": "projects/jolc/img2.jpg",
+            "alt": "Interpretando código JOLC, se está llamando a una función factorial"
+          },
+          {
+            "src": "projects/jolc/img3.jpg",
+            "alt": "El AST generado por JOLC después de una ejecución de código; También se muestra el menú de la aplicación"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "content": [
+      {
+        "name": "Front-End",
+        "skills": [
+          {
+            "name": "Next.js",
+            "icon": "skills/backend/nextjs.svg"
+          },
+          {
+            "name": "React",
+            "icon": "skills/frontend/reactjs.svg"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "skills/frontend/javascript.svg"
+          },
+          {
+            "name": "CSS3",
+            "icon": "skills/frontend/css3.svg"
+          },
+          {
+            "name": "HTML5",
+            "icon": "skills/frontend/html5.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "skills/frontend/typescript.svg"
+          },
+          {
+            "name": "Vite.js",
+            "icon": "skills/frontend/vitejs.svg"
+          },
+          {
+            "name": "Redux",
+            "icon": "skills/frontend/redux.svg"
+          }
+        ]
+      },
+      {
+        "name": "Back-End",
+        "skills": [
+          {
+            "name": "Node.js",
+            "icon": "skills/backend/nodejs.svg"
+          },
+          {
+            "name": "Express.js",
+            "icon": "skills/backend/expressjs.svg",
+            "contrast": true
+          },
+          {
+            "name": "TypeScript",
+            "icon": "skills/frontend/typescript.svg"
+          },
+          {
+            "name": "Python",
+            "icon": "skills/backend/python.svg"
+          },
+          {
+            "name": "Java",
+            "icon": "skills/backend/java.svg"
+          },
+          {
+            "name": "GO",
+            "icon": "skills/backend/go.svg"
+          },
+          {
+            "name": "Linux",
+            "icon": "skills/backend/linux.svg"
+          },
+          {
+            "name": "Nginx",
+            "icon": "skills/backend/nginx.svg"
+          }
+        ]
+      },
+      {
+        "name": "Cloud",
+        "skills": [
+          {
+            "name": "AWS",
+            "icon": "skills/cloud/aws.svg"
+          },
+          {
+            "name": "Vercel",
+            "icon": "skills/cloud/vercel.svg",
+            "contrast": true
+          },
+          {
+            "name": "Firebase",
+            "icon": "skills/cloud/firebase.svg"
+          },
+          {
+            "name": "Cloudflare",
+            "icon": "skills/cloud/cloudflare.svg"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "icon": "skills/cloud/gcp.svg"
+          },
+          {
+            "name": "Netlify",
+            "icon": "skills/cloud/netlify.svg"
+          },
+          {
+            "name": "Oracle Cloud",
+            "icon": "skills/cloud/oraclecloud.svg"
+          }
+        ]
+      },
+      {
+        "name": "Database",
+        "skills": [
+          {
+            "name": "MySQL",
+            "icon": "skills/database/mysql.svg"
+          },
+          {
+            "name": "SQL Server",
+            "icon": "skills/database/sqlserver.svg"
+          },
+          {
+            "name": "Oracle SQL",
+            "icon": "skills/database/oraclesql.svg"
+          },
+          {
+            "name": "Redis",
+            "icon": "skills/database/redis.svg"
+          },
+          {
+            "name": "MongoDB",
+            "icon": "skills/database/mongodb.svg"
+          }
+        ]
+      },
+      {
+        "name": "Testing",
+        "skills": [
+          {
+            "name": "Playwright",
+            "icon": "skills/testing/playwright.svg"
+          },
+          {
+            "name": "Cypress.io",
+            "icon": "skills/testing/cypressio.svg"
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "skills": [
+          {
+            "name": "Docker",
+            "icon": "skills/tools/docker.svg"
+          },
+          {
+            "name": "Git",
+            "icon": "skills/tools/git.svg"
+          },
+          {
+            "name": "Notion",
+            "icon": "skills/tools/notion.svg"
+          },
+          {
+            "name": "VS Code",
+            "icon": "skills/tools/vscode.svg"
+          },
+          {
+            "name": "JetBrains",
+            "icon": "skills/tools/jetbrains.svg"
+          },
+          {
+            "name": "Jira",
+            "icon": "skills/tools/jira.svg"
+          },
+          {
+            "name": "Kubernetes",
+            "icon": "skills/tools/kubernetes.svg"
+          },
+          {
+            "name": "Slack",
+            "icon": "skills/tools/slack.svg"
+          },
+          {
+            "name": "WordPress",
+            "icon": "skills/tools/wordpress.svg",
+            "contrast": true
+          }
+        ]
+      }
+    ]
+  },
+  "about-me": {
+    "title": "Sobre mí",
+    "content": [
+      {
+        "text": "Mi nombre es Pablo pero mis allegados me llaman <strong>Nando</strong>. Me gusta mucho el desarrollo de software. Desde los <u>6 años</u> he mostrado interés en el mundo de la tecnología, empecé programando en Pascal a los <u>15 años</u>, y ahora con <strong>23 años</strong> he desarrollado productos innovadores dirigidos a empresas reconocidas en mi país."
+      },
+      {
+        "text": "Estoy terminando un grado de <strong>Ingeniería en Sistemas</strong> en la <u>Universidad de San Carlos de Guatemala</u>, gracias al cual he pulido mis habilidades en el desarrollo de software. Soy fiel creyente de que has aprendido bien cuando eres capaz de enseñar a otros, y he tenido la oportunidad de enseñar siendo <u>auxiliar de cátedra</u> en la universidad.",
+        "images": [
+          {
+            "src": "about-me/usac/img1.jpg",
+            "alt": "Universidad de San Carlos de Guatemala, Campus Central",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/AE2y/0+v/5nU/9by/wDE5f+83v/i+v+jq6MAIy04GhgUMjY8CAcA9e0UvYt44mIAAAAASUVORK5CYII="
+          },
+          {
+            "src": "about-me/usac/img2.jpg",
+            "alt": "Universidad de San Carlos de Guatemala, Facultad de Ingeniería"
+          }
+        ]
+      },
+      {
+        "text": "Soy de la <strong>Ciudad de Guatemala</strong>, lugar de volcanes, gran clima y <u>gente encantadora</u>. Entre mis pasiones se encuentran las películas de ciencia ficción, los videojuegos de muchos géneros y mantenerme al día de la actualidad del mundo de la tecnología.",
+        "images": [
+          {
+            "src": "about-me/guatemala/img1.jpg",
+            "alt": "Guatemala, Arco de Santa Catalina",
+            "placeholder": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGPQEWDg6lu/+v//qw/uM0RYCxRmu21ZED2l1J3BRE1YxdjU0FxDkIEBADR0DR+RXyM9AAAAAElFTkSuQmCC"
+          },
+          {
+            "src": "about-me/guatemala/img2.jpg",
+            "alt": "Guatemala, Ciudad de Guatemala"
+          },
+          {
+            "src": "about-me/guatemala/img3.jpg",
+            "alt": "Guatemala, Lago de Atitlán"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "¡Contáctame!",
+    "messageText": "O envíame un mensaje",
+    "form": {
+      "emailLabel": "Email",
+      "nameLabel": "Nombre",
+      "nameDefault": "No ingresado",
+      "subjectLabel": "Asunto",
+      "subjectPlaceholder": "¡Pongámonos en contacto!",
+      "subjectDefault": "¡Pongámonos en contacto!",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "¡Me gusta tu portafolio!",
+      "submitButton": "Enviar mensaje",
+      "requiredLabel": "Campo requerido",
+      "successMessage": "Me pondré en contacto contigo lo más pronto posible",
+      "successTooltip": "¡Enviado! ✅",
+      "error400Message": "Falló la validación del formulario. Por favor verifica tus datos e inténtalo de nuevo.",
+      "error500Message": "Ocurrió un error al enviar tu mensaje. Por favor inténtalo de nuevo más tarde.",
+      "errorMessage": "Error inesperado. Por favor inténtalo de nuevo más tarde."
+    }
+  },
+  "quote": {
+    "author": "Frank Herbert",
+    "text": "El misterio de la <u>vida</u> no es un problema a resolver, sino una realidad a <strong>experimentar</strong>"
+  },
+  "aria": {
+    "available": "Disponible",
+    "close": "Cerrar",
+    "copied": "¡Copiado! ✅",
+    "downloaded": "¡Descargado! ✅",
+    "goTo": "Navegar a",
+    "goToTop": "Ir hacia arriba",
+    "navigateTo": "Navegar a",
+    "nextImage": "Ver imagen siguiente",
+    "openShowcase": "Abrir en grande",
+    "previousImage": "Ver imagen anterior",
+    "seeImage": "Ver imagen",
+    "toggleLocale": "Switch to english",
+    "toggleTheme": "Cambiar tema oscuro",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar"
+  },
+  "meta": {
+    "title": "Mi Portafolio <DEV/>",
+    "description": "¡Hola! Soy Pablo Cabrera (nanndo54), Desarrollador Web Full-Stack a tu servicio. ¡Pongámonos en contacto! 🚀"
+  }
+}

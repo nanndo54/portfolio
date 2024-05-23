@@ -1,5 +1,3 @@
-import withPlaiceholder from '@plaiceholder/next'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
@@ -39,4 +37,4 @@ const nextConfig = {
   }
 }
 
-export default withPlaiceholder(nextConfig)
+export default nextConfig
