@@ -23,9 +23,10 @@
     "email": "nanndo54@outlook.com",
     "emailButton": "Copy my email",
     "cvButton": "Download my CV!",
-    "avatar": {
+    "image": {
       "src": "landing/profile-photo.png",
-      "alt": "My photo"
+      "alt": "My photo",
+      "ignorePlaceholder": true
     }
   },
   "projects": {

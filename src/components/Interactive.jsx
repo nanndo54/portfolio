@@ -1,6 +1,7 @@
 'use client'
 
 import styles from '@/styles/Interactive.module.css'
+import clsx from 'clsx/lite'
 
 import useInteractiveLayout from '@/hooks/useInteractiveLayout'
 import useInteractivenessTracker from '@/hooks/useInteractivenessTracker'
@@ -28,7 +29,7 @@ export default function Interactive({ children }) {
       <div
         id='layout'
         ref={layoutRef}
-        className={styles.base}
+        className={clsx(styles.base, 'no-select')}
         aria-hidden
         role='presentation'
       />

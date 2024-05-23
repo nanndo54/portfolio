@@ -81,12 +81,12 @@ body[top='false'] .overlay {
 }
 
 .link:not(.navigator):hover {
-  background-color: var(--dimmer-alt-accent-color);
+  background-color: var(--dimmer-accent-color);
 }
 
 .link:not(.navigator):active {
   box-shadow: unset;
-  background-color: var(--dimmest-alt-accent-color);
+  background-color: var(--dimmest-accent-color);
 }
 
 .status {

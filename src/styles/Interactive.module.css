@@ -10,7 +10,7 @@
   width: 100%;
 
   opacity: 0;
-  mask: radial-gradient(27.5em at var(--x) var(--y), black 40%, transparent);
+  -webkit-mask: radial-gradient(27.5em at var(--x) var(--y), black 40%, transparent);
   pointer-events: none;
 
   transition:

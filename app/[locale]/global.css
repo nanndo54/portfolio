@@ -25,7 +25,6 @@ body {
 
   color: var(--foreground-color);
   font-family: var(--body-font);
-  font-weight: 300;
 
   background-color: var(--background-color);
 
@@ -254,8 +253,8 @@ b {
 }
 
 strong {
+  font-weight: 600;
   line-height: inherit;
-  font-weight: 700;
 
   background-image: linear-gradient(
     to right,
@@ -268,7 +267,7 @@ strong {
 }
 
 u {
-  text-decoration: 0.15rem underline var(--alt-accent-color);
+  text-decoration: 0.125em underline var(--alt-accent-color);
 }
 
 .interactive-border {

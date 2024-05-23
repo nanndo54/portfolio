@@ -7,5 +7,5 @@
 
 .base.decoration {
   color: var(--accent-color);
-  text-decoration: 0.175em underline var(--accent-color);
+  text-decoration: 0.175rem underline var(--accent-color);
 }

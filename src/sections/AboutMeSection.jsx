@@ -7,7 +7,6 @@ import getDictionary from 'i18n/server'
 
 export default async function AboutMeSection({ id }) {
   const dictionary = await getDictionary(id)
-
   const { title, content } = dictionary
 
   return (

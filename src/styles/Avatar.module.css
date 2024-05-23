@@ -21,7 +21,7 @@
   color: var(--light-color);
 
   font-size: 1.125rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.4;
   text-transform: uppercase;
   white-space: nowrap;
@@ -38,16 +38,12 @@
 }
 
 .positions > :not(:first-child) {
-  margin-left: 0.375rem;
+  margin-left: 0.5rem;
 }
 
 .positions > :not(:first-child)::before {
-  content: '•';
-  margin-right: 0.375rem;
-}
-
-.base:hover .positions {
-  animation-play-state: paused;
+  content: ' ///';
+  margin-right: 0.5rem;
 }
 
 .box {
@@ -90,6 +86,6 @@
   }
   100% {
     animation-timing-function: linear;
-    transform: translateX(calc(-50% - 0.5rem));
+    transform: translateX(calc(-50% - 1.25rem));
   }
 }

@@ -40,11 +40,6 @@ header.base {
     opacity 0.2s;
 }
 
-.title {
-  position: relative;
-  width: 100%;
-}
-
 .presentation,
 .presentation * {
   font-size: 1.4rem;

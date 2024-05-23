@@ -16,7 +16,7 @@ export default async function LandingSection({ id }) {
   const dictionary = await getDictionary()
 
   const { landing, aria } = dictionary
-  const { name, presentation, cvButton, avatar } = landing
+  const { name, presentation, cvButton, image } = landing
 
   return (
     <Section as='header' background={false} className={styles.base} id={id}>
@@ -36,7 +36,7 @@ export default async function LandingSection({ id }) {
           <ContactIcons className={styles.contact} />
         </div>
       </div>
-      <Avatar className={styles.avatar} photo={avatar} />
+      <Avatar className={styles.avatar} image={image} />
     </Section>
   )
 }
