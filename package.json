@@ -30,7 +30,6 @@
     "zustand": "4.5.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "14.2.3",
     "@svgr/webpack": "8.1.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
