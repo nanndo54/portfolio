@@ -12,8 +12,8 @@ export default async function Avatar({ className, image }) {
         <Image
           className={styles.img}
           {...image}
-          height={624}
-          width={624}
+          height={304}
+          width={304}
           quality={90}
           priority
           zoom={false}
