@@ -310,6 +310,10 @@
             "icon": "skills/tools/notion.svg"
           },
           {
+            "name": "VS Code",
+            "icon": "skills/tools/vscode.svg"
+          },
+          {
             "name": "JetBrains",
             "icon": "skills/tools/jetbrains.svg"
           },

@@ -37,6 +37,8 @@ export default function useInteractivenessTracker() {
       callback(e.clientX - x, e.clientY - y)
     }
 
+    callback(-1000, -1000)
+
     const debouncedHandleTrackInteractiveness = debounce((e) => {
       handleTrackInteractiveness(e)
     }, 100)
