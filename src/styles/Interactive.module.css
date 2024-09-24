@@ -9,14 +9,14 @@
   height: 100%;
   width: 100%;
 
-  opacity: 0;
+  /* opacity: 0; */
   mask-image: radial-gradient(27.5em at var(--x) var(--y), black 40%, transparent);
   pointer-events: none;
 
   transition:
     0.5s mask-image,
     0.5s opacity;
-  /* will-change: mask-image; */
+  will-change: mask-image;
   overflow: hidden;
   z-index: 5;
 }
