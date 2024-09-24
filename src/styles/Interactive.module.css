@@ -112,3 +112,15 @@ body:hover .base {
     display: none;
   }
 }
+
+@property --x {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: -1000px;
+}
+
+@property --y {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: -1000px;
+}
