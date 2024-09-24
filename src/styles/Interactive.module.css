@@ -1,4 +1,7 @@
 .base {
+  --x: -1000px;
+  --y: -1000px;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -7,13 +10,13 @@
   width: 100%;
 
   opacity: 0;
-  mask: radial-gradient(450px at var(--x) var(--y), black, transparent);
+  mask-image: radial-gradient(27.5em at var(--x) var(--y), black 40%, transparent);
   pointer-events: none;
 
   transition:
-    0.5s mask,
+    0.5s mask-image,
     0.5s opacity;
-  will-change: mask;
+  /* will-change: mask-image; */
   overflow: hidden;
   z-index: 5;
 }
@@ -29,7 +32,7 @@ body:hover .base {
 @media (pointer: coarse) {
   .base {
     opacity: 1;
-    mask: radial-gradient(150vw 40vh at 50% var(--y), black 40%, transparent);
+    mask-image: radial-gradient(150vw 40vh at 50% var(--y), black 40%, transparent);
   }
 }
 
