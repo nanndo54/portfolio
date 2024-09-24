@@ -22,10 +22,10 @@ export default async function Avatar({ className, image }) {
       <div className={styles.band}>
         <div className={styles.positions}>
           {positions.map((position, index) => (
-            <label key={index}>{position}</label>
+            <span key={index}>{position}</span>
           ))}
           {positions.map((position, index) => (
-            <label key={index}>{position}</label>
+            <span key={index}>{position}</span>
           ))}
         </div>
       </div>

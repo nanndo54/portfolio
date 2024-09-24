@@ -9,13 +9,13 @@ export const dictionaries = {
   es
 }
 
-const treatImages = async (dictionary) => {
+const handleImages = async (dictionary) => {
   if (Array.isArray(dictionary)) {
-    return await Promise.all(dictionary.map(treatImages))
+    return await Promise.all(dictionary.map(handleImages))
   } else if (typeof dictionary === 'object') {
     const { image, images, ...newDictionary } = dictionary
     for (let key in newDictionary) {
-      newDictionary[key] = await treatImages(newDictionary[key])
+      newDictionary[key] = await handleImages(newDictionary[key])
     }
 
     if (image)
@@ -36,7 +36,7 @@ const treatImages = async (dictionary) => {
 
 const init = async () => {
   for (const locale in dictionaries) {
-    const treatedDictionary = await treatImages(dictionaries[locale])
+    const treatedDictionary = await handleImages(dictionaries[locale])
     fs.writeFile(
       `./i18n/locales/${locale}/transpiled-dictionary.json`,
       JSON.stringify(treatedDictionary, null, 2),

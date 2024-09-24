@@ -31,7 +31,7 @@ export default function NavbarLinks() {
 
   const links = sections
     .slice(1)
-    .filter(({ ignore }) => !ignore)
+    .filter(({ noQuickLink }) => !noQuickLink)
     .map(({ id }) => ({
       id,
       label: dictionary[id].title

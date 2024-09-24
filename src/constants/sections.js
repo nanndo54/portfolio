@@ -9,7 +9,7 @@ const sections = [
   {
     id: 'landing',
     Tag: LandingSection,
-    hide: true
+    noHash: true
   },
   {
     id: 'projects',
@@ -30,8 +30,8 @@ const sections = [
   {
     id: 'quote',
     Tag: QuoteSection,
-    hide: true,
-    ignore: true
+    noHash: true,
+    noQuickLink: true
   }
 ]
 

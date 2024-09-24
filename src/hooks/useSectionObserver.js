@@ -3,12 +3,14 @@ import useAppStore from '@/state/store'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
+const filteredSections = sections
+  .filter(({ noHash }) => !noHash)
+  .map(({ id }) => ({ id, intersected: false }))
+
 export default function useSectionObserver() {
   const { setCurrentSection } = useAppStore()
   const router = useRouter()
-  const [sectionsIntersection, setSectionsIntersected] = useState(
-    sections.filter(({ hide }) => !hide).map(({ id }) => ({ id, intersected: false }))
-  )
+  const [sectionsIntersection, setSectionsIntersected] = useState(filteredSections)
 
   const currentSection = sectionsIntersection.find(({ intersected }) => intersected)?.id
 
@@ -53,6 +55,6 @@ export default function useSectionObserver() {
     setCurrentSection(currentSection)
 
     const section = sections.find(({ id }) => id === currentSection)
-    router.replace(section.hide ? '' : `#${currentSection}`, { scroll: false })
+    router.replace(section.noHash ? '' : `#${currentSection}`, { scroll: false })
   }, [setCurrentSection, currentSection, router])
 }
